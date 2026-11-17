@@ -1,0 +1,71 @@
+:root {
+  --bg: #FBF7F1;
+  --surface: #FFFFFF;
+  --surface-2: #F4EEE6;
+  --ink: #2B2622;
+  --ink-2: #6E655C;
+  --ink-3: #A79E94;
+  --line: #ECE4DA;
+  --ok: #3FA772;
+  --ok-soft: #E3F5EA;
+  --bad: #E0795B;
+  --bad-soft: #FCEBE4;
+  --gold: #F2B640;
+  --world: #7E8FA6;
+
+  --fashion: #E46A9C;
+  --fashion-soft: #FDEAF2;
+  --history: #C8664A;
+  --history-soft: #FBE9E2;
+  --geo: #2F9E8F;
+  --geo-soft: #DFF4F0;
+  --finance: #D99A2B;
+  --finance-soft: #FCF1DC;
+  --psych: #7C6BD6;
+  --psych-soft: #ECE9FB;
+  --english: #3D86D9;
+  --english-soft: #E3EFFC;
+
+  --accent: #7C6BD6;
+  --soft: #ECE9FB;
+
+  --fs-display: 30px;
+  --fs-h1: 24px;
+  --fs-h2: 19px;
+  --fs-body: 17px;
+  --fs-small: 14px;
+  --fs-tiny: 12px;
+
+  --s1: 4px;
+  --s2: 8px;
+  --s3: 12px;
+  --s4: 16px;
+  --s5: 20px;
+  --s6: 24px;
+  --s8: 32px;
+  --s10: 40px;
+
+  --r-sm: 10px;
+  --r-md: 16px;
+  --r-lg: 22px;
+  --r-xl: 28px;
+  --r-pill: 999px;
+
+  --sh-1: 0 1px 2px rgba(60, 40, 20, .06), 0 2px 8px rgba(60, 40, 20, .05);
+  --sh-2: 0 6px 24px rgba(60, 40, 20, .10);
+
+  --ease-out: cubic-bezier(.22, 1, .36, 1);
+  --ease-in: cubic-bezier(.55, 0, 1, .45);
+  --ease-inout: cubic-bezier(.65, 0, .35, 1);
+  --ease-back: cubic-bezier(.34, 1.56, .64, 1);
+  --ease-anticip: cubic-bezier(.36, -0.4, .6, 1);
+
+  --t-fast: 140ms;
+  --t-base: 240ms;
+  --t-slow: 420ms;
+  --t-celebrate: 900ms;
+
+  --font: -apple-system, "PingFang SC", "HarmonyOS Sans SC", "Noto Sans SC", "Microsoft YaHei", sans-serif;
+  --pad: 20px;
+  --tab-h: 64px;
+}
