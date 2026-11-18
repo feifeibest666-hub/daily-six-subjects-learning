@@ -1,4 +1,6 @@
 (function (global) {
+  let aheadHidden = false;
+
   function mount() {
     const state = LKStore.get();
     const day = state.currentDay;
@@ -10,15 +12,21 @@
     const streakNum = LK.h('span', { class: 'num streak-num', text: String(state.streak.count || 0) });
     const flameBtn = LK.h('button', { class: 'flame-btn', 'aria-label': '连续打卡' }, [LKMascot.flame(), streakNum]);
     flameBtn.addEventListener('click', function () {
-      LKSheet.toast('连续打卡 ' + (state.streak.count || 0) + ' 天。补签卡还剩 ' + state.streak.freezeLeft + ' 张。');
+      const k = LKCatalog.aheadK(LKStore.get());
+      let msg = '连续打卡 ' + (state.streak.count || 0) + ' 天。补签卡还剩 ' + state.streak.freezeLeft + ' 张。';
+      if (k >= 1) msg += '今天还多学了 ' + k + ' 天。';
+      LKSheet.toast(msg);
     });
     if (LKStore.consumeStreakBump()) LKMotion.flipNum(streakNum, String(state.streak.count || 0));
 
     const gear = LK.h('button', { class: 'icon-btn', 'aria-label': '设置' }, [LKIcons.gear()]);
     gear.addEventListener('click', function () { location.hash = '#/settings'; });
 
+    const kicker = LK.h('div', { class: 'top-kicker' });
+    kicker.appendChild(document.createTextNode(title));
+    if (LKCatalog.learningAhead(state)) kicker.appendChild(LK.h('span', { class: 'ahead-tag', text: '提前学' }));
     screen.appendChild(LK.h('header', { class: 'topbar' }, [
-      LK.h('div', { class: 'top-kicker', text: title }),
+      kicker,
       LK.h('div', { class: 'top-actions' }, [flameBtn, gear])
     ]));
 
@@ -35,7 +43,8 @@
       screen.appendChild(LK.h('div', { class: 'chest-cta' }, [open]));
     }
     if (chestOpen && day < 14) {
-      screen.appendChild(LK.h('p', { class: 'banner', text: '今日已完成，明天解锁第 ' + (day + 1) + ' 天' }));
+      const panel = aheadPanel(state);
+      if (panel) screen.appendChild(panel);
     }
     if (chestOpen && day === 14) {
       screen.appendChild(LK.h('section', { class: 'finale' }, [
@@ -102,6 +111,75 @@
       sw
     ]));
     return screen;
+  }
+
+  function aheadPanel(state) {
+    if (aheadHidden) return null;
+    const day = state.currentDay;
+    const k = LKCatalog.aheadK(state);
+    const keys = LKCatalog.practiceKeys();
+    const panel = LK.h('section', { class: 'ahead-panel' });
+    panel.appendChild(LK.h('h2', { text: '第 ' + day + ' 天完成啦' }));
+    panel.appendChild(LK.h('p', {
+      class: 'ahead-sub',
+      text: k >= 1
+        ? ('今天已经多学了 ' + k + ' 天。')
+        : ('想多学一点？可以继续第 ' + (day + 1) + ' 天，也可以明天再来。')
+    }));
+    const go = LK.h('button', { class: 'btn btn-primary', text: '继续学第 ' + (day + 1) + ' 天' });
+    go.addEventListener('click', function () { continueAhead(k); });
+    panel.appendChild(go);
+    if (keys.length) {
+      const practice = LK.h('button', { class: 'btn btn-secondary', text: '先练错题本（' + keys.length + ' 道）' });
+      practice.addEventListener('click', function () { location.hash = '#/mistakes?due=1'; });
+      panel.appendChild(practice);
+    }
+    const later = LK.h('button', { class: 'btn btn-ghost', text: '明天再来' });
+    later.addEventListener('click', function () {
+      aheadHidden = true;
+      panel.remove();
+    });
+    panel.appendChild(later);
+    requestAnimationFrame(function () { LKMotion.aheadIn(panel); });
+    return panel;
+  }
+
+  function continueAhead(k) {
+    const today = LK.todayStr();
+    function go() {
+      const circles = Array.prototype.slice.call(document.querySelectorAll('.today-screen .ring circle')).reverse();
+      const label = document.querySelector('.today-screen .top-kicker');
+      const nextDay = LKStore.get().currentDay + 1;
+      if (label && !LKMotion.reduce()) {
+        LKMotion.flipNum(label, label.textContent.replace(/第\s*\d+\s*天/, '第 ' + nextDay + ' 天'));
+      }
+      circles.forEach(function (c, i) {
+        if (LKMotion.reduce()) {
+          c.setAttribute('stroke', '#F4EEE6');
+          return;
+        }
+        c.animate(
+          [{ stroke: c.getAttribute('stroke') }, { stroke: '#F4EEE6' }],
+          { duration: 80, delay: i * 40, fill: 'forwards' }
+        );
+      });
+      setTimeout(function () {
+        LKStore.learnAhead();
+        LKRouter.go();
+      }, LKMotion.reduce() ? 0 : 520);
+    }
+    const noted = LKStore.get().settings.aheadNoteDate;
+    if (k >= 2 && noted !== today) {
+      LKStore.setSetting('aheadNoteDate', today);
+      LKSheet.confirm({
+        title: '今天已经多学了 2 天',
+        body: '新知识睡一觉更容易记牢。想继续也完全可以，或者先练一练错题本？',
+        ok: '还是继续',
+        cancel: '先歇一歇'
+      }).then(function (yes) { if (yes) go(); });
+      return;
+    }
+    go();
   }
 
   function ring(done) {

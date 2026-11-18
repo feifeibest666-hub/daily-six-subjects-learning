@@ -69,8 +69,22 @@
       q: q.q,
       options: q.options.slice(),
       answer: q.answer,
-      why: q.why
+      why: q.why,
+      ref: q.ref == null ? null : q.ref
     };
+  }
+
+  function lessonById(id) {
+    const m = /^d(\d+)-([a-z]+)$/.exec(id || '');
+    if (!m) return null;
+    const les = rawLesson(+m[1], m[2]);
+    if (!les) return null;
+    return Object.assign({ day: +m[1], subject: m[2] }, les);
+  }
+
+  function seenToday(key) {
+    const m = LKStore.get().mistakes[key];
+    return !!(m && m.lastSeen && m.lastSeen === LK.todayStr());
   }
 
   function present(q, salt) {
@@ -80,6 +94,7 @@
       q: q.q,
       why: q.why,
       review: !!q.review,
+      ref: q.ref == null ? null : q.ref,
       options: map.map(function (i) { return q.options[i]; }),
       answer: map.indexOf(q.answer),
       indexMap: map
@@ -98,6 +113,7 @@
           options: q.options.slice(),
           answer: q.answer,
           why: q.why,
+          ref: q.ref == null ? null : q.ref,
           review: true
         });
       });
@@ -119,7 +135,7 @@
         if (q) pool.push(Object.assign({ review: true }, q));
       });
     }
-    const missed = pool.filter(function (p) { return !!state.mistakes[p.key]; });
+    const missed = pool.filter(function (p) { return !!state.mistakes[p.key] && !seenToday(p.key); });
     missed.sort(function (a, b) { return state.mistakes[a.key].due - state.mistakes[b.key].due; });
     const rest = pool.filter(function (p) { return !state.mistakes[p.key]; });
     rest.sort(function (a, b) {
@@ -132,7 +148,7 @@
     if (day <= 1) return null;
     const state = LKStore.get();
     const due = Object.keys(state.mistakes).filter(function (k) {
-      return k.indexOf('-' + subject + '#') >= 0 && state.mistakes[k].due <= day;
+      return k.indexOf('-' + subject + '#') >= 0 && state.mistakes[k].due <= day && !seenToday(k);
     }).sort(function (a, b) {
       return state.mistakes[a].due - state.mistakes[b].due || (a < b ? -1 : 1);
     });
@@ -154,6 +170,7 @@
           options: q.options.slice(),
           answer: q.answer,
           why: q.why,
+          ref: q.ref == null ? null : q.ref,
           review: true
         });
       });
@@ -172,7 +189,8 @@
           q: q.q,
           options: q.options,
           answer: q.answer,
-          why: q.why
+          why: q.why,
+          ref: q.ref == null ? null : q.ref
         }, salt);
       });
     }
@@ -187,7 +205,8 @@
         q: q.q,
         options: q.options.slice(),
         answer: q.answer,
-        why: q.why
+        why: q.why,
+        ref: q.ref == null ? null : q.ref
       };
     });
     let list = mini ? base.slice(0, 1) : base.slice();
@@ -235,11 +254,12 @@
     const d = dayObj(day);
     if (state.welcomeBack) return '欢迎回来，从第 ' + day + ' 天接着来，没有欠账。';
     const n = doneCount(day);
+    if (learningAhead(state) && n === 0) return '多学一天，真有劲头。慢慢来，不赶。';
     const chest = !!state.dayCompletedDate[String(day)];
     if (n === 0) {
       if (d && d.type === 'review') return '今天是周复盘。先从时尚回炉热个身？';
       if (state.miniOn) return '迷你模式 6 关，约 8 分钟。先从时尚热个身？';
-      return '今天 6 关，约 30 分钟。先从时尚热个身？';
+      return '今天 6 关，约 40 分钟。先从时尚热个身？';
     }
     if (n <= 2) {
       const next = SUBJECT_ORDER.find(function (s) { return !state.lessons[LK.lessonId(day, s)]; });
@@ -247,7 +267,36 @@
     }
     if (n <= 5) return '过半啦，还剩 ' + (6 - n) + ' 关。';
     if (!chest) return '六连达成！宝箱在等你。';
+    const k = aheadK(state);
+    if (day < 14 && k >= 2) return '今天学了好多。记得留点时间消化～';
+    if (day < 14 && k === 0) return '今天收工！有空的话，可以继续第 ' + (day + 1) + ' 天。';
+    if (day < 14 && k >= 1) return '今天已经多学了 ' + k + ' 天。';
     return '今天收工。明天见～';
+  }
+
+  function aheadK(state) {
+    const today = LK.todayStr();
+    let n = 0;
+    Object.keys(state.dayCompletedDate || {}).forEach(function (key) {
+      if (state.dayCompletedDate[key] === today) n += 1;
+    });
+    return Math.max(0, n - 1);
+  }
+
+  function learningAhead(state) {
+    const prev = state.dayCompletedDate[String(state.currentDay - 1)];
+    return prev === LK.todayStr();
+  }
+
+  function practiceKeys() {
+    const state = LKStore.get();
+    const today = LK.todayStr();
+    return Object.keys(state.mistakes).filter(function (key) {
+      const m = state.mistakes[key];
+      return m.due <= state.currentDay + 1 && m.lastSeen !== today;
+    }).sort(function (a, b) {
+      return state.mistakes[a].due - state.mistakes[b].due || (a < b ? -1 : 1);
+    }).slice(0, 6);
   }
 
   function provinceById(id) {
@@ -312,6 +361,10 @@
     rawLesson: rawLesson,
     lesson: lesson,
     findQuestion: findQuestion,
+    lessonById: lessonById,
+    aheadK: aheadK,
+    learningAhead: learningAhead,
+    practiceKeys: practiceKeys,
     present: present,
     buildQuiz: buildQuiz,
     starsFor: starsFor,

@@ -113,6 +113,22 @@
 
   function clamp(n, a, b) { return Math.max(a, Math.min(b, n)); }
 
+  function rich(text) {
+    const frag = document.createDocumentFragment();
+    String(text == null ? '' : text).split('**').forEach(function (part, i) {
+      if (!part) return;
+      if (i % 2 === 1) frag.appendChild(h('strong', { class: 'term', text: part }));
+      else frag.appendChild(document.createTextNode(part));
+    });
+    return frag;
+  }
+
+  function stepSummary(s) {
+    if (!s) return '';
+    if (s.title) return s.title + (s.takeaway ? '：' + s.takeaway : '');
+    return s.text || '';
+  }
+
   function bezier(x1, y1, x2, y2) {
     const cx = 3 * x1;
     const bx = 3 * (x2 - x1) - cx;
@@ -185,6 +201,8 @@
     hashStr: hashStr,
     shuffleIdx: shuffleIdx,
     clamp: clamp,
+    rich: rich,
+    stepSummary: stepSummary,
     ease: ease,
     yearText: yearText,
     wait: wait,

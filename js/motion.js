@@ -393,6 +393,87 @@
     setTimeout(function () { el.textContent = text; }, 140);
   }
 
+  function nod(svg) {
+    if (!svg) return;
+    const body = svg.querySelector('.mascot-bob') || svg;
+    if (reduce()) {
+      body.animate([{ opacity: .7 }, { opacity: 1 }], { duration: 120 });
+      return;
+    }
+    body.animate(
+      [
+        { transform: 'translateY(0) rotate(0deg)' },
+        { transform: 'translateY(4px) rotate(-6deg)', offset: .45 },
+        { transform: 'translateY(0) rotate(0deg)' }
+      ],
+      { duration: 280, easing: INOUT }
+    );
+  }
+
+  function rebound(el) {
+    if (!el || reduce()) return;
+    el.animate(
+      [
+        { transform: 'scale(0.96, 0.92)' },
+        { transform: 'scale(1, 1.04)', offset: .42 },
+        { transform: 'scale(1, 0.99)', offset: .72 },
+        { transform: 'scale(1, 1)' }
+      ],
+      { duration: 260, easing: BACK }
+    );
+  }
+
+  function partsIn(container) {
+    if (!container) return;
+    const parts = Array.prototype.slice.call(container.querySelectorAll(':scope > .k-part'));
+    const check = container.querySelector(':scope > .check');
+    parts.forEach(function (el, i) {
+      el.style.opacity = '0';
+      if (reduce()) {
+        el.animate([{ opacity: 0 }, { opacity: 1 }], { duration: 120, fill: 'forwards' });
+        return;
+      }
+      el.animate(
+        [{ transform: 'translateY(8px)', opacity: 0 }, { transform: 'translateY(0)', opacity: 1 }],
+        { duration: 240, delay: i * 70, easing: OUT, fill: 'forwards' }
+      );
+      el.querySelectorAll('.derive-line').forEach(function (line, j) {
+        line.animate(
+          [{ transform: 'translateY(8px)', opacity: 0 }, { transform: 'translateY(0)', opacity: 1 }],
+          { duration: 240, delay: i * 70 + j * 50, easing: OUT, fill: 'forwards' }
+        );
+      });
+    });
+    if (check) {
+      check.style.opacity = '0';
+      const delay = reduce() ? 0 : parts.length * 70 + 120;
+      if (reduce()) {
+        check.animate([{ opacity: 0 }, { opacity: 1 }], { duration: 120, delay: delay, fill: 'forwards' });
+      } else {
+        check.animate(
+          [
+            { transform: 'translateY(10px) scale(.98)', opacity: 0 },
+            { transform: 'translateY(0) scale(1)', opacity: 1 }
+          ],
+          { duration: 260, delay: delay, easing: BACK, fill: 'forwards' }
+        );
+      }
+    }
+  }
+
+  function aheadIn(el) {
+    if (!el) return;
+    el.style.opacity = '0';
+    if (reduce()) {
+      el.animate([{ opacity: 0 }, { opacity: 1 }], { duration: 120, fill: 'forwards' });
+      return;
+    }
+    el.animate(
+      [{ transform: 'translateY(16px)', opacity: 0 }, { transform: 'translateY(0)', opacity: 1 }],
+      { duration: 360, delay: 200, easing: OUT, fill: 'forwards' }
+    );
+  }
+
   function celebrateMascot(svg) {
     if (!svg) return;
     const body = svg.querySelector('.mascot-bob');
@@ -480,6 +561,10 @@
     lightTile: lightTile,
     flipNum: flipNum,
     celebrateMascot: celebrateMascot,
+    nod: nod,
+    rebound: rebound,
+    partsIn: partsIn,
+    aheadIn: aheadIn,
     playChest: playChest
   };
 })(window);

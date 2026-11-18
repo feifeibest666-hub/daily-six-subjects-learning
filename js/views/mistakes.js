@@ -1,14 +1,16 @@
 (function (global) {
-  function mount() {
+  function mount(query) {
+    query = query || {};
+    const dueOnly = query.due === '1';
     const screen = LK.h('div', { class: 'screen mistakes-screen' });
     const back = LK.h('button', { class: 'icon-btn', 'aria-label': '返回' }, [LKIcons.closeIcon()]);
-    back.addEventListener('click', function () { location.hash = '#/cards'; });
+    back.addEventListener('click', function () { location.hash = dueOnly ? '#/today' : '#/cards'; });
     screen.appendChild(LK.h('header', { class: 'lesson-top' }, [
       back,
-      LK.h('div', { class: 'top-kicker', text: '错题本' })
+      LK.h('div', { class: 'top-kicker', text: dueOnly ? '先练错题' : '错题本' })
     ]));
     const state = LKStore.get();
-    const keys = Object.keys(state.mistakes);
+    const keys = dueOnly ? LKCatalog.practiceKeys() : Object.keys(state.mistakes);
     if (!keys.length) {
       screen.appendChild(LK.h('p', { class: 'empty', text: '现在没有待回炉的题。已掌握 ' + state.mastered.length + ' 题。' }));
       return screen;
@@ -50,7 +52,15 @@
               if (!ok) LKMotion.shake(opt);
               else LKMotion.bounce(opt);
               practice.appendChild(LK.h('p', { class: 'explain-why', text: (ok ? '对了。' : '差一点。') + q.why }));
-              setTimeout(function () { location.hash = '#/mistakes'; global.LKRouter.go && LKRouter.go(); }, 700);
+              setTimeout(function () {
+                if (dueOnly) {
+                  if (!LKCatalog.practiceKeys().length) location.hash = '#/today';
+                  else LKRouter.go();
+                  return;
+                }
+                location.hash = '#/mistakes';
+                global.LKRouter.go && LKRouter.go();
+              }, 700);
             });
             practice.appendChild(opt);
           });

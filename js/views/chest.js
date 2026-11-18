@@ -55,7 +55,7 @@
       if (st.badges.length) {
         card.appendChild(LK.h('p', { class: 'report-line', text: '徽章：' + st.badges.map(labelBadge).join('、') }));
       }
-      const btn = LK.h('button', { class: 'btn btn-primary', text: '明天见' });
+      const btn = LK.h('button', { class: 'btn btn-primary', text: day < 14 ? '回首页' : '明天见' });
       btn.addEventListener('click', function () { location.hash = '#/today'; });
       card.appendChild(btn);
       return card;

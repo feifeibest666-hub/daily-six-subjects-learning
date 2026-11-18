@@ -34,7 +34,9 @@
         node.appendChild(bar);
         node.appendChild(LK.h('span', { class: 'step-no', text: String(i + 1) }));
         const box = LK.h('span', { class: 'step-body' });
-        box.appendChild(LK.h('span', { class: 'step-text', text: s.text }));
+        const line = LK.h('span', { class: 'step-text' });
+        line.appendChild(LK.rich(s.title ? (s.title + (s.takeaway ? '。' + s.takeaway : '')) : (s.text || '')));
+        box.appendChild(line);
         if (s.formula) box.appendChild(LK.h('span', { class: 'formula num', text: s.formula }));
         if (s.visual) {
           const viz = LKVisuals.render(s.visual);

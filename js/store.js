@@ -3,6 +3,7 @@
   const INTERVALS = [1, 3, 7, 21];
   let state = null;
   let streakBumped = false;
+  let aheadAnim = false;
 
   function blank() {
     const today = LK.todayStr();
@@ -21,7 +22,7 @@
       xp: 0,
       streak: { count: 0, lastDate: null, freezeLeft: 2, freezeMonth: today.slice(0, 7) },
       badges: [],
-      settings: { reduceMotion: false, ttsRate: 0.9, miniDefault: false, debug: false },
+      settings: { reduceMotion: false, ttsRate: 0.9, miniDefault: false, debug: false, aheadNoteDate: null, peekHintShown: false },
       miniOn: false,
       welcomeBack: false,
       notice: null,
@@ -125,11 +126,13 @@
 
   function grade(key, ok, wrongOriginal) {
     if (!key) return;
+    const today = LK.todayStr();
     if (!ok) {
       state.mistakes[key] = {
         due: state.currentDay + INTERVALS[0],
         stage: 0,
-        wrongPick: wrongOriginal
+        wrongPick: wrongOriginal,
+        lastSeen: today
       };
       state.mastered = state.mastered.filter(function (k) { return k !== key; });
     } else if (state.mistakes[key]) {
@@ -142,11 +145,22 @@
         state.mistakes[key] = {
           due: state.currentDay + INTERVALS[next],
           stage: next,
-          wrongPick: cur.wrongPick
+          wrongPick: cur.wrongPick,
+          lastSeen: today
         };
       }
     }
     save();
+  }
+
+  function learnAhead() {
+    if (state.currentDay >= 14) return state.currentDay;
+    state.currentDay += 1;
+    state.welcomeBack = false;
+    state.draft = null;
+    aheadAnim = true;
+    save();
+    return state.currentDay;
   }
 
   function completeLesson(p) {
@@ -231,6 +245,12 @@
       state.currentDay = n;
       state.welcomeBack = false;
       save();
+    },
+    learnAhead: learnAhead,
+    consumeAheadAnim: function () {
+      const v = aheadAnim;
+      aheadAnim = false;
+      return v;
     },
     clearWelcome: function () {
       if (!state.welcomeBack) return;

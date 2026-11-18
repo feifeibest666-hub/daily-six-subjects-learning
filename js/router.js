@@ -3,9 +3,19 @@
 
   function parse(hash) {
     const raw = (hash || '#/today').replace(/^#/, '');
-    const parts = raw.split('/').filter(Boolean);
+    const qat = raw.indexOf('?');
+    const path = qat >= 0 ? raw.slice(0, qat) : raw;
+    const query = {};
+    if (qat >= 0) {
+      raw.slice(qat + 1).split('&').forEach(function (pair) {
+        if (!pair) return;
+        const bits = pair.split('=');
+        query[decodeURIComponent(bits[0])] = decodeURIComponent(bits[1] || '');
+      });
+    }
+    const parts = path.split('/').filter(Boolean);
     const name = parts[0] || 'today';
-    return { name: name, day: parts[1] ? +parts[1] : null, subject: parts[2] || null };
+    return { name: name, day: parts[1] ? +parts[1] : null, subject: parts[2] || null, query: query };
   }
 
   function render(route) {
@@ -16,7 +26,7 @@
     if (route.name === 'timeline') return LKTimeline.mount();
     if (route.name === 'map') return LKMapView.mount();
     if (route.name === 'cards') return LKCards.mount();
-    if (route.name === 'mistakes') return LKMistakes.mount();
+    if (route.name === 'mistakes') return LKMistakes.mount(route.query || {});
     if (route.name === 'settings') return LKSettings.mount();
     if (route.name === 'review') return LKReview.mount(route.day, route.subject);
     return LKToday.mount();

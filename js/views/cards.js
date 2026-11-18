@@ -64,7 +64,7 @@
         }
         if (les.steps) {
           const ol = LK.h('ol', { class: 'step-sum' });
-          les.steps.forEach(function (s) { ol.appendChild(LK.h('li', { text: s.text })); });
+          les.steps.forEach(function (s) { ol.appendChild(LK.h('li', { text: LK.stepSummary(s) })); });
           body.appendChild(ol);
         }
         const redo = LK.h('button', { class: 'btn btn-primary', text: '重做这一关' });

@@ -57,5 +57,13 @@
     return svg;
   }
 
-  global.LKIcons = { star: star, stars: stars, gear: gear, closeIcon: closeIcon, tabIcon: tabIcon };
+  function book() {
+    const svg = LK.svg('svg', { viewBox: '0 0 24 24', width: '16', height: '16', class: 'book-ico', 'aria-hidden': 'true' });
+    const p = { fill: 'none', stroke: 'currentColor', 'stroke-width': '1.75', 'stroke-linecap': 'round', 'stroke-linejoin': 'round' };
+    svg.appendChild(LK.svg('path', Object.assign({ d: 'M12 6.2C10.4 5.2 8.4 4.6 6 4.6H4v13.2h2.2c2 0 3.8.5 5.8 1.6 2-1.1 3.8-1.6 5.8-1.6H20V4.6h-2c-2.4 0-4.4.6-6 1.6z' }, p)));
+    svg.appendChild(LK.svg('path', Object.assign({ d: 'M12 6.2v13.2' }, p)));
+    return svg;
+  }
+
+  global.LKIcons = { star: star, stars: stars, gear: gear, closeIcon: closeIcon, tabIcon: tabIcon, book: book };
 })(window);
