@@ -31,14 +31,15 @@
         if (!q) return;
         const wrongText = q.options[info.wrongPick] || '—';
         const rightText = q.options[q.answer];
-        const due = info.due <= state.currentDay ? '今天这一关会遇到' : ('第 ' + info.due + ' 个学习日');
+        const seenToday = info.lastSeen === LK.todayStr();
+        const due = seenToday ? '明天' : (info.due <= state.currentDay ? '今天这一关会遇到' : ('第 ' + info.due + ' 个学习日'));
         const card = LK.h('article', { class: 'mistake' });
         card.appendChild(LK.h('p', { class: 'q-text', text: q.q }));
         card.appendChild(LK.h('p', { class: 'sheet-copy', text: '你当时选了：' + wrongText }));
         card.appendChild(LK.h('p', { class: 'sheet-copy', text: '参考答案：' + rightText }));
         card.appendChild(LK.h('p', { class: 'sheet-copy', text: '下次出现：' + due }));
-        if (info.lastSeen === LK.todayStr()) {
-          card.appendChild(LK.h('p', { class: 'sheet-copy', style: { color: 'var(--ink-3)' }, text: '今天刚错过，明天再练' }));
+        if (seenToday) {
+          card.appendChild(LK.h('p', { class: 'sheet-copy', style: { color: 'var(--ink-3)' }, text: '今天练过了，明天再来' }));
           screen.appendChild(card);
           return;
         }
