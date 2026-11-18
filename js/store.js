@@ -137,6 +137,10 @@
       state.mastered = state.mastered.filter(function (k) { return k !== key; });
     } else if (state.mistakes[key]) {
       const cur = state.mistakes[key];
+      if (cur.lastSeen === today) {
+        save();
+        return;
+      }
       const next = cur.stage + 1;
       if (next >= INTERVALS.length) {
         delete state.mistakes[key];

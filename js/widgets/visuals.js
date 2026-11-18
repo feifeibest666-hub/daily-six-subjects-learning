@@ -264,9 +264,9 @@
     if (v.arrows) {
       svg.appendChild(rimArc(0, 100, 102, GEO, marks.geo));
       svg.appendChild(rimArc(100, 180, 102, GEO, ''));
-      svg.appendChild(rimArc(180, 250, 102, '#6E655C', ''));
-      svg.appendChild(rimArc(250, 310, 102, '#6E655C', marks.ink));
-      svg.appendChild(rimArc(310, 360, 102, '#6E655C', ''));
+      svg.appendChild(rimArc(360, 310, 102, '#6E655C', '', true));
+      svg.appendChild(rimArc(310, 250, 102, '#6E655C', marks.ink, true));
+      svg.appendChild(rimArc(250, 180, 102, '#6E655C', '', true));
       svg.appendChild(svgText({ x: 176, y: 252, 'text-anchor': 'middle', 'font-size': '11', fill: GEO, 'font-weight': '600' }, '东经 0～180°'));
       svg.appendChild(svgText({ x: 64, y: 252, 'text-anchor': 'middle', 'font-size': '11', fill: '#6E655C' }, '西经 0～180°'));
       svg.setAttribute('viewBox', '0 0 240 264');
@@ -323,13 +323,13 @@
     return { geo: geo, ink: ink, gold: gold };
   }
 
-  function rimArc(a0, a1, r, color, markerId) {
+  function rimArc(a0, a1, r, color, markerId, clockwise) {
     const p0 = polar(a0, r);
     const p1 = polar(a1, r);
-    let delta = a1 - a0;
+    let delta = clockwise ? a0 - a1 : a1 - a0;
     if (delta < 0) delta += 360;
     const path = LK.svg('path', {
-      d: 'M ' + p0[0] + ' ' + p0[1] + ' A ' + r + ' ' + r + ' 0 ' + (delta > 180 ? 1 : 0) + ' 0 ' + p1[0] + ' ' + p1[1],
+      d: 'M ' + p0[0] + ' ' + p0[1] + ' A ' + r + ' ' + r + ' 0 ' + (delta > 180 ? 1 : 0) + ' ' + (clockwise ? 1 : 0) + ' ' + p1[0] + ' ' + p1[1],
       fill: 'none', stroke: color, 'stroke-width': '1.75',
     });
     if (markerId) path.setAttribute('marker-end', 'url(#' + markerId + ')');
@@ -337,7 +337,7 @@
   }
 
   function coordViz(v) {
-    const svg = geoSvg('0 0 320 220');
+    const svg = geoSvg('0 0 332 220');
     const x0 = 50;
     const x1 = 290;
     const y0 = 10;
@@ -352,19 +352,18 @@
     svg.appendChild(LK.svg('rect', { x: x0, y: y0, width: x1 - x0, height: y1 - y0, fill: '#fff', stroke: LINE }));
     for (let lat = lat0; lat <= lat1 + 0.1; lat += step) {
       const y = Y(lat);
-      const bottom = lat + step > lat1 + 0.1;
+      const atBottom = Math.abs(lat - lat0) < 0.1;
       svg.appendChild(LK.svg('line', { x1: x0, y1: y, x2: x1, y2: y, stroke: LINE, 'stroke-width': '1' }));
-      svg.appendChild(svgText({ x: x0 - 6, y: bottom ? y - 3 : y + 4, 'text-anchor': 'end', 'font-size': '12', fill: INK2 }, String(lat) + '°'));
+      svg.appendChild(svgText({ x: x0 - 6, y: atBottom ? y - 4 : y + 4, 'text-anchor': 'end', 'font-size': '12', fill: INK2 }, String(lat) + '°'));
     }
     for (let lon = lon0; lon <= lon1 + 0.1; lon += step) {
       const x = X(lon);
-      const first = lon === lon0;
-      const last = lon + step > lon1 + 0.1;
+      const first = Math.abs(lon - lon0) < 0.1;
       svg.appendChild(LK.svg('line', { x1: x, y1: y0, x2: x, y2: y1, stroke: LINE, 'stroke-width': '1' }));
       svg.appendChild(svgText({
-        x: last ? x - 1 : (first ? x + 2 : x),
+        x: first ? x + 2 : x,
         y: y1 + 18,
-        'text-anchor': last ? 'end' : (first ? 'start' : 'middle'),
+        'text-anchor': first ? 'start' : 'middle',
         'font-size': '12',
         fill: INK2
       }, String(lon) + '°'));
@@ -398,7 +397,7 @@
   }
 
   function beamViz() {
-    const svg = geoSvg('0 0 300 170');
+    const svg = geoSvg('0 -18 300 188');
     svg.appendChild(LK.svg('path', { d: 'M10 150 Q150 90 290 150 L290 164 L10 164 Z', fill: '#E3C9A0' }));
     const ang = 35 * Math.PI / 180;
     const sep = 30 / Math.sin(ang);
@@ -425,7 +424,7 @@
     const vL = [70, 10];
     const vR = [100, 10];
     beam(vL[0], vL[1], vR[0], vR[1], [70, groundY(70)], [100, groundY(100)]);
-    svg.appendChild(svgText({ x: 85, y: 36, 'text-anchor': 'middle', 'font-size': '12', fill: INK2 }, '直射（低纬度）'));
+    svg.appendChild(svgText({ x: 85, y: -4, 'text-anchor': 'middle', 'font-size': '12', fill: INK2 }, '直射（低纬度）'));
     svg.appendChild(svgText({ x: 16, y: 156, 'font-size': '11', fill: INK2 }, '光斑小，热量集中'));
     const sL = [115, 64];
     const sR = [115 + sep, 64];

@@ -37,6 +37,11 @@
         card.appendChild(LK.h('p', { class: 'sheet-copy', text: '你当时选了：' + wrongText }));
         card.appendChild(LK.h('p', { class: 'sheet-copy', text: '参考答案：' + rightText }));
         card.appendChild(LK.h('p', { class: 'sheet-copy', text: '下次出现：' + due }));
+        if (info.lastSeen === LK.todayStr()) {
+          card.appendChild(LK.h('p', { class: 'sheet-copy', style: { color: 'var(--ink-3)' }, text: '今天刚错过，明天再练' }));
+          screen.appendChild(card);
+          return;
+        }
         const practice = LK.h('div', { class: 'practice' });
         const btn = LK.h('button', { class: 'btn btn-secondary', text: '现在练一下' });
         btn.addEventListener('click', function () {
