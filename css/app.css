@@ -195,6 +195,7 @@ h1, h2, p { margin: 0; }
 .step-no {
   width: 22px; height: 22px; margin-left: 10px; border-radius: 50%; background: var(--soft);
   color: var(--accent); font-size: 12px; font-weight: 650; display: grid; place-items: center;
+  flex: 0 0 auto;
 }
 .step-body { display: flex; flex-direction: column; gap: var(--s2); min-width: 0; }
 .step-text { font-size: var(--fs-body); line-height: 1.65; }
@@ -272,7 +273,9 @@ input[type="range"]::-moz-range-thumb {
 .swatch-row, .viz-swatches { display: flex; gap: var(--s2); flex-wrap: wrap; }
 .swatch-row i, .viz-swatch i {
   width: 40px; height: 56px; border-radius: 8px; display: block;
+  box-sizing: border-box; border: 1px solid var(--line);
 }
+.viz-swatch-chips { display: flex; gap: 6px; }
 .swatch-weight { display: flex; height: 56px; width: 100%; border-radius: 8px; overflow: hidden; }
 .swatch-weight i { height: 56px; display: block; }
 .swatch-label {
@@ -480,12 +483,15 @@ body.is-dragging { overflow: hidden; }
 .k-p { margin: 2px 0 10px; font-size: var(--fs-body); line-height: 1.65; }
 .k-take { background: var(--soft); border-radius: var(--r-sm); padding: 8px 10px; }
 .k-take .k-p { margin-bottom: 0; font-weight: 650; }
-.derive-line { margin: 0 0 4px; font-size: var(--fs-small); line-height: 1.55; }
+.derive-line { margin: 0 0 4px; font-size: 16px; line-height: 1.6; }
 .card-fold {
-  display: flex; align-items: center; gap: 8px; width: 100%; text-align: left;
-  border: 0; background: transparent; min-height: 44px; padding: 4px 0;
+  display: flex; align-items: center; gap: 8px; width: 100%; min-width: 0; overflow: hidden;
+  text-align: left; border: 0; background: transparent; min-height: 44px; padding: 4px 0;
 }
-.fold-title { font-weight: 650; font-size: var(--fs-small); flex: 0 1 auto; white-space: nowrap; }
+.fold-title {
+  font-weight: 650; font-size: var(--fs-small); flex: 1 1 auto; min-width: 0;
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
 .fold-take {
   color: var(--ink-2); font-size: var(--fs-tiny); white-space: nowrap;
   overflow: hidden; text-overflow: ellipsis; flex: 1; min-width: 0;
@@ -529,7 +535,8 @@ body.is-dragging { overflow: hidden; }
 .peek-titles { flex: 1; min-width: 0; }
 .peek-k { font-size: var(--fs-tiny); color: var(--ink-2); }
 .peek-h { font-size: var(--fs-h2); line-height: 1.35; font-weight: 650; margin-top: 2px; }
-.peek-scroll { flex: 1; overflow: auto; min-height: 0; padding: 8px 0 12px; }
+.peek-scroll { flex: 1; overflow-x: hidden; overflow-y: auto; min-height: 0; padding: 8px 0 12px; }
+.peek-card, .peek-inner, .peek-card .k-p { min-width: 0; overflow-wrap: anywhere; }
 .peek-hook, .peek-take, .peek-check { color: var(--ink-2); font-size: var(--fs-small); margin: 8px 0; }
 .peek-foot {
   flex: 0 0 auto; padding: 8px 0 max(12px, env(safe-area-inset-bottom));

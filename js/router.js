@@ -62,8 +62,13 @@
     tabs.querySelectorAll('a.tab').forEach(function (a) {
       a.classList.toggle('is-on', a.dataset.tab === route.name);
     });
+    stage.scrollTop = 0;
+    window.scrollTo(0, 0);
+    if (document.scrollingElement) document.scrollingElement.scrollTop = 0;
     try { await LKMotion.enter(next); } catch (e) {}
     stage.scrollTop = 0;
+    window.scrollTo(0, 0);
+    if (document.scrollingElement) document.scrollingElement.scrollTop = 0;
     busy = false;
     if (queued) { queued = false; go(); }
   }

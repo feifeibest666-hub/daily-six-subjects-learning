@@ -42,6 +42,7 @@
 
     let phase = draft ? draft.phase : (les.boss ? 'intro' : (les.review ? 'recall' : 'hook'));
     let step = draft ? draft.step || 0 : 0;
+    let stepGen = 0;
     let qi = draft ? draft.qi || 0 : 0;
     let wrongs = draft ? draft.wrongs || 0 : 0;
     let correct = draft ? draft.correct || 0 : 0;
@@ -289,8 +290,8 @@
           picked.classList.add('is-ok');
           const mark = LK.h('i', { class: 'check-mark', text: '✓', 'aria-hidden': 'true' });
           picked.appendChild(mark);
-          if (animate) {
-            LKMotion.pop(mark);
+            if (animate) {
+            LKMotion.pop(mark, 300);
             LKMotion.nod(mascotWrap.querySelector('.mascot'));
           }
           why.textContent = '对！' + check.why;
@@ -315,11 +316,18 @@
       if (checks[index] != null) settle(+checks[index], false);
     }
 
+    function foldLabel(s) {
+      if (s.title) return s.title;
+      const chars = Array.from(s.text || LK.stepSummary(s) || '');
+      if (chars.length <= 14) return chars.join('');
+      return chars.slice(0, 14).join('') + '…';
+    }
+
     function foldLine(s, i) {
       const row = LK.h('div', { class: 'card-fold' });
       row.appendChild(LK.h('span', { class: 'step-no', text: String(i + 1) }));
-      row.appendChild(LK.h('span', { class: 'fold-title', text: s.title || LK.stepSummary(s) }));
-      row.appendChild(LK.h('span', { class: 'fold-take', text: s.takeaway || '' }));
+      row.appendChild(LK.h('span', { class: 'fold-title', text: foldLabel(s) }));
+      if (s.title && s.takeaway) row.appendChild(LK.h('span', { class: 'fold-take', text: s.takeaway }));
       return row;
     }
 
@@ -346,12 +354,61 @@
 
     function showSteps(index, animate) {
       phase = 'steps';
+      const prev = step;
       step = index;
+      stepGen += 1;
+      if (richMode() && animate && index === prev + 1 && phaseBody.querySelector('.kcard.is-current')) {
+        advanceRich(stepGen);
+        return;
+      }
       phaseBody.innerHTML = '';
       const card = LK.h('div', { class: 'stage-card' });
       phaseBody.appendChild(card);
       if (richMode()) fillRich(card, animate);
       else fillLegacy(card, animate);
+    }
+
+    function makeCurrent(index) {
+      const s = les.steps[index];
+      const current = LK.h('article', { class: 'kcard is-current' });
+      const titleRow = LK.h('div', { class: 'kcard-h' });
+      titleRow.appendChild(LK.h('span', { class: 'step-no', text: String(index + 1) }));
+      titleRow.appendChild(LK.h('h3', { text: s.title || '' }));
+      if (s.review) titleRow.appendChild(LK.h('span', { class: 'tag', text: '回顾' }));
+      current.appendChild(titleRow);
+      renderBody(s, current);
+      mountCheck(s, index, current, function () {
+        wireFoot(index);
+        LKMotion.rebound(footBtn);
+      });
+      return current;
+    }
+
+    function wireFoot(index) {
+      const s = les.steps[index];
+      const n = visibleCount();
+      const need = s.check && checks[index] == null;
+      const last = index >= n - 1;
+      setAction({
+        label: need ? '先答上面的小问题' : (last ? '我懂了，去练一练' : ('下一张（' + (index + 1) + '/' + n + '）')),
+        disabled: !!need,
+        onClick: function () {
+          if (s.check && checks[index] == null) return;
+          if (index < n - 1) showSteps(index + 1, true);
+          else if (!useMini && les.interaction) showInteract();
+          else showQuiz();
+        }
+      });
+    }
+
+    function revealCurrent(current, animate) {
+      wireFoot(step);
+      paintChrome();
+      saveDraft();
+      if (!animate) return;
+      LKMotion.partsIn(current);
+      const behavior = LKMotion.reduce() ? 'auto' : 'smooth';
+      requestAnimationFrame(function () { current.scrollIntoView({ behavior: behavior, block: 'start' }); });
     }
 
     function fillRich(card, animate) {
@@ -363,46 +420,42 @@
       card.appendChild(head);
       const list = LK.h('div', { class: 'card-stack' });
       for (let i = 0; i < step && i < n; i++) list.appendChild(foldLine(les.steps[i], i));
-      const s = les.steps[step];
-      const current = LK.h('article', { class: 'kcard is-current' });
-      const titleRow = LK.h('div', { class: 'kcard-h' });
-      titleRow.appendChild(LK.h('span', { class: 'step-no', text: String(step + 1) }));
-      titleRow.appendChild(LK.h('h3', { text: s.title }));
-      if (s.review) titleRow.appendChild(LK.h('span', { class: 'tag', text: '回顾' }));
-      current.appendChild(titleRow);
-      renderBody(s, current);
-      mountCheck(s, step, current, function () {
-        setFoot();
-        LKMotion.rebound(footBtn);
-      });
+      const current = makeCurrent(step);
       list.appendChild(current);
       card.appendChild(list);
-      function onNext() {
-        if (s.check && checks[step] == null) return;
-        if (step < n - 1) {
-          showSteps(step + 1, true);
-          return;
-        }
-        if (!useMini && les.interaction) showInteract();
-        else showQuiz();
+      revealCurrent(current, animate);
+    }
+
+    function advanceRich(gen) {
+      const current = phaseBody.querySelector('.kcard.is-current');
+      if (!current) return;
+      const clip = LK.h('div', { class: 'peek-clip' });
+      const inner = LK.h('div', { class: 'peek-inner' });
+      while (current.children.length > 1) inner.appendChild(current.children[1]);
+      clip.appendChild(inner);
+      current.appendChild(clip);
+      clip.style.gridTemplateRows = '1fr';
+      setAction({ label: '下一张', disabled: true, onClick: function () {} });
+      function finish() {
+        if (gen !== stepGen || !current.isConnected) return;
+        const stack = current.parentNode;
+        const fold = foldLine(les.steps[step - 1], step - 1);
+        current.replaceWith(fold);
+        const next = makeCurrent(step);
+        stack.appendChild(next);
+        revealCurrent(next, true);
       }
-      function setFoot() {
-        const need = s.check && checks[step] == null;
-        const last = step >= n - 1;
-        setAction({
-          label: need ? '先答上面的小问题' : (last ? '我懂了，去练一练' : ('下一张（' + (step + 1) + '/' + n + '）')),
-          disabled: !!need,
-          onClick: onNext
-        });
+      const reduce = LKMotion.reduce();
+      const fade = inner.animate([{ opacity: 1 }, { opacity: 0 }], { duration: reduce ? 120 : 140, fill: 'forwards' });
+      if (reduce) {
+        fade.finished.then(finish, function () {});
+        return;
       }
-      setFoot();
-      paintChrome();
-      saveDraft();
-      if (animate) {
-        LKMotion.partsIn(current);
-        const behavior = LKMotion.reduce() ? 'auto' : 'smooth';
-        requestAnimationFrame(function () { current.scrollIntoView({ behavior: behavior, block: 'start' }); });
-      }
+      const drop = clip.animate(
+        [{ gridTemplateRows: '1fr' }, { gridTemplateRows: '0fr' }],
+        { duration: 280, easing: 'cubic-bezier(.22,1,.36,1)', fill: 'forwards' }
+      );
+      drop.finished.then(finish, function () {});
     }
 
     function fillLegacy(card, animate) {
@@ -526,7 +579,7 @@
       const titleId = 'peek-title';
       const rec = LKStore.get().lessons[src.id];
       let cutoff = -1;
-      if (rec && rec.mini) {
+      if ((rec && rec.mini) || (useMini && src.id === les.id)) {
         cutoff = 0;
         for (let i = 0; i < src.steps.length; i++) {
           if (src.steps[i].check) { cutoff = i; break; }
@@ -597,8 +650,8 @@
       if (opened) card.style.background = srcSub.soft;
       const fold = LK.h('button', { class: 'card-fold', type: 'button' });
       fold.appendChild(LK.h('span', { class: 'step-no', text: String(i + 1) }));
-      fold.appendChild(LK.h('span', { class: 'fold-title', text: s.title || LK.stepSummary(s) }));
-      fold.appendChild(LK.h('span', { class: 'fold-take', text: s.takeaway || '' }));
+      fold.appendChild(LK.h('span', { class: 'fold-title', text: foldLabel(s) }));
+      if (s.title && s.takeaway) fold.appendChild(LK.h('span', { class: 'fold-take', text: s.takeaway }));
       if (opened) fold.appendChild(LK.h('span', { class: 'peek-rel', text: '和这题有关' }));
       card.appendChild(fold);
       const clip = LK.h('div', { class: 'peek-clip' });

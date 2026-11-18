@@ -23,7 +23,7 @@
     gear.addEventListener('click', function () { location.hash = '#/settings'; });
 
     const kicker = LK.h('div', { class: 'top-kicker' });
-    kicker.appendChild(document.createTextNode(title));
+    kicker.appendChild(LK.h('span', { class: 'kicker-day', text: title }));
     if (LKCatalog.learningAhead(state)) kicker.appendChild(LK.h('span', { class: 'ahead-tag', text: '提前学' }));
     screen.appendChild(LK.h('header', { class: 'topbar' }, [
       kicker,
@@ -148,7 +148,7 @@
     const today = LK.todayStr();
     function go() {
       const circles = Array.prototype.slice.call(document.querySelectorAll('.today-screen .ring circle')).reverse();
-      const label = document.querySelector('.today-screen .top-kicker');
+      const label = document.querySelector('.today-screen .kicker-day');
       const nextDay = LKStore.get().currentDay + 1;
       if (label && !LKMotion.reduce()) {
         LKMotion.flipNum(label, label.textContent.replace(/第\s*\d+\s*天/, '第 ' + nextDay + ' 天'));

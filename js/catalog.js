@@ -164,8 +164,10 @@
       const les = rawLesson(d, subject);
       if (!les) continue;
       les.quiz.forEach(function (q, i) {
+        const key = id + '#' + i;
+        if (state.mistakes[key] && seenToday(key)) return;
         pool.push({
-          key: id + '#' + i,
+          key: key,
           q: q.q,
           options: q.options.slice(),
           answer: q.answer,

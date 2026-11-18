@@ -138,7 +138,7 @@
     );
   }
 
-  function pop(el) {
+  function pop(el, ms) {
     if (!el) return;
     if (reduce()) {
       el.animate([{ opacity: 0 }, { opacity: 1 }], { duration: 120, fill: 'forwards' });
@@ -150,7 +150,7 @@
         { transform: 'scale(1.25) rotate(0deg)', opacity: 1, offset: .7 },
         { transform: 'scale(1) rotate(0deg)', opacity: 1 }
       ],
-      { duration: 420, easing: BACK, fill: 'forwards' }
+      { duration: ms || 420, easing: BACK, fill: 'forwards' }
     );
   }
 
@@ -446,7 +446,8 @@
     });
     if (check) {
       check.style.opacity = '0';
-      const delay = reduce() ? 0 : parts.length * 70 + 120;
+      const lastStart = parts.length ? (parts.length - 1) * 70 + 240 : 0;
+      const delay = reduce() ? 0 : lastStart + 120;
       if (reduce()) {
         check.animate([{ opacity: 0 }, { opacity: 1 }], { duration: 120, delay: delay, fill: 'forwards' });
       } else {

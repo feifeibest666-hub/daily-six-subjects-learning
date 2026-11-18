@@ -1,13 +1,22 @@
 (function (global) {
   function swatches(v) {
     const row = LK.h('div', { class: 'viz viz-swatches' });
-    (v.colors || []).forEach(function (c, i) {
+    const colors = v.colors || [];
+    const labels = v.labels || [];
+    let i = 0;
+    while (i < colors.length) {
+      const label = labels[i] || '';
+      let j = i + 1;
+      while (label && j < colors.length && (labels[j] || '') === label) j += 1;
+      const chips = LK.h('span', { class: 'viz-swatch-chips' });
+      for (let k = i; k < j; k++) chips.appendChild(LK.h('i', { style: { background: colors[k] } }));
       const item = LK.h('div', { class: 'viz-swatch' }, [
-        LK.h('i', { style: { background: c } }),
-        v.labels && v.labels[i] ? LK.h('span', { text: v.labels[i] }) : null
+        chips,
+        label ? LK.h('span', { text: label }) : null
       ]);
       row.appendChild(item);
-    });
+      i = j;
+    }
     return row;
   }
 
@@ -148,7 +157,8 @@
     svg.appendChild(svgText({ x: x0 - 4, y: cy + 4, 'text-anchor': 'end', 'font-size': '12', fill: GEO, 'font-weight': '600' }, String(dr)));
     svg.appendChild(LK.svg('circle', { cx: cx, cy: cy, r: '6', fill: GEO }));
     if (v.dotLabel) svg.appendChild(svgText({ x: cx + 8, y: cy - 8, 'font-size': '13', fill: GEO, 'font-weight': '600' }, v.dotLabel));
-    if (v.xLabel) svg.appendChild(svgText({ x: 130, y: 164, 'text-anchor': 'middle', 'font-size': '12', fill: INK2 }, v.xLabel));
+    if (v.xLabel) svg.appendChild(svgText({ x: 130, y: 172, 'text-anchor': 'middle', 'font-size': '12', fill: INK2 }, v.xLabel));
+    svg.setAttribute('viewBox', '0 0 240 186');
     if (v.yLabel) svg.appendChild(svgText({ x: 12, y: 78, 'text-anchor': 'middle', 'font-size': '12', fill: INK2, transform: 'rotate(-90 12 78)' }, v.yLabel));
     return svg;
   }
@@ -215,13 +225,11 @@
         const a1 = ((i + 1) / n) * 360;
         svg.appendChild(LK.svg('path', {
           d: wedge(a0, a1, 90),
-          fill: i % 2 === 0 ? GEO_SOFT : '#FFFFFF',
+          fill: i === 0 ? 'rgba(47,158,143,.3)' : (i % 2 === 0 ? GEO_SOFT : '#FFFFFF'),
           stroke: i === 0 ? GEO : LINE,
-          'stroke-width': i === 0 ? '2' : '1'
+          'stroke-width': i === 0 ? '2.5' : '1'
         }));
       }
-      const mid = polar(360 / n / 2, 58);
-      svg.appendChild(svgText({ x: mid[0] + 4, y: mid[1], 'font-size': '11', fill: GEO, 'font-weight': '600' }, '1 小时 = 15°'));
     }
     if (v.sun && !v.sectors) {
       svg.appendChild(LK.svg('circle', { cx: '120', cy: '120', r: '90', fill: GEO_SOFT }));
@@ -245,47 +253,91 @@
           'stroke-width': hot ? '2.5' : '1'
         }));
       }
-      const z = polar(0, 98);
-      const o = polar(180, 98);
-      svg.appendChild(svgText({ x: z[0], y: Math.min(232, z[1] + 12), 'text-anchor': 'middle', 'font-size': '11', fill: GEO, 'font-weight': '600' }, '0° 格林尼治'));
-      svg.appendChild(svgText({ x: o[0], y: Math.max(14, o[1] - 6), 'text-anchor': 'middle', 'font-size': '11', fill: INK2 }, '180°'));
+      if (!v.sun) {
+        const z = polar(0, 98);
+        const o = polar(180, 98);
+        svg.appendChild(svgText({ x: z[0], y: Math.min(232, z[1] + 12), 'text-anchor': 'middle', 'font-size': '11', fill: GEO, 'font-weight': '600' }, '0° 格林尼治'));
+        svg.appendChild(svgText({ x: o[0], y: Math.max(14, o[1] - 6), 'text-anchor': 'middle', 'font-size': '11', fill: INK2 }, '180°'));
+      }
     }
+    const marks = arrowMarks(svg);
     if (v.arrows) {
-      const a = polar(0, 102);
-      const b = polar(180, 102);
-      svg.appendChild(LK.svg('path', {
-        d: 'M ' + a[0] + ' ' + a[1] + ' A 102 102 0 0 0 ' + b[0] + ' ' + b[1],
-        fill: 'none', stroke: GEO, 'stroke-width': '1.5'
-      }));
-      svg.appendChild(LK.svg('path', {
-        d: 'M ' + a[0] + ' ' + a[1] + ' A 102 102 0 0 1 ' + b[0] + ' ' + b[1],
-        fill: 'none', stroke: INK2, 'stroke-width': '1.5'
-      }));
-      svg.appendChild(svgText({ x: 168, y: 78, 'font-size': '11', fill: GEO, 'font-weight': '600' }, '东经 0～180°'));
-      svg.appendChild(svgText({ x: 8, y: 78, 'font-size': '11', fill: INK2 }, '西经 0～180°'));
+      svg.appendChild(rimArc(0, 100, 102, GEO, marks.geo));
+      svg.appendChild(rimArc(100, 180, 102, GEO, ''));
+      svg.appendChild(rimArc(180, 250, 102, '#6E655C', ''));
+      svg.appendChild(rimArc(250, 310, 102, '#6E655C', marks.ink));
+      svg.appendChild(rimArc(310, 360, 102, '#6E655C', ''));
+      svg.appendChild(svgText({ x: 176, y: 252, 'text-anchor': 'middle', 'font-size': '11', fill: GEO, 'font-weight': '600' }, '东经 0～180°'));
+      svg.appendChild(svgText({ x: 64, y: 252, 'text-anchor': 'middle', 'font-size': '11', fill: '#6E655C' }, '西经 0～180°'));
+      svg.setAttribute('viewBox', '0 0 240 264');
     }
     if (v.sun) {
-      svg.appendChild(LK.svg('circle', { cx: '214', cy: '120', r: '12', fill: 'var(--gold)' }));
-      [108, 120, 132].forEach(function (y) {
-        svg.appendChild(LK.svg('line', { x1: '198', y1: y, x2: '176', y2: y, stroke: 'var(--gold)', 'stroke-width': '1.5' }));
+      svg.appendChild(LK.svg('circle', { cx: '250', cy: '120', r: '8', fill: '#F2B640' }));
+      [112, 120, 128].forEach(function (y) {
+        svg.appendChild(LK.svg('line', {
+          x1: '238', y1: y, x2: '214', y2: y,
+          stroke: '#F2B640', 'stroke-width': '1.5', 'marker-end': 'url(#' + marks.gold + ')'
+        }));
       });
-      const arcA = polar(20, 108);
-      const arcB = polar(200, 108);
-      svg.appendChild(LK.svg('path', {
-        d: 'M ' + arcA[0] + ' ' + arcA[1] + ' A 108 108 0 1 0 ' + arcB[0] + ' ' + arcB[1],
-        fill: 'none', stroke: GEO, 'stroke-width': '1.5'
+      svg.appendChild(rimArc(40, 110, 104, GEO, marks.geo));
+      svg.appendChild(svgText({ x: 198, y: 46, 'text-anchor': 'middle', 'font-size': '11', fill: GEO, 'font-weight': '600' }, '自西向东转'));
+      svg.appendChild(svgText({ x: 120, y: 228, 'text-anchor': 'middle', 'font-size': '12', fill: GEO, 'font-weight': '600' }, '日出'));
+      svg.appendChild(svgText({ x: 120, y: 22, 'text-anchor': 'middle', 'font-size': '12', fill: '#6E655C' }, '日落'));
+      svg.setAttribute('viewBox', '-8 0 276 244');
+    }
+    if (v.sectors) {
+      const midA = 180 / v.sectors;
+      const from = polar(midA, 92);
+      svg.appendChild(LK.svg('line', {
+        x1: from[0], y1: from[1], x2: '168', y2: '236',
+        stroke: GEO, 'stroke-width': '1'
       }));
-      svg.appendChild(svgText({ x: 150, y: 28, 'font-size': '11', fill: GEO, 'font-weight': '600' }, '自西向东转'));
-      svg.appendChild(svgText({ x: 126, y: 228, 'font-size': '12', fill: GEO, 'font-weight': '600' }, '日出'));
-      svg.appendChild(svgText({ x: 126, y: 16, 'font-size': '12', fill: INK2 }, '日落'));
+      svg.appendChild(svgText({ x: 176, y: 248, 'font-size': '12', fill: GEO, 'font-weight': '600' }, '1 小时 = 15°'));
+      svg.setAttribute('viewBox', '0 0 250 260');
     }
     svg.appendChild(LK.svg('circle', { cx: '120', cy: '118', r: '18', fill: '#fff' }));
     svg.appendChild(svgText({ x: 120, y: 123, 'text-anchor': 'middle', 'font-size': '13', fill: GEO, 'font-weight': '600' }, '北极'));
     return svg;
   }
 
+  let arrowSeq = 0;
+
+  function arrowMarks(svg) {
+    arrowSeq += 1;
+    const geo = 'ga' + arrowSeq;
+    const ink = 'gi' + arrowSeq;
+    const gold = 'gg' + arrowSeq;
+    const defs = LK.svg('defs');
+    function one(id, color) {
+      const marker = LK.svg('marker', {
+        id: id, viewBox: '0 0 10 10', refX: '8', refY: '5',
+        markerWidth: '7', markerHeight: '7', orient: 'auto'
+      });
+      marker.appendChild(LK.svg('path', { d: 'M 0 0 L 10 5 L 0 10 Z', fill: color }));
+      defs.appendChild(marker);
+    }
+    one(geo, GEO);
+    one(ink, '#6E655C');
+    one(gold, '#F2B640');
+    svg.insertBefore(defs, svg.firstChild);
+    return { geo: geo, ink: ink, gold: gold };
+  }
+
+  function rimArc(a0, a1, r, color, markerId) {
+    const p0 = polar(a0, r);
+    const p1 = polar(a1, r);
+    let delta = a1 - a0;
+    if (delta < 0) delta += 360;
+    const path = LK.svg('path', {
+      d: 'M ' + p0[0] + ' ' + p0[1] + ' A ' + r + ' ' + r + ' 0 ' + (delta > 180 ? 1 : 0) + ' 0 ' + p1[0] + ' ' + p1[1],
+      fill: 'none', stroke: color, 'stroke-width': '1.75',
+    });
+    if (markerId) path.setAttribute('marker-end', 'url(#' + markerId + ')');
+    return path;
+  }
+
   function coordViz(v) {
-    const svg = geoSvg('0 0 300 210');
+    const svg = geoSvg('0 0 320 220');
     const x0 = 50;
     const x1 = 290;
     const y0 = 10;
@@ -300,13 +352,22 @@
     svg.appendChild(LK.svg('rect', { x: x0, y: y0, width: x1 - x0, height: y1 - y0, fill: '#fff', stroke: LINE }));
     for (let lat = lat0; lat <= lat1 + 0.1; lat += step) {
       const y = Y(lat);
+      const bottom = lat + step > lat1 + 0.1;
       svg.appendChild(LK.svg('line', { x1: x0, y1: y, x2: x1, y2: y, stroke: LINE, 'stroke-width': '1' }));
-      svg.appendChild(svgText({ x: x0 - 4, y: y + 4, 'text-anchor': 'end', 'font-size': '12', fill: INK2 }, String(lat) + '°'));
+      svg.appendChild(svgText({ x: x0 - 6, y: bottom ? y - 3 : y + 4, 'text-anchor': 'end', 'font-size': '12', fill: INK2 }, String(lat) + '°'));
     }
     for (let lon = lon0; lon <= lon1 + 0.1; lon += step) {
       const x = X(lon);
+      const first = lon === lon0;
+      const last = lon + step > lon1 + 0.1;
       svg.appendChild(LK.svg('line', { x1: x, y1: y0, x2: x, y2: y1, stroke: LINE, 'stroke-width': '1' }));
-      svg.appendChild(svgText({ x: x, y: y1 + 14, 'text-anchor': 'middle', 'font-size': '12', fill: INK2 }, String(lon) + '°'));
+      svg.appendChild(svgText({
+        x: last ? x - 1 : (first ? x + 2 : x),
+        y: y1 + 18,
+        'text-anchor': last ? 'end' : (first ? 'start' : 'middle'),
+        'font-size': '12',
+        fill: INK2
+      }, String(lon) + '°'));
     }
     const p = v.point || { lat: lat0, lon: lon0, label: '' };
     const px = X(p.lon);
@@ -321,19 +382,58 @@
     return svg;
   }
 
+  function groundY(x) {
+    const t = (x - 10) / 280;
+    return 150 - 120 * t * (1 - t);
+  }
+
+  function groundRun(xA, xB) {
+    const pts = [];
+    const n = 14;
+    for (let i = 0; i <= n; i++) {
+      const x = xA + (xB - xA) * (i / n);
+      pts.push([x, groundY(x)]);
+    }
+    return pts;
+  }
+
   function beamViz() {
     const svg = geoSvg('0 0 300 170');
-    svg.appendChild(LK.svg('path', { d: 'M10 150 Q150 90 290 150 L290 162 L10 162 Z', fill: '#E3C9A0' }));
-    svg.appendChild(LK.svg('path', { d: 'M70 10 L70 142 L100 142 L100 10 Z', fill: 'rgba(242,182,64,.4)' }));
-    svg.appendChild(LK.svg('line', { x1: '70', y1: '10', x2: '70', y2: '142', stroke: 'var(--gold)', 'stroke-width': '1.5' }));
-    svg.appendChild(LK.svg('line', { x1: '100', y1: '10', x2: '100', y2: '142', stroke: 'var(--gold)', 'stroke-width': '1.5' }));
-    svg.appendChild(svgText({ x: 40, y: 24, 'font-size': '12', fill: INK2 }, '直射（低纬度）'));
-    svg.appendChild(svgText({ x: 28, y: 158, 'font-size': '11', fill: INK2 }, '光斑小，热量集中'));
-    svg.appendChild(LK.svg('path', { d: 'M190 10 L250 148 L286 148 L226 10 Z', fill: 'rgba(242,182,64,.4)' }));
-    svg.appendChild(LK.svg('line', { x1: '190', y1: '10', x2: '250', y2: '148', stroke: 'var(--gold)', 'stroke-width': '1.5' }));
-    svg.appendChild(LK.svg('line', { x1: '220', y1: '10', x2: '280', y2: '148', stroke: 'var(--gold)', 'stroke-width': '1.5' }));
-    svg.appendChild(svgText({ x: 168, y: 24, 'font-size': '12', fill: INK2 }, '斜射（高纬度）'));
-    svg.appendChild(svgText({ x: 188, y: 164, 'font-size': '11', fill: INK2 }, '光斑大，热量摊开'));
+    svg.appendChild(LK.svg('path', { d: 'M10 150 Q150 90 290 150 L290 164 L10 164 Z', fill: '#E3C9A0' }));
+    const ang = 35 * Math.PI / 180;
+    const sep = 30 / Math.sin(ang);
+    const tan = Math.tan(ang);
+    function rayHit(x0, y0) {
+      let x = x0;
+      while (x < 292 && y0 + tan * (x - x0) < groundY(x)) x += 0.25;
+      return [x, groundY(x)];
+    }
+    function beam(xA, yA, xB, yB, hitA, hitB) {
+      const along = groundRun(hitA[0], hitB[0]);
+      let d = 'M ' + xA + ' ' + yA + ' L ' + hitA[0] + ' ' + hitA[1];
+      along.forEach(function (p) { d += ' L ' + p[0] + ' ' + p[1]; });
+      d += ' L ' + xB + ' ' + yB + ' Z';
+      svg.appendChild(LK.svg('path', { d: d, fill: 'rgba(242,182,64,.4)' }));
+      svg.appendChild(LK.svg('line', { x1: xA, y1: yA, x2: hitA[0], y2: hitA[1], stroke: '#F2B640', 'stroke-width': '1.5' }));
+      svg.appendChild(LK.svg('line', { x1: xB, y1: yB, x2: hitB[0], y2: hitB[1], stroke: '#F2B640', 'stroke-width': '1.5' }));
+      let spot = 'M ' + along[0][0] + ' ' + along[0][1];
+      along.forEach(function (p) { spot += ' L ' + p[0] + ' ' + p[1]; });
+      svg.appendChild(LK.svg('path', {
+        class: 'beam-spot', d: spot, fill: 'none', stroke: '#8A6A3B', 'stroke-width': '4', 'stroke-linecap': 'round'
+      }));
+    }
+    const vL = [70, 10];
+    const vR = [100, 10];
+    beam(vL[0], vL[1], vR[0], vR[1], [70, groundY(70)], [100, groundY(100)]);
+    svg.appendChild(svgText({ x: 85, y: 36, 'text-anchor': 'middle', 'font-size': '12', fill: INK2 }, '直射（低纬度）'));
+    svg.appendChild(svgText({ x: 16, y: 156, 'font-size': '11', fill: INK2 }, '光斑小，热量集中'));
+    const sL = [115, 64];
+    const sR = [115 + sep, 64];
+    const hL = rayHit(sL[0], sL[1]);
+    const hR = rayHit(sR[0], sR[1]);
+    beam(sL[0], sL[1], sR[0], sR[1], hL, hR);
+    svg.appendChild(svgText({ x: 168, y: 28, 'font-size': '12', fill: INK2 }, '斜射（高纬度）'));
+    svg.appendChild(svgText({ x: 188, y: 156, 'font-size': '11', fill: INK2 }, '光斑大，热量摊开'));
     return svg;
   }
 
@@ -345,8 +445,8 @@
     svg.appendChild(LK.svg('line', { x1: '20', y1: '140', x2: '98', y2: '140', stroke: INK2, 'stroke-width': '2' }));
     svg.appendChild(LK.svg('path', { d: 'M90 134 L98 140 L90 146', fill: 'none', stroke: INK2, 'stroke-width': '2' }));
     svg.appendChild(svgText({ x: 18, y: 132, 'font-size': '12', fill: INK2 }, '冬季冷空气'));
-    svg.appendChild(LK.svg('line', { x1: '102', y1: '128', x2: '102', y2: '152', stroke: INK2, 'stroke-width': '2' }));
-    svg.appendChild(svgText({ x: 106, y: 124, 'font-size': '12', fill: INK2 }, '挡住'));
+    svg.appendChild(LK.svg('line', { x1: '96', y1: '132', x2: '96', y2: '152', stroke: INK2, 'stroke-width': '2' }));
+    svg.appendChild(svgText({ x: 46, y: 100, 'font-size': '12', fill: INK2 }, '挡住'));
     svg.appendChild(LK.svg('path', { d: 'M285 150 L212 150 L170 72', fill: 'none', stroke: GEO, 'stroke-width': '2' }));
     svg.appendChild(LK.svg('path', { d: 'M176 84 L170 72 L182 78', fill: 'none', stroke: GEO, 'stroke-width': '2' }));
     svg.appendChild(svgText({ x: 214, y: 144, 'font-size': '12', fill: GEO }, '夏季湿润气流'));
@@ -356,7 +456,7 @@
     svg.appendChild(svgText({ x: 206, y: 112, 'font-size': '12', fill: GEO }, '爬坡处下雨'));
     svg.appendChild(LK.svg('line', { x1: '145', y1: '45', x2: '80', y2: '90', stroke: GEO, 'stroke-width': '1.5', 'stroke-dasharray': '4 3' }));
     svg.appendChild(LK.svg('path', { d: 'M88 82 L80 90 L92 92', fill: 'none', stroke: GEO, 'stroke-width': '1.5' }));
-    svg.appendChild(svgText({ x: 36, y: 84, 'font-size': '12', fill: GEO }, '翻过山后变干'));
+    svg.appendChild(svgText({ x: 8, y: 52, 'font-size': '12', fill: GEO }, '翻过山后变干'));
     svg.appendChild(svgText({ x: 30, y: 175, 'font-size': '12', fill: INK2 }, v.left || ''));
     svg.appendChild(svgText({ x: 270, y: 175, 'text-anchor': 'end', 'font-size': '12', fill: INK2 }, v.right || ''));
     return svg;

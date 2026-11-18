@@ -51,8 +51,14 @@
               opt.classList.add(ok ? 'is-ok' : 'is-bad');
               if (!ok) LKMotion.shake(opt);
               else LKMotion.bounce(opt);
+              practice.querySelectorAll('.opt').forEach(function (b) { b.disabled = true; });
               practice.appendChild(LK.h('p', { class: 'explain-why', text: (ok ? '对了。' : '差一点。') + q.why }));
-              setTimeout(function () {
+              const more = dueOnly ? LKCatalog.practiceKeys().length : Object.keys(LKStore.get().mistakes).length;
+              const next = LK.h('button', {
+                class: 'btn btn-primary',
+                text: more ? '下一题' : (dueOnly ? '回首页' : '回到列表')
+              });
+              next.addEventListener('click', function () {
                 if (dueOnly) {
                   if (!LKCatalog.practiceKeys().length) location.hash = '#/today';
                   else LKRouter.go();
@@ -60,7 +66,8 @@
                 }
                 location.hash = '#/mistakes';
                 global.LKRouter.go && LKRouter.go();
-              }, 700);
+              });
+              practice.appendChild(next);
             });
             practice.appendChild(opt);
           });
