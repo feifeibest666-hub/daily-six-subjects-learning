@@ -128,10 +128,6 @@
     } else if (kind === 'armor') {
       g.appendChild(S('path', { d: 'M-16 -16 q-2 -34 6 -42 h20 q8 8 6 42 q-8 6 -16 4 q-8 2 -16 -4 z', fill: cloth, stroke: INK, 'stroke-width': 2 }));
       g.appendChild(S('path', { d: 'M-10 -40 h20 M-8 -30 h16', stroke: '#D9A441', 'stroke-width': 1.5 }));
-    } else if (kind === 'cat') {
-      g.appendChild(S('ellipse', { cx: 0, cy: -28, rx: 22, ry: 16, fill: cloth || '#9A9A9A', stroke: INK, 'stroke-width': 2 }));
-      g.appendChild(S('circle', { cx: 0, cy: -52, r: 14, fill: cloth || '#9A9A9A', stroke: INK, 'stroke-width': 2 }));
-      g.appendChild(S('path', { d: 'M18 -24 q16 8 8 16', fill: 'none', stroke: '#fff', 'stroke-width': 3 }));
     } else if (kind === 'coat') {
       g.appendChild(S('path', { d: 'M-16 -14 q0 -40 6 -46 h20 q6 6 6 46 q-8 4 -16 2 q-8 2 -16 -2 z', fill: '#F7F4EF', stroke: INK, 'stroke-width': 2 }));
       g.appendChild(S('path', { d: 'M0 -58 v40', stroke: INK, 'stroke-width': 1.3 }));
@@ -145,10 +141,84 @@
     }
   }
 
+  function cat(parent, o) {
+    const cast = (global.CAST && CAST[o.who]) || {};
+    const spec = Object.assign({}, cast, o);
+    const fur = spec.cloth || '#9A9A9A';
+    const k = spec.k || 1;
+    const flip = spec.flip ? -1 : 1;
+    const px = spec.x <= 1 ? spec.x * (o.W || 340) : spec.x;
+    const py = spec.y <= 1 ? spec.y * (o.H || 260) : spec.y;
+    const root = S('g', { class: 'art-person art-cat', transform: 'translate(' + px + ' ' + py + ') scale(' + (flip * k) + ' ' + k + ')' });
+    const g = S('g', { class: spec.pose === 'shake' ? 'art-bob art-shake' : 'art-bob' });
+    const pose = spec.pose || 'stand';
+    const sit = pose === 'sit' || pose === 'sleep';
+    const ink = { stroke: INK, 'stroke-width': 2, 'stroke-linejoin': 'round', 'stroke-linecap': 'round' };
+    const hy = sit ? -40 : -56;
+    g.appendChild(S('path', Object.assign({
+      d: sit ? 'M16 -14 q20 10 6 22 q-10 8 -16 0' : 'M18 -22 q26 -4 22 18 q-2 12 -14 8',
+      fill: 'none', stroke: fur, 'stroke-width': 6, 'stroke-linecap': 'round'
+    })));
+    g.appendChild(S('path', Object.assign({
+      d: sit ? 'M16 -14 q20 10 6 22 q-10 8 -16 0' : 'M18 -22 q26 -4 22 18 q-2 12 -14 8',
+      fill: 'none'
+    }, ink)));
+    g.appendChild(S('circle', Object.assign({ cx: sit ? 6 : 26, cy: sit ? 6 : -2, r: 4, fill: '#fff' }, ink)));
+    if (sit) {
+      g.appendChild(S('ellipse', Object.assign({ cx: 0, cy: -18, rx: 24, ry: 15, fill: fur }, ink)));
+      g.appendChild(S('ellipse', { cx: 2, cy: -14, rx: 12, ry: 8, fill: '#F7F4EF' }));
+      [-16, -6, 8, 18].forEach(function (x) {
+        g.appendChild(S('ellipse', Object.assign({ cx: x, cy: 1, rx: 5.5, ry: 4, fill: fur }, ink)));
+      });
+    } else {
+      const stretch = pose === 'run' ? 6 : 0;
+      g.appendChild(S('path', Object.assign({ d: 'M-14 -20 l-4 20 M-6 -18 l-1 20 M6 -18 l1 20 M14 -20 l4 20', fill: 'none', stroke: fur, 'stroke-width': 5, 'stroke-linecap': 'round' })));
+      g.appendChild(S('path', Object.assign({ d: 'M' + (-14 - stretch) + ' -20 l-4 20 M-6 -18 l-1 20 M6 -18 l1 20 M' + (14 + stretch) + ' -20 l4 20', fill: 'none' }, ink)));
+      g.appendChild(S('ellipse', Object.assign({ cx: -16, cy: 1, rx: 4, ry: 2.5, fill: fur }, ink)));
+      g.appendChild(S('ellipse', Object.assign({ cx: -7, cy: 2, rx: 4, ry: 2.5, fill: fur }, ink)));
+      g.appendChild(S('ellipse', Object.assign({ cx: 7, cy: 2, rx: 4, ry: 2.5, fill: fur }, ink)));
+      g.appendChild(S('ellipse', Object.assign({ cx: 16, cy: 1, rx: 4, ry: 2.5, fill: fur }, ink)));
+      g.appendChild(S('ellipse', Object.assign({ cx: 0, cy: -32, rx: 22, ry: 16, fill: fur }, ink)));
+      g.appendChild(S('ellipse', { cx: 0, cy: -28, rx: 11, ry: 9, fill: '#F7F4EF' }));
+    }
+    g.appendChild(S('circle', Object.assign({ cx: 0, cy: hy, r: 16, fill: fur }, ink)));
+    g.appendChild(S('path', Object.assign({ d: 'M-14 ' + (hy - 4) + ' l5 -16 l9 12 z', fill: fur }, ink)));
+    g.appendChild(S('path', Object.assign({ d: 'M14 ' + (hy - 4) + ' l-5 -16 l-9 12 z', fill: fur }, ink)));
+    g.appendChild(S('path', { d: 'M-11 ' + (hy - 5) + ' l3 -9 l5 7 z', fill: '#E7B7B0' }));
+    g.appendChild(S('path', { d: 'M11 ' + (hy - 5) + ' l-3 -9 l-5 7 z', fill: '#E7B7B0' }));
+    if (pose === 'sleep') {
+      g.appendChild(S('path', { d: 'M-8 ' + hy + ' q3 3 6 0 M2 ' + hy + ' q3 3 6 0', fill: 'none', stroke: INK, 'stroke-width': 1.6, 'stroke-linecap': 'round' }));
+    } else if (spec.face === 'wow' || spec.face === 'fear') {
+      g.appendChild(S('circle', { cx: -5, cy: hy + 1, r: 2.6, fill: '#fff', stroke: INK, 'stroke-width': 1.3 }));
+      g.appendChild(S('circle', { cx: 5, cy: hy + 1, r: 2.6, fill: '#fff', stroke: INK, 'stroke-width': 1.3 }));
+      g.appendChild(S('circle', { cx: -4.5, cy: hy + 1.4, r: 1, fill: INK }));
+      g.appendChild(S('circle', { cx: 5.5, cy: hy + 1.4, r: 1, fill: INK }));
+    } else if (spec.face === 'happy') {
+      g.appendChild(S('path', { d: 'M-8 ' + (hy + 1) + ' q3 3 6 0 M2 ' + (hy + 1) + ' q3 3 6 0', fill: 'none', stroke: INK, 'stroke-width': 1.6, 'stroke-linecap': 'round' }));
+    } else {
+      g.appendChild(S('path', { d: 'M-7 ' + (hy + 2) + ' h3 M4 ' + (hy + 2) + ' h3', fill: 'none', stroke: INK, 'stroke-width': 1.8, 'stroke-linecap': 'round' }));
+    }
+    g.appendChild(S('path', { d: 'M-2.2 ' + (hy + 7) + ' h4.4 l-2.2 2.4 z', fill: '#E07A6A', stroke: INK, 'stroke-width': 1 }));
+    const smile = spec.face === 'worry' || spec.face === 'sad' ? -3 : 3;
+    g.appendChild(S('path', { d: 'M-3.5 ' + (hy + 11) + ' q3.5 ' + smile + ' 7 0', fill: 'none', stroke: INK, 'stroke-width': 1.3, 'stroke-linecap': 'round' }));
+    g.appendChild(S('path', {
+      d: 'M-5 ' + (hy + 8) + ' h-12 M-5 ' + (hy + 11) + ' h-11 M5 ' + (hy + 8) + ' h12 M5 ' + (hy + 11) + ' h11',
+      fill: 'none', stroke: INK, 'stroke-width': 1.15, 'stroke-linecap': 'round'
+    }));
+    if (spec.badge) {
+      g.appendChild(S('rect', { x: -14, y: hy - 36, width: 28, height: 12, rx: 3, fill: '#fff', stroke: INK, 'stroke-width': 1 }));
+      g.appendChild(S('text', { x: 0, y: hy - 27, 'text-anchor': 'middle', 'font-size': 8, 'font-weight': 700, fill: INK }, [spec.badge]));
+    }
+    root.appendChild(g);
+    parent.appendChild(root);
+    return root;
+  }
+
   function person(parent, o) {
     const cast = (global.CAST && CAST[o.who]) || {};
     const spec = Object.assign({}, cast, o);
     if (spec.kind === 'mascot' || o.who === 'xiaoyin') return mascot(parent, o);
+    if (spec.body === 'cat') return cat(parent, o);
     const k = spec.k || 1;
     const flip = spec.flip ? -1 : 1;
     const px = spec.x <= 1 ? spec.x * (o.W || 340) : spec.x;

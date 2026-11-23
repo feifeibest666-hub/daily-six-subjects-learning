@@ -37,5 +37,5 @@ window.CAST = {
   xiaoG: { body: 'modern', hair: 'short', cloth: '#D9A441', bottom: '#3A302A', badge: '小G' },
   mia: { body: 'modern', hair: 'long', cloth: '#D9A441', bottom: '#3A302A', badge: 'Mia' },
   leo: { body: 'modern', hair: 'short', cloth: '#fff', bottom: '#6F9C86', hat: 'chef', badge: 'Leo' },
-  mochi: { body: 'cat', hair: 'bald', cloth: '#9A9A9A', badge: '猫' }
+  mochi: { body: 'cat', cloth: '#9A9A9A', badge: '猫' }
 };
