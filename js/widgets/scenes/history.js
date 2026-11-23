@@ -10,6 +10,17 @@
   const RED = '#C8463A';
 
   function paper(c) { return `<rect width="344" height="236" fill="${c || '#FBF3E6'}"/>`; }
+  function riverThrough(pts, P) {
+    const q = pts.map(P).map(function (a) { return a.map(Number); });
+    let d = 'M' + q[0][0].toFixed(1) + ' ' + q[0][1].toFixed(1);
+    for (let i = 0; i < q.length - 1; i++) {
+      const p0 = q[Math.max(0, i - 1)], p1 = q[i], p2 = q[i + 1], p3 = q[Math.min(q.length - 1, i + 2)];
+      d += 'C' + (p1[0] + (p2[0] - p0[0]) / 6).toFixed(1) + ' ' + (p1[1] + (p2[1] - p0[1]) / 6).toFixed(1);
+      d += ' ' + (p2[0] - (p3[0] - p1[0]) / 6).toFixed(1) + ' ' + (p2[1] - (p3[1] - p1[1]) / 6).toFixed(1);
+      d += ' ' + p2[0].toFixed(1) + ' ' + p2[1].toFixed(1);
+    }
+    return d;
+  }
   function glow(inner) { return `<g filter="url(#glow)">${inner}</g>`; }
   function cross(x, y) {
     return `<path d="M${f(x - 9)} ${f(y - 9)} L${f(x + 9)} ${f(y + 9)} M${f(x + 9)} ${f(y - 9)} L${f(x - 9)} ${f(y + 9)}" stroke="${RED}" stroke-width="3.2" stroke-linecap="round"/>`;
@@ -32,13 +43,12 @@
     const coast = pt(122.4, 37.4);
     let s = `<rect width="344" height="236" fill="#A9D0DC"/>`;
     s += `<clipPath id="hn"><path d="${pathOf(CN.outline, P, true)}"/></clipPath>`;
-    s += `<path d="${pathOf(CN.outline, P, true)}" fill="#E9DFC7" stroke="#8C7B6B" stroke-width="1.2"/>`;
-    const east = CN.yellow.filter(function (p) { return p[0] >= 108; });
-    s += `<path d="${smooth(east, P)}" fill="none" stroke="#C9A64A" stroke-width="3.2" stroke-linecap="round"/>`;
+    s += `<path d="${pathOf(CN.outline, P, true)}" fill="#E9DFC7" stroke="#8C7B6B" stroke-width="1.2" stroke-linejoin="round"/>`;
     s += `<g clip-path="url(#hn)">`;
     s += `<rect x="0" y="0" width="${f(hao[0])}" height="236" fill="#E7B2A8" opacity=".42"/>`;
     if (mode === 0) s += `<rect x="${f(hao[0])}" y="0" width="360" height="236" fill="#F2B640" opacity=".34"/>`;
     s += `</g>`;
+    s += `<path d="${riverThrough(CN.yellow, P)}" fill="none" stroke="#C9A64A" stroke-width="2.8" stroke-linecap="round"/>`;
     s += `<g transform="translate(${f(hao[0])} ${f(hao[1])}) scale(.5)">${palace(0, 0, { ch: '周', flag: RED, name: '', fs: 9, tc: '#F2C14E' })}</g>`;
     return { s: s, hao: hao, coast: coast, pt: pt };
   }
@@ -97,7 +107,7 @@
     s += `<path d="M120 150 L176 112" fill="none" stroke="${K.ink}" stroke-width="1.6" stroke-dasharray="4 3"/>`;
     s += `<path d="M168 108 L178 114 L166 118" fill="none" stroke="${K.ink}" stroke-width="1.6"/>`;
     s += glow(figure(146, 156, { k: 0.42, hat: 'bun', right: 'hold' }) + bag(156, 142, '信'));
-    s += callout(70, 150, 48, 46, '总店', { anchor: 'start', fs: 12 });
+    s += callout(70, 150, 78, 78, '总店', { anchor: 'start', fs: 12 });
     s += callout(250, 70, 286, 28, '十几家分店', { anchor: 'end', fs: 12 });
     s += callout(148, 128, 150, 208, '一来一回两个月', { anchor: 'middle', fs: 11 });
     s += `<text x="132" y="96" font-size="11" font-weight="750" fill="${K.ink}">1000 多公里</text>`;
@@ -106,10 +116,12 @@
 
   function fork(chosen) {
     let s = paper('#F3E6D2');
-    s += `<path d="M40 214 L172 118 L304 214" fill="none" stroke="#E4CFAE" stroke-width="28" stroke-linecap="round"/>`;
-    s += `<path d="M172 214 L172 108" fill="none" stroke="#E4CFAE" stroke-width="22"/>`;
+    s += `<path d="M48 214 L172 128 L304 214" fill="none" stroke="#C4A574" stroke-width="16" stroke-linecap="round"/>`;
+    s += `<path d="M48 214 L172 128 L304 214" fill="none" stroke="#E7D3B0" stroke-width="7" stroke-linecap="round"/>`;
+    s += `<path d="M172 214 L172 118" fill="none" stroke="#C4A574" stroke-width="14" stroke-linecap="round"/>`;
+    s += `<path d="M172 214 L172 118" fill="none" stroke="#E7D3B0" stroke-width="6" stroke-linecap="round"/>`;
     const ends = [
-      { x: 58, y: 78, sign: '自己派人', pic: 'mail' },
+      { x: 78, y: 108, sign: '自己派人', pic: 'mail' },
       { x: 156, y: 46, sign: '原来的首领', pic: 'chief' },
       { x: 300, y: 86, sign: '兄弟、儿子、功臣', pic: 'kin' }
     ];
@@ -167,31 +179,39 @@
 
   function family() {
     let s = paper('#F6EFE4') + pedigree(70, 28, 260, 188);
-    const top = [200, 48];
-    const left = [128, 78, 108, 112, 118, 150, 124, 186];
-    const right = [272, 78, 292, 112, 282, 150, 276, 186];
-    s += `<text x="200" y="44" font-size="12" font-weight="800" fill="${K.ink}" text-anchor="middle">周文王</text>`;
     function link(x1, y1, x2, y2, w, dash) {
       return `<path d="M${f(x1)} ${f(y1)} L${f(x2)} ${f(y2)}" fill="none" stroke="#8E3F33" stroke-width="${w}" ${dash || ''} stroke-linecap="round"/>`;
     }
-    s += link(200, 50, 140, 74, 2.5);
-    s += link(200, 50, 260, 74, 2.5);
-    s += link(140, 86, 260, 86, 2.5);
-    s += link(140, 86, 120, 118, 1.7);
-    s += link(260, 86, 280, 118, 1.7);
-    s += link(120, 126, 280, 126, 1.2, 'stroke-dasharray="4 3"');
-    s += link(120, 126, 130, 156, 0.9, 'stroke-dasharray="3 3"');
-    s += link(280, 126, 270, 156, 0.9, 'stroke-dasharray="3 3"');
-    s += link(130, 164, 270, 164, 0.6, 'stroke-dasharray="1.2 2.4"');
-    [[140, 86, '天子'], [260, 86, '诸侯'], [120, 128, '天子'], [280, 128, '诸侯'], [130, 168, '天子'], [270, 168, '诸侯']].forEach(function (n) {
-      s += `<circle cx="${n[0]}" cy="${n[1]}" r="7" fill="#F3E7D3" stroke="${K.ink}" stroke-width="1"/>`;
+    const gens = [
+      { y: 108, lx: 128, rx: 272, k: 0.34, lh: 'mian', rh: 'guan', bar: 2.5, dash: '' },
+      { y: 134, lx: 116, rx: 284, k: 0.3, lh: 'guan', rh: 'guan', bar: 1.7, dash: '' },
+      { y: 160, lx: 122, rx: 278, k: 0.28, lh: 'guan', rh: 'bun', bar: 1.2, dash: 'stroke-dasharray="4 3"' },
+      { y: 184, lx: 126, rx: 274, k: 0.26, lh: 'bun', rh: 'bun', bar: 0.9, dash: 'stroke-dasharray="3 3"' },
+      { y: 208, lx: 130, rx: 270, k: 0.26, lh: 'bun', rh: 'bun', bar: 0.6, dash: 'stroke-dasharray="1.2 2.4"' }
+    ];
+    s += link(200, 72, gens[0].lx, gens[0].y - 16, 2.5);
+    s += link(200, 72, gens[0].rx, gens[0].y - 16, 2.5);
+    gens.forEach(function (g, i) {
+      const shoulder = g.y - 18;
+      s += link(g.lx, shoulder, g.rx, shoulder, g.bar, g.dash);
+      if (i) {
+        s += link(gens[i - 1].lx, gens[i - 1].y - 8, g.lx, shoulder, g.bar, g.dash);
+        s += link(gens[i - 1].rx, gens[i - 1].y - 8, g.rx, shoulder, g.bar, g.dash);
+      }
     });
-    s += `<text x="112" y="102" font-size="11" font-weight="800" fill="${K.ink}" text-anchor="middle">天子</text>`;
-    s += `<text x="288" y="102" font-size="11" font-weight="800" fill="${K.ink}" text-anchor="middle">诸侯</text>`;
-    s += glow(newRing(130, 168, 12) + newRing(270, 168, 12));
-    s += callout(140, 86, 78, 78, '亲兄弟', { anchor: 'start', fs: 12 });
-    s += callout(200, 126, 200, 108, '堂兄弟', { anchor: 'middle', fs: 12 });
-    s += callout(200, 164, 200, 214, '远亲', { anchor: 'middle', fs: 12 });
+    s += `<text x="200" y="36" font-size="12" font-weight="800" fill="${K.ink}" text-anchor="middle">周文王</text>`;
+    s += figure(200, 78, { k: 0.46, hat: 'mian', robe: '#8E3F33', face: 'calm' });
+    gens.forEach(function (g) {
+      s += figure(g.lx, g.y, { k: g.k, hat: g.lh, robe: '#8E3F33', face: 'calm' });
+      s += figure(g.rx, g.y, { k: g.k, hat: g.rh, robe: '#7D8FB0', face: 'calm' });
+    });
+    const last = gens[4];
+    s += glow(newRing(last.lx, last.y - 16, 13) + newRing(last.rx, last.y - 16, 13));
+    s += `<text x="${gens[0].lx}" y="${gens[0].y + 12}" font-size="11" font-weight="800" fill="${K.ink}" text-anchor="middle">天子</text>`;
+    s += `<text x="${gens[0].rx}" y="${gens[0].y + 12}" font-size="11" font-weight="800" fill="${K.ink}" text-anchor="middle">诸侯</text>`;
+    s += callout(gens[0].lx, gens[0].y - 22, 78, 86, '亲兄弟', { anchor: 'start', fs: 12 });
+    s += callout(200, gens[2].y - 16, 200, gens[2].y - 34, '堂兄弟', { anchor: 'middle', fs: 12 });
+    s += callout(200, last.y - 8, 200, 228, '远亲', { anchor: 'middle', fs: 12 });
     return s;
   }
 
@@ -207,7 +227,7 @@
       return figure(x, 168, { k: 0.3, hat: 'helmet', robe: '#7A5A44', face: 'stern' });
     }).join('');
     s += glow(troops);
-    s += callout(70, 150, 36, 28, '天子：地分出去了', { anchor: 'start', fs: 11 });
+    s += callout(70, 150, 16, 78, '天子：地分出去了', { anchor: 'start', fs: 11 });
     s += callout(250, 150, 300, 196, '诸侯：开荒、添人、练兵', { anchor: 'end', fs: 11 });
     return s;
   }
@@ -240,14 +260,14 @@
     [236, 262, 288].forEach(function (x) {
       s += figure(x, 206, { k: 0.48, hat: 'helmet', robe: '#7A5A44', face: 'stern' });
     });
-    s += glow(`<g>${S.bubble(250, 78, '少交一点、少去一次', { cloud: true, fs: 12, tx: 150 })}
-      <g transform="translate(232 46) scale(.7)">
+    s += glow(`<g>${S.bubble(248, 96, '少交一点、少去一次', { cloud: true, fs: 12, tx: 160 })}
+      <g transform="translate(214 62) scale(.62)">
         <rect x="0" y="18" width="36" height="10" rx="2" fill="#A8845A" stroke="${K.ink}" stroke-width=".8"/>
         <circle cx="8" cy="30" r="4" fill="#5A4636"/><circle cx="28" cy="30" r="4" fill="#5A4636"/>
         ${bag(10, 16, '粟')}${bag(22, 16, '粟')}${bag(34, 16, '粟')}
-        ${cross(34, 8)}
+        ${cross(34, 10)}
       </g></g>`);
-    s += callout(110, 160, 48, 36, '兵、粮、百姓都在我手里', { anchor: 'start', fs: 11 });
+    s += callout(150, 168, 78, 78, '兵、粮、百姓都在我手里', { anchor: 'start', fs: 11 });
     return s;
   }
 
@@ -298,8 +318,15 @@
     const pt = function (lon, lat) { return P([lon, lat]).map(Number); };
     let s = `<rect width="344" height="236" fill="#EAF3F5"/>`;
     s += `<clipPath id="qinN"><path d="${pathOf(CN.outline, P, true)}"/></clipPath>`;
-    s += `<path d="${pathOf(CN.outline, P, true)}" fill="#E9DFC7" stroke="#8C7B6B" stroke-width="1.1"/>`;
-    const northEdge = [[100, 41.2], [106, 41.6], [112, 41], [118, 40.6], [122, 40.2]].map(function (p) { return pt(p[0], p[1]); });
+    s += `<path d="${pathOf(CN.outline, P, true)}" fill="#EEE3C8"/>`;
+    s += `<g clip-path="url(#qinN)">`;
+    s += `<path d="${pathOf(CN.line2.concat([[100, 20], [60, 20], [60, 56], [122.4, 56]]), P, true)}" fill="#E3C9A0"/>`;
+    s += `<path d="${pathOf(CN.line1.concat([[98, 20], [60, 20], [60, 36.6]]), P, true)}" fill="#C9A27E"/>`;
+    s += `</g>`;
+    s += `<path d="${pathOf(CN.outline, P, true)}" fill="none" stroke="#8C7B6B" stroke-width="1.2" stroke-linejoin="round"/>`;
+    s += `<path d="${riverThrough(CN.yangtze, P)}" fill="none" stroke="${K.waterD}" stroke-width="2.4" stroke-linecap="round"/>`;
+    s += `<path d="${riverThrough(CN.yellow, P)}" fill="none" stroke="#C9A64A" stroke-width="2.6" stroke-linecap="round"/>`;
+    const northEdge = [[106, 41.4], [110, 41.2], [114, 40.8], [118, 40.5], [121.5, 40.2]].map(function (p) { return pt(p[0], p[1]); });
     s += wall(northEdge);
     const xy = pt(108.7, 34.4);
     s += `<g transform="translate(${f(xy[0])} ${f(xy[1])}) scale(.42)">${palace(0, 0, { name: '' })}</g>`;
@@ -381,7 +408,7 @@
     let s = paper('#E4E8EC');
     s += `<path d="M36 210 L172 120 L308 210" fill="none" stroke="#D7CBB4" stroke-width="26" stroke-linecap="round"/>`;
     s += `<path d="M172 214 L172 112" fill="none" stroke="#D7CBB4" stroke-width="20"/>`;
-    s += signpost(24, 86, '误期') + `<rect x="48" y="78" width="6" height="28" fill="#7A5A3A"/><path d="M40 74 L70 86" stroke="#8A8178" stroke-width="3"/>` + cross(78, 70);
+    s += signpost(56, 118, '误期') + `<rect x="78" y="108" width="6" height="28" fill="#7A5A3A"/><path d="M70 104 L100 116" stroke="#8A8178" stroke-width="3"/>` + cross(108, 100);
     s += signpost(146, 52, '逃跑') + figure(168, 92, { k: 0.4, hat: 'helmet' }) + figure(188, 96, { k: 0.4, hat: 'helmet' }) + cross(206, 58);
     if (!rise) {
       s += signpost(250, 86, '起来反抗');
@@ -402,7 +429,7 @@
       s += callout(196, 140, 250, 132, '前 209 起义', { anchor: 'start', fs: 12 });
       s += callout(160, 40, 120, 22, '各地纷纷响应', { anchor: 'middle', fs: 12 });
     } else {
-      s += callout(48, 100, 36, 40, '斩', { anchor: 'start', fs: 13, c: RED });
+      s += callout(90, 112, 86, 78, '斩', { anchor: 'start', fs: 13, c: RED });
       s += callout(176, 70, 150, 28, '抓到也斩', { anchor: 'middle', fs: 12, c: RED });
       s += callout(286, 100, 300, 132, '也许能活', { anchor: 'end', fs: 12 });
     }

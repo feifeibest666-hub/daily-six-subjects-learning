@@ -95,31 +95,47 @@
     return s;
   }
 
+  function through(pts, P) {
+    const q = pts.map(P).map(function (a) { return a.map(Number); });
+    let d = 'M' + q[0][0].toFixed(1) + ' ' + q[0][1].toFixed(1);
+    for (let i = 0; i < q.length - 1; i++) {
+      const p0 = q[Math.max(0, i - 1)], p1 = q[i], p2 = q[i + 1], p3 = q[Math.min(q.length - 1, i + 2)];
+      const c1x = p1[0] + (p2[0] - p0[0]) / 6, c1y = p1[1] + (p2[1] - p0[1]) / 6;
+      const c2x = p2[0] - (p3[0] - p1[0]) / 6, c2y = p2[1] - (p3[1] - p1[1]) / 6;
+      d += 'C' + c1x.toFixed(1) + ' ' + c1y.toFixed(1) + ' ' + c2x.toFixed(1) + ' ' + c2y.toFixed(1) + ' ' + p2[0].toFixed(1) + ' ' + p2[1].toFixed(1);
+    }
+    return d;
+  }
   function chinaFlow() {
-    const P = proj({ s: 4.4, dx: 30, dy: 10 });
+    const P = proj({ s: 4.95, dx: 16, dy: 6 });
     let s = `<rect width="344" height="236" fill="#EAF3F5"/>`;
     s += `<clipPath id="cna"><path d="${pathOf(CN.outline, P, true)}"/></clipPath>`;
-    s += `<path d="${pathOf(CN.outline, P, true)}" fill="#B9CF8E"/>`;
+    s += `<path d="${pathOf(CN.outline, P, true)}" fill="#EEE3C8"/>`;
     s += `<g clip-path="url(#cna)">`;
-    s += `<path d="${pathOf(CN.line2.concat([[122.4, 18], [70, 18], [70, 56], [106.6, 22.6]]), P, true)}" fill="#DDBF8F"/>`;
-    s += `<path d="${pathOf(CN.line1.concat([[98.4, 20], [68, 20], [68, 40], [75.5, 36.6]]), P, true)}" fill="#C9A27E"/>`;
+    s += `<path d="${pathOf(CN.line2.concat([[100, 20], [60, 20], [60, 56], [122.4, 56]]), P, true)}" fill="#E3C9A0"/>`;
+    s += `<path d="${pathOf(CN.line1.concat([[98, 20], [60, 20], [60, 36.6]]), P, true)}" fill="#C9A27E"/>`;
     s += `</g>`;
-    s += `<path d="${pathOf(CN.outline, P, true)}" fill="none" stroke="#8C7B6B" stroke-width="1.3"/>`;
-    s += `<path d="${pathOf(CN.line1, P)}" fill="none" stroke="#fff" stroke-width="1.5" stroke-dasharray="4 3"/>`;
-    s += `<path d="${pathOf(CN.line2, P)}" fill="none" stroke="#fff" stroke-width="1.5" stroke-dasharray="4 3"/>`;
-    s += `<path d="${smooth(CN.yangtze, P)}" fill="none" stroke="${K.waterD}" stroke-width="3" stroke-linecap="round"/>`;
-    s += `<path d="${smooth(CN.yellow, P)}" fill="none" stroke="${K.waterD}" stroke-width="3" stroke-linecap="round"/>`;
-    const mouth = (pt) => P(pt).map(Number);
-    const yz = mouth(CN.yangtze[CN.yangtze.length - 1]);
-    const yl = mouth(CN.yellow[CN.yellow.length - 1]);
-    s += glow(arrow(yz[0] - 12, yz[1], yz[0] + 8, yz[1] - 2, K.gold) + arrow(yl[0] - 10, yl[1], yl[0] + 10, yl[1] - 1, K.gold));
-    const midY = mouth(CN.yangtze[6]);
-    const midH = mouth(CN.yellow[8]);
-    s += callout(midY[0], midY[1], midY[0] - 8, midY[1] + 28, '长江', { anchor: 'middle', fs: 12, c: K.waterD });
-    s += callout(midH[0], midH[1], midH[0] + 6, midH[1] - 22, '黄河', { anchor: 'middle', fs: 12, c: K.waterD });
-    s += callout((yz[0] + yl[0]) / 2 + 8, (yz[1] + yl[1]) / 2, 318, 168, '入海', { anchor: 'end', fs: 12, c: K.waterD });
-    s += `<text x="78" y="62" font-size="13" font-weight="800" fill="${K.ink}" paint-order="stroke" stroke="#fff" stroke-width="3">西高</text>`;
-    s += `<text x="236" y="154" font-size="13" font-weight="800" fill="${K.ink}" paint-order="stroke" stroke="#fff" stroke-width="3">东低</text>`;
+    s += `<path d="${pathOf(CN.outline, P, true)}" fill="none" stroke="#8C7B6B" stroke-width="1.25" stroke-linejoin="round" stroke-linecap="round"/>`;
+    const ty = P([121, 23.7]).map(Number), hn = P([109.6, 19.2]).map(Number);
+    s += `<ellipse cx="${ty[0]}" cy="${ty[1]}" rx="2.4" ry="6.2" fill="#EEE3C8" stroke="#8C7B6B" stroke-width=".8"/>`;
+    s += `<ellipse cx="${hn[0]}" cy="${hn[1]}" rx="5" ry="3.2" fill="#EEE3C8" stroke="#8C7B6B" stroke-width=".8"/>`;
+    s += `<path d="${pathOf(CN.line1, P)}" fill="none" stroke="#fff" stroke-width="1.6" stroke-dasharray="4 3" stroke-linecap="round"/>`;
+    s += `<path d="${pathOf(CN.line2, P)}" fill="none" stroke="#fff" stroke-width="1.6" stroke-dasharray="4 3" stroke-linecap="round"/>`;
+    s += `<path d="${through(CN.yangtze, P)}" fill="none" stroke="${K.waterD}" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/>`;
+    s += `<path d="${through(CN.yellow, P)}" fill="none" stroke="#C9A64A" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round"/>`;
+    const at = function (pt) { return P(pt).map(Number); };
+    const yz = at(CN.yangtze[CN.yangtze.length - 1]);
+    const yl = at(CN.yellow[CN.yellow.length - 1]);
+    s += glow(arrow(yz[0] - 14, yz[1] + 1, yz[0] + 8, yz[1] - 1, K.gold) + arrow(yl[0] - 12, yl[1], yl[0] + 10, yl[1] - 2, K.gold));
+    const midY = at(CN.yangtze[8]);
+    const bend = at(CN.yellow[7]);
+    s += callout(midY[0], midY[1], midY[0] + 4, midY[1] + 26, '长江', { anchor: 'middle', fs: 12, c: K.waterD });
+    s += callout(bend[0], bend[1], bend[0] + 8, bend[1] - 22, '黄河', { anchor: 'start', fs: 12, c: '#8A6A28' });
+    s += callout((yz[0] + yl[0]) / 2, (yz[1] + yl[1]) / 2, 312, 168, '入海', { anchor: 'end', fs: 12, c: K.waterD });
+    const west = at([86, 33]);
+    const east = at([118, 32]);
+    s += `<text x="${f(west[0])}" y="${f(west[1])}" font-size="13" font-weight="800" fill="${K.ink}" text-anchor="middle" paint-order="stroke" stroke="#fff" stroke-width="3">西高</text>`;
+    s += `<text x="${f(east[0] + 28)}" y="${f(east[1] + 28)}" font-size="13" font-weight="800" fill="${K.ink}" paint-order="stroke" stroke="#fff" stroke-width="3">东低</text>`;
     return s;
   }
 
@@ -145,7 +161,7 @@
       s += glow(splashes());
       s += `<rect x="62" y="58" width="6" height="140" rx="2" fill="#F3E7D3" stroke="${K.ink}" stroke-width=".8"/>`;
       for (let i = 0; i < 8; i++) s += `<path d="M62 ${f(64 + i * 16)} h6" stroke="${K.ink}" stroke-width=".7"/>`;
-      s += callout(66, 120, 40, 40, '落差', { anchor: 'start', fs: 12 });
+      s += callout(66, 120, 78, 64, '落差', { anchor: 'start', fs: 12 });
       s += callout(250, 198, 300, 168, '水潭', { anchor: 'end', fs: 12, c: K.waterD });
       return s;
     }
@@ -178,7 +194,7 @@
     if (wide) s += kettle(kx - 18, ky + 4, { k: 0.72, mouth: 7 });
     s += `<path d="M${spout[0]} ${spout[1]} Q${(spout[0] + 226) / 2} ${(spout[1] + 150) / 2} 224 146" fill="none" stroke="#7FB6CF" stroke-width="${streamW}" stroke-linecap="round"/>`;
     s += `<rect x="36" y="${high ? 48 : 108}" width="7" height="${high ? 152 : 92}" rx="2" fill="#F3E7D3" stroke="${K.ink}" stroke-width=".8"/>`;
-    s += callout(40, high ? 90 : 140, 18, high ? 36 : 92, high ? '落差 2' : '落差 1', { anchor: 'start', fs: 12 });
+    s += callout(40, high ? 90 : 140, 78, high ? 64 : 108, high ? '落差 2' : '落差 1', { anchor: 'start', fs: 12 });
     const meterSvg = meter(300, 108, 4, lit);
     s += (step === 0 || step === 2) ? glow(meterSvg) : meterSvg;
     s += callout(spout[0], spout[1] + 8, wide ? 168 : 154, high ? 28 : 78, wide ? '水量 2' : '水量 1', { anchor: 'end', fs: 12, c: K.waterD });
@@ -198,10 +214,10 @@
       s += `<rect x="${f(x - 2)}" y="${f(y - 12)}" width="4" height="3.5" fill="#F2B640" stroke="${K.ink}" stroke-width=".5"/>`;
     });
     s += `<rect x="128" y="56" width="6" height="140" rx="2" fill="#F3E7D3" stroke="${K.ink}" stroke-width=".8"/>`;
-    s += callout(70, 120, 28, 40, '水库', { anchor: 'start', fs: 12, c: K.waterD });
+    s += callout(96, 108, 86, 70, '水库', { anchor: 'start', fs: 12, c: K.waterD });
     s += callout(214, 184, 168, 214, '水轮机', { anchor: 'middle', fs: 11 });
     s += callout(246, 176, 268, 214, '发电机', { anchor: 'start', fs: 11 });
-    s += callout(132, 120, 96, 28, '落差', { anchor: 'start', fs: 12 });
+    s += callout(132, 100, 148, 58, '落差', { anchor: 'start', fs: 12 });
     return s;
   }
 
