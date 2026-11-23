@@ -7,6 +7,8 @@
   const seal = S.seal, tally = S.tally, bag = S.bag, floor = S.floor, tag = S.tag;
   const CN = S.CN, proj = S.proj, pathOf = S.pathOf, smooth = S.smooth;
   const QIN = '#2B2622', RED = '#C8463A';
+const stairs = S.stairs;
+const plainBlock = S.plainBlock;
   const GOLD = '#D99A2B', A = '#3D86D9', Bc = '#C8664A';
 
 function basinBlock(o) {
@@ -50,54 +52,12 @@ function washbasin(cx, cy, k) {
   <path d="M-20 5 Q-8 2 6 4" stroke="#fff" stroke-width="1.4" fill="none" opacity=".8"/>
   <ellipse cx="0" cy="0" rx="58" ry="17" fill="none" stroke="#5E9DBB" stroke-width="2.2"/></g>`;
 }
-function stairs(o) {
-  o = o || {};
-  let s = '';
-  // three stepped blocks (oblique): top faces + front faces
-  const st = [ { x0: 20, x1: 128, top: 70, c: K.high, h: '4000 米以上', n: '第一级' }, { x0: 128, x1: 232, top: 124, c: K.mid, h: '1000～2000 米', n: '第二级' }, { x0: 232, x1: 330, top: 170, c: K.plain, h: '多在 500 米以下', n: '第三级' } ];
-  const dz = 26, base = 222;
-  st.forEach((t, i) => {
-    s += `<path d="M${t.x0} ${t.top} L${t.x0 + dz} ${t.top - dz * .6} L${t.x1 + dz} ${t.top - dz * .6} L${t.x1} ${t.top} Z" fill="${t.c}" stroke="${K.ink}" stroke-width="1.2"/>`;
-    s += `<path d="M${t.x0} ${t.top} L${t.x1} ${t.top} L${t.x1} ${base} L${t.x0} ${base} Z" fill="${[K.soil3, K.soil2, K.soil1][i]}" stroke="${K.ink}" stroke-width="1.2"/>`;
-    s += `<path d="M${t.x0} ${t.top + 12} L${t.x1} ${t.top + 12}" stroke="rgba(255,255,255,.18)" stroke-width="6"/>`;
-    s += `<text x="${(t.x0 + t.x1) / 2}" y="${t.top + 28}" font-size="13" font-weight="700" fill="#fff" text-anchor="middle">${t.n}</text><text x="${(t.x0 + t.x1) / 2}" y="${t.top + 44}" font-size="10.5" fill="#fff" text-anchor="middle" opacity=".92">${t.h}</text>`;
-  });
-  // snowy peaks on step 1, loess on 2, fields on 3
-  s += mountain(52, 64, 34, 26, { snow: true, c: '#B49A7C', cd: '#977D63' }) + mountain(84, 60, 40, 32, { snow: true, c: '#B49A7C', cd: '#977D63' }) + mountain(116, 56, 30, 22, { snow: true, c: '#B49A7C', cd: '#977D63' });
-  [[262, 160], [286, 158], [310, 156]].forEach(([x, y]) => s += tree(x, y, .9));
-  s += house(300, 165, .9);
-  return s;
-}
 function bowlOnStep(isNew) {
   // small basin cut into step-2 top face
   let s = `<ellipse cx="178" cy="111" rx="34" ry="8.5" fill="#9A7048"/><ellipse cx="178" cy="112.5" rx="28" ry="6" fill="#B9CF8E"/>`;
   s += mountain(152, 112, 18, 12, {}) + mountain(166, 107, 20, 13, {}) + mountain(194, 107, 20, 13, {}) + mountain(206, 112, 18, 12, {});
   s += `<ellipse cx="178" cy="112.5" rx="24" ry="4.6" fill="#B9CF8E"/>`;
   if (isNew) s += newRing(178, 110, 42);
-  return s;
-}
-function plainBlock() {
-  let s = '';
-  // top surface (flat), oblique parallelogram
-  s += `<path d="M18 168 L70 62 L330 62 L330 168 Z" fill="#C8D98F"/>`;
-  s += `<clipPath id="pt"><path d="M18 168 L70 62 L300 62 L300 168 Z"/></clipPath><g clip-path="url(#pt)">`;
-  let r = 3; const rnd = () => (r = (r * 9301 + 49297) % 233280) / 233280;
-  for (let y = 62; y < 168; y += 9) for (let x = 0; x < 320; x += 18) { const sk = (168 - y) * .49; s += `<path d="M${f(x + sk)} ${y} l18 0 l-4.4 9 l-18 0 Z" fill="${[K.wheat, '#D7CB7E', '#C2D48A', K.wheat, '#BFD086'][Math.floor(rnd() * 5)]}" stroke="#EFE4C2" stroke-width=".5"/>`; }
-  s += `</g>`;
-  // sea on the right
-  s += `<path d="M300 62 L330 62 L330 168 L300 168 Q292 140 302 116 Q290 90 300 62Z" fill="${K.sea}"/>`;
-  [[312, 90], [318, 120], [310, 148]].forEach(([x, y]) => s += `<path d="M${x - 6} ${y} q3 -3 6 0 q3 3 6 0" fill="none" stroke="#fff" stroke-width="1.2"/>`);
-  // Taihang wall on the left/back
-  [[64, 76, 44, 40], [90, 68, 50, 46], [52, 104, 46, 40], [40, 132, 44, 36], [30, 160, 40, 30]].forEach(([x, y, w, h]) => s += mountain(x, y, w, h, { c: '#B49A7C', cd: '#977D63' }));
-  // Yellow River with levees, villages, roads
-  const river = 'M96 92 C140 102 170 118 200 124 C232 130 262 118 302 112';
-  s += `<path d="${river}" fill="none" stroke="#B9A06A" stroke-width="10"/><path d="${river}" fill="none" stroke="#CDB173" stroke-width="5"/>`;
-  [[132, 140], [176, 92], [236, 150], [258, 90], [150, 158]].forEach(([x, y]) => s += house(x, y, 1) + house(x + 8, y + 2, .9));
-  s += `<path d="M110 160 L290 78" stroke="#EFE4C2" stroke-width="2" stroke-dasharray="1 0"/>`;
-  [[122, 120], [210, 104], [270, 140], [190, 150]].forEach(([x, y]) => s += tree(x, y, .9));
-  // front face (thin, flat)
-  s += `<path d="M18 168 L330 168 L330 196 L18 196 Z" fill="${K.soil1}" stroke="${K.ink}" stroke-width="1.2"/><path d="M18 182 L330 182" stroke="${K.soil2}" stroke-width="6"/>`;
-  s += `<path d="M18 168 L330 168" stroke="${K.ink}" stroke-width="1.6"/>`;
   return s;
 }
 function chinaPoster() {
@@ -221,14 +181,7 @@ const H2 = `${floor()}${gen(8, '第 1 代', RED, RED, '亲兄弟，一条心')}
   ${gen(120, '第 3 代', '#D98B6A', '#C27BA0', '堂兄弟，见得少', { w: 1.6, dash: '5 3', tie: '#D9A79E' })}
   ${gen(232, '第 8 代', '#4F86C6', '#5A9A5A', '早不认得了', { w: 0, extra: `<g filter="url(#glow)"><path d="M273 150 L291 166 M291 150 L273 166" stroke="#5A4636" stroke-width="3" stroke-linecap="round"/></g><text x="282" y="144" font-size="9" font-weight="800" fill="#B5413A" text-anchor="middle">互相打</text><path d="M262 114 L270 122 L264 128 L272 136" fill="none" stroke="#B5413A" stroke-width="1.6"/><path d="M302 114 L294 122 L300 128 L292 136" fill="none" stroke="#B5413A" stroke-width="1.6"/>` })}`;
 
-const jun = [[60, 84], [60, 162], [284, 84], [284, 162], [120, 202], [224, 202]];
-const H3 = `${floor('#F1EBDD')}
-  ${jun.map(([x, y]) => `<path d="M172 118 L${x} ${y}" stroke="#D9C3A0" stroke-width="6" stroke-linecap="round"/><path d="M172 118 L${x} ${y}" stroke="#EFE3CB" stroke-width="2.4" stroke-dasharray="4 4"/>`).join('')}
-  ${jun.map(([x, y], i) => `<g><rect x="${x - 30}" y="${y - 20}" width="60" height="36" rx="7" fill="#E9F0DC" stroke="#9DB27C"/>${house(x - 16, y + 10, .9)}${house(x + 18, y + 10, .9)}${fort(x, y + 8, 22, QIN, { ch: '秦' })}<text x="${x}" y="${y + 26}" font-size="9" font-weight="700" fill="#5A7040" text-anchor="middle" paint-order="stroke" stroke="#F1EBDD" stroke-width="3">${'郡'}</text></g>`).join('')}
-  ${palace(172, 128)}
-  <g filter="url(#glow)">${figure(236, 104, { k: .5, robe: QIN, hat: 'guan', right: 'give' })}</g>
-  <path d="M248 88 Q262 82 268 72" fill="none" stroke="${K.gold}" stroke-width="2" stroke-dasharray="4 3"/><path d="M264 70 L269 70 L268 76" fill="none" stroke="${K.gold}" stroke-width="2"/>
-  ${callout(236, 80, 236, 24, '皇帝派官：每郡都插“秦”旗', { anchor: 'middle', isNew: true, fs: 10 })}`;
+const H3 = S.commanderies();
 
 const H4 = `${floor('#F3EEE2')}
   <path d="M0 150 Q120 132 344 158 L344 236 L0 236Z" fill="#DCCFA8"/><path d="M150 140 Q170 120 200 140 Q186 132 176 136Z" fill="#B8A57E"/>${mountain(172, 146, 60, 38, { c: '#BBA07E', cd: '#9C8264' })}

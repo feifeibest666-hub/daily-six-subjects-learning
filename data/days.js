@@ -3468,117 +3468,55 @@ window.DAYS = [
               "周选了第三条。"
             ],
             "visual": {
-              "type": "comic",
-              "panels": [
+              "type": "deck",
+              "id": "deck.w1.C",
+              "slides": [
                 {
-                  "bg": "palace",
-                  "cast": [
-                    {
-                      "who": "kingWu",
-                      "x": 0.42,
-                      "y": 0.74,
-                      "face": "wow",
-                      "pose": "cheer"
-                    }
-                  ],
-                  "props": [
-                    {
-                      "what": "mapScroll",
-                      "x": 0.74,
-                      "y": 0.72,
-                      "k": 1
-                    }
-                  ],
-                  "bubbles": [],
-                  "cap": "地盘一下大了"
+                  "scene": "w1.C",
+                  "step": 0,
+                  "cap": "周武王灭商，地盘一下伸到了东边海边。",
+                  "sec": "idea"
                 },
                 {
-                  "bg": "street",
-                  "cast": [
-                    {
-                      "who": "rider",
-                      "x": 0.4,
-                      "y": 0.74,
-                      "face": "worry",
-                      "pose": "run"
-                    }
-                  ],
-                  "props": [
-                    {
-                      "what": "horse",
-                      "x": 0.72,
-                      "y": 0.78,
-                      "k": 1
-                    }
-                  ],
-                  "bubbles": [
-                    {
-                      "who": "rider",
-                      "text": "我一个人管不过来"
-                    }
-                  ],
-                  "cap": "送信要一个多月"
+                  "scene": "w1.C",
+                  "step": 1,
+                  "cap": "只有马车和步行，送一封信来回要两个月。",
+                  "sec": "why"
                 },
                 {
-                  "bg": "palace",
-                  "cast": [
-                    {
-                      "who": "kingWu",
-                      "x": 0.32,
-                      "y": 0.74,
-                      "face": "calm",
-                      "pose": "give"
-                    },
-                    {
-                      "who": "noble",
-                      "x": 0.64,
-                      "y": 0.74,
-                      "face": "calm",
-                      "pose": "take"
-                    }
-                  ],
-                  "props": [
-                    {
-                      "what": "token",
-                      "x": 0.5,
-                      "y": 0.62,
-                      "k": 0.9
-                    }
-                  ],
-                  "bubbles": [
-                    {
-                      "who": "kingWu",
-                      "text": "你带人去东边守着"
-                    }
-                  ],
-                  "cap": "把地分给弟弟"
+                  "scene": "w1.C",
+                  "step": 2,
+                  "cap": "东边还住着原来服从商的人，随时会反抗。",
+                  "sec": "why"
                 },
                 {
-                  "bg": "street",
-                  "cast": [
-                    {
-                      "who": "xiaoyin",
-                      "x": 0.4,
-                      "y": 0.74,
-                      "face": "happy",
-                      "pose": "point"
-                    }
-                  ],
-                  "props": [
-                    {
-                      "what": "castle",
-                      "x": 0.74,
-                      "y": 0.7,
-                      "k": 1.1
-                    }
-                  ],
-                  "bubbles": [
-                    {
-                      "who": "xiaoyin",
-                      "text": "这就叫分封"
-                    }
-                  ],
-                  "cap": "各地建起小城"
+                  "scene": "w1.C",
+                  "step": 3,
+                  "cap": "像在一千多公里外，同时管十几家分店。",
+                  "sec": "example"
+                },
+                {
+                  "scene": "w1.C",
+                  "step": 4,
+                  "cap": "三条路：自己派人？原首领？还是自家人？",
+                  "sec": [
+                    "derive",
+                    0,
+                    3
+                  ]
+                },
+                {
+                  "scene": "w1.C",
+                  "step": 5,
+                  "cap": "周选了第三条：把地分给兄弟、儿子和功臣。",
+                  "secs": [
+                    [
+                      "derive",
+                      4,
+                      4
+                    ],
+                    "takeaway"
+                  ]
                 }
               ]
             }
@@ -3765,32 +3703,48 @@ window.DAYS = [
               "你会想：少交一点、少去一次，好像也没什么。"
             ],
             "visual": {
-              "type": "tug",
-              "base": {},
-              "frames": [
+              "type": "deck",
+              "id": "deck.w1.D",
+              "slides": [
                 {
-                  "set": {
-                    "step": 0,
-                    "play": 0
-                  },
-                  "cap": "血缘一代代变淡、诸侯一代代变强，分封就松了",
-                  "para": "idea"
+                  "scene": "w1.D",
+                  "step": 0,
+                  "cap": "第一代：天子和诸侯是亲兄弟。",
+                  "sec": "idea"
                 },
                 {
-                  "set": {
-                    "step": 1,
-                    "play": 0.5
-                  },
-                  "cap": "血缘一代代变淡、诸侯一代代变强，分封就松了",
-                  "para": "why"
+                  "scene": "w1.D",
+                  "step": 1,
+                  "cap": "一代代往下传，亲兄弟成了远亲。",
+                  "sec": "why"
                 },
                 {
-                  "set": {
-                    "step": 2,
-                    "play": 1
-                  },
-                  "cap": "血缘一代代变淡、诸侯一代代变强，分封就松了。",
-                  "para": "takeaway"
+                  "scene": "w1.D",
+                  "step": 2,
+                  "cap": "诸侯的地越种越多，兵越养越强。",
+                  "sec": "why"
+                },
+                {
+                  "scene": "w1.D",
+                  "step": 3,
+                  "cap": "像传到第五代的家族企业。",
+                  "sec": "example"
+                },
+                {
+                  "scene": "w1.D",
+                  "step": 4,
+                  "cap": "第五代诸侯心想：少交一点，好像也没什么。",
+                  "sec": [
+                    "derive",
+                    0,
+                    4
+                  ]
+                },
+                {
+                  "scene": "w1.D",
+                  "step": 5,
+                  "cap": "血缘变淡、诸侯变强，分封就松了。",
+                  "sec": "takeaway"
                 }
               ]
             }
@@ -9549,72 +9503,55 @@ window.DAYS = [
               "他们选了起义，各地纷纷响应。"
             ],
             "visual": {
-              "type": "comic",
-              "panels": [
+              "type": "deck",
+              "id": "deck.w1.E",
+              "slides": [
                 {
-                  "bg": "palace",
-                  "cast": [
-                    {
-                      "who": "kingWu",
-                      "x": 0.46,
-                      "y": 0.74,
-                      "face": "calm",
-                      "pose": "stand"
-                    }
-                  ],
-                  "props": [],
-                  "bubbles": [],
-                  "cap": "雨下大了"
+                  "scene": "w1.E",
+                  "step": 0,
+                  "cap": "制度很成功，秦却只存在了约 15 年。",
+                  "sec": "idea"
                 },
                 {
-                  "bg": "palace",
-                  "cast": [
-                    {
-                      "who": "kingWu",
-                      "x": 0.46,
-                      "y": 0.74,
-                      "face": "calm",
-                      "pose": "stand"
-                    }
-                  ],
-                  "props": [],
-                  "bubbles": [],
-                  "cap": "迟到按秦法要杀头"
+                  "scene": "w1.E",
+                  "step": 1,
+                  "cap": "修长城、修宫陵、北击匈奴、南征百越。",
+                  "sec": "why"
                 },
                 {
-                  "bg": "palace",
-                  "cast": [
-                    {
-                      "who": "kingWu",
-                      "x": 0.46,
-                      "y": 0.74,
-                      "face": "calm",
-                      "pose": "stand"
-                    }
-                  ],
-                  "props": [],
-                  "bubbles": [
-                    {
-                      "who": "kingWu",
-                      "text": "反正都是死"
-                    }
-                  ],
-                  "cap": "反正都是死"
+                  "scene": "w1.E",
+                  "step": 2,
+                  "cap": "郡县让命令直达每个县，征人也格外快。",
+                  "sec": "why"
                 },
                 {
-                  "bg": "palace",
-                  "cast": [
-                    {
-                      "who": "kingWu",
-                      "x": 0.46,
-                      "y": 0.74,
-                      "face": "calm",
-                      "pose": "stand"
-                    }
-                  ],
-                  "props": [],
-                  "bubbles": [],
-                  "cap": "振臂一呼"
+                  "scene": "w1.E",
+                  "step": 3,
+                  "cap": "九百人去守边，遇上连日大雨，路断了。",
+                  "sec": "example"
+                },
+                {
+                  "scene": "w1.E",
+                  "step": 4,
+                  "cap": "误期是死，逃跑是死，反抗也许能活。",
+                  "sec": [
+                    "derive",
+                    0,
+                    3
+                  ]
+                },
+                {
+                  "scene": "w1.E",
+                  "step": 5,
+                  "cap": "赋役太重、刑法太严：民力耗尽，一点就着。",
+                  "secs": [
+                    [
+                      "derive",
+                      4,
+                      4
+                    ],
+                    "takeaway"
+                  ]
                 }
               ]
             }
@@ -9911,32 +9848,45 @@ window.DAYS = [
               "why": "重力把水往低处拉，所以「往右边低处流」。水不会自己往高处爬，「往左边高处流」不对。"
             },
             "visual": {
-              "type": "tilt",
-              "base": {},
-              "frames": [
+              "type": "deck",
+              "id": "deck.w1.A",
+              "slides": [
                 {
-                  "set": {
-                    "step": 0,
-                    "play": 0
-                  },
-                  "cap": "水往低处流，河往哪流由地势决定；中国西高东低，所以大河向东",
-                  "para": "idea"
+                  "scene": "w1.A",
+                  "step": 0,
+                  "cap": "砧板斜着放，水一定往低的那头跑。",
+                  "sec": "idea"
                 },
                 {
-                  "set": {
-                    "step": 1,
-                    "play": 0.5
-                  },
-                  "cap": "水往低处流，河往哪流由地势决定；中国西高东低，所以大河向东",
-                  "para": "why"
+                  "scene": "w1.A",
+                  "step": 1,
+                  "cap": "中国西高东低，最低处是东边的海。",
+                  "sec": "why"
                 },
                 {
-                  "set": {
-                    "step": 2,
-                    "play": 1
-                  },
-                  "cap": "水往低处流，河往哪流由地势决定；中国西高东低，所以大河向东。",
-                  "para": "takeaway"
+                  "scene": "w1.A",
+                  "step": 2,
+                  "cap": "把另一头放低，水就跟着改道。",
+                  "sec": "example"
+                },
+                {
+                  "scene": "w1.A",
+                  "step": 3,
+                  "cap": "高铁上倒水，水照样落进杯底，不会往车头跑。",
+                  "sec": "example"
+                },
+                {
+                  "scene": "w1.A",
+                  "step": 4,
+                  "cap": "长江、黄河都从西边高处流向东边的海。",
+                  "secs": [
+                    [
+                      "derive",
+                      0,
+                      2
+                    ],
+                    "takeaway"
+                  ]
                 }
               ]
             }
@@ -10037,32 +9987,62 @@ window.DAYS = [
             ],
             "formula": "落差 × 水量：2 × 2 = 4（份）",
             "visual": {
-              "type": "drop",
-              "base": {},
-              "frames": [
+              "type": "deck",
+              "id": "deck.w1.B",
+              "slides": [
                 {
-                  "set": {
-                    "step": 0,
-                    "play": 0
-                  },
-                  "cap": "水能跟着\"落差 × 水量\"走：落得越高、水越多，越能发电",
-                  "para": "idea"
+                  "scene": "w1.B",
+                  "step": 0,
+                  "cap": "水从高处落下，冲下来有力气，这叫水能。",
+                  "sec": "idea"
                 },
                 {
-                  "set": {
-                    "step": 1,
-                    "play": 0.5
-                  },
-                  "cap": "水能跟着\"落差 × 水量\"走：落得越高、水越多，越能发电",
-                  "para": "why"
+                  "scene": "w1.B",
+                  "step": 1,
+                  "cap": "重力把水越拉越快，冲劲越来越大。",
+                  "sec": "why"
                 },
                 {
-                  "set": {
-                    "step": 2,
-                    "play": 1
-                  },
-                  "cap": "水能跟着\"落差 × 水量\"走：落得越高、水越多，越能发电。",
-                  "para": "takeaway"
+                  "scene": "w1.B",
+                  "step": 2,
+                  "cap": "拿水壶往小风车上浇水。",
+                  "secs": [
+                    "example",
+                    [
+                      "derive",
+                      0,
+                      0
+                    ]
+                  ]
+                },
+                {
+                  "scene": "w1.B",
+                  "step": 3,
+                  "cap": "举高一倍：水能约 2 份。",
+                  "sec": [
+                    "derive",
+                    1,
+                    1
+                  ]
+                },
+                {
+                  "scene": "w1.B",
+                  "step": 4,
+                  "cap": "再把水开大一倍：水能约 4 份。",
+                  "sec": [
+                    "derive",
+                    2,
+                    2
+                  ]
+                },
+                {
+                  "scene": "w1.B",
+                  "step": 5,
+                  "cap": "水电站：落差 × 水量，越大越能发电。",
+                  "secs": [
+                    "example",
+                    "takeaway"
+                  ]
                 }
               ]
             }

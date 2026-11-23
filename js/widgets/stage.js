@@ -386,7 +386,7 @@
     }
 
     function paintDeck(frame) {
-      const html = global.LKScene ? LKScene.draw(frame.scene, { add: frame.add, hl: frame.hl }) : '';
+      const html = global.LKScene ? LKScene.draw(frame.scene, { step: frame.step, add: frame.add, hl: frame.hl }) : '';
       svg.setAttribute('viewBox', '0 0 344 236');
       if (reduced || opts.poster) {
         svg.style.transition = 'none';

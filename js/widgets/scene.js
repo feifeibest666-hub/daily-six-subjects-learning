@@ -101,6 +101,13 @@ function figure(x, y, o) {
 function bubble(x, y, text, o) {
   o = o || {}; const lines = text.split('|'), fs = o.fs || 11.5, w = Math.max(...lines.map(l => l.length)) * fs + 16, h = lines.length * (fs + 4) + 10;
   const bx = x - w / 2, by = y - h, tx = o.tail != null ? o.tail : x;
+  if (o.cloud) {
+    const tip = o.tx != null ? o.tx : tx;
+    return `<g filter="url(#soft)"><rect x="${f(bx)}" y="${f(by)}" width="${f(w)}" height="${f(h)}" rx="16" fill="#fff" stroke="${K.ink}" stroke-width="1.2"/>
+    <circle cx="${f(tx - 8)}" cy="${f(by + h + 7)}" r="5.5" fill="#fff" stroke="${K.ink}" stroke-width="1.1"/>
+    <circle cx="${f(tip)}" cy="${f(by + h + 16)}" r="3.4" fill="#fff" stroke="${K.ink}" stroke-width="1"/></g>
+    ${lines.map((l, i) => `<text x="${f(x)}" y="${f(by + 16 + i * (fs + 4))}" font-size="${fs}" font-weight="650" fill="${K.ink}" text-anchor="middle">${l}</text>`).join('')}`;
+  }
   return `<g filter="url(#soft)"><rect x="${f(bx)}" y="${f(by)}" width="${f(w)}" height="${f(h)}" rx="9" fill="#fff" stroke="${K.ink}" stroke-width="1.2"/><path d="M${f(tx - 5)} ${f(by + h - .6)} L${f(o.tx != null ? o.tx : tx)} ${f(by + h + 9)} L${f(tx + 5)} ${f(by + h - .6)}" fill="#fff" stroke="${K.ink}" stroke-width="1.2"/><rect x="${f(tx - 4.4)}" y="${f(by + h - 2.4)}" width="8.8" height="3" fill="#fff"/></g>
   ${lines.map((l, i) => `<text x="${f(x)}" y="${f(by + 15 + i * (fs + 4))}" font-size="${fs}" font-weight="650" fill="${K.ink}" text-anchor="middle">${l}</text>`).join('')}`;
 }
@@ -150,6 +157,18 @@ function ruler(x, y, w, o) {
 }
 function runner(x, y, c, o) {
   o = o || {};
+  if (o.pose === 'stand') {
+    return `<g transform="translate(${x} ${y})" stroke-linecap="round" stroke-linejoin="round">
+    <ellipse cx="0" cy="2" rx="12" ry="2.4" fill="rgba(74,59,48,.18)"/>
+    <path d="M-3 -28 L-8 -2" stroke="#3A302A" stroke-width="4.5"/>
+    <path d="M-1 -28 L7 -2" stroke="#3A302A" stroke-width="4.5"/>
+    <path d="M-1 -46 L-1 -28" stroke="${c}" stroke-width="10"/>
+    <path d="M-2 -42 L-12 -34" stroke="#F4D3B5" stroke-width="3.2"/>
+    <path d="M0 -42 L11 -34" stroke="#F4D3B5" stroke-width="3.2"/>
+    <circle cx="0" cy="-54" r="6.5" fill="#F4D3B5" stroke="${K.ink}" stroke-width="1"/>
+    <path d="M-5.2 -56 Q-3 -62 2 -61 Q7 -60 6.4 -54 Q2 -58 -5.2 -56Z" fill="#2F2622"/>
+    <text x="0" y="-68" font-size="11" font-weight="700" fill="${c}" text-anchor="middle">${o.name || ''}</text></g>`;
+  }
   return `<g transform="translate(${x} ${y})" stroke-linecap="round" stroke-linejoin="round">
   <ellipse cx="0" cy="2" rx="14" ry="2.6" fill="rgba(74,59,48,.18)"/>
   <path d="M-2 -22 L-12 -10 L-8 0" fill="none" stroke="#3A302A" stroke-width="4.5"/><path d="M-2 -22 L8 -12 L16 -14" fill="none" stroke="#3A302A" stroke-width="4.5"/>
@@ -170,13 +189,28 @@ function phone(x, y) {
 
 const QIN = '#2B2622';
 const RED = '#C8463A';
-function flag(x, y, c, o) { o = o || {}; return `<path d="M${x} ${y} L${x} ${y - 22}" stroke="#5A4636" stroke-width="1.4"/><path d="M${x} ${y - 22} Q${x + 8} ${y - 25} ${x + 15} ${y - 21} L${x + 15} ${y - 13} Q${x + 8} ${y - 17} ${x} ${y - 14} Z" fill="${c}" stroke="${K.ink}" stroke-width=".8"/>${o.ch ? `<text x="${x + 7.5}" y="${y - 15.4}" font-size="6.5" font-weight="800" fill="${o.tc || '#F2C14E'}" text-anchor="middle">${o.ch}</text>` : ''}`; }
+function flag(x, y, c, o) {
+  o = o || {};
+  if (o.fs && o.fs > 7) {
+    const fs = o.fs;
+    return `<path d="M${x} ${y} L${x} ${y - 36}" stroke="#5A4636" stroke-width="1.6"/><path d="M${x} ${y - 34} L${x + 28} ${y - 30} L${x + 28} ${y - 12} L${x} ${y - 16} Z" fill="${c}" stroke="${K.ink}" stroke-width=".9"/>${o.ch ? `<text x="${x + 14}" y="${y - 19}" font-size="${fs}" font-weight="800" fill="${o.tc || '#F2C14E'}" text-anchor="middle">${o.ch}</text>` : ''}`;
+  }
+  return `<path d="M${x} ${y} L${x} ${y - 22}" stroke="#5A4636" stroke-width="1.4"/><path d="M${x} ${y - 22} Q${x + 8} ${y - 25} ${x + 15} ${y - 21} L${x + 15} ${y - 13} Q${x + 8} ${y - 17} ${x} ${y - 14} Z" fill="${c}" stroke="${K.ink}" stroke-width=".8"/>${o.ch ? `<text x="${x + 7.5}" y="${y - 15.4}" font-size="6.5" font-weight="800" fill="${o.tc || '#F2C14E'}" text-anchor="middle">${o.ch}</text>` : ''}`;
+}
 function fort(x, y, w, c, o) {
   o = o || {}; const h = w * .55; let cren = '';
   for (let i = 0; i < 5; i++) cren += `<rect x="${f(x - w / 2 + i * w / 4.5)}" y="${f(y - h - 4)}" width="${f(w / 9)}" height="4.5" fill="#D9C3A0" stroke="${K.ink}" stroke-width=".7"/>`;
   return `<g><ellipse cx="${x}" cy="${y + 1.5}" rx="${w * .62}" ry="3" fill="rgba(74,59,48,.16)"/>${cren}<rect x="${f(x - w / 2)}" y="${f(y - h)}" width="${w}" height="${f(h)}" fill="#E6D3B3" stroke="${K.ink}" stroke-width="1"/><path d="M${f(x - w / 2)} ${f(y - h * .45)} L${f(x + w / 2)} ${f(y - h * .45)}" stroke="#CDB58F" stroke-width="1"/><path d="M${f(x - w * .12)} ${y} L${f(x - w * .12)} ${f(y - h * .5)} Q${x} ${f(y - h * .7)} ${f(x + w * .12)} ${f(y - h * .5)} L${f(x + w * .12)} ${y} Z" fill="#6E5440"/>${flag(x + w * .2, y - h - 4, c, o)}${o.name ? `<text x="${x}" y="${y + 13}" font-size="9.5" font-weight="700" fill="${K.ink}" text-anchor="middle">${o.name}</text>` : ''}</g>`;
 }
-function palace(x, y) { return `<g><ellipse cx="${x}" cy="${y + 2}" rx="40" ry="4" fill="rgba(74,59,48,.18)"/><rect x="${x - 34}" y="${y - 8}" width="68" height="8" fill="#D9C3A0" stroke="${K.ink}"/><rect x="${x - 26}" y="${y - 24}" width="52" height="16" fill="#B5584A" stroke="${K.ink}"/>${[-18, -6, 6, 18].map(d => `<rect x="${x + d - 1.5}" y="${y - 24}" width="3" height="16" fill="#8E3F33"/>`).join('')}<path d="M${x - 38} ${y - 23} Q${x} ${y - 34} ${x + 38} ${y - 23} L${x + 30} ${y - 32} Q${x} ${y - 40} ${x - 30} ${y - 32} Z" fill="${QIN}"/>${flag(x + 2, y - 38, QIN, { ch: '秦' })}<text x="${x}" y="${y + 15}" font-size="11" font-weight="800" fill="${K.ink}" text-anchor="middle" paint-order="stroke" stroke="#fff" stroke-width="3">咸阳</text></g>`; }
+function palace(x, y, o) {
+  o = o || {};
+  const ch = o.ch || '秦';
+  const fc = o.flag || QIN;
+  const name = o.name == null ? '咸阳' : o.name;
+  const flagOpts = o.fs ? { ch: ch, tc: o.tc || '#F2C14E', fs: o.fs } : { ch: ch };
+  const nameSvg = name ? `<text x="${x}" y="${y + 15}" font-size="11" font-weight="800" fill="${K.ink}" text-anchor="middle" paint-order="stroke" stroke="#fff" stroke-width="3">${name}</text>` : '';
+  return `<g><ellipse cx="${x}" cy="${y + 2}" rx="40" ry="4" fill="rgba(74,59,48,.18)"/><rect x="${x - 34}" y="${y - 8}" width="68" height="8" fill="#D9C3A0" stroke="${K.ink}"/><rect x="${x - 26}" y="${y - 24}" width="52" height="16" fill="#B5584A" stroke="${K.ink}"/>${[-18, -6, 6, 18].map(d => `<rect x="${x + d - 1.5}" y="${y - 24}" width="3" height="16" fill="#8E3F33"/>`).join('')}<path d="M${x - 38} ${y - 23} Q${x} ${y - 34} ${x + 38} ${y - 23} L${x + 30} ${y - 32} Q${x} ${y - 40} ${x - 30} ${y - 32} Z" fill="${QIN}"/>${flag(x + 2, y - 38, fc, flagOpts)}${nameSvg}</g>`;
+}
 function seal(x, y) { return `<g><rect x="${x - 6}" y="${y - 6}" width="12" height="12" rx="2" fill="#C8463A" stroke="${K.ink}" stroke-width=".8"/><path d="M${x - 3} ${y - 6} Q${x} ${y - 12} ${x + 3} ${y - 6}" fill="#C8463A" stroke="${K.ink}" stroke-width=".8"/><text x="${x}" y="${y + 3}" font-size="7" font-weight="800" fill="#fff" text-anchor="middle">印</text></g>`; }
 function tally(x, y) { return `<g><path d="M${x - 11} ${y + 3} Q${x - 9} ${y - 7} ${x} ${y - 6} Q${x + 9} ${y - 7} ${x + 11} ${y - 2} L${x + 13} ${y - 6} L${x + 12} ${y + 4} Z" fill="#C99A3A" stroke="${K.ink}" stroke-width=".8"/><circle cx="${x + 8}" cy="${y - 3}" r=".9" fill="${K.ink}"/><path d="M${x - 6} ${y - 4} L${x - 4} ${y} M${x} ${y - 5} L${x + 2} ${y - 1}" stroke="#7A5A1E" stroke-width="1"/></g>`; }
 function bag(x, y, t) { return `<g><path d="M${x - 9} ${y} Q${x - 11} ${y - 12} ${x - 4} ${y - 15} L${x + 4} ${y - 15} Q${x + 11} ${y - 12} ${x + 9} ${y} Z" fill="#E2CF7E" stroke="${K.ink}" stroke-width=".9"/><path d="M${x - 4} ${y - 15} L${x - 2} ${y - 19} L${x + 2} ${y - 19} L${x + 4} ${y - 15}" fill="#D9BF62" stroke="${K.ink}" stroke-width=".8"/><text x="${x}" y="${y - 4}" font-size="7" font-weight="800" fill="#7A5A1E" text-anchor="middle">${t || '粟'}</text></g>`; }
@@ -301,11 +335,279 @@ function drawItem(it) {
   return '';
 }
 
+function stairs(o) {
+  o = o || {};
+  let s = '';
+  // three stepped blocks (oblique): top faces + front faces
+  const st = [ { x0: 20, x1: 128, top: 70, c: K.high, h: '4000 米以上', n: '第一级' }, { x0: 128, x1: 232, top: 124, c: K.mid, h: '1000～2000 米', n: '第二级' }, { x0: 232, x1: 330, top: 170, c: K.plain, h: '多在 500 米以下', n: '第三级' } ];
+  const dz = 26, base = 222;
+  st.forEach((t, i) => {
+    s += `<path d="M${t.x0} ${t.top} L${t.x0 + dz} ${t.top - dz * .6} L${t.x1 + dz} ${t.top - dz * .6} L${t.x1} ${t.top} Z" fill="${t.c}" stroke="${K.ink}" stroke-width="1.2"/>`;
+    s += `<path d="M${t.x0} ${t.top} L${t.x1} ${t.top} L${t.x1} ${base} L${t.x0} ${base} Z" fill="${[K.soil3, K.soil2, K.soil1][i]}" stroke="${K.ink}" stroke-width="1.2"/>`;
+    s += `<path d="M${t.x0} ${t.top + 12} L${t.x1} ${t.top + 12}" stroke="rgba(255,255,255,.18)" stroke-width="6"/>`;
+    s += `<text x="${(t.x0 + t.x1) / 2}" y="${t.top + 28}" font-size="13" font-weight="700" fill="#fff" text-anchor="middle">${t.n}</text><text x="${(t.x0 + t.x1) / 2}" y="${t.top + 44}" font-size="10.5" fill="#fff" text-anchor="middle" opacity=".92">${t.h}</text>`;
+  });
+  // snowy peaks on step 1, loess on 2, fields on 3
+  s += mountain(52, 64, 34, 26, { snow: true, c: '#B49A7C', cd: '#977D63' }) + mountain(84, 60, 40, 32, { snow: true, c: '#B49A7C', cd: '#977D63' }) + mountain(116, 56, 30, 22, { snow: true, c: '#B49A7C', cd: '#977D63' });
+  [[262, 160], [286, 158], [310, 156]].forEach(([x, y]) => s += tree(x, y, .9));
+  s += house(300, 165, .9);
+  return s;
+}
+function plainBlock(id) {
+  const cid = id || 'pt';
+  let s = '';
+  // top surface (flat), oblique parallelogram
+  s += `<path d="M18 168 L70 62 L330 62 L330 168 Z" fill="#C8D98F"/>`;
+  s += `<clipPath id="${cid}"><path d="M18 168 L70 62 L300 62 L300 168 Z"/></clipPath><g clip-path="url(#${cid})">`;
+  let r = 3; const rnd = () => (r = (r * 9301 + 49297) % 233280) / 233280;
+  for (let y = 62; y < 168; y += 9) for (let x = 0; x < 320; x += 18) { const sk = (168 - y) * .49; s += `<path d="M${f(x + sk)} ${y} l18 0 l-4.4 9 l-18 0 Z" fill="${[K.wheat, '#D7CB7E', '#C2D48A', K.wheat, '#BFD086'][Math.floor(rnd() * 5)]}" stroke="#EFE4C2" stroke-width=".5"/>`; }
+  s += `</g>`;
+  // sea on the right
+  s += `<path d="M300 62 L330 62 L330 168 L300 168 Q292 140 302 116 Q290 90 300 62Z" fill="${K.sea}"/>`;
+  [[312, 90], [318, 120], [310, 148]].forEach(([x, y]) => s += `<path d="M${x - 6} ${y} q3 -3 6 0 q3 3 6 0" fill="none" stroke="#fff" stroke-width="1.2"/>`);
+  // Taihang wall on the left/back
+  [[64, 76, 44, 40], [90, 68, 50, 46], [52, 104, 46, 40], [40, 132, 44, 36], [30, 160, 40, 30]].forEach(([x, y, w, h]) => s += mountain(x, y, w, h, { c: '#B49A7C', cd: '#977D63' }));
+  // Yellow River with levees, villages, roads
+  const river = 'M96 92 C140 102 170 118 200 124 C232 130 262 118 302 112';
+  s += `<path d="${river}" fill="none" stroke="#B9A06A" stroke-width="10"/><path d="${river}" fill="none" stroke="#CDB173" stroke-width="5"/>`;
+  [[132, 140], [176, 92], [236, 150], [258, 90], [150, 158]].forEach(([x, y]) => s += house(x, y, 1) + house(x + 8, y + 2, .9));
+  s += `<path d="M110 160 L290 78" stroke="#EFE4C2" stroke-width="2" stroke-dasharray="1 0"/>`;
+  [[122, 120], [210, 104], [270, 140], [190, 150]].forEach(([x, y]) => s += tree(x, y, .9));
+  // front face (thin, flat)
+  s += `<path d="M18 168 L330 168 L330 196 L18 196 Z" fill="${K.soil1}" stroke="${K.ink}" stroke-width="1.2"/><path d="M18 182 L330 182" stroke="${K.soil2}" stroke-width="6"/>`;
+  s += `<path d="M18 168 L330 168" stroke="${K.ink}" stroke-width="1.6"/>`;
+  return s;
+}
+function commanderies(o) {
+  o = o || {};
+  const jun = [[60, 84], [60, 162], [284, 84], [284, 162], [120, 202], [224, 202]];
+  let s = `${floor('#F1EBDD')}
+  ${jun.map(([x, y]) => `<path d="M172 118 L${x} ${y}" stroke="#D9C3A0" stroke-width="6" stroke-linecap="round"/><path d="M172 118 L${x} ${y}" stroke="#EFE3CB" stroke-width="2.4" stroke-dasharray="4 4"/>`).join('')}
+  ${jun.map(([x, y]) => `<g><rect x="${x - 30}" y="${y - 20}" width="60" height="36" rx="7" fill="#E9F0DC" stroke="#9DB27C"/>${house(x - 16, y + 10, .9)}${house(x + 18, y + 10, .9)}${fort(x, y + 8, 22, QIN, { ch: '秦' })}<text x="${x}" y="${y + 26}" font-size="9" font-weight="700" fill="#5A7040" text-anchor="middle" paint-order="stroke" stroke="#F1EBDD" stroke-width="3">郡</text></g>`).join('')}
+  ${palace(172, 128)}`;
+  if (o.envoy !== false) {
+    s += `
+  <g filter="url(#glow)">${figure(236, 104, { k: .5, robe: QIN, hat: 'guan', right: 'give' })}</g>
+  <path d="M248 88 Q262 82 268 72" fill="none" stroke="${K.gold}" stroke-width="2" stroke-dasharray="4 3"/><path d="M264 70 L269 70 L268 76" fill="none" stroke="${K.gold}" stroke-width="2"/>
+  ${callout(236, 80, 236, 24, '皇帝派官：每郡都插“秦”旗', { anchor: 'middle', isNew: true, fs: 10 })}`;
+  }
+  return s;
+}
+
+function board(x1, y1, x2, y2) {
+  const ox = -16, oy = -24, thick = 8;
+  let s = `<path d="M${f(x1)} ${f(y1)} L${f(x2)} ${f(y2)} L${f(x2)} ${f(y2 + thick)} L${f(x1)} ${f(y1 + thick)} Z" fill="#B48A5A" stroke="${K.ink}" stroke-width="1.2"/>`;
+  s += `<path d="M${f(x1)} ${f(y1)} L${f(x2)} ${f(y2)} L${f(x2 + ox)} ${f(y2 + oy)} L${f(x1 + ox)} ${f(y1 + oy)} Z" fill="#D9B98A" stroke="${K.ink}" stroke-width="1.2"/>`;
+  for (let i = 1; i <= 3; i++) {
+    const t = i / 4;
+    const ax = x1 + ox * t, ay = y1 + oy * t, bx = x2 + ox * t, by = y2 + oy * t;
+    s += `<path d="M${f(ax + 12)} ${f(ay + 1)} L${f(bx - 12)} ${f(by + 1)}" stroke="#C4A574" stroke-width="1.1" fill="none"/>`;
+  }
+  return s;
+}
+function books(x, y, n) {
+  const colors = ['#C8463A', '#3D86D9', '#E2B43A'];
+  let s = '';
+  const count = n || 3;
+  for (let i = 0; i < count; i++) {
+    const yy = y - (count - 1 - i) * 7;
+    s += `<rect x="${f(x)}" y="${f(yy)}" width="34" height="7" rx="1.2" fill="${colors[i % 3]}" stroke="${K.ink}" stroke-width=".9"/>`;
+    s += `<rect x="${f(x + 1)}" y="${f(yy + 1)}" width="4" height="5" fill="rgba(255,255,255,.45)"/>`;
+  }
+  return s;
+}
+function riverRibbon(pts, w) {
+  w = w || 6;
+  const d = pts.map((p, i) => (i ? 'L' : 'M') + f(p[0]) + ' ' + f(p[1])).join(' ');
+  return `<path d="${d}" fill="none" stroke="#7FB6CF" stroke-width="${w}" stroke-linecap="round" stroke-linejoin="round"/><path d="${d}" fill="none" stroke="#fff" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" opacity=".9"/>`;
+}
+function trainWindow(x, y, w, h) {
+  const id = 'tw' + Math.round(x) + 'x' + Math.round(y);
+  let s = `<g><rect x="${f(x)}" y="${f(y)}" width="${f(w)}" height="${f(h)}" rx="18" fill="#C9D6DE" stroke="#8A8178" stroke-width="7"/>`;
+  s += `<clipPath id="${id}"><rect x="${f(x + 8)}" y="${f(y + 8)}" width="${f(w - 16)}" height="${f(h - 16)}" rx="12"/></clipPath><g clip-path="url(#${id})">`;
+  const bands = ['#C9B59A', '#C5D6A4', '#9BB6C8'];
+  bands.forEach((c, i) => {
+    const yy = y + 6 + i * ((h - 8) / 3);
+    s += `<path d="M${f(x - 4)} ${f(yy + 10)} L${f(x + w + 4)} ${f(yy - 8)} L${f(x + w + 4)} ${f(yy + (h / 3) + 6)} L${f(x - 4)} ${f(yy + (h / 3) + 22)} Z" fill="${c}"/>`;
+  });
+  for (let i = 0; i < 6; i++) {
+    const yy = y + 18 + i * ((h - 24) / 6);
+    s += `<path d="M${f(x + 14)} ${f(yy + 8)} L${f(x + w - 18)} ${f(yy - 6)}" stroke="rgba(255,255,255,.72)" stroke-width="2.2" stroke-linecap="round"/>`;
+  }
+  s += '</g></g>';
+  return s;
+}
+function cliff(x, y, w, h) {
+  let s = `<path d="M${f(x)} ${f(y + 22)} L${f(x + w * .7)} ${f(y)} L${f(x + w)} ${f(y + 10)} L${f(x + w)} ${f(y + h)} L${f(x)} ${f(y + h)} Z" fill="#A88B6E" stroke="${K.ink}" stroke-width="1.3"/>`;
+  s += `<path d="M${f(x + w * .7)} ${f(y)} L${f(x + w)} ${f(y + 10)} L${f(x + w)} ${f(y + h)} L${f(x + w * .62)} ${f(y + h * .35)} Z" fill="#8A6F57"/>`;
+  [0.38, 0.58, 0.78].forEach((t, i) => {
+    const yy = y + 16 + (h - 20) * t;
+    s += `<path d="M${f(x + 6)} ${f(yy)} L${f(x + w - 8)} ${f(yy - 8)}" stroke="${[K.soil1, K.soil2, K.soil3][i]}" stroke-width="8" fill="none" stroke-linecap="round"/>`;
+  });
+  s += `<path d="M${f(x - 4)} ${f(y + 24)} L${f(x + w * .7)} ${f(y)} L${f(x + w + 6)} ${f(y + 12)} L${f(x + w * .15)} ${f(y + 20)} Z" fill="#B9CF8E" stroke="${K.ink}" stroke-width="1.1"/>`;
+  return s;
+}
+function kettle(x, y, o) {
+  if (typeof o === 'number') o = { k: o };
+  o = o || {};
+  const k = o.k || 1;
+  const mouth = o.mouth == null ? 5 : o.mouth;
+  return `<g transform="translate(${f(x)} ${f(y)}) scale(${k})" stroke-linejoin="round">
+    <ellipse cx="0" cy="20" rx="24" ry="5" fill="rgba(74,59,48,.16)"/>
+    <path d="M-18 16 Q-22 -6 0 -16 Q22 -6 18 16 Z" fill="#C8664A" stroke="${K.ink}" stroke-width="1.3"/>
+    <path d="M-8 4 Q-6 -4 0 -2 Q6 -4 8 4" fill="#A84E38" opacity=".35"/>
+    <path d="M-18 6 Q-30 4 -30 14 Q-30 20 -18 16" fill="none" stroke="${K.ink}" stroke-width="2.6"/>
+    <path d="M16 -2 Q34 -10 40 -16" fill="none" stroke="#C8664A" stroke-width="${mouth}" stroke-linecap="round"/>
+    <path d="M16 -2 Q34 -10 40 -16" fill="none" stroke="${K.ink}" stroke-width="1.1" stroke-linecap="round"/>
+    <ellipse cx="0" cy="-14" rx="9" ry="3.2" fill="#F3E7D3" stroke="${K.ink}" stroke-width="1"/>
+    <path d="M-4 -14 Q0 -22 4 -14" fill="none" stroke="${K.ink}" stroke-width="1.2"/>
+  </g>`;
+}
+function pinwheel(x, y, r, colors) {
+  colors = colors || ['#C8463A', '#F2B640', '#3D86D9', '#7FA65A'];
+  let s = `<g transform="translate(${f(x)} ${f(y)})">`;
+  for (let i = 0; i < 4; i++) {
+    const a = -Math.PI / 2 + i * Math.PI / 2;
+    const x2 = Math.cos(a) * r, y2 = Math.sin(a) * r;
+    const x3 = Math.cos(a + 0.85) * r * 0.62, y3 = Math.sin(a + 0.85) * r * 0.62;
+    s += `<path d="M0 0 Q${f(x3)} ${f(y3)} ${f(x2)} ${f(y2)} Q${f(x3 * .25)} ${f(y3 * .25)} 0 0 Z" fill="${colors[i]}" stroke="${K.ink}" stroke-width=".9"/>`;
+  }
+  s += `<circle r="3.4" fill="#FBF6EE" stroke="${K.ink}" stroke-width="1.3"/></g>`;
+  return s;
+}
+function meter(x, y, n, lit) {
+  let s = '';
+  const h = 18, gap = 4;
+  for (let i = 0; i < n; i++) {
+    const yy = y + (n - 1 - i) * (h + gap);
+    const on = i < lit;
+    s += `<rect x="${f(x)}" y="${f(yy)}" width="26" height="${h}" rx="5" fill="${on ? '#F2B640' : '#fff'}" stroke="${K.ink}" stroke-width="1.3"/>`;
+  }
+  return s;
+}
+function dam(o) {
+  o = o || {};
+  const ox = o.ox || 0, oy = o.oy || 0, sc = o.sc || 1;
+  let s = `<g transform="translate(${f(ox)} ${f(oy)}) scale(${sc})">`;
+  s += `<defs><linearGradient id="resv${Math.round(ox)}${Math.round(oy)}" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#A9D0DC"/><stop offset="1" stop-color="#5E9DBB"/></linearGradient></defs>`;
+  s += `<path d="M18 78 L148 72 L156 198 L36 206 Q16 150 18 78Z" fill="url(#resv${Math.round(ox)}${Math.round(oy)})" stroke="${K.ink}" stroke-width="1"/>`;
+  s += `<path d="M24 92 Q80 88 140 84" fill="none" stroke="#fff" stroke-width="1.4" opacity=".7"/>`;
+  s += `<path d="M142 58 L196 52 L214 206 L132 210 Z" fill="#CFC8BE" stroke="${K.ink}" stroke-width="1.4"/>`;
+  s += `<path d="M156 78 L188 74" stroke="#B7B0A6" stroke-width="3"/>`;
+  s += `<path d="M70 168 L198 186" fill="none" stroke="#8A8178" stroke-width="9" stroke-linecap="round"/>`;
+  s += `<path d="M70 168 L198 186" fill="none" stroke="#7FB6CF" stroke-width="4.5" stroke-linecap="round"/>`;
+  s += `<rect x="186" y="164" width="62" height="42" rx="3" fill="#F3E7D3" stroke="${K.ink}" stroke-width="1.2"/>`;
+  s += `<path d="M186 164 L217 154 L248 164" fill="#8E3F33" stroke="${K.ink}" stroke-width="1"/>`;
+  s += pinwheel(214, 184, 14, ['#C8463A', '#F2B640', '#3D86D9', '#7FA65A']);
+  s += `<rect x="232" y="174" width="14" height="20" rx="4" fill="#8A8178" stroke="${K.ink}" stroke-width="1"/>`;
+  s += `<circle cx="239" cy="184" r="3" fill="#F2C14E" stroke="${K.ink}" stroke-width=".6"/>`;
+  s += '</g>';
+  return s;
+}
+function shop(x, y, w, label) {
+  const h = Math.max(36, w * 0.72);
+  const roof = w * 0.22;
+  let s = `<g><path d="M${f(x - 4)} ${f(y - h)} L${f(x + w / 2)} ${f(y - h - roof)} L${f(x + w + 4)} ${f(y - h)} L${f(x + w)} ${f(y - h + 6)} L${f(x)} ${f(y - h + 6)} Z" fill="#8E3F33" stroke="${K.ink}" stroke-width="1.1"/>`;
+  s += `<rect x="${f(x)}" y="${f(y - h)}" width="${f(w)}" height="${f(h)}" fill="#F3E7D3" stroke="${K.ink}" stroke-width="1.2"/>`;
+  if (w >= 30 && label) {
+    s += `<rect x="${f(x + w * .08)}" y="${f(y - h + 5)}" width="${f(w * .84)}" height="14" rx="2" fill="#C8463A"/>`;
+    s += `<text x="${f(x + w / 2)}" y="${f(y - h + 16)}" font-size="11" font-weight="800" fill="#fff" text-anchor="middle">${label}</text>`;
+  }
+  const dw = Math.max(8, Math.min(16, w * 0.28));
+  s += `<rect x="${f(x + w / 2 - dw)}" y="${f(y - dw * 1.35)}" width="${f(dw)}" height="${f(dw * 1.35)}" fill="#8A6248" stroke="${K.ink}" stroke-width=".8"/>`;
+  s += `<rect x="${f(x + w / 2)}" y="${f(y - dw * 1.35)}" width="${f(dw)}" height="${f(dw * 1.35)}" fill="#6E4E32" stroke="${K.ink}" stroke-width=".8"/>`;
+  s += '</g>';
+  return s;
+}
+function signpost(x, y, text) {
+  const w = Math.max(64, text.length * 12 + 18);
+  return `<g><rect x="${f(x - 2.2)}" y="${f(y - 52)}" width="4.4" height="52" rx="1" fill="#7A5A3A" stroke="${K.ink}" stroke-width=".7"/>
+    <path d="M${f(x + 2)} ${f(y - 48)} L${f(x + w)} ${f(y - 54)} L${f(x + w - 10)} ${f(y - 30)} L${f(x + 2)} ${f(y - 26)} Z" fill="#E7D3B0" stroke="${K.ink}" stroke-width="1.2"/>
+    <text x="${f(x + w / 2 - 2)}" y="${f(y - 35)}" font-size="11" font-weight="750" fill="${K.ink}" text-anchor="middle">${text}</text></g>`;
+}
+function pedigree(x, y, w, h) {
+  let s = '<g>';
+  const n = 14;
+  const gap = w / n;
+  for (let i = 0; i < n; i++) {
+    s += `<rect x="${f(x + i * gap + 1)}" y="${f(y)}" width="${f(gap - 2)}" height="${f(h)}" rx="3" fill="${i % 2 ? '#E8D5AC' : '#F0E0BE'}" stroke="#C4A574" stroke-width=".7"/>`;
+  }
+  s += `<path d="M${f(x - 2)} ${f(y + h * .2)} L${f(x + w + 2)} ${f(y + h * .2)}" stroke="#6B4A2E" stroke-width="2.4" stroke-linecap="round"/>`;
+  s += `<path d="M${f(x - 2)} ${f(y + h * .78)}" L${f(x + w + 2)} ${f(y + h * .78)}" stroke="#6B4A2E" stroke-width="2.4" stroke-linecap="round"/>`;
+  s += '</g>';
+  return s;
+}
+function office(x, y, w, label) {
+  const h = w * 1.25;
+  const cols = Math.max(2, Math.round(w / 16));
+  const rows = Math.max(3, Math.round(h / 16));
+  let s = `<g><rect x="${f(x)}" y="${f(y - h)}" width="${f(w)}" height="${f(h)}" rx="2" fill="#F7F4EF" stroke="${K.ink}" stroke-width="1.3"/>`;
+  for (let r = 0; r < rows; r++) {
+    for (let c = 0; c < cols; c++) {
+      const cw = (w - 10) / cols, rh = (h - 14) / rows;
+      s += `<rect x="${f(x + 5 + c * cw + 1)}" y="${f(y - h + 6 + r * rh + 1)}" width="${f(cw - 3)}" height="${f(rh - 3)}" rx="1" fill="#C5D8E4" stroke="#7E9AAB" stroke-width=".6"/>`;
+    }
+  }
+  if (label) s += `<text x="${f(x + w / 2)}" y="${f(y + 13)}" font-size="11" font-weight="800" fill="${K.ink}" text-anchor="middle">${label}</text>`;
+  s += '</g>';
+  return s;
+}
+function calPage(x, y, text) {
+  return `<g filter="url(#soft)"><rect x="${f(x)}" y="${f(y)}" width="58" height="68" rx="4" fill="#fff" stroke="${K.ink}" stroke-width="1.2"/>
+    <path d="M${f(x)} ${f(y + 16)} L${f(x)} ${f(y + 4)} Q${f(x)} ${f(y)} ${f(x + 4)} ${f(y)} L${f(x + 54)} ${f(y)} Q${f(x + 58)} ${f(y)} ${f(x + 58)} ${f(y + 4)} L${f(x + 58)} ${f(y + 16)} Z" fill="#C8463A"/>
+    <circle cx="${f(x + 16)}" cy="${f(y + 1)}" r="2.2" fill="${K.ink}"/><circle cx="${f(x + 42)}" cy="${f(y + 1)}" r="2.2" fill="${K.ink}"/>
+    <text x="${f(x + 29)}" y="${f(y + 44)}" font-size="14" font-weight="800" fill="${K.ink}" text-anchor="middle">${text}</text></g>`;
+}
+function rope(x1, y, x2, fray) {
+  const fx = x1 + (x2 - x1) * (fray == null ? 0.55 : fray);
+  let s = `<path d="M${f(x1)} ${f(y - 4)} Q${f((x1 + fx) / 2)} ${f(y + 7)} ${f(fx - 4)} ${f(y - 1)}" fill="none" stroke="#C4A574" stroke-width="4.4" stroke-linecap="round"/>`;
+  s += `<path d="M${f(x1)} ${f(y + 4)} Q${f((x1 + fx) / 2)} ${f(y - 7)} ${f(fx - 2)} ${f(y + 2)}" fill="none" stroke="#A8845A" stroke-width="3.4" stroke-linecap="round"/>`;
+  [[-6, -7], [2, -2], [8, 6], [14, 1], [4, 8]].forEach((p, i) => {
+    s += `<path d="M${f(fx - 2)} ${f(y)} q${6 + i} ${p[1]} ${16 + p[0]} ${p[1] * 1.3}" fill="none" stroke="${i % 2 ? '#A8845A' : '#C4A574'}" stroke-width="1.15" stroke-linecap="round"/>`;
+  });
+  return s;
+}
+function load(x, y) {
+  return `<g><path d="M${f(x - 7)} ${f(y)} Q${f(x)} ${f(y - 16)} ${f(x + 7)} ${f(y)}" fill="none" stroke="#7A5A3A" stroke-width="1.4"/>
+    <rect x="${f(x - 12)}" y="${f(y - 8)}" width="24" height="16" rx="2" fill="#C4B49A" stroke="${K.ink}" stroke-width="1.1"/>
+    <path d="M${f(x - 12)} ${f(y)}" L${f(x + 12)} ${f(y)}" stroke="#A89880" stroke-width="1"/>
+    <path d="M${f(x - 6)} ${f(y - 8)} L${f(x - 4)} ${f(y + 8)} M${f(x + 5)} ${f(y - 8)} L${f(x + 3)} ${f(y + 8)}" stroke="#8E7E68" stroke-width=".8"/></g>`;
+}
+function wall(pts) {
+  if (!pts || pts.length < 2) return '';
+  const d = pts.map((p, i) => (i ? 'L' : 'M') + f(p[0]) + ' ' + f(p[1])).join(' ');
+  let mer = '';
+  for (let i = 0; i < pts.length - 1; i++) {
+    const a = pts[i], b = pts[i + 1];
+    const seg = 4;
+    for (let s = 0; s < seg; s++) {
+      const t = (s + 0.2) / seg;
+      const x = a[0] + (b[0] - a[0]) * t;
+      const y = a[1] + (b[1] - a[1]) * t;
+      mer += `<rect x="${f(x - 3.5)}" y="${f(y - 9)}" width="7" height="9" fill="#D9CDB8" stroke="${K.ink}" stroke-width=".7"/>`;
+    }
+  }
+  return `<path d="${d}" fill="none" stroke="#B8A58A" stroke-width="8" stroke-linejoin="round" stroke-linecap="round"/>${mer}<path d="${d}" fill="none" stroke="#8A6F57" stroke-width="1.3" stroke-linejoin="round"/>`;
+}
+function kasa(x, y) {
+  return `<g><path d="M${f(x)} ${f(y - 7)} L${f(x - 16)} ${f(y + 2)} L${f(x + 16)} ${f(y + 2)} Z" fill="#E2CF7E" stroke="${K.ink}" stroke-width="1.1"/>
+    <path d="M${f(x - 8)} ${f(y - 1)} L${f(x)} ${f(y - 6)} L${f(x + 8)} ${f(y - 1)}" fill="none" stroke="#C4A574" stroke-width=".8"/>
+    <path d="M${f(x)} ${f(y - 7)} L${f(x)} ${f(y + 2)}" stroke="#C4A574" stroke-width=".7"/></g>`;
+}
+function fire(x, y, k) {
+  k = k || 1;
+  return `<g transform="translate(${f(x)} ${f(y)}) scale(${k})">
+    <path d="M0 4 C-10 -4 -8 -18 0 -26 C8 -18 10 -4 0 4Z" fill="#C8463A"/>
+    <path d="M0 4 C-6 -2 -5 -12 0 -18 C5 -12 6 -2 0 4Z" fill="#E07A3D"/>
+    <path d="M0 3 C-3 -1 -2 -7 0 -11 C2 -7 3 -1 0 3Z" fill="#F2B640"/>
+  </g>`;
+}
+
 const scenes = {};
 const mem = {};
 const parts = [];
 function register(name, fn) { scenes[name] = fn; }
-function part(name, svg) { parts.push({ name: name, svg: svg }); }
+function part(name, svg, group) { parts.push({ name: name, svg: svg, group: group || '' }); }
 function draw(name, state) {
   const fn = scenes[name];
   const body = fn ? fn(state || {}) : `<rect width="344" height="236" fill="${K.paper}"/>`;
@@ -335,6 +637,25 @@ part('衣架', hanger(80, 88, K.robe));
 part('色卡', swatch(60, 70, K.gold));
 part('太阳', sun(80, 64, 18));
 part('船', boat(80, 78, 1.8));
+part('砧板', board(36, 86, 146, 100), 'w1');
+part('书', books(62, 72, 3), 'w1');
+part('河流带', riverRibbon([[24, 40], [56, 66], [96, 48], [136, 78]], 8), 'w1');
+part('车窗', trainWindow(24, 22, 112, 68), 'w1');
+part('悬崖', cliff(30, 24, 92, 70), 'w1');
+part('水壶', kettle(52, 58, { k: 1.05, mouth: 6 }), 'w1');
+part('风车', pinwheel(80, 62, 28), 'w1');
+part('能量格', meter(66, 18, 4, 2), 'w1');
+part('大坝', dam({ ox: 16, oy: 12, sc: 0.4 }), 'w1');
+part('店铺', shop(40, 100, 72, '总店'), 'w1');
+part('路牌', signpost(36, 104, '渔阳'), 'w1');
+part('族谱', pedigree(12, 10, 136, 96), 'w1');
+part('楼房', office(52, 90, 48, '总部'), 'w1');
+part('台历', calPage(50, 18, '春节'), 'w1');
+part('绳子', rope(18, 62, 118, 0.62), 'w1');
+part('石块', load(80, 64), 'w1');
+part('长城', wall([[12, 78], [48, 40], [96, 56], [148, 28]]), 'w1');
+part('斗笠', kasa(80, 58), 'w1');
+part('火', fire(80, 78, 1.6), 'w1');
 
 global.LKScene = {
   K: K, f: f, defs: defs, callout: callout, newRing: newRing, star: star,
@@ -342,6 +663,11 @@ global.LKScene = {
   coin: coin, stack: stack, product: product, ruler: ruler, runner: runner, stopwatch: stopwatch, phone: phone,
   flag: flag, fort: fort, palace: palace, seal: seal, tally: tally, bag: bag, floor: floor, tag: tag,
   brain: brain, heart: heart, thermo: thermo, hanger: hanger, swatch: swatch, sun: sun, clockFace: clockFace, boat: boat,
+  stairs: stairs, plainBlock: plainBlock, commanderies: commanderies,
+  board: board, books: books, riverRibbon: riverRibbon, trainWindow: trainWindow,
+  cliff: cliff, kettle: kettle, pinwheel: pinwheel, meter: meter, dam: dam,
+  shop: shop, signpost: signpost, pedigree: pedigree, office: office, calPage: calPage, rope: rope,
+  load: load, wall: wall, kasa: kasa, fire: fire,
   CN: CN, proj: proj, pathOf: pathOf, smooth: smooth,
   drawItem: drawItem, register: register, part: part, draw: draw, scenes: scenes, parts: parts,
   remember: remember, recall: recall
