@@ -44,7 +44,8 @@
         day: day,
         subject: 'boss',
         intro: d.boss.intro,
-        parts: d.boss.parts
+        parts: d.boss.parts,
+        hookComic: d.boss.hookComic || null
       };
     }
     if (d.type === 'review') return buildReview(day, subject);
@@ -261,7 +262,7 @@
     if (n === 0) {
       if (d && d.type === 'review') return '今天是周复盘。先从时尚回炉热个身？';
       if (state.miniOn) return '迷你模式 6 关，约 8 分钟。先从时尚热个身？';
-      return '今天 6 关，约 40 分钟。先从时尚热个身？';
+      return '今天 6 关，约 46 分钟。先从时尚热个身？';
     }
     if (n <= 2) {
       const next = SUBJECT_ORDER.find(function (s) { return !state.lessons[LK.lessonId(day, s)]; });

@@ -46,6 +46,9 @@
     section('道具', LKArt.props, function (svg, name) {
       LKArt.prop(svg, { what: name, x: 60, y: 70, k: 1.3, W: 120, H: 140 });
     });
+    section('角色', Object.keys(global.CAST || {}), function (svg, name) {
+      LKArt.person(svg, { who: name, x: 60, y: 124, face: 'happy', pose: 'stand', k: 0.7, W: 120, H: 140 });
+    });
     section('背景', LKArt.bgs, function (svg, name) {
       LKArt.bg(svg, name, 120, 140);
     });

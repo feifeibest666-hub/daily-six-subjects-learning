@@ -231,10 +231,20 @@
     function labelOf(scrub, value) {
       if (!scrub) return '';
       if (scrub.format) return scrub.format(value);
+      if (scrub.tickLabels && scrub.tickLabels[0] === '拉萨' && global.LKProfile) return LKProfile.readout(value);
       if (Math.abs(value) >= 100) return String(Math.round(value));
       if (scrub.unit === '°') {
         const n = Math.round(value);
         return (n < 0 ? '南纬 ' : '北纬 ') + Math.abs(n) + '°';
+      }
+      if (scrub.tickLabels && scrub.ticks && scrub.ticks.length === scrub.tickLabels.length) {
+        let best = 0;
+        let bd = Infinity;
+        scrub.ticks.forEach(function (tick, i) {
+          const d = Math.abs(tick - value);
+          if (d < bd) { bd = d; best = i; }
+        });
+        if (bd <= Math.abs((scrub.to || 1) - (scrub.from || 0)) * 0.08) return scrub.tickLabels[best];
       }
       return String(Math.round(value * 100) / 100);
     }
@@ -513,6 +523,42 @@
     }
     requestAnimationFrame(loop);
   }
+
+  register('duo', {
+    viewBox: '0 0 340 210',
+    build: function () {},
+    apply: function (svg, state, tween) {
+      while (svg.firstChild) svg.removeChild(svg.firstChild);
+      const dir = state.dir || 'row';
+      const both = state.both == null ? 1 : state.both;
+      const fade = both < 0.5;
+      function pane(vis, x, y, w, h, dim) {
+        if (!vis) return;
+        const def = types[vis.type];
+        const node = LK.svg('svg', {
+          x: x, y: y, width: w, height: h,
+          viewBox: (def && def.viewBox) || '0 0 300 190',
+          preserveAspectRatio: 'xMidYMid meet'
+        });
+        if (dim) node.setAttribute('opacity', '0.35');
+        if (def && def.apply) def.apply(node, Object.assign({}, vis.base || {}, vis.set || {}), tween == null ? 1 : tween, {});
+        svg.appendChild(node);
+      }
+      if (dir === 'col') {
+        pane(state.a, 10, 4, 320, 96, false);
+        pane(state.b, 10, 108, 320, 96, fade);
+      } else {
+        pane(state.a, 4, 8, 150, 168, false);
+        pane(state.b, 186, 8, 150, 168, fade);
+        if (state.vs) {
+          const t = LK.svg('text', { x: 170, y: 100, 'text-anchor': 'middle', 'font-size': 13, 'font-weight': 700, fill: '#6E655C' });
+          t.textContent = state.vs;
+          svg.appendChild(t);
+        }
+      }
+    },
+    anim: {}
+  });
 
   global.LKStage = {
     register: register,

@@ -618,3 +618,13 @@ html.reduce .flame, html.reduce .mascot-bob { animation: none !important; }
 @media (prefers-reduced-motion: reduce) {
   .flame, .mascot-bob { animation: none !important; }
 }
+.en { color: #3D86D9; font-weight: 600; }
+.w.is-on { background: #E3EFFC; box-shadow: inset 0 -2px 0 #3D86D9; border-radius: 4px; }
+.say-line, .word-row, .pill-row { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; margin: 8px 0; }
+.say-btn { min-width: 40px; min-height: 40px; border-radius: 20px; border: 1px solid var(--line); background: #fff; }
+.say-who { width: 10px; height: 10px; border-radius: 50%; background: #A79E94; display: inline-block; }
+.say-A { background: #E46A9C; }
+.say-B { background: #3D86D9; }
+.word-pic { width: 48px; height: 48px; border-radius: 24px; background: #E3EFFC; display: grid; place-items: center; font-size: 24px; }
+.take-thumb { width: 96px; height: 64px; overflow: hidden; }
+.say-zh { color: var(--ink-2); font-size: 13px; }

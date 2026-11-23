@@ -115,11 +115,18 @@
 
   function rich(text) {
     const frag = document.createDocumentFragment();
-    String(text == null ? '' : text).split('**').forEach(function (part, i) {
-      if (!part) return;
-      if (i % 2 === 1) frag.appendChild(h('strong', { class: 'term', text: part }));
-      else frag.appendChild(document.createTextNode(part));
-    });
+    const src = String(text == null ? '' : text);
+    const re = /\*\*([^*]+)\*\*|\[\[([^\]]+)\]\]/g;
+    let last = 0;
+    let m;
+    while ((m = re.exec(src))) {
+      if (m.index > last) frag.appendChild(document.createTextNode(src.slice(last, m.index)));
+      if (m[1]) frag.appendChild(h('strong', { class: 'term', text: m[1] }));
+      else if (global.LKSay) frag.appendChild(LKSay.inline(m[2]));
+      else frag.appendChild(document.createTextNode(m[2]));
+      last = m.index + m[0].length;
+    }
+    if (last < src.length) frag.appendChild(document.createTextNode(src.slice(last)));
     return frag;
   }
 
@@ -172,6 +179,10 @@
   }
 
   function speak(text, rate) {
+    if (global.LKSpeech) {
+      LKSpeech.say(text, { speed: rate && rate < 0.85 ? 'slow' : 'normal' });
+      return LKSpeech.status() !== 'none';
+    }
     if (!canSpeak()) return false;
     try {
       const u = new SpeechSynthesisUtterance(text);

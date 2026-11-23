@@ -97,7 +97,13 @@
   function chip(parent, x, y, label, color, opts) {
     opts = opts || {};
     const w = Math.max(44, Array.from(label).length * 11 + 12);
-    const g = LK.svg('g', { class: 'cn-chip', transform: 'translate(' + x.toFixed(1) + ' ' + y.toFixed(1) + ')' });
+    let cx = x;
+    let cy = y;
+    if (cy - 10 < 6) cy = 16;
+    if (cy + 12 > 258) cy = 246;
+    if (cx - w / 2 < 6) cx = 6 + w / 2;
+    if (cx + w / 2 > 334) cx = 334 - w / 2;
+    const g = LK.svg('g', { class: 'cn-chip', transform: 'translate(' + cx.toFixed(1) + ' ' + cy.toFixed(1) + ')' });
     g.appendChild(LK.svg('rect', {
       x: -w / 2, y: -10, width: w, height: 20, rx: 10,
       fill: opts.pending ? '#F4F0EA' : '#fff', stroke: opts.pending ? '#D9D0C6' : 'transparent', 'stroke-width': 1

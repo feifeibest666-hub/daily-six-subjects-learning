@@ -29,5 +29,13 @@ window.CAST = {
   lazarus: { body: 'coat', hair: 'short', badge: '拉' },
   gross: { body: 'coat', hair: 'bob', badge: '格' },
   ellis: { body: 'coat', hair: 'short', badge: '艾' },
-  yerkes: { body: 'coat', hair: 'bald', badge: '耶' }
+  yerkes: { body: 'coat', hair: 'bald', badge: '耶' },
+  xiaoA: { body: 'modern', hair: 'long', cloth: '#C8664A', bottom: '#3A302A', badge: '小A' },
+  xiaoB: { body: 'modern', hair: 'short', cloth: '#6F9C86', bottom: '#3A302A', badge: '小B' },
+  xiaoE: { body: 'modern', hair: 'short', cloth: '#B8A27A', bottom: '#3A302A', badge: '小E' },
+  xiaoF: { body: 'modern', hair: 'long', cloth: '#8FA7C9', bottom: '#3A302A', badge: '小F' },
+  xiaoG: { body: 'modern', hair: 'short', cloth: '#D9A441', bottom: '#3A302A', badge: '小G' },
+  mia: { body: 'modern', hair: 'long', cloth: '#D9A441', bottom: '#3A302A', badge: 'Mia' },
+  leo: { body: 'modern', hair: 'short', cloth: '#fff', bottom: '#6F9C86', hat: 'chef', badge: 'Leo' },
+  mochi: { body: 'cat', hair: 'bald', cloth: '#9A9A9A', badge: '猫' }
 };

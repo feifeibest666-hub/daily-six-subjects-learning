@@ -85,6 +85,11 @@
       g.appendChild(S('rect', { x: -14, y: -104, width: 28, height: 8, rx: 1, fill: '#2B2622' }));
     } else if (kind === 'rider') {
       g.appendChild(S('path', { d: 'M-14 -100 q14 -12 28 0 v8 h-28 z', fill: '#6E655C', stroke: INK, 'stroke-width': 1.4 }));
+    } else if (kind === 'chef') {
+      g.appendChild(S('path', { d: 'M-16 -96 h32 v8 h-32 z M-10 -96 q10 -16 20 0', fill: '#fff', stroke: INK, 'stroke-width': 1.4 }));
+    } else if (kind === 'tophat') {
+      g.appendChild(S('rect', { x: -10, y: -118, width: 20, height: 18, fill: '#C04A3A', stroke: INK, 'stroke-width': 1.3 }));
+      g.appendChild(S('rect', { x: -16, y: -102, width: 32, height: 5, fill: '#C04A3A', stroke: INK, 'stroke-width': 1.2 }));
     }
   }
 
@@ -123,6 +128,10 @@
     } else if (kind === 'armor') {
       g.appendChild(S('path', { d: 'M-16 -16 q-2 -34 6 -42 h20 q8 8 6 42 q-8 6 -16 4 q-8 2 -16 -4 z', fill: cloth, stroke: INK, 'stroke-width': 2 }));
       g.appendChild(S('path', { d: 'M-10 -40 h20 M-8 -30 h16', stroke: '#D9A441', 'stroke-width': 1.5 }));
+    } else if (kind === 'cat') {
+      g.appendChild(S('ellipse', { cx: 0, cy: -28, rx: 22, ry: 16, fill: cloth || '#9A9A9A', stroke: INK, 'stroke-width': 2 }));
+      g.appendChild(S('circle', { cx: 0, cy: -52, r: 14, fill: cloth || '#9A9A9A', stroke: INK, 'stroke-width': 2 }));
+      g.appendChild(S('path', { d: 'M18 -24 q16 8 8 16', fill: 'none', stroke: '#fff', 'stroke-width': 3 }));
     } else if (kind === 'coat') {
       g.appendChild(S('path', { d: 'M-16 -14 q0 -40 6 -46 h20 q6 6 6 46 q-8 4 -16 2 q-8 2 -16 -2 z', fill: '#F7F4EF', stroke: INK, 'stroke-width': 2 }));
       g.appendChild(S('path', { d: 'M0 -58 v40', stroke: INK, 'stroke-width': 1.3 }));
@@ -153,6 +162,10 @@
     addFace(bob, spec.face || 'calm');
     hair(bob, spec.hair || 'bob');
     if (spec.hat) hat(bob, spec.hat);
+    if (spec.badge && spec.body !== 'coat') {
+      bob.appendChild(S('rect', { x: -16, y: -118, width: 32, height: 12, rx: 3, fill: '#fff', stroke: INK, 'stroke-width': 1 }));
+      bob.appendChild(S('text', { x: 0, y: -109, 'text-anchor': 'middle', 'font-size': 8, 'font-weight': 700, fill: INK }, [spec.badge]));
+    }
     if (spec.glasses) {
       bob.appendChild(S('circle', { cx: -6, cy: -80, r: 4.2, fill: 'none', stroke: INK, 'stroke-width': 1.3 }));
       bob.appendChild(S('circle', { cx: 6, cy: -80, r: 4.2, fill: 'none', stroke: INK, 'stroke-width': 1.3 }));
@@ -276,7 +289,38 @@
         g.appendChild(S('rect', { x: w[0] - 18, y: -16, width: 36, height: 28, rx: 3, fill: w[1], stroke: INK, 'stroke-width': 1.3 }));
         g.appendChild(S('text', { x: w[0], y: 2, 'text-anchor': 'middle', 'font-size': 10, fill: INK }, [w[2]]));
       });
-    }
+    },
+    car: function (g) { g.appendChild(S('path', { d: 'M-22 4 h8 l6 -10 h16 l6 10 h8 v8 h-44 z', fill: '#8FA7C9', stroke: INK, 'stroke-width': 1.3 })); },
+    house: function (g) { g.appendChild(S('path', { d: 'M-16 10 v-12 l16 -12 l16 12 v12 z', fill: '#F4E7D4', stroke: INK, 'stroke-width': 1.3 })); },
+    envelope: function (g) { g.appendChild(S('rect', { x: -18, y: -12, width: 36, height: 24, fill: '#fff', stroke: INK, 'stroke-width': 1.3 })); g.appendChild(S('path', { d: 'M-18 -12 l18 12 l18 -12', fill: 'none', stroke: INK, 'stroke-width': 1.2 })); },
+    snowball: function (g) { g.appendChild(S('circle', { cx: 0, cy: 4, r: 14, fill: '#fff', stroke: INK, 'stroke-width': 1.3 })); g.appendChild(S('circle', { cx: 0, cy: -12, r: 8, fill: '#fff', stroke: INK, 'stroke-width': 1.3 })); },
+    bowl: function (g) { g.appendChild(S('path', { d: 'M-16 -4 q16 16 32 0', fill: '#F4E7D4', stroke: INK, 'stroke-width': 1.3 })); },
+    apple: function (g) { g.appendChild(S('circle', { r: 12, fill: '#C8664A', stroke: INK, 'stroke-width': 1.2 })); },
+    pool: function (g) { g.appendChild(S('rect', { x: -24, y: -8, width: 48, height: 20, rx: 6, fill: '#9FD0D8', stroke: INK, 'stroke-width': 1.3 })); },
+    payslip: function (g) { g.appendChild(S('rect', { x: -16, y: -20, width: 32, height: 40, fill: '#fff', stroke: INK, 'stroke-width': 1.3 })); },
+    priceTag: function (g) { g.appendChild(S('rect', { x: -16, y: -10, width: 32, height: 20, rx: 3, fill: '#F0C36B', stroke: INK, 'stroke-width': 1.2 })); },
+    polaroid: function (g) { g.appendChild(S('rect', { x: -16, y: -20, width: 32, height: 40, fill: '#fff', stroke: INK, 'stroke-width': 1.2 })); g.appendChild(S('rect', { x: -12, y: -16, width: 24, height: 20, fill: '#E7D3B4' })); },
+    filmStrip: function (g) { g.appendChild(S('rect', { x: -22, y: -10, width: 44, height: 20, fill: '#3A302A' })); },
+    fish: function (g) { g.appendChild(S('ellipse', { cx: 0, cy: 0, rx: 16, ry: 8, fill: '#8FA7C9', stroke: INK, 'stroke-width': 1.2 })); },
+    cake: function (g) { g.appendChild(S('rect', { x: -14, y: -6, width: 28, height: 16, fill: '#F3C1C9', stroke: INK, 'stroke-width': 1.2 })); },
+    bus: function (g) { g.appendChild(S('rect', { x: -22, y: -10, width: 44, height: 22, rx: 4, fill: '#D9A441', stroke: INK, 'stroke-width': 1.2 })); },
+    tub: function (g) { g.appendChild(S('path', { d: 'M-20 0 h40 v8 q0 8 -20 8 q-20 0 -20 -8 z', fill: '#EAF4F6', stroke: INK, 'stroke-width': 1.2 })); },
+    bed: function (g) { g.appendChild(S('rect', { x: -22, y: -4, width: 44, height: 14, fill: '#F4E7D4', stroke: INK, 'stroke-width': 1.2 })); },
+    fridge: function (g) { g.appendChild(S('rect', { x: -12, y: -20, width: 24, height: 40, fill: '#EEF3F4', stroke: INK, 'stroke-width': 1.2 })); },
+    piano: function (g) { g.appendChild(S('path', { d: 'M-20 8 h40 v-10 h-16 v-12 h-24 z', fill: '#3A302A' })); },
+    poster: function (g) { g.appendChild(S('rect', { x: -12, y: -16, width: 24, height: 32, fill: '#F8EBDD', stroke: INK, 'stroke-width': 1.2 })); },
+    chair: function (g) { g.appendChild(S('path', { d: 'M-12 10 v-16 h24 v16 M-8 10 v8 M8 10 v8', fill: 'none', stroke: INK, 'stroke-width': 1.4 })); },
+    glasses: function (g) { g.appendChild(S('circle', { cx: -8, cy: 0, r: 6, fill: 'none', stroke: INK, 'stroke-width': 1.3 })); g.appendChild(S('circle', { cx: 8, cy: 0, r: 6, fill: 'none', stroke: INK, 'stroke-width': 1.3 })); },
+    pan: function (g) { g.appendChild(S('ellipse', { cx: -4, cy: 0, rx: 14, ry: 6, fill: '#8A8178', stroke: INK, 'stroke-width': 1.2 })); g.appendChild(S('line', { x1: 10, y1: 0, x2: 22, y2: 0, stroke: INK, 'stroke-width': 2 })); },
+    fridgeMap: function (g) { g.appendChild(S('rect', { x: -10, y: -12, width: 20, height: 24, fill: '#E7F0F2', stroke: INK, 'stroke-width': 1.1 })); },
+    mic: function (g) { g.appendChild(S('rect', { x: -6, y: -16, width: 12, height: 18, rx: 6, fill: '#3A302A' })); },
+    phone: function (g) { g.appendChild(S('rect', { x: -7, y: -14, width: 14, height: 24, rx: 3, fill: '#3A302A' })); },
+    cup: function (g) { g.appendChild(S('path', { d: 'M-8 -8 h16 l-2 16 h-12 z', fill: '#F4E7D4', stroke: INK, 'stroke-width': 1.2 })); },
+    top: function (g) { g.appendChild(S('path', { d: 'M-12 8 l4 -16 h16 l4 16 z', fill: '#C45C7A' })); },
+    skirt: function (g) { g.appendChild(S('path', { d: 'M-8 -8 h16 l6 16 h-28 z', fill: '#3A302A' })); },
+    bag: function (g) { g.appendChild(S('rect', { x: -12, y: -8, width: 24, height: 18, rx: 3, fill: '#C8664A', stroke: INK, 'stroke-width': 1.2 })); },
+    heart: function (g) { g.appendChild(S('path', { d: 'M0 8 C-12 -4 -6 -12 0 -6 C6 -12 12 -4 0 8', fill: '#C45C7A' })); },
+    cat: function (g) { g.appendChild(S('ellipse', { cx: 0, cy: 4, rx: 16, ry: 12, fill: '#9A9A9A', stroke: INK, 'stroke-width': 1.3 })); g.appendChild(S('circle', { cx: 0, cy: -8, r: 8, fill: '#9A9A9A', stroke: INK, 'stroke-width': 1.3 })); }
   };
 
   function bg(g, name, w, h) {
@@ -312,6 +356,8 @@
       g.appendChild(S('path', { d: 'M0 ' + (h - 30) + ' q40 -20 80 0 t80 0 t80 0 v30 h-' + w + ' z', fill: '#F3E0B5' }));
     } else if (name === 'forest') {
       g.appendChild(S('path', { d: 'M30 ' + (h - 20) + ' l20 -40 l20 40 z M70 ' + (h - 20) + ' l24 -50 l24 50 z', fill: '#6F9C86', stroke: INK, 'stroke-width': 1.2 }));
+    } else if (name === 'kitchen' || name === 'bank' || name === 'bath') {
+      g.appendChild(S('rect', { x: 16, y: 40, width: w - 32, height: 16, fill: name === 'bank' ? '#E7D3B4' : '#F4E7D4', stroke: INK, 'stroke-width': 1.2 }));
     }
   }
 
@@ -378,10 +424,10 @@
 
   const faces = ['calm', 'happy', 'wow', 'worry', 'sad', 'angry', 'fear', 'disgust'];
   const poses = ['stand', 'point', 'give', 'take', 'think', 'head', 'cheer', 'shrug', 'run', 'sit', 'shake'];
-  const hats = ['mian', 'crown', 'wusha', 'douli', 'helmet', 'fur', 'scholar', 'rider'];
-  const bodies = ['robe', 'modern', 'coat', 'armor'];
+  const hats = ['mian', 'crown', 'wusha', 'douli', 'helmet', 'fur', 'scholar', 'rider', 'chef', 'tophat'];
+  const bodies = ['robe', 'modern', 'coat', 'armor', 'cat'];
   const hairs = ['bob', 'short', 'bun', 'long', 'bald'];
-  const bgs = ['palace', 'road', 'wall', 'river', 'mountain', 'sea', 'exam', 'room', 'street', 'lab', 'office', 'shop', 'trainCar', 'stage', 'plain', 'desert', 'forest'];
+  const bgs = ['palace', 'road', 'wall', 'river', 'mountain', 'sea', 'exam', 'room', 'street', 'lab', 'office', 'shop', 'trainCar', 'stage', 'plain', 'desert', 'forest', 'kitchen', 'bank', 'bath'];
 
   global.LKArt = {
     person: person,

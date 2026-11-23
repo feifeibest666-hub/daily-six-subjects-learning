@@ -16,7 +16,37 @@ window.DAYS = [
             "why": "阳光看着是白的，里面其实混着红、橙、黄、绿、蓝、紫各种颜色的光，彩虹就是它被拆开的样子。物体吸收一部分光、反射一部分，反射进眼睛的那部分决定它是什么颜色。反射的光能在好几个方面不同，所以要分开说。",
             "takeaway": "颜色是反射进眼睛的光；一个名字说不全它，要拆开看。",
             "example": "只说\"一个 do\"，你还听不出它是什么声音：在高音区还是低音区？轻轻弹还是重重砸？颜色也一样，一个名字只说了一部分。",
-            "exLabel": "打个比方"
+            "exLabel": "打个比方",
+            "visual": {
+              "type": "knobs",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "颜色是反射进眼睛的光；一个名字说不全它，要拆开看",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "颜色是反射进眼睛的光；一个名字说不全它，要拆开看",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "颜色是反射进眼睛的光；一个名字说不全它，要拆开看。",
+                  "para": "takeaway"
+                }
+              ]
+            }
           },
           {
             "title": "色相：它是哪一种颜色",
@@ -32,6 +62,36 @@ window.DAYS = [
               ],
               "answer": 0,
               "why": "两者反射得最多的都是红光，色相几乎一样，所以「很大，一个偏红一个偏蓝」不对。它们的差别在另外两个旋钮上。"
+            },
+            "visual": {
+              "type": "knobs",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "色相 = 颜色的名字，由反射最多的那种光决定",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "色相 = 颜色的名字，由反射最多的那种光决定",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "色相 = 颜色的名字，由反射最多的那种光决定。",
+                  "para": "takeaway"
+                }
+              ]
             }
           },
           {
@@ -48,6 +108,36 @@ window.DAYS = [
               ],
               "answer": 0,
               "why": "白色几乎把光全反射回来，所以最亮；「黑色」几乎把光全吸收，所以最暗。"
+            },
+            "visual": {
+              "type": "knobs",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "明度 = 反射光的多少：加白变亮，加黑变暗",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "明度 = 反射光的多少：加白变亮，加黑变暗",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "明度 = 反射光的多少：加白变亮，加黑变暗。",
+                  "para": "takeaway"
+                }
+              ]
             }
           },
           {
@@ -64,6 +154,36 @@ window.DAYS = [
               ],
               "answer": 0,
               "why": "正红几乎全是本色，纯度高；「浅灰」几乎没有本色，纯度接近零。"
+            },
+            "visual": {
+              "type": "knobs",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "纯度 = 本色占多少：掺灰越多，越浊越安静",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "纯度 = 本色占多少：掺灰越多，越浊越安静",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "纯度 = 本色占多少：掺灰越多，越浊越安静。",
+                  "para": "takeaway"
+                }
+              ]
             }
           },
           {
@@ -79,14 +199,33 @@ window.DAYS = [
               "所以樱花粉温柔，玫红张扬。"
             ],
             "visual": {
-              "type": "swatches",
-              "colors": [
-                "#F7D6E0",
-                "#D6336C"
-              ],
-              "labels": [
-                "樱花粉",
-                "玫红"
+              "type": "knobs",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "描述颜色别只说\"粉\"，要说\"高明度、低纯度的粉\"",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "描述颜色别只说\"粉\"，要说\"高明度、低纯度的粉\"",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "描述颜色别只说\"粉\"，要说\"高明度、低纯度的粉\"。",
+                  "para": "takeaway"
+                }
               ]
             }
           }
@@ -151,7 +290,59 @@ window.DAYS = [
             "why": "黑白照片只记录每个地方有多亮，色相和纯度都被丢掉了，所以留下的是明度。下一关会用到这个方法。",
             "ref": 2
           }
-        ]
+        ],
+        "hookComic": {
+          "panels": [
+            {
+              "bg": "room",
+              "cast": [
+                {
+                  "who": "xiaoman",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "talk"
+                }
+              ],
+              "cap": "同样叫“粉色”，樱花粉温柔，"
+            },
+            {
+              "bg": "street",
+              "cast": [
+                {
+                  "who": "xiaoyin",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "talk"
+                }
+              ],
+              "cap": "差别到底在哪"
+            },
+            {
+              "bg": "shop",
+              "cast": [
+                {
+                  "who": "xiaoman",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "talk"
+                }
+              ],
+              "cap": "差别到底在哪"
+            },
+            {
+              "bg": "plain",
+              "cast": [
+                {
+                  "who": "xiaoyin",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "wow"
+                }
+              ],
+              "cap": "差别到底在哪"
+            }
+          ]
+        }
       },
       "history": {
         "id": "d01-history",
@@ -165,7 +356,37 @@ window.DAYS = [
             "why": "大脑记东西靠\"连接\"。一个新名字，如果能挂到一个已知的位置上，知道它在谁后面、为什么出现，就很难丢；如果只是孤零零一个词，就会和长得像的词混在一起。\"南北朝\"和\"五代十国\"都是\"很多个小朝代挤在一起\"，不知道它们各在哪儿，当然分不清。",
             "takeaway": "历史记混，缺的是骨架，不是记性。先搭架子，再挂故事。",
             "example": "学一首交响曲，你会先知道它有几个乐章、每个乐章是快是慢、什么调，再去记旋律。先有结构，细节才有地方放。直接背几百个音符，谁都记不住。",
-            "exLabel": "打个比方"
+            "exLabel": "打个比方",
+            "visual": {
+              "type": "tl",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "历史记混，缺的是骨架，不是记性",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "先搭架子，再挂故事",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "历史记混，缺的是骨架，不是记性。先搭架子，再挂故事。",
+                  "para": "takeaway"
+                }
+              ]
+            }
           },
           {
             "title": "骨架第一层：朝代的先后",
@@ -174,19 +395,33 @@ window.DAYS = [
             "takeaway": "骨架第一层是朝代顺序；后一个朝代总在回应前一个留下的问题。",
             "example": "朝代歌把顺序压成六句：夏商与西周，东周分两段；春秋和战国，一统秦两汉；三分魏蜀吴，二晋前后延；南北朝并立，隋唐五代传；宋元明清后，皇朝至此完。带着节奏唱，比一个个背轻松得多。",
             "visual": {
-              "type": "flow",
-              "nodes": [
-                "夏",
-                "商",
-                "周",
-                "秦",
-                "汉",
-                "隋",
-                "唐",
-                "宋",
-                "元",
-                "明",
-                "清"
+              "type": "tl",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "骨架第一层是朝代顺序；后一个朝代总在回应前一个留下的问题",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "骨架第一层是朝代顺序；后一个朝代总在回应前一个留下的问题",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "骨架第一层是朝代顺序；后一个朝代总在回应前一个留下的问题。",
+                  "para": "takeaway"
+                }
               ]
             },
             "check": {
@@ -206,14 +441,33 @@ window.DAYS = [
             "takeaway": "中国史的主节奏：统一 → 分裂 → 再统一，反复出现。",
             "example": "秦汉统一 → 三国两晋南北朝分裂 → 隋唐统一 → 五代十国分裂 → 宋和辽、金、西夏并立 → 元统一 → 明、清统一。像一首曲子的主歌和副歌，轮流出现。",
             "visual": {
-              "type": "flow",
-              "nodes": [
-                "秦汉 统一",
-                "三国两晋南北朝 分裂",
-                "隋唐 统一",
-                "五代十国 分裂",
-                "宋辽金夏 并立",
-                "元明清 统一"
+              "type": "cycle",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "中国史的主节奏：统一 → 分裂 → 再统一，反复出现",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "中国史的主节奏：统一 → 分裂 → 再统一，反复出现",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "中国史的主节奏：统一 → 分裂 → 再统一，反复出现。",
+                  "para": "takeaway"
+                }
               ]
             }
           },
@@ -228,7 +482,37 @@ window.DAYS = [
               "朝廷正在内斗，派不出兵，也发不出军饷。",
               "你最安全的做法：先守住自己的地盘，命令听一半、留一半。",
               "每个地方长官都这么想，天下就裂成了好几块。"
-            ]
+            ],
+            "visual": {
+              "type": "tug",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "地方有兵有粮、中央变弱，天下就会裂开",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "地方有兵有粮、中央变弱，天下就会裂开",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "地方有兵有粮、中央变弱，天下就会裂开。",
+                  "para": "takeaway"
+                }
+              ]
+            }
           },
           {
             "title": "为什么又会统一：统一的好处太大",
@@ -245,6 +529,36 @@ window.DAYS = [
               ],
               "answer": 0,
               "why": "统一的好处是少打仗、能全国一起出力，比如治河、修路。统一的王朝照样收税，所以「统一后就不用交税了」不对。"
+            },
+            "visual": {
+              "type": "chain",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "统一省掉打仗的消耗，又能办大事，所以分裂之后总有人重新统一",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "统一省掉打仗的消耗，又能办大事，所以分裂之后总有人重新统一",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "统一省掉打仗的消耗，又能办大事，所以分裂之后总有人重新统一。",
+                  "para": "takeaway"
+                }
+              ]
             }
           },
           {
@@ -253,7 +567,37 @@ window.DAYS = [
             "why": "现在通用的公元纪年，以传说中耶稣出生的那一年为公元 1 年，往后正着数。那之前的年份也要有名字，就从这里往回倒着数：前 1 年、前 2 年……一直数到前几千年。所以前 221 年比前 207 年早，因为它离起点更远。",
             "takeaway": "公元前倒着数，数字越大越早；公元后正着数，数字越大越晚。",
             "example": "像温度计。零上往上数，零下往下数。零下 10 度比零下 2 度更冷，就像前 221 年比前 207 年更早。公元元年附近，就是温度计上的\"0\"。",
-            "exLabel": "打个比方"
+            "exLabel": "打个比方",
+            "visual": {
+              "type": "yearline",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "公元前倒着数，数字越大越早；公元后正着数，数字越大越晚",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "公元前倒着数，数字越大越早；公元后正着数，数字越大越晚",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "公元前倒着数，数字越大越早；公元后正着数，数字越大越晚。",
+                  "para": "takeaway"
+                }
+              ]
+            }
           },
           {
             "title": "跨过公元元年，年数要相加",
@@ -276,6 +620,36 @@ window.DAYS = [
               ],
               "answer": 0,
               "why": "一个在公元前、一个在公元后，要相加：100 + 100 = 200。「约 0 年」是把两个数直接相减了。"
+            },
+            "visual": {
+              "type": "yearline",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "同一边就相减，跨过公元元年就相加",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "同一边就相减，跨过公元元年就相加",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "同一边就相减，跨过公元元年就相加。",
+                  "para": "takeaway"
+                }
+              ]
             }
           },
           {
@@ -283,7 +657,37 @@ window.DAYS = [
             "idea": "现在你有了三样工具：朝代顺序、统一—分裂的节奏、算年数的方法。接下来两周，从夏开始，一路往清填。",
             "why": "每填一个朝代，都问同一组问题：它遇到了什么难题？怎么应对？为什么有效？后来为什么失效？又怎样引出了下一个？五个问题连起来，朝代就不再是一串名字，而是一条因果链。",
             "takeaway": "带着\"难题—办法—后果\"去填骨架。第一题：地太大，怎么管？",
-            "example": "第一个难题，就是卡 4 那台\"分裂发动机\"最早的样子。三千年前，周的地盘突然变得很大，路却只能靠马车和步行，消息走一趟要很多天。国王要怎么管？"
+            "example": "第一个难题，就是卡 4 那台\"分裂发动机\"最早的样子。三千年前，周的地盘突然变得很大，路却只能靠马车和步行，消息走一趟要很多天。国王要怎么管？",
+            "visual": {
+              "type": "tl",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "带着\"难题—办法—后果\"去填骨架",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "第一题：地太大，怎么管",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "带着\"难题—办法—后果\"去填骨架。第一题：地太大，怎么管？",
+                  "para": "takeaway"
+                }
+              ]
+            }
           }
         ],
         "interaction": {
@@ -331,7 +735,59 @@ window.DAYS = [
             "why": "开始在公元前、结束在公元后，要把两段加起来：202 + 220 ≈ 420。「约 18 年」是把两个数相减了，那是两个都在同一边时才用的算法。",
             "ref": 6
           }
-        ]
+        ],
+        "hookComic": {
+          "panels": [
+            {
+              "bg": "room",
+              "cast": [
+                {
+                  "who": "xiaoman",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "talk"
+                }
+              ],
+              "cap": "五代十国、南北朝、两晋……总"
+            },
+            {
+              "bg": "street",
+              "cast": [
+                {
+                  "who": "xiaoyin",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "talk"
+                }
+              ],
+              "cap": "问题可能不在记性，而在缺一副"
+            },
+            {
+              "bg": "shop",
+              "cast": [
+                {
+                  "who": "xiaoman",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "talk"
+                }
+              ],
+              "cap": "问题可能不在记性，而在缺一副"
+            },
+            {
+              "bg": "plain",
+              "cast": [
+                {
+                  "who": "xiaoyin",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "wow"
+                }
+              ],
+              "cap": "问题可能不在记性，而在缺一副"
+            }
+          ]
+        }
       },
       "geo": {
         "id": "d01-geo",
@@ -488,51 +944,51 @@ window.DAYS = [
             "example": "乐谱就是一张网。横着数是第几小节，竖着看是在哪条线上（什么音高）。\"第 3 小节、第二线\"两个信息合起来，才定下一个音。电影票上的\"7 排 12 号\"也是同一回事。",
             "exLabel": "打个比方",
             "visual": {
-                "type": "grid",
-                "base": {
-                  "cols": 6,
-                  "rows": 4
-                },
-                "frames": [
-                  {
-                    "cap": "先约好格子，再报两个数",
-                    "para": "idea",
-                    "set": {
-                      "paper": 1
-                    }
-                  },
-                  {
-                    "cap": "横竖两条线，才定得住一个点",
-                    "para": "why",
-                    "set": {
-                      "grid": 1,
-                      "labels": 1,
-                      "xLabel": "第几列",
-                      "yLabel": "第几行",
-                      "cols": 6,
-                      "rows": 4
-                    }
-                  },
-                  {
-                    "cap": "两条虚线交在一点，读出两个数",
-                    "para": "example",
-                    "set": {
-                      "dot": [
-                        4,
-                        2
-                      ],
-                      "dotLabel": "(4, 2)"
-                    }
-                  },
-                  {
-                    "cap": "纸上的格子，包到球上就是经纬网",
-                    "para": "takeaway",
-                    "set": {
-                      "globe": 1
-                    }
-                  }
-                ]
+              "type": "grid",
+              "base": {
+                "cols": 6,
+                "rows": 4
               },
+              "frames": [
+                {
+                  "cap": "先约好格子，再报两个数",
+                  "para": "idea",
+                  "set": {
+                    "paper": 1
+                  }
+                },
+                {
+                  "cap": "横竖两条线，才定得住一个点",
+                  "para": "why",
+                  "set": {
+                    "grid": 1,
+                    "labels": 1,
+                    "xLabel": "第几列",
+                    "yLabel": "第几行",
+                    "cols": 6,
+                    "rows": 4
+                  }
+                },
+                {
+                  "cap": "两条虚线交在一点，读出两个数",
+                  "para": "example",
+                  "set": {
+                    "dot": [
+                      4,
+                      2
+                    ],
+                    "dotLabel": "(4, 2)"
+                  }
+                },
+                {
+                  "cap": "纸上的格子，包到球上就是经纬网",
+                  "para": "takeaway",
+                  "set": {
+                    "globe": 1
+                  }
+                }
+              ]
+            },
             "check": {
               "q": "电影票上只写了\"7 排\"，没写几号。能直接找到你的座位吗？",
               "options": [
@@ -551,49 +1007,49 @@ window.DAYS = [
             "example": "拿一个橙子转一转。橙子顶上的蒂和底部是两个\"极\"，正中间最鼓的那一圈就是赤道。",
             "exLabel": "打个比方",
             "visual": {
-                "type": "globe3d",
-                "stage": "d01globe",
-                "base": {
-                  "centerLon": 105,
-                  "V": 12
-                },
-                "frames": [
-                  {
-                    "cap": "地球没有边，但有一条赤道",
-                    "para": "idea",
-                    "set": {
-                      "equator": 0,
-                      "centerLon": 105
-                    },
-                    "play": "spin",
-                    "dur": 1800
-                  },
-                  {
-                    "cap": "赤道在两极正中间，像一条腰带",
-                    "para": "why",
-                    "set": {
-                      "equator": 1,
-                      "centerLon": 105
-                    }
-                  },
-                  {
-                    "cap": "赤道把地球分成南北两半球",
-                    "para": "example",
-                    "set": {
-                      "hemis": 1,
-                      "equator": 1
-                    }
-                  },
-                  {
-                    "cap": "赤道离两极一样远，是天然起点",
-                    "para": "takeaway",
-                    "set": {
-                      "hemis": 1,
-                      "equator": 1
-                    }
-                  }
-                ]
+              "type": "globe3d",
+              "stage": "d01globe",
+              "base": {
+                "centerLon": 105,
+                "V": 12
               },
+              "frames": [
+                {
+                  "cap": "地球没有边，但有一条赤道",
+                  "para": "idea",
+                  "set": {
+                    "equator": 0,
+                    "centerLon": 105
+                  },
+                  "play": "spin",
+                  "dur": 1800
+                },
+                {
+                  "cap": "赤道在两极正中间，像一条腰带",
+                  "para": "why",
+                  "set": {
+                    "equator": 1,
+                    "centerLon": 105
+                  }
+                },
+                {
+                  "cap": "赤道把地球分成南北两半球",
+                  "para": "example",
+                  "set": {
+                    "hemis": 1,
+                    "equator": 1
+                  }
+                },
+                {
+                  "cap": "赤道离两极一样远，是天然起点",
+                  "para": "takeaway",
+                  "set": {
+                    "hemis": 1,
+                    "equator": 1
+                  }
+                }
+              ]
+            },
             "check": {
               "q": "赤道把地球分成哪两半？",
               "options": [
@@ -619,73 +1075,73 @@ window.DAYS = [
             ],
             "formula": "360° ÷ 4 = 90°",
             "visual": {
-                "type": "globe3d",
-                "stage": "d01globe",
-                "base": {
-                  "V": 12,
-                  "city": 1,
-                  "cityLon": 116.4,
-                  "cityLat": 40,
-                  "cityName": "北京"
-                },
-                "frames": [
-                  {
-                    "cap": "纬度是离赤道转过的角度",
-                    "para": "idea",
-                    "set": {
-                      "equator": 1,
-                      "centerLon": 105
-                    }
-                  },
-                  {
-                    "cap": "把要量的地方转到侧面，角度才看得清",
-                    "para": "why",
-                    "set": {
-                      "turn": 1,
-                      "equator": 1
-                    }
-                  },
-                  {
-                    "cap": "从赤道往北转过的角，就是北纬",
-                    "para": "example",
-                    "set": {
-                      "turn": 1,
-                      "angle": 40,
-                      "equator": 1
-                    },
-                    "scrub": {
-                      "key": "angle",
-                      "from": 0,
-                      "to": 90,
-                      "unit": "°",
-                      "ticks": [
-                        0,
-                        20,
-                        40,
-                        60,
-                        90
-                      ],
-                      "tickLabels": [
-                        "0°",
-                        "20°",
-                        "40°",
-                        "60°",
-                        "90°"
-                      ]
-                    }
-                  },
-                  {
-                    "cap": "同一个角度连成一圈，就是这条纬线",
-                    "para": "takeaway",
-                    "set": {
-                      "turn": 1,
-                      "angle": 40,
-                      "parallel": 40,
-                      "equator": 1
-                    }
-                  }
-                ]
+              "type": "globe3d",
+              "stage": "d01globe",
+              "base": {
+                "V": 12,
+                "city": 1,
+                "cityLon": 116.4,
+                "cityLat": 40,
+                "cityName": "北京"
               },
+              "frames": [
+                {
+                  "cap": "纬度是离赤道转过的角度",
+                  "para": "idea",
+                  "set": {
+                    "equator": 1,
+                    "centerLon": 105
+                  }
+                },
+                {
+                  "cap": "把要量的地方转到侧面，角度才看得清",
+                  "para": "why",
+                  "set": {
+                    "turn": 1,
+                    "equator": 1
+                  }
+                },
+                {
+                  "cap": "从赤道往北转过的角，就是北纬",
+                  "para": "example",
+                  "set": {
+                    "turn": 1,
+                    "angle": 40,
+                    "equator": 1
+                  },
+                  "scrub": {
+                    "key": "angle",
+                    "from": 0,
+                    "to": 90,
+                    "unit": "°",
+                    "ticks": [
+                      0,
+                      20,
+                      40,
+                      60,
+                      90
+                    ],
+                    "tickLabels": [
+                      "0°",
+                      "20°",
+                      "40°",
+                      "60°",
+                      "90°"
+                    ]
+                  }
+                },
+                {
+                  "cap": "同一个角度连成一圈，就是这条纬线",
+                  "para": "takeaway",
+                  "set": {
+                    "turn": 1,
+                    "angle": 40,
+                    "parallel": 40,
+                    "equator": 1
+                  }
+                }
+              ]
+            },
             "check": {
               "q": "北极点的纬度是多少？",
               "options": [
@@ -712,83 +1168,83 @@ window.DAYS = [
               "why": "在赤道以南就写南纬。「北纬 34°」是赤道北边的一圈，比如中国的西安附近。"
             },
             "visual": {
-                "type": "globe3d",
-                "stage": "d01globe",
-                "base": {
-                  "V": 12,
-                  "turn": 1,
-                  "cityLon": 116.4
-                },
-                "frames": [
-                  {
-                    "cap": "赤道以北写北纬，以南写南纬",
-                    "para": "idea",
-                    "set": {
-                      "parallel": 30,
-                      "angle": 30,
-                      "latTag": "北纬 30°",
-                      "equator": 1
-                    }
-                  },
-                  {
-                    "cap": "数字越大，离赤道越远",
-                    "para": "why",
-                    "set": {
-                      "parallel": 60,
-                      "angle": 60,
-                      "latTag": "北纬 60°"
-                    }
-                  },
-                  {
-                    "cap": "转到 90°，纬线收到极点",
-                    "para": "example",
-                    "set": {
-                      "parallel": 90,
-                      "angle": 90,
-                      "latTag": "北纬 90°"
-                    }
-                  },
-                  {
-                    "cap": "南边的角度，写成南纬",
-                    "para": null,
-                    "set": {
-                      "parallel": -30,
-                      "angle": -30,
-                      "latTag": "南纬 30°"
-                    },
-                    "scrub": {
-                      "key": "angle",
-                      "from": -90,
-                      "to": 90,
-                      "unit": "°",
-                      "ticks": [
-                        -30,
-                        0,
-                        30,
-                        60,
-                        90
-                      ],
-                      "tickLabels": [
-                        "南30",
-                        "0",
-                        "北30",
-                        "北60",
-                        "北90"
-                      ]
-                    }
-                  },
-                  {
-                    "cap": "数字越小，越靠近赤道",
-                    "para": "takeaway",
-                    "set": {
-                      "parallel": 40,
-                      "angle": 40,
-                      "latTag": "北纬 40°",
-                      "equator": 1
-                    }
+              "type": "globe3d",
+              "stage": "d01globe",
+              "base": {
+                "V": 12,
+                "turn": 1,
+                "cityLon": 116.4
+              },
+              "frames": [
+                {
+                  "cap": "赤道以北写北纬，以南写南纬",
+                  "para": "idea",
+                  "set": {
+                    "parallel": 30,
+                    "angle": 30,
+                    "latTag": "北纬 30°",
+                    "equator": 1
                   }
-                ]
-              }
+                },
+                {
+                  "cap": "数字越大，离赤道越远",
+                  "para": "why",
+                  "set": {
+                    "parallel": 60,
+                    "angle": 60,
+                    "latTag": "北纬 60°"
+                  }
+                },
+                {
+                  "cap": "转到 90°，纬线收到极点",
+                  "para": "example",
+                  "set": {
+                    "parallel": 90,
+                    "angle": 90,
+                    "latTag": "北纬 90°"
+                  }
+                },
+                {
+                  "cap": "南边的角度，写成南纬",
+                  "para": null,
+                  "set": {
+                    "parallel": -30,
+                    "angle": -30,
+                    "latTag": "南纬 30°"
+                  },
+                  "scrub": {
+                    "key": "angle",
+                    "from": -90,
+                    "to": 90,
+                    "unit": "°",
+                    "ticks": [
+                      -30,
+                      0,
+                      30,
+                      60,
+                      90
+                    ],
+                    "tickLabels": [
+                      "南30",
+                      "0",
+                      "北30",
+                      "北60",
+                      "北90"
+                    ]
+                  }
+                },
+                {
+                  "cap": "数字越小，越靠近赤道",
+                  "para": "takeaway",
+                  "set": {
+                    "parallel": 40,
+                    "angle": 40,
+                    "latTag": "北纬 40°",
+                    "equator": 1
+                  }
+                }
+              ]
+            }
           },
           {
             "title": "经线：东西方向为什么要\"约定\"起点",
@@ -802,45 +1258,45 @@ window.DAYS = [
               "所以\"为什么是格林尼治\"的答案是历史和习惯，不是地理规律。"
             ],
             "visual": {
-                "type": "globe3d",
-                "stage": "d01globe",
-                "base": {
-                  "V": 12,
-                  "centerLon": 20
-                },
-                "frames": [
-                  {
-                    "cap": "东西方向没有天然的第一条线",
-                    "para": "idea",
-                    "set": {
-                      "centerLon": 20
-                    }
-                  },
-                  {
-                    "cap": "0° 经线是约定在格林尼治的",
-                    "para": "why",
-                    "set": {
-                      "greenwich": 1,
-                      "centerLon": 15
-                    }
-                  },
-                  {
-                    "cap": "当时多数航海图从它算起",
-                    "para": "example",
-                    "set": {
-                      "greenwich": 1
-                    }
-                  },
-                  {
-                    "cap": "这条金线从北极连到南极",
-                    "para": "takeaway",
-                    "set": {
-                      "greenwich": 1,
-                      "centerLon": 15
-                    }
-                  }
-                ]
+              "type": "globe3d",
+              "stage": "d01globe",
+              "base": {
+                "V": 12,
+                "centerLon": 20
               },
+              "frames": [
+                {
+                  "cap": "东西方向没有天然的第一条线",
+                  "para": "idea",
+                  "set": {
+                    "centerLon": 20
+                  }
+                },
+                {
+                  "cap": "0° 经线是约定在格林尼治的",
+                  "para": "why",
+                  "set": {
+                    "greenwich": 1,
+                    "centerLon": 15
+                  }
+                },
+                {
+                  "cap": "当时多数航海图从它算起",
+                  "para": "example",
+                  "set": {
+                    "greenwich": 1
+                  }
+                },
+                {
+                  "cap": "这条金线从北极连到南极",
+                  "para": "takeaway",
+                  "set": {
+                    "greenwich": 1,
+                    "centerLon": 15
+                  }
+                }
+              ]
+            },
             "check": {
               "q": "0° 经线为什么定在格林尼治？",
               "options": [
@@ -865,52 +1321,52 @@ window.DAYS = [
             ],
             "formula": "360° ÷ 2 = 180°",
             "visual": {
-                "type": "globe3d",
-                "stage": "d01globe",
-                "base": {
-                  "V": 90
-                },
-                "frames": [
-                  {
-                    "cap": "从 0° 经线往东或往西转",
-                    "para": "idea",
-                    "set": {
-                      "polar": 1,
-                      "east": 0,
-                      "west": 0
-                    }
-                  },
-                  {
-                    "cap": "往东转半圈，到 180°",
-                    "para": "why",
-                    "set": {
-                      "polar": 1,
-                      "east": 180
-                    },
-                    "play": "eastSweep",
-                    "dur": 900
-                  },
-                  {
-                    "cap": "往西也转半圈，在背面碰头",
-                    "para": "example",
-                    "set": {
-                      "polar": 1,
-                      "west": 180
-                    },
-                    "play": "westSweep",
-                    "dur": 900
-                  },
-                  {
-                    "cap": "东经、西经各半圈，在 180° 相遇",
-                    "para": "takeaway",
-                    "set": {
-                      "polar": 1,
-                      "east": 180,
-                      "west": 180
-                    }
-                  }
-                ]
+              "type": "globe3d",
+              "stage": "d01globe",
+              "base": {
+                "V": 90
               },
+              "frames": [
+                {
+                  "cap": "从 0° 经线往东或往西转",
+                  "para": "idea",
+                  "set": {
+                    "polar": 1,
+                    "east": 0,
+                    "west": 0
+                  }
+                },
+                {
+                  "cap": "往东转半圈，到 180°",
+                  "para": "why",
+                  "set": {
+                    "polar": 1,
+                    "east": 180
+                  },
+                  "play": "eastSweep",
+                  "dur": 900
+                },
+                {
+                  "cap": "往西也转半圈，在背面碰头",
+                  "para": "example",
+                  "set": {
+                    "polar": 1,
+                    "west": 180
+                  },
+                  "play": "westSweep",
+                  "dur": 900
+                },
+                {
+                  "cap": "东经、西经各半圈，在 180° 相遇",
+                  "para": "takeaway",
+                  "set": {
+                    "polar": 1,
+                    "east": 180,
+                    "west": 180
+                  }
+                }
+              ]
+            },
             "check": {
               "q": "东经最大是多少度？",
               "options": [
@@ -928,45 +1384,45 @@ window.DAYS = [
             "takeaway": "读位置：先纬度（南北），再经度（东西）；中国全在北纬、东经。",
             "example": "把\"北纬 40°，东经 116°\"分三步读。\"北\"：在赤道以北。\"40°\"：从赤道往北转了 40°，是海口（20°）的两倍远。\"东经 116°\"：从格林尼治往东转了 116°，大约三分之一圈，所以在亚洲。中国大致在北纬 4°～53°、东经 73°～135° 之间。",
             "visual": {
-                "type": "globe3d",
-                "stage": "d01globe",
-                "base": {
-                  "V": 12,
-                  "centerLon": 105
-                },
-                "frames": [
-                  {
-                    "cap": "先纬度，再经度，两个数定一个点",
-                    "para": "idea",
-                    "set": {
-                      "city": 1,
-                      "cityLon": 116.4,
-                      "cityLat": 40,
-                      "cityName": "北京",
-                      "equator": 1,
-                      "parallel": 40,
-                      "centerLon": 105
-                    }
-                  },
-                  {
-                    "cap": "放大看中国这一块",
-                    "para": "why",
-                    "set": {
-                      "gridFade": 0.45,
-                      "centerLon": 105
-                    }
-                  },
-                  {
-                    "cap": "纬线和经线只交在一个点上",
-                    "para": "takeaway",
-                    "set": {
-                      "gridFade": 0.75,
-                      "city": 1,
-                      "parallel": 40
-                    }
-                  }
-                ]
+              "type": "globe3d",
+              "stage": "d01globe",
+              "base": {
+                "V": 12,
+                "centerLon": 105
               },
+              "frames": [
+                {
+                  "cap": "先纬度，再经度，两个数定一个点",
+                  "para": "idea",
+                  "set": {
+                    "city": 1,
+                    "cityLon": 116.4,
+                    "cityLat": 40,
+                    "cityName": "北京",
+                    "equator": 1,
+                    "parallel": 40,
+                    "centerLon": 105
+                  }
+                },
+                {
+                  "cap": "放大看中国这一块",
+                  "para": "why",
+                  "set": {
+                    "gridFade": 0.45,
+                    "centerLon": 105
+                  }
+                },
+                {
+                  "cap": "纬线和经线只交在一个点上",
+                  "para": "takeaway",
+                  "set": {
+                    "gridFade": 0.75,
+                    "city": 1,
+                    "parallel": 40
+                  }
+                }
+              ]
+            },
             "check": {
               "q": "中国的城市，位置一般写成？",
               "options": [
@@ -1045,15 +1501,186 @@ window.DAYS = [
       "finance": {
         "id": "d01-finance",
         "title": "钱包往哪边变",
-        "minutes": 4,
-        "hook": "月入两万的人，可能比月入六千的人更“穷”。怎么会？",
+        "minutes": 7,
+        "hook": "月入两万的人，可能比月入六千的人更\"穷\"。怎么会？",
+        "hookComic": {
+          "panels": [
+            {
+              "bg": "room",
+              "cast": [
+                {
+                  "who": "xiaoman",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "talk"
+                }
+              ],
+              "cap": "月入两万的人，可能比月入六千"
+            },
+            {
+              "bg": "street",
+              "cast": [
+                {
+                  "who": "xiaoyin",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "talk"
+                }
+              ],
+              "cap": "怎么会"
+            },
+            {
+              "bg": "shop",
+              "cast": [
+                {
+                  "who": "xiaoman",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "talk"
+                }
+              ],
+              "cap": "怎么会"
+            },
+            {
+              "bg": "plain",
+              "cast": [
+                {
+                  "who": "xiaoyin",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "wow"
+                }
+              ],
+              "cap": "怎么会"
+            }
+          ]
+        },
         "steps": [
           {
-            "text": "钱的流动只有两个方向：流进来（收入：工资、稿费、接广告）和流出去（支出：房租、吃饭、买衣服）。"
+            "title": "赚得多，钱就多吗？",
+            "idea": "钱多不多，不只看赚多少，还要看花多少。",
+            "visual": {
+              "type": "comic",
+              "panels": [
+                {
+                  "bg": "bank",
+                  "cast": [
+                    {
+                      "who": "xiaoman",
+                      "x": 0.5,
+                      "y": 0.72,
+                      "face": "talk"
+                    }
+                  ],
+                  "cap": "小 A 月入两万"
+                },
+                {
+                  "bg": "kitchen",
+                  "cast": [
+                    {
+                      "who": "xiaoman",
+                      "x": 0.5,
+                      "y": 0.72,
+                      "face": "talk"
+                    }
+                  ],
+                  "cap": "可她花了两万一"
+                },
+                {
+                  "bg": "room",
+                  "cast": [
+                    {
+                      "who": "xiaoman",
+                      "x": 0.5,
+                      "y": 0.72,
+                      "face": "talk"
+                    }
+                  ],
+                  "cap": "小 B 月入六千，还剩钱"
+                }
+              ]
+            },
+            "example": "钱包像一个水池。进水管再粗，出水管更粗，池子也会空。",
+            "takeaway": "只看赚多少，看不出钱包会不会变空。"
           },
           {
-            "text": "一个月结束，剩下的就是：流进来的减去流出去的。",
+            "title": "钱只有两个方向",
+            "idea": "流进钱包的钱，叫收入：工资、稿费、接广告。流出去的钱，叫支出：房租、奶茶、买衣服。",
+            "visual": {
+              "type": "chain",
+              "base": {
+                "nodes": [
+                  "收入：流进来",
+                  "钱包",
+                  "支出：流出去"
+                ]
+              },
+              "frames": [
+                {
+                  "set": {
+                    "play": 0,
+                    "step": 0
+                  },
+                  "cap": "先看骨架",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "play": 1,
+                    "step": 2
+                  },
+                  "cap": "看完整的图",
+                  "para": "takeaway"
+                }
+              ]
+            },
+            "why": "钱只会进来或出去，没有第三种方向。所以只要看住这两样，就能知道钱包在变大还是变小。",
+            "takeaway": "钱只有两个方向：收入流进来，支出流出去。"
+          },
+          {
+            "title": "月底剩下多少：结余",
+            "idea": "一个月结束，进来的减去出去的。剩下的就叫**结余**，也就是\"这个月剩了多少\"。",
+            "visual": {
+              "type": "columns",
+              "base": {
+                "items": [
+                  {
+                    "label": "收入",
+                    "value": 5000
+                  },
+                  {
+                    "label": "支出",
+                    "value": -3000
+                  },
+                  {
+                    "label": "结余",
+                    "value": 2000
+                  }
+                ],
+                "unit": "元"
+              },
+              "frames": [
+                {
+                  "set": {
+                    "play": 0,
+                    "step": 0
+                  },
+                  "cap": "先看骨架",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "play": 1,
+                    "step": 2
+                  },
+                  "cap": "看完整的图",
+                  "para": "takeaway"
+                }
+              ]
+            },
+            "example": "这个月工资 5000，房租、吃饭、奶茶一共花 3000。5000 − 3000 = 2000，结余 2000 元。",
             "formula": "结余 = 收入 − 支出",
+            "takeaway": "结余 = 收入 − 支出，就是这个月剩下的钱。",
             "check": {
               "q": "月收入 5000，支出 3000，这个月结余多少？",
               "options": [
@@ -1065,27 +1692,134 @@ window.DAYS = [
             }
           },
           {
-            "text": "代入数字试试：小 A 月入 20000，花 21000；小 B 月入 6000，花 4500。",
-            "formula": "小 A：20000 − 21000 = −1000；小 B：6000 − 4500 = 1500"
-          },
-          {
-            "text": "一年 12 个月：小 A 是 −1000 × 12 = −12000，小 B 是 1500 × 12 = 18000。收入高的小 A 一年后反而倒欠一万二。",
+            "title": "小 A 和小 B，一年以后",
+            "idea": "把每个月的结余乘以 12，就是一年下来的变化。",
             "visual": {
-              "type": "bars",
-              "items": [
+              "type": "columns",
+              "base": {
+                "items": [
+                  {
+                    "label": "小 A 一年",
+                    "value": -12000
+                  },
+                  {
+                    "label": "小 B 一年",
+                    "value": 18000
+                  }
+                ],
+                "unit": "元"
+              },
+              "frames": [
                 {
-                  "label": "小 A 一年",
-                  "value": -12000
+                  "set": {
+                    "play": 0,
+                    "step": 0
+                  },
+                  "cap": "先看骨架",
+                  "para": "idea"
                 },
                 {
-                  "label": "小 B 一年",
-                  "value": 18000
+                  "set": {
+                    "play": 1,
+                    "step": 2
+                  },
+                  "cap": "看完整的图",
+                  "para": "takeaway"
                 }
               ]
+            },
+            "takeaway": "收入高的小 A，一年后反而倒欠一万二。",
+            "derive": [
+              "小 A：20000 − 21000 = −1000，每月少 1000。",
+              "一年：−1000 × 12 = −12000。",
+              "小 B：6000 − 4500 = 1500，每月多 1500。",
+              "一年：1500 × 12 = 18000。"
+            ]
+          },
+          {
+            "title": "怎么读柱状图",
+            "idea": "**柱状图**就是用柱子的长短比大小。柱子越长，数越大。",
+            "visual": {
+              "type": "columns",
+              "base": {
+                "items": [
+                  {
+                    "label": "小 A",
+                    "value": -12000
+                  },
+                  {
+                    "label": "小 B",
+                    "value": 18000
+                  }
+                ],
+                "unit": "元（同卡"
+              },
+              "frames": [
+                {
+                  "set": {
+                    "play": 0,
+                    "step": 0
+                  },
+                  "cap": "先看骨架",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "play": 1,
+                    "step": 2
+                  },
+                  "cap": "看完整的图",
+                  "para": "takeaway"
+                }
+              ]
+            },
+            "why": "眼睛比长短，比读数字快得多。所以财报、新闻里最常见的就是柱状图。",
+            "example": "先找那条\"0 线\"。往上长的是正数，钱变多了；往下长的是负数，钱变少了。小 A 的柱子朝下，就是亏了。",
+            "takeaway": "读柱状图：先找 0 线，再看柱子朝哪边、有多长。",
+            "check": {
+              "q": "柱子长在 0 线下面，表示？",
+              "options": [
+                "钱变少了",
+                "钱很多"
+              ],
+              "answer": 0,
+              "why": "0 线下面是负数，比如小 A 的 −12000，表示一年下来钱变少了。柱子朝下不是\"多\"，所以「钱很多」不对。"
             }
           },
           {
-            "text": "所以决定钱包往哪边变的，是结余的正负，不是收入多高。",
+            "title": "串起来：看正负，不看收入",
+            "idea": "钱包一年后是变多还是变少，看结余是正还是负。收入高低决定不了方向。",
+            "visual": {
+              "type": "comic",
+              "panels": [
+                {
+                  "bg": "bank",
+                  "cast": [
+                    {
+                      "who": "xiaoman",
+                      "x": 0.5,
+                      "y": 0.72,
+                      "face": "talk"
+                    }
+                  ],
+                  "cap": "进得多，出得更多"
+                },
+                {
+                  "bg": "kitchen",
+                  "cast": [
+                    {
+                      "who": "xiaoman",
+                      "x": 0.5,
+                      "y": 0.72,
+                      "face": "talk"
+                    }
+                  ],
+                  "cap": "进得少，出得更少"
+                }
+              ]
+            },
+            "example": "回到钩子。月入两万的小 A 每月 −1000，月入六千的小 B 每月 +1500。所以\"更穷\"的是小 A。",
+            "takeaway": "钱包往哪边变，看结余的正负，不看收入多高。",
             "check": {
               "q": "决定一年后钱包变多还是变少的是？",
               "options": [
@@ -1134,11 +1868,11 @@ window.DAYS = [
             }
           ],
           "ref": [
-            1,
+            2,
             3
           ]
         },
-        "take": "钱包往哪边变，看“收入 − 支出”的正负，不看收入多高。",
+        "take": "钱包往哪边变，看\"收入 − 支出\"的正负，不看收入多高。",
         "quiz": [
           {
             "q": "小 C 月入 10000、花 11000；小 D 月入 5000、花 4000。一年后谁的钱更多？",
@@ -1160,7 +1894,52 @@ window.DAYS = [
             ],
             "answer": 0,
             "why": "结余 = 收入 − 支出，收入变大或支出变小，结果都会变大。两条路都能走。",
-            "ref": 1
+            "ref": 2
+          },
+          {
+            "q": "这两根柱子，长度和方向有什么不同？",
+            "options": [
+              "一样长，一根朝上、一根朝下",
+              "朝下的那根更短",
+              "朝下的那根更长"
+            ],
+            "answer": 0,
+            "why": "6000 和 −6000 大小一样，所以柱子一样长。正负只决定方向：小 C 往上长，小 D 往下长。",
+            "ref": 4,
+            "visual": {
+              "type": "columns",
+              "base": {
+                "items": [
+                  {
+                    "label": "小 C",
+                    "value": 6000
+                  },
+                  {
+                    "label": "小 D",
+                    "value": -6000
+                  }
+                ],
+                "unit": "元。这两根柱子"
+              },
+              "frames": [
+                {
+                  "set": {
+                    "play": 0,
+                    "step": 0
+                  },
+                  "cap": "先看骨架",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "play": 1,
+                    "step": 2
+                  },
+                  "cap": "看完整的图",
+                  "para": "takeaway"
+                }
+              ]
+            }
           }
         ]
       },
@@ -1175,21 +1954,111 @@ window.DAYS = [
             "idea": "说\"我好紧张\"时，感觉像一整团东西压过来。其实它可以拆成几块，分开看就没那么吓人。",
             "why": "一整团的东西很难下手：你劝自己\"别紧张\"，往往越劝越紧张。拆开以后会发现，有的部分在心里，有的在身体里，有的在脸上，每一块都有自己的\"开关\"。心理学研究情绪，第一步也是先拆开，才能分别测量。",
             "takeaway": "情绪不是一整团，可以拆成几块分别看。",
-            "example": "直播前十分钟，你心里一直在想\"等会儿卡壳怎么办\"，同时手心冒汗、心跳变快，脸上笑得有点僵。这三件事同时发生，但一件在心里，一件在身体里，一件在别人眼里。"
+            "example": "直播前十分钟，你心里一直在想\"等会儿卡壳怎么办\"，同时手心冒汗、心跳变快，脸上笑得有点僵。这三件事同时发生，但一件在心里，一件在身体里，一件在别人眼里。",
+            "visual": {
+              "type": "body3",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "情绪不是一整团，可以拆成几块分别看",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "情绪不是一整团，可以拆成几块分别看",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "情绪不是一整团，可以拆成几块分别看。",
+                  "para": "takeaway"
+                }
+              ]
+            }
           },
           {
             "title": "第一块：心里的感觉",
             "idea": "第一块是你自己心里感觉到的\"慌\"\"烦\"\"开心\"，叫**主观体验**。只有你自己能直接感受到。",
             "why": "别人看不到你心里，所以研究者想知道这一块，只能问你本人：比如用问卷请你给\"有多紧张\"打分，从 1 到 10。这也是它的特点：它是真实的，但只有一个\"目击者\"，就是你自己。",
             "takeaway": "主观体验 = 你自己心里的感觉，只能靠本人说出来。",
-            "example": "同样是上台，你可能给自己的紧张打 8 分，旁边的朋友看你却觉得\"挺淡定的\"。打分以你说的为准，因为主观体验只有你自己知道。"
+            "example": "同样是上台，你可能给自己的紧张打 8 分，旁边的朋友看你却觉得\"挺淡定的\"。打分以你说的为准，因为主观体验只有你自己知道。",
+            "visual": {
+              "type": "body3",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "主观体验 = 你自己心里的感觉，只能靠本人说出来",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "主观体验 = 你自己心里的感觉，只能靠本人说出来",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "主观体验 = 你自己心里的感觉，只能靠本人说出来。",
+                  "para": "takeaway"
+                }
+              ]
+            }
           },
           {
             "title": "第二块：身体里的变化",
             "idea": "第二块是身体内部的变化：心跳加快、手心出汗、胃发紧、呼吸变浅，叫**生理唤醒**。",
             "why": "这些变化由自主神经系统（主要是交感神经）发动，作用是让身体快速进入\"准备应战\"的状态：心跳快了，肌肉能拿到更多血液。\"自主\"的意思是它自己运转，你没法直接命令心跳慢下来。研究者用仪器测它，比如心率、皮肤出汗的程度。",
             "takeaway": "生理唤醒 = 身体内部的变化，由自主神经发动，不听命令。",
-            "example": "面试前你明明告诉自己\"不紧张\"，手心还是湿的。不是你不够努力，而是汗腺归交感神经管，不归你的意志管。"
+            "example": "面试前你明明告诉自己\"不紧张\"，手心还是湿的。不是你不够努力，而是汗腺归交感神经管，不归你的意志管。",
+            "visual": {
+              "type": "body3",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "生理唤醒 = 身体内部的变化，由自主神经发动，不听命令",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "生理唤醒 = 身体内部的变化，由自主神经发动，不听命令",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "生理唤醒 = 身体内部的变化，由自主神经发动，不听命令。",
+                  "para": "takeaway"
+                }
+              ]
+            }
           },
           {
             "title": "第三块：别人看得到的",
@@ -1205,6 +2074,36 @@ window.DAYS = [
               ],
               "answer": 0,
               "why": "表情、声音、姿势露在外面，别人能看到、听到，属于外部表现。「主观体验」是心里的感觉，只有本人知道。"
+            },
+            "visual": {
+              "type": "body3",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "外部表现 = 表情、声音、姿势，是情绪里别人能看到的部分",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "外部表现 = 表情、声音、姿势，是情绪里别人能看到的部分",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "外部表现 = 表情、声音、姿势，是情绪里别人能看到的部分。",
+                  "para": "takeaway"
+                }
+              ]
             }
           },
           {
@@ -1221,12 +2120,33 @@ window.DAYS = [
               "生理唤醒降了，心里的慌也跟着松一些。"
             ],
             "visual": {
-              "type": "flow",
-              "nodes": [
-                "放慢呼气",
-                "心跳变慢",
-                "生理唤醒降低",
-                "心里松一些"
+              "type": "chain",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "心里改不动时，先从呼吸和姿势这两个入口下手",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "心里改不动时，先从呼吸和姿势这两个入口下手",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "心里改不动时，先从呼吸和姿势这两个入口下手。",
+                  "para": "takeaway"
+                }
               ]
             },
             "check": {
@@ -1244,7 +2164,36 @@ window.DAYS = [
             "idea": "回到开头。\"我好紧张\"可以拆成三句：心里在慌，身体在加速，脸上和姿势在绷紧。",
             "why": "拆开后，你就知道每一块怎么接：心里的慌先承认它，身体的加速用慢呼气，绷紧的肩膀放下来。这个三块的拆法也是后面所有情绪理论的地基：接下来几天，心理学家会争论身体和感受到底谁先谁后。",
             "takeaway": "情绪 = 主观体验 + 生理唤醒 + 外部表现，三块都是调节入口。",
-            "example": "账号选题提示：「焦虑的时候，先别和念头吵架，先管身体」——背后就是这三成分模型。一条视频可以按三块讲：你心里在想什么，身体有什么信号，别人从你脸上看到了什么。"
+            "example": "账号选题提示：「焦虑的时候，先别和念头吵架，先管身体」——背后就是这三成分模型。一条视频可以按三块讲：你心里在想什么，身体有什么信号，别人从你脸上看到了什么。",
+            "visual": {
+              "type": "comic",
+              "panels": [
+                {
+                  "bg": "room",
+                  "cast": [
+                    {
+                      "who": "xiaoman",
+                      "x": 0.48,
+                      "y": 0.72,
+                      "face": "talk"
+                    }
+                  ],
+                  "cap": "情绪 = 主观体验 + 生理"
+                },
+                {
+                  "bg": "street",
+                  "cast": [
+                    {
+                      "who": "xiaoyin",
+                      "x": 0.48,
+                      "y": 0.72,
+                      "face": "talk"
+                    }
+                  ],
+                  "cap": "串起来：把\"我好紧张\"拆开"
+                }
+              ]
+            }
           }
         ],
         "interaction": {
@@ -1309,126 +2258,653 @@ window.DAYS = [
             "why": "放慢呼气会让心跳变慢，生理唤醒降低；主观体验和身体是连着的，所以感受也会松一些。这是从“身体”这个入口调节情绪。",
             "ref": 4
           }
-        ]
+        ],
+        "hookComic": {
+          "panels": [
+            {
+              "bg": "room",
+              "cast": [
+                {
+                  "who": "xiaoman",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "talk"
+                }
+              ],
+              "cap": "你说“我好紧张”"
+            },
+            {
+              "bg": "street",
+              "cast": [
+                {
+                  "who": "xiaoyin",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "talk"
+                }
+              ],
+              "cap": "这个“紧张”能不能拆开看"
+            },
+            {
+              "bg": "shop",
+              "cast": [
+                {
+                  "who": "xiaoman",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "talk"
+                }
+              ],
+              "cap": "这个“紧张”能不能拆开看"
+            },
+            {
+              "bg": "plain",
+              "cast": [
+                {
+                  "who": "xiaoyin",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "wow"
+                }
+              ],
+              "cap": "这个“紧张”能不能拆开看"
+            }
+          ]
+        }
       },
       "english": {
         "id": "d01-english",
-        "title": "单词都认识，为什么听不出",
-        "minutes": 6,
-        "hook": "四级听力里每个词都认识，连成一句却听不出来——问题常常出在\"连读\"。",
+        "title": "Meet Mochi：英语句子离不开\"是\"",
+        "minutes": 9,
+        "hook": "中文说\"他很懒\"，中间没有\"是\"。英语能不能也这样说？",
+        "hookComic": {
+          "panels": [
+            {
+              "bg": "kitchen",
+              "cast": [
+                {
+                  "who": "mia",
+                  "x": 0.32,
+                  "y": 0.72,
+                  "face": "happy"
+                },
+                {
+                  "who": "leo",
+                  "x": 0.62,
+                  "y": 0.74,
+                  "face": "talk"
+                },
+                {
+                  "who": "mochi",
+                  "x": 0.8,
+                  "y": 0.82,
+                  "face": "happy",
+                  "k": 0.7
+                }
+              ]
+            },
+            {
+              "bg": "room",
+              "cast": [
+                {
+                  "who": "mia",
+                  "x": 0.32,
+                  "y": 0.72,
+                  "face": "happy"
+                },
+                {
+                  "who": "leo",
+                  "x": 0.62,
+                  "y": 0.74,
+                  "face": "talk"
+                },
+                {
+                  "who": "mochi",
+                  "x": 0.8,
+                  "y": 0.82,
+                  "face": "happy",
+                  "k": 0.7
+                }
+              ]
+            },
+            {
+              "bg": "street",
+              "cast": [
+                {
+                  "who": "mia",
+                  "x": 0.32,
+                  "y": 0.72,
+                  "face": "happy"
+                },
+                {
+                  "who": "leo",
+                  "x": 0.62,
+                  "y": 0.74,
+                  "face": "talk"
+                },
+                {
+                  "who": "mochi",
+                  "x": 0.8,
+                  "y": 0.82,
+                  "face": "happy",
+                  "k": 0.7
+                }
+              ]
+            }
+          ]
+        },
+        "story": {
+          "title": "Meet Mochi",
+          "panels": [
+            {
+              "bg": "kitchen",
+              "cast": [
+                {
+                  "who": "mia",
+                  "x": 0.32,
+                  "y": 0.72,
+                  "face": "happy"
+                },
+                {
+                  "who": "leo",
+                  "x": 0.62,
+                  "y": 0.74,
+                  "face": "talk"
+                },
+                {
+                  "who": "mochi",
+                  "x": 0.8,
+                  "y": 0.82,
+                  "face": "happy",
+                  "k": 0.7
+                }
+              ]
+            },
+            {
+              "bg": "room",
+              "cast": [
+                {
+                  "who": "mia",
+                  "x": 0.32,
+                  "y": 0.72,
+                  "face": "happy"
+                },
+                {
+                  "who": "leo",
+                  "x": 0.62,
+                  "y": 0.74,
+                  "face": "talk"
+                },
+                {
+                  "who": "mochi",
+                  "x": 0.8,
+                  "y": 0.82,
+                  "face": "happy",
+                  "k": 0.7
+                }
+              ]
+            },
+            {
+              "bg": "street",
+              "cast": [
+                {
+                  "who": "mia",
+                  "x": 0.32,
+                  "y": 0.72,
+                  "face": "happy"
+                },
+                {
+                  "who": "leo",
+                  "x": 0.62,
+                  "y": 0.74,
+                  "face": "talk"
+                },
+                {
+                  "who": "mochi",
+                  "x": 0.8,
+                  "y": 0.82,
+                  "face": "happy",
+                  "k": 0.7
+                }
+              ]
+            },
+            {
+              "bg": "shop",
+              "cast": [
+                {
+                  "who": "mia",
+                  "x": 0.32,
+                  "y": 0.72,
+                  "face": "happy"
+                },
+                {
+                  "who": "leo",
+                  "x": 0.62,
+                  "y": 0.74,
+                  "face": "talk"
+                },
+                {
+                  "who": "mochi",
+                  "x": 0.8,
+                  "y": 0.82,
+                  "face": "happy",
+                  "k": 0.7
+                }
+              ]
+            }
+          ],
+          "lines": [
+            {
+              "who": "A",
+              "en": "Hi! I'm Mia. I'm a singer.",
+              "zh": "嗨！我是米娅。我是个歌手。",
+              "panel": 0
+            },
+            {
+              "who": "A",
+              "en": "This is Leo. He's my friend. He's a cook.",
+              "zh": "这是 Leo，我的朋友。他是个厨师。",
+              "panel": 1
+            },
+            {
+              "who": "A",
+              "en": "And this is Mochi. He's our cat. He's fat and lazy.",
+              "zh": "这是 Mochi，我们的猫。他又胖又懒。",
+              "panel": 2
+            },
+            {
+              "who": "B",
+              "en": "Dinner is ready!",
+              "zh": "晚饭好啦！",
+              "panel": 3
+            },
+            {
+              "who": "A",
+              "en": "Oh no! Mochi is on the table!",
+              "zh": "哎呀！Mochi 在桌子上！",
+              "panel": 3
+            },
+            {
+              "who": "B",
+              "en": "Now Mochi is happy. And I'm hungry.",
+              "zh": "现在 Mochi 高兴了。我呢，饿着。",
+              "panel": 3
+            }
+          ]
+        },
+        "words": [
+          {
+            "w": "singer",
+            "ipa": "ˈsɪŋər",
+            "stress": "sing",
+            "pic": "🎤",
+            "zh": "歌手",
+            "ex": "I'm a singer.",
+            "part": "sing 唱 + -er 做这件事的人 → 唱歌的人（teacher、player 也是）"
+          },
+          {
+            "w": "cook",
+            "ipa": "kʊk",
+            "stress": "cook",
+            "pic": "👨‍🍳",
+            "zh": "厨师；做饭",
+            "ex": "He's a cook.",
+            "part": "做饭的人就叫 cook，不加 -er。cooker 是锅（炊具），不是厨师"
+          },
+          {
+            "w": "lazy",
+            "ipa": "ˈleɪzi",
+            "stress": "la",
+            "pic": "🦥",
+            "zh": "懒的",
+            "ex": "He's fat and lazy.",
+            "part": "—"
+          },
+          {
+            "w": "hungry",
+            "ipa": "ˈhʌŋɡri",
+            "stress": "hun",
+            "pic": "🤤",
+            "zh": "饿的",
+            "ex": "And I'm hungry.",
+            "part": "hunger 饥饿 + -y → 饿的"
+          }
+        ],
         "steps": [
           {
-            "title": "耳朵在找不存在的\"空格\"",
-            "idea": "书上的单词之间有空格，嘴里说出来却没有。你听不出来，常常不是不认识词，而是找不到词和词的边界。",
-            "why": "背单词时，你记住的是每个词\"单独念\"的样子。可母语者说话是一口气连下来的，词和词之间不停顿，前后的音还会粘在一起。耳朵拿单独的读音去对，对不上，就以为没听过。",
-            "takeaway": "听不出，常常是因为词和词连在一起，找不到\"空格\"。",
-            "example": "乐谱上的圆滑线：谱面上是一个个分开的音符，拉出来却是一口气连着的，中间没有缝。如果你只认得分开的音，听到连奏就数不清有几个音。",
-            "exLabel": "打个比方",
+            "title": "先听故事",
+            "kind": "story-listen",
+            "idea": "先别看字，看着图听。听不懂每个词没关系，猜猜发生了什么。"
+          },
+          {
+            "title": "四个新词",
+            "kind": "words",
+            "idea": "每个词都点一下 ▶，先听，再看例句。"
+          },
+          {
+            "title": "发音 · 单词的重音",
+            "idea": "一个词有两个以上音节时，总有一个读得最重：更响、更长、音更高。这叫**重音**。",
+            "why": "中文每个字都有声调，字字一样清楚。英语没有声调，靠\"一重一轻\"给词一个形状。重音放错，母语者常常认不出是哪个词，就像一段旋律的强拍放错了位置。",
+            "example": "[[lazy]] 是 LA-zy，前重后轻。[[hungry]] 是 HUN-gry。把 [[happy]] 读成 hap-PY，听起来就很怪。",
+            "takeaway": "多音节词有一个重音：更响、更长、更高。",
+            "visual": {
+              "type": "beats",
+              "base": {
+                "rows": [
+                  {
+                    "parts": [
+                      "重",
+                      "音"
+                    ],
+                    "stress": 0
+                  }
+                ]
+              },
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "多音节词有一个重音：更响、更长、更高",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "多音节词有一个重音：更响、更长、更高",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "多音节词有一个重音：更响、更长、更高。",
+                  "para": "takeaway"
+                }
+              ]
+            },
             "check": {
-              "q": "母语者正常说话时，词和词之间通常？",
+              "q": "[[hungry]] 的重音在？",
               "options": [
-                "一口气连着说",
-                "每个词后面停一下"
+                "HUN",
+                "gry"
               ],
               "answer": 0,
-              "why": "正常语速下，词和词之间几乎不停顿。「每个词后面停一下」是课本慢速朗读的样子，不是真实的说话。"
+              "why": "hungry 读 HUN-gry，第一个音节重。「gry」是轻的那一半。"
             }
           },
           {
-            "title": "辅音挪到下一个词头上",
-            "idea": "前一个词以辅音结尾、后一个词以元音开头，这个辅音会\"挪\"过去，当后一个词的开头。这就是**连读**。",
-            "why": "发辅音时，嘴里某处要先把气流堵住或挤窄；发元音时，嘴巴张开、气流通畅。辅音后面紧跟元音，只要把堵住的地方一松，气就直接冲进元音，两个音合成一个音节，中间没有理由再停。",
-            "takeaway": "辅音结尾 + 元音开头 → 辅音挪到后面，两个词粘成一串。",
-            "example": "an apple → a-napple：n 挪到 apple 前面。pick it up → pi-ki-tup：k 挪到 it 前面，it 的 t 又挪到 up 前面。三个词听起来像一个长词。",
-            "derive": [
-              "说 pick 的 k，舌根顶住上颚后部，把气堵住。",
-              "下一个音是元音 i，舌根一松，冲出来的就是 ki。",
-              "所以 k 不再属于 pick，成了下一个音节的开头。"
+            "title": "语法 · 英语句子必须有动词",
+            "idea": "中文\"他很懒\"可以没有\"是\"。英语不行：[[He lazy.]] 是错的，必须说 [[He is lazy.]]",
+            "why": "英语的每个句子都要有一个动词，这是骨架里不能少的一块。lazy 只是描述，不是动作，撑不起一个句子。所以中间放一个 is，像一个等号，把\"他\"和\"懒\"连起来：他 = 懒的。",
+            "example": "[[Mochi is fat.]] Mochi = 胖的。[[Leo is a cook.]] Leo = 一个厨师。[[Mochi is on the table.]] Mochi = 在桌上。等号后面可以是\"怎样\"、一个身份，或一个地方。",
+            "takeaway": "英语句子必须有动词。说\"是谁、怎么样、在哪\"，用 is 当等号。",
+            "visual": {
+              "type": "sentence",
+              "base": {
+                "rows": [
+                  {
+                    "bricks": [
+                      {
+                        "text": "He",
+                        "role": "who"
+                      },
+                      {
+                        "text": "？",
+                        "role": "extra"
+                      },
+                      {
+                        "text": "lazy",
+                        "role": "what"
+                      },
+                      {
+                        "text": "He",
+                        "role": "who"
+                      },
+                      {
+                        "text": "is",
+                        "role": "verb"
+                      },
+                      {
+                        "text": "lazy",
+                        "role": "what"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "frames": [
+                {
+                  "set": {
+                    "play": 0
+                  },
+                  "cap": "中文\"他很懒\"可以没有\"是\"。英语不行：[[He lazy.]] 是错的，必须说",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "play": 1
+                  },
+                  "cap": "英语句子必须有动词。说\"是谁、怎么样、在哪\"，用 is 当等号。",
+                  "para": "takeaway"
+                }
+              ]
+            },
+            "check": {
+              "q": "Mochi 很懒，英语怎么说？",
+              "options": [
+                "Mochi is lazy.",
+                "Mochi lazy."
+              ],
+              "answer": 0,
+              "why": "lazy 不是动词，中间要放 is。「Mochi lazy.」缺了动词，英语里不成句。"
+            }
+          },
+          {
+            "title": "语法 · am / is / are 跟着\"谁\"变",
+            "idea": "这个等号有三个样子：I 配 am；一个别人（he、she、it、Mochi）配 is；you 和好几个人配 are。",
+            "why": "一千多年前的英语，动词会跟着\"谁\"变出好几种样子。后来别的动词都简化了，最常用的 be 留下的样子最多，所以还有三个。这不是推出来的，是历史留下的配对。好在只有三个，配好就不会错。",
+            "example": "[[I am a singer.]] [[Leo is a cook.]] [[We are friends.]] 口语常缩短成 [[I'm]]、[[He's]]、[[You're]]，缩短后只读一拍。",
+            "takeaway": "I am；he / she / it is；you / we / they are。",
+            "visual": {
+              "type": "sentence",
+              "base": {
+                "rows": [
+                  {
+                    "bricks": [
+                      {
+                        "text": "I",
+                        "role": "who"
+                      },
+                      {
+                        "text": "am",
+                        "role": "verb"
+                      },
+                      {
+                        "text": "hungry",
+                        "role": "what"
+                      },
+                      {
+                        "text": "He",
+                        "role": "who"
+                      },
+                      {
+                        "text": "is",
+                        "role": "verb"
+                      },
+                      {
+                        "text": "lazy",
+                        "role": "what"
+                      },
+                      {
+                        "text": "You",
+                        "role": "who"
+                      },
+                      {
+                        "text": "are",
+                        "role": "verb"
+                      },
+                      {
+                        "text": "happy",
+                        "role": "what"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "frames": [
+                {
+                  "set": {
+                    "play": 0
+                  },
+                  "cap": "这个等号有三个样子：I 配 am；一个别人（he、she、it、Mochi）配 ",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "play": 1
+                  },
+                  "cap": "I am；he / she / it is；you / we / they ar",
+                  "para": "takeaway"
+                }
+              ]
+            },
+            "check": {
+              "q": "Leo and Mia ___ friends.",
+              "options": [
+                "are",
+                "is"
+              ],
+              "answer": 0,
+              "why": "Leo and Mia 是两个人，等于 they，配 are。「is」只配一个别人。"
+            }
+          },
+          {
+            "title": "再读故事",
+            "kind": "story-read",
+            "idea": "现在看着字再听一遍。哪个词没听清，就点它。"
+          },
+          {
+            "title": "换一个词，再说一遍",
+            "kind": "drill",
+            "frame": "Mochi is {a}.",
+            "zh": "Mochi {a}。",
+            "slots": {
+              "a": [
+                {
+                  "en": "fat",
+                  "zh": "很胖",
+                  "pic": "🐱"
+                },
+                {
+                  "en": "lazy",
+                  "zh": "很懒",
+                  "pic": "🦥"
+                },
+                {
+                  "en": "hungry",
+                  "zh": "饿了",
+                  "pic": "🤤"
+                },
+                {
+                  "en": "happy",
+                  "zh": "很高兴",
+                  "pic": "😊"
+                },
+                {
+                  "en": "on the table",
+                  "zh": "在桌上",
+                  "pic": "🍽️"
+                }
+              ]
+            },
+            "need": 3
+          },
+          {
+            "title": "跟读",
+            "kind": "shadow",
+            "tip": "重读音节读得响一点、长一点：SING-er、LA-zy。",
+            "lines": [
+              0,
+              2
             ]
           },
           {
-            "title": "看读音，不看字母",
-            "idea": "判断后一个词是不是\"元音开头\"，要听它读出来的第一个音，不看拼写的第一个字母。",
-            "why": "连读是嘴巴的动作，嘴巴只管发什么音，不管怎么拼。hour 的 h 不发音，第一个音是元音，所以前面的辅音照样能挪过去。反过来，后一个词以辅音开头时，堵住的气一松没有元音可接，嘴巴得在新位置重新堵一次，辅音就挪不过去。",
-            "takeaway": "连读看读音：读出来以元音开头，前面的辅音才会挪过去。",
-            "example": "turn off → tur-noff：n 接元音 o。an honest girl → a-nonest girl：honest 的 h 不发音。good book 是 d 接 b，两个都是辅音，不会挪，仍然是 good / book。",
-            "check": {
-              "q": "an honest girl 里，an 和 honest 会连读吗？",
-              "options": [
-                "会，honest 的 h 不发音",
-                "不会，honest 以字母 h 开头"
+            "title": "复述：串起来",
+            "kind": "retell",
+            "idea": "看着图，用 I'm、He's、is 把四格讲出来。不用和原文一样。",
+            "keys": [
+              [
+                "Mia",
+                "singer"
               ],
-              "answer": 0,
-              "why": "连读看读音不看字母。honest 读出来第一个音是元音，an 的 n 就挪过去，变成 a-nonest。「honest 以字母 h 开头」只看了拼写。"
-            }
-          },
-          {
-            "title": "串起来：先画连线，再跟读",
-            "idea": "回到开头：听不出来，是因为辅音挪到了下一个词头上。练的时候，先在\"辅音结尾 + 元音开头\"的两个词之间画一条连线，再跟读。",
-            "why": "画线是提前告诉嘴巴\"这里不要停\"。嘴巴读顺了，耳朵也就熟悉了这种音在真实语速里的样子，下次听到 a-napple，会自动拆回 an apple。",
-            "takeaway": "辅音结尾 + 元音开头 = 连读。先画连线，再跟读。",
-            "example": "Can I have an apple? 画线后是 Can‿I have‿an‿apple，读成 ca-nI ha-va-napple：can 的 n 挪到 I 前，have 的 v 挪到 an 前，an 的 n 又挪到 apple 前。",
-            "derive": [
-              "看每个词的最后一个音和下一个词的第一个音。",
-              "辅音接元音，就画线。",
-              "按线连着读，线上不停顿。"
-            ],
-            "check": {
-              "q": "Can I 连读后听起来像？",
-              "options": [
-                "ca-nI",
-                "can / I，中间停一下"
+              [
+                "Leo",
+                "friend",
+                "cook"
               ],
-              "answer": 0,
-              "why": "can 以辅音 n 结尾，I 以元音开头，n 挪过去变成 ca-nI。「中间停一下」是逐词念，不是连读。"
-            }
+              [
+                "Mochi",
+                "fat",
+                "lazy"
+              ],
+              [
+                "table",
+                "happy",
+                "hungry"
+              ]
+            ]
           }
         ],
         "interaction": {
           "type": "listen",
-          "prompt": "听一听，选出你听到的短语",
-          "audio": "pick it up",
-          "answer": 0,
-          "why": "pick 的 k 挪到了 it 前面，it 的 t 又挪到了 up 前面，所以听起来像 pi-ki-tup。",
+          "prompt": "听一听，选出你听到的句子",
+          "audio": "He's hungry.",
+          "showText": "after",
           "options": [
-            "pick it up",
-            "pick a cup",
-            "big hit up"
+            "He's hungry.",
+            "He's angry.",
+            "She's hungry."
           ],
-          "ref": 1
+          "answer": 0,
+          "why": "开头是 he 不是 she；hungry 开头有轻轻的 h 气声，重音在 HUN。「He's angry.」没有 h，重音在 AN。",
+          "ref": [
+            2,
+            4
+          ]
         },
-        "take": "辅音结尾 + 元音开头 = 连读。先画连线，再跟读。",
+        "take": "英语句子必须有动词：说\"是谁、怎么样\"，用 am / is / are 当等号。多音节词有一个重音。",
         "quiz": [
           {
-            "q": "look at it 连读后听起来最像？",
+            "q": "中文\"他很懒\"，英语怎么说？",
             "options": [
-              "loo-ka-tit",
-              "look-at-it（每个词分开）",
-              "lo-cat"
+              "He is lazy.",
+              "He lazy.",
+              "He are lazy."
             ],
             "answer": 0,
-            "why": "look 的 k 连到 at，at 的 t 连到 it，变成 loo-ka-tit。「lo-cat」少了一个音节。",
+            "why": "英语句子必须有动词，「He lazy.」缺了 is。he 是一个别人，配 is；「He are lazy.」配错了。",
             "ref": [
-              1,
-              3
+              3,
+              4
             ]
           },
           {
-            "q": "哪一组不会发生“辅音 + 元音”连读？",
+            "q": "这句话的意思是？",
             "options": [
-              "big dog",
-              "turn off",
-              "an hour"
+              "我是个厨师。",
+              "我是个歌手。",
+              "我饿了。"
             ],
             "answer": 0,
-            "why": "big dog 是辅音 g 接辅音 d，不满足条件。turn off 的 n 接 o；an hour 里 hour 的 h 不发音，实际以元音开头，所以会连成 a-nour。",
-            "ref": 2
+            "why": "cook 是厨师。「我是个歌手」是 I'm a singer；「我饿了」是 I'm hungry。",
+            "ref": 1,
+            "audio": "I'm a cook."
           }
-        ],
-        "tts": [
-          "an apple",
-          "pick it up",
-          "Can I have an apple?"
         ]
       }
     }
@@ -1450,7 +2926,37 @@ window.DAYS = [
             "why": "今天要回答\"为什么亮暗最先被看到\"，先把明度这把尺子拿稳。",
             "takeaway": "明度 = 多亮多暗；黑白照只留下明度。",
             "example": "把照片转成黑白，色相和纯度都没了，只剩明度：白衬衫还是白，藏青裤子成了深灰。",
-            "review": true
+            "review": true,
+            "visual": {
+              "type": "bw",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "明度 = 多亮多暗；黑白照只留下明度",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "明度 = 多亮多暗；黑白照只留下明度",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "明度 = 多亮多暗；黑白照只留下明度。",
+                  "para": "takeaway"
+                }
+              ]
+            }
           },
           {
             "title": "眼睛里的两种\"传感器\"",
@@ -1472,6 +2978,36 @@ window.DAYS = [
               ],
               "answer": 0,
               "why": "光弱时主要靠视杆细胞，它只管亮暗，所以颜色先分不清。「轮廓」靠亮暗就能看出来，还看得见。"
+            },
+            "visual": {
+              "type": "chain",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "管亮暗的细胞多约二十倍，亮暗比颜色先被看到",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "管亮暗的细胞多约二十倍，亮暗比颜色先被看到",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "管亮暗的细胞多约二十倍，亮暗比颜色先被看到。",
+                  "para": "takeaway"
+                }
+              ]
             }
           },
           {
@@ -1481,18 +3017,33 @@ window.DAYS = [
             "takeaway": "明度差越大，交界越清楚，轮廓越利落。",
             "example": "深灰配黑，明度差小，糊成一团；白配藏青，一个接近最亮、一个接近最暗，轮廓清楚。雾霾蓝配灰粉，色相不同，可两个都浅、都淡，转成黑白就是两块差不多的浅灰。",
             "visual": {
-              "type": "swatches",
-              "colors": [
-                "#4A4A4A",
-                "#222222",
-                "#FFFFFF",
-                "#1F2A44"
-              ],
-              "labels": [
-                "明度差小",
-                "明度差小",
-                "明度差大",
-                "明度差大"
+              "type": "bw",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "明度差越大，交界越清楚，轮廓越利落",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "明度差越大，交界越清楚，轮廓越利落",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "明度差越大，交界越清楚，轮廓越利落。",
+                  "para": "takeaway"
+                }
               ]
             },
             "check": {
@@ -1515,7 +3066,37 @@ window.DAYS = [
               "拍一张全身照，转成黑白。",
               "看上衣和下装的分界清不清楚。",
               "分不清，就把其中一件换得更亮或更暗。"
-            ]
+            ],
+            "visual": {
+              "type": "outfit",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "搭配清不清爽，先看明度差；拍张黑白照就能检查",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "搭配清不清爽，先看明度差；拍张黑白照就能检查",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "搭配清不清爽，先看明度差；拍张黑白照就能检查。",
+                  "para": "takeaway"
+                }
+              ]
+            }
           }
         ],
         "interaction": {
@@ -1572,7 +3153,59 @@ window.DAYS = [
             "why": "视杆细胞约 1.2 亿、视锥细胞约 600 万，亮暗信号更多、更敏感，所以我们先感知亮暗。",
             "ref": 1
           }
-        ]
+        ],
+        "hookComic": {
+          "panels": [
+            {
+              "bg": "room",
+              "cast": [
+                {
+                  "who": "xiaoman",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "talk"
+                }
+              ],
+              "cap": "同一套衣服，有人穿着利落，有"
+            },
+            {
+              "bg": "street",
+              "cast": [
+                {
+                  "who": "xiaoyin",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "talk"
+                }
+              ],
+              "cap": "很多时候不是颜色选错，而是亮"
+            },
+            {
+              "bg": "shop",
+              "cast": [
+                {
+                  "who": "xiaoman",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "talk"
+                }
+              ],
+              "cap": "很多时候不是颜色选错，而是亮"
+            },
+            {
+              "bg": "plain",
+              "cast": [
+                {
+                  "who": "xiaoyin",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "wow"
+                }
+              ],
+              "cap": "很多时候不是颜色选错，而是亮"
+            }
+          ]
+        }
       },
       "history": {
         "id": "d02-history",
@@ -1586,7 +3219,10 @@ window.DAYS = [
             "why": "周朝第一次碰上\"地太大、管不过来\"的难题。它想出的办法管用了两百多年，后来却正好成了分裂的源头。",
             "takeaway": "今天的问题：地太大，怎么管？",
             "example": "朝代歌第一句\"夏商与西周\"，就是今天要填的三格。",
-            "review": true
+            "review": true,
+            "visual": {
+              "recall": "d01-history#3"
+            }
           },
           {
             "title": "夏和商：凭什么知道它们存在",
@@ -1602,6 +3238,36 @@ window.DAYS = [
               ],
               "answer": 0,
               "why": "甲骨文是商人自己留下的字，所以是直接证据。「后世的书里写得很详细」说的是夏的主要依据，那是后人的记载，不算直接证据。"
+            },
+            "visual": {
+              "type": "chain",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "夏多靠文献，考古还在讨论；商有甲骨文作直接证据",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "夏多靠文献，考古还在讨论；商有甲骨文作直接证据",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "夏多靠文献，考古还在讨论；商有甲骨文作直接证据。",
+                  "para": "takeaway"
+                }
+              ]
             }
           },
           {
@@ -1616,7 +3282,36 @@ window.DAYS = [
               "让原来的首领接着管？他们刚被你打败，不放心。",
               "交给兄弟、儿子和功臣？最信得过，也愿意替你守。",
               "周选了第三条。"
-            ]
+            ],
+            "visual": {
+              "type": "comic",
+              "panels": [
+                {
+                  "bg": "room",
+                  "cast": [
+                    {
+                      "who": "xiaoman",
+                      "x": 0.48,
+                      "y": 0.72,
+                      "face": "talk"
+                    }
+                  ],
+                  "cap": "周的难题：地太大、路太慢，天"
+                },
+                {
+                  "bg": "street",
+                  "cast": [
+                    {
+                      "who": "xiaoyin",
+                      "x": 0.48,
+                      "y": 0.72,
+                      "face": "talk"
+                    }
+                  ],
+                  "cap": "如果你是周武王：地盘一下变大"
+                }
+              ]
+            }
           },
           {
             "title": "分封制：把地和人分出去",
@@ -1625,11 +3320,33 @@ window.DAYS = [
             "takeaway": "分封 = 天子交出管理权，换诸侯的朝贡和出兵。",
             "example": "功臣姜太公被封在齐（今山东北部），周公的儿子被封在鲁（今山东南部），都在原来商的势力很强的东方。他们像一颗颗钉子，替周守住新地盘。",
             "visual": {
-              "type": "flow",
-              "nodes": [
-                "地太大、路太慢",
-                "分给亲属和功臣",
-                "诸侯自己管，朝贡、出兵"
+              "type": "tree",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "分封 = 天子交出管理权，换诸侯的朝贡和出兵",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "分封 = 天子交出管理权，换诸侯的朝贡和出兵",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "分封 = 天子交出管理权，换诸侯的朝贡和出兵。",
+                  "para": "takeaway"
+                }
               ]
             }
           },
@@ -1648,6 +3365,36 @@ window.DAYS = [
               ],
               "answer": 0,
               "why": "第一代诸侯是天子的亲人，在东方站稳也要靠天子。诸侯靠自己的封地养活自己，天子并不发工资，所以「天子每月给他们发工资」不对。"
+            },
+            "visual": {
+              "type": "histmap",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "一开始血缘近、彼此需要，分封就很稳",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "一开始血缘近、彼此需要，分封就很稳",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "一开始血缘近、彼此需要，分封就很稳。",
+                  "para": "takeaway"
+                }
+              ]
             }
           },
           {
@@ -1656,7 +3403,37 @@ window.DAYS = [
             "why": "如果\"谁最能干谁接班\"，每个儿子都会觉得是自己，兄弟之间就会争，甚至打起来。规定只看出身和出生顺序，不一定选出最能干的人，却最不容易吵架。对一个刚建立的大国来说，稳定比能干更要紧。",
             "takeaway": "宗法制 = 嫡长子继承，用固定的规则换来少争夺。",
             "example": "乐团的首席座位，如果每次演出前都重新比一轮，乐手们会天天较劲。事先定好\"谁坐首席\"，大家才能安心排练。宗法制就是一张事先排好的座次表。",
-            "exLabel": "打个比方"
+            "exLabel": "打个比方",
+            "visual": {
+              "type": "tree",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "宗法制 = 嫡长子继承，用固定的规则换来少争夺",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "宗法制 = 嫡长子继承，用固定的规则换来少争夺",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "宗法制 = 嫡长子继承，用固定的规则换来少争夺。",
+                  "para": "takeaway"
+                }
+              ]
+            }
           },
           {
             "title": "大宗和小宗：天下像一个大家族",
@@ -1672,6 +3449,36 @@ window.DAYS = [
               ],
               "answer": 0,
               "why": "宗法制只看出身和出生顺序，由正妻生的大儿子继承。选「最能干的儿子」要比来比去，兄弟容易相争，宗法制正是为了避开这一点。"
+            },
+            "visual": {
+              "type": "tree",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "分封分土地，宗法定辈分；天子是大宗，诸侯是小宗",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "分封分土地，宗法定辈分；天子是大宗，诸侯是小宗",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "分封分土地，宗法定辈分；天子是大宗，诸侯是小宗。",
+                  "para": "takeaway"
+                }
+              ]
             }
           },
           {
@@ -1688,11 +3495,33 @@ window.DAYS = [
               "你会想：少交一点、少去一次，好像也没什么。"
             ],
             "visual": {
-              "type": "flow",
-              "nodes": [
-                "血缘越来越淡",
-                "诸侯越来越强",
-                "天子越来越管不住"
+              "type": "tug",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "血缘一代代变淡、诸侯一代代变强，分封就松了",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "血缘一代代变淡、诸侯一代代变强，分封就松了",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "血缘一代代变淡、诸侯一代代变强，分封就松了。",
+                  "para": "takeaway"
+                }
               ]
             }
           },
@@ -1701,7 +3530,37 @@ window.DAYS = [
             "idea": "前 771 年，犬戎攻破镐京，西周灭亡。第二年，周平王把都城迁到洛邑（今洛阳），从此叫东周。",
             "why": "镐京被毁，又紧挨着犬戎，待不下去了。洛邑在中原正中，靠近东方的诸侯，搬过去是为了让诸侯保护自己。可这一搬，关系就倒过来了：以前是诸侯靠天子，现在是天子靠诸侯，天子自己的地盘也小了一大块。",
             "takeaway": "平王东迁，天子从\"靠山\"变成要人保护的人。诸侯会怎么做？",
-            "example": "就像家族企业的总部被烧了，老板搬去投靠几家分公司，办公室也是借分公司的。名义上还是老板，说话的分量已经不一样了。"
+            "example": "就像家族企业的总部被烧了，老板搬去投靠几家分公司，办公室也是借分公司的。名义上还是老板，说话的分量已经不一样了。",
+            "visual": {
+              "type": "histmap",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "平王东迁，天子从\"靠山\"变成要人保护的人",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "诸侯会怎么做",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "平王东迁，天子从\"靠山\"变成要人保护的人。诸侯会怎么做？",
+                  "para": "takeaway"
+                }
+              ]
+            }
           }
         ],
         "interaction": {
@@ -1778,7 +3637,59 @@ window.DAYS = [
             "label": "埃及胡夫金字塔建成（约）",
             "kind": "event"
           }
-        ]
+        ],
+        "hookComic": {
+          "panels": [
+            {
+              "bg": "room",
+              "cast": [
+                {
+                  "who": "xiaoman",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "talk"
+                }
+              ],
+              "cap": "三千年前没有电话、没有公路，"
+            },
+            {
+              "bg": "street",
+              "cast": [
+                {
+                  "who": "xiaoyin",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "talk"
+                }
+              ],
+              "cap": "三千年前没有电话、没有公路，"
+            },
+            {
+              "bg": "shop",
+              "cast": [
+                {
+                  "who": "xiaoman",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "talk"
+                }
+              ],
+              "cap": "三千年前没有电话、没有公路，"
+            },
+            {
+              "bg": "plain",
+              "cast": [
+                {
+                  "who": "xiaoyin",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "wow"
+                }
+              ],
+              "cap": "三千年前没有电话、没有公路，"
+            }
+          ]
+        }
       },
       "geo": {
         "id": "d02-geo",
@@ -1801,6 +3712,9 @@ window.DAYS = [
               ],
               "answer": 0,
               "why": "104 比 91 大，东经数字越大越靠东，所以是成都。"
+            },
+            "visual": {
+              "recall": "d01-geo#6"
             }
           },
           {
@@ -1811,10 +3725,34 @@ window.DAYS = [
             "example": "一排人坐在旋转木马上往前转，坐在最前面的人最先看到前方的风景。地球转动的\"前方\"就是东边。",
             "exLabel": "打个比方",
             "visual": {
-              "type": "globe",
-              "mode": "lon",
-              "step": 30,
-              "sun": true
+              "type": "globe3d",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "地球自西向东转 → 东边先日出、先日落",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "地球自西向东转 → 东边先日出、先日落",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "地球自西向东转 → 东边先日出、先日落。",
+                  "para": "takeaway"
+                }
+              ]
             },
             "check": {
               "q": "上海和乌鲁木齐，谁先看到日出？",
@@ -1840,9 +3778,34 @@ window.DAYS = [
             ],
             "formula": "360° ÷ 24 = 15°",
             "visual": {
-              "type": "globe",
-              "mode": "lon",
-              "sectors": 24
+              "type": "globe3d",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "经度每差 15°，太阳时间就差 1 小时",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "经度每差 15°，太阳时间就差 1 小时",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "经度每差 15°，太阳时间就差 1 小时。",
+                  "para": "takeaway"
+                }
+              ]
             },
             "check": {
               "q": "两地经度差 15°，日出大约差多久？",
@@ -1865,7 +3828,37 @@ window.DAYS = [
               "62 ÷ 15 ≈ 4.1，约 4 小时。",
               "上海和乌鲁木齐：34 ÷ 15 ≈ 2.3 小时。"
             ],
-            "formula": "62 ÷ 15 ≈ 4（小时）"
+            "formula": "62 ÷ 15 ≈ 4（小时）",
+            "visual": {
+              "type": "cnmap",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "中国东西跨约 62°，太阳时间差约 4 小时",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "中国东西跨约 62°，太阳时间差约 4 小时",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "中国东西跨约 62°，太阳时间差约 4 小时。",
+                  "para": "takeaway"
+                }
+              ]
+            }
           },
           {
             "title": "太阳时间：太阳最高的那一刻叫正午",
@@ -1877,7 +3870,37 @@ window.DAYS = [
               "正午 = 本地正对太阳的时刻。",
               "每条经线正对太阳的时刻不同。",
               "所以地方时跟着经度走：每往西 15°，正午晚 1 小时。"
-            ]
+            ],
+            "visual": {
+              "type": "sundial",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "地方时按本地太阳算，太阳最高时是正午；经度不同，地方时就不同",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "地方时按本地太阳算，太阳最高时是正午；经度不同，地方时就不同",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "地方时按本地太阳算，太阳最高时是正午；经度不同，地方时就不同。",
+                  "para": "takeaway"
+                }
+              ]
+            }
           },
           {
             "title": "北京时间：全国看同一只钟",
@@ -1893,6 +3916,36 @@ window.DAYS = [
               ],
               "answer": 0,
               "why": "北京时间用的是东经 120° 的时间，不是北京城本身的 116°。叫\"北京时间\"是因为它是首都定的标准时间。"
+            },
+            "visual": {
+              "type": "clocks",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "北京时间 = 东经 120° 的太阳时间，全国共用；越往西，钟比太阳越\"快\"",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "北京时间 = 东经 120° 的太阳时间，全国共用；越往西，钟比太阳越\"快\"",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "北京时间 = 东经 120° 的太阳时间，全国共用；越往西，钟比太阳越\"快\"。",
+                  "para": "takeaway"
+                }
+              ]
             }
           },
           {
@@ -1905,7 +3958,36 @@ window.DAYS = [
               "经度差：120 − 87.6 ≈ 32°。",
               "时间差：32 ÷ 15 ≈ 2.2 小时。",
               "钟上 22:00，当地太阳时约 22:00 − 2.2 小时 ≈ 19:50。"
-            ]
+            ],
+            "visual": {
+              "type": "comic",
+              "panels": [
+                {
+                  "bg": "room",
+                  "cast": [
+                    {
+                      "who": "xiaoman",
+                      "x": 0.48,
+                      "y": 0.72,
+                      "face": "talk"
+                    }
+                  ],
+                  "cap": "钟按东经 120° 走，太阳"
+                },
+                {
+                  "bg": "street",
+                  "cast": [
+                    {
+                      "who": "xiaoyin",
+                      "x": 0.48,
+                      "y": 0.72,
+                      "face": "talk"
+                    }
+                  ],
+                  "cap": "串起来：乌鲁木齐的晚上十点"
+                }
+              ]
+            }
           }
         ],
         "interaction": {
@@ -1971,24 +4053,235 @@ window.DAYS = [
             "id": "SH",
             "label": "SH"
           }
-        ]
+        ],
+        "hookComic": {
+          "panels": [
+            {
+              "bg": "room",
+              "cast": [
+                {
+                  "who": "xiaoman",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "talk"
+                }
+              ],
+              "cap": "夏天晚上十点，乌鲁木齐的天还"
+            },
+            {
+              "bg": "street",
+              "cast": [
+                {
+                  "who": "xiaoyin",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "talk"
+                }
+              ],
+              "cap": "是新疆人爱熬夜吗"
+            },
+            {
+              "bg": "shop",
+              "cast": [
+                {
+                  "who": "xiaoman",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "talk"
+                }
+              ],
+              "cap": "是新疆人爱熬夜吗"
+            },
+            {
+              "bg": "plain",
+              "cast": [
+                {
+                  "who": "xiaoyin",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "wow"
+                }
+              ],
+              "cap": "是新疆人爱熬夜吗"
+            }
+          ]
+        }
       },
       "finance": {
         "id": "d02-finance",
         "title": "百分比：每 100 份里有几份",
-        "minutes": 4,
-        "hook": "“存下收入的 20%”——这句话到底是存多少？",
+        "minutes": 7,
+        "hook": "\"存下收入的 20%\"——这句话到底是存多少？",
+        "hookComic": {
+          "panels": [
+            {
+              "bg": "room",
+              "cast": [
+                {
+                  "who": "xiaoman",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "talk"
+                }
+              ],
+              "cap": "\"存下收入的 20%\"——这"
+            },
+            {
+              "bg": "street",
+              "cast": [
+                {
+                  "who": "xiaoyin",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "talk"
+                }
+              ],
+              "cap": "\"存下收入的 20%\"——这"
+            },
+            {
+              "bg": "shop",
+              "cast": [
+                {
+                  "who": "xiaoman",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "talk"
+                }
+              ],
+              "cap": "\"存下收入的 20%\"——这"
+            },
+            {
+              "bg": "plain",
+              "cast": [
+                {
+                  "who": "xiaoyin",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "wow"
+                }
+              ],
+              "cap": "\"存下收入的 20%\"——这"
+            }
+          ]
+        },
         "steps": [
           {
-            "text": "百分比就是“每 100 份里有几份”。20% 就是每 100 元里拿出 20 元。"
+            "title": "\"20%\"到底是多少？",
+            "idea": "同样是\"20%\"，月入 3000 和月入 3 万，存的钱完全不一样。我们需要一个能换算成钱的办法。",
+            "visual": {
+              "type": "comic",
+              "panels": [
+                {
+                  "bg": "bank",
+                  "cast": [
+                    {
+                      "who": "xiaoman",
+                      "x": 0.5,
+                      "y": 0.72,
+                      "face": "talk"
+                    }
+                  ],
+                  "cap": "朋友说存 20%"
+                },
+                {
+                  "bg": "kitchen",
+                  "cast": [
+                    {
+                      "who": "xiaoman",
+                      "x": 0.5,
+                      "y": 0.72,
+                      "face": "talk"
+                    }
+                  ],
+                  "cap": "20% 是多少钱？"
+                },
+                {
+                  "bg": "room",
+                  "cast": [
+                    {
+                      "who": "xiaoman",
+                      "x": 0.5,
+                      "y": 0.72,
+                      "face": "talk"
+                    }
+                  ],
+                  "cap": "先画 100 个小格"
+                }
+              ]
+            },
+            "takeaway": "百分比要换成具体的钱，才知道该存多少。"
           },
           {
-            "text": "推一下 3000 元的 20% 是多少：3000 里有几个 100？30 个。每个 100 里取 20，就是 30 个 20。",
-            "formula": "3000 ÷ 100 = 30，30 × 20 = 600"
+            "title": "百分比 = 每 100 份里有几份",
+            "idea": "**百分比**就是\"每 100 份里有几份\"。20% 就是每 100 元里拿出 20 元。",
+            "visual": {
+              "type": "grid100",
+              "base": {
+                "fill": 20
+              },
+              "frames": [
+                {
+                  "set": {
+                    "play": 0,
+                    "step": 0
+                  },
+                  "cap": "先看骨架",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "play": 1,
+                    "step": 2
+                  },
+                  "cap": "看完整的图",
+                  "para": "takeaway"
+                }
+              ]
+            },
+            "why": "先把东西都切成 100 份，大小就统一了。不管总数多大，都能用\"几份\"来说。",
+            "example": "一杯奶茶 100 毫升里有 20 毫升是牛奶，牛奶就占 20%。",
+            "takeaway": "x% 就是每 100 份里有 x 份。"
           },
           {
-            "text": "这两步合起来就是通用做法：先除以 100，再乘那个百分数。也可以写成 3000 × 0.2 = 600，0.2 就是“20 ÷ 100”。",
+            "title": "推一下：3000 元的 20%",
+            "idea": "先数有几个 100，再每个 100 里取 20。",
+            "visual": {
+              "type": "chain",
+              "base": {
+                "nodes": [
+                  "3000 元",
+                  "里面有 30 个 100",
+                  "每个 100 取 20",
+                  "30 × 20 = 600"
+                ]
+              },
+              "frames": [
+                {
+                  "set": {
+                    "play": 0,
+                    "step": 0
+                  },
+                  "cap": "先看骨架",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "play": 1,
+                    "step": 2
+                  },
+                  "cap": "看完整的图",
+                  "para": "takeaway"
+                }
+              ]
+            },
             "formula": "3000 ÷ 100 × 20 = 600",
+            "takeaway": "求 x%：先除以 100，再乘 x。",
+            "derive": [
+              "3000 里有几个 100？3000 ÷ 100 = 30 个。",
+              "每个 100 取 20：30 × 20 = 600。",
+              "两步合起来：3000 ÷ 100 × 20 = 600。",
+              "\"÷ 100 × 20\"也可以写成\"× 0.2\"，因为 20 ÷ 100 = 0.2。"
+            ],
             "check": {
               "q": "3000 × 0.2 里的 0.2 是怎么来的？",
               "options": [
@@ -2000,11 +4293,98 @@ window.DAYS = [
             }
           },
           {
-            "text": "反过来问：月入 6000，存了 1500，存了几成？问的是 1500 里相当于“每 100 里有几”。",
-            "formula": "1500 ÷ 6000 = 0.25，0.25 × 100 = 25，即 25%"
+            "title": "反过来：存了几成？",
+            "idea": "已经知道存了多少钱，想知道占几成，就反过来算。",
+            "visual": {
+              "type": "grid100",
+              "base": {
+                "fill": 25
+              },
+              "frames": [
+                {
+                  "set": {
+                    "play": 0,
+                    "step": 0
+                  },
+                  "cap": "先看骨架",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "play": 1,
+                    "step": 2
+                  },
+                  "cap": "看完整的图",
+                  "para": "takeaway"
+                }
+              ]
+            },
+            "formula": "1500 ÷ 6000 × 100 = 25（%）",
+            "takeaway": "求\"占几成\"：部分 ÷ 整体，再乘 100。",
+            "derive": [
+              "月入 6000，存了 1500。",
+              "1500 ÷ 6000 = 0.25。",
+              "0.25 × 100 = 25，就是每 100 里有 25，即 25%。"
+            ]
           },
           {
-            "text": "为什么要用百分比比较？小 A 月入 20000 存 2000（10%），小 B 月入 6000 存 1500（25%）。绝对数是 A 多，但看“存钱的力度”，B 是 A 的两倍多。百分比把不同大小的数放到同一把尺子上。",
+            "title": "同一组数，画成两张图",
+            "idea": "小 A 月入 2 万存 2000，小 B 月入 6000 存 1500。画钱数，小 A 的柱子高；画百分比，小 B 的柱子高。",
+            "visual": {
+              "type": "duo",
+              "base": {
+                "a": {
+                  "type": "columns",
+                  "base": {
+                    "items": [
+                      {
+                        "label": "小 A 存",
+                        "value": 2000
+                      },
+                      {
+                        "label": "小 B 存",
+                        "value": 1500
+                      }
+                    ]
+                  }
+                },
+                "b": {
+                  "type": "columns",
+                  "base": {
+                    "items": [
+                      {
+                        "label": "小 A",
+                        "value": 10
+                      },
+                      {
+                        "label": "小 B",
+                        "value": 25
+                      }
+                    ]
+                  }
+                },
+                "dir": "row",
+                "vs": ""
+              },
+              "frames": [
+                {
+                  "set": {
+                    "both": 0
+                  },
+                  "cap": "先看一边",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "both": 1
+                  },
+                  "cap": "两边放一起看",
+                  "para": "takeaway"
+                }
+              ]
+            },
+            "why": "两人收入差很多，只比钱数不公平。百分比把两个人放到同一把尺子上：都按\"每 100 元存几元\"比。",
+            "takeaway": "比力度用百分比；同一组数，换个画法，结论可能反过来。",
             "check": {
               "q": "比较两个人存钱的力度，该看什么？",
               "options": [
@@ -2014,6 +4394,37 @@ window.DAYS = [
               "answer": 0,
               "why": "收入大小不同，只比钱数不公平；百分比把两人放到同一把尺子上。只看「存下的钱数」，会觉得存 2000 的小 A 更努力，其实小 B 的力度是她的两倍多。"
             }
+          },
+          {
+            "title": "串起来：存 20% 是多少",
+            "idea": "回到钩子。月入 8000，存 20%，就是 8000 ÷ 100 × 20 = 1600 元。",
+            "visual": {
+              "type": "grid100",
+              "base": {
+                "fill": 20,
+                "label": "月入 8000：每 100 元存 20 元"
+              },
+              "frames": [
+                {
+                  "set": {
+                    "play": 0,
+                    "step": 0
+                  },
+                  "cap": "先看骨架",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "play": 1,
+                    "step": 2
+                  },
+                  "cap": "看完整的图",
+                  "para": "takeaway"
+                }
+              ]
+            },
+            "example": "以后看到\"涨了 5%\"\"打 8 折\"\"占 30%\"，都先问一句：每 100 份里是几份？",
+            "takeaway": "看到百分比，先换成\"每 100 份里有几份\"。"
           }
         ],
         "interaction": {
@@ -2060,7 +4471,7 @@ window.DAYS = [
             ],
             "answer": 0,
             "why": "8000 里有 80 个 100，每个取 20，80 × 20 = 1600。「160」只除了 100 却少乘了一位。",
-            "ref": 1
+            "ref": 2
           },
           {
             "q": "月入 5000，每月结余 500，结余率是多少？",
@@ -2072,6 +4483,17 @@ window.DAYS = [
             "answer": 0,
             "why": "500 ÷ 5000 = 0.1，乘 100 得 10，也就是 10%。",
             "ref": 3
+          },
+          {
+            "q": "一张图只画了\"每月存下多少钱\"，小 A 的柱子比小 B 高。能说明小 A 更会存钱吗？",
+            "options": [
+              "不能，还要看两人收入，换成百分比再比",
+              "能，柱子高就更会存",
+              "能，图不会出错"
+            ],
+            "answer": 0,
+            "why": "柱子只画了钱数。收入高的人，存的钱数自然多。换成\"占收入的百分比\"，才能比力度。图本身没错，是画法只回答了一个问题。",
+            "ref": 4
           }
         ]
       },
@@ -2087,7 +4509,37 @@ window.DAYS = [
             "why": "知道了谁是\"因\"、谁是\"果\"，才知道从哪一头调节最有效。",
             "takeaway": "今天要回答：身体反应和情绪感受，谁在前？",
             "example": "一条狗突然冲你大叫，你心里一惊，心也\"咚\"地跳起来。看起来是同时的，但真的同时吗？",
-            "review": true
+            "review": true,
+            "visual": {
+              "type": "wires",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "今天要回答：身体反应和情绪感受，谁在前",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "今天要回答：身体反应和情绪感受，谁在前",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "今天要回答：身体反应和情绪感受，谁在前？",
+                  "para": "takeaway"
+                }
+              ]
+            }
           },
           {
             "title": "詹姆斯：先有身体，再有感受",
@@ -2102,12 +4554,33 @@ window.DAYS = [
               "这份\"察觉\"本身，就是害怕的感受。"
             ],
             "visual": {
-              "type": "flow",
-              "nodes": [
-                "看到熊",
-                "心跳加速、发抖",
-                "大脑察觉身体变化",
-                "感到害怕"
+              "type": "wires",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "詹姆斯-兰格：先有身体反应，大脑察觉后才有情绪",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "詹姆斯-兰格：先有身体反应，大脑察觉后才有情绪",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "詹姆斯-兰格：先有身体反应，大脑察觉后才有情绪。",
+                  "para": "takeaway"
+                }
               ]
             }
           },
@@ -2125,6 +4598,35 @@ window.DAYS = [
               ],
               "answer": 0,
               "why": "他保留\"看到熊\"，只拿掉心跳、发抖这些身体感觉，看情绪还剩多少。拿掉「让人害怕的那头熊」就没有刺激了，检验不了他的说法。"
+            },
+            "visual": {
+              "type": "comic",
+              "panels": [
+                {
+                  "bg": "room",
+                  "cast": [
+                    {
+                      "who": "xiaoman",
+                      "x": 0.48,
+                      "y": 0.72,
+                      "face": "talk"
+                    }
+                  ],
+                  "cap": "詹姆斯靠想象实验论证：拿掉身"
+                },
+                {
+                  "bg": "street",
+                  "cast": [
+                    {
+                      "who": "xiaoyin",
+                      "x": 0.48,
+                      "y": 0.72,
+                      "face": "talk"
+                    }
+                  ],
+                  "cap": "他怎么论证：一个想象实验"
+                }
+              ]
             }
           },
           {
@@ -2141,6 +4643,36 @@ window.DAYS = [
               ],
               "answer": 0,
               "why": "害怕、愤怒、兴奋都会让心跳加快，这正是这个理论难以解释的地方。「只有害怕时加快」不符合实际。"
+            },
+            "visual": {
+              "type": "wires",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "最大的漏洞：不同情绪的身体反应很相似，难以靠它区分情绪",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "最大的漏洞：不同情绪的身体反应很相似，难以靠它区分情绪",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "最大的漏洞：不同情绪的身体反应很相似，难以靠它区分情绪。",
+                  "para": "takeaway"
+                }
+              ]
             }
           },
           {
@@ -2148,7 +4680,37 @@ window.DAYS = [
             "idea": "回到开头：\"发抖所以害怕\"不完全对，但它提醒了我们：身体会参与制造感受。",
             "why": "詹姆斯-兰格理论第一次把身体放到情绪的中心，后来的理论都得先回应它。它最站得住的部分，是身体变化能影响感受的强弱；最站不住的部分，是光靠身体区分不了情绪。下一关的坎农，就是从这个漏洞下手的。",
             "takeaway": "身体会影响感受，但单靠身体，分不清是哪种情绪。",
-            "example": "第 1 天的\"慢呼气\"就是这个思路的日常版：先让身体慢下来，感受跟着缓和。但你不会因为跑完步心跳快，就觉得自己在\"害怕\"——说明还缺了点什么。"
+            "example": "第 1 天的\"慢呼气\"就是这个思路的日常版：先让身体慢下来，感受跟着缓和。但你不会因为跑完步心跳快，就觉得自己在\"害怕\"——说明还缺了点什么。",
+            "visual": {
+              "type": "chain",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "身体会影响感受，但单靠身体，分不清是哪种情绪",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "身体会影响感受，但单靠身体，分不清是哪种情绪",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "身体会影响感受，但单靠身体，分不清是哪种情绪。",
+                  "para": "takeaway"
+                }
+              ]
+            }
           }
         ],
         "interaction": {
@@ -2186,128 +4748,579 @@ window.DAYS = [
             "why": "愤怒、恐惧、兴奋都会心跳加快，单靠身体反应分不清它们，这正是后来坎农的主要批评。",
             "ref": 3
           }
-        ]
+        ],
+        "hookComic": {
+          "panels": [
+            {
+              "bg": "room",
+              "cast": [
+                {
+                  "who": "xiaoman",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "talk"
+                }
+              ],
+              "cap": "你以为是“害怕所以发抖”"
+            },
+            {
+              "bg": "street",
+              "cast": [
+                {
+                  "who": "xiaoyin",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "talk"
+                }
+              ],
+              "cap": "一百多年前有人说：反了，是“"
+            },
+            {
+              "bg": "shop",
+              "cast": [
+                {
+                  "who": "xiaoman",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "talk"
+                }
+              ],
+              "cap": "一百多年前有人说：反了，是“"
+            },
+            {
+              "bg": "plain",
+              "cast": [
+                {
+                  "who": "xiaoyin",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "wow"
+                }
+              ],
+              "cap": "一百多年前有人说：反了，是“"
+            }
+          ]
+        }
       },
       "english": {
         "id": "d02-english",
-        "title": "小词为什么会“缩水”",
-        "minutes": 6,
-        "hook": "to、for、and 在课本上读得清清楚楚，到了真人嘴里却几乎听不见。",
+        "title": "Is That Mochi?：问句把 is 搬到前面",
+        "minutes": 9,
+        "hook": "中文把一句话变成问题，在句尾加个\"吗\"就行。英语没有\"吗\"，它怎么问？",
+        "hookComic": {
+          "panels": [
+            {
+              "bg": "kitchen",
+              "cast": [
+                {
+                  "who": "mia",
+                  "x": 0.32,
+                  "y": 0.72,
+                  "face": "happy"
+                },
+                {
+                  "who": "leo",
+                  "x": 0.62,
+                  "y": 0.74,
+                  "face": "talk"
+                },
+                {
+                  "who": "mochi",
+                  "x": 0.8,
+                  "y": 0.82,
+                  "face": "happy",
+                  "k": 0.7
+                }
+              ]
+            },
+            {
+              "bg": "room",
+              "cast": [
+                {
+                  "who": "mia",
+                  "x": 0.32,
+                  "y": 0.72,
+                  "face": "happy"
+                },
+                {
+                  "who": "leo",
+                  "x": 0.62,
+                  "y": 0.74,
+                  "face": "talk"
+                },
+                {
+                  "who": "mochi",
+                  "x": 0.8,
+                  "y": 0.82,
+                  "face": "happy",
+                  "k": 0.7
+                }
+              ]
+            },
+            {
+              "bg": "street",
+              "cast": [
+                {
+                  "who": "mia",
+                  "x": 0.32,
+                  "y": 0.72,
+                  "face": "happy"
+                },
+                {
+                  "who": "leo",
+                  "x": 0.62,
+                  "y": 0.74,
+                  "face": "talk"
+                },
+                {
+                  "who": "mochi",
+                  "x": 0.8,
+                  "y": 0.82,
+                  "face": "happy",
+                  "k": 0.7
+                }
+              ]
+            }
+          ]
+        },
+        "story": {
+          "title": "Is That Mochi?",
+          "panels": [
+            {
+              "bg": "kitchen",
+              "cast": [
+                {
+                  "who": "mia",
+                  "x": 0.32,
+                  "y": 0.72,
+                  "face": "happy"
+                },
+                {
+                  "who": "leo",
+                  "x": 0.62,
+                  "y": 0.74,
+                  "face": "talk"
+                },
+                {
+                  "who": "mochi",
+                  "x": 0.8,
+                  "y": 0.82,
+                  "face": "happy",
+                  "k": 0.7
+                }
+              ]
+            },
+            {
+              "bg": "room",
+              "cast": [
+                {
+                  "who": "mia",
+                  "x": 0.32,
+                  "y": 0.72,
+                  "face": "happy"
+                },
+                {
+                  "who": "leo",
+                  "x": 0.62,
+                  "y": 0.74,
+                  "face": "talk"
+                },
+                {
+                  "who": "mochi",
+                  "x": 0.8,
+                  "y": 0.82,
+                  "face": "happy",
+                  "k": 0.7
+                }
+              ]
+            },
+            {
+              "bg": "street",
+              "cast": [
+                {
+                  "who": "mia",
+                  "x": 0.32,
+                  "y": 0.72,
+                  "face": "happy"
+                },
+                {
+                  "who": "leo",
+                  "x": 0.62,
+                  "y": 0.74,
+                  "face": "talk"
+                },
+                {
+                  "who": "mochi",
+                  "x": 0.8,
+                  "y": 0.82,
+                  "face": "happy",
+                  "k": 0.7
+                }
+              ]
+            },
+            {
+              "bg": "shop",
+              "cast": [
+                {
+                  "who": "mia",
+                  "x": 0.32,
+                  "y": 0.72,
+                  "face": "happy"
+                },
+                {
+                  "who": "leo",
+                  "x": 0.62,
+                  "y": 0.74,
+                  "face": "talk"
+                },
+                {
+                  "who": "mochi",
+                  "x": 0.8,
+                  "y": 0.82,
+                  "face": "happy",
+                  "k": 0.7
+                }
+              ]
+            }
+          ],
+          "lines": [
+            {
+              "who": "B",
+              "en": "Mia! Look! Is that Mochi? He's on the roof!",
+              "zh": "米娅！快看！那是 Mochi 吗？他在屋顶上！",
+              "panel": 0
+            },
+            {
+              "who": "A",
+              "en": "No, it isn't. Mochi is grey. That cat is orange.",
+              "zh": "不是。Mochi 是灰色的，那只猫是橘色的。",
+              "panel": 0
+            },
+            {
+              "who": "B",
+              "en": "Is Mochi in the kitchen?",
+              "zh": "Mochi 在厨房吗？",
+              "panel": 1
+            },
+            {
+              "who": "A",
+              "en": "No, he isn't.",
+              "zh": "不在。",
+              "panel": 1
+            },
+            {
+              "who": "A",
+              "en": "Is he in your room?",
+              "zh": "他在你房间吗？",
+              "panel": 2
+            },
+            {
+              "who": "B",
+              "en": "Yes, he is! He's on my bed. And he isn't alone. The orange cat is here, too!",
+              "zh": "在！他在我床上。而且不是他一个，那只橘猫也在这儿！",
+              "panel": 3
+            }
+          ]
+        },
+        "words": [
+          {
+            "w": "roof",
+            "ipa": "ruːf",
+            "stress": "roof",
+            "pic": "🏠",
+            "zh": "屋顶",
+            "ex": "He's on the roof!",
+            "part": "—"
+          },
+          {
+            "w": "kitchen",
+            "ipa": "ˈkɪtʃən",
+            "stress": "kit",
+            "pic": "🍳",
+            "zh": "厨房",
+            "ex": "Is Mochi in the kitchen?",
+            "part": "tch 读 /tʃ/，t 不单独读"
+          },
+          {
+            "w": "orange",
+            "ipa": "ˈɔːrɪndʒ",
+            "stress": "or",
+            "pic": "🟧",
+            "zh": "橘色的；橙子",
+            "ex": "That cat is orange.",
+            "part": "—"
+          },
+          {
+            "w": "alone",
+            "ipa": "əˈloʊn",
+            "stress": "lone",
+            "pic": "🧍",
+            "zh": "独自，一个人",
+            "ex": "And he isn't alone.",
+            "part": "来自 all + one：全然一个 → 独自"
+          }
+        ],
         "steps": [
           {
-            "title": "力气花在哪儿",
-            "idea": "一句话里的词并不一样重要。说话的人会把力气花在带意思的词上，其余的词就说得又快又轻。",
-            "why": "说话时，嘴巴的力气和时间都有限。听的人最需要知道的是\"谁、做什么、什么东西\"，这些词必须说清楚；只负责把句子连起来的小词，就被顺手带过。",
-            "takeaway": "一句话里，力气留给重要的词，小词被顺手带过。",
-            "example": "唱一句歌词，落在强拍上的字唱得饱满、拖得长，经过音上的字一带而过。你哼一首歌，最先记住的也是强拍上的那几个字。",
-            "exLabel": "打个比方"
-          },
-          {
-            "title": "实词装意思，虚词管连接",
-            "idea": "英语的词分两类：承载意思的实词（名词、动词、形容词、副词），和把句子连起来的**虚词**（to、for、and、a……）。",
-            "why": "只看实词，大多能猜出整句的意思；只看虚词，什么也猜不出。所以实词是这句话的\"内容\"，虚词是\"连接件\"。说话人自然把重音给实词，虚词就读得轻。",
-            "takeaway": "实词装意思，读得重；虚词管连接，读得轻。",
-            "example": "I want to go for a walk. 只留实词 want、go、walk，你已经知道是\"想去散步\"。只留虚词 to、for、a，完全不知道在说什么。",
+            "title": "先听故事",
+            "kind": "story-listen",
+            "idea": "看图听。Mochi 到底在哪儿？",
             "check": {
-              "q": "walk 和 for，哪个是实词？",
+              "q": "最后，Mochi 在哪儿？",
               "options": [
-                "walk",
-                "for"
+                "在 Leo 床上，和橘猫在一起",
+                "在屋顶上"
               ],
               "answer": 0,
-              "why": "walk 是动词，带着\"散步\"的意思，是实词。「for」只负责连接，是虚词。"
+              "why": "最后一格 Leo 说 [[He's on my bed.]]，橘猫也在。「在屋顶上」的是那只橘猫，而且是一开始。"
             }
           },
           {
-            "title": "弱读：缩成最省力的 /ə/",
-            "idea": "虚词读得轻时，元音会缩成嘴巴最放松时发出的那个短音 /ə/，这叫**弱读**。",
-            "why": "每个完整的元音都要把舌头和嘴唇摆到特定位置：/uː/ 要撮圆嘴唇，/æ/ 要把嘴张大。不重要的词不值得这样摆，舌头停在嘴里正中间、嘴唇放松，发出来的就是 /ə/。",
-            "takeaway": "虚词弱读：元音缩成最放松的 /ə/，很轻，但还在。",
-            "example": "to → /tə/，for → /fə/，can → /kən/。and 更短：/ən/，常常连 d 也省掉，只剩 /n/，比如 rock 'n' roll。它很轻，但还在。",
-            "derive": [
-              "完整元音 = 舌头、嘴唇摆到某个位置。",
-              "摆位置要花力气和时间。",
-              "虚词不重要，干脆不摆，元音就变成最放松的 /ə/。"
-            ],
+            "title": "四个新词",
+            "kind": "words",
+            "idea": "每个词都点一下 ▶。"
+          },
+          {
+            "title": "发音 · 问句的尾巴往上扬",
+            "idea": "问\"是不是\"的问句，句尾的音往上扬 ↗；平常说一件事，句尾往下落 ↘。",
+            "why": "中文靠一个\"吗\"告诉对方\"这是问题\"。英语的问句靠改词序（下一张卡），说的时候还会用音调再提醒一次：往上扬，像话没说完，在等对方接；往下落，像说完了。",
+            "example": "[[Is he in your room?]] ↗ 在等回答。[[He is in your room.]] ↘ 是在告诉你。",
+            "takeaway": "问\"是不是\"，句尾上扬；说完一件事，句尾下落。",
+            "visual": {
+              "type": "tone",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "问\"是不是\"，句尾上扬；说完一件事，句尾下落",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "问\"是不是\"，句尾上扬；说完一件事，句尾下落",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "问\"是不是\"，句尾上扬；说完一件事，句尾下落。",
+                  "para": "takeaway"
+                }
+              ]
+            },
             "check": {
-              "q": "for 弱读时通常读成？",
+              "q": "[[Is Mochi in the kitchen?]] 句尾应该？",
               "options": [
-                "/fə/",
-                "/fɔː/"
+                "上扬",
+                "下落"
               ],
               "answer": 0,
-              "why": "弱读时元音缩成 /ə/，所以是 /fə/。「/fɔː/」是 for 单独念、或被强调时的完整读音。"
+              "why": "这是问\"是不是\"的问句，句尾上扬。「下落」是陈述句的读法。"
             }
           },
           {
-            "title": "被强调时，小词会\"站起来\"",
-            "idea": "虚词平时弱读，但它一旦成了你要强调的重点，就恢复完整的读音。",
-            "why": "虚词弱读，是因为它通常不是重点，并不是它天生就轻。重要性变了，读法就跟着变：说话人想让对方听清哪个词，就把力气给哪个词，哪怕它是个小词。",
-            "takeaway": "虚词成了重点，就恢复完整读音。",
-            "example": "I'm not going TO the party, I'm coming FROM it.（我不是要去派对，我是刚从那儿回来。）这句的重点正是 to 和 from 的对比，所以 to 读完整的 /tuː/，from 读完整的 /frɒm/，不再弱读。",
+            "title": "语法 · is 搬到前面 = 问句；is 后加 not = 否定",
+            "idea": "把 is 搬到句子最前面，就成了问句；在 is 后面加 not，就成了否定。",
+            "why": "英语没有\"吗\"这样的小尾巴，问句靠词序：动词跑到\"谁\"的前面，听的人听到第一个词就知道\"这是在问\"。否定也挂在动词上：not 紧跟着 is，表示这个等号不成立。",
+            "example": "[[He is in the kitchen.]] → [[Is he in the kitchen?]] → [[He isn't in the kitchen.]] 回答用短句：[[Yes, he is.]] [[No, he isn't.]] 注意 [[Yes, he is.]] 不能缩成 he's：句尾的词要读重，缩写读不重。",
+            "takeaway": "is 放最前 = 问句；is 后加 not = 否定。",
+            "visual": {
+              "type": "sentence",
+              "base": {
+                "rows": [
+                  {
+                    "bricks": [
+                      {
+                        "text": "That",
+                        "role": "who"
+                      },
+                      {
+                        "text": "is",
+                        "role": "verb"
+                      },
+                      {
+                        "text": "Mochi",
+                        "role": "what"
+                      },
+                      {
+                        "text": "Is",
+                        "role": "extra"
+                      },
+                      {
+                        "text": "that",
+                        "role": "extra"
+                      },
+                      {
+                        "text": "Mochi",
+                        "role": "extra"
+                      },
+                      {
+                        "text": "That",
+                        "role": "who"
+                      },
+                      {
+                        "text": "is",
+                        "role": "verb"
+                      },
+                      {
+                        "text": "not",
+                        "role": "extra"
+                      },
+                      {
+                        "text": "orange",
+                        "role": "what"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "frames": [
+                {
+                  "set": {
+                    "play": 0
+                  },
+                  "cap": "把 is 搬到句子最前面，就成了问句；在 is 后面加 not，就成了否定。",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "play": 1
+                  },
+                  "cap": "is 放最前 = 问句；is 后加 not = 否定。",
+                  "para": "takeaway"
+                }
+              ]
+            },
             "check": {
-              "q": "上面那句里的 TO 怎么读？",
+              "q": "[[That cat is orange.]] 变成问句是？",
               "options": [
-                "完整的 /tuː/",
-                "弱读的 /tə/"
+                "Is that cat orange?",
+                "That cat is orange?"
               ],
               "answer": 0,
-              "why": "这句话的重点就是 to 和 from 的对比，to 成了重点，所以读完整。「弱读的 /tə/」是它不当重点时的读法。"
+              "why": "问句要把 is 搬到最前面。「That cat is orange?」只是在句尾加了问号，词序没变。"
             }
           },
           {
-            "title": "串起来：听力先抓实词",
-            "idea": "回到开头：to、for、and 不是消失了，而是弱读成了 /ə/，被前后的词带了过去。听的时候，先把耳朵对准重读的实词。",
-            "why": "实词读得重、读得长，最容易听清，意思也都在它们身上。虚词又轻又短，听不清也没关系，大多能按语法补回来。反过来，非要每个小词都听清，就会卡在那里，错过后面的实词。",
-            "takeaway": "实词重读，虚词弱读成 /ə/；听力先抓实词。",
-            "example": "bread and butter 听起来像 bread-n-butter，只要听出 bread 和 butter，意思就到手了。I want to go for a walk. 抓住 want、go、walk 三个重读词就够了。"
+            "title": "再读故事",
+            "kind": "story-read",
+            "idea": "看着字听一遍。注意问句的尾巴往上扬。"
+          },
+          {
+            "title": "换一个地方，再问一遍",
+            "kind": "drill",
+            "frame": "Is Mochi {a}?",
+            "zh": "Mochi {a}吗？",
+            "slots": {
+              "a": [
+                {
+                  "en": "in the kitchen",
+                  "zh": "在厨房",
+                  "pic": "🍳"
+                },
+                {
+                  "en": "on the roof",
+                  "zh": "在屋顶上",
+                  "pic": "🏠"
+                },
+                {
+                  "en": "on the bed",
+                  "zh": "在床上",
+                  "pic": "🛏️"
+                },
+                {
+                  "en": "alone",
+                  "zh": "是一个人",
+                  "pic": "🧍"
+                }
+              ]
+            },
+            "need": 3
+          },
+          {
+            "title": "跟读",
+            "kind": "shadow",
+            "tip": "问句的尾巴往上扬 ↗，回答往下落 ↘。",
+            "lines": [
+              0,
+              2,
+              3
+            ]
+          },
+          {
+            "title": "复述：串起来",
+            "kind": "retell",
+            "idea": "看着图，用 Is…? 和 isn't 把找猫的过程讲一遍。",
+            "keys": [
+              [
+                "roof",
+                "orange"
+              ],
+              [
+                "kitchen",
+                "isn't"
+              ],
+              [
+                "your room"
+              ],
+              [
+                "bed",
+                "alone",
+                "too"
+              ]
+            ]
           }
         ],
         "interaction": {
           "type": "listen",
-          "prompt": "听一听，选出你听到的句子",
-          "audio": "I want to go for a walk.",
-          "answer": 0,
-          "why": "to 和 for 都弱读成了 /tə/、/fə/，句子靠 want、go、walk 三个重读词撑起来。",
+          "prompt": "听一听，这句话是什么意思？",
+          "audio": "Is he in the kitchen?",
+          "showText": "after",
           "options": [
-            "I want to go for a walk.",
-            "I went to go for a walk.",
-            "I want to go for walks."
+            "他在厨房吗？",
+            "他在厨房。",
+            "他不在厨房。"
           ],
+          "answer": 0,
+          "why": "开头是 Is，句尾往上扬，是问句。「他在厨房。」要说 He is in the kitchen.；「他不在厨房。」要有 isn't。",
           "ref": [
             2,
-            4
+            3
           ]
         },
-        "take": "实词重读，虚词弱读成 /ə/。听力先抓实词。",
+        "take": "is 搬到最前就是问句，is 后加 not 就是否定；问\"是不是\"，句尾上扬。",
         "quiz": [
           {
-            "q": "fish and chips 里的 and 通常怎么读？",
+            "q": "中文\"那只猫不是橘色的\"，英语怎么说？",
             "options": [
-              "/ən/ 或只剩 /n/",
-              "/ænd/，每个字母都读清",
-              "完全不读"
+              "That cat isn't orange.",
+              "That cat not orange.",
+              "That cat is orange not."
             ],
             "answer": 0,
-            "why": "and 是虚词，会弱读成 /ən/，常常连 d 都省掉，变成 fish-n-chips。但它还在，只是很轻，所以不是「完全不读」。",
-            "ref": 2
+            "why": "not 紧跟在 is 后面。「That cat not orange.」丢了 is；「That cat is orange not.」把 not 放错了位置。",
+            "ref": 3
           },
           {
-            "q": "为什么 “I CAN swim!”（强调“我会”）里的 can 要读成 /kæn/？",
+            "q": "Mochi 其实不在屋顶上，怎么回答？",
             "options": [
-              "虚词被强调时承载了重点，就恢复重读",
-              "因为 can 永远重读",
-              "因为后面是 swim"
+              "No, he isn't.",
+              "No, he is.",
+              "No, he's."
             ],
             "answer": 0,
-            "why": "弱读是因为它通常不是重点。一旦说话人要强调“会”，can 就成了意思的核心，于是读完整。",
-            "ref": 3
+            "why": "否定的短回答是 No, he isn't.「No, he is.」前后矛盾；「No, he's.」把缩写放在了句尾，句尾的词要读重，不能缩。",
+            "ref": 3,
+            "audio": "Is Mochi on the roof?"
           }
-        ],
-        "tts": [
-          "bread and butter",
-          "fish and chips",
-          "I want to go for a walk."
         ]
       }
     }
@@ -2329,7 +5342,37 @@ window.DAYS = [
             "why": "今天要讲纯度怎样影响\"高级感\"，先分清：加白、加黑主要改的是明度，加灰才是专门把颜色变浊。",
             "takeaway": "加白加黑动明度，加灰动纯度。",
             "example": "一支正蓝，加白变浅蓝，加黑变深蓝，加灰变成灰蓝。三个里只有灰蓝\"安静\"下来了。",
-            "review": true
+            "review": true,
+            "visual": {
+              "type": "knobs",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "加白加黑动明度，加灰动纯度",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "加白加黑动明度，加灰动纯度",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "加白加黑动明度，加灰动纯度。",
+                  "para": "takeaway"
+                }
+              ]
+            }
           },
           {
             "title": "高纯度为什么会\"跳\"出来",
@@ -2339,16 +5382,33 @@ window.DAYS = [
             "example": "纯度像音量。高纯度是最强音，一出来全场都听见；低纯度是弱音，安安静静铺在后面。一整首曲子都用最强音，听的人会很累。",
             "exLabel": "打个比方",
             "visual": {
-              "type": "swatches",
-              "colors": [
-                "#3D86D9",
-                "#6E93BF",
-                "#8C99A8"
-              ],
-              "labels": [
-                "同一蓝色逐步加灰",
-                "同一蓝色逐步加灰",
-                "同一蓝色逐步加灰"
+              "type": "temp",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "纯度像音量：越高越抢眼，越低越安静",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "纯度像音量：越高越抢眼，越低越安静",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "纯度像音量：越高越抢眼，越低越安静。",
+                  "para": "takeaway"
+                }
               ]
             },
             "check": {
@@ -2375,6 +5435,36 @@ window.DAYS = [
               ],
               "answer": 0,
               "why": "只有包是高纯度，它才是唯一的\"强音\"。「包和衣服都高纯度」会让它们一起抢视线。"
+            },
+            "visual": {
+              "type": "outfit",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "大面积低纯度，小面积高纯度，才不打架",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "大面积低纯度，小面积高纯度，才不打架",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "大面积低纯度，小面积高纯度，才不打架。",
+                  "para": "takeaway"
+                }
+              ]
             }
           },
           {
@@ -2387,7 +5477,37 @@ window.DAYS = [
               "每个颜色都掺了灰。",
               "纯度低，音量小。",
               "没有谁抢视线，整体柔和、克制。"
-            ]
+            ],
+            "visual": {
+              "type": "knobs",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "莫兰迪色高级，是因为全员低纯度、谁也不抢谁",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "莫兰迪色高级，是因为全员低纯度、谁也不抢谁",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "莫兰迪色高级，是因为全员低纯度、谁也不抢谁。",
+                  "para": "takeaway"
+                }
+              ]
+            }
           }
         ],
         "interaction": {
@@ -2450,7 +5570,59 @@ window.DAYS = [
             "why": "问题不在红绿本身，而在两个都“开到最大音量”。降低其中一个的纯度，或把一个缩成小面积点缀，就和谐了。",
             "ref": 2
           }
-        ]
+        ],
+        "hookComic": {
+          "panels": [
+            {
+              "bg": "room",
+              "cast": [
+                {
+                  "who": "xiaoman",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "talk"
+                }
+              ],
+              "cap": "为什么“莫兰迪色”看起来高级"
+            },
+            {
+              "bg": "street",
+              "cast": [
+                {
+                  "who": "xiaoyin",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "talk"
+                }
+              ],
+              "cap": "秘密在纯度"
+            },
+            {
+              "bg": "shop",
+              "cast": [
+                {
+                  "who": "xiaoman",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "talk"
+                }
+              ],
+              "cap": "秘密在纯度"
+            },
+            {
+              "bg": "plain",
+              "cast": [
+                {
+                  "who": "xiaoyin",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "wow"
+                }
+              ],
+              "cap": "秘密在纯度"
+            }
+          ]
+        }
       },
       "history": {
         "id": "d03-history",
@@ -2464,14 +5636,47 @@ window.DAYS = [
             "why": "分封靠血缘维系，血缘越来越淡，诸侯越来越强。东迁之后，天子连\"最强的军队\"这张牌也没有了。",
             "takeaway": "今天的起点：天子名义还在，实力已经不够。",
             "example": "总部被烧、搬去投靠分公司的老板，名义还在，说话却越来越没人听。",
-            "review": true
+            "review": true,
+            "visual": {
+              "recall": "d02-history#8"
+            }
           },
           {
             "title": "东周分两段：春秋和战国",
             "idea": "东周五百多年分成两段：前一段叫春秋，后一段叫战国。两段大约以前 476 年为界，战国到前 221 年秦统一为止。",
             "why": "两个名字都来自书。鲁国史官按年记事的史书叫《春秋》，这段时间和它记的年代大致重合，就借来当名字。后来西汉人把这一时期谋士游说各国的故事编成《战国策》，\"战国\"也由此得名。名字本身就带着两段的气质：前一段还讲礼，后一段只剩\"战\"。",
             "takeaway": "东周 = 春秋 + 战国，合起来五百多年。",
-            "example": "用第 1 天的算法：前 770 年到前 476 年，两个都在公元前，同一边，相减：770 − 476 = 294，春秋约 295 年。战国到前 221 年，约 255 年。合起来五百多年，就是钩子里的\"打了五百多年\"。"
+            "example": "用第 1 天的算法：前 770 年到前 476 年，两个都在公元前，同一边，相减：770 − 476 = 294，春秋约 295 年。战国到前 221 年，约 255 年。合起来五百多年，就是钩子里的\"打了五百多年\"。",
+            "visual": {
+              "type": "tl",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "东周 = 春秋 + 战国，合起来五百多年",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "东周 = 春秋 + 战国，合起来五百多年",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "东周 = 春秋 + 战国，合起来五百多年。",
+                  "para": "takeaway"
+                }
+              ]
+            }
           },
           {
             "title": "如果你是春秋的大诸侯",
@@ -2485,7 +5690,36 @@ window.DAYS = [
               "硬打所有人，打不过来，还会招来围攻。",
               "打出\"尊重天子\"的旗号，别国就不好反对。",
               "再替大家挡住外族的进攻，别国还会感谢你。"
-            ]
+            ],
+            "visual": {
+              "type": "comic",
+              "panels": [
+                {
+                  "bg": "room",
+                  "cast": [
+                    {
+                      "who": "xiaoman",
+                      "x": 0.48,
+                      "y": 0.72,
+                      "face": "talk"
+                    }
+                  ],
+                  "cap": "留着天子、借他的名义，比废掉"
+                },
+                {
+                  "bg": "street",
+                  "cast": [
+                    {
+                      "who": "xiaoyin",
+                      "x": 0.48,
+                      "y": 0.72,
+                      "face": "talk"
+                    }
+                  ],
+                  "cap": "如果你是春秋的大诸侯"
+                }
+              ]
+            }
           },
           {
             "title": "春秋：争当霸主",
@@ -2502,6 +5736,36 @@ window.DAYS = [
               ],
               "answer": 0,
               "why": "天子没兵没地，霸主的地位是自己争来的；打\"尊王\"的旗号，是为了名正言顺地号令别国。所以「天子下令让他们当霸主」不对。"
+            },
+            "visual": {
+              "type": "histmap",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "春秋争霸：打着天子的旗号当老大，还承认天子的名分",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "春秋争霸：打着天子的旗号当老大，还承认天子的名分",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "春秋争霸：打着天子的旗号当老大，还承认天子的名分。",
+                  "para": "takeaway"
+                }
+              ]
             }
           },
           {
@@ -2514,7 +5778,37 @@ window.DAYS = [
               "粮多了 → 兵多了。",
               "小国没了 → 大国直接面对面。",
               "旧规矩没人守了 → 打仗不再\"点到为止\"。"
-            ]
+            ],
+            "visual": {
+              "type": "chain",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "粮更多、对手更少、规矩更松，争霸就升级成了兼并",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "粮更多、对手更少、规矩更松，争霸就升级成了兼并",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "粮更多、对手更少、规矩更松，争霸就升级成了兼并。",
+                  "para": "takeaway"
+                }
+              ]
+            }
           },
           {
             "title": "战国：七个大国，你死我活",
@@ -2531,6 +5825,36 @@ window.DAYS = [
               ],
               "answer": 0,
               "why": "战国剩下的是\"七雄\"。「一百多个」是春秋初年诸侯国的数量，后来被一个个吞并了。"
+            },
+            "visual": {
+              "type": "histmap",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "战国七雄：齐楚燕韩赵魏秦，目标从当老大变成吞并对方",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "战国七雄：齐楚燕韩赵魏秦，目标从当老大变成吞并对方",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "战国七雄：齐楚燕韩赵魏秦，目标从当老大变成吞并对方。",
+                  "para": "takeaway"
+                }
+              ]
             }
           },
           {
@@ -2544,7 +5868,36 @@ window.DAYS = [
               "变强要靠人才和治国方案。",
               "学者们周游列国，向国君推销自己的主张。",
               "主张一多，互相辩论，这就叫**百家争鸣**。"
-            ]
+            ],
+            "visual": {
+              "type": "comic",
+              "panels": [
+                {
+                  "bg": "room",
+                  "cast": [
+                    {
+                      "who": "xiaoman",
+                      "x": 0.48,
+                      "y": 0.72,
+                      "face": "talk"
+                    }
+                  ],
+                  "cap": "竞争制造了对人才和思想的需求"
+                },
+                {
+                  "bg": "street",
+                  "cast": [
+                    {
+                      "who": "xiaoyin",
+                      "x": 0.48,
+                      "y": 0.72,
+                      "face": "talk"
+                    }
+                  ],
+                  "cap": "如果你是战国的国君，最缺什么"
+                }
+              ]
+            }
           },
           {
             "title": "两种药方：儒家和法家",
@@ -2561,6 +5914,36 @@ window.DAYS = [
               ],
               "answer": 0,
               "why": "法家用赏罚让人马上为国家种地、打仗，见效最快。「儒家：礼和仁爱」要靠慢慢教化，不是乱世国君最急着要的。"
+            },
+            "visual": {
+              "type": "chain",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "百家都在给乱世开药方；打仗最急时，法家最受国君欢迎",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "百家都在给乱世开药方；打仗最急时，法家最受国君欢迎",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "百家都在给乱世开药方；打仗最急时，法家最受国君欢迎。",
+                  "para": "takeaway"
+                }
+              ]
             }
           },
           {
@@ -2575,7 +5958,37 @@ window.DAYS = [
               "现在斩敌立功，就能升爵、分田宅。",
               "你会拼命种地、打仗。",
               "人人都这样，秦越打越强。"
-            ]
+            ],
+            "visual": {
+              "type": "histmap",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "秦靠变法统一天下；它的县制，下一关会推广到全国",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "秦靠变法统一天下；它的县制，下一关会推广到全国",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "秦靠变法统一天下；它的县制，下一关会推广到全国。",
+                  "para": "takeaway"
+                }
+              ]
+            }
           }
         ],
         "interaction": {
@@ -2655,7 +6068,59 @@ window.DAYS = [
             "label": "罗马共和国建立",
             "kind": "event"
           }
-        ]
+        ],
+        "hookComic": {
+          "panels": [
+            {
+              "bg": "room",
+              "cast": [
+                {
+                  "who": "xiaoman",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "talk"
+                }
+              ],
+              "cap": "周天子还在，诸侯却打了五百多"
+            },
+            {
+              "bg": "street",
+              "cast": [
+                {
+                  "who": "xiaoyin",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "talk"
+                }
+              ],
+              "cap": "他们到底在争什么"
+            },
+            {
+              "bg": "shop",
+              "cast": [
+                {
+                  "who": "xiaoman",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "talk"
+                }
+              ],
+              "cap": "他们到底在争什么"
+            },
+            {
+              "bg": "plain",
+              "cast": [
+                {
+                  "who": "xiaoyin",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "wow"
+                }
+              ],
+              "cap": "他们到底在争什么"
+            }
+          ]
+        }
       },
       "geo": {
         "id": "d03-geo",
@@ -2783,91 +6248,91 @@ window.DAYS = [
               "高度是\"大落差、平一段、再大落差、再平一段\"地变，更像楼梯。"
             ],
             "visual": {
-                "type": "profileTrip",
-                "base": {},
-                "frames": [
-                  {
-                    "cap": "从西往东，脚下的地面在变低",
-                    "para": "idea",
-                    "set": {
-                      "progress": 0.03,
-                      "plates": 0
-                    },
-                    "scrub": {
-                      "key": "progress",
-                      "from": 0,
-                      "to": 1,
-                      "ticks": [
-                        0.03,
-                        0.38,
-                        0.76,
-                        0.99
-                      ],
-                      "tickLabels": [
-                        "拉萨",
-                        "兰州",
-                        "郑州",
-                        "上海"
-                      ]
-                    }
+              "type": "profileTrip",
+              "base": {},
+              "frames": [
+                {
+                  "cap": "从西往东，脚下的地面在变低",
+                  "para": "idea",
+                  "set": {
+                    "progress": 0.03,
+                    "plates": 0
                   },
-                  {
-                    "cap": "不是滑梯，是一级一级的台阶",
-                    "para": "why",
-                    "set": {
-                      "from": 0.03,
-                      "to": 1,
-                      "progress": 1,
-                      "showKans": 1
-                    },
-                    "play": "ride",
-                    "dur": 1600,
-                    "scrub": {
-                      "key": "progress",
-                      "from": 0,
-                      "to": 1,
-                      "ticks": [
-                        0.03,
-                        0.38,
-                        0.76,
-                        0.99
-                      ],
-                      "tickLabels": [
-                        "拉萨",
-                        "兰州",
-                        "郑州",
-                        "上海"
-                      ]
-                    }
-                  },
-                  {
-                    "cap": "西边高、东边低，像下楼梯",
-                    "para": "takeaway",
-                    "set": {
-                      "progress": 1,
-                      "showKans": 1,
-                      "plates": 0.2
-                    },
-                    "scrub": {
-                      "key": "progress",
-                      "from": 0,
-                      "to": 1,
-                      "ticks": [
-                        0.03,
-                        0.38,
-                        0.76,
-                        0.99
-                      ],
-                      "tickLabels": [
-                        "拉萨",
-                        "兰州",
-                        "郑州",
-                        "上海"
-                      ]
-                    }
+                  "scrub": {
+                    "key": "progress",
+                    "from": 0,
+                    "to": 1,
+                    "ticks": [
+                      0.03,
+                      0.38,
+                      0.76,
+                      0.99
+                    ],
+                    "tickLabels": [
+                      "拉萨",
+                      "兰州",
+                      "郑州",
+                      "上海"
+                    ]
                   }
-                ]
-              }
+                },
+                {
+                  "cap": "不是滑梯，是一级一级的台阶",
+                  "para": "why",
+                  "set": {
+                    "from": 0.03,
+                    "to": 1,
+                    "progress": 1,
+                    "showKans": 1
+                  },
+                  "play": "ride",
+                  "dur": 1600,
+                  "scrub": {
+                    "key": "progress",
+                    "from": 0,
+                    "to": 1,
+                    "ticks": [
+                      0.03,
+                      0.38,
+                      0.76,
+                      0.99
+                    ],
+                    "tickLabels": [
+                      "拉萨",
+                      "兰州",
+                      "郑州",
+                      "上海"
+                    ]
+                  }
+                },
+                {
+                  "cap": "西边高、东边低，像下楼梯",
+                  "para": "takeaway",
+                  "set": {
+                    "progress": 1,
+                    "showKans": 1,
+                    "plates": 0.2
+                  },
+                  "scrub": {
+                    "key": "progress",
+                    "from": 0,
+                    "to": 1,
+                    "ticks": [
+                      0.03,
+                      0.38,
+                      0.76,
+                      0.99
+                    ],
+                    "tickLabels": [
+                      "拉萨",
+                      "兰州",
+                      "郑州",
+                      "上海"
+                    ]
+                  }
+                }
+              ]
+            }
           },
           {
             "title": "三级阶梯：最高一级是\"世界屋脊\"",
@@ -2876,61 +6341,61 @@ window.DAYS = [
             "takeaway": "中国地势西高东低，分三级阶梯；第一级是青藏高原，4000 米以上。",
             "example": "第一级的青藏高原被叫作\"世界屋脊\"，它的主体在西藏和青海两个省级区。拉萨坐落在高原上的河谷里，比周围的高原面低一些，但也有约 3650 米。",
             "visual": {
-                "type": "cnmap",
-                "stage": "d03geo",
-                "base": {
-                  "steps": []
-                },
-                "frames": [
-                  {
-                    "cap": "先看中国的轮廓",
-                    "para": "idea",
-                    "set": {
-                      "steps": []
-                    }
-                  },
-                  {
-                    "cap": "第一级是青藏高原，最高的一级",
-                    "para": "why",
-                    "set": {
-                      "steps": [
-                        1
-                      ]
-                    }
-                  },
-                  {
-                    "cap": "柴达木在高原上，仍算第一级",
-                    "para": "example",
-                    "set": {
-                      "steps": [
-                        1
-                      ],
-                      "focus": [
-                        "basin:qaidam"
-                      ],
-                      "hotspot": "qaidam",
-                      "hotspots": [
-                        "qaidam"
-                      ]
-                    }
-                  },
-                  {
-                    "cap": "第一级平均在 4000 米以上",
-                    "para": "takeaway",
-                    "set": {
-                      "steps": [
-                        1
-                      ],
-                      "labels": [
-                        "qingzang",
-                        "qaidam"
-                      ],
-                      "focus": [],
-                      "hotspot": null
-                    }
-                  }
-                ]
+              "type": "cnmap",
+              "stage": "d03geo",
+              "base": {
+                "steps": []
               },
+              "frames": [
+                {
+                  "cap": "先看中国的轮廓",
+                  "para": "idea",
+                  "set": {
+                    "steps": []
+                  }
+                },
+                {
+                  "cap": "第一级是青藏高原，最高的一级",
+                  "para": "why",
+                  "set": {
+                    "steps": [
+                      1
+                    ]
+                  }
+                },
+                {
+                  "cap": "柴达木在高原上，仍算第一级",
+                  "para": "example",
+                  "set": {
+                    "steps": [
+                      1
+                    ],
+                    "focus": [
+                      "basin:qaidam"
+                    ],
+                    "hotspot": "qaidam",
+                    "hotspots": [
+                      "qaidam"
+                    ]
+                  }
+                },
+                {
+                  "cap": "第一级平均在 4000 米以上",
+                  "para": "takeaway",
+                  "set": {
+                    "steps": [
+                      1
+                    ],
+                    "labels": [
+                      "qingzang",
+                      "qaidam"
+                    ],
+                    "focus": [],
+                    "hotspot": null
+                  }
+                }
+              ]
+            },
             "check": {
               "q": "三级阶梯里，最高的第一级是哪里？",
               "options": [
@@ -2948,183 +6413,183 @@ window.DAYS = [
             "takeaway": "第二级多高原和盆地，第三级多平原和丘陵；盆地看它坐在哪一级。",
             "example": "第二级有内蒙古高原、黄土高原、云贵高原，还有四川盆地、塔里木盆地、准噶尔盆地。第三级有东北平原、华北平原、长江中下游平原和东南丘陵。就像把脸盆放在二楼：盆底再低，它也还在二楼。",
             "visual": {
-                "type": "cnmap",
-                "stage": "d03geo",
-                "base": {
-                  "steps": [
-                    2,
-                    3
-                  ]
-                },
-                "frames": [
-                  {
-                    "cap": "第二级多高原和盆地",
-                    "para": "idea",
-                    "set": {
-                      "steps": [
-                        2,
-                        3
-                      ]
-                    }
-                  },
-                  {
-                    "cap": "高原：内蒙古、黄土、云贵",
-                    "para": "why",
-                    "set": {
-                      "focus": [
-                        "plateau:neimenggu",
-                        "plateau:huangtu",
-                        "plateau:yungui"
-                      ],
-                      "labels": [
-                        "neimenggu",
-                        "huangtu",
-                        "yungui"
-                      ]
-                    }
-                  },
-                  {
-                    "cap": "塔里木盆地，四周高、中间低",
-                    "para": null,
-                    "set": {
-                      "focus": [
-                        "basin:tarim"
-                      ],
-                      "hotspot": "tarim",
-                      "labels": [
-                        "tarim"
-                      ]
-                    }
-                  },
-                  {
-                    "cap": "准噶尔盆地，也是一只脸盆",
-                    "para": null,
-                    "set": {
-                      "focus": [
-                        "basin:junggar"
-                      ],
-                      "hotspot": "junggar",
-                      "labels": [
-                        "junggar"
-                      ]
-                    }
-                  },
-                  {
-                    "cap": "四川盆地坐在第二级台阶上",
-                    "para": "example",
-                    "set": {
-                      "focus": [
-                        "basin:sichuan"
-                      ],
-                      "hotspot": "sichuan",
-                      "labels": [
-                        "sichuan"
-                      ]
-                    }
-                  },
-                  {
-                    "cap": "柴达木盆地也是一个碗",
-                    "para": null,
-                    "set": {
-                      "focus": [
-                        "basin:qaidam"
-                      ],
-                      "hotspot": "qaidam",
-                      "labels": [
-                        "qaidam"
-                      ]
-                    }
-                  },
-                  {
-                    "cap": "第三级多在 500 米以下",
-                    "para": null,
-                    "set": {
-                      "steps": [
-                        1,
-                        2,
-                        3
-                      ],
-                      "focus": [],
-                      "hotspot": null
-                    }
-                  },
-                  {
-                    "cap": "东北平原又低又平",
-                    "para": null,
-                    "set": {
-                      "focus": [
-                        "plain:dongbei"
-                      ],
-                      "hotspot": "dongbei",
-                      "labels": [
-                        "dongbei"
-                      ]
-                    }
-                  },
-                  {
-                    "cap": "华北平原铺到海边",
-                    "para": null,
-                    "set": {
-                      "focus": [
-                        "plain:huabei"
-                      ],
-                      "hotspot": "huabei",
-                      "labels": [
-                        "huabei"
-                      ]
-                    }
-                  },
-                  {
-                    "cap": "长江中下游平原，又低又平",
-                    "para": null,
-                    "set": {
-                      "focus": [
-                        "plain:changjiang"
-                      ],
-                      "hotspot": "changjiang",
-                      "labels": [
-                        "changjiang"
-                      ]
-                    }
-                  },
-                  {
-                    "cap": "三级、盆地和平原，都标在这张图上",
-                    "para": "takeaway",
-                    "set": {
-                      "steps": [
-                        1,
-                        2,
-                        3
-                      ],
-                      "focus": [],
-                      "hotspot": null,
-                      "units": "all",
-                      "labels": [
-                        "qingzang",
-                        "tarim",
-                        "junggar",
-                        "qaidam",
-                        "sichuan",
-                        "dongbei",
-                        "huabei",
-                        "changjiang",
-                        "neimenggu",
-                        "huangtu",
-                        "yungui"
-                      ],
-                      "hotspots": [
-                        "tarim",
-                        "junggar",
-                        "qaidam",
-                        "sichuan",
-                        "dongbei",
-                        "huabei",
-                        "changjiang"
-                      ]
-                    }
-                  }
+              "type": "cnmap",
+              "stage": "d03geo",
+              "base": {
+                "steps": [
+                  2,
+                  3
                 ]
-              }
+              },
+              "frames": [
+                {
+                  "cap": "第二级多高原和盆地",
+                  "para": "idea",
+                  "set": {
+                    "steps": [
+                      2,
+                      3
+                    ]
+                  }
+                },
+                {
+                  "cap": "高原：内蒙古、黄土、云贵",
+                  "para": "why",
+                  "set": {
+                    "focus": [
+                      "plateau:neimenggu",
+                      "plateau:huangtu",
+                      "plateau:yungui"
+                    ],
+                    "labels": [
+                      "neimenggu",
+                      "huangtu",
+                      "yungui"
+                    ]
+                  }
+                },
+                {
+                  "cap": "塔里木盆地，四周高、中间低",
+                  "para": null,
+                  "set": {
+                    "focus": [
+                      "basin:tarim"
+                    ],
+                    "hotspot": "tarim",
+                    "labels": [
+                      "tarim"
+                    ]
+                  }
+                },
+                {
+                  "cap": "准噶尔盆地，也是一只脸盆",
+                  "para": null,
+                  "set": {
+                    "focus": [
+                      "basin:junggar"
+                    ],
+                    "hotspot": "junggar",
+                    "labels": [
+                      "junggar"
+                    ]
+                  }
+                },
+                {
+                  "cap": "四川盆地坐在第二级台阶上",
+                  "para": "example",
+                  "set": {
+                    "focus": [
+                      "basin:sichuan"
+                    ],
+                    "hotspot": "sichuan",
+                    "labels": [
+                      "sichuan"
+                    ]
+                  }
+                },
+                {
+                  "cap": "柴达木盆地也是一个碗",
+                  "para": null,
+                  "set": {
+                    "focus": [
+                      "basin:qaidam"
+                    ],
+                    "hotspot": "qaidam",
+                    "labels": [
+                      "qaidam"
+                    ]
+                  }
+                },
+                {
+                  "cap": "第三级多在 500 米以下",
+                  "para": null,
+                  "set": {
+                    "steps": [
+                      1,
+                      2,
+                      3
+                    ],
+                    "focus": [],
+                    "hotspot": null
+                  }
+                },
+                {
+                  "cap": "东北平原又低又平",
+                  "para": null,
+                  "set": {
+                    "focus": [
+                      "plain:dongbei"
+                    ],
+                    "hotspot": "dongbei",
+                    "labels": [
+                      "dongbei"
+                    ]
+                  }
+                },
+                {
+                  "cap": "华北平原铺到海边",
+                  "para": null,
+                  "set": {
+                    "focus": [
+                      "plain:huabei"
+                    ],
+                    "hotspot": "huabei",
+                    "labels": [
+                      "huabei"
+                    ]
+                  }
+                },
+                {
+                  "cap": "长江中下游平原，又低又平",
+                  "para": null,
+                  "set": {
+                    "focus": [
+                      "plain:changjiang"
+                    ],
+                    "hotspot": "changjiang",
+                    "labels": [
+                      "changjiang"
+                    ]
+                  }
+                },
+                {
+                  "cap": "三级、盆地和平原，都标在这张图上",
+                  "para": "takeaway",
+                  "set": {
+                    "steps": [
+                      1,
+                      2,
+                      3
+                    ],
+                    "focus": [],
+                    "hotspot": null,
+                    "units": "all",
+                    "labels": [
+                      "qingzang",
+                      "tarim",
+                      "junggar",
+                      "qaidam",
+                      "sichuan",
+                      "dongbei",
+                      "huabei",
+                      "changjiang",
+                      "neimenggu",
+                      "huangtu",
+                      "yungui"
+                    ],
+                    "hotspots": [
+                      "tarim",
+                      "junggar",
+                      "qaidam",
+                      "sichuan",
+                      "dongbei",
+                      "huabei",
+                      "changjiang"
+                    ]
+                  }
+                }
+              ]
+            }
           },
           {
             "title": "台阶之间的\"坎\"：两条分界线",
@@ -3142,111 +6607,111 @@ window.DAYS = [
               "why": "台阶之间的落差集中在陡坎上，这些陡坎就是「一列列大山」。「一条条大河」会穿过分界线往下流，但它不是坎本身。"
             },
             "visual": {
-                "type": "cnmap",
-                "stage": "d03geo",
-                "base": {
-                  "steps": [
-                    1,
-                    2,
-                    3
-                  ],
-                  "rivers": {
-                    "yangtze": "on",
-                    "yellow": "on"
+              "type": "cnmap",
+              "stage": "d03geo",
+              "base": {
+                "steps": [
+                  1,
+                  2,
+                  3
+                ],
+                "rivers": {
+                  "yangtze": "on",
+                  "yellow": "on"
+                }
+              },
+              "hotspots": [
+                {
+                  "id": "taihang",
+                  "label": "太行山",
+                  "tip": "西：黄土高原｜东：华北平原"
+                }
+              ],
+              "frames": [
+                {
+                  "cap": "一、二级之间是昆仑、祁连、横断",
+                  "para": "idea",
+                  "set": {
+                    "lines": {
+                      "line1": "drawn"
+                    },
+                    "labels": [
+                      "kunlun",
+                      "qilian",
+                      "hengduan"
+                    ]
                   }
                 },
-                "hotspots": [
-                  {
-                    "id": "taihang",
-                    "label": "太行山",
-                    "tip": "西：黄土高原｜东：华北平原"
+                {
+                  "cap": "第二条线从大兴安岭画起",
+                  "para": "why",
+                  "set": {
+                    "lines": {
+                      "line2": 0.18
+                    },
+                    "labels": [
+                      "kunlun",
+                      "qilian",
+                      "hengduan",
+                      "daxinganling"
+                    ],
+                    "pending": [
+                      "taihang",
+                      "wushan",
+                      "xuefeng"
+                    ]
                   }
-                ],
-                "frames": [
-                  {
-                    "cap": "一、二级之间是昆仑、祁连、横断",
-                    "para": "idea",
-                    "set": {
-                      "lines": {
-                        "line1": "drawn"
-                      },
-                      "labels": [
-                        "kunlun",
-                        "qilian",
-                        "hengduan"
-                      ]
-                    }
-                  },
-                  {
-                    "cap": "第二条线从大兴安岭画起",
-                    "para": "why",
-                    "set": {
-                      "lines": {
-                        "line2": 0.18
-                      },
-                      "labels": [
-                        "kunlun",
-                        "qilian",
-                        "hengduan",
-                        "daxinganling"
-                      ],
-                      "pending": [
-                        "taihang",
-                        "wushan",
-                        "xuefeng"
-                      ]
-                    }
-                  },
-                  {
-                    "cap": "太行山：西边高原，东边平原",
-                    "para": "example",
-                    "set": {
-                      "lines": {
-                        "line2": "partial"
-                      },
-                      "hotspot": "taihang",
-                      "hotspots": [
-                        "taihang"
-                      ],
-                      "inset": "profile",
-                      "insetMark": 2,
-                      "labels": [
-                        "kunlun",
-                        "qilian",
-                        "hengduan",
-                        "daxinganling",
-                        "taihang"
-                      ],
-                      "pending": [
-                        "wushan",
-                        "xuefeng"
-                      ]
-                    }
-                  },
-                  {
-                    "cap": "两条线、七座山，把三级分开",
-                    "para": "takeaway",
-                    "set": {
-                      "lines": {
-                        "line1": "drawn",
-                        "line2": "drawn"
-                      },
-                      "hotspot": null,
-                      "labels": [
-                        "kunlun",
-                        "qilian",
-                        "hengduan",
-                        "daxinganling",
-                        "taihang",
-                        "wushan",
-                        "xuefeng"
-                      ],
-                      "pending": [],
-                      "inset": "profile"
-                    }
+                },
+                {
+                  "cap": "太行山：西边高原，东边平原",
+                  "para": "example",
+                  "set": {
+                    "lines": {
+                      "line2": "partial"
+                    },
+                    "hotspot": "taihang",
+                    "hotspots": [
+                      "taihang"
+                    ],
+                    "inset": "profile",
+                    "insetMark": 2,
+                    "labels": [
+                      "kunlun",
+                      "qilian",
+                      "hengduan",
+                      "daxinganling",
+                      "taihang"
+                    ],
+                    "pending": [
+                      "wushan",
+                      "xuefeng"
+                    ]
                   }
-                ]
-              }
+                },
+                {
+                  "cap": "两条线、七座山，把三级分开",
+                  "para": "takeaway",
+                  "set": {
+                    "lines": {
+                      "line1": "drawn",
+                      "line2": "drawn"
+                    },
+                    "hotspot": null,
+                    "labels": [
+                      "kunlun",
+                      "qilian",
+                      "hengduan",
+                      "daxinganling",
+                      "taihang",
+                      "wushan",
+                      "xuefeng"
+                    ],
+                    "pending": [],
+                    "inset": "profile"
+                  }
+                }
+              ]
+            }
           },
           {
             "title": "西边为什么这么高：板块相撞",
@@ -3261,60 +6726,60 @@ window.DAYS = [
               "几千万年挤下来，成了世界上最高的高原。"
             ],
             "visual": {
-                "type": "plates",
-                "base": {
-                  "mode": "collide",
-                  "push": 0
-                },
-                "frames": [
-                  {
-                    "cap": "地面不是一整块，分成几大板块",
-                    "para": "idea",
-                    "set": {
-                      "push": 0.08,
-                      "mode": "collide"
-                    }
-                  },
-                  {
-                    "cap": "两块迎面相撞，交界处被挤高",
-                    "para": "why",
-                    "set": {
-                      "push": 0.55
-                    },
-                    "play": "push",
-                    "dur": 1100
-                  },
-                  {
-                    "cap": "印度板块向北推，青藏被挤起来",
-                    "para": "example",
-                    "set": {
-                      "push": 0.8
-                    },
-                    "scrub": {
-                      "key": "push",
-                      "from": 0,
-                      "to": 1,
-                      "ticks": [
-                        0,
-                        0.5,
-                        1
-                      ],
-                      "tickLabels": [
-                        "很早以前",
-                        "",
-                        "今天"
-                      ]
-                    }
-                  },
-                  {
-                    "cap": "青藏高原就是这样被挤出来的",
-                    "para": "takeaway",
-                    "set": {
-                      "push": 1
-                    }
+              "type": "plates",
+              "base": {
+                "mode": "collide",
+                "push": 0
+              },
+              "frames": [
+                {
+                  "cap": "地面不是一整块，分成几大板块",
+                  "para": "idea",
+                  "set": {
+                    "push": 0.08,
+                    "mode": "collide"
                   }
-                ]
-              }
+                },
+                {
+                  "cap": "两块迎面相撞，交界处被挤高",
+                  "para": "why",
+                  "set": {
+                    "push": 0.55
+                  },
+                  "play": "push",
+                  "dur": 1100
+                },
+                {
+                  "cap": "印度板块向北推，青藏被挤起来",
+                  "para": "example",
+                  "set": {
+                    "push": 0.8
+                  },
+                  "scrub": {
+                    "key": "push",
+                    "from": 0,
+                    "to": 1,
+                    "ticks": [
+                      0,
+                      0.5,
+                      1
+                    ],
+                    "tickLabels": [
+                      "很早以前",
+                      "",
+                      "今天"
+                    ]
+                  }
+                },
+                {
+                  "cap": "青藏高原就是这样被挤出来的",
+                  "para": "takeaway",
+                  "set": {
+                    "push": 1
+                  }
+                }
+              ]
+            }
           },
           {
             "title": "推桌布：为什么越往东越低",
@@ -3324,45 +6789,45 @@ window.DAYS = [
             "example": "在家就能做：把桌布铺平，双手按住一边往前推。褶皱在手前面堆得最高，越往前褶皱越小，最远那头几乎还是平的。手就是印度板块，最高的那堆褶皱就是青藏高原。",
             "exLabel": "打个比方",
             "visual": {
-                "type": "plates",
-                "base": {
-                  "mode": "tablecloth",
-                  "push": 0
-                },
-                "frames": [
-                  {
-                    "cap": "离相撞的地方越近，挤得越高",
-                    "para": "idea",
-                    "set": {
-                      "push": 0.2,
-                      "mode": "tablecloth"
-                    }
-                  },
-                  {
-                    "cap": "推桌布：手边的褶皱最高",
-                    "para": "why",
-                    "set": {
-                      "push": 0.6
-                    },
-                    "play": "push",
-                    "dur": 1100
-                  },
-                  {
-                    "cap": "褶皱由高到低，淡成西高东低",
-                    "para": "example",
-                    "set": {
-                      "push": 0.9
-                    }
-                  },
-                  {
-                    "cap": "越往东推力越弱，台阶越低",
-                    "para": "takeaway",
-                    "set": {
-                      "push": 1
-                    }
-                  }
-                ]
+              "type": "plates",
+              "base": {
+                "mode": "tablecloth",
+                "push": 0
               },
+              "frames": [
+                {
+                  "cap": "离相撞的地方越近，挤得越高",
+                  "para": "idea",
+                  "set": {
+                    "push": 0.2,
+                    "mode": "tablecloth"
+                  }
+                },
+                {
+                  "cap": "推桌布：手边的褶皱最高",
+                  "para": "why",
+                  "set": {
+                    "push": 0.6
+                  },
+                  "play": "push",
+                  "dur": 1100
+                },
+                {
+                  "cap": "褶皱由高到低，淡成西高东低",
+                  "para": "example",
+                  "set": {
+                    "push": 0.9
+                  }
+                },
+                {
+                  "cap": "越往东推力越弱，台阶越低",
+                  "para": "takeaway",
+                  "set": {
+                    "push": 1
+                  }
+                }
+              ]
+            },
             "check": {
               "q": "推桌布时，褶皱最高的地方在哪？",
               "options": [
@@ -3380,151 +6845,151 @@ window.DAYS = [
             "takeaway": "板块挤压造出三级阶梯；拉萨到上海，正好下了三级。",
             "example": "拉萨约 3650 米，在第一级。火车下到兰州约 1500 米，进了第二级的黄土高原一带。再往东越过二、三级之间的坎，到郑州只剩约 100 米，已经是第三级的华北平原，然后一路平平地开到上海。",
             "visual": {
-                "type": "profileTrip",
-                "base": {},
-                "frames": [
-                  {
-                    "cap": "拉萨在第一级，海拔约 3650 米",
-                    "para": "idea",
-                    "set": {
-                      "progress": 0.03,
-                      "plates": 0
-                    },
-                    "scrub": {
-                      "key": "progress",
-                      "from": 0,
-                      "to": 1,
-                      "ticks": [
-                        0.03,
-                        0.38,
-                        0.76,
-                        0.99
-                      ],
-                      "tickLabels": [
-                        "拉萨",
-                        "兰州",
-                        "郑州",
-                        "上海"
-                      ]
-                    }
+              "type": "profileTrip",
+              "base": {},
+              "frames": [
+                {
+                  "cap": "拉萨在第一级，海拔约 3650 米",
+                  "para": "idea",
+                  "set": {
+                    "progress": 0.03,
+                    "plates": 0
                   },
-                  {
-                    "cap": "下第一道坎，到兰州约 1500 米",
-                    "para": "example",
-                    "set": {
-                      "from": 0.03,
-                      "to": 0.38,
-                      "progress": 0.38
-                    },
-                    "play": "ride",
-                    "dur": 1400,
-                    "scrub": {
-                      "key": "progress",
-                      "from": 0,
-                      "to": 1,
-                      "ticks": [
-                        0.03,
-                        0.38,
-                        0.76,
-                        0.99
-                      ],
-                      "tickLabels": [
-                        "拉萨",
-                        "兰州",
-                        "郑州",
-                        "上海"
-                      ]
-                    }
-                  },
-                  {
-                    "cap": "越过第二道坎，郑州只剩约 100 米",
-                    "para": "derive",
-                    "set": {
-                      "from": 0.38,
-                      "to": 0.76,
-                      "progress": 0.76
-                    },
-                    "play": "ride",
-                    "dur": 1400,
-                    "scrub": {
-                      "key": "progress",
-                      "from": 0,
-                      "to": 1,
-                      "ticks": [
-                        0.03,
-                        0.38,
-                        0.76,
-                        0.99
-                      ],
-                      "tickLabels": [
-                        "拉萨",
-                        "兰州",
-                        "郑州",
-                        "上海"
-                      ]
-                    }
-                  },
-                  {
-                    "cap": "然后一路平平地开到海边",
-                    "para": "derive",
-                    "set": {
-                      "from": 0.76,
-                      "to": 0.99,
-                      "progress": 0.99,
-                      "brackets": 1
-                    },
-                    "play": "ride",
-                    "dur": 1000,
-                    "scrub": {
-                      "key": "progress",
-                      "from": 0,
-                      "to": 1,
-                      "ticks": [
-                        0.03,
-                        0.38,
-                        0.76,
-                        0.99
-                      ],
-                      "tickLabels": [
-                        "拉萨",
-                        "兰州",
-                        "郑州",
-                        "上海"
-                      ]
-                    }
-                  },
-                  {
-                    "cap": "越往东推力越弱，台阶越低",
-                    "para": [
-                      "why",
-                      "takeaway"
+                  "scrub": {
+                    "key": "progress",
+                    "from": 0,
+                    "to": 1,
+                    "ticks": [
+                      0.03,
+                      0.38,
+                      0.76,
+                      0.99
                     ],
-                    "set": {
-                      "progress": 0.99,
-                      "plates": 1,
-                      "brackets": 1,
-                      "showKans": 1
-                    },
-                    "scrub": {
-                      "key": "progress",
-                      "from": 0,
-                      "to": 1,
-                      "ticks": [
-                        0.03,
-                        0.38,
-                        0.76,
-                        0.99
-                      ],
-                      "tickLabels": [
-                        "拉萨",
-                        "兰州",
-                        "郑州",
-                        "上海"
-                      ]
-                    }
+                    "tickLabels": [
+                      "拉萨",
+                      "兰州",
+                      "郑州",
+                      "上海"
+                    ]
                   }
-                ]
-              }
+                },
+                {
+                  "cap": "下第一道坎，到兰州约 1500 米",
+                  "para": "example",
+                  "set": {
+                    "from": 0.03,
+                    "to": 0.38,
+                    "progress": 0.38
+                  },
+                  "play": "ride",
+                  "dur": 1400,
+                  "scrub": {
+                    "key": "progress",
+                    "from": 0,
+                    "to": 1,
+                    "ticks": [
+                      0.03,
+                      0.38,
+                      0.76,
+                      0.99
+                    ],
+                    "tickLabels": [
+                      "拉萨",
+                      "兰州",
+                      "郑州",
+                      "上海"
+                    ]
+                  }
+                },
+                {
+                  "cap": "越过第二道坎，郑州只剩约 100 米",
+                  "para": "derive",
+                  "set": {
+                    "from": 0.38,
+                    "to": 0.76,
+                    "progress": 0.76
+                  },
+                  "play": "ride",
+                  "dur": 1400,
+                  "scrub": {
+                    "key": "progress",
+                    "from": 0,
+                    "to": 1,
+                    "ticks": [
+                      0.03,
+                      0.38,
+                      0.76,
+                      0.99
+                    ],
+                    "tickLabels": [
+                      "拉萨",
+                      "兰州",
+                      "郑州",
+                      "上海"
+                    ]
+                  }
+                },
+                {
+                  "cap": "然后一路平平地开到海边",
+                  "para": "derive",
+                  "set": {
+                    "from": 0.76,
+                    "to": 0.99,
+                    "progress": 0.99,
+                    "brackets": 1
+                  },
+                  "play": "ride",
+                  "dur": 1000,
+                  "scrub": {
+                    "key": "progress",
+                    "from": 0,
+                    "to": 1,
+                    "ticks": [
+                      0.03,
+                      0.38,
+                      0.76,
+                      0.99
+                    ],
+                    "tickLabels": [
+                      "拉萨",
+                      "兰州",
+                      "郑州",
+                      "上海"
+                    ]
+                  }
+                },
+                {
+                  "cap": "越往东推力越弱，台阶越低",
+                  "para": [
+                    "why",
+                    "takeaway"
+                  ],
+                  "set": {
+                    "progress": 0.99,
+                    "plates": 1,
+                    "brackets": 1,
+                    "showKans": 1
+                  },
+                  "scrub": {
+                    "key": "progress",
+                    "from": 0,
+                    "to": 1,
+                    "ticks": [
+                      0.03,
+                      0.38,
+                      0.76,
+                      0.99
+                    ],
+                    "tickLabels": [
+                      "拉萨",
+                      "兰州",
+                      "郑州",
+                      "上海"
+                    ]
+                  }
+                }
+              ]
+            }
           }
         ],
         "interaction": {
@@ -3578,17 +7043,175 @@ window.DAYS = [
       "finance": {
         "id": "d03-finance",
         "title": "先付钱给自己",
-        "minutes": 4,
-        "hook": "“月底剩多少就存多少”——为什么这样做，常常一分都存不下？",
+        "minutes": 7,
+        "hook": "\"月底剩多少就存多少\"——为什么这样做，常常一分都存不下？",
+        "hookComic": {
+          "panels": [
+            {
+              "bg": "room",
+              "cast": [
+                {
+                  "who": "xiaoman",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "talk"
+                }
+              ],
+              "cap": "\"月底剩多少就存多少\"——为"
+            },
+            {
+              "bg": "street",
+              "cast": [
+                {
+                  "who": "xiaoyin",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "talk"
+                }
+              ],
+              "cap": "\"月底剩多少就存多少\"——为"
+            },
+            {
+              "bg": "shop",
+              "cast": [
+                {
+                  "who": "xiaoman",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "talk"
+                }
+              ],
+              "cap": "\"月底剩多少就存多少\"——为"
+            },
+            {
+              "bg": "plain",
+              "cast": [
+                {
+                  "who": "xiaoyin",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "wow"
+                }
+              ],
+              "cap": "\"月底剩多少就存多少\"——为"
+            }
+          ]
+        },
         "steps": [
           {
-            "text": "预算就是：钱花出去之前，先决定它要去哪儿。"
+            "title": "钱都去哪了？",
+            "idea": "钱不是一下子花光的，是一笔一笔被小开销带走的。",
+            "visual": {
+              "type": "comic",
+              "panels": [
+                {
+                  "bg": "bank",
+                  "cast": [
+                    {
+                      "who": "xiaoman",
+                      "x": 0.5,
+                      "y": 0.72,
+                      "face": "talk"
+                    }
+                  ],
+                  "cap": "发工资了"
+                },
+                {
+                  "bg": "kitchen",
+                  "cast": [
+                    {
+                      "who": "xiaoman",
+                      "x": 0.5,
+                      "y": 0.72,
+                      "face": "talk"
+                    }
+                  ],
+                  "cap": "一笔一笔飞走"
+                },
+                {
+                  "bg": "room",
+                  "cast": [
+                    {
+                      "who": "xiaoman",
+                      "x": 0.5,
+                      "y": 0.72,
+                      "face": "talk"
+                    }
+                  ],
+                  "cap": "月底一看，0"
+                }
+              ]
+            },
+            "takeaway": "先花后存，月底常常什么都不剩。"
           },
           {
-            "text": "一个常用的起点叫 50/30/20：收入的 50% 给“必需”（房租、吃饭、交通），30% 给“想要”（衣服、娱乐），20% 给“储蓄”。"
+            "title": "预算：花之前先分好",
+            "idea": "**预算**就是钱花出去之前，先决定每一份去哪儿。",
+            "visual": {
+              "type": "chain",
+              "base": {
+                "nodes": [
+                  "工资到账",
+                  "先分成几份",
+                  "再按份花"
+                ]
+              },
+              "frames": [
+                {
+                  "set": {
+                    "play": 0,
+                    "step": 0
+                  },
+                  "cap": "先看骨架",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "play": 1,
+                    "step": 2
+                  },
+                  "cap": "看完整的图",
+                  "para": "takeaway"
+                }
+              ]
+            },
+            "example": "像排练前先排好歌单。哪首先唱、唱多久，事先定好，就不会临时乱。",
+            "takeaway": "预算 = 先定去向，再花钱。"
           },
           {
-            "text": "推一下为什么不能“花完剩下再存”：花钱总在前面，存钱排在最后，中间的每一笔“小想要”都会挤占它，到月底剩下的往往是 0。所以把储蓄挪到第一顺位——发工资当天就先转走 20%——这叫“先付钱给自己”。",
+            "title": "为什么存钱要排第一",
+            "idea": "发工资当天，先把要存的那份转走，剩下的再花。这叫\"先付钱给自己\"。",
+            "visual": {
+              "type": "comic",
+              "panels": [
+                {
+                  "bg": "bank",
+                  "cast": [
+                    {
+                      "who": "xiaoman",
+                      "x": 0.5,
+                      "y": 0.72,
+                      "face": "talk"
+                    }
+                  ],
+                  "cap": "存钱排最后，被挤掉"
+                },
+                {
+                  "bg": "kitchen",
+                  "cast": [
+                    {
+                      "who": "xiaoman",
+                      "x": 0.5,
+                      "y": 0.72,
+                      "face": "talk"
+                    }
+                  ],
+                  "cap": "存钱排第一，先拿走"
+                }
+              ]
+            },
+            "why": "花钱的机会总在前面。存钱排在最后，每一杯奶茶、每一次打车都会挤掉一点。到月底，就没了。排到第一位，就没人挤得到它。",
+            "takeaway": "先存后花，储蓄才不会被挤掉。",
             "check": {
               "q": "为什么\"花完剩下再存\"常常存不下？",
               "options": [
@@ -3600,11 +7223,167 @@ window.DAYS = [
             }
           },
           {
-            "text": "代入数字：月入 8000。",
-            "formula": "必需 8000 ÷ 100 × 50 = 4000；想要 8000 ÷ 100 × 30 = 2400；储蓄 8000 ÷ 100 × 20 = 1600"
+            "title": "一个起点：50 / 30 / 20",
+            "idea": "一个常用的分法：收入的 50% 给必需，30% 给想要，20% 给储蓄。必需是房租、吃饭、交通；想要是衣服、娱乐、奶茶。",
+            "visual": {
+              "type": "pie",
+              "base": {
+                "slices": [
+                  {
+                    "label": "必需",
+                    "value": 50
+                  },
+                  {
+                    "label": "想要",
+                    "value": 30
+                  },
+                  {
+                    "label": "储蓄",
+                    "value": 20
+                  },
+                  {
+                    "label": "8000 元",
+                    "value": 1
+                  }
+                ],
+                "center": "8000 元"
+              },
+              "frames": [
+                {
+                  "set": {
+                    "play": 0,
+                    "step": 0
+                  },
+                  "cap": "先看骨架",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "play": 1,
+                    "step": 2
+                  },
+                  "cap": "看完整的图",
+                  "para": "takeaway"
+                }
+              ]
+            },
+            "takeaway": "50/30/20：一半给必需，三成给想要，两成先存。",
+            "derive": [
+              "月入 8000。",
+              "必需：8000 ÷ 100 × 50 = 4000。",
+              "想要：8000 ÷ 100 × 30 = 2400。",
+              "储蓄：8000 ÷ 100 × 20 = 1600。"
+            ]
           },
           {
-            "text": "比例不是定律，是起点。房租贵的城市可以改成 60/20/20，关键是储蓄有一个固定份额，而且先拿走。",
+            "title": "怎么读饼图",
+            "idea": "**饼图**就是把\"全部\"画成一个圆，切成几块。每块多大，就占几成。",
+            "visual": {
+              "type": "chain",
+              "base": {
+                "nodes": [
+                  "因",
+                  "果"
+                ]
+              },
+              "frames": [
+                {
+                  "set": {
+                    "play": 0,
+                    "step": 0
+                  },
+                  "cap": "先看骨架",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "play": 1,
+                    "step": 2
+                  },
+                  "cap": "看完整的图",
+                  "para": "takeaway"
+                }
+              ]
+            },
+            "why": "一个圆就是 100%，所以几块加起来一定是 100%。饼图最适合回答\"一共这么多，各占多少\"。",
+            "example": "半个圆就是 50%，四分之一个圆就是 25%。上面\"必需\"那块正好是半个圆。",
+            "takeaway": "饼图：整个圆 = 100%，每块大小 = 占几成。",
+            "check": {
+              "q": "一个饼图分三块，两块是 50% 和 30%，第三块是？",
+              "options": [
+                "20%",
+                "30%"
+              ],
+              "answer": 0,
+              "why": "整个圆是 100%，100 − 50 − 30 = 20。「30%」会让三块加起来变成 110%，超过一整个圆了。"
+            }
+          },
+          {
+            "title": "串起来：比例可以改，顺序不能改",
+            "idea": "50/30/20 只是起点。房租很贵，可以改成 60/20/20。",
+            "visual": {
+              "type": "duo",
+              "base": {
+                "a": {
+                  "type": "pie",
+                  "base": {
+                    "slices": [
+                      {
+                        "label": "必需",
+                        "value": 50
+                      },
+                      {
+                        "label": "想要",
+                        "value": 30
+                      },
+                      {
+                        "label": "储蓄",
+                        "value": 20
+                      }
+                    ]
+                  }
+                },
+                "b": {
+                  "type": "pie",
+                  "base": {
+                    "slices": [
+                      {
+                        "label": "必需",
+                        "value": 60
+                      },
+                      {
+                        "label": "想要",
+                        "value": 20
+                      },
+                      {
+                        "label": "储蓄",
+                        "value": 20
+                      }
+                    ]
+                  }
+                },
+                "dir": "row",
+                "vs": ""
+              },
+              "frames": [
+                {
+                  "set": {
+                    "both": 0
+                  },
+                  "cap": "先看一边",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "both": 1
+                  },
+                  "cap": "两边放一起看",
+                  "para": "takeaway"
+                }
+              ]
+            },
+            "why": "每个人的房租、收入都不同，比例当然可以调。但\"储蓄有固定一份，而且最先拿走\"这一条不变。",
+            "takeaway": "比例可以调，先存的顺序不变。",
             "check": {
               "q": "房租很贵的城市，50/30/20 能改吗？",
               "options": [
@@ -3673,6 +7452,50 @@ window.DAYS = [
             "answer": 0,
             "why": "意思是把储蓄放在所有支出之前，避免被日常花销挤掉。",
             "ref": 2
+          },
+          {
+            "q": "饼图里\"房租\"正好是半个圆，表示房租占收入的？",
+            "options": [
+              "50%",
+              "25%",
+              "100%"
+            ],
+            "answer": 0,
+            "why": "整个圆是 100%，半个圆就是 50%。「25%」是四分之一个圆，「100%」是整个圆。",
+            "ref": 4,
+            "visual": {
+              "type": "pie",
+              "base": {
+                "slices": [
+                  {
+                    "label": "房租",
+                    "value": 50
+                  },
+                  {
+                    "label": "其他",
+                    "value": 50
+                  }
+                ]
+              },
+              "frames": [
+                {
+                  "set": {
+                    "play": 0,
+                    "step": 0
+                  },
+                  "cap": "先看骨架",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "play": 1,
+                    "step": 2
+                  },
+                  "cap": "看完整的图",
+                  "para": "takeaway"
+                }
+              ]
+            }
           }
         ]
       },
@@ -3688,7 +7511,10 @@ window.DAYS = [
             "why": "今天的坎农，就是顺着这个漏洞，再加上新证据，把整个顺序推翻。",
             "takeaway": "詹姆斯-兰格：身体 → 察觉 → 情绪；问题是身体分不清情绪。",
             "example": "被人从背后拍一下，你\"啊\"地一惊，惊和怕几乎在同一瞬间。按\"先身体后感受\"，中间应该有个时间差。",
-            "review": true
+            "review": true,
+            "visual": {
+              "recall": "d02-psych#1"
+            }
           },
           {
             "title": "坎农的批评：太像、太慢",
@@ -3701,7 +7527,37 @@ window.DAYS = [
               "原因必须先于结果出现。",
               "内脏反应却比情绪感受出现得晚。",
               "所以内脏反应当不了情绪的原因。"
-            ]
+            ],
+            "visual": {
+              "type": "wires",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "内脏反应太像、太慢，当不了情绪的\"原因\"",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "内脏反应太像、太慢，当不了情绪的\"原因\"",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "内脏反应太像、太慢，当不了情绪的\"原因\"。",
+                  "para": "takeaway"
+                }
+              ]
+            }
           },
           {
             "title": "动物实验：切断神经，情绪还在",
@@ -3718,6 +7574,35 @@ window.DAYS = [
               ],
               "answer": 0,
               "why": "它们遇到威胁仍会发怒、害怕，所以「再也没有情绪了」不对。这说明情绪不靠察觉内脏变化。"
+            },
+            "visual": {
+              "type": "comic",
+              "panels": [
+                {
+                  "bg": "room",
+                  "cast": [
+                    {
+                      "who": "xiaoman",
+                      "x": 0.48,
+                      "y": 0.72,
+                      "face": "talk"
+                    }
+                  ],
+                  "cap": "切断内脏信号，动物照样有情绪"
+                },
+                {
+                  "bg": "street",
+                  "cast": [
+                    {
+                      "who": "xiaoyin",
+                      "x": 0.48,
+                      "y": 0.72,
+                      "face": "talk"
+                    }
+                  ],
+                  "cap": "动物实验：切断神经，情绪还在"
+                }
+              ]
             }
           },
           {
@@ -3727,11 +7612,33 @@ window.DAYS = [
             "takeaway": "坎农-巴德：丘脑同时触发感受和身体反应，两者并行。",
             "example": "深夜门锁一响，信号到了丘脑，一边让你\"怕\"，一边让你心跳加速。这两件事是兄弟，不是父子。",
             "visual": {
-              "type": "flow",
-              "nodes": [
-                "刺激",
-                "丘脑",
-                "同时：皮层产生感受 + 身体产生反应"
+              "type": "wires",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "坎农-巴德：丘脑同时触发感受和身体反应，两者并行",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "坎农-巴德：丘脑同时触发感受和身体反应，两者并行",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "坎农-巴德：丘脑同时触发感受和身体反应，两者并行。",
+                  "para": "takeaway"
+                }
               ]
             }
           },
@@ -3749,6 +7656,36 @@ window.DAYS = [
               ],
               "answer": 0,
               "why": "杏仁核、下丘脑、前额叶等都参与情绪，所以「只靠丘脑一处」不对，这是对坎农-巴德理论的修正。"
+            },
+            "visual": {
+              "type": "chain",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "丘脑不是唯一中枢，但\"身体分不清情绪\"的批评留了下来",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "丘脑不是唯一中枢，但\"身体分不清情绪\"的批评留了下来",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "丘脑不是唯一中枢，但\"身体分不清情绪\"的批评留了下来。",
+                  "para": "takeaway"
+                }
+              ]
             }
           },
           {
@@ -3756,7 +7693,37 @@ window.DAYS = [
             "idea": "回到开头：被吓一跳的瞬间你就怕了，因为感受不用等身体，两者同时出发。",
             "why": "用电路打比方最清楚。詹姆斯-兰格是\"串联\"：先过身体，再到感受。坎农-巴德是\"并联\"：丘脑这个电源同时接出两条线，一条通感受，一条通身体。可两个理论都没回答一个新问题：既然身体分不清情绪，那情绪到底靠什么区分？",
             "takeaway": "詹姆斯-兰格是串联，坎农-巴德是并联。",
-            "example": "你在后台听到观众欢呼，心跳加速。是兴奋还是怯场？心跳本身不会告诉你答案。下一关的二因素理论说：答案来自你怎么解释它。"
+            "example": "你在后台听到观众欢呼，心跳加速。是兴奋还是怯场？心跳本身不会告诉你答案。下一关的二因素理论说：答案来自你怎么解释它。",
+            "visual": {
+              "type": "wires",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "詹姆斯-兰格是串联，坎农-巴德是并联",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "詹姆斯-兰格是串联，坎农-巴德是并联",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "詹姆斯-兰格是串联，坎农-巴德是并联。",
+                  "para": "takeaway"
+                }
+              ]
+            }
           }
         ],
         "interaction": {
@@ -3816,123 +7783,613 @@ window.DAYS = [
             "why": "丘脑同时发两路信号，两条路平行，所以是并联。「串联：先身体后感受」是詹姆斯-兰格。",
             "ref": 5
           }
-        ]
+        ],
+        "hookComic": {
+          "panels": [
+            {
+              "bg": "room",
+              "cast": [
+                {
+                  "who": "xiaoman",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "talk"
+                }
+              ],
+              "cap": "上一关说“先发抖再害怕”"
+            },
+            {
+              "bg": "street",
+              "cast": [
+                {
+                  "who": "xiaoyin",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "talk"
+                }
+              ],
+              "cap": "如果真是这样，被吓一跳的那一"
+            },
+            {
+              "bg": "shop",
+              "cast": [
+                {
+                  "who": "xiaoman",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "talk"
+                }
+              ],
+              "cap": "如果真是这样，被吓一跳的那一"
+            },
+            {
+              "bg": "plain",
+              "cast": [
+                {
+                  "who": "xiaoyin",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "wow"
+                }
+              ],
+              "cap": "如果真是这样，被吓一跳的那一"
+            }
+          ]
+        }
       },
       "english": {
         "id": "d03-english",
-        "title": "英语的“节拍”",
-        "minutes": 6,
-        "hook": "两句话一长一短，母语者说出来的时间却差不多。为什么？",
+        "title": "Who Cooks?：谁 + 做什么 + 什么",
+        "minutes": 9,
+        "hook": "\"碗洗我\"和\"我洗碗\"，字一样，意思差了十万八千里。英语靠什么分清谁做了什么？",
+        "hookComic": {
+          "panels": [
+            {
+              "bg": "kitchen",
+              "cast": [
+                {
+                  "who": "mia",
+                  "x": 0.32,
+                  "y": 0.72,
+                  "face": "happy"
+                },
+                {
+                  "who": "leo",
+                  "x": 0.62,
+                  "y": 0.74,
+                  "face": "talk"
+                },
+                {
+                  "who": "mochi",
+                  "x": 0.8,
+                  "y": 0.82,
+                  "face": "happy",
+                  "k": 0.7
+                }
+              ]
+            },
+            {
+              "bg": "room",
+              "cast": [
+                {
+                  "who": "mia",
+                  "x": 0.32,
+                  "y": 0.72,
+                  "face": "happy"
+                },
+                {
+                  "who": "leo",
+                  "x": 0.62,
+                  "y": 0.74,
+                  "face": "talk"
+                },
+                {
+                  "who": "mochi",
+                  "x": 0.8,
+                  "y": 0.82,
+                  "face": "happy",
+                  "k": 0.7
+                }
+              ]
+            },
+            {
+              "bg": "street",
+              "cast": [
+                {
+                  "who": "mia",
+                  "x": 0.32,
+                  "y": 0.72,
+                  "face": "happy"
+                },
+                {
+                  "who": "leo",
+                  "x": 0.62,
+                  "y": 0.74,
+                  "face": "talk"
+                },
+                {
+                  "who": "mochi",
+                  "x": 0.8,
+                  "y": 0.82,
+                  "face": "happy",
+                  "k": 0.7
+                }
+              ]
+            }
+          ]
+        },
+        "story": {
+          "title": "Who Cooks?",
+          "panels": [
+            {
+              "bg": "kitchen",
+              "cast": [
+                {
+                  "who": "mia",
+                  "x": 0.32,
+                  "y": 0.72,
+                  "face": "happy"
+                },
+                {
+                  "who": "leo",
+                  "x": 0.62,
+                  "y": 0.74,
+                  "face": "talk"
+                },
+                {
+                  "who": "mochi",
+                  "x": 0.8,
+                  "y": 0.82,
+                  "face": "happy",
+                  "k": 0.7
+                }
+              ]
+            },
+            {
+              "bg": "room",
+              "cast": [
+                {
+                  "who": "mia",
+                  "x": 0.32,
+                  "y": 0.72,
+                  "face": "happy"
+                },
+                {
+                  "who": "leo",
+                  "x": 0.62,
+                  "y": 0.74,
+                  "face": "talk"
+                },
+                {
+                  "who": "mochi",
+                  "x": 0.8,
+                  "y": 0.82,
+                  "face": "happy",
+                  "k": 0.7
+                }
+              ]
+            },
+            {
+              "bg": "street",
+              "cast": [
+                {
+                  "who": "mia",
+                  "x": 0.32,
+                  "y": 0.72,
+                  "face": "happy"
+                },
+                {
+                  "who": "leo",
+                  "x": 0.62,
+                  "y": 0.74,
+                  "face": "talk"
+                },
+                {
+                  "who": "mochi",
+                  "x": 0.8,
+                  "y": 0.82,
+                  "face": "happy",
+                  "k": 0.7
+                }
+              ]
+            },
+            {
+              "bg": "shop",
+              "cast": [
+                {
+                  "who": "mia",
+                  "x": 0.32,
+                  "y": 0.72,
+                  "face": "happy"
+                },
+                {
+                  "who": "leo",
+                  "x": 0.62,
+                  "y": 0.74,
+                  "face": "talk"
+                },
+                {
+                  "who": "mochi",
+                  "x": 0.8,
+                  "y": 0.82,
+                  "face": "happy",
+                  "k": 0.7
+                }
+              ]
+            }
+          ],
+          "lines": [
+            {
+              "who": "B",
+              "en": "I cook. You wash the dishes. All right?",
+              "zh": "我做饭，你洗碗。行吗？",
+              "panel": 0
+            },
+            {
+              "who": "A",
+              "en": "No! I cook. You wash the dishes!",
+              "zh": "不行！我做饭，你洗碗！",
+              "panel": 0
+            },
+            {
+              "who": "B",
+              "en": "You burn the rice.",
+              "zh": "你会把饭烧糊。",
+              "panel": 1
+            },
+            {
+              "who": "A",
+              "en": "And you break the cups!",
+              "zh": "那你还会打碎杯子呢！",
+              "panel": 1
+            },
+            {
+              "who": "B",
+              "en": "All right, all right. We cook. And we wash the dishes.",
+              "zh": "好吧好吧。我们一起做饭，一起洗碗。",
+              "panel": 2
+            },
+            {
+              "who": "A",
+              "en": "Good. Wait. Where is the fish?",
+              "zh": "好。等等，鱼呢？",
+              "panel": 3
+            },
+            {
+              "who": "B",
+              "en": "Look at Mochi!",
+              "zh": "看 Mochi！",
+              "panel": 3
+            }
+          ]
+        },
+        "words": [
+          {
+            "w": "wash",
+            "ipa": "wɑːʃ",
+            "stress": "wash",
+            "pic": "🧽",
+            "zh": "洗",
+            "ex": "You wash the dishes.",
+            "part": "—"
+          },
+          {
+            "w": "dish",
+            "ipa": "dɪʃ",
+            "stress": "dish",
+            "pic": "🍽️",
+            "zh": "盘子；wash the dishes 洗碗",
+            "ex": "We wash the dishes.",
+            "part": "sh 结尾的词变复数加 -es：dishes 多出一个音节"
+          },
+          {
+            "w": "burn",
+            "ipa": "bɜːrn",
+            "stress": "burn",
+            "pic": "🔥",
+            "zh": "烧；烧糊",
+            "ex": "You burn the rice.",
+            "part": "—"
+          },
+          {
+            "w": "break",
+            "ipa": "breɪk",
+            "stress": "break",
+            "pic": "💥",
+            "zh": "打碎",
+            "ex": "And you break the cups!",
+            "part": "ea 在这里读 /eɪ/，和 great 一样"
+          }
+        ],
         "steps": [
           {
-            "title": "实词重，虚词轻",
-            "idea": "昨天学过：承载意思的实词读得重；负责连接的虚词弱读成 /ə/，又轻又短。",
-            "why": "今天要靠\"哪些词重读\"来打拍子，先把这一条站稳。",
-            "takeaway": "重音落在实词上，虚词弱读。",
-            "example": "I want to buy a new dress. 重读的是 want、buy、new、dress；to 和 a 弱读。",
-            "review": true
-          },
-          {
-            "title": "一长一短，为什么一样久",
-            "idea": "Cats eat fish. 只有 3 个词；The cats have been eating the fish. 有 7 个词。可母语者说这两句，用的时间差不多。",
-            "why": "如果英语像中文那样，每个音节都占差不多的时间，长句就该说两倍多久。实际不是这样，说明英语计时的单位不是\"每个音节\"。线索在重读的词上：两句里重读的都是 cats、eat、fish 这 3 个。",
-            "takeaway": "英语说多久，不看有几个词，要看别的东西。",
-            "example": "中文\"我爱吃鱼\"四个字，每个字时长差不多，字越多说得越久，像一字一拍的进行曲。英语却不按字数算时间，按的是另一种拍子。"
-          },
-          {
-            "title": "英语按重音打拍子",
-            "idea": "汉语大致一个音节一拍；英语是**重音节奏**：重读音节落在拍子上，相邻两个重音之间的时间大致相等。",
-            "why": "英语的重读音节又长又响，弱读音节又短又轻，长短差得很多，很难让每个音节一样长。于是节奏由重读音节来撑：每个重音占一拍，弱读音节不另占拍子，只在拍子之间\"搭车\"。",
-            "takeaway": "英语按重音打拍子，重音之间的时间大致相等。",
-            "example": "一小节 4/4 拍，强拍的位置是固定的。两拍之间可以只放一个四分音符，也可以塞进四个十六分音符：音符多了，拍子不变，每个音符就变短。",
-            "exLabel": "打个比方"
-          },
-          {
-            "title": "弱读音节被挤扁",
-            "idea": "既然两个重音之间的时间差不多，中间的弱读音节越多，每个分到的时间就越少，只能说得更快、更含糊。",
-            "why": "弱读音节被挤在拍子之间，没有时间把元音念完整，只好缩成 /ə/，还和前后的词粘在一起。这和昨天学的弱读是同一件事的两面。注意：它们没有被省掉，只是被压缩了。",
-            "takeaway": "重音之间的弱读音节越多，就被挤得越快、越含糊。",
-            "example": "CATS EAT FISH：三个重音之间几乎没有弱读音节，一拍一个词。The CATS have been EATing the FISH：cats 和 eat 之间塞进 have been，eat 和 fish 之间塞进 -ing the，这些音节都被挤得很快。",
-            "derive": [
-              "两句都是 3 个重音，就是 3 拍。",
-              "每拍长度差不多，总时间就差不多。",
-              "长句多出来的音节只能挤进拍子之间，于是变快、变轻。"
-            ],
+            "title": "先听故事",
+            "kind": "story-listen",
+            "idea": "看图听。两个人在吵什么？最后发生了什么？",
             "check": {
-              "q": "上面两句，各有几个重音？",
+              "q": "最后，鱼去哪儿了？",
               "options": [
-                "都是 3 个",
-                "3 个和 7 个"
+                "被 Mochi 叼走了",
+                "Leo 把鱼烧糊了"
               ],
               "answer": 0,
-              "why": "两句的重音都落在 cats、eat、fish 上，都是 3 个，所以时间差不多。「3 个和 7 个」把第二句的每个词都当成了重音。"
+              "why": "最后一格 Leo 说 [[Look at Mochi!]]，Mochi 叼着鱼溜了。「烧糊」说的是 Mia 做饭会烧糊米饭，不是鱼。"
             }
           },
           {
-            "title": "串起来：用手打拍子跟读",
-            "idea": "回到开头：两句一长一短，重音都是 3 个，就都是 3 拍，所以时间差不多。跟读时，用手给每个重音打一拍，弱读音节塞进拍子之间。",
-            "why": "中文的习惯是每个字给一样的时间，拿来读英语，就会把每个词都念得一样清楚，节奏一平，听起来就\"不像\"。用手打拍，逼自己只在重音上落拍，弱读音节自然被挤短。",
-            "takeaway": "英语按重音打拍子，重音之间的弱读音节会被挤压。",
-            "example": "I WANT to BUY a NEW DRESS：手落在 want、buy、new、dress 上，一共 4 拍；to 和 a 轻轻带过，不占拍。就像音乐里强拍落手，弱拍只是经过。",
+            "title": "四个新词",
+            "kind": "words",
+            "idea": "每个词都点一下 ▶。"
+          },
+          {
+            "title": "发音 · 连读：辅音 + 元音会粘在一起",
+            "idea": "前一个词以辅音结尾、后一个词以元音开头，两个词会粘起来读：[[Look at]] 读成 loo-kat。这叫**连读**。",
+            "why": "发 k 时，舌根把气堵住。后面紧跟着元音，舌根一松，气直接冲进元音，k 就成了下一个音节的开头，中间没有理由停。课本里一个词一个词地念，所以你听到连起来的就认不出。",
+            "example": "[[Look at Mochi!]] 听起来像 loo-ka-Mochi。[[an apple]] 听起来像 a-napple。",
+            "takeaway": "辅音结尾 + 元音开头 → 两个词粘在一起读。",
+            "visual": {
+              "type": "sentence",
+              "base": {
+                "rows": [
+                  [
+                    {
+                      "text": "看",
+                      "role": "who"
+                    },
+                    {
+                      "text": "图",
+                      "role": "verb"
+                    }
+                  ]
+                ]
+              },
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "辅音结尾 + 元音开头 → 两个词粘在一起读",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "辅音结尾 + 元音开头 → 两个词粘在一起读",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "辅音结尾 + 元音开头 → 两个词粘在一起读。",
+                  "para": "takeaway"
+                }
+              ]
+            },
             "check": {
-              "q": "跟读时，手上的拍子应该落在？",
+              "q": "[[Look at]] 连读后听起来像？",
               "options": [
-                "重读的词上",
-                "每一个词上"
+                "loo-kat",
+                "look、at，中间停一下"
               ],
               "answer": 0,
-              "why": "英语按重音打拍子，拍子只落在重读音节上。「每一个词上」是中文一字一拍的习惯，会把弱读的小词也念重。"
+              "why": "k 接元音 a，粘成 loo-kat。「中间停一下」是课本上一个词一个词念的样子，不是真实说话。"
             }
+          },
+          {
+            "title": "语法 · 谁 + 做什么 + 什么：顺序不换，\"谁\"不省",
+            "idea": "英语句子的骨架是\"谁 + 做什么 + 什么\"。顺序是固定的，换了位置意思就变了。而且\"谁\"不能省。",
+            "why": "英语的词几乎不变形，谁在做、做在谁身上，全靠位置分：动词前面是做事的人，动词后面是被做的东西。中文常把\"我\"省掉，比如\"做饭去了\"。英语省掉\"谁\"，就成了命令别人：[[Wash the dishes!]] 是\"去洗碗！\"",
+            "example": "[[I cook.]] 我做饭。[[You wash the dishes.]] 你洗碗。[[We wash the dishes.]] 我们洗碗。cook 后面可以不跟东西，wash 后面要说洗什么。",
+            "takeaway": "谁 + 做什么 + 什么。顺序不换，\"谁\"不省。",
+            "visual": {
+              "type": "sentence",
+              "base": {
+                "rows": [
+                  {
+                    "bricks": [
+                      {
+                        "text": "You",
+                        "role": "who"
+                      },
+                      {
+                        "text": "wash",
+                        "role": "verb"
+                      },
+                      {
+                        "text": "the",
+                        "role": "what"
+                      },
+                      {
+                        "text": "The",
+                        "role": "who"
+                      },
+                      {
+                        "text": "wash",
+                        "role": "verb"
+                      },
+                      {
+                        "text": "you",
+                        "role": "what"
+                      },
+                      {
+                        "text": "？",
+                        "role": "extra"
+                      },
+                      {
+                        "text": "Wash",
+                        "role": "verb"
+                      },
+                      {
+                        "text": "the",
+                        "role": "what"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "frames": [
+                {
+                  "set": {
+                    "play": 0
+                  },
+                  "cap": "英语句子的骨架是\"谁 + 做什么 + 什么\"。顺序是固定的，换了位置意思就变了。",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "play": 1
+                  },
+                  "cap": "谁 + 做什么 + 什么。顺序不换，\"谁\"不省。",
+                  "para": "takeaway"
+                }
+              ]
+            },
+            "check": {
+              "q": "中文\"（我）洗杯子\"，英语怎么说？",
+              "options": [
+                "I wash the cups.",
+                "Wash the cups."
+              ],
+              "answer": 0,
+              "why": "英语要说出\"谁\"：I wash the cups.「Wash the cups.」没有\"谁\"，意思变成命令\"去洗杯子！\""
+            }
+          },
+          {
+            "title": "再读故事",
+            "kind": "story-read",
+            "idea": "看着字听。找一找每句里的\"谁\"和\"做什么\"。"
+          },
+          {
+            "title": "换一换：谁做什么",
+            "kind": "drill",
+            "frame": "I {a} {b}.",
+            "zh": "我{a}{b}。",
+            "slots": {
+              "a": [
+                {
+                  "en": "cook",
+                  "zh": "做",
+                  "pic": "👨‍🍳"
+                },
+                {
+                  "en": "wash",
+                  "zh": "洗",
+                  "pic": "🧽"
+                },
+                {
+                  "en": "eat",
+                  "zh": "吃",
+                  "pic": "😋"
+                },
+                {
+                  "en": "break",
+                  "zh": "打碎",
+                  "pic": "💥"
+                }
+              ],
+              "b": [
+                {
+                  "en": "the rice",
+                  "zh": "米饭",
+                  "pic": "🍚"
+                },
+                {
+                  "en": "the dishes",
+                  "zh": "碗",
+                  "pic": "🍽️"
+                },
+                {
+                  "en": "the fish",
+                  "zh": "鱼",
+                  "pic": "🐟"
+                },
+                {
+                  "en": "the cups",
+                  "zh": "杯子",
+                  "pic": "☕"
+                }
+              ]
+            },
+            "need": 3
+          },
+          {
+            "title": "跟读",
+            "kind": "shadow",
+            "tip": "[[Look at]] 连起来读：loo-kat。",
+            "lines": [
+              0,
+              4,
+              6
+            ]
+          },
+          {
+            "title": "复述：串起来",
+            "kind": "retell",
+            "idea": "看着图，用\"谁 + 做什么 + 什么\"讲一遍。",
+            "keys": [
+              [
+                "I cook",
+                "you wash"
+              ],
+              [
+                "burn the rice",
+                "break the cups"
+              ],
+              [
+                "we cook",
+                "we wash"
+              ],
+              [
+                "fish",
+                "look at"
+              ]
+            ]
           }
         ],
         "interaction": {
           "type": "listen",
-          "prompt": "听这一句，重音落在哪几个词？",
-          "audio": "The cats have been eating the fish.",
-          "answer": 0,
-          "why": "重音落在承载意思的实词上；the、have、been 是虚词，被挤在拍子之间。",
+          "prompt": "听一听：谁洗碗？",
+          "audio": "You wash the dishes.",
+          "showText": "after",
           "options": [
-            "cats, eating, fish",
-            "the, have, been",
-            "been, the, fish"
+            "你洗碗",
+            "我洗碗",
+            "你做饭"
           ],
+          "answer": 0,
+          "why": "动词 wash 前面的 you 是做事的人，所以是你洗碗。「我洗碗」要说 I wash；「你做饭」是 you cook。",
           "ref": 3
         },
-        "take": "英语按重音打拍子，重音之间的弱读音节会被挤压。",
+        "take": "英语句子 = 谁 + 做什么 + 什么，顺序不换，\"谁\"不省；辅音接元音会连读。",
         "quiz": [
           {
-            "q": "I'd like a cup of coffee. 通常重读哪几个词？",
+            "q": "中文\"我做饭，你洗碗\"，英语怎么说？",
             "options": [
-              "like, cup, coffee",
-              "I'd, a, of",
-              "a, cup, of"
+              "I cook and you wash the dishes.",
+              "Cook I and wash you the dishes.",
+              "I cook and wash the dishes you."
             ],
             "answer": 0,
-            "why": "like、cup、coffee 是实词，承载意思；a、of 是虚词，弱读。",
-            "ref": [
-              0,
-              4
-            ]
+            "why": "每一半都是\"谁 + 做什么 + 什么\"。「Cook I…」把动作放到了\"谁\"前面；「…wash the dishes you」把\"谁\"放到了最后。",
+            "ref": 3
           },
           {
-            "q": "为什么英语里的弱读音节会被“挤”得很快？",
+            "q": "听起来最像？",
             "options": [
-              "相邻重音之间的时间大致相等",
-              "说英语的人语速都很快",
-              "弱读音节不重要可以省略"
+              "loo-ka-tit",
+              "look、at、it 三个词分开",
+              "look-it，at 不见了"
             ],
             "answer": 0,
-            "why": "节拍固定，弱读音节越多，每个分到的时间越少，只好说得更快更轻。它们没被省掉，只是被压缩。",
-            "ref": [
-              2,
-              3
-            ]
+            "why": "k 接 a、t 接 i，都是辅音接元音，连成 loo-ka-tit。「三个词分开」是逐词念；at 没有消失，只是粘在了前后中间。",
+            "ref": 2,
+            "audio": "Look at it!"
           }
-        ],
-        "tts": [
-          "Cats eat fish.",
-          "The cats have been eating the fish.",
-          "I want to buy a new dress."
         ]
       }
     }
@@ -3954,7 +8411,37 @@ window.DAYS = [
             "why": "颜料靠吸收光来显色。黄颜料主要吃掉蓝光，蓝颜料主要吃掉红光和橙光。两种调在一起，各吃各的，最后两边都没吃掉、还能反射回来的，主要是绿光，所以黄 + 蓝 = 绿。",
             "takeaway": "颜料混色 = 各自吃掉一部分光，剩下的光决定新颜色。",
             "example": "像两个人一起删歌单：一个删掉所有慢歌，一个删掉所有英文歌，最后能播的只剩\"快的中文歌\"。颜料越混，被删掉的光越多，所以颜料越混越暗。",
-            "exLabel": "打个比方"
+            "exLabel": "打个比方",
+            "visual": {
+              "type": "wheelBuild",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "颜料混色 = 各自吃掉一部分光，剩下的光决定新颜色",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "颜料混色 = 各自吃掉一部分光，剩下的光决定新颜色",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "颜料混色 = 各自吃掉一部分光，剩下的光决定新颜色。",
+                  "para": "takeaway"
+                }
+              ]
+            }
           },
           {
             "title": "三原色：调不出来的三个起点",
@@ -3962,7 +8449,37 @@ window.DAYS = [
             "why": "在画家的传统经验里，红、黄、蓝没法用别的颜料调出来，用它们却能调出大部分颜色，所以拿它们当起点。印刷用的是青、品红、黄，屏幕用的是红、绿、蓝三色光，原理各不相同；搭配衣服时，先用传统的红黄蓝色轮就够了。",
             "takeaway": "三原色红、黄、蓝调不出来，却能调出别的颜色。",
             "example": "像做菜的盐、糖、醋：谁也调不出谁，可是按不同的比例搭配起来，能调出咸甜、酸甜、糖醋好多种不同的味道。",
-            "exLabel": "打个比方"
+            "exLabel": "打个比方",
+            "visual": {
+              "type": "wheelBuild",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "三原色红、黄、蓝调不出来，却能调出别的颜色",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "三原色红、黄、蓝调不出来，却能调出别的颜色",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "三原色红、黄、蓝调不出来，却能调出别的颜色。",
+                  "para": "takeaway"
+                }
+              ]
+            }
           },
           {
             "title": "二次色：原色两两混合",
@@ -3984,6 +8501,36 @@ window.DAYS = [
               ],
               "answer": 0,
               "why": "黄 + 蓝 = 绿，卡 1 推过：两边都没吃掉的主要是绿光。「紫」是蓝 + 红。"
+            },
+            "visual": {
+              "type": "wheelBuild",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "二次色 = 原色两两混合：橙、绿、紫",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "二次色 = 原色两两混合：橙、绿、紫",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "二次色 = 原色两两混合：橙、绿、紫。",
+                  "para": "takeaway"
+                }
+              ]
             }
           },
           {
@@ -4000,20 +8547,33 @@ window.DAYS = [
             ],
             "formula": "3 + 3 + 6 = 12",
             "visual": {
-              "type": "wheel",
-              "colors": [
-                "#E53935",
-                "#F4511E",
-                "#FB8C00",
-                "#FFB300",
-                "#FDD835",
-                "#9CCC65",
-                "#43A047",
-                "#00897B",
-                "#1E88E5",
-                "#5E35B1",
-                "#8E24AA",
-                "#D81B60"
+              "type": "wheelBuild",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "三次色 = 相邻两色再混；12 色轮就这样围成",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "三次色 = 相邻两色再混；12 色轮就这样围成",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "三次色 = 相邻两色再混；12 色轮就这样围成。",
+                  "para": "takeaway"
+                }
               ]
             },
             "check": {
@@ -4032,7 +8592,37 @@ window.DAYS = [
             "why": "相邻的颜色是\"父母和孩子\"，含有相同的原色。正对面的颜色恰好躲开了对方的全部成分：红的对面是绿，绿 = 黄 + 蓝，里面一点红都没有。橙和紫都含红，所以是红的邻居。",
             "takeaway": "色轮上越近成分越像，正对面成分完全不同。",
             "example": "像音乐里的五度圈：相邻的两个调，7 个音里共用 6 个，转过去很顺；圈上隔得越远，共同的音越少。色轮上的距离，也是在说\"有多少共同成分\"。",
-            "exLabel": "打个比方"
+            "exLabel": "打个比方",
+            "visual": {
+              "type": "wheelBuild",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "色轮上越近成分越像，正对面成分完全不同",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "色轮上越近成分越像，正对面成分完全不同",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "色轮上越近成分越像，正对面成分完全不同。",
+                  "para": "takeaway"
+                }
+              ]
+            }
           }
         ],
         "interaction": {
@@ -4072,7 +8662,59 @@ window.DAYS = [
             "why": "三次色由相邻两色混成，名字就是两个“父母”：黄 + 橙 = 黄橙。",
             "ref": 3
           }
-        ]
+        ],
+        "hookComic": {
+          "panels": [
+            {
+              "bg": "room",
+              "cast": [
+                {
+                  "who": "xiaoman",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "talk"
+                }
+              ],
+              "cap": "色轮上的颜色不是随便排的"
+            },
+            {
+              "bg": "street",
+              "cast": [
+                {
+                  "who": "xiaoyin",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "talk"
+                }
+              ],
+              "cap": "每个位置背后都有一道混色算术"
+            },
+            {
+              "bg": "shop",
+              "cast": [
+                {
+                  "who": "xiaoman",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "talk"
+                }
+              ],
+              "cap": "每个位置背后都有一道混色算术"
+            },
+            {
+              "bg": "plain",
+              "cast": [
+                {
+                  "who": "xiaoyin",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "wow"
+                }
+              ],
+              "cap": "每个位置背后都有一道混色算术"
+            }
+          ]
+        }
       },
       "history": {
         "id": "d04-history",
@@ -4086,7 +8728,10 @@ window.DAYS = [
             "why": "周的分封让诸侯坐大，打了五百多年。现在天下归了秦，最大的问题变成：这么大的地方，怎么管才不会再乱？",
             "takeaway": "今天的问题：统一以后，怎么管住全国？",
             "example": "打天下靠\"兵\"，管天下靠\"制度\"。县制已经在秦一国试过，很好用。",
-            "review": true
+            "review": true,
+            "visual": {
+              "recall": "d03-history#8"
+            }
           },
           {
             "title": "如果你是秦始皇：分封还是不分封",
@@ -4108,6 +8753,35 @@ window.DAYS = [
               ],
               "answer": 0,
               "why": "秦始皇采纳了李斯的意见，不再分封，由朝廷派官管地方。「像周一样分封」是王绾的主张，没有被采纳。"
+            },
+            "visual": {
+              "type": "comic",
+              "panels": [
+                {
+                  "bg": "room",
+                  "cast": [
+                    {
+                      "who": "xiaoman",
+                      "x": 0.48,
+                      "y": 0.72,
+                      "face": "talk"
+                    }
+                  ],
+                  "cap": "秦面对和周一样的难题，却选了"
+                },
+                {
+                  "bg": "street",
+                  "cast": [
+                    {
+                      "who": "xiaoyin",
+                      "x": 0.48,
+                      "y": 0.72,
+                      "face": "talk"
+                    }
+                  ],
+                  "cap": "如果你是秦始皇：分封还是不分"
+                }
+              ]
             }
           },
           {
@@ -4116,7 +8790,37 @@ window.DAYS = [
             "why": "周的问题出在\"地方首领世袭\"：地方成了一家的家产，几代以后只认自家，不认天子。郡县制把这一条拆掉了：官位不是家产，是皇帝给的一份差事。干得好就升，干得不好就撤，人走了，地方还是朝廷的。",
             "takeaway": "郡县制 = 地方官由皇帝任免、可调换、不世袭。",
             "example": "分封像开加盟店：店是老板自己的，赚了归自己，还能传给孩子，总部管不太动。郡县像开直营店：店长是总部派的、领工资，随时可以调去别的城市，店永远是总部的。",
-            "exLabel": "打个比方"
+            "exLabel": "打个比方",
+            "visual": {
+              "type": "tree",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "郡县制 = 地方官由皇帝任免、可调换、不世袭",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "郡县制 = 地方官由皇帝任免、可调换、不世袭",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "郡县制 = 地方官由皇帝任免、可调换、不世袭。",
+                  "para": "takeaway"
+                }
+              ]
+            }
           },
           {
             "title": "郡县制为什么管得住地方",
@@ -4129,7 +8833,37 @@ window.DAYS = [
               "能调动 → 扎不下根。",
               "领俸禄 → 靠皇帝吃饭。",
               "军政分开 → 一个人说了不算。"
-            ]
+            ],
+            "visual": {
+              "type": "tug",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "不世袭、能调动、拿俸禄，地方官就坐不大",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "不世袭、能调动、拿俸禄，地方官就坐不大",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "不世袭、能调动、拿俸禄，地方官就坐不大。",
+                  "para": "takeaway"
+                }
+              ]
+            }
           },
           {
             "title": "对照：分封和郡县",
@@ -4145,6 +8879,36 @@ window.DAYS = [
               ],
               "answer": 0,
               "why": "郡县制靠官僚制度和皇帝任免维系，和血缘远近无关。「分封制」靠血缘维系，血缘一淡就松了。"
+            },
+            "visual": {
+              "type": "tree",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "分封靠血缘、权在地方；郡县靠制度、权在中央",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "分封靠血缘、权在地方；郡县靠制度、权在中央",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "分封靠血缘、权在地方；郡县靠制度、权在中央。",
+                  "para": "takeaway"
+                }
+              ]
             }
           },
           {
@@ -4153,7 +8917,37 @@ window.DAYS = [
             "why": "郡县制靠公文、税收和调兵运转。命令写成公文发下去，各地文字不同，就会读错；收税要算钱、量粮，各地的钱和量器不一样，账就对不上；车轮间距不同，路上的车辙对不上，车就走不顺。大一统的制度，离不开同一套标准。",
             "takeaway": "统一文字、货币、度量衡，让全国用同一套\"格式\"运转。",
             "example": "乐团开演前，所有乐器先对着同一个音调音。如果每件乐器的标准音不同，各自都照着谱子演对了，合在一起也是一团噪音。秦统一标准，就是给全国定了同一个标准音。",
-            "exLabel": "打个比方"
+            "exLabel": "打个比方",
+            "visual": {
+              "type": "chain",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "统一文字、货币、度量衡，让全国用同一套\"格式\"运转",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "统一文字、货币、度量衡，让全国用同一套\"格式\"运转",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "统一文字、货币、度量衡，让全国用同一套\"格式\"运转。",
+                  "para": "takeaway"
+                }
+              ]
+            }
           },
           {
             "title": "统一标准的长远影响",
@@ -4169,6 +8963,36 @@ window.DAYS = [
               ],
               "answer": 0,
               "why": "方言可以不同，字是统一的，写下来就都读得懂。「大家都会说咸阳话」不对，统一的是文字，不是口音。"
+            },
+            "visual": {
+              "type": "tl",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "统一标准降低了管理成本，统一文字让大国有了共同的线",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "统一标准降低了管理成本，统一文字让大国有了共同的线",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "统一标准降低了管理成本，统一文字让大国有了共同的线。",
+                  "para": "takeaway"
+                }
+              ]
             }
           },
           {
@@ -4183,14 +9007,73 @@ window.DAYS = [
               "逃跑，抓到也是死。",
               "起来反抗，也许还能活。",
               "他们选了起义，各地纷纷响应。"
-            ]
+            ],
+            "visual": {
+              "type": "comic",
+              "panels": [
+                {
+                  "bg": "room",
+                  "cast": [
+                    {
+                      "who": "xiaoman",
+                      "x": 0.48,
+                      "y": 0.72,
+                      "face": "talk"
+                    }
+                  ],
+                  "cap": "秦亡于赋役太重、刑法太严：民"
+                },
+                {
+                  "bg": "street",
+                  "cast": [
+                    {
+                      "who": "xiaoyin",
+                      "x": 0.48,
+                      "y": 0.72,
+                      "face": "talk"
+                    }
+                  ],
+                  "cap": "如果你是陈胜：为什么只存在了"
+                }
+              ]
+            }
           },
           {
             "title": "串起来：秦亡了，制度留下了",
             "idea": "秦朝倒了，郡县制和大一统却留了下来。后来的朝代几乎都在这副框架上改一改接着用，后人用\"百代都行秦政法\"来概括。",
             "why": "秦证明了两件事：郡县制能管住一个大国；可如果不顾百姓死活，再好的制度也救不了王朝。下一个王朝的任务，就是\"留下制度，改掉用法\"。",
             "takeaway": "秦留下郡县和大一统；下一个王朝要留下制度、改掉用法。",
-            "example": "秦亡后，刘邦建立了汉朝。汉朝前后存在了约 400 年。为什么后来这个民族、这种文字，都用\"汉\"这个字来称呼？下一关揭晓。"
+            "example": "秦亡后，刘邦建立了汉朝。汉朝前后存在了约 400 年。为什么后来这个民族、这种文字，都用\"汉\"这个字来称呼？下一关揭晓。",
+            "visual": {
+              "type": "tl",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "秦留下郡县和大一统；下一个王朝要留下制度、改掉用法",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "秦留下郡县和大一统；下一个王朝要留下制度、改掉用法",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "秦留下郡县和大一统；下一个王朝要留下制度、改掉用法。",
+                  "para": "takeaway"
+                }
+              ]
+            }
           }
         ],
         "interaction": {
@@ -4287,7 +9170,59 @@ window.DAYS = [
             "id": "SN",
             "label": "秦都咸阳在今陕西"
           }
-        ]
+        ],
+        "hookComic": {
+          "panels": [
+            {
+              "bg": "room",
+              "cast": [
+                {
+                  "who": "xiaoman",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "talk"
+                }
+              ],
+              "cap": "秦只存在了 15 年，它定下"
+            },
+            {
+              "bg": "street",
+              "cast": [
+                {
+                  "who": "xiaoyin",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "talk"
+                }
+              ],
+              "cap": "是什么"
+            },
+            {
+              "bg": "shop",
+              "cast": [
+                {
+                  "who": "xiaoman",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "talk"
+                }
+              ],
+              "cap": "是什么"
+            },
+            {
+              "bg": "plain",
+              "cast": [
+                {
+                  "who": "xiaoyin",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "wow"
+                }
+              ],
+              "cap": "是什么"
+            }
+          ]
+        }
       },
       "geo": {
         "id": "d04-geo",
@@ -4300,7 +9235,37 @@ window.DAYS = [
             "idea": "打开中国地图看大河的终点：长江在上海流进东海，黄河在山东流进渤海，珠江在广东流进南海，几乎都在东边的海里。",
             "why": "这么多条河，从不同的地方出发，却不约而同地往东去，不太可能是巧合，背后应该有一个共同的原因。你也许会猜：是地球往东转，把水带过去了？还是东边雨多，把水\"吸\"过去了？这一关先找出真正的答案，再看看一路往东\"下楼梯\"的水，能帮我们做什么。",
             "takeaway": "中国的大江大河，终点几乎都在东边的海里。",
-            "example": "南唐李煜写\"问君能有几多愁？恰似一江春水向东流\"。诗人从江水里看到的是愁；地理要追问的是：江水为什么偏偏向东，而不是向西、向北？"
+            "example": "南唐李煜写\"问君能有几多愁？恰似一江春水向东流\"。诗人从江水里看到的是愁；地理要追问的是：江水为什么偏偏向东，而不是向西、向北？",
+            "visual": {
+              "type": "cnmap",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "中国的大江大河，终点几乎都在东边的海里",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "中国的大江大河，终点几乎都在东边的海里",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "中国的大江大河，终点几乎都在东边的海里。",
+                  "para": "takeaway"
+                }
+              ]
+            }
           },
           {
             "title": "西高东低的三级阶梯",
@@ -4309,21 +9274,7 @@ window.DAYS = [
             "takeaway": "中国西边高、东边低，一级一级往下降。",
             "example": "拉萨约 3650 米，郑州约 100 米，上海只有几米。从西到东，地面低了 3000 多米。",
             "visual": {
-              "type": "ladder",
-              "steps": [
-                {
-                  "label": "第一级",
-                  "sub": "青藏高原 4000 米以上"
-                },
-                {
-                  "label": "第二级",
-                  "sub": "高原和盆地 1000～2000 米"
-                },
-                {
-                  "label": "第三级",
-                  "sub": "平原和丘陵 多在 500 米以下"
-                }
-              ]
+              "recall": "d03-geo#3"
             },
             "review": true
           },
@@ -4346,6 +9297,36 @@ window.DAYS = [
               ],
               "answer": 0,
               "why": "重力把水往低处拉，所以「往右边低处流」。水不会自己往高处爬，「往左边高处流」不对。"
+            },
+            "visual": {
+              "type": "tilt",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "水往低处流，河往哪流由地势决定；中国西高东低，所以大河向东",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "水往低处流，河往哪流由地势决定；中国西高东低，所以大河向东",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "水往低处流，河往哪流由地势决定；中国西高东低，所以大河向东。",
+                  "para": "takeaway"
+                }
+              ]
             }
           },
           {
@@ -4353,7 +9334,37 @@ window.DAYS = [
             "idea": "中国最长的两条河，都从西边很高的地方出发，一路下台阶，往东流进大海。",
             "why": "两条河的源头都在高山上，靠冰雪融水和雨水起步。它们东边的地面一级比一级低，水就顺着这个大方向往下走：越过一道道\"坎\"，从高原流进盆地和峡谷，最后流到第三级的平原，再入海。",
             "takeaway": "长江约 6300 公里，经重庆、上海入东海；黄河在山东入渤海。",
-            "example": "长江发源于青藏高原唐古拉山脉的主峰各拉丹冬雪山一带，全长约 6300 公里，是中国第一长河，流经重庆和上海两个直辖市，在上海流进东海。黄河发源于青海的巴颜喀拉山脉，全长约 5464 公里，是第二长河，在山东流进渤海。"
+            "example": "长江发源于青藏高原唐古拉山脉的主峰各拉丹冬雪山一带，全长约 6300 公里，是中国第一长河，流经重庆和上海两个直辖市，在上海流进东海。黄河发源于青海的巴颜喀拉山脉，全长约 5464 公里，是第二长河，在山东流进渤海。",
+            "visual": {
+              "type": "profileTrip",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "长江约 6300 公里，经重庆、上海入东海；黄河在山东入渤海",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "长江约 6300 公里，经重庆、上海入东海；黄河在山东入渤海",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "长江约 6300 公里，经重庆、上海入东海；黄河在山东入渤海。",
+                  "para": "takeaway"
+                }
+              ]
+            }
           },
           {
             "title": "例外：低处在别的方向",
@@ -4369,6 +9380,36 @@ window.DAYS = [
               ],
               "answer": 0,
               "why": "塔里木盆地四周是高山，水找不到通向海的低口，又被干燥的空气蒸发，最后「消失在沙漠里」，到不了「东海」。"
+            },
+            "visual": {
+              "type": "cnmap",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "河不总是向东，但总是向低处；低处在哪，河就去哪",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "河不总是向东，但总是向低处；低处在哪，河就去哪",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "河不总是向东，但总是向低处；低处在哪，河就去哪。",
+                  "para": "takeaway"
+                }
+              ]
             }
           },
           {
@@ -4384,22 +9425,34 @@ window.DAYS = [
             ],
             "formula": "落差 × 水量：2 × 2 = 4（份）",
             "visual": {
-              "type": "bars",
-              "items": [
+              "type": "drop",
+              "base": {},
+              "frames": [
                 {
-                  "label": "落差 1 × 水量 1",
-                  "value": 1
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "水能跟着\"落差 × 水量\"走：落得越高、水越多，越能发电",
+                  "para": "idea"
                 },
                 {
-                  "label": "落差 2 × 水量 1",
-                  "value": 2
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "水能跟着\"落差 × 水量\"走：落得越高、水越多，越能发电",
+                  "para": "why"
                 },
                 {
-                  "label": "落差 2 × 水量 2",
-                  "value": 4
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "水能跟着\"落差 × 水量\"走：落得越高、水越多，越能发电。",
+                  "para": "takeaway"
                 }
-              ],
-              "unit": "份"
+              ]
             }
           },
           {
@@ -4421,6 +9474,36 @@ window.DAYS = [
               ],
               "answer": 0,
               "why": "三峡切过的巫山，是「第二级和第三级」的分界线之一。「第一级和第二级」的分界是昆仑山—祁连山—横断山，在更西边。"
+            },
+            "visual": {
+              "type": "profileTrip",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "三峡在阶梯交界附近，落差大，长江水量又大，水能特别丰富",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "三峡在阶梯交界附近，落差大，长江水量又大，水能特别丰富",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "三峡在阶梯交界附近，落差大，长江水量又大，水能特别丰富。",
+                  "para": "takeaway"
+                }
+              ]
             }
           },
           {
@@ -4433,7 +9516,36 @@ window.DAYS = [
               "板块挤压：西高东低。",
               "水往低处流：大河向东。",
               "一路下台阶：交界处落差大，水能多。"
-            ]
+            ],
+            "visual": {
+              "type": "comic",
+              "panels": [
+                {
+                  "bg": "room",
+                  "cast": [
+                    {
+                      "who": "xiaoman",
+                      "x": 0.48,
+                      "y": 0.72,
+                      "face": "talk"
+                    }
+                  ],
+                  "cap": "西高东低 + 水往低处流 →"
+                },
+                {
+                  "bg": "street",
+                  "cast": [
+                    {
+                      "who": "xiaoyin",
+                      "x": 0.48,
+                      "y": 0.72,
+                      "face": "talk"
+                    }
+                  ],
+                  "cap": "串起来：一江春水为什么向东"
+                }
+              ]
+            }
           }
         ],
         "interaction": {
@@ -4495,19 +9607,198 @@ window.DAYS = [
             "id": "SH",
             "label": "SH"
           }
-        ]
+        ],
+        "hookComic": {
+          "panels": [
+            {
+              "bg": "room",
+              "cast": [
+                {
+                  "who": "xiaoman",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "talk"
+                }
+              ],
+              "cap": "“一江春水向东流”——中国的"
+            },
+            {
+              "bg": "street",
+              "cast": [
+                {
+                  "who": "xiaoyin",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "talk"
+                }
+              ],
+              "cap": "“一江春水向东流”——中国的"
+            },
+            {
+              "bg": "shop",
+              "cast": [
+                {
+                  "who": "xiaoman",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "talk"
+                }
+              ],
+              "cap": "“一江春水向东流”——中国的"
+            },
+            {
+              "bg": "plain",
+              "cast": [
+                {
+                  "who": "xiaoyin",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "wow"
+                }
+              ],
+              "cap": "“一江春水向东流”——中国的"
+            }
+          ]
+        }
       },
       "finance": {
         "id": "d04-finance",
-        "title": "应急金：任务是“在”，不是“赚”",
-        "minutes": 4,
+        "title": "应急金：任务是\"在\"，不是\"赚\"",
+        "minutes": 7,
         "hook": "手机突然坏了要 3000 块，你会从哪里拿？",
+        "hookComic": {
+          "panels": [
+            {
+              "bg": "room",
+              "cast": [
+                {
+                  "who": "xiaoman",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "talk"
+                }
+              ],
+              "cap": "手机突然坏了要 3000 块"
+            },
+            {
+              "bg": "street",
+              "cast": [
+                {
+                  "who": "xiaoyin",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "talk"
+                }
+              ],
+              "cap": "手机突然坏了要 3000 块"
+            },
+            {
+              "bg": "shop",
+              "cast": [
+                {
+                  "who": "xiaoman",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "talk"
+                }
+              ],
+              "cap": "手机突然坏了要 3000 块"
+            },
+            {
+              "bg": "plain",
+              "cast": [
+                {
+                  "who": "xiaoyin",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "wow"
+                }
+              ],
+              "cap": "手机突然坏了要 3000 块"
+            }
+          ]
+        },
         "steps": [
           {
-            "text": "应急金是专门留着应对突发情况的钱：失业、生病、设备坏了。平时不动它。"
+            "title": "意外总会来",
+            "idea": "生病、失业、手机坏了，这些事不会提前打招呼。到时候钱从哪来？",
+            "visual": {
+              "type": "comic",
+              "panels": [
+                {
+                  "bg": "bank",
+                  "cast": [
+                    {
+                      "who": "xiaoman",
+                      "x": 0.5,
+                      "y": 0.72,
+                      "face": "talk"
+                    }
+                  ],
+                  "cap": "手机摔碎了"
+                },
+                {
+                  "bg": "kitchen",
+                  "cast": [
+                    {
+                      "who": "xiaoman",
+                      "x": 0.5,
+                      "y": 0.72,
+                      "face": "talk"
+                    }
+                  ],
+                  "cap": "修要 3000"
+                },
+                {
+                  "bg": "room",
+                  "cast": [
+                    {
+                      "who": "xiaoman",
+                      "x": 0.5,
+                      "y": 0.72,
+                      "face": "talk"
+                    }
+                  ],
+                  "cap": "只能刷卡……"
+                }
+              ]
+            },
+            "takeaway": "意外一定会来，只是不知道哪天。"
           },
           {
-            "text": "推一下没有它会怎样：突发支出只能刷信用卡或借钱 → 产生利息（后面会学到利息有多贵）→ 一次意外变成长期负担。",
+            "title": "应急金：专门给意外的钱",
+            "idea": "**应急金**就是专门留着应付意外的一笔钱。平时不动它。",
+            "visual": {
+              "type": "chain",
+              "base": {
+                "nodes": [
+                  "意外",
+                  "没有应急金 → 刷卡借钱",
+                  "付利息",
+                  "一次意外，拖好几个月"
+                ]
+              },
+              "frames": [
+                {
+                  "set": {
+                    "play": 0,
+                    "step": 0
+                  },
+                  "cap": "先看骨架",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "play": 1,
+                    "step": 2
+                  },
+                  "cap": "看完整的图",
+                  "para": "takeaway"
+                }
+              ]
+            },
+            "why": "没有它，急用时只能刷信用卡或借钱。借的钱要付利息（第 5 天会讲利息是什么）。一次意外，就变成好几个月的负担。",
+            "takeaway": "应急金让意外只是意外，不变成欠债。",
             "check": {
               "q": "没有应急金，急用时只能刷卡或借钱，会怎样？",
               "options": [
@@ -4519,11 +9810,39 @@ window.DAYS = [
             }
           },
           {
-            "text": "留多少？常见建议是 3～6 个月的支出。为什么按支出而不是收入算？因为应急时要保住的是生活开销。为什么是 3～6 个月？失去收入后，重新找到收入来源通常要几个月；收入越不稳定（自由职业、接广告），越应该靠近 6 个月甚至更多。"
-          },
-          {
-            "text": "代入数字：每月必需支出 5000。",
-            "formula": "3 个月：5000 × 3 = 15000；6 个月：5000 × 6 = 30000",
+            "title": "按\"花多少\"来算",
+            "idea": "应急金要按每个月的**支出**来算，不按收入。",
+            "visual": {
+              "type": "comic",
+              "panels": [
+                {
+                  "bg": "bank",
+                  "cast": [
+                    {
+                      "who": "xiaoman",
+                      "x": 0.5,
+                      "y": 0.72,
+                      "face": "talk"
+                    }
+                  ],
+                  "cap": "收入突然没了"
+                },
+                {
+                  "bg": "kitchen",
+                  "cast": [
+                    {
+                      "who": "xiaoman",
+                      "x": 0.5,
+                      "y": 0.72,
+                      "face": "talk"
+                    }
+                  ],
+                  "cap": "账单还在照常来"
+                }
+              ]
+            },
+            "why": "没了收入的时候，要撑住的是房租、吃饭这些每月必花的钱。所以要看\"每个月要花多少\"。",
+            "takeaway": "应急金按每月支出算。",
             "check": {
               "q": "应急金按每月的什么来算？",
               "options": [
@@ -4535,7 +9854,152 @@ window.DAYS = [
             }
           },
           {
-            "text": "放在哪？要随时能取出、不会亏本的地方（比如活期存款、低风险的现金管理类产品）。它不追求高收益——它的任务是“随时在”，不是“赚钱”。"
+            "title": "留几个月：3～6 个月",
+            "idea": "常见建议是留 3～6 个月的支出。",
+            "visual": {
+              "type": "columns",
+              "base": {
+                "items": [
+                  {
+                    "label": "3 个月",
+                    "value": 15000
+                  },
+                  {
+                    "label": "6 个月",
+                    "value": 30000
+                  }
+                ],
+                "unit": "元"
+              },
+              "frames": [
+                {
+                  "set": {
+                    "play": 0,
+                    "step": 0
+                  },
+                  "cap": "先看骨架",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "play": 1,
+                    "step": 2
+                  },
+                  "cap": "看完整的图",
+                  "para": "takeaway"
+                }
+              ]
+            },
+            "why": "没了收入后，找到新收入通常要几个月。收入越不稳定（比如接广告、自由职业），越该靠近 6 个月。",
+            "takeaway": "应急金 = 每月支出 × 3～6；收入越不稳，月数越多。",
+            "derive": [
+              "每月必需支出 5000。",
+              "3 个月：5000 × 3 = 15000。",
+              "6 个月：5000 × 6 = 30000。"
+            ]
+          },
+          {
+            "title": "放在哪：钱的三个愿望",
+            "idea": "钱放在哪里，常有三个愿望：不会亏、随时能取、赚得多。通常很难三个都要。",
+            "visual": {
+              "type": "duo",
+              "base": {
+                "a": {
+                  "type": "columns",
+                  "base": {
+                    "items": [
+                      {
+                        "label": "不会亏",
+                        "value": 1
+                      },
+                      {
+                        "label": "随时能取",
+                        "value": 1
+                      }
+                    ]
+                  }
+                },
+                "b": {
+                  "type": "columns",
+                  "base": {
+                    "items": [
+                      {
+                        "label": "赚得多",
+                        "value": 1
+                      },
+                      {
+                        "label": "应急金选这两个",
+                        "value": 1
+                      }
+                    ]
+                  }
+                },
+                "dir": "row",
+                "vs": ""
+              },
+              "frames": [
+                {
+                  "set": {
+                    "both": 0
+                  },
+                  "cap": "先看一边",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "both": 1
+                  },
+                  "cap": "两边放一起看",
+                  "para": "takeaway"
+                }
+              ]
+            },
+            "why": "赚得多的地方，一般要么会亏，要么要锁好几年。应急金急用时必须拿得出，而且一分不少。所以只要前两个，放弃\"赚得多\"。",
+            "example": "活期存款就适合放应急金：随时能取，也不会亏。",
+            "takeaway": "应急金选\"不会亏 + 随时能取\"，不追求赚得多。",
+            "check": {
+              "q": "应急金为什么不追求\"赚得多\"？",
+              "options": [
+                "赚得多的地方，常常会亏或取不出",
+                "因为它的钱太少"
+              ],
+              "answer": 0,
+              "why": "三个愿望通常不能全要。追求赚得多，往往要冒亏钱或锁住取不出的风险，急用时就麻烦了。和钱多钱少无关，所以「因为它的钱太少」不对。"
+            }
+          },
+          {
+            "title": "串起来：回到摔碎的手机",
+            "idea": "有了应急金，修手机的 3000 直接从里面拿，不用借钱，也不付利息。之后每月存一点，把它补满。",
+            "visual": {
+              "type": "comic",
+              "panels": [
+                {
+                  "bg": "bank",
+                  "cast": [
+                    {
+                      "who": "xiaoman",
+                      "x": 0.5,
+                      "y": 0.72,
+                      "face": "talk"
+                    }
+                  ],
+                  "cap": "从应急金里拿"
+                },
+                {
+                  "bg": "kitchen",
+                  "cast": [
+                    {
+                      "who": "xiaoman",
+                      "x": 0.5,
+                      "y": 0.72,
+                      "face": "talk"
+                    }
+                  ],
+                  "cap": "之后再慢慢补回去"
+                }
+              ]
+            },
+            "takeaway": "应急金的任务是\"在\"，不是\"赚\"。"
           }
         ],
         "interaction": {
@@ -4574,7 +10038,7 @@ window.DAYS = [
             3
           ]
         },
-        "take": "应急金 = 3～6 个月支出，放在随时能取、不会亏的地方。它的任务是“在”，不是“赚”。",
+        "take": "应急金 = 3～6 个月支出，放在随时能取、不会亏的地方。它的任务是\"在\"，不是\"赚\"。",
         "quiz": [
           {
             "q": "每月支出 4000、收入不稳定的自由职业者，应急金更应该接近多少？",
@@ -4585,7 +10049,7 @@ window.DAYS = [
             ],
             "answer": 0,
             "why": "收入不稳定应靠近 6 个月：4000 × 6 = 24000。12000 是 3 个月，适合收入稳定的人。",
-            "ref": 2
+            "ref": 3
           },
           {
             "q": "应急金最重要的特点是什么？",
@@ -4596,6 +10060,17 @@ window.DAYS = [
             ],
             "answer": 0,
             "why": "急用时拿不出来或者正好亏了，就失去了意义。所以流动性和安全性优先，收益其次。",
+            "ref": 4
+          },
+          {
+            "q": "下面哪里最适合放应急金？",
+            "options": [
+              "随时能取、不会亏的活期存款",
+              "要锁三年才能取的产品",
+              "价格每天上上下下的东西"
+            ],
+            "answer": 0,
+            "why": "应急金要「不会亏 + 随时能取」。「要锁三年才能取的产品」急用时拿不出来；「价格每天上上下下的东西」可能在你急用那天正好跌了。",
             "ref": 4
           }
         ]
@@ -4612,7 +10087,37 @@ window.DAYS = [
             "why": "那一定有别的东西在帮我们区分。今天的答案是：大脑对\"我为什么心跳\"的解释。",
             "takeaway": "身体只给出\"激动\"，还缺一样东西来定是哪种情绪。",
             "example": "1924 年，西班牙医生马拉尼翁给人注射肾上腺素，很多人说感觉\"好像要害怕了\"，却并不真的害怕。有了身体反应，还缺一个理由。",
-            "review": true
+            "review": true,
+            "visual": {
+              "type": "wires",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "身体只给出\"激动\"，还缺一样东西来定是哪种情绪",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "身体只给出\"激动\"，还缺一样东西来定是哪种情绪",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "身体只给出\"激动\"，还缺一样东西来定是哪种情绪。",
+                  "para": "takeaway"
+                }
+              ]
+            }
           },
           {
             "title": "二因素：唤醒 + 标签",
@@ -4628,12 +10133,33 @@ window.DAYS = [
               "于是体验到这种情绪。"
             ],
             "visual": {
-              "type": "flow",
-              "nodes": [
-                "生理唤醒",
-                "寻找原因",
-                "贴上标签",
-                "体验到情绪"
+              "type": "wires",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "二因素理论：情绪 = 生理唤醒 + 认知标签",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "二因素理论：情绪 = 生理唤醒 + 认知标签",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "二因素理论：情绪 = 生理唤醒 + 认知标签。",
+                  "para": "takeaway"
+                }
               ]
             }
           },
@@ -4657,6 +10183,35 @@ window.DAYS = [
               ],
               "answer": 0,
               "why": "同伴是实验助手，故意表现得欢快或恼火，给被试提供一个\"可以借的标签\"。如果是「另一位普通被试」，研究者就控制不了环境里的情绪了。"
+            },
+            "visual": {
+              "type": "comic",
+              "panels": [
+                {
+                  "bg": "room",
+                  "cast": [
+                    {
+                      "who": "xiaoman",
+                      "x": 0.48,
+                      "y": 0.72,
+                      "face": "talk"
+                    }
+                  ],
+                  "cap": "找不到心跳的原因时，人会从环"
+                },
+                {
+                  "bg": "street",
+                  "cast": [
+                    {
+                      "who": "xiaoyin",
+                      "x": 0.48,
+                      "y": 0.72,
+                      "face": "talk"
+                    }
+                  ],
+                  "cap": "肾上腺素实验：从环境里\"借\""
+                }
+              ]
             }
           },
           {
@@ -4669,7 +10224,36 @@ window.DAYS = [
               "吊桥让心跳加速。",
               "正好遇到了她。",
               "大脑把心跳标成\"对她心动\"。"
-            ]
+            ],
+            "visual": {
+              "type": "comic",
+              "panels": [
+                {
+                  "bg": "room",
+                  "cast": [
+                    {
+                      "who": "xiaoman",
+                      "x": 0.48,
+                      "y": 0.72,
+                      "face": "talk"
+                    }
+                  ],
+                  "cap": "错误归因：把吊桥带来的心跳，"
+                },
+                {
+                  "bg": "street",
+                  "cast": [
+                    {
+                      "who": "xiaoyin",
+                      "x": 0.48,
+                      "y": 0.72,
+                      "face": "talk"
+                    }
+                  ],
+                  "cap": "吊桥实验：心跳被认成心动"
+                }
+              ]
+            }
           },
           {
             "title": "会不会只是胆大的人更主动？",
@@ -4685,6 +10269,36 @@ window.DAYS = [
               ],
               "answer": 0,
               "why": "随机分组让两组人原本的性格差不多，差别只来自\"以为要挨多痛的电击\"。「自己挑选组别」就又回到\"胆大的人自己选\"的老问题了。"
+            },
+            "visual": {
+              "type": "chain",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "随机分组后效果还在，但二因素理论只是情绪的一部分解释",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "随机分组后效果还在，但二因素理论只是情绪的一部分解释",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "随机分组后效果还在，但二因素理论只是情绪的一部分解释。",
+                  "para": "takeaway"
+                }
+              ]
             }
           },
           {
@@ -4692,7 +10306,36 @@ window.DAYS = [
             "idea": "回到开头：走过吊桥再遇见一个人，更容易\"心动\"，因为吊桥给的心跳被贴上了\"心动\"的标签。",
             "why": "把三关连起来：詹姆斯-兰格说身体决定情绪；坎农说身体分不清情绪；二因素理论补上了缺的那块——身体给强度，解释给名字。从这一关开始，\"解释\"在情绪理论里越来越重要。",
             "takeaway": "同样的心跳，解释不同，情绪就不同。",
-            "example": "账号选题提示：\"为什么看恐怖片、坐过山车的约会更容易心动\"——就是唤醒的错误归因。反过来也成立：刚跑完步、喝完咖啡心跳正快时看到一条刺耳的评论，会格外生气，其中一部分火其实来自跑步和咖啡。"
+            "example": "账号选题提示：\"为什么看恐怖片、坐过山车的约会更容易心动\"——就是唤醒的错误归因。反过来也成立：刚跑完步、喝完咖啡心跳正快时看到一条刺耳的评论，会格外生气，其中一部分火其实来自跑步和咖啡。",
+            "visual": {
+              "type": "comic",
+              "panels": [
+                {
+                  "bg": "room",
+                  "cast": [
+                    {
+                      "who": "xiaoman",
+                      "x": 0.48,
+                      "y": 0.72,
+                      "face": "talk"
+                    }
+                  ],
+                  "cap": "同样的心跳，解释不同，情绪就"
+                },
+                {
+                  "bg": "street",
+                  "cast": [
+                    {
+                      "who": "xiaoyin",
+                      "x": 0.48,
+                      "y": 0.72,
+                      "face": "talk"
+                    }
+                  ],
+                  "cap": "串起来：恐怖片约会"
+                }
+              ]
+            }
           }
         ],
         "interaction": {
@@ -4733,140 +10376,616 @@ window.DAYS = [
             "why": "二因素理论的关键在“解释”。有了现成的解释（是药的作用），就不会再从周围人身上借一个情绪标签。",
             "ref": 2
           }
-        ]
+        ],
+        "hookComic": {
+          "panels": [
+            {
+              "bg": "room",
+              "cast": [
+                {
+                  "who": "xiaoman",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "talk"
+                }
+              ],
+              "cap": "走过一座摇晃的吊桥，再遇见一"
+            },
+            {
+              "bg": "street",
+              "cast": [
+                {
+                  "who": "xiaoyin",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "talk"
+                }
+              ],
+              "cap": "走过一座摇晃的吊桥，再遇见一"
+            },
+            {
+              "bg": "shop",
+              "cast": [
+                {
+                  "who": "xiaoman",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "talk"
+                }
+              ],
+              "cap": "走过一座摇晃的吊桥，再遇见一"
+            },
+            {
+              "bg": "plain",
+              "cast": [
+                {
+                  "who": "xiaoyin",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "wow"
+                }
+              ],
+              "cap": "走过一座摇晃的吊桥，再遇见一"
+            }
+          ]
+        }
       },
       "english": {
         "id": "d04-english",
-        "title": "情绪词：按强度排，-ed 还是 -ing",
-        "minutes": 6,
-        "hook": "I'm bored 和 I'm boring 只差几个字母，意思却差很远——一个是\"我觉得无聊\"，一个是\"我这人很无趣\"。",
+        "title": "Mochi's Day：说别人的习惯，动词加 -s",
+        "minutes": 9,
+        "hook": "I sleep，they sleep，可为什么到了 Mochi 就要说 Mochi sleeps？",
+        "hookComic": {
+          "panels": [
+            {
+              "bg": "kitchen",
+              "cast": [
+                {
+                  "who": "mia",
+                  "x": 0.32,
+                  "y": 0.72,
+                  "face": "happy"
+                },
+                {
+                  "who": "leo",
+                  "x": 0.62,
+                  "y": 0.74,
+                  "face": "talk"
+                },
+                {
+                  "who": "mochi",
+                  "x": 0.8,
+                  "y": 0.82,
+                  "face": "happy",
+                  "k": 0.7
+                }
+              ]
+            },
+            {
+              "bg": "room",
+              "cast": [
+                {
+                  "who": "mia",
+                  "x": 0.32,
+                  "y": 0.72,
+                  "face": "happy"
+                },
+                {
+                  "who": "leo",
+                  "x": 0.62,
+                  "y": 0.74,
+                  "face": "talk"
+                },
+                {
+                  "who": "mochi",
+                  "x": 0.8,
+                  "y": 0.82,
+                  "face": "happy",
+                  "k": 0.7
+                }
+              ]
+            },
+            {
+              "bg": "street",
+              "cast": [
+                {
+                  "who": "mia",
+                  "x": 0.32,
+                  "y": 0.72,
+                  "face": "happy"
+                },
+                {
+                  "who": "leo",
+                  "x": 0.62,
+                  "y": 0.74,
+                  "face": "talk"
+                },
+                {
+                  "who": "mochi",
+                  "x": 0.8,
+                  "y": 0.82,
+                  "face": "happy",
+                  "k": 0.7
+                }
+              ]
+            }
+          ]
+        },
+        "story": {
+          "title": "Mochi's Day",
+          "panels": [
+            {
+              "bg": "kitchen",
+              "cast": [
+                {
+                  "who": "mia",
+                  "x": 0.32,
+                  "y": 0.72,
+                  "face": "happy"
+                },
+                {
+                  "who": "leo",
+                  "x": 0.62,
+                  "y": 0.74,
+                  "face": "talk"
+                },
+                {
+                  "who": "mochi",
+                  "x": 0.8,
+                  "y": 0.82,
+                  "face": "happy",
+                  "k": 0.7
+                }
+              ]
+            },
+            {
+              "bg": "room",
+              "cast": [
+                {
+                  "who": "mia",
+                  "x": 0.32,
+                  "y": 0.72,
+                  "face": "happy"
+                },
+                {
+                  "who": "leo",
+                  "x": 0.62,
+                  "y": 0.74,
+                  "face": "talk"
+                },
+                {
+                  "who": "mochi",
+                  "x": 0.8,
+                  "y": 0.82,
+                  "face": "happy",
+                  "k": 0.7
+                }
+              ]
+            },
+            {
+              "bg": "street",
+              "cast": [
+                {
+                  "who": "mia",
+                  "x": 0.32,
+                  "y": 0.72,
+                  "face": "happy"
+                },
+                {
+                  "who": "leo",
+                  "x": 0.62,
+                  "y": 0.74,
+                  "face": "talk"
+                },
+                {
+                  "who": "mochi",
+                  "x": 0.8,
+                  "y": 0.82,
+                  "face": "happy",
+                  "k": 0.7
+                }
+              ]
+            },
+            {
+              "bg": "shop",
+              "cast": [
+                {
+                  "who": "mia",
+                  "x": 0.32,
+                  "y": 0.72,
+                  "face": "happy"
+                },
+                {
+                  "who": "leo",
+                  "x": 0.62,
+                  "y": 0.74,
+                  "face": "talk"
+                },
+                {
+                  "who": "mochi",
+                  "x": 0.8,
+                  "y": 0.82,
+                  "face": "happy",
+                  "k": 0.7
+                }
+              ]
+            }
+          ],
+          "lines": [
+            {
+              "who": "N",
+              "en": "Mochi gets up at noon. He eats breakfast.",
+              "zh": "Mochi 中午起床，吃早饭。",
+              "panel": 0
+            },
+            {
+              "who": "N",
+              "en": "Then he sleeps. He eats lunch. He sleeps again.",
+              "zh": "然后睡觉。吃午饭。再睡。",
+              "panel": 1
+            },
+            {
+              "who": "N",
+              "en": "At night, Mochi plays. He runs and jumps. He sings, too.",
+              "zh": "到了晚上，Mochi 开始玩。又跑又跳，还唱歌。",
+              "panel": 2
+            },
+            {
+              "who": "N",
+              "en": "Mia and Leo sleep at night. But at three in the morning, Mochi sings.",
+              "zh": "米娅和 Leo 晚上睡觉。可是凌晨三点，Mochi 唱起了歌。",
+              "panel": 3
+            },
+            {
+              "who": "N",
+              "en": "Mia and Leo wake up.",
+              "zh": "米娅和 Leo 被吵醒了。",
+              "panel": 3
+            }
+          ]
+        },
+        "words": [
+          {
+            "w": "noon",
+            "ipa": "nuːn",
+            "stress": "noon",
+            "pic": "🕛",
+            "zh": "中午十二点",
+            "ex": "Mochi gets up at noon.",
+            "part": "after + noon = afternoon 下午"
+          },
+          {
+            "w": "again",
+            "ipa": "əˈɡen",
+            "stress": "gain",
+            "pic": "🔁",
+            "zh": "又，再一次",
+            "ex": "He sleeps again.",
+            "part": "—"
+          },
+          {
+            "w": "jump",
+            "ipa": "dʒʌmp",
+            "stress": "jump",
+            "pic": "🦘",
+            "zh": "跳",
+            "ex": "He runs and jumps.",
+            "part": "—"
+          },
+          {
+            "w": "wake up",
+            "ipa": "ˌweɪk ˈʌp",
+            "stress": "up",
+            "pic": "⏰",
+            "zh": "醒来",
+            "ex": "Mia and Leo wake up.",
+            "part": "up 在 get up、wake up 里是\"起来\""
+          }
+        ],
         "steps": [
           {
-            "title": "一种情绪，两头",
-            "idea": "bored 和 boring 都来自动词 bore（使人厌烦），只是词尾不同，指向的对象就不同：一个说\"谁觉得烦\"，一个说\"谁让人烦\"。",
-            "why": "情绪总有两头：一头是感受到情绪的人，一头是引起情绪的事物。中文常靠上下文分清\"无聊\"是谁的，英语直接用词尾标出来。今天学这个词尾，再把一组情绪词排好。",
-            "takeaway": "情绪有两头：感受的人和引起它的事物，英语用词尾分开。",
-            "example": "一场又长又拖的讲座：讲座本身让人无聊，坐在下面的你觉得无聊。同一份\"无聊\"，一头在讲座上，一头在你身上。"
-          },
-          {
-            "title": "-ed：人被弄得……",
-            "idea": "描述人\"感到……\"，用 **-ed 形容词**：I'm bored.（我觉得无聊）I'm frustrated.（我很沮丧）",
-            "why": "-ed 来自过去分词，带着\"被动\"的意思。bore 是\"使人厌烦\"，bored 就是\"被弄得厌烦了\"。会被弄烦的，是有感受的人，所以 -ed 形容词通常放在感受情绪的人身上。",
-            "takeaway": "人\"感到\"某种情绪，用 -ed：被弄得……",
-            "example": "frustrate 是\"使沮丧\"。面试一直没回音，你被这件事弄得很沮丧：I'm frustrated. 同样，tired 是\"被弄累了\"，surprised 是\"被惊到了\"。"
-          },
-          {
-            "title": "-ing：事物让人……",
-            "idea": "描述让人有这种感受的事物，用 -ing：This is frustrating.（这事真让人沮丧）The lecture is boring.（这个讲座很无聊）",
-            "why": "-ing 来自现在分词，带着\"主动、正在做\"的意思。boring 就是\"正在让人厌烦\"。所以 I'm boring 不是\"我觉得无聊\"，而是\"我正在让别人觉得无聊\"，也就是我这人很无趣。",
-            "takeaway": "事物\"让人感到\"某种情绪，用 -ing。",
-            "example": "This movie is boring, so I'm bored. 一句话里两头都有：movie 是无聊的来源，用 boring；I 是感受到无聊的人，用 bored。",
-            "derive": [
-              "先问：谁是情绪的来源，谁是感受的人？",
-              "主语是感受的人 → -ed。",
-              "主语是来源（事、物，或让人烦的人）→ -ing。"
-            ],
+            "title": "先听故事",
+            "kind": "story-listen",
+            "idea": "看图听 Mochi 的一天。",
             "check": {
-              "q": "I'm boring. 实际在说？",
+              "q": "Mia 和 Leo 为什么半夜醒了？",
               "options": [
-                "我这人让别人觉得无聊",
-                "我觉得很无聊"
+                "Mochi 半夜唱歌",
+                "中午到了"
               ],
               "answer": 0,
-              "why": "-ing 表示\"正在让人……\"，主语 I 成了无聊的来源。「我觉得很无聊」要说 I'm bored。"
+              "why": "凌晨三点 Mochi 唱歌，把他们吵醒了。「中午」是 Mochi 起床的时间。"
             }
           },
           {
-            "title": "情绪词按强度排",
-            "idea": "把相近的情绪词按强度从低到高排成一条梯子：calm（平静）→ nervous（紧张）→ anxious（焦虑）→ **overwhelmed**（被压垮）。",
-            "why": "孤立背的单词没有地方挂，很快就忘。排进梯子后，每个词都有上下邻居做参照：anxious 比 nervous 强，是对未来持续的担心；overwhelmed 在最高一级，事情太多、承受不住。越往上，心理课说的\"唤醒\"越高。",
-            "takeaway": "情绪词按强度排成梯子，每个词都有邻居做参照。",
-            "example": "像音阶 do、re、mi、fa：单独听一个音，很难说出它是什么；放进音阶里，就知道它比谁高、比谁低。",
-            "exLabel": "打个比方",
+            "title": "四个新词",
+            "kind": "words",
+            "idea": "每个词都点一下 ▶。"
+          },
+          {
+            "title": "发音 · -s 的三种读法",
+            "idea": "动词后面的 -s 有三种读法：/s/、/z/、/ɪz/。看它前面那个音。",
+            "why": "手放在喉咙上，说 sss，再说 zzz：s 不震，z 震。前一个音不震（p、k、t），-s 顺着也不震，读 /s/。前一个音震（元音、n、l、g），-s 跟着震，读 /z/。前面已经是 s、sh、ch 这种\"嘶\"的音，再接一个 s 分不清，就加一个小元音，读 /ɪz/。嘴巴总挑最顺的路。",
+            "example": "[[sleeps]]、[[jumps]] 读 /s/；[[plays]]、[[runs]] 读 /z/；[[washes]] 读 /ɪz/，两个音节。",
+            "takeaway": "-s 跟着前一个音走：不震读 /s/，震读 /z/，嘶音后读 /ɪz/。",
             "visual": {
-              "type": "bars",
-              "items": [
+              "type": "sentence",
+              "base": {
+                "rows": [
+                  [
+                    {
+                      "text": "看",
+                      "role": "who"
+                    },
+                    {
+                      "text": "图",
+                      "role": "verb"
+                    }
+                  ]
+                ]
+              },
+              "frames": [
                 {
-                  "label": "calm",
-                  "value": 1
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "-s 跟着前一个音走：不震读 /s/，震读 /z/，嘶音后读 /ɪz/",
+                  "para": "idea"
                 },
                 {
-                  "label": "nervous",
-                  "value": 2
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "-s 跟着前一个音走：不震读 /s/，震读 /z/，嘶音后读 /ɪz/",
+                  "para": "why"
                 },
                 {
-                  "label": "anxious",
-                  "value": 3
-                },
-                {
-                  "label": "overwhelmed",
-                  "value": 4
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "-s 跟着前一个音走：不震读 /s/，震读 /z/，嘶音后读 /ɪz/。",
+                  "para": "takeaway"
                 }
               ]
             },
             "check": {
-              "q": "下面哪个词比 nervous 更强？",
+              "q": "[[washes]] 有几个音节？",
               "options": [
-                "anxious",
-                "calm"
+                "两个：wash-es",
+                "一个"
               ],
               "answer": 0,
-              "why": "梯子是 calm → nervous → anxious → overwhelmed，anxious 在 nervous 上面一级。「calm」是最低的一级，平静。"
+              "why": "wash 以 sh 结尾，再加 s 分不清，所以加小元音，读 wash-es，两个音节。「一个」是把 -es 吞掉了。"
             }
           },
           {
-            "title": "串起来：准确说出你的感受",
-            "idea": "回到开头：说自己\"觉得无聊\"用 bored，说事物或别人\"让人无聊\"才用 boring。再配上梯子上的词和两个句型，就能准确说出感受。",
-            "why": "overwhelmed 也是 -ed：overwhelm 是\"压倒\"，你是被事情压垮的那一方。所以说自己的感受时，梯子上的词都可以直接放在 I'm、I feel、I've been feeling 后面。",
-            "takeaway": "自己感到用 -ed，让人感到用 -ing；情绪词按强度记。",
-            "example": "I feel anxious because the exam is next week.（下周考试，我很焦虑。）I've been feeling overwhelmed lately.（我最近一直觉得被压垮了。）两句的主语都是感受的人，所以都用 -ed。"
+            "title": "语法 · 一个别人的习惯，动词加 -s",
+            "idea": "说\"每天都这样\"的习惯，用动词原形。如果\"谁\"是一个别人（he、she、it、Mochi），动词后面加 -s。",
+            "why": "和 am / is / are 一样，这也是古英语留下的配对：动词要和\"谁\"对上号。别的配对都消失了，只剩\"一个别人 + 现在\"还要加 -s。所以 I sleep、they sleep 不加，he sleeps 要加。忘了加，别人照样听得懂，但会觉得不对劲，像弹错了一个音。",
+            "example": "[[I sleep at night.]] [[Mia and Leo sleep at night.]] [[Mochi sleeps at noon.]] [[He gets up at noon.]]",
+            "takeaway": "说习惯用现在时；一个别人做事，动词加 -s。",
+            "visual": {
+              "type": "sentence",
+              "base": {
+                "rows": [
+                  {
+                    "bricks": [
+                      {
+                        "text": "{",
+                        "role": "extra"
+                      },
+                      {
+                        "text": "Mochi",
+                        "role": "who"
+                      },
+                      {
+                        "text": "sleeps",
+                        "role": "verb"
+                      },
+                      {
+                        "text": "at",
+                        "role": "extra"
+                      },
+                      {
+                        "text": "Mia",
+                        "role": "who"
+                      },
+                      {
+                        "text": "sleep",
+                        "role": "verb"
+                      },
+                      {
+                        "text": "at",
+                        "role": "extra"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "frames": [
+                {
+                  "set": {
+                    "play": 0
+                  },
+                  "cap": "说\"每天都这样\"的习惯，用动词原形。如果\"谁\"是一个别人（he、she、it、M",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "play": 1
+                  },
+                  "cap": "说习惯用现在时；一个别人做事，动词加 -s。",
+                  "para": "takeaway"
+                }
+              ]
+            },
+            "check": {
+              "q": "Mochi ___ at noon.",
+              "options": [
+                "gets up",
+                "get up"
+              ],
+              "answer": 0,
+              "why": "Mochi 是一个别人，又是每天的习惯，动词加 -s：gets up。「get up」配的是 I、you、they。"
+            }
+          },
+          {
+            "title": "再读故事",
+            "kind": "story-read",
+            "idea": "看着字听，找一找每个 -s，听它读 /s/ 还是 /z/。"
+          },
+          {
+            "title": "换一个人，动词跟着变",
+            "kind": "drill",
+            "frame": "{a} {b} {c}.",
+            "zh": "{a}{c}{b}。",
+            "slots": {
+              "a": [
+                {
+                  "en": "Mochi",
+                  "zh": "Mochi",
+                  "pic": "🐱"
+                },
+                {
+                  "en": "Leo",
+                  "zh": "Leo",
+                  "pic": "👨‍🍳"
+                },
+                {
+                  "en": "They",
+                  "zh": "他们",
+                  "pic": "👥"
+                },
+                {
+                  "en": "I",
+                  "zh": "我",
+                  "pic": "🙋"
+                }
+              ],
+              "b": [
+                {
+                  "en": "sleeps",
+                  "zh": "睡觉",
+                  "pic": ""
+                },
+                {
+                  "en": "sleeps",
+                  "zh": "睡觉",
+                  "pic": ""
+                },
+                {
+                  "en": "sleep",
+                  "zh": "睡觉",
+                  "pic": ""
+                },
+                {
+                  "en": "sleep",
+                  "zh": "睡觉",
+                  "pic": ""
+                }
+              ],
+              "c": [
+                {
+                  "en": "at noon",
+                  "zh": "中午",
+                  "pic": "🕛"
+                },
+                {
+                  "en": "at night",
+                  "zh": "晚上",
+                  "pic": "🌙"
+                },
+                {
+                  "en": "again",
+                  "zh": "又",
+                  "pic": "🔁"
+                }
+              ]
+            },
+            "need": 3,
+            "linked": true
+          },
+          {
+            "title": "跟读",
+            "kind": "shadow",
+            "tip": "-s 别吞掉：gets、sleeps 读 /s/。",
+            "lines": [
+              0,
+              1,
+              4
+            ]
+          },
+          {
+            "title": "复述：串起来",
+            "kind": "retell",
+            "idea": "看着图，讲 Mochi 的一天。他是一个别人，动词都加 -s。",
+            "keys": [
+              [
+                "gets up",
+                "noon",
+                "eats"
+              ],
+              [
+                "sleeps",
+                "again"
+              ],
+              [
+                "at night",
+                "runs",
+                "jumps"
+              ],
+              [
+                "sings",
+                "wake up"
+              ]
+            ]
           }
         ],
         "interaction": {
           "type": "listen",
           "prompt": "听一听，选出你听到的句子",
-          "audio": "I've been feeling overwhelmed lately.",
-          "answer": 0,
-          "why": "描述自己的感受用 -ed：overwhelmed。",
+          "audio": "He sleeps again.",
+          "showText": "after",
           "options": [
-            "I've been feeling overwhelmed lately.",
-            "I've been feeling overwhelming lately.",
-            "I'm feeling over it lately."
+            "He sleeps again.",
+            "He sleep again.",
+            "She sleeps again."
           ],
+          "answer": 0,
+          "why": "sleeps 末尾有一个清楚的 /s/。「He sleep again.」没有 -s；「She…」开头是 sh。",
           "ref": [
-            3,
-            4
+            2,
+            3
           ]
         },
-        "take": "人“感到”用 -ed，事物“让人感到”用 -ing。情绪词按强度排更好记。",
+        "take": "说习惯用现在时；一个别人做事，动词加 -s；-s 读 /s/、/z/ 或 /ɪz/，跟着前一个音走。",
         "quiz": [
           {
-            "q": "一直在等面试结果，你说：“The waiting is so ___.”",
+            "q": "Mochi ___ fish every day.",
             "options": [
-              "frustrating",
-              "frustrated",
-              "frustrate"
+              "eats",
+              "eat",
+              "eating"
             ],
             "answer": 0,
-            "why": "主语是“等待”这件事，它在让人沮丧，用 -ing。如果主语是 I，才用 frustrated。",
-            "ref": 2
+            "why": "Mochi 是一个别人，又是每天的习惯，所以加 -s：eats。「eat」少了 -s；「eating」前面没有 is，也不是习惯的说法。",
+            "ref": 3
           },
           {
-            "q": "“事情太多，整个人被压垮了”最贴切的词是？",
+            "q": "这句话的意思是？",
             "options": [
-              "overwhelmed",
-              "relieved",
-              "bored"
+              "他们醒了。",
+              "Mochi 醒了。",
+              "他们睡着了。"
             ],
             "answer": 0,
-            "why": "overwhelmed 是强度最高的那一级“被压垮”。relieved 是“松了一口气”，bored 是“无聊”。",
-            "ref": 3
+            "why": "they 是\"他们\"，配原形 wake，不加 -s。「Mochi 醒了」要说 Mochi wakes up；「睡着了」是 sleep。",
+            "ref": 3,
+            "audio": "They wake up."
           }
-        ],
-        "tts": [
-          "I'm frustrated.",
-          "This is frustrating.",
-          "I've been feeling overwhelmed lately."
         ]
       }
     }
@@ -4887,7 +11006,37 @@ window.DAYS = [
             "idea": "没有。颜色只是光，\"暖\"\"冷\"是眼睛和记忆一起给的感觉，不是温度计量出来的。",
             "why": "我们从小看到火焰、阳光、夕阳是红橙黄，靠近了是热的；看到水、冰、阴影、远处的天是蓝的，感觉是凉的。看得多了，大脑就把颜色和冷热绑在了一起。所以说红色\"暖\"，是一种联想。",
             "takeaway": "冷暖是联想出来的感觉，不是颜色真有温度。",
-            "example": "黑衣服在太阳下晒久了确实最烫，那是因为它吸的光最多，和冷暖色是两回事——黑色晒得最烫，可它并不算暖色。"
+            "example": "黑衣服在太阳下晒久了确实最烫，那是因为它吸的光最多，和冷暖色是两回事——黑色晒得最烫，可它并不算暖色。",
+            "visual": {
+              "type": "temp",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "冷暖是联想出来的感觉，不是颜色真有温度",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "冷暖是联想出来的感觉，不是颜色真有温度",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "冷暖是联想出来的感觉，不是颜色真有温度。",
+                  "para": "takeaway"
+                }
+              ]
+            }
           },
           {
             "title": "色轮分两半：暖的一侧和冷的一侧",
@@ -4903,6 +11052,36 @@ window.DAYS = [
               ],
               "answer": 0,
               "why": "橙在红和黄之间，正是火和阳光那一侧，属于暖色。「冷色」是蓝那一侧。"
+            },
+            "visual": {
+              "type": "wheelBuild",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "红橙黄偏暖，蓝那一侧偏冷；绿和紫看偏向",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "红橙黄偏暖，蓝那一侧偏冷；绿和紫看偏向",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "红橙黄偏暖，蓝那一侧偏冷；绿和紫看偏向。",
+                  "para": "takeaway"
+                }
+              ]
             }
           },
           {
@@ -4912,14 +11091,33 @@ window.DAYS = [
             "takeaway": "比冷暖看偏向：靠黄更暖，靠蓝更冷。",
             "example": "番茄红偏橙，是暖红；玫红偏紫，是冷红。两个都叫\"红\"，可并排一放，番茄红像夏天的阳光，玫红就显得凉一些。",
             "visual": {
-              "type": "swatches",
-              "colors": [
-                "#E8442E",
-                "#C2185B"
-              ],
-              "labels": [
-                "番茄红（偏橙，暖）",
-                "玫红（偏紫，冷）"
+              "type": "temp",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "比冷暖看偏向：靠黄更暖，靠蓝更冷",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "比冷暖看偏向：靠黄更暖，靠蓝更冷",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "比冷暖看偏向：靠黄更暖，靠蓝更冷。",
+                  "para": "takeaway"
+                }
               ]
             },
             "check": {
@@ -4946,6 +11144,36 @@ window.DAYS = [
               ],
               "answer": 0,
               "why": "橙是暖色，看起来往前跳，所以更近。「蓝色那块」是冷色，看起来往后退。"
+            },
+            "visual": {
+              "type": "temp",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "暖色往前、显大，冷色往后、显收敛",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "暖色往前、显大，冷色往后、显收敛",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "暖色往前、显大，冷色往后、显收敛。",
+                  "para": "takeaway"
+                }
+              ]
             }
           },
           {
@@ -4958,7 +11186,37 @@ window.DAYS = [
               "色相：都是红。",
               "偏向：番茄红靠黄，酒红靠蓝。",
               "效果：暖的往前、热情；冷而深的往后、冷静。"
-            ]
+            ],
+            "visual": {
+              "type": "outfit",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "冷暖看偏向；想突出用暖色，想收敛用冷色、深色",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "冷暖看偏向；想突出用暖色，想收敛用冷色、深色",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "冷暖看偏向；想突出用暖色，想收敛用冷色、深色。",
+                  "para": "takeaway"
+                }
+              ]
+            }
           }
         ],
         "interaction": {
@@ -5032,7 +11290,59 @@ window.DAYS = [
               4
             ]
           }
-        ]
+        ],
+        "hookComic": {
+          "panels": [
+            {
+              "bg": "room",
+              "cast": [
+                {
+                  "who": "xiaoman",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "talk"
+                }
+              ],
+              "cap": "同样是红色，番茄红显得热情，"
+            },
+            {
+              "bg": "street",
+              "cast": [
+                {
+                  "who": "xiaoyin",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "talk"
+                }
+              ],
+              "cap": "红色不都是暖色吗"
+            },
+            {
+              "bg": "shop",
+              "cast": [
+                {
+                  "who": "xiaoman",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "talk"
+                }
+              ],
+              "cap": "红色不都是暖色吗"
+            },
+            {
+              "bg": "plain",
+              "cast": [
+                {
+                  "who": "xiaoyin",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "wow"
+                }
+              ],
+              "cap": "红色不都是暖色吗"
+            }
+          ]
+        }
       },
       "history": {
         "id": "d05-history",
@@ -5046,7 +11356,10 @@ window.DAYS = [
             "why": "下一个王朝等于拿到了一份\"错题本\"：哪些该留，哪些该改，前车之鉴就摆在眼前。",
             "takeaway": "今天看汉怎样留下制度、改掉用法。",
             "example": "就像接手一个前任做砸了的账号：内容方向是对的，只是更新太猛，把粉丝累跑了。",
-            "review": true
+            "review": true,
+            "visual": {
+              "recall": "d04-history#8"
+            }
           },
           {
             "title": "楚汉之争：为什么是刘邦赢",
@@ -5058,7 +11371,37 @@ window.DAYS = [
               "项羽回到分封 → 天下又乱。",
               "刘邦减轻刑罚 → 百姓愿意支持他。",
               "打到最后，拼的是人心和粮草。"
-            ]
+            ],
+            "visual": {
+              "type": "chain",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "刘邦赢在人心和粮草；汉一开始就在纠正秦的\"太严\"",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "刘邦赢在人心和粮草；汉一开始就在纠正秦的\"太严\"",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "刘邦赢在人心和粮草；汉一开始就在纠正秦的\"太严\"。",
+                  "para": "takeaway"
+                }
+              ]
+            }
           },
           {
             "title": "如果你是刘邦：先让天下喘口气",
@@ -5072,7 +11415,36 @@ window.DAYS = [
               "可百姓自己都吃不饱，收也收不上来。",
               "不如先少收，让大家回去种地、养家。",
               "等人多了、粮多了，税自然就多了。"
-            ]
+            ],
+            "visual": {
+              "type": "comic",
+              "panels": [
+                {
+                  "bg": "room",
+                  "cast": [
+                    {
+                      "who": "xiaoman",
+                      "x": 0.48,
+                      "y": 0.72,
+                      "face": "talk"
+                    }
+                  ],
+                  "cap": "休养生息 = 先少收少用，让"
+                },
+                {
+                  "bg": "street",
+                  "cast": [
+                    {
+                      "who": "xiaoyin",
+                      "x": 0.48,
+                      "y": 0.72,
+                      "face": "talk"
+                    }
+                  ],
+                  "cap": "如果你是刘邦：先让天下喘口气"
+                }
+              ]
+            }
           },
           {
             "title": "为什么\"少收\"反而让国库满了",
@@ -5089,6 +11461,36 @@ window.DAYS = [
               ],
               "answer": 0,
               "why": "税率低，但种地的人和收成都多了，总量就上去了。汉初恰恰是在减税，所以「朝廷又悄悄加了税」不对。"
+            },
+            "visual": {
+              "type": "blocks",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "休养生息先养\"底子\"，底子厚了，国家自然富",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "休养生息先养\"底子\"，底子厚了，国家自然富",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "休养生息先养\"底子\"，底子厚了，国家自然富。",
+                  "para": "takeaway"
+                }
+              ]
             }
           },
           {
@@ -5096,7 +11498,37 @@ window.DAYS = [
             "idea": "制度上，汉基本沿用秦的郡县制，叫\"汉承秦制\"。但刘邦也把一部分土地封给刘姓子弟当诸侯王，郡县和王国同时存在。",
             "why": "汉初的人认为，秦亡得快，一个原因是皇帝太孤立，出了事没有自家人帮忙。所以刘邦在东方封了一批同姓王，想让他们护卫中央。可这又回到了周的老问题：王国有地、有兵、能收税，几代以后血缘淡了，就不听话了。",
             "takeaway": "汉一半郡县、一半王国；王国坐大，就有了七国之乱。",
-            "example": "前 154 年，吴王刘濞等七个诸侯王联合起兵，叫\"七国之乱\"。叛乱大约三个月就被平定，可根子还在：大的王国还在。"
+            "example": "前 154 年，吴王刘濞等七个诸侯王联合起兵，叫\"七国之乱\"。叛乱大约三个月就被平定，可根子还在：大的王国还在。",
+            "visual": {
+              "type": "histmap",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "汉一半郡县、一半王国；王国坐大，就有了七国之乱",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "汉一半郡县、一半王国；王国坐大，就有了七国之乱",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "汉一半郡县、一半王国；王国坐大，就有了七国之乱。",
+                  "para": "takeaway"
+                }
+              ]
+            }
           },
           {
             "title": "推恩令：让王国自己变小",
@@ -5121,6 +11553,36 @@ window.DAYS = [
               ],
               "answer": 0,
               "why": "以前封地只归嫡长子，小儿子分不到；推恩令让他们也有份，所以最欢迎。「想独占王国的嫡长子」反而要把地分出去，最吃亏。"
+            },
+            "visual": {
+              "type": "tree",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "推恩令靠继承规则，不打仗就把大王国拆小了",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "推恩令靠继承规则，不打仗就把大王国拆小了",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "推恩令靠继承规则，不打仗就把大王国拆小了。",
+                  "para": "takeaway"
+                }
+              ]
             }
           },
           {
@@ -5129,7 +11591,37 @@ window.DAYS = [
             "why": "张骞的任务本来是军事的：联合西边的大月氏，夹击匈奴。他路上被匈奴扣留了十多年，逃出来找到大月氏，对方却不想再打仗了。军事目的没达到，他却带回了西域的道路、物产和风俗。后来汉朝打通了通往西方的商路，丝绸由此运出，这条路后来被叫作\"丝绸之路\"。",
             "takeaway": "张骞出使本为夹击匈奴，却意外打开了通往西方的路。",
             "example": "本来是去谈一场合作，没谈成，却带回一整本\"沿途通讯录\"。后来的商队和使者，都是照着这本通讯录一站站走过去的。",
-            "exLabel": "打个比方"
+            "exLabel": "打个比方",
+            "visual": {
+              "type": "histmap",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "张骞出使本为夹击匈奴，却意外打开了通往西方的路",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "张骞出使本为夹击匈奴，却意外打开了通往西方的路",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "张骞出使本为夹击匈奴，却意外打开了通往西方的路。",
+                  "para": "takeaway"
+                }
+              ]
+            }
           },
           {
             "title": "中间断了一次：王莽的新朝",
@@ -5146,6 +11638,36 @@ window.DAYS = [
               ],
               "answer": 0,
               "why": "王莽一次次改货币、改土地制度，社会越改越乱，最后被起义推翻。「汉武帝派兵灭了它」时间对不上，汉武帝是西汉中期的皇帝，早就去世了。"
+            },
+            "visual": {
+              "type": "tl",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "王莽篡汉建新朝，改革太急太乱，十几年就亡了",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "王莽篡汉建新朝，改革太急太乱，十几年就亡了",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "王莽篡汉建新朝，改革太急太乱，十几年就亡了。",
+                  "para": "takeaway"
+                }
+              ]
             }
           },
           {
@@ -5153,7 +11675,37 @@ window.DAYS = [
             "idea": "25 年，刘秀重建汉朝，定都洛阳，史称**东汉**。东汉一直延续到 220 年。",
             "why": "西汉加东汉，从前 202 年到 220 年，跨过公元元年，相加约 420 年，第 1 天算过。这么长时间里，郡县、文字、礼俗在一个大国里稳定下来，人们渐渐把这里的人叫\"汉人\"，把他们的字叫\"汉字\"。名字是在漫长的统一里慢慢长出来的。",
             "takeaway": "约 400 年的汉让\"汉\"成了名字；东汉末，分裂发动机又启动了。",
-            "example": "可东汉后期又出了新问题：朝廷里外戚和宦官轮流掌权，地方上大族占的地越来越多。中央一乱，地方就会有自己的兵，第 1 天的\"分裂发动机\"又要启动了。"
+            "example": "可东汉后期又出了新问题：朝廷里外戚和宦官轮流掌权，地方上大族占的地越来越多。中央一乱，地方就会有自己的兵，第 1 天的\"分裂发动机\"又要启动了。",
+            "visual": {
+              "type": "tl",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "约 400 年的汉让\"汉\"成了名字；东汉末，分裂发动机又启动了",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "约 400 年的汉让\"汉\"成了名字；东汉末，分裂发动机又启动了",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "约 400 年的汉让\"汉\"成了名字；东汉末，分裂发动机又启动了。",
+                  "para": "takeaway"
+                }
+              ]
+            }
           }
         ],
         "interaction": {
@@ -5233,7 +11785,59 @@ window.DAYS = [
             "label": "罗马帝国开始（屋大维称“奥古斯都”）",
             "kind": "event"
           }
-        ]
+        ],
+        "hookComic": {
+          "panels": [
+            {
+              "bg": "room",
+              "cast": [
+                {
+                  "who": "xiaoman",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "talk"
+                }
+              ],
+              "cap": "“汉人”“汉字”“汉服”——"
+            },
+            {
+              "bg": "street",
+              "cast": [
+                {
+                  "who": "xiaoyin",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "talk"
+                }
+              ],
+              "cap": "“汉人”“汉字”“汉服”——"
+            },
+            {
+              "bg": "shop",
+              "cast": [
+                {
+                  "who": "xiaoman",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "talk"
+                }
+              ],
+              "cap": "“汉人”“汉字”“汉服”——"
+            },
+            {
+              "bg": "plain",
+              "cast": [
+                {
+                  "who": "xiaoyin",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "wow"
+                }
+              ],
+              "cap": "“汉人”“汉字”“汉服”——"
+            }
+          ]
+        }
       },
       "geo": {
         "id": "d05-geo",
@@ -5246,7 +11850,37 @@ window.DAYS = [
             "idea": "河通常流在最低的地方，人住在高一点的岸上。可在河南开封，黄河的河床反而比城里的地面高，河水被两道大堤\"架\"在半空。",
             "why": "上一关学过，水往低处流，河道就是地面上最低的那条沟，照理河床应该比两岸低。黄河偏偏反过来，说明有什么东西一直在往河底\"加料\"，把河床越垫越高。这一关就来追这份\"料\"：它是什么，从哪来，为什么偏偏堆在下游。",
             "takeaway": "正常的河在低处；开封的黄河却高过城市，背后一定有原因。",
-            "example": "站在开封城里抬头看，黄河大堤像一道长长的土墙。爬上大堤才看到河面，而河床比你刚才站的街道还高十米左右，差不多是三层楼那么高。"
+            "example": "站在开封城里抬头看，黄河大堤像一道长长的土墙。爬上大堤才看到河面，而河床比你刚才站的街道还高十米左右，差不多是三层楼那么高。",
+            "visual": {
+              "type": "sediment",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "正常的河在低处；开封的黄河却高过城市，背后一定有原因",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "正常的河在低处；开封的黄河却高过城市，背后一定有原因",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "正常的河在低处；开封的黄河却高过城市，背后一定有原因。",
+                  "para": "takeaway"
+                }
+              ]
+            }
           },
           {
             "title": "黄河一路下台阶",
@@ -5254,7 +11888,10 @@ window.DAYS = [
             "why": "靠源头的一段叫上游，中间一段叫中游，靠入海口的一段叫下游。今天的关键，就是中游和下游这两段。",
             "takeaway": "黄河中游穿过黄土高原，下游流过华北平原。",
             "example": "黄土高原的主体在山西、陕西一带，属于黄河中游；开封在河南的华北平原上，属于黄河下游。",
-            "review": true
+            "review": true,
+            "visual": {
+              "recall": "d04-geo#3"
+            }
           },
           {
             "title": "黄土为什么一冲就走",
@@ -5267,7 +11904,37 @@ window.DAYS = [
               "夏季暴雨：先砸松，再冲走。",
               "草木少：没有东西挡雨、抓土。",
               "三样凑在一起：水土大量流失。"
-            ]
+            ],
+            "visual": {
+              "type": "soil",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "土细松 + 夏季暴雨 + 草木少 → 黄土高原水土流失严重",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "土细松 + 夏季暴雨 + 草木少 → 黄土高原水土流失严重",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "土细松 + 夏季暴雨 + 草木少 → 黄土高原水土流失严重。",
+                  "para": "takeaway"
+                }
+              ]
+            }
           },
           {
             "title": "黄河为什么是黄的",
@@ -5283,6 +11950,36 @@ window.DAYS = [
               ],
               "answer": 0,
               "why": "颜色来自水里的泥沙：黄土高原的土被冲进河里，河水「裹着大量黄土」才发黄。说「河底的石头是黄色的」不对，上游贵德一带的河水还是清的。"
+            },
+            "visual": {
+              "type": "cnmap",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "黄河的黄，来自中游黄土高原冲进来的泥沙",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "黄河的黄，来自中游黄土高原冲进来的泥沙",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "黄河的黄，来自中游黄土高原冲进来的泥沙。",
+                  "para": "takeaway"
+                }
+              ]
             }
           },
           {
@@ -5304,6 +12001,36 @@ window.DAYS = [
               ],
               "answer": 0,
               "why": "停手后水变慢，托不住泥沙，泥沙就「慢慢沉到杯底」。没有水流再把泥沙卷起来，所以不会「越放越浑」。"
+            },
+            "visual": {
+              "type": "sediment",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "水快能带走泥沙，水慢泥沙就沉积下来",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "水快能带走泥沙，水慢泥沙就沉积下来",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "水快能带走泥沙，水慢泥沙就沉积下来。",
+                  "para": "takeaway"
+                }
+              ]
             }
           },
           {
@@ -5317,7 +12044,37 @@ window.DAYS = [
               "中游：峡谷坡陡，水急，泥沙被带着走。",
               "下游：平原坡缓、河面变宽，水慢。",
               "水慢带不动：泥沙沉在下游河床上。"
-            ]
+            ],
+            "visual": {
+              "type": "profileTrip",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "下游地势平、水流慢，带不动泥沙，泥沙就沉在河床上",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "下游地势平、水流慢，带不动泥沙，泥沙就沉在河床上",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "下游地势平、水流慢，带不动泥沙，泥沙就沉在河床上。",
+                  "para": "takeaway"
+                }
+              ]
+            }
           },
           {
             "title": "河床越垫越高：地上河",
@@ -5327,13 +12084,33 @@ window.DAYS = [
             "example": "像一条总往里倒沙的长水槽：槽底被沙垫高，水快溢出来了，你就把槽壁再接高一截。接一次、垫一次，槽里的沙面越抬越高，最后高过了旁边的桌面。",
             "exLabel": "打个比方",
             "visual": {
-              "type": "flow",
-              "nodes": [
-                "黄土疏松 + 暴雨",
-                "泥沙入河",
-                "下游水慢，泥沙沉积",
-                "河床抬高，加高堤坝",
-                "地上河"
+              "type": "sediment",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "泥沙垫高河床，大堤越修越高，河床高过地面，就成了地上河",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "泥沙垫高河床，大堤越修越高，河床高过地面，就成了地上河",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "泥沙垫高河床，大堤越修越高，河床高过地面，就成了地上河。",
+                  "para": "takeaway"
+                }
               ]
             },
             "check": {
@@ -5351,7 +12128,37 @@ window.DAYS = [
             "idea": "回到开头：开封的黄河高过城市，是因为中游带来的泥沙在下游沉积，把河床垫高，大堤又越修越高。",
             "why": "整条链是：中游水土流失 → 泥沙进河 → 下游水慢 → 泥沙沉积 → 河床抬高、加高大堤 → 地上河。不是地下有什么力量把河床顶起来，而是泥沙一层层垫起来的。后果也直接：水往低处流，大堤一旦决口，河水就冲向比它低的整片平原。历史上黄河多次决口、改道，深刻影响了华北的城市和王朝。",
             "takeaway": "泥沙来自中游、沉在下游；治黄河，根本在中游的黄土高原。",
-            "example": "怎么治？只在下游加高大堤是\"治标\"：泥沙还在来，河床还在长。根本办法是在中游的黄土高原植树种草、修梯田、建淤地坝，把土留在山坡上，从泥沙产生的地方减少进河的沙，这才是\"治本\"。"
+            "example": "怎么治？只在下游加高大堤是\"治标\"：泥沙还在来，河床还在长。根本办法是在中游的黄土高原植树种草、修梯田、建淤地坝，把土留在山坡上，从泥沙产生的地方减少进河的沙，这才是\"治本\"。",
+            "visual": {
+              "type": "chain",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "泥沙来自中游、沉在下游；治黄河，根本在中游的黄土高原",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "泥沙来自中游、沉在下游；治黄河，根本在中游的黄土高原",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "泥沙来自中游、沉在下游；治黄河，根本在中游的黄土高原。",
+                  "para": "takeaway"
+                }
+              ]
+            }
           }
         ],
         "interaction": {
@@ -5419,23 +12226,268 @@ window.DAYS = [
             "id": "HA",
             "label": "开封"
           }
-        ]
+        ],
+        "hookComic": {
+          "panels": [
+            {
+              "bg": "room",
+              "cast": [
+                {
+                  "who": "xiaoman",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "talk"
+                }
+              ],
+              "cap": "河南开封有一段黄河，河床比城"
+            },
+            {
+              "bg": "street",
+              "cast": [
+                {
+                  "who": "xiaoyin",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "talk"
+                }
+              ],
+              "cap": "河怎么会跑到人头顶上"
+            },
+            {
+              "bg": "shop",
+              "cast": [
+                {
+                  "who": "xiaoman",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "talk"
+                }
+              ],
+              "cap": "河怎么会跑到人头顶上"
+            },
+            {
+              "bg": "plain",
+              "cast": [
+                {
+                  "who": "xiaoyin",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "wow"
+                }
+              ],
+              "cap": "河怎么会跑到人头顶上"
+            }
+          ]
+        }
       },
       "finance": {
         "id": "d05-finance",
         "title": "利息：钱的租金",
-        "minutes": 4,
+        "minutes": 7,
         "hook": "你把钱存进银行，银行为什么要付钱给你？",
+        "hookComic": {
+          "panels": [
+            {
+              "bg": "room",
+              "cast": [
+                {
+                  "who": "xiaoman",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "talk"
+                }
+              ],
+              "cap": "你把钱存进银行，银行为什么要"
+            },
+            {
+              "bg": "street",
+              "cast": [
+                {
+                  "who": "xiaoyin",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "talk"
+                }
+              ],
+              "cap": "你把钱存进银行，银行为什么要"
+            },
+            {
+              "bg": "shop",
+              "cast": [
+                {
+                  "who": "xiaoman",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "talk"
+                }
+              ],
+              "cap": "你把钱存进银行，银行为什么要"
+            },
+            {
+              "bg": "plain",
+              "cast": [
+                {
+                  "who": "xiaoyin",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "wow"
+                }
+              ],
+              "cap": "你把钱存进银行，银行为什么要"
+            }
+          ]
+        },
         "steps": [
           {
-            "text": "利息就是用别人的钱要付的“租金”。你把钱存进银行，等于把钱借给银行用，银行付你租金；你向别人借钱，就是你付租金。"
+            "title": "银行为什么给你钱？",
+            "idea": "钱存进银行，银行不会让它躺着。银行会把它借出去，收租金。",
+            "visual": {
+              "type": "comic",
+              "panels": [
+                {
+                  "bg": "bank",
+                  "cast": [
+                    {
+                      "who": "xiaoman",
+                      "x": 0.5,
+                      "y": 0.72,
+                      "face": "talk"
+                    }
+                  ],
+                  "cap": "我存 1000"
+                },
+                {
+                  "bg": "kitchen",
+                  "cast": [
+                    {
+                      "who": "xiaoman",
+                      "x": 0.5,
+                      "y": 0.72,
+                      "face": "talk"
+                    }
+                  ],
+                  "cap": "银行借给老板开店"
+                },
+                {
+                  "bg": "room",
+                  "cast": [
+                    {
+                      "who": "xiaoman",
+                      "x": 0.5,
+                      "y": 0.72,
+                      "face": "talk"
+                    }
+                  ],
+                  "cap": "老板付租金，你也分到"
+                }
+              ]
+            },
+            "takeaway": "你存的钱，其实被银行借给了别人。"
           },
           {
-            "text": "年利率就是一年的租金占本金的百分之几。年利率 3% = 每 100 元借一年，租金 3 元。"
+            "title": "利息：用钱的租金",
+            "idea": "**利息**就是用别人的钱要付的租金。你存钱，等于借钱给银行，银行付你租金。你借钱，就是你付租金。",
+            "visual": {
+              "type": "chain",
+              "base": {
+                "nodes": [
+                  "你借出 1000",
+                  "一年后",
+                  "拿回 1000 + 租金"
+                ]
+              },
+              "frames": [
+                {
+                  "set": {
+                    "play": 0,
+                    "step": 0
+                  },
+                  "cap": "先看骨架",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "play": 1,
+                    "step": 2
+                  },
+                  "cap": "看完整的图",
+                  "para": "takeaway"
+                }
+              ]
+            },
+            "example": "租房要付房租，租钱就付利息。房子会回到房东手里，钱也会回到借出的人手里，外加一笔租金。",
+            "takeaway": "利息 = 钱的租金。"
           },
           {
-            "text": "用第 2 天的方法算：存 1000 元，年利率 3%，一年利息是多少？",
+            "title": "钱为什么要收租金？",
+            "idea": "借出钱的人，吃了两样亏，所以要补偿。",
+            "visual": {
+              "type": "comic",
+              "panels": [
+                {
+                  "bg": "bank",
+                  "cast": [
+                    {
+                      "who": "xiaoman",
+                      "x": 0.5,
+                      "y": 0.72,
+                      "face": "talk"
+                    }
+                  ],
+                  "cap": "借出去，自己暂时用不了"
+                },
+                {
+                  "bg": "kitchen",
+                  "cast": [
+                    {
+                      "who": "xiaoman",
+                      "x": 0.5,
+                      "y": 0.72,
+                      "face": "talk"
+                    }
+                  ],
+                  "cap": "万一不还呢？"
+                }
+              ]
+            },
+            "why": "一是暂时用不了这笔钱，想买东西也只能等。二是要担心对方不还。利息就是对这两样的补偿。",
+            "takeaway": "利息补偿两件事：暂时不能用，和可能收不回。"
+          },
+          {
+            "title": "年利率：每 100 元借一年的租金",
+            "idea": "**年利率**就是借一年，每 100 元要付几元租金。年利率 3%，就是每 100 元一年付 3 元。",
+            "visual": {
+              "type": "grid100",
+              "base": {
+                "fill": 3,
+                "label": "每 100 元借一年，租金 3 元"
+              },
+              "frames": [
+                {
+                  "set": {
+                    "play": 0,
+                    "step": 0
+                  },
+                  "cap": "先看骨架",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "play": 1,
+                    "step": 2
+                  },
+                  "cap": "看完整的图",
+                  "para": "takeaway"
+                }
+              ]
+            },
             "formula": "1000 ÷ 100 × 3 = 30",
+            "takeaway": "年利率 x% = 每 100 元借一年，租金 x 元。",
+            "derive": [
+              "存 1000 元，年利率 3%。",
+              "1000 里有 10 个 100。",
+              "每个 100 一年 3 元：10 × 3 = 30 元。"
+            ],
             "check": {
               "q": "年利率 5%，借 100 元用一年，租金多少？",
               "options": [
@@ -5447,8 +12499,53 @@ window.DAYS = [
             }
           },
           {
-            "text": "单利：每年只按最初的本金算利息。存 3 年，每年都是 30，加起来 90，本息合计 1090。把“每年 30，存 3 年”写成一行，就是：",
+            "title": "单利：每年都按最初的钱算",
+            "idea": "**单利**就是每年只按一开始存的那笔钱算利息。所以每年的利息一样多。",
+            "visual": {
+              "type": "columns",
+              "base": {
+                "items": [
+                  {
+                    "label": "第 1 年",
+                    "value": 30
+                  },
+                  {
+                    "label": "第 2 年",
+                    "value": 30
+                  },
+                  {
+                    "label": "第 3 年",
+                    "value": 30
+                  }
+                ],
+                "unit": "元"
+              },
+              "frames": [
+                {
+                  "set": {
+                    "play": 0,
+                    "step": 0
+                  },
+                  "cap": "先看骨架",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "play": 1,
+                    "step": 2
+                  },
+                  "cap": "看完整的图",
+                  "para": "takeaway"
+                }
+              ]
+            },
             "formula": "利息 = 本金 × 利率 × 年数 = 1000 × 3% × 3 = 90",
+            "takeaway": "单利：每年利息一样多，利息 = 本金 × 利率 × 年数。",
+            "derive": [
+              "每年利息 30 元。",
+              "存 3 年：30 × 3 = 90 元。",
+              "本金加利息：1000 + 90 = 1090 元。"
+            ],
             "check": {
               "q": "按单利存 3 年，每年的利息怎么变？",
               "options": [
@@ -5460,7 +12557,38 @@ window.DAYS = [
             }
           },
           {
-            "text": "推一下为什么钱会有租金：钱借出去后，你暂时不能用它（放弃了现在花它的机会），还要承担对方不还的风险。利息就是对这两样的补偿。"
+            "title": "串起来：银行给你的是租金",
+            "idea": "回到钩子。银行付你钱，是因为它在用你的钱。反过来，你借钱时，就轮到你付租金。",
+            "visual": {
+              "type": "comic",
+              "panels": [
+                {
+                  "bg": "bank",
+                  "cast": [
+                    {
+                      "who": "xiaoman",
+                      "x": 0.5,
+                      "y": 0.72,
+                      "face": "talk"
+                    }
+                  ],
+                  "cap": "你是房东，收租金"
+                },
+                {
+                  "bg": "kitchen",
+                  "cast": [
+                    {
+                      "who": "xiaoman",
+                      "x": 0.5,
+                      "y": 0.72,
+                      "face": "talk"
+                    }
+                  ],
+                  "cap": "你是租客，付租金"
+                }
+              ]
+            },
+            "takeaway": "存钱是收租金，借钱是付租金。"
           }
         ],
         "interaction": {
@@ -5508,7 +12636,7 @@ window.DAYS = [
               "unit": "元"
             }
           ],
-          "ref": 3
+          "ref": 4
         },
         "take": "利息是钱的租金。单利每年只按本金算：本金 × 利率 × 年数。",
         "quiz": [
@@ -5521,7 +12649,7 @@ window.DAYS = [
             ],
             "answer": 0,
             "why": "一年 5000 ÷ 100 × 2 = 100，两年 200。「100」只算了一年。",
-            "ref": 3
+            "ref": 4
           },
           {
             "q": "为什么借钱要付利息？",
@@ -5532,7 +12660,56 @@ window.DAYS = [
             ],
             "answer": 0,
             "why": "利息补偿的是两样东西：放弃使用这笔钱的机会，以及可能收不回来的风险。",
-            "ref": 4
+            "ref": 2
+          },
+          {
+            "q": "这张图里每年的柱子一样高，说明它按什么方式算利息？",
+            "options": [
+              "单利",
+              "复利",
+              "没有利息"
+            ],
+            "answer": 0,
+            "why": "单利每年只按最初的本金算，每年利息一样多，柱子就一样高。复利的柱子会一年比一年高。",
+            "ref": 4,
+            "visual": {
+              "type": "columns",
+              "base": {
+                "items": [
+                  {
+                    "label": "第 1 年",
+                    "value": 50
+                  },
+                  {
+                    "label": "第 2 年",
+                    "value": 50
+                  },
+                  {
+                    "label": "第 3 年",
+                    "value": 50
+                  }
+                ],
+                "unit": "元。这张图里每年的柱子一样高"
+              },
+              "frames": [
+                {
+                  "set": {
+                    "play": 0,
+                    "step": 0
+                  },
+                  "cap": "先看骨架",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "play": 1,
+                    "step": 2
+                  },
+                  "cap": "看完整的图",
+                  "para": "takeaway"
+                }
+              ]
+            }
           }
         ]
       },
@@ -5547,7 +12724,37 @@ window.DAYS = [
             "idea": "第 1 天说过，表情属于情绪里别人看得到的外部表现。今天的问题是：这些表情是天生的，还是从小模仿来的？",
             "why": "如果是学来的，不同文化就可能有完全不同的\"表情语言\"，这里的笑在那里可能是生气。如果是天生的，全世界的人应该能认出同样的表情。要分出这两种可能，就得设计一个能排除\"学来的\"这条路的检验。",
             "takeaway": "要证明表情是天生的，得先排除\"从媒体里学来\"。",
-            "example": "你看到一张陌生网友的哭脸照片，几乎不用想就知道他难过。可你从小看了无数电视、电影，这份\"认得\"可能是学来的，也可能是天生的，光看你自己分不出来。"
+            "example": "你看到一张陌生网友的哭脸照片，几乎不用想就知道他难过。可你从小看了无数电视、电影，这份\"认得\"可能是学来的，也可能是天生的，光看你自己分不出来。",
+            "visual": {
+              "type": "faces",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "要证明表情是天生的，得先排除\"从媒体里学来\"",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "要证明表情是天生的，得先排除\"从媒体里学来\"",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "要证明表情是天生的，得先排除\"从媒体里学来\"。",
+                  "para": "takeaway"
+                }
+              ]
+            }
           },
           {
             "title": "埃克曼的部落研究",
@@ -5560,7 +12767,36 @@ window.DAYS = [
               "先排除\"学来的\"。",
               "找没接触过媒体的人。",
               "他们也认得出，就支持\"天生\"。"
-            ]
+            ],
+            "visual": {
+              "type": "comic",
+              "panels": [
+                {
+                  "bg": "room",
+                  "cast": [
+                    {
+                      "who": "xiaoman",
+                      "x": 0.48,
+                      "y": 0.72,
+                      "face": "talk"
+                    }
+                  ],
+                  "cap": "没接触过媒体的人也认得出表情"
+                },
+                {
+                  "bg": "street",
+                  "cast": [
+                    {
+                      "who": "xiaoyin",
+                      "x": 0.48,
+                      "y": 0.72,
+                      "face": "talk"
+                    }
+                  ],
+                  "cap": "埃克曼的部落研究"
+                }
+              ]
+            }
           },
           {
             "title": "六种基本情绪",
@@ -5577,6 +12813,36 @@ window.DAYS = [
               ],
               "answer": 0,
               "why": "快乐、悲伤、愤怒、恐惧、厌恶、惊讶，一共六种。「十二种」不对，后来有人补充轻蔑等，也只多了一两种。"
+            },
+            "visual": {
+              "type": "faces",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "六种基本情绪：快乐、悲伤、愤怒、恐惧、厌恶、惊讶",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "六种基本情绪：快乐、悲伤、愤怒、恐惧、厌恶、惊讶",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "六种基本情绪：快乐、悲伤、愤怒、恐惧、厌恶、惊讶。",
+                  "para": "takeaway"
+                }
+              ]
             }
           },
           {
@@ -5594,6 +12860,36 @@ window.DAYS = [
               ],
               "answer": 0,
               "why": "不给选项时，没法靠排除法选对，所以一致程度下降了。「换成更清晰的照片」不是这里说的改动。"
+            },
+            "visual": {
+              "type": "chain",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "基本表情有跨文化共通性，但程度可能没那么高",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "基本表情有跨文化共通性，但程度可能没那么高",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "基本表情有跨文化共通性，但程度可能没那么高。",
+                  "para": "takeaway"
+                }
+              ]
             }
           },
           {
@@ -5610,6 +12906,35 @@ window.DAYS = [
               ],
               "answer": 0,
               "why": "旁人在场，表达规则起了作用，学生用微笑盖住了不适。独自看时两国表情很像，说明差别来自场合规则，不是天生不同。"
+            },
+            "visual": {
+              "type": "comic",
+              "panels": [
+                {
+                  "bg": "room",
+                  "cast": [
+                    {
+                      "who": "xiaoman",
+                      "x": 0.48,
+                      "y": 0.72,
+                      "face": "talk"
+                    }
+                  ],
+                  "cap": "表情这门\"语言\"多半天生，什"
+                },
+                {
+                  "bg": "street",
+                  "cast": [
+                    {
+                      "who": "xiaoyin",
+                      "x": 0.48,
+                      "y": 0.72,
+                      "face": "talk"
+                    }
+                  ],
+                  "cap": "表达规则：天生的语言，学来的"
+                }
+              ]
             }
           },
           {
@@ -5617,7 +12942,37 @@ window.DAYS = [
             "idea": "回到开头：一个从没看过电视的人，大概率能认出你照片上的\"害怕\"，虽然可能和\"惊讶\"弄混。",
             "why": "埃克曼的研究说明，基本表情有天生的共同基础；表达规则又说明，人会按场合把它放大或藏起来。所以外部表现是情绪的一块，但它会被规则修饰，不等于心里的全部。下一关会讲：表情为什么会进化出来。",
             "takeaway": "表情是天生的语言，表达规则决定说多少。",
-            "example": "账号提示：读评论和私信时，对方没表现出来，不等于没有感受。一句很平静的\"没事，我挺好的\"，背后可能是被规则压住的难过。"
+            "example": "账号提示：读评论和私信时，对方没表现出来，不等于没有感受。一句很平静的\"没事，我挺好的\"，背后可能是被规则压住的难过。",
+            "visual": {
+              "type": "body3",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "表情是天生的语言，表达规则决定说多少",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "表情是天生的语言，表达规则决定说多少",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "表情是天生的语言，表达规则决定说多少。",
+                  "para": "takeaway"
+                }
+              ]
+            }
           }
         ],
         "interaction": {
@@ -5679,118 +13034,592 @@ window.DAYS = [
             "why": "嫉妒、内疚属于更复杂的社会情绪，需要对人际关系的理解；六种基本情绪是快乐、悲伤、愤怒、恐惧、厌恶、惊讶。",
             "ref": 2
           }
-        ]
+        ],
+        "hookComic": {
+          "panels": [
+            {
+              "bg": "room",
+              "cast": [
+                {
+                  "who": "xiaoman",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "talk"
+                }
+              ],
+              "cap": "一个从没看过电视的人，能认出"
+            },
+            {
+              "bg": "street",
+              "cast": [
+                {
+                  "who": "xiaoyin",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "talk"
+                }
+              ],
+              "cap": "一个从没看过电视的人，能认出"
+            },
+            {
+              "bg": "shop",
+              "cast": [
+                {
+                  "who": "xiaoman",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "talk"
+                }
+              ],
+              "cap": "一个从没看过电视的人，能认出"
+            },
+            {
+              "bg": "plain",
+              "cast": [
+                {
+                  "who": "xiaoyin",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "wow"
+                }
+              ],
+              "cap": "一个从没看过电视的人，能认出"
+            }
+          ]
+        }
       },
       "english": {
         "id": "d05-english",
-        "title": "把金融课换成英语",
-        "minutes": 6,
-        "hook": "interest 是\"兴趣\"，也是\"利息\"。这两个意思有什么关系？",
+        "title": "Bath Time：动作动词的问句，请 do 帮忙",
+        "minutes": 9,
+        "hook": "is 能自己跳到前面变问句。可 Mochi likes fish 里没有 is，它该怎么问？",
+        "hookComic": {
+          "panels": [
+            {
+              "bg": "kitchen",
+              "cast": [
+                {
+                  "who": "mia",
+                  "x": 0.32,
+                  "y": 0.72,
+                  "face": "happy"
+                },
+                {
+                  "who": "leo",
+                  "x": 0.62,
+                  "y": 0.74,
+                  "face": "talk"
+                },
+                {
+                  "who": "mochi",
+                  "x": 0.8,
+                  "y": 0.82,
+                  "face": "happy",
+                  "k": 0.7
+                }
+              ]
+            },
+            {
+              "bg": "room",
+              "cast": [
+                {
+                  "who": "mia",
+                  "x": 0.32,
+                  "y": 0.72,
+                  "face": "happy"
+                },
+                {
+                  "who": "leo",
+                  "x": 0.62,
+                  "y": 0.74,
+                  "face": "talk"
+                },
+                {
+                  "who": "mochi",
+                  "x": 0.8,
+                  "y": 0.82,
+                  "face": "happy",
+                  "k": 0.7
+                }
+              ]
+            },
+            {
+              "bg": "street",
+              "cast": [
+                {
+                  "who": "mia",
+                  "x": 0.32,
+                  "y": 0.72,
+                  "face": "happy"
+                },
+                {
+                  "who": "leo",
+                  "x": 0.62,
+                  "y": 0.74,
+                  "face": "talk"
+                },
+                {
+                  "who": "mochi",
+                  "x": 0.8,
+                  "y": 0.82,
+                  "face": "happy",
+                  "k": 0.7
+                }
+              ]
+            }
+          ]
+        },
+        "story": {
+          "title": "Bath Time",
+          "panels": [
+            {
+              "bg": "kitchen",
+              "cast": [
+                {
+                  "who": "mia",
+                  "x": 0.32,
+                  "y": 0.72,
+                  "face": "happy"
+                },
+                {
+                  "who": "leo",
+                  "x": 0.62,
+                  "y": 0.74,
+                  "face": "talk"
+                },
+                {
+                  "who": "mochi",
+                  "x": 0.8,
+                  "y": 0.82,
+                  "face": "happy",
+                  "k": 0.7
+                }
+              ]
+            },
+            {
+              "bg": "room",
+              "cast": [
+                {
+                  "who": "mia",
+                  "x": 0.32,
+                  "y": 0.72,
+                  "face": "happy"
+                },
+                {
+                  "who": "leo",
+                  "x": 0.62,
+                  "y": 0.74,
+                  "face": "talk"
+                },
+                {
+                  "who": "mochi",
+                  "x": 0.8,
+                  "y": 0.82,
+                  "face": "happy",
+                  "k": 0.7
+                }
+              ]
+            },
+            {
+              "bg": "street",
+              "cast": [
+                {
+                  "who": "mia",
+                  "x": 0.32,
+                  "y": 0.72,
+                  "face": "happy"
+                },
+                {
+                  "who": "leo",
+                  "x": 0.62,
+                  "y": 0.74,
+                  "face": "talk"
+                },
+                {
+                  "who": "mochi",
+                  "x": 0.8,
+                  "y": 0.82,
+                  "face": "happy",
+                  "k": 0.7
+                }
+              ]
+            },
+            {
+              "bg": "shop",
+              "cast": [
+                {
+                  "who": "mia",
+                  "x": 0.32,
+                  "y": 0.72,
+                  "face": "happy"
+                },
+                {
+                  "who": "leo",
+                  "x": 0.62,
+                  "y": 0.74,
+                  "face": "talk"
+                },
+                {
+                  "who": "mochi",
+                  "x": 0.8,
+                  "y": 0.82,
+                  "face": "happy",
+                  "k": 0.7
+                }
+              ]
+            }
+          ],
+          "lines": [
+            {
+              "who": "A",
+              "en": "Mochi is dirty. Bath time!",
+              "zh": "Mochi 好脏。洗澡时间到！",
+              "panel": 0
+            },
+            {
+              "who": "B",
+              "en": "Does Mochi like water?",
+              "zh": "Mochi 喜欢水吗？",
+              "panel": 0
+            },
+            {
+              "who": "A",
+              "en": "No, he doesn't. Cats don't like water.",
+              "zh": "不喜欢。猫都不喜欢水。",
+              "panel": 1
+            },
+            {
+              "who": "B",
+              "en": "Do you have a plan?",
+              "zh": "那你有办法吗？",
+              "panel": 1
+            },
+            {
+              "who": "A",
+              "en": "Yes, I do. Mochi likes fish. I have a fish.",
+              "zh": "有。Mochi 喜欢鱼。我有一条鱼。",
+              "panel": 2
+            },
+            {
+              "who": "N",
+              "en": "Ten minutes later.",
+              "zh": "十分钟后。",
+              "panel": 3
+            },
+            {
+              "who": "B",
+              "en": "Is Mochi clean now?",
+              "zh": "Mochi 现在干净了吗？",
+              "panel": 3
+            },
+            {
+              "who": "A",
+              "en": "No. But I am!",
+              "zh": "没有。可我\"洗干净\"了！",
+              "panel": 3
+            }
+          ]
+        },
+        "words": [
+          {
+            "w": "dirty",
+            "ipa": "ˈdɜːrti",
+            "stress": "dir",
+            "pic": "🐾",
+            "zh": "脏的",
+            "ex": "Mochi is dirty.",
+            "part": "dirt 泥土 + -y → 沾着泥的（sun → sunny 也是）"
+          },
+          {
+            "w": "bath",
+            "ipa": "bæθ",
+            "stress": "bath",
+            "pic": "🛁",
+            "zh": "洗澡",
+            "ex": "Bath time!",
+            "part": "—"
+          },
+          {
+            "w": "plan",
+            "ipa": "plæn",
+            "stress": "plan",
+            "pic": "📝",
+            "zh": "计划，办法",
+            "ex": "Do you have a plan?",
+            "part": "—"
+          },
+          {
+            "w": "clean",
+            "ipa": "kliːn",
+            "stress": "clean",
+            "pic": "✨",
+            "zh": "干净的",
+            "ex": "Is Mochi clean now?",
+            "part": "ea 读长音 /iː/"
+          }
+        ],
         "steps": [
           {
-            "title": "钱的流向和租金",
-            "idea": "金融课学过：钱只有两个流向，流进来是收入，流出去是支出；今天又学了利息，就是用别人的钱要付的\"租金\"。",
-            "why": "今天把这些概念换成英语。概念已经懂了，英语词只要挂上去，记得更牢。",
-            "takeaway": "先懂概念，再给它挂一个英语名字。",
-            "example": "收入 income、支出 expense、预算 budget、储蓄 savings、利息 interest。一个概念，两种语言各有一个名字。",
-            "review": true
-          },
-          {
-            "title": "income：流进来的钱",
-            "idea": "很多英语词是由更小的零件拼成的。**income** = in（进）+ come（来），\"流进来的钱\"，正是收入。",
-            "why": "拼出来的词，意思就藏在零件里。认出零件，就不用死记，还能顺着零件猜新词。expense 也一样：开头的 ex- 表示\"向外\"，和 exit（出口）、export（出口货物）里的 ex- 是同一个零件，支出就是\"付出去\"的钱。",
-            "takeaway": "income = in + come，流进来的钱；ex- 表示向外。",
-            "example": "和金融课一一对应：income 是流进来，expense 是流出去，结余就是 income 减去 expenses。存下来的钱叫 savings，就是 save（存、省）加上 -ings。",
-            "derive": [
-              "in = 进。",
-              "come = 来。",
-              "in + come = 进来的东西 → 收入。"
-            ],
+            "title": "先听故事",
+            "kind": "story-listen",
+            "idea": "看图听。Mia 的办法管用了吗？",
             "check": {
-              "q": "exit、export、expense 里的 ex-，意思是？",
+              "q": "最后，谁被\"洗\"了？",
               "options": [
-                "向外",
-                "向内"
+                "Mia",
+                "Mochi"
               ],
               "answer": 0,
-              "why": "ex- 表示\"向外\"：exit 是出去的门，expense 是付出去的钱。「向内」是 in 的意思，比如 income。"
+              "why": "最后一格 Mia 浑身湿透，说 [[But I am!]]（我倒是干净了）。Mochi 叼着鱼，还是脏的。"
             }
           },
           {
-            "title": "interest：和你有关",
-            "idea": "**interest** 有两个常用意思：兴趣和利息。它们来自同一个拉丁词 interesse，意思是\"在其中、和你有关\"。",
-            "why": "inter 是\"在……之间\"，esse 是\"存在\"，合起来就是\"身在其中、有你一份\"。你在意的事和你有关，就是兴趣；钱借出去，就和你有了利害关系，对方给你的补偿就是利息。",
-            "takeaway": "interest 的核心是\"和你有关\"：关心的事是兴趣，钱的补偿是利息。",
-            "example": "I have an interest in music.（我对音乐感兴趣）My savings earn interest.（我的存款能赚利息）同一个词，看它跟的是爱好还是钱。",
-            "derive": [
-              "interesse = 在其中、和你有关。",
-              "心里有你的份 → 你关心它 → 兴趣。",
-              "钱里有你的份 → 你该得的补偿 → 利息。"
-            ],
+            "title": "四个新词",
+            "kind": "words",
+            "idea": "每个词都点一下 ▶。"
+          },
+          {
+            "title": "发音 · th：舌尖放在牙缝里",
+            "idea": "bath 最后的 th，要把舌尖轻轻放在上下牙之间，往外吹气。中文里没有这个音。",
+            "why": "中文没有舌头伸到牙缝的音，很多人会用最像的 s 或 f 代替。可在英语里，换了音就成了另一个词：[[bath]] 是洗澡，[[bat]] 是蝙蝠；[[think]] 是想，[[sink]] 是水槽。舌尖一出来，气从舌头和上牙之间挤出去，就是 th。",
+            "example": "[[bath]]、[[think]]、[[three]] 都是这个音。",
+            "takeaway": "th：舌尖放在牙缝，吹气。",
+            "visual": {
+              "type": "mouth",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "th：舌尖放在牙缝，吹气",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "th：舌尖放在牙缝，吹气",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "th：舌尖放在牙缝，吹气。",
+                  "para": "takeaway"
+                }
+              ]
+            },
             "check": {
-              "q": "I have an interest in music. 里的 interest 是？",
+              "q": "发 th 时，舌尖在哪儿？",
               "options": [
-                "兴趣",
-                "利息"
+                "上下牙之间",
+                "牙齿后面"
               ],
               "answer": 0,
-              "why": "后面跟的是 music，说的是爱好，所以是兴趣。「利息」要和钱放在一起，比如 My savings earn interest。"
+              "why": "th 要把舌尖放到上下牙之间。「牙齿后面」是发 s 的位置。"
             }
           },
           {
-            "title": "串起来：用英语说你的钱",
-            "idea": "回到开头：interest 的两个意思，共同点是\"和你有关\"。再把今天的词放进句子里，金融概念就有了英语的家。",
-            "why": "说钱常要比较多少，比较用 higher than。说一个人的收入时，income 通常当作一个整体，配单数 is；支出是很多笔，常说复数 expenses，配 are。",
-            "takeaway": "收入 income，支出 expenses；比较多少用 higher than。",
-            "example": "I save twenty percent of my income every month.（我每月存下收入的 20%）My expenses are higher than my income.（我的支出比收入高）第 1 天金融课的小 A，就是后面这句。",
-            "derive": [
-              "主语 expenses 是复数 → 配 are。",
-              "比\"更高\" → higher than。"
+            "title": "语法 · 动作动词的问句和否定，请 do / does 帮忙",
+            "idea": "is 能自己跳到前面（第 2 天）。like、eat 这类动作动词跳不动，要在前面加一个助手 do 或 does；否定也用它：don't、doesn't。",
+            "why": "现代英语只让 be 这样的少数几个词自己挪位置，普通动作动词不行。于是英语请来一个\"空\"的助手 do：它自己没有意思，只负责站到前面表示\"这是问句\"，或者带上 not。\"谁\"是一个别人时，-s 跑到助手身上，变成 does，后面的动词回到原形：一句话里只要一个 -s。",
+            "example": "[[Mochi likes fish.]] → [[Does Mochi like fish?]] → [[Mochi doesn't like water.]] [[Do you have a plan?]] → [[Yes, I do.]]",
+            "takeaway": "动作动词的问句和否定，请 do / does 帮忙；-s 跟着 does 走。",
+            "visual": {
+              "type": "sentence",
+              "base": {
+                "rows": [
+                  {
+                    "bricks": [
+                      {
+                        "text": "Mochi",
+                        "role": "who"
+                      },
+                      {
+                        "text": "likes",
+                        "role": "verb"
+                      },
+                      {
+                        "text": "fish",
+                        "role": "what"
+                      },
+                      {
+                        "text": "Does",
+                        "role": "extra"
+                      },
+                      {
+                        "text": "Mochi",
+                        "role": "who"
+                      },
+                      {
+                        "text": "like",
+                        "role": "verb"
+                      },
+                      {
+                        "text": "fish",
+                        "role": "what"
+                      },
+                      {
+                        "text": "Mochi",
+                        "role": "who"
+                      },
+                      {
+                        "text": "doesn't",
+                        "role": "extra"
+                      },
+                      {
+                        "text": "like",
+                        "role": "verb"
+                      },
+                      {
+                        "text": "water",
+                        "role": "what"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "frames": [
+                {
+                  "set": {
+                    "play": 0
+                  },
+                  "cap": "is 能自己跳到前面（第 2 天）。like、eat 这类动作动词跳不动，要在前",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "play": 1
+                  },
+                  "cap": "动作动词的问句和否定，请 do / does 帮忙；-s 跟着 does 走。",
+                  "para": "takeaway"
+                }
+              ]
+            },
+            "check": {
+              "q": "中文\"Mochi 喜欢鱼吗？\"，英语怎么说？",
+              "options": [
+                "Does Mochi like fish?",
+                "Does Mochi likes fish?"
+              ],
+              "answer": 0,
+              "why": "-s 已经在 does 上了，like 回到原形。「Does Mochi likes fish?」出现了两个 -s。"
+            }
+          },
+          {
+            "title": "再读故事",
+            "kind": "story-read",
+            "idea": "看着字听，找出 does、doesn't、do、don't。"
+          },
+          {
+            "title": "换一样东西，再问一遍",
+            "kind": "drill",
+            "frame": "Does Mochi like {a}?",
+            "zh": "Mochi 喜欢{a}吗？",
+            "slots": {
+              "a": [
+                {
+                  "en": "water",
+                  "zh": "水",
+                  "pic": "💧"
+                },
+                {
+                  "en": "fish",
+                  "zh": "鱼",
+                  "pic": "🐟"
+                },
+                {
+                  "en": "baths",
+                  "zh": "洗澡",
+                  "pic": "🛁"
+                },
+                {
+                  "en": "Leo",
+                  "zh": "Leo",
+                  "pic": "👨‍🍳"
+                }
+              ]
+            },
+            "need": 3
+          },
+          {
+            "title": "跟读",
+            "kind": "shadow",
+            "tip": "bath 的 th，舌尖从牙缝里出来。",
+            "lines": [
+              0,
+              1,
+              2
+            ]
+          },
+          {
+            "title": "复述：串起来",
+            "kind": "retell",
+            "idea": "看着图，用 does、doesn't 讲一遍。",
+            "keys": [
+              [
+                "dirty",
+                "bath"
+              ],
+              [
+                "water",
+                "doesn't"
+              ],
+              [
+                "plan",
+                "fish"
+              ],
+              [
+                "clean",
+                "I am"
+              ]
             ]
           }
         ],
         "interaction": {
           "type": "listen",
-          "prompt": "听一听，选出你听到的句子",
-          "audio": "I save twenty percent of my income every month.",
-          "answer": 0,
-          "why": "注意 save 和 spend 的开头，以及 twenty 和 twelve 的区别。",
+          "prompt": "听一听，这句话是什么意思？",
+          "audio": "Cats don't like water.",
+          "showText": "after",
           "options": [
-            "I save twenty percent of my income every month.",
-            "I spend twenty percent of my income every month.",
-            "I save twelve percent of my income every month."
+            "猫不喜欢水。",
+            "猫喜欢水。",
+            "猫不喜欢鱼。"
           ],
+          "answer": 0,
+          "why": "don't 是否定；t 常常读得很轻，听 don't 里长长的 /oʊ/ 和 n。最后一个词是 water，不是 fish。",
           "ref": 3
         },
-        "take": "income = in + come（流进来的钱）；interest 既是“兴趣”也是“利息”，共同点是“和你有关”。",
+        "take": "动作动词的问句、否定用 do / does，-s 跟着 does 走；th 舌尖放在牙缝。",
         "quiz": [
           {
-            "q": "“我的支出比收入高”怎么说？",
+            "q": "中文\"Mochi 喜欢鱼吗？\"，英语怎么说？",
             "options": [
-              "My expenses are higher than my income.",
-              "My income are higher than my expenses.",
-              "My budget is my income."
+              "Does Mochi like fish?",
+              "Does Mochi likes fish?",
+              "Is Mochi like fish?"
             ],
             "answer": 0,
-            "why": "支出是 expenses，收入是 income，比较级 higher than。「My income are higher than my expenses.」把意思说反了，而且 income 应该配 is。",
+            "why": "动作动词的问句用 does，后面的动词回原形。「…likes…」多了一个 -s；「Is Mochi like fish?」把 is 用在了动作动词的问句里。",
             "ref": 3
           },
           {
-            "q": "The bank pays 3% ___ on savings.",
+            "q": "听一听，是哪个词？",
             "options": [
-              "interest",
-              "income",
-              "budget"
+              "bath",
+              "bat",
+              "bus"
             ],
             "answer": 0,
-            "why": "银行为存款付的是利息 interest。",
-            "ref": 2
+            "why": "结尾是舌尖在牙缝吹出的 /θ/，是 bath。「bat」结尾是短促的 t；「bus」的元音不同，结尾是 s。",
+            "ref": 2,
+            "audio": "bath"
           }
-        ],
-        "tts": [
-          "income",
-          "expense",
-          "I save twenty percent of my income every month."
         ]
       }
     }
@@ -5812,7 +13641,37 @@ window.DAYS = [
             "why": "今天的配色只用一个色相，能拉开差别的主要就剩明度，所以先把这条拿出来。",
             "takeaway": "明度差大，轮廓清楚；明度差小，糊成一块。",
             "example": "白配藏青，轮廓清楚；深灰配黑，糊成一团。",
-            "review": true
+            "review": true,
+            "visual": {
+              "type": "bw",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "明度差大，轮廓清楚；明度差小，糊成一块",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "明度差大，轮廓清楚；明度差小，糊成一块",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "明度差大，轮廓清楚；明度差小，糊成一块。",
+                  "para": "takeaway"
+                }
+              ]
+            }
           },
           {
             "title": "同类色：只用一个色相",
@@ -5829,6 +13688,36 @@ window.DAYS = [
               ],
               "answer": 0,
               "why": "同类色只用一个色相，所以只占一个格子。占「三个」格子，就用了三个色相，不是同类色了。"
+            },
+            "visual": {
+              "type": "wheelBuild",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "同类色 = 一个色相，变的只是明度和纯度",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "同类色 = 一个色相，变的只是明度和纯度",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "同类色 = 一个色相，变的只是明度和纯度。",
+                  "para": "takeaway"
+                }
+              ]
             }
           },
           {
@@ -5844,16 +13733,33 @@ window.DAYS = [
               "所以同类色必须把明度拉开。"
             ],
             "visual": {
-              "type": "swatches",
-              "colors": [
-                "#F1E3D3",
-                "#C19A6B",
-                "#5D4037"
-              ],
-              "labels": [
-                "浅驼",
-                "驼",
-                "深棕"
+              "type": "bw",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "同类色不打架，但一定要拉开明度",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "同类色不打架，但一定要拉开明度",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "同类色不打架，但一定要拉开明度。",
+                  "para": "takeaway"
+                }
               ]
             },
             "check": {
@@ -5871,7 +13777,37 @@ window.DAYS = [
             "idea": "回到开头：一身驼色穿得高级还是像面包，关键在明度有没有拉开。",
             "why": "同类色已经保证不打架（卡 2），成败就看层次（卡 3）。明度从浅到深排开，眼睛能看到一层层边界，显得讲究；明度挤在一起，只剩一整块暖黄，就像一块面包。",
             "takeaway": "同类色 = 同一色相，靠明度拉层次。",
-            "example": "浅驼大衣 + 驼色针织衫 + 深棕靴子和包，从上到下由浅到深，很高级。驼色大衣 + 驼色毛衣 + 驼色裤子，三件一样亮，就成了\"面包\"；把裤子换成深棕，立刻有了层次。"
+            "example": "浅驼大衣 + 驼色针织衫 + 深棕靴子和包，从上到下由浅到深，很高级。驼色大衣 + 驼色毛衣 + 驼色裤子，三件一样亮，就成了\"面包\"；把裤子换成深棕，立刻有了层次。",
+            "visual": {
+              "type": "outfit",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "同类色 = 同一色相，靠明度拉层次",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "同类色 = 同一色相，靠明度拉层次",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "同类色 = 同一色相，靠明度拉层次。",
+                  "para": "takeaway"
+                }
+              ]
+            }
           }
         ],
         "interaction": {
@@ -5934,7 +13870,59 @@ window.DAYS = [
             "why": "都是蓝色，只是明度不同，属于同类色配色，而且明度差拉开了，所以不闷。",
             "ref": 1
           }
-        ]
+        ],
+        "hookComic": {
+          "panels": [
+            {
+              "bg": "room",
+              "cast": [
+                {
+                  "who": "xiaoman",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "talk"
+                }
+              ],
+              "cap": "一身全是驼色，为什么有人穿得"
+            },
+            {
+              "bg": "street",
+              "cast": [
+                {
+                  "who": "xiaoyin",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "talk"
+                }
+              ],
+              "cap": "一身全是驼色，为什么有人穿得"
+            },
+            {
+              "bg": "shop",
+              "cast": [
+                {
+                  "who": "xiaoman",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "talk"
+                }
+              ],
+              "cap": "一身全是驼色，为什么有人穿得"
+            },
+            {
+              "bg": "plain",
+              "cast": [
+                {
+                  "who": "xiaoyin",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "wow"
+                }
+              ],
+              "cap": "一身全是驼色，为什么有人穿得"
+            }
+          ]
+        }
       },
       "history": {
         "id": "d06-history",
@@ -5948,7 +13936,10 @@ window.DAYS = [
             "why": "周的诸侯、汉初的诸侯王，都是这台发动机的不同版本。今天它转得最久：从 220 年东汉灭亡，一直到 589 年。",
             "takeaway": "今天是骨架上最长的一段\"分裂\"。",
             "example": "朝代歌里\"三分魏蜀吴，二晋前后延；南北朝并立\"三句，都是今天的内容。",
-            "review": true
+            "review": true,
+            "visual": {
+              "recall": "d01-history#2"
+            }
           },
           {
             "title": "东汉末：中央乱，农民起",
@@ -5961,7 +13952,37 @@ window.DAYS = [
               "土地被兼并 → 农民失地。",
               "灾荒一来 → 活不下去。",
               "有人一呼 → 遍地起义。"
-            ]
+            ],
+            "visual": {
+              "type": "chain",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "中央内斗加土地兼并，把农民逼进了黄巾起义",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "中央内斗加土地兼并，把农民逼进了黄巾起义",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "中央内斗加土地兼并，把农民逼进了黄巾起义。",
+                  "para": "takeaway"
+                }
+              ]
+            }
           },
           {
             "title": "如果你是东汉皇帝：让地方自己招兵",
@@ -5984,6 +14005,35 @@ window.DAYS = [
               ],
               "answer": 0,
               "why": "朝廷让各地自己招兵，地方长官就有了兵和地盘。「皇帝把土地分封给了亲戚」是周朝的做法，东汉末不是这样。"
+            },
+            "visual": {
+              "type": "comic",
+              "panels": [
+                {
+                  "bg": "room",
+                  "cast": [
+                    {
+                      "who": "xiaoman",
+                      "x": 0.48,
+                      "y": 0.72,
+                      "face": "talk"
+                    }
+                  ],
+                  "cap": "让地方自己招兵救了急，也造出"
+                },
+                {
+                  "bg": "street",
+                  "cast": [
+                    {
+                      "who": "xiaoyin",
+                      "x": 0.48,
+                      "y": 0.72,
+                      "face": "talk"
+                    }
+                  ],
+                  "cap": "如果你是东汉皇帝：让地方自己"
+                }
+              ]
             }
           },
           {
@@ -5997,7 +14047,37 @@ window.DAYS = [
               "北方平原 → 魏最强。",
               "长江挡在南边 → 吴守得住。",
               "群山围着四川 → 蜀守得住。"
-            ]
+            ],
+            "visual": {
+              "type": "histmap",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "赤壁之后三国鼎立；长江和群山，把天下分成了三块",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "赤壁之后三国鼎立；长江和群山，把天下分成了三块",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "赤壁之后三国鼎立；长江和群山，把天下分成了三块。",
+                  "para": "takeaway"
+                }
+              ]
+            }
           },
           {
             "title": "如果你是司马炎：西晋又被自家人拆散",
@@ -6020,6 +14100,35 @@ window.DAYS = [
               ],
               "answer": 0,
               "why": "曹魏把宗室管得太严，司马家夺权时没人来救，司马炎想避开这一点。「宗法制规定必须这样做」不对，宗法制只管谁来继承，分不分权是皇帝自己的选择。"
+            },
+            "visual": {
+              "type": "comic",
+              "panels": [
+                {
+                  "bg": "room",
+                  "cast": [
+                    {
+                      "who": "xiaoman",
+                      "x": 0.48,
+                      "y": 0.72,
+                      "face": "talk"
+                    }
+                  ],
+                  "cap": "西晋矫枉过正，大封宗室，八王"
+                },
+                {
+                  "bg": "street",
+                  "cast": [
+                    {
+                      "who": "xiaoyin",
+                      "x": 0.48,
+                      "y": 0.72,
+                      "face": "talk"
+                    }
+                  ],
+                  "cap": "如果你是司马炎：西晋又被自家"
+                }
+              ]
             }
           },
           {
@@ -6027,7 +14136,37 @@ window.DAYS = [
             "idea": "西晋灭亡后，317 年，晋朝皇族在南方的建康（今南京）重建政权，叫东晋。北方先后出现了许多政权，合称\"十六国\"。",
             "why": "八王之乱把西晋的兵力和民力都耗光了，原来迁到北方的匈奴、鲜卑等各族趁机起兵，北方陷入混战。晋朝皇族和大批北方士族、百姓往南逃，躲到长江以南。长江又一次成了护城河：北方骑兵很难渡江，南方的政权就站住了。",
             "takeaway": "北方混战成十六国，晋室南迁建东晋，长江再次隔开南北。",
-            "example": "\"十六国\"其实不止十六个政权，这个数字是后来的史书挑出的代表。你不用一个个记名字，记住\"北方政权很多、换得很快、很乱\"就够了。"
+            "example": "\"十六国\"其实不止十六个政权，这个数字是后来的史书挑出的代表。你不用一个个记名字，记住\"北方政权很多、换得很快、很乱\"就够了。",
+            "visual": {
+              "type": "histmap",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "北方混战成十六国，晋室南迁建东晋，长江再次隔开南北",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "北方混战成十六国，晋室南迁建东晋，长江再次隔开南北",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "北方混战成十六国，晋室南迁建东晋，长江再次隔开南北。",
+                  "para": "takeaway"
+                }
+              ]
+            }
           },
           {
             "title": "人口南迁：江南被开发起来",
@@ -6050,6 +14189,36 @@ window.DAYS = [
               ],
               "answer": 0,
               "why": "江南水多、天暖，缺的是人。「河流和雨水」江南本来就很充足，不是它缺的东西。"
+            },
+            "visual": {
+              "type": "histmap",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "北方人口南迁，带去劳动力和技术，江南从此被开发",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "北方人口南迁，带去劳动力和技术，江南从此被开发",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "北方人口南迁，带去劳动力和技术，江南从此被开发。",
+                  "para": "takeaway"
+                }
+              ]
             }
           },
           {
@@ -6057,7 +14226,37 @@ window.DAYS = [
             "idea": "420 年，宋取代东晋，南北朝开始。南朝依次是宋、齐、梁、陈，都定都建康；北朝的北魏统一北方，后来分为东、西两半。",
             "why": "南朝换得快，四个朝代都是手握兵权的大将夺位建立的：谁有兵，谁就能改朝换代，还是那台发动机。北方则在悄悄变化：北魏孝文帝迁都洛阳，让鲜卑贵族学汉语、穿汉服、和汉人通婚，各族渐渐融合。北魏分裂后，东西两半又被北齐、北周取代。",
             "takeaway": "南朝宋齐梁陈都在建康；北朝北魏统一，后分东西。",
-            "example": "建康就是今天的南京。三国的吴、东晋，加上南朝四朝，先后有六个朝代在这里定都，所以南京被叫作\"六朝古都\"。"
+            "example": "建康就是今天的南京。三国的吴、东晋，加上南朝四朝，先后有六个朝代在这里定都，所以南京被叫作\"六朝古都\"。",
+            "visual": {
+              "type": "histmap",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "南朝宋齐梁陈都在建康；北朝北魏统一，后分东西",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "南朝宋齐梁陈都在建康；北朝北魏统一，后分东西",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "南朝宋齐梁陈都在建康；北朝北魏统一，后分东西。",
+                  "para": "takeaway"
+                }
+              ]
+            }
           },
           {
             "title": "串起来：589 年，又统一了",
@@ -6071,7 +14270,37 @@ window.DAYS = [
               "同一边就相减：589 − 220 = 369。",
               "所以这段分裂约 370 年。"
             ],
-            "formula": "589 − 220 = 369，约 370 年"
+            "formula": "589 − 220 = 369，约 370 年",
+            "visual": {
+              "type": "cycle",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "589 年隋统一，分裂约 370 年；下一关看隋唐",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "589 年隋统一，分裂约 370 年；下一关看隋唐",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "589 年隋统一，分裂约 370 年；下一关看隋唐。",
+                  "para": "takeaway"
+                }
+              ]
+            }
           }
         ],
         "interaction": {
@@ -6172,7 +14401,59 @@ window.DAYS = [
             "id": "JS",
             "label": "建康，今南京"
           }
-        ]
+        ],
+        "hookComic": {
+          "panels": [
+            {
+              "bg": "room",
+              "cast": [
+                {
+                  "who": "xiaoman",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "talk"
+                }
+              ],
+              "cap": "三国、西晋、东晋、十六国、南"
+            },
+            {
+              "bg": "street",
+              "cast": [
+                {
+                  "who": "xiaoyin",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "talk"
+                }
+              ],
+              "cap": "因为它本身就是一段很乱的历史"
+            },
+            {
+              "bg": "shop",
+              "cast": [
+                {
+                  "who": "xiaoman",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "talk"
+                }
+              ],
+              "cap": "因为它本身就是一段很乱的历史"
+            },
+            {
+              "bg": "plain",
+              "cast": [
+                {
+                  "who": "xiaoyin",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "wow"
+                }
+              ],
+              "cap": "因为它本身就是一段很乱的历史"
+            }
+          ]
+        }
       },
       "geo": {
         "id": "d06-geo",
@@ -6186,7 +14467,10 @@ window.DAYS = [
             "why": "同样的水，性格不同，原因在脚下的地面：长江从第一级出发，跨过两道\"坎\"，流到第三级，每段坡度都不同。",
             "takeaway": "长江从第一级流到第三级；坡度不同，性格就不同。",
             "example": "上游的江水在高山峡谷里翻着白浪；到了南京、上海，江面宽阔，水流平缓。",
-            "review": true
+            "review": true,
+            "visual": {
+              "recall": "d04-geo#0"
+            }
           },
           {
             "title": "长江分三段：宜昌和湖口",
@@ -6196,15 +14480,33 @@ window.DAYS = [
             "example": "像一首曲子分成几个乐章：上游是急板，水声轰鸣、一路奔腾；过了宜昌转成舒展的慢板；过了湖口，是越来越宽广、通向大海的尾声。",
             "exLabel": "打个比方",
             "visual": {
-              "type": "flow",
-              "nodes": [
-                "源头 青藏高原",
-                "上游",
-                "宜昌",
-                "中游",
-                "湖口",
-                "下游",
-                "上海 入东海"
+              "type": "cnmap",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "长江以宜昌、湖口为界分上中下游；中游流经湖北、湖南、江西",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "长江以宜昌、湖口为界分上中下游；中游流经湖北、湖南、江西",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "长江以宜昌、湖口为界分上中下游；中游流经湖北、湖南、江西。",
+                  "para": "takeaway"
+                }
               ]
             },
             "check": {
@@ -6227,7 +14529,37 @@ window.DAYS = [
               "上游跨过两级台阶：落差大。",
               "坡陡：水急，切出峡谷。",
               "落差 × 水量都大：水能多，适合建水电站。"
-            ]
+            ],
+            "visual": {
+              "type": "profileTrip",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "上游落差大、水流急、峡谷多，水能丰富；三峡就在上游出口",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "上游落差大、水流急、峡谷多，水能丰富；三峡就在上游出口",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "上游落差大、水流急、峡谷多，水能丰富；三峡就在上游出口。",
+                  "para": "takeaway"
+                }
+              ]
+            }
           },
           {
             "title": "中下游：平、慢、湖泊多",
@@ -6249,6 +14581,36 @@ window.DAYS = [
               ],
               "answer": 0,
               "why": "水往低处流。江面更高，水就「从江里流进湖里」；只有湖面更高时，才会「从湖里流进江里」。"
+            },
+            "visual": {
+              "type": "cnmap",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "中下游平缓多湖；湖泊汛期蓄水、枯水期补水，调节长江水量",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "中下游平缓多湖；湖泊汛期蓄水、枯水期补水，调节长江水量",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "中下游平缓多湖；湖泊汛期蓄水、枯水期补水，调节长江水量。",
+                  "para": "takeaway"
+                }
+              ]
             }
           },
           {
@@ -6259,7 +14621,34 @@ window.DAYS = [
             "example": "拿手电筒照桌面。竖直照，是一个又小又亮的圆；斜着照，光斑拉成又大又暗的椭圆。光没有变少，只是被摊开了。",
             "exLabel": "打个比方",
             "visual": {
-              "type": "beam"
+              "type": "beam2",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "纬度低 → 阳光照得更直 → 热量更集中 → 更暖",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "纬度低 → 阳光照得更直 → 热量更集中 → 更暖",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "纬度低 → 阳光照得更直 → 热量更集中 → 更暖。",
+                  "para": "takeaway"
+                }
+              ]
             },
             "check": {
               "q": "手电筒斜着照桌面，光斑会怎样？",
@@ -6291,6 +14680,36 @@ window.DAYS = [
               ],
               "answer": 0,
               "why": "纬度越高，冬天阳光越斜、越冷。「哈尔滨（约北纬 46°）」冬天长期在 0°C 以下，河会封冻；「武汉（约北纬 30°）」冬季多在 0°C 以上。"
+            },
+            "visual": {
+              "type": "gauge",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "长江纬度低，冬季多在 0°C 以上，大部分河段不结冰",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "长江纬度低，冬季多在 0°C 以上，大部分河段不结冰",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "长江纬度低，冬季多在 0°C 以上，大部分河段不结冰。",
+                  "para": "takeaway"
+                }
+              ]
             }
           },
           {
@@ -6303,7 +14722,36 @@ window.DAYS = [
               "上游：坡陡水急，适合发电。",
               "中下游：坡缓水稳，湖泊调节，好行船。",
               "水量大 + 不结冰 + 含沙少：常年通航，成了黄金水道。"
-            ]
+            ],
+            "visual": {
+              "type": "comic",
+              "panels": [
+                {
+                  "bg": "room",
+                  "cast": [
+                    {
+                      "who": "xiaoman",
+                      "x": 0.48,
+                      "y": 0.72,
+                      "face": "talk"
+                    }
+                  ],
+                  "cap": "地势定性格：上游急、能发电；"
+                },
+                {
+                  "bg": "street",
+                  "cast": [
+                    {
+                      "who": "xiaoyin",
+                      "x": 0.48,
+                      "y": 0.72,
+                      "face": "talk"
+                    }
+                  ],
+                  "cap": "串起来：一条河，两种性格，一"
+                }
+              ]
+            }
           }
         ],
         "interaction": {
@@ -6366,39 +14814,304 @@ window.DAYS = [
             "id": "JX",
             "label": "JX"
           }
-        ]
+        ],
+        "hookComic": {
+          "panels": [
+            {
+              "bg": "room",
+              "cast": [
+                {
+                  "who": "xiaoman",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "talk"
+                }
+              ],
+              "cap": "长江上游在峡谷里奔腾，下游却"
+            },
+            {
+              "bg": "street",
+              "cast": [
+                {
+                  "who": "xiaoyin",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "talk"
+                }
+              ],
+              "cap": "同一条河，为什么性格差这么多"
+            },
+            {
+              "bg": "shop",
+              "cast": [
+                {
+                  "who": "xiaoman",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "talk"
+                }
+              ],
+              "cap": "同一条河，为什么性格差这么多"
+            },
+            {
+              "bg": "plain",
+              "cast": [
+                {
+                  "who": "xiaoyin",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "wow"
+                }
+              ],
+              "cap": "同一条河，为什么性格差这么多"
+            }
+          ]
+        }
       },
       "finance": {
         "id": "d06-finance",
         "title": "复利：利息也会生利息",
-        "minutes": 4,
+        "minutes": 7,
         "hook": "同样存 1000 元，同样 10% 的利率，20 年后一种方式拿到 3000，另一种拿到 6700 多。差在哪？",
+        "hookComic": {
+          "panels": [
+            {
+              "bg": "room",
+              "cast": [
+                {
+                  "who": "xiaoman",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "talk"
+                }
+              ],
+              "cap": "同样存 1000 元，同样 "
+            },
+            {
+              "bg": "street",
+              "cast": [
+                {
+                  "who": "xiaoyin",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "talk"
+                }
+              ],
+              "cap": "差在哪"
+            },
+            {
+              "bg": "shop",
+              "cast": [
+                {
+                  "who": "xiaoman",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "talk"
+                }
+              ],
+              "cap": "差在哪"
+            },
+            {
+              "bg": "plain",
+              "cast": [
+                {
+                  "who": "xiaoyin",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "wow"
+                }
+              ],
+              "cap": "差在哪"
+            }
+          ]
+        },
         "steps": [
           {
-            "text": "回顾单利：每年只按最初的本金算利息。"
-          },
-          {
-            "text": "复利：每年把利息加进本金，第二年用“本金 + 利息”一起算利息。"
-          },
-          {
-            "text": "一步步算（利率用 10%，数字好算）：第 1 年：1000 的 10% 是 100，变成 1100。第 2 年：1100 的 10% 是 110，变成 1210。第 3 年：1210 的 10% 是 121，变成 1331。",
-            "formula": "1000 → 1100 → 1210 → 1331"
-          },
-          {
-            "text": "和单利比：单利 3 年每年都是 100，合计 1300。复利多出的 31 元从哪来？第 2 年多了 10（第 1 年那 100 元利息又生了 10%），第 3 年多了 21。这就是“利息的利息”。",
+            "title": "回顾 · 单利每年一样多",
+            "idea": "1000 元，年利率 10%，按单利每年都是 100 元利息。3 年后是 1300 元。",
             "visual": {
-              "type": "bars",
-              "items": [
+              "type": "columns",
+              "base": {
+                "items": [
+                  {
+                    "label": "第 1 年",
+                    "value": 100
+                  },
+                  {
+                    "label": "第 2 年",
+                    "value": 100
+                  },
+                  {
+                    "label": "第 3 年",
+                    "value": 100
+                  }
+                ],
+                "unit": "元"
+              },
+              "frames": [
                 {
-                  "label": "单利 3 年",
-                  "value": 1300
+                  "set": {
+                    "play": 0,
+                    "step": 0
+                  },
+                  "cap": "先看骨架",
+                  "para": "idea"
                 },
                 {
-                  "label": "复利 3 年",
-                  "value": 1331
+                  "set": {
+                    "play": 1,
+                    "step": 2
+                  },
+                  "cap": "看完整的图",
+                  "para": "takeaway"
                 }
               ]
             },
+            "takeaway": "单利：利息不会再生利息。"
+          },
+          {
+            "title": "复利：利息滚进本金",
+            "idea": "**复利**就是每年把利息加进本金。第二年，用\"本金 + 利息\"一起算利息。",
+            "visual": {
+              "type": "comic",
+              "panels": [
+                {
+                  "bg": "bank",
+                  "cast": [
+                    {
+                      "who": "xiaoman",
+                      "x": 0.5,
+                      "y": 0.72,
+                      "face": "talk"
+                    }
+                  ],
+                  "cap": "1000 元"
+                },
+                {
+                  "bg": "kitchen",
+                  "cast": [
+                    {
+                      "who": "xiaoman",
+                      "x": 0.5,
+                      "y": 0.72,
+                      "face": "talk"
+                    }
+                  ],
+                  "cap": "利息粘上去"
+                },
+                {
+                  "bg": "room",
+                  "cast": [
+                    {
+                      "who": "xiaoman",
+                      "x": 0.5,
+                      "y": 0.72,
+                      "face": "talk"
+                    }
+                  ],
+                  "cap": "下一年按更大的球算"
+                }
+              ]
+            },
+            "example": "像滚雪球。球越大，滚一圈沾上的雪越多。",
+            "takeaway": "复利 = 利息也会生利息。"
+          },
+          {
+            "title": "一步步算 3 年",
+            "idea": "",
+            "visual": {
+              "type": "columns",
+              "base": {
+                "items": [
+                  {
+                    "label": "开始",
+                    "value": 1000
+                  },
+                  {
+                    "label": "第 1 年",
+                    "value": 1100
+                  },
+                  {
+                    "label": "第 2 年",
+                    "value": 1210
+                  },
+                  {
+                    "label": "第 3 年",
+                    "value": 1331
+                  }
+                ],
+                "unit": "元"
+              },
+              "frames": [
+                {
+                  "set": {
+                    "play": 0,
+                    "step": 0
+                  },
+                  "cap": "先看骨架",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "play": 1,
+                    "step": 2
+                  },
+                  "cap": "看完整的图",
+                  "para": "takeaway"
+                }
+              ]
+            },
+            "why": "每一年都按\"上一年年底的钱\"算。钱变多了，利息也就比上一年多一点。",
+            "takeaway": "复利每年的利息都比上一年多。",
+            "derive": [
+              "第 1 年：1000 的 10% 是 100，变成 1100。",
+              "第 2 年：1100 的 10% 是 110，变成 1210。",
+              "第 3 年：1210 的 10% 是 121，变成 1331。"
+            ]
+          },
+          {
+            "title": "多出的 31 元从哪来？",
+            "idea": "3 年后复利比单利多 31 元。这 31 元就是\"利息的利息\"。",
+            "visual": {
+              "type": "columns",
+              "base": {
+                "items": [
+                  {
+                    "label": "单利 3 年",
+                    "value": 1300
+                  },
+                  {
+                    "label": "复利 3 年",
+                    "value": 1331
+                  }
+                ],
+                "unit": "元"
+              },
+              "frames": [
+                {
+                  "set": {
+                    "play": 0,
+                    "step": 0
+                  },
+                  "cap": "先看骨架",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "play": 1,
+                    "step": 2
+                  },
+                  "cap": "看完整的图",
+                  "para": "takeaway"
+                }
+              ]
+            },
+            "takeaway": "复利多出来的钱 = 利息又生出的利息。",
+            "derive": [
+              "第 2 年：第 1 年的 100 元利息，又生了 10 元。",
+              "第 3 年：前两年攒下的 210 元利息，又生了 21 元。",
+              "10 + 21 = 31。"
+            ],
             "check": {
               "q": "同样 1000 元存 3 年，复利比单利多多少？",
               "options": [
@@ -6410,7 +15123,45 @@ window.DAYS = [
             }
           },
           {
-            "text": "再推一步：每年“加上 10%”，就是“原来的 1 倍 + 0.1 倍 = 1.1 倍”。所以每年都乘 1.1，3 年就是 1000 × 1.1 × 1.1 × 1.1 = 1331。乘的次数越多，雪球滚得越大：20 年后单利是 3000，复利约 6727。",
+            "title": "更快的算法：每年乘 1.1",
+            "idea": "\"加上 10%\"就是\"乘以 1.1\"。",
+            "visual": {
+              "type": "chain",
+              "base": {
+                "nodes": [
+                  "1000",
+                  "× 1.1",
+                  "× 1.1",
+                  "× 1.1",
+                  "1331"
+                ]
+              },
+              "frames": [
+                {
+                  "set": {
+                    "play": 0,
+                    "step": 0
+                  },
+                  "cap": "先看骨架",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "play": 1,
+                    "step": 2
+                  },
+                  "cap": "看完整的图",
+                  "para": "takeaway"
+                }
+              ]
+            },
+            "takeaway": "复利：每年乘一次\"1 + 利率\"。",
+            "derive": [
+              "原来的钱是 1 倍。",
+              "多出 10%，是 0.1 倍。",
+              "1 + 0.1 = 1.1 倍。",
+              "3 年就乘 3 次：1000 × 1.1 × 1.1 × 1.1 = 1331。"
+            ],
             "check": {
               "q": "每年涨 10%，相当于每年乘以多少？",
               "options": [
@@ -6420,6 +15171,108 @@ window.DAYS = [
               "answer": 0,
               "why": "原来的 1 倍加上多出的 0.1 倍，就是 1.1 倍。「0.1」只是利息那一小部分，乘 0.1 钱会变成原来的十分之一。"
             }
+          },
+          {
+            "title": "怎么读折线图：20 年的两条线",
+            "idea": "**折线图**用一条线，画一个数随时间怎么变。横着是时间，竖着是钱。线越陡，涨得越快。",
+            "visual": {
+              "type": "line",
+              "base": {
+                "series": [
+                  {
+                    "label": "线",
+                    "points": [
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1
+                    ]
+                  }
+                ],
+                "xTicks": [
+                  "复利",
+                  "单利",
+                  "0 年",
+                  "5 年",
+                  "10 年",
+                  "15 年",
+                  "20 年"
+                ]
+              },
+              "frames": [
+                {
+                  "set": {
+                    "play": 0,
+                    "step": 0
+                  },
+                  "cap": "先看骨架",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "play": 1,
+                    "step": 2
+                  },
+                  "cap": "看完整的图",
+                  "para": "takeaway"
+                }
+              ]
+            },
+            "why": "柱状图适合比几样东西；折线图适合看\"一路上怎么变\"。物价、工资、一家店每月的收入，常用折线图。",
+            "example": "单利那条是直线，每 5 年都涨 500。复利那条越来越陡：前 5 年涨 611，最后 5 年涨了 2550。",
+            "takeaway": "折线图看变化：直线是匀速涨，越来越陡是越涨越快。",
+            "check": {
+              "q": "图里哪条线越来越陡？",
+              "options": [
+                "复利",
+                "单利"
+              ],
+              "answer": 0,
+              "why": "复利每年的利息都比上一年多，所以线越来越陡。「单利」每年涨一样多，画出来是一条直线。"
+            }
+          },
+          {
+            "title": "串起来：差别在\"利息生利息\"",
+            "idea": "回到钩子。20 年后单利是 3000，复利约 6727。差的 3700 多元，全是利息生出来的利息。时间越长，差得越多。",
+            "visual": {
+              "type": "duo",
+              "base": {
+                "a": {
+                  "type": "columns",
+                  "base": {
+                    "items": []
+                  }
+                },
+                "b": {
+                  "type": "columns",
+                  "base": {
+                    "items": []
+                  }
+                },
+                "dir": "row",
+                "vs": ""
+              },
+              "frames": [
+                {
+                  "set": {
+                    "both": 0
+                  },
+                  "cap": "先看一边",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "both": 1
+                  },
+                  "cap": "两边放一起看",
+                  "para": "takeaway"
+                }
+              ]
+            },
+            "takeaway": "复利靠时间：越早开始，雪球越大。"
           }
         ],
         "interaction": {
@@ -6472,7 +15325,7 @@ window.DAYS = [
             4
           ]
         },
-        "take": "复利 = 利息也生利息。每年乘以“1 + 利率”，时间越长，雪球越大。",
+        "take": "复利 = 利息也生利息。每年乘以\"1 + 利率\"，时间越长，雪球越大。",
         "quiz": [
           {
             "q": "1000 元，年利率 10%，按复利存 2 年，变成多少？",
@@ -6495,6 +15348,17 @@ window.DAYS = [
             "answer": 0,
             "why": "复利把利息加进本金，之后这部分利息也开始赚利息，多出来的就是“利息的利息”。",
             "ref": 3
+          },
+          {
+            "q": "折线图里有一条直线，每年往上走一样的高度。它更像哪种算法？",
+            "options": [
+              "单利",
+              "复利",
+              "没有利息"
+            ],
+            "answer": 0,
+            "why": "单利每年涨一样多，画出来是直线。复利会越来越陡；没有利息就是一条平线。",
+            "ref": 5
           }
         ]
       },
@@ -6510,7 +15374,37 @@ window.DAYS = [
             "why": "天生的东西，通常是漫长进化里留下来的。那问题就来了：恐惧、厌恶、悲伤这么难受，为什么没被淘汰？",
             "takeaway": "表情很可能是天生的，所以要问：难受的情绪有什么用？",
             "example": "达尔文在 1872 年就写过一本书，专门比较人和动物的表情，认为表情是进化留下来的。",
-            "review": true
+            "review": true,
+            "visual": {
+              "type": "faces",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "表情很可能是天生的，所以要问：难受的情绪有什么用",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "表情很可能是天生的，所以要问：难受的情绪有什么用",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "表情很可能是天生的，所以要问：难受的情绪有什么用？",
+                  "para": "takeaway"
+                }
+              ]
+            }
           },
           {
             "title": "推理起点：留下来的，多半有用",
@@ -6523,7 +15417,37 @@ window.DAYS = [
               "厌恶：让人远离腐烂、有毒的东西。",
               "愤怒：让人保护自己的利益和边界。",
               "悲伤：让人停下来，并引来他人的支持。"
-            ]
+            ],
+            "visual": {
+              "type": "chain",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "难受的情绪能留下来，是因为它们曾帮祖先活下来",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "难受的情绪能留下来，是因为它们曾帮祖先活下来",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "难受的情绪能留下来，是因为它们曾帮祖先活下来。",
+                  "para": "takeaway"
+                }
+              ]
+            }
           },
           {
             "title": "证据：情绪本身就有用",
@@ -6539,6 +15463,35 @@ window.DAYS = [
               ],
               "answer": 0,
               "why": "睁大眼睛会扩大视野，帮人发现周围的威胁。「让自己显得更凶」不是这项研究测到的作用，研究测的是视野和吸气量。"
+            },
+            "visual": {
+              "type": "comic",
+              "panels": [
+                {
+                  "bg": "room",
+                  "cast": [
+                    {
+                      "who": "xiaoman",
+                      "x": 0.48,
+                      "y": 0.72,
+                      "face": "talk"
+                    }
+                  ],
+                  "cap": "表情和恐惧本身都有实际作用，"
+                },
+                {
+                  "bg": "street",
+                  "cast": [
+                    {
+                      "who": "xiaoyin",
+                      "x": 0.48,
+                      "y": 0.72,
+                      "face": "talk"
+                    }
+                  ],
+                  "cap": "证据：情绪本身就有用"
+                }
+              ]
             }
           },
           {
@@ -6546,7 +15499,37 @@ window.DAYS = [
             "idea": "情绪还会推动你行动，这叫**动机功能**。没有这股推力，很多该做的事你不会去做。",
             "why": "情绪会改变身体状态和注意力，让某个行动显得\"非做不可\"：焦虑让考试显得紧迫，于是你坐下来复习；愤怒让被冒犯显得不可接受，于是你站出来。它像一股推力，把\"知道\"变成\"去做\"。",
             "takeaway": "动机功能：情绪提供推力，把你推向某个行动。",
-            "example": "账号该更新了却一直拖着，直到\"再不发就要掉粉了\"的焦虑冒出来，你才打开剪辑软件。这份焦虑不舒服，却把你推到了桌前。"
+            "example": "账号该更新了却一直拖着，直到\"再不发就要掉粉了\"的焦虑冒出来，你才打开剪辑软件。这份焦虑不舒服，却把你推到了桌前。",
+            "visual": {
+              "type": "chain",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "动机功能：情绪提供推力，把你推向某个行动",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "动机功能：情绪提供推力，把你推向某个行动",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "动机功能：情绪提供推力，把你推向某个行动。",
+                  "para": "takeaway"
+                }
+              ]
+            }
           },
           {
             "title": "信号功能：情绪是发给别人的",
@@ -6562,6 +15545,35 @@ window.DAYS = [
               ],
               "answer": 0,
               "why": "你的表情把难过告诉了观众，引来回应，这是信号功能。「动机功能」是情绪推动你自己去行动，这里是别人接收到了你的信号。"
+            },
+            "visual": {
+              "type": "comic",
+              "panels": [
+                {
+                  "bg": "room",
+                  "cast": [
+                    {
+                      "who": "xiaoman",
+                      "x": 0.48,
+                      "y": 0.72,
+                      "face": "talk"
+                    }
+                  ],
+                  "cap": "信号功能：情绪把你的状态告诉"
+                },
+                {
+                  "bg": "street",
+                  "cast": [
+                    {
+                      "who": "xiaoyin",
+                      "x": 0.48,
+                      "y": 0.72,
+                      "face": "talk"
+                    }
+                  ],
+                  "cap": "信号功能：情绪是发给别人的"
+                }
+              ]
             }
           },
           {
@@ -6569,7 +15581,37 @@ window.DAYS = [
             "idea": "回到开头：负面情绪没被淘汰，因为它们一直在干活：帮你适应环境、推你行动、向别人发信号。",
             "why": "所以情绪本身没有\"好坏\"，它是信息。真正要调整的是强度和时机，比如对并不危险的事过度恐惧。进化解释也有局限：祖先的环境和今天差别很大，当年躲猛兽的恐惧，今天可能被一条差评点燃；而且\"为什么进化出来\"很难直接用实验证明。",
             "takeaway": "情绪没有好坏，是信息；要调的是强度和时机。",
-            "example": "账号选题提示：\"你的焦虑在提醒你什么？\"先听懂它在提醒什么，再看它是不是太大声、来得不是时候。"
+            "example": "账号选题提示：\"你的焦虑在提醒你什么？\"先听懂它在提醒什么，再看它是不是太大声、来得不是时候。",
+            "visual": {
+              "type": "chain",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "情绪没有好坏，是信息；要调的是强度和时机",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "情绪没有好坏，是信息；要调的是强度和时机",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "情绪没有好坏，是信息；要调的是强度和时机。",
+                  "para": "takeaway"
+                }
+              ]
+            }
           }
         ],
         "interaction": {
@@ -6626,123 +15668,579 @@ window.DAYS = [
             "why": "负面情绪也在传递信息。压抑或忽略都会错过信息；需要处理的是它是否过强、是否出现在不合适的时候。",
             "ref": 5
           }
-        ]
+        ],
+        "hookComic": {
+          "panels": [
+            {
+              "bg": "room",
+              "cast": [
+                {
+                  "who": "xiaoman",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "talk"
+                }
+              ],
+              "cap": "恐惧、厌恶、悲伤都那么难受，"
+            },
+            {
+              "bg": "street",
+              "cast": [
+                {
+                  "who": "xiaoyin",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "talk"
+                }
+              ],
+              "cap": "恐惧、厌恶、悲伤都那么难受，"
+            },
+            {
+              "bg": "shop",
+              "cast": [
+                {
+                  "who": "xiaoman",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "talk"
+                }
+              ],
+              "cap": "恐惧、厌恶、悲伤都那么难受，"
+            },
+            {
+              "bg": "plain",
+              "cast": [
+                {
+                  "who": "xiaoyin",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "wow"
+                }
+              ],
+              "cap": "恐惧、厌恶、悲伤都那么难受，"
+            }
+          ]
+        }
       },
       "english": {
         "id": "d06-english",
-        "title": "现在完成时：落脚点在“现在”",
-        "minutes": 6,
-        "hook": "\"我丢了钥匙\"——是那时丢了已经找到，还是现在还没有？中文要靠上下文，英语用时态说清楚。",
+        "title": "My New Band：正在做，用 am / is / are + -ing",
+        "minutes": 9,
+        "hook": "Leo cooks 和 Leo is cooking 都是\"Leo 做饭\"，差在哪儿？",
+        "hookComic": {
+          "panels": [
+            {
+              "bg": "kitchen",
+              "cast": [
+                {
+                  "who": "mia",
+                  "x": 0.32,
+                  "y": 0.72,
+                  "face": "happy"
+                },
+                {
+                  "who": "leo",
+                  "x": 0.62,
+                  "y": 0.74,
+                  "face": "talk"
+                },
+                {
+                  "who": "mochi",
+                  "x": 0.8,
+                  "y": 0.82,
+                  "face": "happy",
+                  "k": 0.7
+                }
+              ]
+            },
+            {
+              "bg": "room",
+              "cast": [
+                {
+                  "who": "mia",
+                  "x": 0.32,
+                  "y": 0.72,
+                  "face": "happy"
+                },
+                {
+                  "who": "leo",
+                  "x": 0.62,
+                  "y": 0.74,
+                  "face": "talk"
+                },
+                {
+                  "who": "mochi",
+                  "x": 0.8,
+                  "y": 0.82,
+                  "face": "happy",
+                  "k": 0.7
+                }
+              ]
+            },
+            {
+              "bg": "street",
+              "cast": [
+                {
+                  "who": "mia",
+                  "x": 0.32,
+                  "y": 0.72,
+                  "face": "happy"
+                },
+                {
+                  "who": "leo",
+                  "x": 0.62,
+                  "y": 0.74,
+                  "face": "talk"
+                },
+                {
+                  "who": "mochi",
+                  "x": 0.8,
+                  "y": 0.82,
+                  "face": "happy",
+                  "k": 0.7
+                }
+              ]
+            }
+          ]
+        },
+        "story": {
+          "title": "My New Band",
+          "panels": [
+            {
+              "bg": "kitchen",
+              "cast": [
+                {
+                  "who": "mia",
+                  "x": 0.32,
+                  "y": 0.72,
+                  "face": "happy"
+                },
+                {
+                  "who": "leo",
+                  "x": 0.62,
+                  "y": 0.74,
+                  "face": "talk"
+                },
+                {
+                  "who": "mochi",
+                  "x": 0.8,
+                  "y": 0.82,
+                  "face": "happy",
+                  "k": 0.7
+                }
+              ]
+            },
+            {
+              "bg": "room",
+              "cast": [
+                {
+                  "who": "mia",
+                  "x": 0.32,
+                  "y": 0.72,
+                  "face": "happy"
+                },
+                {
+                  "who": "leo",
+                  "x": 0.62,
+                  "y": 0.74,
+                  "face": "talk"
+                },
+                {
+                  "who": "mochi",
+                  "x": 0.8,
+                  "y": 0.82,
+                  "face": "happy",
+                  "k": 0.7
+                }
+              ]
+            },
+            {
+              "bg": "street",
+              "cast": [
+                {
+                  "who": "mia",
+                  "x": 0.32,
+                  "y": 0.72,
+                  "face": "happy"
+                },
+                {
+                  "who": "leo",
+                  "x": 0.62,
+                  "y": 0.74,
+                  "face": "talk"
+                },
+                {
+                  "who": "mochi",
+                  "x": 0.8,
+                  "y": 0.82,
+                  "face": "happy",
+                  "k": 0.7
+                }
+              ]
+            },
+            {
+              "bg": "shop",
+              "cast": [
+                {
+                  "who": "mia",
+                  "x": 0.32,
+                  "y": 0.72,
+                  "face": "happy"
+                },
+                {
+                  "who": "leo",
+                  "x": 0.62,
+                  "y": 0.74,
+                  "face": "talk"
+                },
+                {
+                  "who": "mochi",
+                  "x": 0.8,
+                  "y": 0.82,
+                  "face": "happy",
+                  "k": 0.7
+                }
+              ]
+            }
+          ],
+          "lines": [
+            {
+              "who": "A",
+              "en": "Hi, friends! I'm recording a new song.",
+              "zh": "嗨，朋友们！我正在录一首新歌。",
+              "panel": 0
+            },
+            {
+              "who": "N",
+              "en": "In the kitchen, Leo is cooking. He's singing, too.",
+              "zh": "厨房里，Leo 正在做饭，还在唱歌。",
+              "panel": 1
+            },
+            {
+              "who": "A",
+              "en": "Leo! I'm recording! Please be quiet.",
+              "zh": "Leo！我在录音！请安静。",
+              "panel": 1
+            },
+            {
+              "who": "N",
+              "en": "Now Leo is quiet. Mia is singing. But listen!",
+              "zh": "现在 Leo 安静了。米娅在唱。可是你听！",
+              "panel": 2
+            },
+            {
+              "who": "N",
+              "en": "Mochi is singing, too!",
+              "zh": "Mochi 也在唱！",
+              "panel": 3
+            },
+            {
+              "who": "A",
+              "en": "Friends, this is my new band!",
+              "zh": "朋友们，这是我的新乐队！",
+              "panel": 3
+            }
+          ]
+        },
+        "words": [
+          {
+            "w": "record",
+            "ipa": "rɪˈkɔːrd",
+            "stress": "cord",
+            "pic": "⏺️",
+            "zh": "录（音、像）",
+            "ex": "I'm recording a new song.",
+            "part": "re- 再 + cord 心：本义\"记在心上\"，后来指录下来"
+          },
+          {
+            "w": "quiet",
+            "ipa": "ˈkwaɪət",
+            "stress": "qui",
+            "pic": "🤫",
+            "zh": "安静的",
+            "ex": "Please be quiet.",
+            "part": "两个音节 qui-et；别和 quite（相当）弄混"
+          },
+          {
+            "w": "listen",
+            "ipa": "ˈlɪsən",
+            "stress": "lis",
+            "pic": "👂",
+            "zh": "听",
+            "ex": "But listen!",
+            "part": "t 不读"
+          },
+          {
+            "w": "band",
+            "ipa": "bænd",
+            "stress": "band",
+            "pic": "🎸",
+            "zh": "乐队",
+            "ex": "This is my new band!",
+            "part": "—"
+          }
+        ],
         "steps": [
           {
-            "title": "\"我丢了钥匙\"的两种意思",
-            "idea": "\"我丢了钥匙\"可能是\"那时丢过，后来找到了\"，也可能是\"丢了，现在还没有\"。中文靠上下文猜，英语用时态直接说清。",
-            "why": "这两种意思对听的人差别很大：前一种只是讲件旧事，后一种是你现在进不了门，可能需要帮忙。英语把\"这件事和现在有没有关系\"放进了动词的形式里，听一句就知道。",
-            "takeaway": "英语用时态说清：这件事只属于过去，还是和现在有关。",
-            "example": "朋友看你在门口翻包，你说\"我丢了钥匙\"，她该帮你找；你在饭桌上讲\"上周我丢了钥匙\"，她听个故事就行。同一句中文，两个场景。"
-          },
-          {
-            "title": "一般过去时：只讲那时",
-            "idea": "I lost my key. 用的是一般过去时：只说\"过去某个时候丢了钥匙\"，不交代现在找到没有。",
-            "why": "一般过去时把镜头对准过去那一刻，像一张过去拍的照片：照片里有事发生，但照片不会告诉你后来怎样。所以 I lost my key 后面可以接 but I found it later，也可以接 and I still can't find it，都不矛盾。",
-            "takeaway": "一般过去时只讲过去那一刻，不管现在怎样。",
-            "example": "I lost my key yesterday, but I found it in my bag.（昨天丢了钥匙，后来在包里找到了。）yesterday 把时间钉在过去，整件事在那天就结束了。"
-          },
-          {
-            "title": "have + 过去分词：站在现在",
-            "idea": "**现在完成时** = have + 过去分词：I have lost my key，常缩成 I've lost my key。意思是：钥匙丢了，现在还没有。",
-            "why": "have 是现在时，所以整句话站在\"现在\"说话；lost 是过去分词，表示动作已经完成。两半合起来就是：一个已经完成的动作，结果留到了现在。",
-            "takeaway": "现在完成时 = 过去完成的动作 + 现在的结果。",
-            "example": "弹钢琴时踩着延音踏板：琴键已经按完、手抬起来了（动作完成），声音却还在房间里响（结果在现在）。现在完成时说的，就是那个还在响的声音。",
-            "exLabel": "打个比方",
-            "derive": [
-              "have 是现在时 → 句子的落脚点在现在。",
-              "lost 是过去分词 → 动作已经完成。",
-              "合起来 → 过去完成的动作，现在还有结果。"
-            ],
+            "title": "先听故事",
+            "kind": "story-listen",
+            "idea": "看图听。Mia 的录音顺利吗？",
             "check": {
-              "q": "说 I've lost my key. 时，钥匙现在？",
+              "q": "Mia 最后说的\"新乐队\"是谁？",
               "options": [
-                "还没找到",
-                "早就找到了"
+                "Mia 和 Mochi",
+                "Mia 请来的三个歌手"
               ],
               "answer": 0,
-              "why": "have 把句子钉在现在，丢了的结果还在，所以现在还没有钥匙。「早就找到了」和这个结果矛盾，那要说 I lost my key, but I found it."
+              "why": "最后一格 Mochi 跟着唱，Mia 把镜头转向它，开玩笑说这是新乐队。故事里没有请别的歌手。"
             }
           },
           {
-            "title": "有明确的过去时间时",
-            "idea": "句子里一旦有 yesterday、last year、in 2020 这种明确的过去时间，就不能用现在完成时，要用一般过去时。",
-            "why": "yesterday 把落脚点钉在过去，have 把落脚点钉在现在，一句话不能同时站在两个地方。常和现在完成时搭配的，是 already、yet、ever、since 这类连着现在的词。",
-            "takeaway": "有明确的过去时间，就用一般过去时。",
-            "example": "I've already finished my homework.（已经写完了，现在能出去玩）对。I've finished it last night. 错：last night 是过去的时间点，要说 I finished it last night.",
-            "derive": [
-              "有明确的过去时间 → 落脚点在过去 → 一般过去时。",
-              "没有，又想说对现在的影响 → 现在完成时。"
-            ],
+            "title": "四个新词",
+            "kind": "words",
+            "idea": "每个词都点一下 ▶。"
+          },
+          {
+            "title": "发音 · 有些字母写着，却不读",
+            "idea": "英语有些字母写着，却不读。[[listen]] 的 t 就不读，读 LIS-en。",
+            "why": "英语的拼写大多是几百年前定下的，那时这些字母是读的。后来口语变了，嘴巴为了省力把它们丢了，书上的拼写却没跟着改。所以拼写像一张老照片，读音是现在的样子。听的时候按声音认，不要按字母猜。",
+            "example": "[[listen]] 不读 t；[[hour]] 不读 h；[[know]] 不读 k；[[half]] 不读 l。",
+            "takeaway": "拼写是老照片，读音是现在：有些字母不读。",
+            "visual": {
+              "type": "sentence",
+              "base": {
+                "rows": [
+                  [
+                    {
+                      "text": "看",
+                      "role": "who"
+                    },
+                    {
+                      "text": "图",
+                      "role": "verb"
+                    }
+                  ]
+                ]
+              },
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "拼写是老照片，读音是现在：有些字母不读",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "拼写是老照片，读音是现在：有些字母不读",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "拼写是老照片，读音是现在：有些字母不读。",
+                  "para": "takeaway"
+                }
+              ]
+            },
             "check": {
-              "q": "I have seen that movie last week. 对吗？",
+              "q": "[[listen]] 里哪个字母不读？",
               "options": [
-                "不对，last week 和 have 冲突",
-                "对，看过电影就用 have"
+                "t",
+                "s"
               ],
               "answer": 0,
-              "why": "last week 把时间钉在过去，要说 I saw that movie last week.「看过电影就用 have」忽略了句子里明确的过去时间。"
+              "why": "listen 读 LIS-en，t 不读。「s」是读的，就在 LIS 里。"
             }
           },
           {
-            "title": "串起来：我经历过",
-            "idea": "回到开头：I lost my key 只讲过去；I've lost my key 说的是现在还没钥匙。同一个道理，情绪账号的评论区里常见一句 I've been there.",
-            "why": "在别人倾诉的帖子下面，这里的 there 不是一个地点，而是对方正在经历的处境。have 把过去的经历接到现在：我经历过，所以现在能理解你。它比单说 I understand 更有分量，因为带着\"我也走过\"。",
-            "takeaway": "现在完成时把过去接到现在：I've been there = 我经历过，所以懂你。",
-            "example": "有人留言说分手后每晚都睡不着。你回复：I've been there. It gets better.（我经历过，会好起来的。）I've 里的 've 弱读得很轻，听的时候注意 I 后面那个短促的 /v/。"
+            "title": "语法 · 正在做：am / is / are + -ing",
+            "idea": "说\"此刻正在做\"，用 am / is / are + 动词 -ing：[[Leo is cooking.]] Leo 正在做饭。",
+            "why": "am / is / are 说的是\"现在的状态\"（第 1 天），-ing 表示\"在动作中间\"。合起来就是\"现在处在做饭的中间\"。它和第 4 天的习惯不一样：[[Leo cooks.]] 说的是他平时做饭，像在说他的身份，不管此刻他在干什么；[[Leo is cooking.]] 是此刻锅正在响。",
+            "example": "[[Mia is singing.]] 她现在在唱。[[Mia sings.]] 她平时唱歌，她是歌手。[[Now Leo is quiet.]] quiet 不是动作，所以不加 -ing。",
+            "takeaway": "正在做 = am / is / are + 动词 -ing；平时的习惯才用 -s。",
+            "visual": {
+              "type": "tense",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "正在做 = am / is / are + 动词 -ing；平时的习惯才用 -s",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "正在做 = am / is / are + 动词 -ing；平时的习惯才用 -s",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "正在做 = am / is / are + 动词 -ing；平时的习惯才用 -s",
+                  "para": "takeaway"
+                }
+              ]
+            },
+            "check": {
+              "q": "此刻 Mochi 正在睡觉。",
+              "options": [
+                "Mochi is sleeping.",
+                "Mochi sleeps."
+              ],
+              "answer": 0,
+              "why": "此刻正在发生，用 is + sleeping。「Mochi sleeps.」说的是他平时爱睡觉。"
+            }
+          },
+          {
+            "title": "再读故事",
+            "kind": "story-read",
+            "idea": "看着字听，找出所有的 is … -ing。"
+          },
+          {
+            "title": "谁正在做什么",
+            "kind": "drill",
+            "frame": "{a} {b} now.",
+            "zh": "{a}现在正在{b}。",
+            "slots": {
+              "a": [
+                {
+                  "en": "I'm",
+                  "zh": "我",
+                  "pic": "🙋"
+                },
+                {
+                  "en": "Leo is",
+                  "zh": "Leo",
+                  "pic": "👨‍🍳"
+                },
+                {
+                  "en": "Mochi is",
+                  "zh": "Mochi",
+                  "pic": "🐱"
+                },
+                {
+                  "en": "We're",
+                  "zh": "我们",
+                  "pic": "👥"
+                }
+              ],
+              "b": [
+                {
+                  "en": "cooking",
+                  "zh": "做饭",
+                  "pic": "🍳"
+                },
+                {
+                  "en": "singing",
+                  "zh": "唱歌",
+                  "pic": "🎤"
+                },
+                {
+                  "en": "sleeping",
+                  "zh": "睡觉",
+                  "pic": "😴"
+                },
+                {
+                  "en": "recording",
+                  "zh": "录音",
+                  "pic": "⏺️"
+                }
+              ]
+            },
+            "need": 3
+          },
+          {
+            "title": "跟读",
+            "kind": "shadow",
+            "tip": "I'm 只读一拍；recording 的重音在 COR。",
+            "lines": [
+              0,
+              2,
+              5
+            ]
+          },
+          {
+            "title": "复述：串起来",
+            "kind": "retell",
+            "idea": "看着图，用 is … -ing 讲讲每一格里大家正在做什么。",
+            "keys": [
+              [
+                "recording",
+                "song"
+              ],
+              [
+                "kitchen",
+                "cooking",
+                "singing"
+              ],
+              [
+                "quiet",
+                "listen"
+              ],
+              [
+                "Mochi",
+                "singing",
+                "band"
+              ]
+            ]
           }
         ],
         "interaction": {
           "type": "listen",
           "prompt": "听一听，选出你听到的句子",
-          "audio": "I've lost my key.",
-          "answer": 0,
-          "why": "‘ve 弱读得很轻，但仍在：注意 I 后面那个短促的 /v/。",
+          "audio": "Leo is cooking.",
+          "showText": "after",
           "options": [
-            "I've lost my key.",
-            "I lost my key.",
-            "I love my key."
+            "Leo is cooking.",
+            "Leo cooks.",
+            "Leo is singing."
           ],
-          "ref": [
-            2,
-            4
-          ]
+          "answer": 0,
+          "why": "听到了 is 和 -ing 结尾的 cooking。「Leo cooks.」没有 is；「singing」开头是 s。",
+          "ref": 3
         },
-        "take": "现在完成时 = 过去的动作 + 现在的结果。have 把句子钉在“现在”。",
+        "take": "正在做 = am / is / are + -ing，平时的习惯才用 -s；有些字母写着不读，比如 listen 的 t。",
         "quiz": [
           {
-            "q": "“我昨天把钥匙丢了”，下面哪句对？",
+            "q": "Leo 是厨师，他天天做饭：Leo ___ every day.",
             "options": [
-              "I lost my key yesterday.",
-              "I have lost my key yesterday.",
-              "I lose my key yesterday."
+              "cooks",
+              "is cooking",
+              "cooking"
             ],
             "answer": 0,
-            "why": "yesterday 把落脚点放在过去，要用一般过去时。「I have lost my key yesterday.」用现在完成时和 yesterday 冲突。",
+            "why": "every day 说的是习惯，用现在时，Leo 是一个别人，加 -s。「is cooking」是此刻正在做；「cooking」前面缺了 is。",
             "ref": 3
           },
           {
-            "q": "在评论里回复 “I've been there.” 想表达什么？",
+            "q": "意思是？",
             "options": [
-              "我经历过，所以理解你现在的感受",
-              "我去过那个地方旅游",
-              "我昨天在那里"
+              "听！Mochi 正在唱歌。",
+              "听！Mochi 平时爱唱歌。",
+              "听！Mochi 是个歌手。"
             ],
             "answer": 0,
-            "why": "现在完成时把过去的经历和现在连起来：我过去经历过，所以现在能理解你。",
-            "ref": 4
+            "why": "is singing 是此刻正在唱。「平时爱唱歌」要说 Mochi sings；「是个歌手」要说 Mochi is a singer。",
+            "ref": [
+              2,
+              3
+            ],
+            "audio": "Listen! Mochi is singing."
           }
-        ],
-        "tts": [
-          "I lost my key yesterday.",
-          "I've lost my key.",
-          "I've been there."
         ]
       }
     }
@@ -6800,7 +16298,57 @@ window.DAYS = [
             ]
           }
         }
-      ]
+      ],
+      "hookComic": {
+        "panels": [
+          {
+            "bg": "palace",
+            "cast": [
+              {
+                "who": "qinShi",
+                "x": 0.5,
+                "y": 0.72
+              }
+            ],
+            "cap": "秦把字和路并到一起"
+          },
+          {
+            "bg": "bank",
+            "cast": [
+              {
+                "who": "xiaoman",
+                "x": 0.5,
+                "y": 0.72
+              }
+            ],
+            "cap": "钱包也要并到一笔账"
+          },
+          {
+            "bg": "room",
+            "cast": [
+              {
+                "who": "xiaoman",
+                "x": 0.4,
+                "y": 0.72,
+                "face": "worry"
+              }
+            ],
+            "cap": "心跳会骗人"
+          },
+          {
+            "bg": "plain",
+            "cast": [
+              {
+                "who": "xiaoyin",
+                "x": 0.5,
+                "y": 0.72,
+                "face": "happy"
+              }
+            ],
+            "cap": "三件事，一个问题"
+          }
+        ]
+      }
     }
   },
   {
@@ -6820,7 +16368,37 @@ window.DAYS = [
             "why": "今天要讲\"色相不同也能和谐\"，靠的就是共同成分这一条。",
             "takeaway": "色轮上越近，共同成分越多。",
             "example": "黄橙 = 黄 + 橙，橙 = 红 + 黄，它们都含黄；蓝绿 = 蓝 + 绿，绿 = 黄 + 蓝，它们都含蓝。",
-            "review": true
+            "review": true,
+            "visual": {
+              "type": "wheelBuild",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "色轮上越近，共同成分越多",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "色轮上越近，共同成分越多",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "色轮上越近，共同成分越多。",
+                  "para": "takeaway"
+                }
+              ]
+            }
           },
           {
             "title": "邻近色：色轮上挨着的 2～3 格",
@@ -6830,25 +16408,33 @@ window.DAYS = [
             "example": "像音乐五度圈上相邻的两个调，7 个音里共用 6 个，从一个转到另一个很自然，又能清楚地听出整体的颜色变了。",
             "exLabel": "打个比方",
             "visual": {
-              "type": "wheel",
-              "colors": [
-                "#E53935",
-                "#F4511E",
-                "#FB8C00",
-                "#FFB300",
-                "#FDD835",
-                "#9CCC65",
-                "#43A047",
-                "#00897B",
-                "#1E88E5",
-                "#5E35B1",
-                "#8E24AA",
-                "#D81B60"
-              ],
-              "highlight": [
-                2,
-                3,
-                4
+              "type": "wheelBuild",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "邻近色 = 色轮上挨着的 2～3 格，有共同成分所以和谐",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "邻近色 = 色轮上挨着的 2～3 格，有共同成分所以和谐",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "邻近色 = 色轮上挨着的 2～3 格，有共同成分所以和谐。",
+                  "para": "takeaway"
+                }
               ]
             },
             "check": {
@@ -6876,6 +16462,36 @@ window.DAYS = [
               ],
               "answer": 0,
               "why": "同类色只用一个色相。「两到三个」挨着的色相，是邻近色。"
+            },
+            "visual": {
+              "type": "knobs",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "邻近色比同类色多了色相变化，丰富又不冲突",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "邻近色比同类色多了色相变化，丰富又不冲突",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "邻近色比同类色多了色相变化，丰富又不冲突。",
+                  "para": "takeaway"
+                }
+              ]
             }
           },
           {
@@ -6883,7 +16499,37 @@ window.DAYS = [
             "idea": "回到开头：黄、黄橙、橙都含黄，是一家人，所以像一片秋天那样和谐。",
             "why": "共同成分让它们不打架（卡 2），色相变化又让它们不单调（卡 3）。用的时候还要记两条老规矩：选一个当主色，其他当配角；明度仍然要拉开，不然几件一样亮的衣服还是会糊。",
             "takeaway": "邻近色和谐靠共同成分；用时分主次、拉明度。",
-            "example": "芥末黄针织衫做主色，配焦糖橙半裙，再加一双深棕短靴：色相挨着，明度从亮到暗，像秋天的树。海边那组蓝、蓝绿、绿也是同一个道理，只是换成了偏冷的一家。"
+            "example": "芥末黄针织衫做主色，配焦糖橙半裙，再加一双深棕短靴：色相挨着，明度从亮到暗，像秋天的树。海边那组蓝、蓝绿、绿也是同一个道理，只是换成了偏冷的一家。",
+            "visual": {
+              "type": "outfit",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "邻近色和谐靠共同成分；用时分主次、拉明度",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "邻近色和谐靠共同成分；用时分主次、拉明度",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "邻近色和谐靠共同成分；用时分主次、拉明度。",
+                  "para": "takeaway"
+                }
+              ]
+            }
           }
         ],
         "interaction": {
@@ -6945,7 +16591,59 @@ window.DAYS = [
             "why": "同类色也能有明度变化；邻近色多出来的是色相的变化，而且因为相邻，不会冲突。",
             "ref": 2
           }
-        ]
+        ],
+        "hookComic": {
+          "panels": [
+            {
+              "bg": "room",
+              "cast": [
+                {
+                  "who": "xiaoman",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "talk"
+                }
+              ],
+              "cap": "黄、黄橙、橙放在一起像一片秋"
+            },
+            {
+              "bg": "street",
+              "cast": [
+                {
+                  "who": "xiaoyin",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "talk"
+                }
+              ],
+              "cap": "为什么色相不同，却这么和谐"
+            },
+            {
+              "bg": "shop",
+              "cast": [
+                {
+                  "who": "xiaoman",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "talk"
+                }
+              ],
+              "cap": "为什么色相不同，却这么和谐"
+            },
+            {
+              "bg": "plain",
+              "cast": [
+                {
+                  "who": "xiaoyin",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "wow"
+                }
+              ],
+              "cap": "为什么色相不同，却这么和谐"
+            }
+          ]
+        }
       },
       "history": {
         "id": "d08-history",
@@ -6959,7 +16657,10 @@ window.DAYS = [
             "why": "统一只是开头。这 370 年留下了一个大麻烦，隋得先解决它，才坐得稳。",
             "takeaway": "隋统一时，粮食的重心在南，都城和军队在北。",
             "example": "北方打仗时，大量人口南迁，江南被开发成了粮仓。可隋的都城在长安，大军也守在北方。",
-            "review": true
+            "review": true,
+            "visual": {
+              "recall": "d06-history#8"
+            }
           },
           {
             "title": "粮食怎么运到北方",
@@ -6973,7 +16674,37 @@ window.DAYS = [
               "陆运太贵，最好走水路。",
               "天然大河东西流，不通南北。",
               "那就只能自己挖一条南北向的河。"
-            ]
+            ],
+            "visual": {
+              "type": "histmap",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "南粮北运离不开水路，天然河道不通南北，只能人工开挖",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "南粮北运离不开水路，天然河道不通南北，只能人工开挖",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "南粮北运离不开水路，天然河道不通南北，只能人工开挖。",
+                  "para": "takeaway"
+                }
+              ]
+            }
           },
           {
             "title": "大运河：人工的南北水路",
@@ -6983,12 +16714,33 @@ window.DAYS = [
             "example": "像地铁加了一条换乘线：几条东西向的线路本来各跑各的，加一条南北向的线，在每个交叉口都能换乘，全城就都连通了。",
             "exLabel": "打个比方",
             "visual": {
-              "type": "flow",
-              "nodes": [
-                "江南粮仓（余杭）",
-                "大运河",
-                "洛阳",
-                "北方前线（涿郡）"
+              "type": "histmap",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "大运河以洛阳为中心，北到涿郡、南到余杭，把南方的粮运到北方",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "大运河以洛阳为中心，北到涿郡、南到余杭，把南方的粮运到北方",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "大运河以洛阳为中心，北到涿郡、南到余杭，把南方的粮运到北方。",
+                  "para": "takeaway"
+                }
               ]
             },
             "check": {
@@ -7012,7 +16764,37 @@ window.DAYS = [
               "农民被拉走，田地荒了。",
               "粮少、税重、徭役不停。",
               "活不下去的人越来越多，起义遍地。"
-            ]
+            ],
+            "visual": {
+              "type": "chain",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "隋不是亡于运河本身，而是亡于用力过猛、耗尽民力",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "隋不是亡于运河本身，而是亡于用力过猛、耗尽民力",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "隋不是亡于运河本身，而是亡于用力过猛、耗尽民力。",
+                  "para": "takeaway"
+                }
+              ]
+            }
           },
           {
             "title": "另一个老问题：做官看出身",
@@ -7025,7 +16807,36 @@ window.DAYS = [
               "官位来自家族，不来自皇帝。",
               "官员首先效忠家族。",
               "皇帝推行命令，常要看大族的脸色。"
-            ]
+            ],
+            "visual": {
+              "type": "comic",
+              "panels": [
+                {
+                  "bg": "room",
+                  "cast": [
+                    {
+                      "who": "xiaoman",
+                      "x": 0.48,
+                      "y": 0.72,
+                      "face": "talk"
+                    }
+                  ],
+                  "cap": "世家大族垄断官位，皇帝用人受"
+                },
+                {
+                  "bg": "street",
+                  "cast": [
+                    {
+                      "who": "xiaoyin",
+                      "x": 0.48,
+                      "y": 0.72,
+                      "face": "talk"
+                    }
+                  ],
+                  "cap": "另一个老问题：做官看出身"
+                }
+              ]
+            }
           },
           {
             "title": "科举：用考试选官",
@@ -7047,6 +16858,35 @@ window.DAYS = [
               ],
               "answer": 0,
               "why": "科举就是用考试选官，看「考试成绩」。看「家族门第」正是科举之前的老办法，科举要打破的就是它。"
+            },
+            "visual": {
+              "type": "comic",
+              "panels": [
+                {
+                  "bg": "room",
+                  "cast": [
+                    {
+                      "who": "xiaoman",
+                      "x": 0.48,
+                      "y": 0.72,
+                      "face": "talk"
+                    }
+                  ],
+                  "cap": "科举让出身不再决定一切，官员"
+                },
+                {
+                  "bg": "street",
+                  "cast": [
+                    {
+                      "who": "xiaoyin",
+                      "x": 0.48,
+                      "y": 0.72,
+                      "face": "talk"
+                    }
+                  ],
+                  "cap": "科举：用考试选官"
+                }
+              ]
             }
           },
           {
@@ -7059,7 +16899,37 @@ window.DAYS = [
               "隋的制度有用：运河、科举都留下。",
               "隋错在用力过猛：唐就减轻负担。",
               "好制度加上松一点的手，才稳得住。"
-            ]
+            ],
+            "visual": {
+              "type": "tug",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "唐继承隋的制度，减轻百姓负担，迎来贞观之治",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "唐继承隋的制度，减轻百姓负担，迎来贞观之治",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "唐继承隋的制度，减轻百姓负担，迎来贞观之治。",
+                  "para": "takeaway"
+                }
+              ]
+            }
           },
           {
             "title": "开元盛世：前面的底子结果了",
@@ -7075,6 +16945,36 @@ window.DAYS = [
               ],
               "answer": 0,
               "why": "长安人口约百万，光靠附近的田不够吃，要靠「运河运来的江南粮食」。「只靠长安城边种的粮」养不活这么大的城市，这正是隋要修运河的原因。"
+            },
+            "visual": {
+              "type": "blocks",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "开元盛世，是运河、科举和长期安定一起结出的果子",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "开元盛世，是运河、科举和长期安定一起结出的果子",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "开元盛世，是运河、科举和长期安定一起结出的果子。",
+                  "para": "takeaway"
+                }
+              ]
             }
           },
           {
@@ -7088,7 +16988,37 @@ window.DAYS = [
               "秦约 15 年，汉约 400 年。",
               "隋 37 年，唐近 300 年。",
               "可盛世的顶点也藏着危机：边境将领手里的权越来越大。"
-            ]
+            ],
+            "visual": {
+              "type": "tl",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "短命王朝打地基，长久王朝住进去；盛唐顶点也埋下了危机",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "短命王朝打地基，长久王朝住进去；盛唐顶点也埋下了危机",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "短命王朝打地基，长久王朝住进去；盛唐顶点也埋下了危机。",
+                  "para": "takeaway"
+                }
+              ]
+            }
           }
         ],
         "interaction": {
@@ -7187,7 +17117,59 @@ window.DAYS = [
             "id": "SN",
             "label": "长安"
           }
-        ]
+        ],
+        "hookComic": {
+          "panels": [
+            {
+              "bg": "room",
+              "cast": [
+                {
+                  "who": "xiaoman",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "talk"
+                }
+              ],
+              "cap": "隋朝只有 37 年，唐朝却有"
+            },
+            {
+              "bg": "street",
+              "cast": [
+                {
+                  "who": "xiaoyin",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "talk"
+                }
+              ],
+              "cap": "这个组合是不是有点眼熟"
+            },
+            {
+              "bg": "shop",
+              "cast": [
+                {
+                  "who": "xiaoman",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "talk"
+                }
+              ],
+              "cap": "这个组合是不是有点眼熟"
+            },
+            {
+              "bg": "plain",
+              "cast": [
+                {
+                  "who": "xiaoyin",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "wow"
+                }
+              ],
+              "cap": "这个组合是不是有点眼熟"
+            }
+          ]
+        }
       },
       "geo": {
         "id": "d08-geo",
@@ -7200,7 +17182,37 @@ window.DAYS = [
             "idea": "中国东部一年的雨，大部分下在夏天。冬天却常常好多天不下雨，空气干得嘴唇起皮。",
             "why": "雨的原料是水汽，大片的水汽来自海洋。水汽自己不会走路，得靠风从海上一路推到陆地上。所以\"为什么夏天多雨\"，其实是在问：为什么夏天的风从海上来，冬天的风从陆地来？",
             "takeaway": "雨要靠风从海上把水汽送来；问题变成\"风为什么跟着季节换方向\"。",
-            "example": "北方的冬天，衣服晾在阳台上半天就干，屋里要开加湿器；到了七八月，又闷又潮，衣服晾两天还是潮的。同一个地方，空气里的水汽多少，跟着季节整个翻了个面。"
+            "example": "北方的冬天，衣服晾在阳台上半天就干，屋里要开加湿器；到了七八月，又闷又潮，衣服晾两天还是潮的。同一个地方，空气里的水汽多少，跟着季节整个翻了个面。",
+            "visual": {
+              "type": "cnmap",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "雨要靠风从海上把水汽送来；问题变成\"风为什么跟着季节换方向\"",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "雨要靠风从海上把水汽送来；问题变成\"风为什么跟着季节换方向\"",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "雨要靠风从海上把水汽送来；问题变成\"风为什么跟着季节换方向\"。",
+                  "para": "takeaway"
+                }
+              ]
+            }
           },
           {
             "title": "沙滩和海水：谁热得快",
@@ -7213,7 +17225,37 @@ window.DAYS = [
               "沙子比热小，只晒热一薄层，升温快。",
               "海水比热大，热摊进很厚一层，升温慢。",
               "散热也一样：沙子凉得快，海水凉得慢。"
-            ]
+            ],
+            "visual": {
+              "type": "seaLand",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "陆地升温快、降温也快；海水比热大，升温慢、降温也慢",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "陆地升温快、降温也快；海水比热大，升温慢、降温也慢",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "陆地升温快、降温也快；海水比热大，升温慢、降温也慢。",
+                  "para": "takeaway"
+                }
+              ]
+            }
           },
           {
             "title": "从一天放大到一年",
@@ -7229,6 +17271,36 @@ window.DAYS = [
               ],
               "answer": 0,
               "why": "陆地比热小，夏天被晒得快，所以更热。「海洋」升温慢，夏天反而比陆地凉。"
+            },
+            "visual": {
+              "type": "seaLand",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "夏季陆地比海洋热，冬季陆地比海洋冷",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "夏季陆地比海洋热，冬季陆地比海洋冷",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "夏季陆地比海洋热，冬季陆地比海洋冷。",
+                  "para": "takeaway"
+                }
+              ]
             }
           },
           {
@@ -7240,7 +17312,37 @@ window.DAYS = [
             "derive": [
               "受热：空气膨胀上升，地面气压低。",
               "变冷：空气收缩下沉，地面气压高。"
-            ]
+            ],
+            "visual": {
+              "type": "seaLand",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "热的地方空气上升、气压低；冷的地方空气下沉、气压高",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "热的地方空气上升、气压低；冷的地方空气下沉、气压高",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "热的地方空气上升、气压低；冷的地方空气下沉、气压高。",
+                  "para": "takeaway"
+                }
+              ]
+            }
           },
           {
             "title": "风：空气从高压挤向低压",
@@ -7254,11 +17356,33 @@ window.DAYS = [
               "所以贴近地面的风，是从冷的地方吹向热的地方。"
             ],
             "visual": {
-              "type": "flow",
-              "nodes": [
-                "冷处 · 高压",
-                "风",
-                "热处 · 低压"
+              "type": "seaLand",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "风从高压吹向低压；贴近地面，就是从冷处吹向热处",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "风从高压吹向低压；贴近地面，就是从冷处吹向热处",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "风从高压吹向低压；贴近地面，就是从冷处吹向热处。",
+                  "para": "takeaway"
+                }
               ]
             },
             "check": {
@@ -7284,12 +17408,33 @@ window.DAYS = [
               "湿空气上升变冷，水汽凝成雨。"
             ],
             "visual": {
-              "type": "flow",
-              "nodes": [
-                "陆地升温快",
-                "陆上低压",
-                "风从海洋吹来",
-                "带来降雨"
+              "type": "cnmap",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "夏季风从海洋吹向陆地，又湿又热，带来降雨",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "夏季风从海洋吹向陆地，又湿又热，带来降雨",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "夏季风从海洋吹向陆地，又湿又热，带来降雨。",
+                  "para": "takeaway"
+                }
               ]
             }
           },
@@ -7313,6 +17458,36 @@ window.DAYS = [
               ],
               "answer": 0,
               "why": "冬季风从蒙古、西伯利亚出发，一路没有大片的水，吸不到水汽。「它从太平洋吹来」说的是夏季风的来路。"
+            },
+            "visual": {
+              "type": "cnmap",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "冬季风从西北内陆吹向海洋，又冷又干",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "冬季风从西北内陆吹向海洋，又冷又干",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "冬季风从西北内陆吹向海洋，又冷又干。",
+                  "para": "takeaway"
+                }
+              ]
             }
           },
           {
@@ -7325,7 +17500,37 @@ window.DAYS = [
               "夏天：陆地热，低压，海风来，下雨。",
               "冬天：陆地冷，高压，风往海里吹，干燥。",
               "热和雨同进同出，就是雨热同期。"
-            ]
+            ],
+            "visual": {
+              "type": "cnmap",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "季风让热和雨在夏天一起到来，叫雨热同期，对农业很有利",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "季风让热和雨在夏天一起到来，叫雨热同期，对农业很有利",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "季风让热和雨在夏天一起到来，叫雨热同期，对农业很有利。",
+                  "para": "takeaway"
+                }
+              ]
+            }
           }
         ],
         "interaction": {
@@ -7363,21 +17568,252 @@ window.DAYS = [
             "why": "庄稼在温暖的季节长得最快，这时又恰好有充足的雨水，水和热配合得正好。",
             "ref": 7
           }
-        ]
+        ],
+        "hookComic": {
+          "panels": [
+            {
+              "bg": "room",
+              "cast": [
+                {
+                  "who": "xiaoman",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "talk"
+                }
+              ],
+              "cap": "中国东部夏天又热又多雨，冬天"
+            },
+            {
+              "bg": "street",
+              "cast": [
+                {
+                  "who": "xiaoyin",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "talk"
+                }
+              ],
+              "cap": "为什么雨偏偏和热一起来"
+            },
+            {
+              "bg": "shop",
+              "cast": [
+                {
+                  "who": "xiaoman",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "talk"
+                }
+              ],
+              "cap": "为什么雨偏偏和热一起来"
+            },
+            {
+              "bg": "plain",
+              "cast": [
+                {
+                  "who": "xiaoyin",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "wow"
+                }
+              ],
+              "cap": "为什么雨偏偏和热一起来"
+            }
+          ]
+        }
       },
       "finance": {
         "id": "d08-finance",
         "title": "通胀：钱的数字没变，东西变贵了",
-        "minutes": 4,
+        "minutes": 7,
         "hook": "你存着的 1 万块，数字一分没少，却在悄悄缩水。",
+        "hookComic": {
+          "panels": [
+            {
+              "bg": "room",
+              "cast": [
+                {
+                  "who": "xiaoman",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "talk"
+                }
+              ],
+              "cap": "你存着的 1 万块，数字一分"
+            },
+            {
+              "bg": "street",
+              "cast": [
+                {
+                  "who": "xiaoyin",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "talk"
+                }
+              ],
+              "cap": "你存着的 1 万块，数字一分"
+            },
+            {
+              "bg": "shop",
+              "cast": [
+                {
+                  "who": "xiaoman",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "talk"
+                }
+              ],
+              "cap": "你存着的 1 万块，数字一分"
+            },
+            {
+              "bg": "plain",
+              "cast": [
+                {
+                  "who": "xiaoyin",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "wow"
+                }
+              ],
+              "cap": "你存着的 1 万块，数字一分"
+            }
+          ]
+        },
         "steps": [
           {
-            "text": "通货膨胀：物价整体上涨。一碗面去年 20 元，今年 21 元，涨了多少？用第 2 天的方法：涨了 1 元，占原价的几成？",
-            "formula": "1 ÷ 20 = 0.05，即 5%"
+            "title": "钱没少，却买得少了",
+            "idea": "钱的数字没变，东西变贵了，能买到的就少了。",
+            "visual": {
+              "type": "comic",
+              "panels": [
+                {
+                  "bg": "bank",
+                  "cast": [
+                    {
+                      "who": "xiaoman",
+                      "x": 0.5,
+                      "y": 0.72,
+                      "face": "talk"
+                    }
+                  ],
+                  "cap": "存款一分没少"
+                },
+                {
+                  "bg": "kitchen",
+                  "cast": [
+                    {
+                      "who": "xiaoman",
+                      "x": 0.5,
+                      "y": 0.72,
+                      "face": "talk"
+                    }
+                  ],
+                  "cap": "面贵了 1 块"
+                },
+                {
+                  "bg": "room",
+                  "cast": [
+                    {
+                      "who": "xiaoman",
+                      "x": 0.5,
+                      "y": 0.72,
+                      "face": "talk"
+                    }
+                  ],
+                  "cap": "能买的面变少了"
+                }
+              ]
+            },
+            "takeaway": "钱会\"缩水\"，不是数字变小，是东西变贵。"
           },
           {
-            "text": "推一下“购买力”：钱的数字没变，能买的东西变少了。100 元去年能买几碗？今年呢？",
-            "formula": "去年 100 ÷ 20 = 5 碗；今年 100 ÷ 21 ≈ 4.76 碗",
+            "title": "通胀：东西整体变贵",
+            "idea": "**通胀**就是东西整体在变贵。看涨了多少，用第 2 天的百分比。",
+            "visual": {
+              "type": "columns",
+              "base": {
+                "items": [
+                  {
+                    "label": "去年",
+                    "value": 20
+                  },
+                  {
+                    "label": "今年",
+                    "value": 21
+                  }
+                ],
+                "unit": "元"
+              },
+              "frames": [
+                {
+                  "set": {
+                    "play": 0,
+                    "step": 0
+                  },
+                  "cap": "先看骨架",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "play": 1,
+                    "step": 2
+                  },
+                  "cap": "看完整的图",
+                  "para": "takeaway"
+                }
+              ]
+            },
+            "formula": "1 ÷ 20 = 0.05，即 5%",
+            "takeaway": "涨幅 = 涨了多少 ÷ 原价。",
+            "derive": [
+              "面从 20 元涨到 21 元，涨了 1 元。",
+              "1 元占原价几成？1 ÷ 20 = 0.05。",
+              "0.05 就是 5%。"
+            ]
+          },
+          {
+            "title": "购买力：同样的钱能买多少",
+            "idea": "**购买力**就是一笔钱能买到多少东西。东西变贵，购买力就变小。",
+            "visual": {
+              "type": "columns",
+              "base": {
+                "items": [
+                  {
+                    "label": "去年 5 碗",
+                    "value": 1
+                  },
+                  {
+                    "label": "今年 4.76 碗",
+                    "value": 1
+                  }
+                ],
+                "unit": "碗"
+              },
+              "frames": [
+                {
+                  "set": {
+                    "play": 0,
+                    "step": 0
+                  },
+                  "cap": "先看骨架",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "play": 1,
+                    "step": 2
+                  },
+                  "cap": "看完整的图",
+                  "para": "takeaway"
+                }
+              ]
+            },
+            "takeaway": "东西变贵，同样的钱能买的就变少。",
+            "derive": [
+              "去年：100 ÷ 20 = 5 碗。",
+              "今年：100 ÷ 21 ≈ 4.76 碗。",
+              "钱还是 100 元，面少了约四分之一碗。"
+            ],
             "check": {
               "q": "面从 20 元涨到 21 元，100 元能买的面怎么变？",
               "options": [
@@ -7389,17 +17825,139 @@ window.DAYS = [
             }
           },
           {
-            "text": "为什么会通胀（直观版）：市场上的钱增加得比东西快，同样多的东西要对应更多的钱，价格就上去了。（成本上涨等也会推高物价。）"
+            "title": "为什么会通胀？",
+            "idea": "市面上的钱多得比东西快。东西还是那么多，钱却多了，每样东西就要换更多的钱。",
+            "visual": {
+              "type": "comic",
+              "panels": [
+                {
+                  "bg": "bank",
+                  "cast": [
+                    {
+                      "who": "xiaoman",
+                      "x": 0.5,
+                      "y": 0.72,
+                      "face": "talk"
+                    }
+                  ],
+                  "cap": "10 个苹果，10 元钱"
+                },
+                {
+                  "bg": "kitchen",
+                  "cast": [
+                    {
+                      "who": "xiaoman",
+                      "x": 0.5,
+                      "y": 0.72,
+                      "face": "talk"
+                    }
+                  ],
+                  "cap": "钱多了，苹果没多"
+                },
+                {
+                  "bg": "room",
+                  "cast": [
+                    {
+                      "who": "xiaoman",
+                      "x": 0.5,
+                      "y": 0.72,
+                      "face": "talk"
+                    }
+                  ],
+                  "cap": "每个苹果变 2 元"
+                }
+              ]
+            },
+            "example": "除了钱变多，原料、运费涨价，也会让东西变贵。",
+            "takeaway": "钱比东西长得快，东西就变贵。"
           },
           {
-            "text": "换成整数想：通胀 3%，去年卖 100 元的东西，今年卖 103 元。你手里的 100 元只够买它的 100 ÷ 103 ≈ 0.97，相当于去年 97 元的东西。"
+            "title": "100 元，一年后只剩 97 元的本事",
+            "idea": "通胀 3%，就是去年 100 元的东西，今年卖 103 元。",
+            "visual": {
+              "type": "chain",
+              "base": {
+                "nodes": [
+                  "去年 100 元的东西",
+                  "今年卖 103 元",
+                  "你的 100 元 ≈ 去年的 97 元"
+                ]
+              },
+              "frames": [
+                {
+                  "set": {
+                    "play": 0,
+                    "step": 0
+                  },
+                  "cap": "先看骨架",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "play": 1,
+                    "step": 2
+                  },
+                  "cap": "看完整的图",
+                  "para": "takeaway"
+                }
+              ]
+            },
+            "formula": "100 ÷ 1.03 ≈ 97",
+            "takeaway": "通胀 3%，现金一年后只剩约 97% 的本事。",
+            "derive": [
+              "你手里还是 100 元。",
+              "它只够买这件东西的 100 ÷ 103 ≈ 0.97。",
+              "也就是只相当于去年的 97 元。"
+            ]
           },
           {
-            "text": "推一个一般结论：通胀 3% 意味着物价变成原来的 1.03 倍。东西贵到 1.03 倍，同样的钱能买到的就只有原来的“1 ÷ 1.03”。所以 100 元现金放一年，购买力只剩约 97 元。",
-            "formula": "100 ÷ 1.03 ≈ 97"
-          },
-          {
-            "text": "放得越久缩得越多：每年都要再除一次 1.03——这就是第 6 天复利的“反方向”。",
+            "title": "折线图：一条一路往下的线",
+            "idea": "每多放一年，就要再除一次 1.03。画成折线图，就是一条一路往下的线。",
+            "visual": {
+              "type": "line",
+              "base": {
+                "series": [
+                  {
+                    "label": "线",
+                    "points": [
+                      1,
+                      1,
+                      1,
+                      1,
+                      1
+                    ]
+                  }
+                ],
+                "xTicks": [
+                  "1 万元能买到的",
+                  "今天",
+                  "5 年",
+                  "10 年",
+                  "20 年"
+                ]
+              },
+              "frames": [
+                {
+                  "set": {
+                    "play": 0,
+                    "step": 0
+                  },
+                  "cap": "先看骨架",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "play": 1,
+                    "step": 2
+                  },
+                  "cap": "看完整的图",
+                  "para": "takeaway"
+                }
+              ]
+            },
+            "why": "这是第 6 天复利的反方向。复利是每年乘 1.1，越滚越大；通胀是每年除 1.03，越缩越小。",
+            "example": "通胀每年 3%，1 万元现金放 10 年，只相当于今天的约 7441 元；放 20 年，约 5537 元，快少了一半。",
+            "takeaway": "放得越久，缩得越多；线往下，就是\"能买的\"在变少。",
             "check": {
               "q": "通胀 3%，100 元现金放两年和放一年比？",
               "options": [
@@ -7409,6 +17967,40 @@ window.DAYS = [
               "answer": 0,
               "why": "每多放一年，就要再除一次 1.03，放得越久缩得越多。「一样多」不对，缩水是每年都在发生的。"
             }
+          },
+          {
+            "title": "串起来：1 万块是怎么缩水的",
+            "idea": "回到钩子。存款数字一分没少，但物价每年涨，它能买的东西每年都少一点。",
+            "visual": {
+              "type": "comic",
+              "panels": [
+                {
+                  "bg": "bank",
+                  "cast": [
+                    {
+                      "who": "xiaoman",
+                      "x": 0.5,
+                      "y": 0.72,
+                      "face": "talk"
+                    }
+                  ],
+                  "cap": "数字不变，物价在涨"
+                },
+                {
+                  "bg": "kitchen",
+                  "cast": [
+                    {
+                      "who": "xiaoman",
+                      "x": 0.5,
+                      "y": 0.72,
+                      "face": "talk"
+                    }
+                  ],
+                  "cap": "能买的一年比一年少"
+                }
+              ]
+            },
+            "takeaway": "通胀不偷你的钱，偷的是钱能买到的东西。"
           }
         ],
         "interaction": {
@@ -7467,7 +18059,7 @@ window.DAYS = [
             ],
             "answer": 0,
             "why": "涨了 2 元，2 ÷ 10 = 0.2，即 20%。「2%」把涨的钱数当成了百分比。",
-            "ref": 0
+            "ref": 1
           },
           {
             "q": "通胀率 3% 时，100 元现金一年后的购买力大约是多少？",
@@ -7479,6 +18071,57 @@ window.DAYS = [
             "answer": 0,
             "why": "物价变成 1.03 倍，100 ÷ 1.03 ≈ 97。数字还是 100，但只能买到以前 97 元的东西。",
             "ref": 4
+          },
+          {
+            "q": "这条线一路往下，意思是？",
+            "options": [
+              "同样的钱，能买的东西越来越少",
+              "存款的数字越来越少",
+              "东西越来越便宜"
+            ],
+            "answer": 0,
+            "why": "线画的是\"能买到的\"，不是存款数字。存款数字没变，是东西变贵了。东西变便宜的话，这条线会往上走。",
+            "ref": 5,
+            "visual": {
+              "type": "line",
+              "base": {
+                "series": [
+                  {
+                    "label": "线",
+                    "points": [
+                      1,
+                      1,
+                      1,
+                      1
+                    ]
+                  }
+                ],
+                "xTicks": [
+                  "1 万元能买到的",
+                  "今天",
+                  "5 年",
+                  "10 年"
+                ]
+              },
+              "frames": [
+                {
+                  "set": {
+                    "play": 0,
+                    "step": 0
+                  },
+                  "cap": "先看骨架",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "play": 1,
+                    "step": 2
+                  },
+                  "cap": "看完整的图",
+                  "para": "takeaway"
+                }
+              ]
+            }
           }
         ]
       },
@@ -7494,7 +18137,37 @@ window.DAYS = [
             "why": "今天要问：这脚\"油门\"踩多深最好？踩得越深，表现就越好吗？",
             "takeaway": "生理唤醒有高有低，今天看它和表现的关系。",
             "example": "上台前心怦怦跳，是唤醒高；下午犯困、提不起劲，是唤醒低。",
-            "review": true
+            "review": true,
+            "visual": {
+              "type": "curve2",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "生理唤醒有高有低，今天看它和表现的关系",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "生理唤醒有高有低，今天看它和表现的关系",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "生理唤醒有高有低，今天看它和表现的关系。",
+                  "para": "takeaway"
+                }
+              ]
+            }
           },
           {
             "title": "倒 U：不多不少最好",
@@ -7503,7 +18176,34 @@ window.DAYS = [
             "takeaway": "唤醒太低、太高都不好，适中时表现最好。",
             "example": "一场重要的直播：毫无紧张感时，你可能说话拖沓；适度紧张，反应快、节奏好；紧张到脑子一片空白，词全忘了。三种状态正好对应曲线的左、中、右。",
             "visual": {
-              "type": "curve"
+              "type": "curve2",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "唤醒太低、太高都不好，适中时表现最好",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "唤醒太低、太高都不好，适中时表现最好",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "唤醒太低、太高都不好，适中时表现最好。",
+                  "para": "takeaway"
+                }
+              ]
             },
             "check": {
               "q": "倒 U 曲线的最高点，对应哪种唤醒？",
@@ -7520,7 +18220,36 @@ window.DAYS = [
             "idea": "倒 U 规律最早来自 1908 年耶克斯和多德森的小鼠实验，所以叫**耶克斯-多德森定律**。",
             "why": "他们让小鼠学习在白色和黑色两条通道里选白色那条，选错就受一次电击，电击分弱、中、强。再把黑白的明暗差别调大或调小，让任务变容易或变难，看哪种电击强度下学得最快。",
             "takeaway": "任务越难，最佳唤醒越低；任务越简单，最佳唤醒越高。",
-            "example": "结果：黑白很好分（容易）时，电击越强，学得越快；黑白很难分（困难）时，中等强度学得最快，太强反而变慢。也就是说，任务越难，最合适的刺激强度越低。"
+            "example": "结果：黑白很好分（容易）时，电击越强，学得越快；黑白很难分（困难）时，中等强度学得最快，太强反而变慢。也就是说，任务越难，最合适的刺激强度越低。",
+            "visual": {
+              "type": "comic",
+              "panels": [
+                {
+                  "bg": "room",
+                  "cast": [
+                    {
+                      "who": "xiaoman",
+                      "x": 0.48,
+                      "y": 0.72,
+                      "face": "talk"
+                    }
+                  ],
+                  "cap": "任务越难，最佳唤醒越低；任务"
+                },
+                {
+                  "bg": "street",
+                  "cast": [
+                    {
+                      "who": "xiaoyin",
+                      "x": 0.48,
+                      "y": 0.72,
+                      "face": "talk"
+                    }
+                  ],
+                  "cap": "1908 年的小鼠实验"
+                }
+              ]
+            }
           },
           {
             "title": "为什么难的任务怕紧张",
@@ -7542,6 +18271,36 @@ window.DAYS = [
               ],
               "answer": 0,
               "why": "简单任务只需要盯住一件事，注意力窄一点反而更集中。「一定会出错」说的是复杂任务里唤醒过高的情况。"
+            },
+            "visual": {
+              "type": "curve2",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "唤醒让注意力变窄：简单任务受益，复杂任务受损",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "唤醒让注意力变窄：简单任务受益，复杂任务受损",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "唤醒让注意力变窄：简单任务受益，复杂任务受损。",
+                  "para": "takeaway"
+                }
+              ]
             }
           },
           {
@@ -7549,14 +18308,74 @@ window.DAYS = [
             "idea": "耶克斯-多德森定律很好用，但它更像一条粗略的经验规律，不是精确的公式。",
             "why": "原始实验用的是小鼠和电击强度，后来人们才把它推广成\"唤醒和表现\"的关系。\"唤醒\"本身很笼统，心跳快和脑子兴奋不完全是一回事；每个人的最佳点也不同。还有研究发现，简单任务上唤醒很高时，表现也不一定明显下降。",
             "takeaway": "倒 U 是粗略规律：看方向，别当精确公式。",
-            "example": "所以不能拿这条曲线算出\"紧张 6 分最好\"。它的价值是给你一个方向：先看任务难不难，再决定把紧张调高一点，还是降下来。"
+            "example": "所以不能拿这条曲线算出\"紧张 6 分最好\"。它的价值是给你一个方向：先看任务难不难，再决定把紧张调高一点，还是降下来。",
+            "visual": {
+              "type": "chain",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "倒 U 是粗略规律：看方向，别当精确公式",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "倒 U 是粗略规律：看方向，别当精确公式",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "倒 U 是粗略规律：看方向，别当精确公式。",
+                  "para": "takeaway"
+                }
+              ]
+            }
           },
           {
             "title": "串起来：熟曲子和新曲子",
             "idea": "回到开头：上台前一点都不紧张，不一定是好事。唤醒太低，人容易松懈、走神。",
             "why": "倒 U 告诉你\"适中最好\"，任务难度告诉你\"适中在哪\"。连上前面的课：唤醒是情绪三块里身体那一块；要把它降下来，用第 1 天的慢呼气；要把它提起来，可以站起来走动一下、把音乐开得欢快一点。",
             "takeaway": "先看任务难度，再把紧张调到合适的位置。",
-            "example": "演奏熟练的曲子，紧张一点反而更有激情；演奏刚学的新曲，就要先把唤醒降下来，用慢呼气稳住。"
+            "example": "演奏熟练的曲子，紧张一点反而更有激情；演奏刚学的新曲，就要先把唤醒降下来，用慢呼气稳住。",
+            "visual": {
+              "type": "curve2",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "先看任务难度，再把紧张调到合适的位置",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "先看任务难度，再把紧张调到合适的位置",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "先看任务难度，再把紧张调到合适的位置。",
+                  "para": "takeaway"
+                }
+              ]
+            }
           }
         ],
         "interaction": {
@@ -7613,119 +18432,570 @@ window.DAYS = [
             "why": "复杂任务需要同时照顾很多信息，唤醒过高时注意力会收窄，信息顾不过来，就容易出错。",
             "ref": 3
           }
-        ]
+        ],
+        "hookComic": {
+          "panels": [
+            {
+              "bg": "room",
+              "cast": [
+                {
+                  "who": "xiaoman",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "talk"
+                }
+              ],
+              "cap": "上台前一点都不紧张，是好事吗"
+            },
+            {
+              "bg": "street",
+              "cast": [
+                {
+                  "who": "xiaoyin",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "talk"
+                }
+              ],
+              "cap": "上台前一点都不紧张，是好事吗"
+            },
+            {
+              "bg": "shop",
+              "cast": [
+                {
+                  "who": "xiaoman",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "talk"
+                }
+              ],
+              "cap": "上台前一点都不紧张，是好事吗"
+            },
+            {
+              "bg": "plain",
+              "cast": [
+                {
+                  "who": "xiaoyin",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "wow"
+                }
+              ],
+              "cap": "上台前一点都不紧张，是好事吗"
+            }
+          ]
+        }
       },
       "english": {
         "id": "d08-english",
-        "title": "用英语讲中国史",
-        "minutes": 6,
-        "hook": "unify 这个词，你其实早就认识它的一半。",
+        "title": "Last Night：说过去，动词加 -ed",
+        "minutes": 9,
+        "hook": "中文\"我昨天走路回家\"，动词\"走\"没变。英语的动词却会自己告诉你：这事已经过去了。",
+        "hookComic": {
+          "panels": [
+            {
+              "bg": "kitchen",
+              "cast": [
+                {
+                  "who": "mia",
+                  "x": 0.32,
+                  "y": 0.72,
+                  "face": "happy"
+                },
+                {
+                  "who": "leo",
+                  "x": 0.62,
+                  "y": 0.74,
+                  "face": "talk"
+                },
+                {
+                  "who": "mochi",
+                  "x": 0.8,
+                  "y": 0.82,
+                  "face": "happy",
+                  "k": 0.7
+                }
+              ]
+            },
+            {
+              "bg": "room",
+              "cast": [
+                {
+                  "who": "mia",
+                  "x": 0.32,
+                  "y": 0.72,
+                  "face": "happy"
+                },
+                {
+                  "who": "leo",
+                  "x": 0.62,
+                  "y": 0.74,
+                  "face": "talk"
+                },
+                {
+                  "who": "mochi",
+                  "x": 0.8,
+                  "y": 0.82,
+                  "face": "happy",
+                  "k": 0.7
+                }
+              ]
+            },
+            {
+              "bg": "street",
+              "cast": [
+                {
+                  "who": "mia",
+                  "x": 0.32,
+                  "y": 0.72,
+                  "face": "happy"
+                },
+                {
+                  "who": "leo",
+                  "x": 0.62,
+                  "y": 0.74,
+                  "face": "talk"
+                },
+                {
+                  "who": "mochi",
+                  "x": 0.8,
+                  "y": 0.82,
+                  "face": "happy",
+                  "k": 0.7
+                }
+              ]
+            }
+          ]
+        },
+        "story": {
+          "title": "Last Night",
+          "panels": [
+            {
+              "bg": "kitchen",
+              "cast": [
+                {
+                  "who": "mia",
+                  "x": 0.32,
+                  "y": 0.72,
+                  "face": "happy"
+                },
+                {
+                  "who": "leo",
+                  "x": 0.62,
+                  "y": 0.74,
+                  "face": "talk"
+                },
+                {
+                  "who": "mochi",
+                  "x": 0.8,
+                  "y": 0.82,
+                  "face": "happy",
+                  "k": 0.7
+                }
+              ]
+            },
+            {
+              "bg": "room",
+              "cast": [
+                {
+                  "who": "mia",
+                  "x": 0.32,
+                  "y": 0.72,
+                  "face": "happy"
+                },
+                {
+                  "who": "leo",
+                  "x": 0.62,
+                  "y": 0.74,
+                  "face": "talk"
+                },
+                {
+                  "who": "mochi",
+                  "x": 0.8,
+                  "y": 0.82,
+                  "face": "happy",
+                  "k": 0.7
+                }
+              ]
+            },
+            {
+              "bg": "street",
+              "cast": [
+                {
+                  "who": "mia",
+                  "x": 0.32,
+                  "y": 0.72,
+                  "face": "happy"
+                },
+                {
+                  "who": "leo",
+                  "x": 0.62,
+                  "y": 0.74,
+                  "face": "talk"
+                },
+                {
+                  "who": "mochi",
+                  "x": 0.8,
+                  "y": 0.82,
+                  "face": "happy",
+                  "k": 0.7
+                }
+              ]
+            },
+            {
+              "bg": "shop",
+              "cast": [
+                {
+                  "who": "mia",
+                  "x": 0.32,
+                  "y": 0.72,
+                  "face": "happy"
+                },
+                {
+                  "who": "leo",
+                  "x": 0.62,
+                  "y": 0.74,
+                  "face": "talk"
+                },
+                {
+                  "who": "mochi",
+                  "x": 0.8,
+                  "y": 0.82,
+                  "face": "happy",
+                  "k": 0.7
+                }
+              ]
+            }
+          ],
+          "lines": [
+            {
+              "who": "A",
+              "en": "Leo, you were late last night.",
+              "zh": "Leo，你昨晚回来得好晚。",
+              "panel": 0
+            },
+            {
+              "who": "B",
+              "en": "Yes. I worked late. Then I missed the last bus. So I walked home.",
+              "zh": "是啊。我加班到很晚，又错过了末班车，只好走回家。",
+              "panel": 1
+            },
+            {
+              "who": "A",
+              "en": "Poor Leo! Mochi waited for you. He waited at the door all night.",
+              "zh": "可怜的 Leo！Mochi 一直在等你，在门口等了一整夜。",
+              "panel": 2
+            },
+            {
+              "who": "B",
+              "en": "Really? Mochi! You missed me!",
+              "zh": "真的？Mochi！你想我了！",
+              "panel": 3
+            },
+            {
+              "who": "N",
+              "en": "Mochi jumped into Leo's bag.",
+              "zh": "Mochi 一下跳进了 Leo 的包里。",
+              "panel": 3
+            },
+            {
+              "who": "A",
+              "en": "No, Leo. He missed your fish.",
+              "zh": "不是哦，Leo。他想的是你的鱼。",
+              "panel": 3
+            }
+          ]
+        },
+        "words": [
+          {
+            "w": "late",
+            "ipa": "leɪt",
+            "stress": "late",
+            "pic": "🌙",
+            "zh": "晚的；很晚",
+            "ex": "I worked late.",
+            "part": "—"
+          },
+          {
+            "w": "miss",
+            "ipa": "mɪs",
+            "stress": "miss",
+            "pic": "🚌",
+            "zh": "错过；想念",
+            "ex": "I missed the last bus. / You missed me!",
+            "part": "一个词两个意思：没赶上 / 想念不在身边的人。故事的反转就靠它"
+          },
+          {
+            "w": "wait",
+            "ipa": "weɪt",
+            "stress": "wait",
+            "pic": "⏳",
+            "zh": "等",
+            "ex": "Mochi waited for you.",
+            "part": "wait for + 人 = 等某人"
+          },
+          {
+            "w": "last",
+            "ipa": "læst",
+            "stress": "last",
+            "pic": "🔚",
+            "zh": "最后的；上一个",
+            "ex": "the last bus / last night",
+            "part": "last night = 昨晚，last bus = 末班车"
+          }
+        ],
         "steps": [
           {
-            "title": "一句历史要几块零件",
-            "idea": "想用英语说\"秦朝在公元前 221 年统一了中国\"，需要三块零件：朝代 dynasty、\"统一\"这个动词，还有公元前的年份怎么读。",
-            "why": "历史课里最常说的句子都是这副骨架：某个朝代 + 做了什么 + 在哪一年。把这几块零件弄熟，换个朝代、换个年份，就能说出一串新句子。今天先解决\"统一\"，再解决年份。",
-            "takeaway": "讲朝代的基本句 = 朝代 + 做了什么 + 哪一年。",
-            "example": "中文的\"秦统一六国\"\"隋结束分裂\"，翻成英语都要用同一个动词：unify。它看起来陌生，其实一半你天天在用。"
-          },
-          {
-            "title": "uni-：一",
-            "idea": "**uni-** 是一个词头，意思是\"一\"。很多你认识的词里都有它。",
-            "why": "它来自拉丁语 unus（一）。英语从拉丁语借了大量零件，一个零件常常出现在一整家词里。认出 uni-，这一家词的意思都往\"一个、统一\"上靠。",
-            "takeaway": "uni- = 一：unison、uniform、unit 是一家。",
-            "example": "音乐里的 unison 是\"齐奏、齐唱\"：uni（一）+ son（声音），大家发出同一个声音。还有 uniform（制服，大家一个样子）、unit（单位，一个）、universe（宇宙，万物合成的一个整体）。",
-            "exLabel": "打个比方"
-          },
-          {
-            "title": "-fy：使……变成",
-            "idea": "词尾 -fy 的意思是\"使……变成\"。unify = uni（一）+ fy（使）→ \"使成为一个\" → 统一。",
-            "why": "-fy 来自拉丁语 facere（做、使）。把它接在一个意思后面，就得到\"让东西变成那样\"的动词。所以认出两块零件，unify 的意思是推出来的，不用死记。",
-            "takeaway": "unify = uni（一）+ fy（使）= 统一。",
-            "example": "simple（简单）→ simplify（使简单，简化）；pure（纯）→ purify（使纯，净化）；class（类）→ classify（分类）。",
-            "derive": [
-              "uni- = 一。",
-              "-fy = 使……变成。",
-              "unify = 使变成一个 = 统一。"
-            ],
+            "title": "先听故事",
+            "kind": "story-listen",
+            "idea": "看图听。Mochi 等了一夜，真的是在等 Leo 吗？",
             "check": {
-              "q": "simplify 是什么意思？",
+              "q": "Mochi 其实在等什么？",
               "options": [
-                "使简单，简化",
-                "简单的"
+                "Leo 包里的鱼",
+                "末班车"
               ],
               "answer": 0,
-              "why": "-fy 把意思变成\"使……变成\"的动词，simplify 就是使简单。「简单的」是形容词 simple。"
+              "why": "最后 Mochi 跳进包里，Mia 说 [[He missed your fish.]]。「末班车」是 Leo 错过的东西。"
             }
           },
           {
-            "title": "年份：两位一组读",
-            "idea": "英语读年份，常把数字两位一组来读。221 BC 读作 two twenty-one BC。**BC** 表示\"公元前\"，AD 表示\"公元\"。",
-            "why": "一个个数字念太长，就按两位切开：1998 读 nineteen ninety-eight。三位数的年份，把第一位单独读，后两位一组：221 → two / twenty-one（也可以完整说 two hundred and twenty-one）。",
-            "takeaway": "年份两位一组读；BC 是公元前，写在数字后面。",
-            "example": "秦统一是 221 BC，读 two twenty-one BC。隋灭陈、统一全国是 589 年，读 five eighty-nine。BC 写在数字后面；公元后的年份一般不用写 AD。",
+            "title": "四个新词",
+            "kind": "words",
+            "idea": "每个词都点一下 ▶。miss 有两个意思，两个例句都听一听。"
+          },
+          {
+            "title": "发音 · -ed 的三种读法",
+            "idea": "-ed 也有三种读法：/t/、/d/、/ɪd/。规则和第 4 天的 -s 一样，看前一个音。",
+            "why": "前一个音不震（k、p、s、sh），-ed 也不震，读 /t/：walked。前一个音震（元音、n、l、v），读 /d/：played。前面已经是 t 或 d，再接一个 t、d 会粘成一个，听不出来，所以加个小元音读 /ɪd/，多出一个音节：waited。",
+            "example": "[[walked]]、[[missed]]、[[worked]] 读 /t/，一个音节；[[played]] 读 /d/；[[waited]] 读 /ɪd/，两个音节。",
+            "takeaway": "-ed 跟着前一个音走：不震 /t/，震 /d/，t、d 后面 /ɪd/。",
+            "visual": {
+              "type": "beats",
+              "base": {
+                "rows": [
+                  {
+                    "parts": [
+                      "重",
+                      "音"
+                    ],
+                    "stress": 0
+                  }
+                ]
+              },
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "-ed 跟着前一个音走：不震 /t/，震 /d/，t、d 后面 /ɪd/",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "-ed 跟着前一个音走：不震 /t/，震 /d/，t、d 后面 /ɪd/",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "-ed 跟着前一个音走：不震 /t/，震 /d/，t、d 后面 /ɪd/。",
+                  "para": "takeaway"
+                }
+              ]
+            },
             "check": {
-              "q": "589 年通常怎么读？",
+              "q": "[[waited]] 有几个音节？",
               "options": [
-                "five eighty-nine",
-                "fifty-eight nine"
+                "两个：wai-ted",
+                "一个"
               ],
               "answer": 0,
-              "why": "三位数年份把第一位单独读，后两位一组：five / eighty-nine。「fifty-eight nine」切错了位置。"
+              "why": "wait 以 t 结尾，再接 -ed 要加小元音，读 wai-ted，两个音节。「一个」把 -ed 吞掉了，听起来就成了现在时 wait。"
             }
           },
           {
-            "title": "串起来：说两句朝代",
-            "idea": "回到开头：unify 的一半 uni-，你早在 uniform、unit 里见过。把零件拼起来，就能说出完整的历史句子。",
-            "why": "第二句要说\"持续了多久\"，用动词 last（持续）。朝代已经结束，所以用过去时 lasted，后面直接接 about 400 years 这样的时长，不需要 ago。",
-            "takeaway": "朝代 + unified + 年份；持续多久用 lasted + 时长。",
-            "example": "The Qin dynasty unified China in 221 BC.（秦朝在公元前 221 年统一中国）The Han dynasty lasted about 400 years.（汉朝持续了约 400 年）今天历史课的唐朝也一样：The Tang dynasty lasted almost 300 years."
+            "title": "语法 · 说过去：动词加 -ed，is 变 was",
+            "idea": "说过去的事，动词加 -ed：work → [[worked]]，walk → [[walked]]。am、is 变成 was，are 变成 were。",
+            "why": "中文靠\"昨天\"\"了\"这样的词表示过去，动词本身不变。英语把时间直接做在动词上：听到 -ed，就知道事情已经过去了，哪怕没说\"昨天\"。所以 -ed 不能丢，丢了就成了\"平时的习惯\"。be 的过去也跟着\"谁\"配：I / he / she / it 配 was，you / we / they 配 were。",
+            "example": "[[I work late.]] 我经常加班。→ [[I worked late.]] 我那天加班了。[[You were late last night.]] [[Mochi was hungry.]]",
+            "takeaway": "过去的事，动词加 -ed；am、is → was，are → were。",
+            "visual": {
+              "type": "sentence",
+              "base": {
+                "rows": [
+                  {
+                    "bricks": [
+                      {
+                        "text": "{",
+                        "role": "extra"
+                      },
+                      {
+                        "text": "I",
+                        "role": "who"
+                      },
+                      {
+                        "text": "worked",
+                        "role": "verb"
+                      },
+                      {
+                        "text": "late",
+                        "role": "extra"
+                      },
+                      {
+                        "text": "last",
+                        "role": "extra"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "frames": [
+                {
+                  "set": {
+                    "play": 0
+                  },
+                  "cap": "说过去的事，动词加 -ed：work → [[worked]]，walk → [",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "play": 1
+                  },
+                  "cap": "过去的事，动词加 -ed；am、is → was，are → were。",
+                  "para": "takeaway"
+                }
+              ]
+            },
+            "check": {
+              "q": "中文\"昨晚我走路回家\"，英语怎么说？",
+              "options": [
+                "I walked home last night.",
+                "I walk home last night."
+              ],
+              "answer": 0,
+              "why": "昨晚已经过去，walk 要加 -ed。「I walk home」是平时的习惯，和 last night 对不上。"
+            }
+          },
+          {
+            "title": "再读故事",
+            "kind": "story-read",
+            "idea": "看着字听，找出每个 -ed，听它读 /t/、/d/ 还是 /ɪd/。"
+          },
+          {
+            "title": "昨晚我做了什么",
+            "kind": "drill",
+            "frame": "I {a} last night.",
+            "zh": "昨晚我{a}。",
+            "slots": {
+              "a": [
+                {
+                  "en": "worked late",
+                  "zh": "加班到很晚",
+                  "pic": "💼"
+                },
+                {
+                  "en": "walked home",
+                  "zh": "走路回家",
+                  "pic": "🚶"
+                },
+                {
+                  "en": "waited for Leo",
+                  "zh": "在等 Leo",
+                  "pic": "⏳"
+                },
+                {
+                  "en": "missed the bus",
+                  "zh": "错过了公交",
+                  "pic": "🚌"
+                }
+              ]
+            },
+            "need": 3
+          },
+          {
+            "title": "跟读",
+            "kind": "shadow",
+            "tip": "-ed 别丢：walked 尾巴是轻轻的 /t/，waited 是两个音节。",
+            "lines": [
+              1,
+              2,
+              5
+            ]
+          },
+          {
+            "title": "复述：串起来",
+            "kind": "retell",
+            "idea": "看着图，用过去式讲昨晚的事。",
+            "keys": [
+              [
+                "late",
+                "last night"
+              ],
+              [
+                "worked",
+                "missed",
+                "walked home"
+              ],
+              [
+                "waited",
+                "door"
+              ],
+              [
+                "jumped",
+                "bag",
+                "fish"
+              ]
+            ]
           }
         ],
         "interaction": {
           "type": "listen",
           "prompt": "听一听，选出你听到的句子",
-          "audio": "The Qin dynasty unified China in two hundred and twenty-one BC.",
-          "answer": 0,
-          "why": "注意 Qin 和 Han、unified 和 united、221 和 211。",
+          "audio": "He waited at the door.",
+          "showText": "after",
           "options": [
-            "The Qin dynasty unified China in 221 BC.",
-            "The Qin dynasty united China in 211 BC.",
-            "The Han dynasty unified China in 221 BC."
+            "He waited at the door.",
+            "He waits at the door.",
+            "He wanted the door."
           ],
+          "answer": 0,
+          "why": "waited 是两个音节，尾巴是 /ɪd/。「waits」尾巴是 /s/；「wanted」中间有个 n。",
           "ref": [
-            3,
-            4
+            2,
+            3
           ]
         },
-        "take": "unify = uni（一）+ fy（使）；朝代 + unified + 年份（221 BC 读 two twenty-one BC），持续多久用 lasted，就能说出\"讲朝代\"的基本句。",
+        "take": "过去的事，动词加 -ed，is 变 was，are 变 were；-ed 读 /t/、/d/ 或 /ɪd/。",
         "quiz": [
           {
-            "q": "unify 里的 uni- 是什么意思？",
+            "q": "[[He missed the last bus.]] 是什么意思？",
             "options": [
-              "一",
-              "二",
-              "大"
+              "他没赶上末班车。",
+              "他很想念末班车。",
+              "他坐上了末班车。"
             ],
             "answer": 0,
-            "why": "uni 表示“一”，unit、uniform、universe 都是它的家族。",
+            "why": "miss 跟着车，是\"错过、没赶上\"。「想念」是 miss 跟着人的时候；「坐上了」正好相反。",
             "ref": 1
           },
           {
-            "q": "“汉朝大约持续了 400 年”怎么说？",
+            "q": "Mochi ___ hungry last night.",
             "options": [
-              "The Han dynasty lasted about 400 years.",
-              "The Han dynasty was lasting about 400 years ago.",
-              "The Han emperor unified about 400 years."
+              "was",
+              "is",
+              "were"
             ],
             "answer": 0,
-            "why": "last 作动词是“持续”，过去的朝代用过去时 lasted。",
-            "ref": 4
+            "why": "last night 是过去，Mochi 是一个别人，配 was。「is」是现在；「were」配 you、we、they。",
+            "ref": 3
           }
-        ],
-        "tts": [
-          "dynasty",
-          "The Qin dynasty unified China in two twenty-one BC.",
-          "The Han dynasty lasted about four hundred years."
         ]
       }
     }
@@ -7746,7 +19016,37 @@ window.DAYS = [
             "idea": "盯着一块红色看 30 秒，再看白墙，墙上会浮出一块淡淡的绿。墙明明是白的，绿从哪来？",
             "why": "白墙把各种颜色的光都反射回来，本身没有绿。这块绿只能是眼睛自己\"造\"出来的。弄清它从哪来，就会明白为什么有些颜色放在一起特别\"响\"。",
             "takeaway": "白墙上的绿不是墙的，是眼睛造出来的。",
-            "example": "现在就可以试：找一张红色图片，眼睛盯住中间一个点不动，数到 30，再看白纸或白墙。几秒后，那块颜色会慢慢淡掉。"
+            "example": "现在就可以试：找一张红色图片，眼睛盯住中间一个点不动，数到 30，再看白纸或白墙。几秒后，那块颜色会慢慢淡掉。",
+            "visual": {
+              "type": "afterimage",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "白墙上的绿不是墙的，是眼睛造出来的",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "白墙上的绿不是墙的，是眼睛造出来的",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "白墙上的绿不是墙的，是眼睛造出来的。",
+                  "para": "takeaway"
+                }
+              ]
+            }
           },
           {
             "title": "残像：盯久了的细胞会累",
@@ -7763,6 +19063,36 @@ window.DAYS = [
               ],
               "answer": 0,
               "why": "白墙把各种光都反射回来，本身没有绿，所以「白墙本身带一点绿」不对。是管红的细胞疲劳了，对立的那一边才占了上风。"
+            },
+            "visual": {
+              "type": "afterimage",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "残像是疲劳造成的：盯红太久，就看到红的对立面",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "残像是疲劳造成的：盯红太久，就看到红的对立面",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "残像是疲劳造成的：盯红太久，就看到红的对立面。",
+                  "para": "takeaway"
+                }
+              ]
             }
           },
           {
@@ -7773,24 +19103,33 @@ window.DAYS = [
             "example": "互补色像不协和的和弦，比如属七和弦：张力很大，听的人会期待它\"解决\"到主和弦。用好了很出彩，一直不解决就刺耳。",
             "exLabel": "打个比方",
             "visual": {
-              "type": "wheel",
-              "colors": [
-                "#E53935",
-                "#F4511E",
-                "#FB8C00",
-                "#FFB300",
-                "#FDD835",
-                "#9CCC65",
-                "#43A047",
-                "#00897B",
-                "#1E88E5",
-                "#5E35B1",
-                "#8E24AA",
-                "#D81B60"
-              ],
-              "highlight": [
-                0,
-                6
+              "type": "wheelBuild",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "互补色 = 色轮正对面的一对，对比最强",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "互补色 = 色轮正对面的一对，对比最强",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "互补色 = 色轮正对面的一对，对比最强。",
+                  "para": "takeaway"
+                }
               ]
             },
             "check": {
@@ -7817,6 +19156,36 @@ window.DAYS = [
               ],
               "answer": 0,
               "why": "藏青掺了灰、又很深，音量小，所以算让了一步。如果是「高纯度的正蓝」，两边一样强，就没人让步了。"
+            },
+            "visual": {
+              "type": "outfit",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "互补色要有一方让步：面积小一点，或纯度低一点",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "互补色要有一方让步：面积小一点，或纯度低一点",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "互补色要有一方让步：面积小一点，或纯度低一点。",
+                  "para": "takeaway"
+                }
+              ]
             }
           },
           {
@@ -7829,7 +19198,36 @@ window.DAYS = [
               "盯红出现绿：红绿是眼睛里的对立面（卡 2）。",
               "它们在色轮正对面，挨着放对比最强（卡 3）。",
               "让一方让步，张力就有了解决（卡 4）。"
-            ]
+            ],
+            "visual": {
+              "type": "comic",
+              "panels": [
+                {
+                  "bg": "room",
+                  "cast": [
+                    {
+                      "who": "xiaoman",
+                      "x": 0.48,
+                      "y": 0.72,
+                      "face": "talk"
+                    }
+                  ],
+                  "cap": "互补色是眼睛里的天生对立，对"
+                },
+                {
+                  "bg": "street",
+                  "cast": [
+                    {
+                      "who": "xiaoyin",
+                      "x": 0.48,
+                      "y": 0.72,
+                      "face": "talk"
+                    }
+                  ],
+                  "cap": "串起来：从残像到穿搭"
+                }
+              ]
+            }
           }
         ],
         "interaction": {
@@ -7886,7 +19284,59 @@ window.DAYS = [
             "why": "互补色对比太强，等量高纯度会刺眼。拉开面积或降低纯度，就能保留张力又不打架。",
             "ref": 3
           }
-        ]
+        ],
+        "hookComic": {
+          "panels": [
+            {
+              "bg": "room",
+              "cast": [
+                {
+                  "who": "xiaoman",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "talk"
+                }
+              ],
+              "cap": "盯着一块红色看 30 秒，再"
+            },
+            {
+              "bg": "street",
+              "cast": [
+                {
+                  "who": "xiaoyin",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "talk"
+                }
+              ],
+              "cap": "盯着一块红色看 30 秒，再"
+            },
+            {
+              "bg": "shop",
+              "cast": [
+                {
+                  "who": "xiaoman",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "talk"
+                }
+              ],
+              "cap": "盯着一块红色看 30 秒，再"
+            },
+            {
+              "bg": "plain",
+              "cast": [
+                {
+                  "who": "xiaoyin",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "wow"
+                }
+              ],
+              "cap": "盯着一块红色看 30 秒，再"
+            }
+          ]
+        }
       },
       "history": {
         "id": "d09-history",
@@ -7900,7 +19350,10 @@ window.DAYS = [
             "why": "第 6 天推过：地方手里有兵、有地，中央就管不住。今天唐朝要再撞上它一次。",
             "takeaway": "地方有兵有地，中央就管不住——这是今天的伏笔。",
             "example": "汉武帝用推恩令把诸侯国越分越小，才拆掉这个问题。可它只是被拆掉，没有消失：哪里重新攒起兵和地，它就会回来。",
-            "review": true
+            "review": true,
+            "visual": {
+              "recall": "d01-history#3"
+            }
           },
           {
             "title": "唐的难题：边境太长",
@@ -7913,7 +19366,37 @@ window.DAYS = [
               "轮换的农民兵守不住了。",
               "需要长期驻扎的职业兵。",
               "也需要一个就地拍板的指挥官。"
-            ]
+            ],
+            "visual": {
+              "type": "histmap",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "边境太长，唐需要常驻边疆的军队和就地拍板的指挥官",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "边境太长，唐需要常驻边疆的军队和就地拍板的指挥官",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "边境太长，唐需要常驻边疆的军队和就地拍板的指挥官。",
+                  "para": "takeaway"
+                }
+              ]
+            }
           },
           {
             "title": "节度使：边疆的总指挥",
@@ -7921,7 +19404,37 @@ window.DAYS = [
             "why": "节度使就在前线，敌人一来就能调兵，不用等长安批复，打仗效率高得多。职业兵长年跟着同一个长官，彼此熟悉，配合也好。唐在边境上打了不少胜仗，节度使功劳很大。",
             "takeaway": "节度使是常驻边疆、就地指挥的军区长官，一开始很管用。",
             "example": "像一家公司在外地开分部，派一位总经理常驻。当地的事他直接拍板，不用事事打电话问总部。刚开始，这很高效。",
-            "exLabel": "打个比方"
+            "exLabel": "打个比方",
+            "visual": {
+              "type": "histmap",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "节度使是常驻边疆、就地指挥的军区长官，一开始很管用",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "节度使是常驻边疆、就地指挥的军区长官，一开始很管用",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "节度使是常驻边疆、就地指挥的军区长官，一开始很管用。",
+                  "para": "takeaway"
+                }
+              ]
+            }
           },
           {
             "title": "兵、钱、地，一个人全抓",
@@ -7937,12 +19450,33 @@ window.DAYS = [
               "三样齐了，中央就管不住他。"
             ],
             "visual": {
-              "type": "flow",
-              "nodes": [
-                "管兵",
-                "管钱",
-                "管地",
-                "中央管不住"
+              "type": "chain",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "节度使兵、财、地一手抓，就成了中央管不住的\"小朝廷\"",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "节度使兵、财、地一手抓，就成了中央管不住的\"小朝廷\"",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "节度使兵、财、地一手抓，就成了中央管不住的\"小朝廷\"。",
+                  "para": "takeaway"
+                }
               ]
             },
             "check": {
@@ -7966,7 +19500,36 @@ window.DAYS = [
               "中央身边兵少。",
               "没有谁挡得住他。",
               "乱打了 8 年，唐元气大伤。"
-            ]
+            ],
+            "visual": {
+              "type": "comic",
+              "panels": [
+                {
+                  "bg": "room",
+                  "cast": [
+                    {
+                      "who": "xiaoman",
+                      "x": 0.48,
+                      "y": 0.72,
+                      "face": "talk"
+                    }
+                  ],
+                  "cap": "安史之乱，是节度使权力过大的"
+                },
+                {
+                  "bg": "street",
+                  "cast": [
+                    {
+                      "who": "xiaoyin",
+                      "x": 0.48,
+                      "y": 0.72,
+                      "face": "talk"
+                    }
+                  ],
+                  "cap": "755 年：安史之乱"
+                }
+              ]
+            }
           },
           {
             "title": "平乱为什么造出更多节度使",
@@ -7988,6 +19551,36 @@ window.DAYS = [
               ],
               "answer": 0,
               "why": "朝廷靠封节度使换将领出力、换叛将投降，所以「变多了，内地也设」。「变少了，朝廷都收回了」正好相反，朝廷那时没有收回的力量。"
+            },
+            "visual": {
+              "type": "chain",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "为了尽快平乱，唐朝拿\"加封节度使\"换和平，反而养出更多小朝廷",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "为了尽快平乱，唐朝拿\"加封节度使\"换和平，反而养出更多小朝廷",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "为了尽快平乱，唐朝拿\"加封节度使\"换和平，反而养出更多小朝廷。",
+                  "para": "takeaway"
+                }
+              ]
             }
           },
           {
@@ -8005,6 +19598,36 @@ window.DAYS = [
               ],
               "answer": 0,
               "why": "藩镇的位子常由「他的儿子或部将」接，朝廷只能事后承认。「长安派来的新官」是中央说了算的样子，藩镇割据时恰恰做不到。"
+            },
+            "visual": {
+              "type": "histmap",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "藩镇割据：节度使自己用人、自己收税、自己传位，中央管不了",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "藩镇割据：节度使自己用人、自己收税、自己传位，中央管不了",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "藩镇割据：节度使自己用人、自己收税、自己传位，中央管不了。",
+                  "para": "takeaway"
+                }
+              ]
             }
           },
           {
@@ -8017,7 +19640,37 @@ window.DAYS = [
               "中央靠节度使镇压起义。",
               "节度使趁机做大。",
               "最强的那个，直接取代皇帝。"
-            ]
+            ],
+            "visual": {
+              "type": "chain",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "唐亡于节度使之手：907 年朱温废唐，建立后梁",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "唐亡于节度使之手：907 年朱温废唐，建立后梁",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "唐亡于节度使之手：907 年朱温废唐，建立后梁。",
+                  "para": "takeaway"
+                }
+              ]
+            }
           },
           {
             "title": "串起来：一条分裂公式",
@@ -8030,7 +19683,37 @@ window.DAYS = [
               "唐亡后，北方的节度使都照这个公式行事。",
               "谁兵强，谁就能称帝。",
               "下一关：53 年换 5 个朝代，公式的\"满级版\"。"
-            ]
+            ],
+            "visual": {
+              "type": "chain",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "地方兵、财、地一手抓 → 中央失控 → 分裂；五代是它的满级版",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "地方兵、财、地一手抓 → 中央失控 → 分裂；五代是它的满级版",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "地方兵、财、地一手抓 → 中央失控 → 分裂；五代是它的满级版。",
+                  "para": "takeaway"
+                }
+              ]
+            }
           }
         ],
         "interaction": {
@@ -8098,7 +19781,59 @@ window.DAYS = [
             "label": "查理曼加冕为皇帝",
             "kind": "event"
           }
-        ]
+        ],
+        "hookComic": {
+          "panels": [
+            {
+              "bg": "room",
+              "cast": [
+                {
+                  "who": "xiaoman",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "talk"
+                }
+              ],
+              "cap": "开元盛世之后，只用了不到 2"
+            },
+            {
+              "bg": "street",
+              "cast": [
+                {
+                  "who": "xiaoyin",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "talk"
+                }
+              ],
+              "cap": "是谁推了第一把"
+            },
+            {
+              "bg": "shop",
+              "cast": [
+                {
+                  "who": "xiaoman",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "talk"
+                }
+              ],
+              "cap": "是谁推了第一把"
+            },
+            {
+              "bg": "plain",
+              "cast": [
+                {
+                  "who": "xiaoyin",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "wow"
+                }
+              ],
+              "cap": "是谁推了第一把"
+            }
+          ]
+        }
       },
       "geo": {
         "id": "d09-geo",
@@ -8111,7 +19846,37 @@ window.DAYS = [
             "idea": "面来自小麦，米来自水稻。这两种庄稼要的水差得很远，所以吃什么，先看地里有多少水。",
             "why": "水稻是泡在水里长的。秧苗插在灌满水的水田里，整个生长期都要大量的水，还怕冷。小麦长在不用灌水的旱地里，比较耐旱，还能熬过冬天。哪里水多、冬天暖，就种水稻；哪里水少、冬天冷，就种小麦。",
             "takeaway": "吃面还是吃米，看的是当地的水多不多、冬天冷不冷。",
-            "example": "坐火车从北京往南去上海，窗外先是一大片一大片的麦田；大约过了淮河，就换成一块挨一块的水田，亮汪汪的像一面面镜子。"
+            "example": "坐火车从北京往南去上海，窗外先是一大片一大片的麦田；大约过了淮河，就换成一块挨一块的水田，亮汪汪的像一面面镜子。",
+            "visual": {
+              "type": "cnmap",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "吃面还是吃米，看的是当地的水多不多、冬天冷不冷",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "吃面还是吃米，看的是当地的水多不多、冬天冷不冷",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "吃面还是吃米，看的是当地的水多不多、冬天冷不冷。",
+                  "para": "takeaway"
+                }
+              ]
+            }
           },
           {
             "title": "\"北纬 33°～34°\"怎么读",
@@ -8120,11 +19885,33 @@ window.DAYS = [
             "takeaway": "北纬 33°～34°：在海口和北京之间，偏北一点。",
             "example": "海口约北纬 20°，北京约北纬 40°，西安约北纬 34°。所以这条线在海口和北京之间、偏北一点，西安就在它附近。",
             "visual": {
-              "type": "globe",
-              "mode": "lat",
-              "lines": [
-                0,
-                34
+              "type": "globe3d",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "北纬 33°～34°：在海口和北京之间，偏北一点",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "北纬 33°～34°：在海口和北京之间，偏北一点",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "北纬 33°～34°：在海口和北京之间，偏北一点。",
+                  "para": "takeaway"
+                }
               ]
             },
             "review": true,
@@ -8144,7 +19931,37 @@ window.DAYS = [
             "why": "一座山能不能挡风，看两件事：够不够高，风是不是\"横着撞上来\"。秦岭主峰太白山海拔 3700 多米，山脊大多在两三千米；它东西走向，正好横在南来北往的气流前面。淮河流经河南、安徽、江苏，把这条线一直往东延到江苏。",
             "takeaway": "秦岭又高又长、东西走向，正好横挡在南北气流之间。",
             "example": "像排练室里的隔音板。板子顺着声音的方向摆，声音照样绕过去；横着挡在两个乐队中间，一个房间就隔成了两个，各练各的，互不打扰。",
-            "exLabel": "打个比方"
+            "exLabel": "打个比方",
+            "visual": {
+              "type": "cnmap",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "秦岭又高又长、东西走向，正好横挡在南北气流之间",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "秦岭又高又长、东西走向，正好横挡在南北气流之间",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "秦岭又高又长、东西走向，正好横挡在南北气流之间。",
+                  "para": "takeaway"
+                }
+              ]
+            }
           },
           {
             "title": "冬天：冷空气翻不过去",
@@ -8157,7 +19974,37 @@ window.DAYS = [
               "秦岭横在前面，像一条巨大的挡风条。",
               "大部分冷空气被挡在山北。",
               "山北冬天更冷，山南更暖。"
-            ]
+            ],
+            "visual": {
+              "type": "ridge2",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "秦岭挡住南下的冷空气：山北冬冷，山南冬暖",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "秦岭挡住南下的冷空气：山北冬冷，山南冬暖",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "秦岭挡住南下的冷空气：山北冬冷，山南冬暖。",
+                  "para": "takeaway"
+                }
+              ]
+            }
           },
           {
             "title": "夏天：湿气爬山，先下成雨",
@@ -8172,10 +20019,34 @@ window.DAYS = [
               "翻过山的空气变干，山北雨少。"
             ],
             "visual": {
-              "type": "ridge",
-              "label": "秦岭",
-              "left": "北",
-              "right": "南"
+              "type": "ridge2",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "湿气被秦岭逼着爬坡，在南坡下成雨，山北就干了",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "湿气被秦岭逼着爬坡，在南坡下成雨，山北就干了",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "湿气被秦岭逼着爬坡，在南坡下成雨，山北就干了。",
+                  "para": "takeaway"
+                }
+              ]
             },
             "check": {
               "q": "湿空气被逼着爬上山坡，会怎样？",
@@ -8202,6 +20073,36 @@ window.DAYS = [
               ],
               "answer": 0,
               "why": "等温线的\"温\"就是气温，线上各处气温一样。「海拔相同的地方」连起来是另一种线，叫等高线。"
+            },
+            "visual": {
+              "type": "cnmap",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "1 月 0°C 等温线 ≈ 秦岭—淮河：以北冬天河流结冰，以南不结冰",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "1 月 0°C 等温线 ≈ 秦岭—淮河：以北冬天河流结冰，以南不结冰",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "1 月 0°C 等温线 ≈ 秦岭—淮河：以北冬天河流结冰，以南不结冰。",
+                  "para": "takeaway"
+                }
+              ]
             }
           },
           {
@@ -8223,6 +20124,36 @@ window.DAYS = [
               ],
               "answer": 0,
               "why": "10 毫米是 1 厘米，800 毫米就是 80 厘米。「8 米」是把毫米当成了厘米。"
+            },
+            "visual": {
+              "type": "gauge",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "秦岭—淮河 ≈ 800 毫米年降水量线 ≈ 水田和旱地的分界",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "秦岭—淮河 ≈ 800 毫米年降水量线 ≈ 水田和旱地的分界",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "秦岭—淮河 ≈ 800 毫米年降水量线 ≈ 水田和旱地的分界。",
+                  "para": "takeaway"
+                }
+              ]
             }
           },
           {
@@ -8235,7 +20166,37 @@ window.DAYS = [
               "秦岭挡冷：北冷南暖（1 月 0°C 线）。",
               "秦岭挡湿：北干南湿（800 毫米线）。",
               "北边旱地种小麦吃面，南边水田种水稻吃米。"
-            ]
+            ],
+            "visual": {
+              "type": "cnmap",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "秦岭—淮河 ≈ 1 月 0°C 等温线 ≈ 800 毫米线；北麦南稻，北面南米",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "秦岭—淮河 ≈ 1 月 0°C 等温线 ≈ 800 毫米线；北麦南稻，北面南米",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "秦岭—淮河 ≈ 1 月 0°C 等温线 ≈ 800 毫米线；北麦南稻，北面南米。",
+                  "para": "takeaway"
+                }
+              ]
+            }
           }
         ],
         "interaction": {
@@ -8317,24 +20278,245 @@ window.DAYS = [
             "id": "JS",
             "label": "JS"
           }
-        ]
+        ],
+        "hookComic": {
+          "panels": [
+            {
+              "bg": "room",
+              "cast": [
+                {
+                  "who": "xiaoman",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "talk"
+                }
+              ],
+              "cap": "为什么北方人爱吃面、南方人爱"
+            },
+            {
+              "bg": "street",
+              "cast": [
+                {
+                  "who": "xiaoyin",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "talk"
+                }
+              ],
+              "cap": "答案藏在一条山脉和一条河里"
+            },
+            {
+              "bg": "shop",
+              "cast": [
+                {
+                  "who": "xiaoman",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "talk"
+                }
+              ],
+              "cap": "答案藏在一条山脉和一条河里"
+            },
+            {
+              "bg": "plain",
+              "cast": [
+                {
+                  "who": "xiaoyin",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "wow"
+                }
+              ],
+              "cap": "答案藏在一条山脉和一条河里"
+            }
+          ]
+        }
       },
       "finance": {
         "id": "d09-finance",
-        "title": "实际收益：跑赢通胀了吗？",
-        "minutes": 4,
-        "hook": "理财收益 2%，看起来在赚钱。如果物价涨了 3% 呢？",
+        "title": "收益要换成同一把尺子",
+        "minutes": 7,
+        "hook": "理财收益 2%，看起来在赚钱。如果物价涨了 3% 呢？另一个产品\"3 个月赚 1%\"，又该怎么比？",
+        "hookComic": {
+          "panels": [
+            {
+              "bg": "room",
+              "cast": [
+                {
+                  "who": "xiaoman",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "talk"
+                }
+              ],
+              "cap": "理财收益 2%，看起来在赚钱"
+            },
+            {
+              "bg": "street",
+              "cast": [
+                {
+                  "who": "xiaoyin",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "talk"
+                }
+              ],
+              "cap": "如果物价涨了 3% 呢"
+            },
+            {
+              "bg": "shop",
+              "cast": [
+                {
+                  "who": "xiaoman",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "talk"
+                }
+              ],
+              "cap": "另一个产品\"3 个月赚 1%"
+            },
+            {
+              "bg": "plain",
+              "cast": [
+                {
+                  "who": "xiaoyin",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "wow"
+                }
+              ],
+              "cap": "另一个产品\"3 个月赚 1%"
+            }
+          ]
+        },
         "steps": [
           {
-            "text": "名义收益：账面上写的利率，比如存款 2%。"
+            "title": "赚了 2%，真的赚了吗？",
+            "idea": "账上的钱变多了，不等于你能买的东西变多了。",
+            "visual": {
+              "type": "comic",
+              "panels": [
+                {
+                  "bg": "bank",
+                  "cast": [
+                    {
+                      "who": "xiaoman",
+                      "x": 0.5,
+                      "y": 0.72,
+                      "face": "talk"
+                    }
+                  ],
+                  "cap": "钱多了 2 元"
+                },
+                {
+                  "bg": "kitchen",
+                  "cast": [
+                    {
+                      "who": "xiaoman",
+                      "x": 0.5,
+                      "y": 0.72,
+                      "face": "talk"
+                    }
+                  ],
+                  "cap": "面也贵了"
+                },
+                {
+                  "bg": "room",
+                  "cast": [
+                    {
+                      "who": "xiaoman",
+                      "x": 0.5,
+                      "y": 0.72,
+                      "face": "talk"
+                    }
+                  ],
+                  "cap": "能买的反而少了"
+                }
+              ]
+            },
+            "takeaway": "钱变多，不一定是变富。"
           },
           {
-            "text": "推一下真实情况：年初你有 100 元，一碗面 20 元，能买 5 碗。年末本息变成 102 元，但面涨了 3%，变成 20 × 1.03 = 20.6 元。比年初还少了。",
-            "formula": "102 ÷ 20.6 ≈ 4.95 碗"
+            "title": "名义收益：纸上写的数",
+            "idea": "**名义收益**就是纸上写的那个收益，只看钱的数字变多少。",
+            "visual": {
+              "type": "tag",
+              "base": {
+                "title": "某理财",
+                "big": "收益 2%",
+                "small": "每 100 元一年多 2 元"
+              },
+              "frames": [
+                {
+                  "set": {
+                    "play": 0,
+                    "step": 0
+                  },
+                  "cap": "先看骨架",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "play": 1,
+                    "step": 2
+                  },
+                  "cap": "看完整的图",
+                  "para": "takeaway"
+                }
+              ]
+            },
+            "why": "它没管物价。100 元变 102 元，它就写 2%，不问 102 元还能买多少东西。",
+            "takeaway": "名义收益 = 只看钱的数字，不管物价。"
           },
           {
-            "text": "从例子里抽出规律：钱多了 2%，东西贵了 3%，购买力大约变化了 2% − 3% = −1%。",
+            "title": "实际收益：扣掉物价再看",
+            "idea": "**实际收益**就是扣掉物价上涨之后，你能买的东西多了还是少了。",
+            "visual": {
+              "type": "columns",
+              "base": {
+                "items": [
+                  {
+                    "label": "名义",
+                    "value": 2
+                  },
+                  {
+                    "label": "物价",
+                    "value": 3
+                  },
+                  {
+                    "label": "实际",
+                    "value": -1
+                  }
+                ],
+                "unit": "%"
+              },
+              "frames": [
+                {
+                  "set": {
+                    "play": 0,
+                    "step": 0
+                  },
+                  "cap": "先看骨架",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "play": 1,
+                    "step": 2
+                  },
+                  "cap": "看完整的图",
+                  "para": "takeaway"
+                }
+              ]
+            },
             "formula": "实际收益 ≈ 名义收益 − 通胀率",
+            "takeaway": "实际收益 ≈ 名义收益 − 通胀率。",
+            "derive": [
+              "年初 100 元，面 20 元，能买 5 碗。",
+              "年末 102 元，面 20.6 元，能买 102 ÷ 20.6 ≈ 4.95 碗。",
+              "4.95 ÷ 5 ≈ 0.99，少了约 1%。",
+              "简单记：2% − 3% = −1%。"
+            ],
             "check": {
               "q": "算实际收益，要从名义收益里怎样处理通胀率？",
               "options": [
@@ -8346,22 +20528,193 @@ window.DAYS = [
             }
           },
           {
-            "text": "看例子：年初 5 碗，年末约 4.95 碗，4.95 ÷ 5 ≈ 0.99，少了约 1%。这个 0.99 就是 1.02 ÷ 1.03：钱变 1.02 倍，面价变 1.03 倍。"
+            "title": "时间不一样长，没法直接比",
+            "idea": "一个 3 个月赚 1%，一个 1 年赚 3%。哪个更好？直接比 1 和 3，是不公平的。",
+            "visual": {
+              "type": "duo",
+              "base": {
+                "a": {
+                  "type": "columns",
+                  "base": {
+                    "items": [
+                      {
+                        "label": "产品甲",
+                        "value": 1
+                      },
+                      {
+                        "label": "3 个月赚",
+                        "value": 1
+                      }
+                    ]
+                  }
+                },
+                "b": {
+                  "type": "columns",
+                  "base": {
+                    "items": [
+                      {
+                        "label": "产品乙",
+                        "value": 1
+                      },
+                      {
+                        "label": "1 年赚",
+                        "value": 3
+                      }
+                    ]
+                  }
+                },
+                "dir": "row",
+                "vs": ""
+              },
+              "frames": [
+                {
+                  "set": {
+                    "both": 0
+                  },
+                  "cap": "先看一边",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "both": 1
+                  },
+                  "cap": "两边放一起看",
+                  "para": "takeaway"
+                }
+              ]
+            },
+            "example": "像比两个人跑得快不快。一个跑了 3 分钟，一个跑了 12 分钟，只比谁跑得远，不公平。要都换成\"每分钟跑多远\"。",
+            "takeaway": "时长不同的收益，不能直接比数字。"
           },
           {
-            "text": "为什么是“约等于”？精确的算法是 1.02 ÷ 1.03 − 1 ≈ −0.97%。利率不大时，减法和精确值非常接近，日常用减法就够了。",
+            "title": "年化：都换成\"一年\"",
+            "idea": "**年化**就是假装一直这样赚，满一年大约是多少。把所有产品都换成\"一年\"，才能放在一起比。",
+            "visual": {
+              "type": "chain",
+              "base": {
+                "nodes": [
+                  "3 个月 1%",
+                  "3 个月 1%",
+                  "3 个月 1%",
+                  "3 个月 1%",
+                  "一年约 4%"
+                ]
+              },
+              "frames": [
+                {
+                  "set": {
+                    "play": 0,
+                    "step": 0
+                  },
+                  "cap": "先看骨架",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "play": 1,
+                    "step": 2
+                  },
+                  "cap": "看完整的图",
+                  "para": "takeaway"
+                }
+              ]
+            },
+            "takeaway": "年化 = 换成\"一年赚多少\"，时长不同也能比。",
+            "derive": [
+              "一年有 4 个 3 个月。",
+              "每 3 个月赚 1%。",
+              "一年约 1% × 4 = 4%。",
+              "4% 比产品乙的 3% 高。"
+            ],
             "check": {
-              "q": "日常估算实际收益，用减法行吗？",
+              "q": "产品甲年化约 4%，产品乙一年 3%。按年化比，谁的收益高？",
               "options": [
-                "行，和精确值很接近",
-                "不行，差得很远"
+                "产品甲",
+                "产品乙"
               ],
               "answer": 0,
-              "why": "例子里精确值约 −0.97%，减法得 −1%，利率不大时几乎一样。所以「不行，差得很远」不对。"
+              "why": "换成同一把尺子\"一年\"之后，甲约 4%，乙 3%，甲高。只看「3 个月赚 1%」的那个 1，会误以为乙更高。"
             }
           },
           {
-            "text": "应用：判断一个理财是不是“真的在赚”，先减掉通胀。"
+            "title": "年化不是你真能拿到的钱",
+            "idea": "广告写\"7 日年化 3%\"，意思是：按最近 7 天的赚法，换算成一年约 3%。不是 7 天就赚 3%。",
+            "visual": {
+              "type": "tag",
+              "base": {
+                "title": "某现金产品",
+                "big": "7 日年化 3%",
+                "small": "存 1 万元 7 天，约得 5.75 元"
+              },
+              "frames": [
+                {
+                  "set": {
+                    "play": 0,
+                    "step": 0
+                  },
+                  "cap": "先看骨架",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "play": 1,
+                    "step": 2
+                  },
+                  "cap": "看完整的图",
+                  "para": "takeaway"
+                }
+              ]
+            },
+            "takeaway": "年化是换算出来的尺子；存多久，才拿多久的份。",
+            "derive": [
+              "1 万元存满一年，约得 10000 × 3% = 300 元。",
+              "一年 365 天，一天约 300 ÷ 365 ≈ 0.82 元。",
+              "存 7 天：0.82 × 7 ≈ 5.75 元。"
+            ],
+            "check": {
+              "q": "1 万元买\"7 日年化 3%\"的产品，存 7 天大约赚多少？",
+              "options": [
+                "约 6 元",
+                "300 元"
+              ],
+              "answer": 0,
+              "why": "3% 是一整年的数，7 天只占一年的一小段：300 ÷ 365 × 7 ≈ 5.75，约 6 元。「300 元」是存满一年才有的。"
+            }
+          },
+          {
+            "title": "串起来：先换尺子，再扣物价",
+            "idea": "以后看到任何收益，走三步：先看是多长时间的；再换成年化；最后减掉通胀。",
+            "visual": {
+              "type": "chain",
+              "base": {
+                "nodes": [
+                  "看清是多久",
+                  "换成年化",
+                  "减去通胀",
+                  "真实赚了多少"
+                ]
+              },
+              "frames": [
+                {
+                  "set": {
+                    "play": 0,
+                    "step": 0
+                  },
+                  "cap": "先看骨架",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "play": 1,
+                    "step": 2
+                  },
+                  "cap": "看完整的图",
+                  "para": "takeaway"
+                }
+              ]
+            },
+            "example": "一个产品半年赚 2%，年化约 4%。物价涨 3%，实际只赚约 1%。",
+            "takeaway": "比收益三步：看时长、换年化、减通胀。"
           }
         ],
         "interaction": {
@@ -8400,12 +20753,9 @@ window.DAYS = [
               "unit": "%"
             }
           ],
-          "ref": [
-            2,
-            4
-          ]
+          "ref": 2
         },
-        "take": "实际收益 ≈ 名义收益 − 通胀率。跑不赢通胀，账面赚了也是在变穷。",
+        "take": "先换成年化，再减通胀。实际收益 ≈ 名义收益 − 通胀率。",
         "quiz": [
           {
             "q": "理财收益 4%，通胀 2.5%，实际收益大约是多少？",
@@ -8428,6 +20778,17 @@ window.DAYS = [
             "answer": 0,
             "why": "1.5% − 2% = −0.5%，账面在增加，实际能买的东西在减少。",
             "ref": 2
+          },
+          {
+            "q": "一个产品半年赚 2%，年化大约是多少？",
+            "options": [
+              "约 4%",
+              "2%",
+              "1%"
+            ],
+            "answer": 0,
+            "why": "一年有 2 个半年，2% × 2 = 4%。「2%」只是半年的；「1%」是把它除了 2，方向反了。",
+            "ref": 4
           }
         ]
       },
@@ -8443,7 +20804,10 @@ window.DAYS = [
             "why": "短时间的紧张能帮你表现；可长期加班、反复冲突，会让身体一直处在\"准备应战\"的状态。",
             "takeaway": "今天看：长期降不下来的唤醒，会把身体带到哪里。",
             "example": "连续加班的第一周你很累，第三周反而\"不觉得累了\"。这是真的适应，还是另一种状态？",
-            "review": true
+            "review": true,
+            "visual": {
+              "recall": "d08-psych#1"
+            }
           },
           {
             "title": "塞利的发现：不同的苦，同一种反应",
@@ -8459,6 +20823,35 @@ window.DAYS = [
               ],
               "answer": 0,
               "why": "不同压力源引起了同一组变化，所以是「很相似」。这正是塞利最重要的发现，「完全不同」正好相反。"
+            },
+            "visual": {
+              "type": "comic",
+              "panels": [
+                {
+                  "bg": "room",
+                  "cast": [
+                    {
+                      "who": "xiaoman",
+                      "x": 0.48,
+                      "y": 0.72,
+                      "face": "talk"
+                    }
+                  ],
+                  "cap": "压力源各不相同，身体的压力反"
+                },
+                {
+                  "bg": "street",
+                  "cast": [
+                    {
+                      "who": "xiaoyin",
+                      "x": 0.48,
+                      "y": 0.72,
+                      "face": "talk"
+                    }
+                  ],
+                  "cap": "塞利的发现：不同的苦，同一种"
+                }
+              ]
             }
           },
           {
@@ -8468,12 +20861,33 @@ window.DAYS = [
             "takeaway": "一般适应综合征第一段：警觉期，身体紧急动员。",
             "example": "接到\"明天上午要交方案\"的消息，你一下子清醒了，心跳加快，晚饭都顾不上吃，一口气干到深夜。这就是警觉期。",
             "visual": {
-              "type": "flow",
-              "nodes": [
-                "压力源出现",
-                "警觉期",
-                "抵抗期",
-                "衰竭期"
+              "type": "gas",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "一般适应综合征第一段：警觉期，身体紧急动员",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "一般适应综合征第一段：警觉期，身体紧急动员",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "一般适应综合征第一段：警觉期，身体紧急动员。",
+                  "para": "takeaway"
+                }
               ]
             }
           },
@@ -8483,7 +20897,37 @@ window.DAYS = [
             "why": "身体不可能一直像警觉期那样\"拉警报\"，就转入持久战：激素维持在偏高的水平，用来扛住压力源。代价是能量一直在被消耗，留给修复、免疫、休息的储备越来越少。所以\"不觉得累\"不等于不累，是身体在用储备撑着。",
             "takeaway": "抵抗期的\"适应\"，是靠持续消耗储备撑出来的。",
             "example": "像手机屏幕看着一切正常，后台却一直有程序在跑，电量一格格往下掉。",
-            "exLabel": "打个比方"
+            "exLabel": "打个比方",
+            "visual": {
+              "type": "gas",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "抵抗期的\"适应\"，是靠持续消耗储备撑出来的",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "抵抗期的\"适应\"，是靠持续消耗储备撑出来的",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "抵抗期的\"适应\"，是靠持续消耗储备撑出来的。",
+                  "para": "takeaway"
+                }
+              ]
+            }
           },
           {
             "title": "衰竭期：没有恢复，就会透支",
@@ -8505,6 +20949,36 @@ window.DAYS = [
               ],
               "answer": 0,
               "why": "衰竭期储备已经耗尽，抵抗力下降，所以更容易生病、倦怠。「精力比警觉期更旺」正好相反。"
+            },
+            "visual": {
+              "type": "gas",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "危险的不是压力本身，而是长期没有恢复期",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "危险的不是压力本身，而是长期没有恢复期",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "危险的不是压力本身，而是长期没有恢复期。",
+                  "para": "takeaway"
+                }
+              ]
             }
           },
           {
@@ -8512,7 +20986,37 @@ window.DAYS = [
             "idea": "回到开头：加班一个月\"习惯了\"，多半是处在抵抗期：表面平静，储备却在减少。",
             "why": "塞利的模型有局限：它来自动物实验，把压力看成\"不分来源的同一套反应\"，却没解释同一件事为什么有人压力山大、有人觉得还好。后来的研究还补充：长期伤害主要来自应激激素长时间偏高造成的磨损。下一关的拉扎勒斯，从\"人怎么看这件事\"补上了这一块。",
             "takeaway": "警觉 → 抵抗 → 衰竭；恢复期是打断这条链的关键。",
-            "example": "给粉丝的一句话：短期的忙不可怕，可怕的是忙完从不收尾。把休息写进日程，和把截止日期写进日程一样重要。"
+            "example": "给粉丝的一句话：短期的忙不可怕，可怕的是忙完从不收尾。把休息写进日程，和把截止日期写进日程一样重要。",
+            "visual": {
+              "type": "gas",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "警觉 → 抵抗 → 衰竭；恢复期是打断这条链的关键",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "警觉 → 抵抗 → 衰竭；恢复期是打断这条链的关键",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "警觉 → 抵抗 → 衰竭；恢复期是打断这条链的关键。",
+                  "para": "takeaway"
+                }
+              ]
+            }
           }
         ],
         "interaction": {
@@ -8550,107 +21054,600 @@ window.DAYS = [
             "why": "衰竭来自长期没有恢复。适时休息，是让身体从抵抗期退回正常状态的关键。",
             "ref": 4
           }
-        ]
+        ],
+        "hookComic": {
+          "panels": [
+            {
+              "bg": "room",
+              "cast": [
+                {
+                  "who": "xiaoman",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "talk"
+                }
+              ],
+              "cap": "连续加班一个月，好像“已经习"
+            },
+            {
+              "bg": "street",
+              "cast": [
+                {
+                  "who": "xiaoyin",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "talk"
+                }
+              ],
+              "cap": "身体真的适应了吗"
+            },
+            {
+              "bg": "shop",
+              "cast": [
+                {
+                  "who": "xiaoman",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "talk"
+                }
+              ],
+              "cap": "身体真的适应了吗"
+            },
+            {
+              "bg": "plain",
+              "cast": [
+                {
+                  "who": "xiaoyin",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "wow"
+                }
+              ],
+              "cap": "身体真的适应了吗"
+            }
+          ]
+        }
       },
       "english": {
         "id": "d09-english",
-        "title": "用英语讲地理",
-        "minutes": 6,
-        "hook": "basin 是\"脸盆\"，也是\"盆地\"——英语和中文想到一块去了。",
+        "title": "The Singer in the Red Hat：不规则过去式和 did",
+        "minutes": 9,
+        "hook": "go 的过去式不是 goed，而是 went。为什么最常用的词偏偏最不守规矩？",
+        "hookComic": {
+          "panels": [
+            {
+              "bg": "kitchen",
+              "cast": [
+                {
+                  "who": "mia",
+                  "x": 0.32,
+                  "y": 0.72,
+                  "face": "happy"
+                },
+                {
+                  "who": "leo",
+                  "x": 0.62,
+                  "y": 0.74,
+                  "face": "talk"
+                },
+                {
+                  "who": "mochi",
+                  "x": 0.8,
+                  "y": 0.82,
+                  "face": "happy",
+                  "k": 0.7
+                }
+              ]
+            },
+            {
+              "bg": "room",
+              "cast": [
+                {
+                  "who": "mia",
+                  "x": 0.32,
+                  "y": 0.72,
+                  "face": "happy"
+                },
+                {
+                  "who": "leo",
+                  "x": 0.62,
+                  "y": 0.74,
+                  "face": "talk"
+                },
+                {
+                  "who": "mochi",
+                  "x": 0.8,
+                  "y": 0.82,
+                  "face": "happy",
+                  "k": 0.7
+                }
+              ]
+            },
+            {
+              "bg": "street",
+              "cast": [
+                {
+                  "who": "mia",
+                  "x": 0.32,
+                  "y": 0.72,
+                  "face": "happy"
+                },
+                {
+                  "who": "leo",
+                  "x": 0.62,
+                  "y": 0.74,
+                  "face": "talk"
+                },
+                {
+                  "who": "mochi",
+                  "x": 0.8,
+                  "y": 0.82,
+                  "face": "happy",
+                  "k": 0.7
+                }
+              ]
+            }
+          ]
+        },
+        "story": {
+          "title": "The Singer in the Red Hat",
+          "panels": [
+            {
+              "bg": "kitchen",
+              "cast": [
+                {
+                  "who": "mia",
+                  "x": 0.32,
+                  "y": 0.72,
+                  "face": "happy"
+                },
+                {
+                  "who": "leo",
+                  "x": 0.62,
+                  "y": 0.74,
+                  "face": "talk"
+                },
+                {
+                  "who": "mochi",
+                  "x": 0.8,
+                  "y": 0.82,
+                  "face": "happy",
+                  "k": 0.7
+                }
+              ]
+            },
+            {
+              "bg": "room",
+              "cast": [
+                {
+                  "who": "mia",
+                  "x": 0.32,
+                  "y": 0.72,
+                  "face": "happy"
+                },
+                {
+                  "who": "leo",
+                  "x": 0.62,
+                  "y": 0.74,
+                  "face": "talk"
+                },
+                {
+                  "who": "mochi",
+                  "x": 0.8,
+                  "y": 0.82,
+                  "face": "happy",
+                  "k": 0.7
+                }
+              ]
+            },
+            {
+              "bg": "street",
+              "cast": [
+                {
+                  "who": "mia",
+                  "x": 0.32,
+                  "y": 0.72,
+                  "face": "happy"
+                },
+                {
+                  "who": "leo",
+                  "x": 0.62,
+                  "y": 0.74,
+                  "face": "talk"
+                },
+                {
+                  "who": "mochi",
+                  "x": 0.8,
+                  "y": 0.82,
+                  "face": "happy",
+                  "k": 0.7
+                }
+              ]
+            },
+            {
+              "bg": "shop",
+              "cast": [
+                {
+                  "who": "mia",
+                  "x": 0.32,
+                  "y": 0.72,
+                  "face": "happy"
+                },
+                {
+                  "who": "leo",
+                  "x": 0.62,
+                  "y": 0.74,
+                  "face": "talk"
+                },
+                {
+                  "who": "mochi",
+                  "x": 0.8,
+                  "y": 0.82,
+                  "face": "happy",
+                  "k": 0.7
+                }
+              ]
+            }
+          ],
+          "lines": [
+            {
+              "who": "A",
+              "en": "Did you go to the party last night?",
+              "zh": "你昨晚去派对了吗？",
+              "panel": 0
+            },
+            {
+              "who": "B",
+              "en": "Yes, I did. I saw a famous singer there!",
+              "zh": "去了。我在那儿看到一个有名的歌手！",
+              "panel": 0
+            },
+            {
+              "who": "A",
+              "en": "Really? Who?",
+              "zh": "真的？谁啊？",
+              "panel": 1
+            },
+            {
+              "who": "B",
+              "en": "I don't know her name. She wore a red hat.",
+              "zh": "不知道她叫什么。她戴着一顶红帽子。",
+              "panel": 1
+            },
+            {
+              "who": "B",
+              "en": "She sang a song about a fat cat. Her voice was beautiful.",
+              "zh": "她唱了一首关于胖猫的歌。嗓音特别好听。",
+              "panel": 2
+            },
+            {
+              "who": "A",
+              "en": "Did she wear big glasses, too?",
+              "zh": "她是不是还戴着一副大眼镜？",
+              "panel": 3
+            },
+            {
+              "who": "B",
+              "en": "Yes! How did you know?",
+              "zh": "对！你怎么知道？",
+              "panel": 3
+            },
+            {
+              "who": "A",
+              "en": "Leo, that was me!",
+              "zh": "Leo，那就是我啊！",
+              "panel": 3
+            }
+          ]
+        },
+        "words": [
+          {
+            "w": "party",
+            "ipa": "ˈpɑːrti",
+            "stress": "par",
+            "pic": "🎉",
+            "zh": "派对",
+            "ex": "Did you go to the party?",
+            "part": "美式口语里两个元音中间的 t 读得像轻轻的 d：par-dy"
+          },
+          {
+            "w": "famous",
+            "ipa": "ˈfeɪməs",
+            "stress": "fa",
+            "pic": "🌟",
+            "zh": "有名的",
+            "ex": "I saw a famous singer.",
+            "part": "fame 名气 + -ous 充满 → 很有名气的"
+          },
+          {
+            "w": "wear",
+            "ipa": "wer",
+            "stress": "wear",
+            "pic": "👗",
+            "zh": "穿，戴",
+            "ex": "She wore a red hat.",
+            "part": "过去式 wore。衣服、帽子、眼镜都用 wear"
+          },
+          {
+            "w": "voice",
+            "ipa": "vɔɪs",
+            "stress": "voice",
+            "pic": "🗣️",
+            "zh": "嗓音，声音",
+            "ex": "Her voice was beautiful.",
+            "part": "人和动物嘴里发出的声音"
+          }
+        ],
         "steps": [
           {
-            "title": "西高东低和季风",
-            "idea": "地理课学过两件事：中国地势西高东低，像三级台阶；季风随季节换方向，夏天从海洋吹向陆地，冬天从陆地吹向海洋。",
-            "why": "今天的英语句子全建在这两件事上，先把内容站稳，再换成英语。",
-            "takeaway": "西高东低；夏季风湿润，冬季风干冷。",
-            "example": "夏季风从海洋带来水汽，所以中国东部夏天多雨；冬季风从内陆吹来，又干又冷。",
-            "review": true
-          },
-          {
-            "title": "地形词：照形状起名",
-            "idea": "**basin** 原来的意思是盆、洗脸盆，后来也指盆地：四周高、中间低的地形。中文叫\"盆地\"，用的是同一个比方。",
-            "why": "给地形起名，最直观的办法是看它像什么。盆的边高、底低，正好是盆地的样子，所以两种语言不约而同借了\"盆\"。同样的思路：plain 本义是\"平的\"，平原就是平的地；plateau 来自法语，词里的 plat 就是\"平\"，高原是被抬高的一块平地。",
-            "takeaway": "basin 像盆，四周高中间低；plateau 高而平，plain 低而平。",
-            "example": "四川盆地是 the Sichuan Basin，青藏高原是 the Qinghai-Tibet Plateau，华北平原是 the North China Plain。看形状：一个凹下去，一个高而平，一个低而平。",
+            "title": "先听故事",
+            "kind": "story-listen",
+            "idea": "看图听。Leo 在派对上看到的歌手是谁？",
             "check": {
-              "q": "四周高、中间低的四川盆地，英语用哪个词？",
+              "q": "派对上那位歌手是谁？",
               "options": [
-                "basin",
-                "plateau"
+                "Mia",
+                "Leo 不认识的一位明星"
               ],
               "answer": 0,
-              "why": "四周高、中间低是盆的形状，所以是 basin。「plateau」是高而平的高原，比如青藏高原。"
+              "why": "最后 Mia 戴上红帽子和眼镜，说 [[Leo, that was me!]]。Leo 以为是明星，其实是 Mia。"
             }
           },
           {
-            "title": "monsoon：季节之风",
-            "idea": "季风的英语是 **monsoon**，来自阿拉伯语 mausim，意思是\"季节\"。按季节换方向的风，就是\"季节之风\"。",
-            "why": "印度洋上的航海者很早就发现，风向跟着季节翻转：一个季节往这边吹，另一个季节吹回来，出海要看准季节。这个词后来经葡萄牙语、荷兰语进入英语。名字里记着它最重要的特点：跟着季节走。",
-            "takeaway": "monsoon 来自\"季节\"：随季节换方向的风。",
-            "example": "the summer monsoon（夏季风）从海洋吹来，带来大量降雨；the winter monsoon（冬季风）从陆地吹来，干冷。这和第 8 天地理课推出来的一样。",
+            "title": "四个新词",
+            "kind": "words",
+            "idea": "每个词都点一下 ▶。注意 party 的美式读法。"
+          },
+          {
+            "title": "发音 · v 和 w：牙齿碰不碰嘴唇",
+            "idea": "v 是上牙轻轻碰下唇，发出带震动的声音；w 是嘴唇撮圆再张开，牙齿不碰嘴唇。",
+            "why": "普通话里没有 v，很多人用 w 代替，把 voice 说成 woice。可英语里这是两个音，能分开两个词：[[vest]] 是背心，[[west]] 是西边。区别全在嘴唇：牙碰到下唇就是 v，嘴唇圆起来就是 w。",
+            "example": "[[voice]]、[[very]] 是 v；[[wear]]、[[wore]] 是 w。",
+            "takeaway": "v 牙碰唇，w 嘴唇圆。",
+            "visual": {
+              "type": "mouth",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "v 牙碰唇，w 嘴唇圆",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "v 牙碰唇，w 嘴唇圆",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "v 牙碰唇，w 嘴唇圆。",
+                  "para": "takeaway"
+                }
+              ]
+            },
             "check": {
-              "q": "monsoon 的来源词 mausim，意思是？",
+              "q": "说 [[voice]] 的开头，上牙要碰下唇吗？",
               "options": [
-                "季节",
-                "下雨"
+                "要",
+                "不要"
               ],
               "answer": 0,
-              "why": "mausim 是阿拉伯语的\"季节\"，季风就是跟着季节换方向的风。「下雨」只是夏季风带来的结果，冬季风并不带雨。"
+              "why": "voice 以 v 开头，上牙要轻碰下唇。「不要」是 w 的口型，会读成 woice。"
             }
           },
           {
-            "title": "串起来：西高东低怎么说",
-            "idea": "回到开头：basin 和\"盆地\"都借了盆的形状。现在把地形和季风放进两句完整的英语里。",
-            "why": "说\"地势、地形\"用 terrain，指地面的高低起伏；方位用 in the west、in the east。别和长得像的 territory 弄混：territory 是领土，指归谁管的土地，不讲高低。",
-            "takeaway": "地势用 terrain + in the west / in the east；夏季风带来雨。",
-            "example": "China's terrain is high in the west and low in the east.（中国地势西高东低，所以大河大多向东流。）The summer monsoon brings a lot of rain.（夏季风带来大量降雨。）"
+            "title": "语法 · 常用动词的过去式要单独记；问过去用 did",
+            "idea": "最常用的动词，过去式很多不加 -ed，要单独记：go → went，see → saw，sing → sang，wear → wore。问过去的事、说\"没有\"，用 did 当助手，后面的动词回到原形。",
+            "why": "最常用的动词也最古老。它们的过去式靠改元音（sing → sang），比 -ed 规则还早就定下了；因为天天在用，一直没被改掉。did 就是第 5 天 do 的过去式：助手带上了\"过去\"，后面的动词就不用再变，一句话只标一次时间。",
+            "example": "[[Did you go to the party?]] [[Yes, I did. I went with friends.]] [[She didn't wear a hat.]]",
+            "takeaway": "常用动词的过去式要单独记；问句、否定用 did，动词回原形。",
+            "visual": {
+              "type": "sentence",
+              "base": {
+                "rows": [
+                  {
+                    "bricks": [
+                      {
+                        "text": "Did",
+                        "role": "extra"
+                      },
+                      {
+                        "text": "you",
+                        "role": "who"
+                      },
+                      {
+                        "text": "go",
+                        "role": "verb"
+                      },
+                      {
+                        "text": "to",
+                        "role": "extra"
+                      },
+                      {
+                        "text": "I",
+                        "role": "who"
+                      },
+                      {
+                        "text": "went",
+                        "role": "verb"
+                      },
+                      {
+                        "text": "to",
+                        "role": "extra"
+                      },
+                      {
+                        "text": "She",
+                        "role": "who"
+                      },
+                      {
+                        "text": "didn't",
+                        "role": "extra"
+                      },
+                      {
+                        "text": "wear",
+                        "role": "verb"
+                      },
+                      {
+                        "text": "a",
+                        "role": "what"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "frames": [
+                {
+                  "set": {
+                    "play": 0
+                  },
+                  "cap": "最常用的动词，过去式很多不加 -ed，要单独记：go → went，see → ",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "play": 1
+                  },
+                  "cap": "常用动词的过去式要单独记；问句、否定用 did，动词回原形。",
+                  "para": "takeaway"
+                }
+              ]
+            },
+            "check": {
+              "q": "中文\"你去派对了吗？\"，英语怎么说？",
+              "options": [
+                "Did you go to the party?",
+                "Did you went to the party?"
+              ],
+              "answer": 0,
+              "why": "did 已经带着\"过去\"，go 回原形。「Did you went…」把过去标了两次。"
+            }
+          },
+          {
+            "title": "再读故事",
+            "kind": "story-read",
+            "idea": "看着字听，找出 saw、wore、sang、was 和每个 did。"
+          },
+          {
+            "title": "我在派对上做了什么",
+            "kind": "drill",
+            "frame": "I {a} at the party.",
+            "zh": "我在派对上{a}。",
+            "slots": {
+              "a": [
+                {
+                  "en": "saw a singer",
+                  "zh": "看到一位歌手",
+                  "pic": "👀"
+                },
+                {
+                  "en": "sang a song",
+                  "zh": "唱了一首歌",
+                  "pic": "🎤"
+                },
+                {
+                  "en": "wore a red hat",
+                  "zh": "戴了顶红帽子",
+                  "pic": "👒"
+                },
+                {
+                  "en": "danced with Leo",
+                  "zh": "和 Leo 跳了舞",
+                  "pic": "💃"
+                }
+              ]
+            },
+            "need": 3
+          },
+          {
+            "title": "跟读",
+            "kind": "shadow",
+            "tip": "voice 的 v 上牙碰下唇；wore 的 w 嘴唇圆。",
+            "lines": [
+              0,
+              4,
+              7
+            ]
+          },
+          {
+            "title": "复述：串起来",
+            "kind": "retell",
+            "idea": "看着图，用过去式讲派对上的事。",
+            "keys": [
+              [
+                "party",
+                "saw",
+                "famous singer"
+              ],
+              [
+                "name",
+                "wore",
+                "red hat"
+              ],
+              [
+                "sang",
+                "voice"
+              ],
+              [
+                "glasses",
+                "that was me"
+              ]
+            ]
           }
         ],
         "interaction": {
           "type": "listen",
           "prompt": "听一听，选出你听到的句子",
-          "audio": "The summer monsoon brings a lot of rain.",
-          "answer": 0,
-          "why": "注意 summer 和 winter、rain 和 wind。夏季风从海洋来，带来雨。",
+          "audio": "She wore a red hat.",
+          "showText": "after",
           "options": [
-            "The summer monsoon brings a lot of rain.",
-            "The winter monsoon brings a lot of rain.",
-            "The summer monsoon brings a lot of wind."
+            "She wore a red hat.",
+            "She wears a red hat.",
+            "She saw a red hat."
           ],
+          "answer": 0,
+          "why": "动词开头是嘴唇圆的 w，读 wore。「wears」结尾多了 /z/；「saw」开头是 s。",
           "ref": [
             2,
             3
           ]
         },
-        "take": "plateau 高原、basin 盆地（像脸盆）、plain 平原、monsoon 季风（“季节”之风）。",
+        "take": "常用动词的过去式要单独记（went、saw、sang、wore）；问过去用 did，动词回原形；v 牙碰唇，w 嘴唇圆。",
         "quiz": [
           {
-            "q": "为什么用 basin 来指盆地？",
+            "q": "中文\"你昨晚去派对了吗？\"，英语怎么说？",
             "options": [
-              "盆地的形状像脸盆，四周高中间低",
-              "因为盆地里都有湖",
-              "因为发音像“盆”"
+              "Did you go to the party last night?",
+              "Did you went to the party last night?",
+              "Do you went to the party last night?"
             ],
             "answer": 0,
-            "why": "basin 原义是“盆”，盆地和盆一样四周高、中间低。",
-            "ref": 1
+            "why": "问过去用 did，动词回原形 go。「Did you went」标了两次过去；「Do you went」助手和动词的时间对不上。",
+            "ref": 3
           },
           {
-            "q": "“中国地势西高东低”怎么说？",
+            "q": "意思是？",
             "options": [
-              "China's terrain is high in the west and low in the east.",
-              "China's territory is high in the east.",
-              "China is high and low."
+              "她的嗓音很好听。",
+              "她的选择很好。",
+              "她穿得很漂亮。"
             ],
             "answer": 0,
-            "why": "地形、地势用 terrain，方位用 in the west / in the east。territory 是“领土”。",
-            "ref": 3
+            "why": "开头是上牙碰下唇的 v，是 voice。「选择」是 choice，开头是 ch；「穿得漂亮」句子里要有 wore 或 dress。",
+            "ref": [
+              1,
+              2
+            ],
+            "audio": "Her voice was beautiful."
           }
-        ],
-        "tts": [
-          "plateau",
-          "basin",
-          "China's terrain is high in the west and low in the east."
         ]
       }
     }
@@ -8672,7 +21669,37 @@ window.DAYS = [
             "why": "今天要找第三种关系：三个颜色彼此隔得一样远。先记住，\"隔几格\"就是色轮上的距离。",
             "takeaway": "色轮上的距离用\"隔几格\"量，隔 6 格是正对面。",
             "example": "从红往后数 6 格是绿，在正对面；红两边的红橙、红紫是邻居。",
-            "review": true
+            "review": true,
+            "visual": {
+              "type": "wheelBuild",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "色轮上的距离用\"隔几格\"量，隔 6 格是正对面",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "色轮上的距离用\"隔几格\"量，隔 6 格是正对面",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "色轮上的距离用\"隔几格\"量，隔 6 格是正对面。",
+                  "para": "takeaway"
+                }
+              ]
+            }
           },
           {
             "title": "三角配色：把色轮平均分成三份",
@@ -8689,25 +21716,33 @@ window.DAYS = [
             ],
             "formula": "12 ÷ 3 = 4",
             "visual": {
-              "type": "wheel",
-              "colors": [
-                "#E53935",
-                "#F4511E",
-                "#FB8C00",
-                "#FFB300",
-                "#FDD835",
-                "#9CCC65",
-                "#43A047",
-                "#00897B",
-                "#1E88E5",
-                "#5E35B1",
-                "#8E24AA",
-                "#D81B60"
-              ],
-              "highlight": [
-                0,
-                4,
-                8
+              "type": "wheelBuild",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "三角配色 = 色轮上等距的三个颜色，各隔 4 格",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "三角配色 = 色轮上等距的三个颜色，各隔 4 格",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "三角配色 = 色轮上等距的三个颜色，各隔 4 格。",
+                  "para": "takeaway"
+                }
               ]
             },
             "check": {
@@ -8734,6 +21769,36 @@ window.DAYS = [
               ],
               "answer": 0,
               "why": "每两个之间都接近正对面，所以都比较远。「都挨着」是邻近色。"
+            },
+            "visual": {
+              "type": "outfit",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "三角配色：两两都远，对比强；平均分布，又平衡",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "三角配色：两两都远，对比强；平均分布，又平衡",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "三角配色：两两都远，对比强；平均分布，又平衡。",
+                  "para": "takeaway"
+                }
+              ]
             }
           },
           {
@@ -8741,7 +21806,37 @@ window.DAYS = [
             "idea": "回到开头：红黄蓝和橙绿紫是同一种结构，差别在于怎么分配纯度和面积。",
             "why": "三个颜色都强，面积、纯度又一样，视线就在三者之间来回跳，没有主角，显得乱、像玩具。红黄蓝最直白，常被做成高纯度、等量的玩具色；橙绿紫是混出来的，生活里常用焦橙、橄榄绿、茄紫这些低纯度版本，再分出主次，就显得成熟、有戏剧感。",
             "takeaway": "三角配色一定要分主次：一个主色，另两个降纯度或缩面积。",
-            "example": "茄紫连衣裙做主角，橄榄绿开衫做配角，一点焦橙色耳环做点缀，很有戏剧感。三件都换成高纯度、面积一样的正橙、正绿、正紫，又回到了玩具感。"
+            "example": "茄紫连衣裙做主角，橄榄绿开衫做配角，一点焦橙色耳环做点缀，很有戏剧感。三件都换成高纯度、面积一样的正橙、正绿、正紫，又回到了玩具感。",
+            "visual": {
+              "type": "knobs",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "三角配色一定要分主次：一个主色，另两个降纯度或缩面积",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "三角配色一定要分主次：一个主色，另两个降纯度或缩面积",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "三角配色一定要分主次：一个主色，另两个降纯度或缩面积。",
+                  "para": "takeaway"
+                }
+              ]
+            }
           }
         ],
         "interaction": {
@@ -8800,7 +21895,59 @@ window.DAYS = [
             "why": "三个颜色彼此都远，如果面积、纯度都一样，视线会在三者之间来回跳。定一个主角，画面才稳。",
             "ref": 3
           }
-        ]
+        ],
+        "hookComic": {
+          "panels": [
+            {
+              "bg": "room",
+              "cast": [
+                {
+                  "who": "xiaoman",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "talk"
+                }
+              ],
+              "cap": "红、黄、蓝放在一起像儿童玩具"
+            },
+            {
+              "bg": "street",
+              "cast": [
+                {
+                  "who": "xiaoyin",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "talk"
+                }
+              ],
+              "cap": "它们是同一种配色"
+            },
+            {
+              "bg": "shop",
+              "cast": [
+                {
+                  "who": "xiaoman",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "talk"
+                }
+              ],
+              "cap": "它们是同一种配色"
+            },
+            {
+              "bg": "plain",
+              "cast": [
+                {
+                  "who": "xiaoyin",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "wow"
+                }
+              ],
+              "cap": "它们是同一种配色"
+            }
+          ]
+        }
       },
       "history": {
         "id": "d10-history",
@@ -8814,7 +21961,10 @@ window.DAYS = [
             "why": "他靠的就是那条公式：手里有兵、有钱、有地盘。可这条路他走得通，别人也走得通，这就是接下来乱的根源。",
             "takeaway": "唐亡时天下已被藩镇瓜分，后梁只是最强的那一块。",
             "example": "唐末天下已被几十个藩镇分掉。朱温只是其中最强的一个，他当了皇帝，其余藩镇并没有消失。",
-            "review": true
+            "review": true,
+            "visual": {
+              "recall": "d09-history#8"
+            }
           },
           {
             "title": "乱在哪：两条线搅在一起",
@@ -8827,7 +21977,37 @@ window.DAYS = [
               "北方：同一块地盘，先后换主人。",
               "南方：不同地盘，同时有主人。",
               "先分清线，再记名字。"
-            ]
+            ],
+            "visual": {
+              "type": "tl",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "五代十国 = 北方一条\"接力\"线 + 南方一条\"并排\"线",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "五代十国 = 北方一条\"接力\"线 + 南方一条\"并排\"线",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "五代十国 = 北方一条\"接力\"线 + 南方一条\"并排\"线。",
+                  "para": "takeaway"
+                }
+              ]
+            }
           },
           {
             "title": "五代：北方的接力",
@@ -8837,13 +22017,33 @@ window.DAYS = [
             "example": "把\"梁唐晋汉周\"当成五个音的短旋律，像 do re mi fa sol 一样按顺序唱几遍，顺序就固定在耳朵里了。",
             "formula": "960 − 907 = 53（年）",
             "visual": {
-              "type": "flow",
-              "nodes": [
-                "后梁",
-                "后唐",
-                "后晋",
-                "后汉",
-                "后周"
+              "type": "tl",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "五代 = 梁唐晋汉周，907—960 年，北方一个接一个",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "五代 = 梁唐晋汉周，907—960 年，北方一个接一个",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "五代 = 梁唐晋汉周，907—960 年，北方一个接一个。",
+                  "para": "takeaway"
+                }
               ]
             }
           },
@@ -8866,6 +22066,36 @@ window.DAYS = [
               ],
               "answer": 0,
               "why": "开封的好处是「靠着运河，南方粮船开得到」，都城和军队吃饭不愁。开封在黄河边的平原上，离长城很远，「离长城最近，方便防守」不对。"
+            },
+            "visual": {
+              "type": "histmap",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "五代有四个朝代定都开封，因为开封靠着运河，接得到江南的粮",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "五代有四个朝代定都开封，因为开封靠着运河，接得到江南的粮",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "五代有四个朝代定都开封，因为开封靠着运河，接得到江南的粮。",
+                  "para": "takeaway"
+                }
+              ]
             }
           },
           {
@@ -8888,6 +22118,36 @@ window.DAYS = [
               ],
               "answer": 0,
               "why": "五代皇帝大多是「节度使或带兵的将领」，靠兵权上位。「科举考上来的文官」手里没兵，在五代反而说不上话。"
+            },
+            "visual": {
+              "type": "chain",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "兵强马壮者为天子：皇位靠兵抢来，也会被兵抢走",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "兵强马壮者为天子：皇位靠兵抢来，也会被兵抢走",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "兵强马壮者为天子：皇位靠兵抢来，也会被兵抢走。",
+                  "para": "takeaway"
+                }
+              ]
             }
           },
           {
@@ -8902,14 +22162,74 @@ window.DAYS = [
               "拿燕云十六州作交换。",
               "中原失去长城一线。",
               "南边的华北平原一马平川，骑兵可以直冲南下。"
-            ]
+            ],
+            "visual": {
+              "type": "histmap",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "燕云十六州一丢，中原北边的门户就开了，影响了此后几百年",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "燕云十六州一丢，中原北边的门户就开了，影响了此后几百年",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "燕云十六州一丢，中原北边的门户就开了，影响了此后几百年。",
+                  "para": "takeaway"
+                }
+              ]
+            }
           },
           {
             "title": "十国：南方的并排",
             "idea": "和五代同一时期，各地还有十个割据政权，合称**十国**。它们大多在南方，大体同时并存，各管一块。",
             "why": "唐末南方的节度使也拥兵自立，只是离中原远，不去抢\"正统\"皇位，而是守着自己那块地方称王称帝。十国是：吴、南唐、吴越、闽、楚、南汉、前蜀、后蜀、荆南（南平）、北汉。北汉在今山西，是唯一在北方的一个。",
             "takeaway": "十国 = 同时并存的十个政权，南方为主；只有北汉在北方。",
-            "example": "吴越在今浙江，中心是杭州；南唐中心在南京；前蜀、后蜀都在四川，中心是成都。南唐的最后一位国君李煜，就是写\"问君能有几多愁\"的大词人。"
+            "example": "吴越在今浙江，中心是杭州；南唐中心在南京；前蜀、后蜀都在四川，中心是成都。南唐的最后一位国君李煜，就是写\"问君能有几多愁\"的大词人。",
+            "visual": {
+              "type": "tl",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "十国 = 同时并存的十个政权，南方为主；只有北汉在北方",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "十国 = 同时并存的十个政权，南方为主；只有北汉在北方",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "十国 = 同时并存的十个政权，南方为主；只有北汉在北方。",
+                  "para": "takeaway"
+                }
+              ]
+            }
           },
           {
             "title": "南方为什么反而稳",
@@ -8931,6 +22251,36 @@ window.DAYS = [
               ],
               "answer": 0,
               "why": "十国「远离北方主战场，各守一方」，打仗少，才能安心发展。「南方各国都没有军队」不对，它们各有军队，只是多用来守自己的地盘。"
+            },
+            "visual": {
+              "type": "histmap",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "南方远离战场、各守一方，在乱世里反而保住了发展",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "南方远离战场、各守一方，在乱世里反而保住了发展",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "南方远离战场、各守一方，在乱世里反而保住了发展。",
+                  "para": "takeaway"
+                }
+              ]
             }
           },
           {
@@ -8943,7 +22293,37 @@ window.DAYS = [
               "宋的开国皇帝也是靠兵变上台。",
               "他最清楚：自己能这样上来，别人也能。",
               "下一关：他怎样才能不当\"第六代\"？"
-            ]
+            ],
+            "visual": {
+              "type": "cycle",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "960 年宋代后周，979 年灭北汉；可宋的开国，也是一场兵变",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "960 年宋代后周，979 年灭北汉；可宋的开国，也是一场兵变",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "960 年宋代后周，979 年灭北汉；可宋的开国，也是一场兵变。",
+                  "para": "takeaway"
+                }
+              ]
+            }
           }
         ],
         "interaction": {
@@ -9047,7 +22427,59 @@ window.DAYS = [
             "id": "BJ",
             "label": "燕云十六州一带"
           }
-        ]
+        ],
+        "hookComic": {
+          "panels": [
+            {
+              "bg": "room",
+              "cast": [
+                {
+                  "who": "xiaoman",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "talk"
+                }
+              ],
+              "cap": "五代十国最让人头疼"
+            },
+            {
+              "bg": "street",
+              "cast": [
+                {
+                  "who": "xiaoyin",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "talk"
+                }
+              ],
+              "cap": "其实只要分清“接力”和“并排"
+            },
+            {
+              "bg": "shop",
+              "cast": [
+                {
+                  "who": "xiaoman",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "talk"
+                }
+              ],
+              "cap": "其实只要分清“接力”和“并排"
+            },
+            {
+              "bg": "plain",
+              "cast": [
+                {
+                  "who": "xiaoyin",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "wow"
+                }
+              ],
+              "cap": "其实只要分清“接力”和“并排"
+            }
+          ]
+        }
       },
       "geo": {
         "id": "d10-geo",
@@ -9060,7 +22492,37 @@ window.DAYS = [
             "idea": "街上的车牌，第一个字就是省级行政区的简称：京、沪、鲁、粤……有的一眼认得，有的和省名一点都不像。",
             "why": "车牌、快递单都想用一个字说清\"这是哪里\"。中国约 960 万平方千米，得先切成几十块，每块再起个短名字，才好记、好写、好管。所以今天先问两件事：为什么这样切？短名字又是从哪来的？",
             "takeaway": "每块省级区都有全名和简称；先看为什么这样分，再看简称从哪来。",
-            "example": "山东的车牌写\"鲁\"，山西写\"晋\"，河南写\"豫\"。\"山东\"两个字你看得懂，\"鲁\"却和山、和东都不沾边。这两个名字一新一老，来历完全不同。"
+            "example": "山东的车牌写\"鲁\"，山西写\"晋\"，河南写\"豫\"。\"山东\"两个字你看得懂，\"鲁\"却和山、和东都不沾边。这两个名字一新一老，来历完全不同。",
+            "visual": {
+              "type": "tilemap",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "每块省级区都有全名和简称；先看为什么这样分，再看简称从哪来",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "每块省级区都有全名和简称；先看为什么这样分，再看简称从哪来",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "每块省级区都有全名和简称；先看为什么这样分，再看简称从哪来。",
+                  "para": "takeaway"
+                }
+              ]
+            }
           },
           {
             "title": "国家太大，要分块来管",
@@ -9071,26 +22533,34 @@ window.DAYS = [
             "exLabel": "打个比方",
             "formula": "23 个省 + 5 个自治区 + 4 个直辖市 + 2 个特别行政区 = 34",
             "visual": {
-              "type": "bars",
-              "items": [
+              "type": "tilemap",
+              "base": {},
+              "frames": [
                 {
-                  "label": "省",
-                  "value": 23
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "34 个省级行政区 = 23 省 + 5 自治区 + 4 直辖市 + 2 特别行",
+                  "para": "idea"
                 },
                 {
-                  "label": "自治区",
-                  "value": 5
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "34 个省级行政区 = 23 省 + 5 自治区 + 4 直辖市 + 2 特别行",
+                  "para": "why"
                 },
                 {
-                  "label": "直辖市",
-                  "value": 4
-                },
-                {
-                  "label": "特别行政区",
-                  "value": 2
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "34 个省级行政区 = 23 省 + 5 自治区 + 4 直辖市 + 2 特别行",
+                  "para": "takeaway"
                 }
-              ],
-              "unit": "个"
+              ]
             }
           },
           {
@@ -9112,6 +22582,36 @@ window.DAYS = [
               ],
               "answer": 0,
               "why": "直辖市和省平级，直接对中央。「所在的省」不对，直辖市本身不属于任何省。"
+            },
+            "visual": {
+              "type": "tilemap",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "直辖市直接由中央管理，共四个：北京、天津、上海、重庆",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "直辖市直接由中央管理，共四个：北京、天津、上海、重庆",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "直辖市直接由中央管理，共四个：北京、天津、上海、重庆。",
+                  "para": "takeaway"
+                }
+              ]
             }
           },
           {
@@ -9134,6 +22634,36 @@ window.DAYS = [
               ],
               "answer": 0,
               "why": "宁夏夹在甘肃、内蒙古、陕西中间。「新疆」在西北，和好几个国家接壤。"
+            },
+            "visual": {
+              "type": "tilemap",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "五个自治区：内蒙古、新疆、西藏、广西、宁夏，除宁夏外都在边疆",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "五个自治区：内蒙古、新疆、西藏、广西、宁夏，除宁夏外都在边疆",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "五个自治区：内蒙古、新疆、西藏、广西、宁夏，除宁夏外都在边疆。",
+                  "para": "takeaway"
+                }
+              ]
             }
           },
           {
@@ -9142,7 +22672,10 @@ window.DAYS = [
             "why": "一个国存在几百年，它的名字就和那块土地绑在了一起。国没了，人们还用老国名叫那个地方，就像老字号搬了家，大家还叫它原来的名字。",
             "takeaway": "周代分封出的诸侯国，把国名留在了那块土地上。",
             "example": "孔子是鲁国人，鲁国在今天的山东；春秋时很强的晋国，在今天的山西；秦国在今天的陕西，后来统一了天下（第 4 天）。",
-            "review": true
+            "review": true,
+            "visual": {
+              "recall": "d02-history#2"
+            }
           },
           {
             "title": "简称：古国和古州的名字",
@@ -9158,6 +22691,36 @@ window.DAYS = [
               ],
               "answer": 0,
               "why": "晋国就在今天的山西，国名一直留了下来。「山西的一座山」不对，\"晋\"是国名，不是山名。"
+            },
+            "visual": {
+              "type": "tilemap",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "很多简称来自古国（鲁、晋、秦、蜀）或古州（豫、冀）",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "很多简称来自古国（鲁、晋、秦、蜀）或古州（豫、冀）",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "很多简称来自古国（鲁、晋、秦、蜀）或古州（豫、冀）。",
+                  "para": "takeaway"
+                }
+              ]
             }
           },
           {
@@ -9170,7 +22733,37 @@ window.DAYS = [
               "全名：看山、河、湖的方位起。",
               "简称：用古国、古州的老名字。",
               "两套名字来历不同，所以\"鲁\"和\"山东\"长得不像。"
-            ]
+            ],
+            "visual": {
+              "type": "tilemap",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "全名看山河方位，简称看历史；34 块拼图，按四类来记",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "全名看山河方位，简称看历史；34 块拼图，按四类来记",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "全名看山河方位，简称看历史；34 块拼图，按四类来记。",
+                  "para": "takeaway"
+                }
+              ]
+            }
           }
         ],
         "interaction": {
@@ -9240,23 +22833,260 @@ window.DAYS = [
             "id": "NX",
             "label": "NX"
           }
-        ]
+        ],
+        "hookComic": {
+          "panels": [
+            {
+              "bg": "room",
+              "cast": [
+                {
+                  "who": "xiaoman",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "talk"
+                }
+              ],
+              "cap": "“鲁”“晋”“豫”——这些简"
+            },
+            {
+              "bg": "street",
+              "cast": [
+                {
+                  "who": "xiaoyin",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "talk"
+                }
+              ],
+              "cap": "答案在历史课里"
+            },
+            {
+              "bg": "shop",
+              "cast": [
+                {
+                  "who": "xiaoman",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "talk"
+                }
+              ],
+              "cap": "答案在历史课里"
+            },
+            {
+              "bg": "plain",
+              "cast": [
+                {
+                  "who": "xiaoyin",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "wow"
+                }
+              ],
+              "cap": "答案在历史课里"
+            }
+          ]
+        }
       },
       "finance": {
         "id": "d10-finance",
-        "title": "复利反咬：信用卡欠款",
-        "minutes": 4,
-        "hook": "复利能帮你存钱滚雪球，也能让欠款滚雪球。",
+        "title": "复利反咬：信用卡和分期的真实成本",
+        "minutes": 7,
+        "hook": "复利能帮你存钱滚雪球，也能让欠款滚雪球。分期广告上写着\"每期手续费只要 0.6%\"，真的只要这么点吗？",
+        "hookComic": {
+          "panels": [
+            {
+              "bg": "room",
+              "cast": [
+                {
+                  "who": "xiaoman",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "talk"
+                }
+              ],
+              "cap": "复利能帮你存钱滚雪球，也能让"
+            },
+            {
+              "bg": "street",
+              "cast": [
+                {
+                  "who": "xiaoyin",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "talk"
+                }
+              ],
+              "cap": "分期广告上写着\"每期手续费只"
+            },
+            {
+              "bg": "shop",
+              "cast": [
+                {
+                  "who": "xiaoman",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "talk"
+                }
+              ],
+              "cap": "分期广告上写着\"每期手续费只"
+            },
+            {
+              "bg": "plain",
+              "cast": [
+                {
+                  "who": "xiaoyin",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "wow"
+                }
+              ],
+              "cap": "分期广告上写着\"每期手续费只"
+            }
+          ]
+        },
         "steps": [
           {
-            "text": "复利对存钱有利，对欠钱就不利了：信用卡分期没还清或逾期时，利息会被算进欠款里，下一期连利息一起计息——利息生利息。"
+            "title": "雪球也会朝你滚来",
+            "idea": "存钱时，复利帮你。欠钱时，同一个复利在帮对方。",
+            "visual": {
+              "type": "comic",
+              "panels": [
+                {
+                  "bg": "bank",
+                  "cast": [
+                    {
+                      "who": "xiaoman",
+                      "x": 0.5,
+                      "y": 0.72,
+                      "face": "talk"
+                    }
+                  ],
+                  "cap": "复利也能反过来"
+                },
+                {
+                  "bg": "kitchen",
+                  "cast": [
+                    {
+                      "who": "xiaoman",
+                      "x": 0.5,
+                      "y": 0.72,
+                      "face": "talk"
+                    }
+                  ],
+                  "cap": "欠了一万没还"
+                },
+                {
+                  "bg": "room",
+                  "cast": [
+                    {
+                      "who": "xiaoman",
+                      "x": 0.5,
+                      "y": 0.72,
+                      "face": "talk"
+                    }
+                  ],
+                  "cap": "一年后变成快一万二"
+                }
+              ]
+            },
+            "takeaway": "复利对存钱的人有利，对欠钱的人不利。"
           },
           {
-            "text": "先粗算信用卡有多贵：常见的日利率约 0.05%（万分之五）。一年 365 天。对比第 9 天约 2% 的存款利率，借这笔钱的成本是存款收益的约 9 倍。",
-            "formula": "0.05% × 365 ≈ 18%"
+            "title": "回顾 · 日息先换成年息",
+            "idea": "信用卡常写\"日利率 0.05%\"，就是每 1 万元每天 5 元利息。看着很小。用昨天的办法，先换成一年。",
+            "visual": {
+              "type": "columns",
+              "base": {
+                "items": [
+                  {
+                    "label": "存款约",
+                    "value": 2
+                  },
+                  {
+                    "label": "信用卡约",
+                    "value": 18
+                  }
+                ],
+                "unit": "%（每年）"
+              },
+              "frames": [
+                {
+                  "set": {
+                    "play": 0,
+                    "step": 0
+                  },
+                  "cap": "先看骨架",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "play": 1,
+                    "step": 2
+                  },
+                  "cap": "看完整的图",
+                  "para": "takeaway"
+                }
+              ]
+            },
+            "takeaway": "日息看着小，乘上 365 天就很大。",
+            "derive": [
+              "一年 365 天。",
+              "0.05% × 365 ≈ 18%。",
+              "约是 2% 存款利率的 9 倍。"
+            ]
           },
           {
-            "text": "一步步看欠款怎么滚：欠 10000，按每月约 1.5% 计（约等于一年 18% 除以 12）。第 1 个月：10000 × 1.015 = 10150；第 2 个月：10150 × 1.015 ≈ 10302；一年不还：10000 × 1.015 × …（共 12 次）≈ 11956。",
+            "title": "欠款怎么越滚越多",
+            "idea": "欠款没还，利息会被算进欠款里。下个月，连利息一起再算利息。",
+            "visual": {
+              "type": "columns",
+              "base": {
+                "items": [
+                  {
+                    "label": "开始",
+                    "value": 10000
+                  },
+                  {
+                    "label": "1 个月",
+                    "value": 10150
+                  },
+                  {
+                    "label": "2 个月",
+                    "value": 10302
+                  },
+                  {
+                    "label": "12 个月",
+                    "value": 11956
+                  }
+                ],
+                "unit": "元"
+              },
+              "frames": [
+                {
+                  "set": {
+                    "play": 0,
+                    "step": 0
+                  },
+                  "cap": "先看骨架",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "play": 1,
+                    "step": 2
+                  },
+                  "cap": "看完整的图",
+                  "para": "takeaway"
+                }
+              ]
+            },
+            "takeaway": "欠款不还，利息生利息，越拖越多。",
+            "derive": [
+              "每月约 1.5%（18% ÷ 12）。",
+              "第 1 个月：10000 × 1.015 = 10150。",
+              "第 2 个月：10150 × 1.015 ≈ 10302。",
+              "一年乘 12 次，约 11956。"
+            ],
             "check": {
               "q": "欠款没还时，下个月的利息按什么算？",
               "options": [
@@ -9268,10 +23098,195 @@ window.DAYS = [
             }
           },
           {
-            "text": "“最低还款”的陷阱：只还最低额，没还的部分会继续计息，而且很多银行是按整笔账单、从消费日开始算利息的（具体以合同为准）。看起来压力小，实际成本很高。"
+            "title": "分期：看起来很便宜",
+            "idea": "**分期**就是把一大笔钱拆成每月还一点。很多分期不叫\"利息\"，叫\"手续费\"，其实就是借钱的租金。",
+            "visual": {
+              "type": "tag",
+              "base": {
+                "title": "手机 12000 元",
+                "big": "分 12 期 · 每期手续费 0.6%",
+                "small": "每月还 1000 元本金 + 72 元手续费"
+              },
+              "frames": [
+                {
+                  "set": {
+                    "play": 0,
+                    "step": 0
+                  },
+                  "cap": "先看骨架",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "play": 1,
+                    "step": 2
+                  },
+                  "cap": "看完整的图",
+                  "para": "takeaway"
+                }
+              ]
+            },
+            "takeaway": "分期手续费，本质上就是借钱的利息。",
+            "derive": [
+              "手续费每月：12000 × 0.6% = 72 元。",
+              "12 个月：72 × 12 = 864 元。",
+              "864 ÷ 12000 = 7.2%。看起来一年只要 7.2%。"
+            ]
           },
           {
-            "text": "推出两条原则：有欠款时，先还利率最高的；第 4 天的应急金，就是为了避免被迫借这种高息的钱。",
+            "title": "可你并没有一直欠 12000",
+            "idea": "你每月都在还本金。所以欠的钱一个月比一个月少。可手续费每个月还是按 12000 算。",
+            "visual": {
+              "type": "columns",
+              "base": {
+                "items": [
+                  {
+                    "label": "第 1 月",
+                    "value": 12000
+                  },
+                  {
+                    "label": "第 2 月",
+                    "value": 11000
+                  },
+                  {
+                    "label": "第 3 月",
+                    "value": 10000
+                  },
+                  {
+                    "label": "…",
+                    "value": 1
+                  },
+                  {
+                    "label": "第 11 月",
+                    "value": 2000
+                  },
+                  {
+                    "label": "第 12 月",
+                    "value": 1000
+                  },
+                  {
+                    "label": "平均只欠约",
+                    "value": 6500
+                  }
+                ],
+                "unit": "元"
+              },
+              "frames": [
+                {
+                  "set": {
+                    "play": 0,
+                    "step": 0
+                  },
+                  "cap": "先看骨架",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "play": 1,
+                    "step": 2
+                  },
+                  "cap": "看完整的图",
+                  "para": "takeaway"
+                }
+              ]
+            },
+            "takeaway": "分期越还越少，平均只借了大约一半。",
+            "derive": [
+              "第 1 个月欠 12000，最后 1 个月只欠 1000。",
+              "欠款每月少 1000，是均匀变少的。",
+              "像一段台阶，从最高一级均匀走到最低一级，平均就在正中间。",
+              "(12000 + 1000) ÷ 2 = 6500。"
+            ]
+          },
+          {
+            "title": "真实年化：约 13%",
+            "idea": "你一年付了 864 元，平均只借了 6500 元。按真正借到的钱算，才是真实的年化。",
+            "visual": {
+              "type": "tag",
+              "base": {
+                "title": "每期手续费 0.6%",
+                "big": "看起来 7.2%",
+                "small": "真实约 13%"
+              },
+              "frames": [
+                {
+                  "set": {
+                    "play": 0,
+                    "step": 0
+                  },
+                  "cap": "先看骨架",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "play": 1,
+                    "step": 2
+                  },
+                  "cap": "看完整的图",
+                  "para": "takeaway"
+                }
+              ]
+            },
+            "formula": "864 ÷ 6500 ≈ 13%",
+            "takeaway": "分期的真实年化，大约是\"月费率 × 12\"的两倍。",
+            "derive": [
+              "864 ÷ 6500 ≈ 0.133。",
+              "约 13%。",
+              "差不多是写出来的 7.2% 的两倍。"
+            ],
+            "check": {
+              "q": "为什么分期的真实年化比 7.2% 高？",
+              "options": [
+                "欠款每月在变少，手续费却一直按全额算",
+                "银行偷偷多收了一次钱"
+              ],
+              "answer": 0,
+              "why": "手续费每月按 12000 算，可你平均只欠约 6500，按真正借到的钱一算就高了。没有多收一次钱，所以「银行偷偷多收了一次钱」不对。"
+            }
+          },
+          {
+            "title": "串起来：先还最贵的钱",
+            "idea": "把三样都换成年化，放在一起比：信用卡最贵，分期其次，存款最便宜。有闲钱时，先还最贵的那一笔。",
+            "visual": {
+              "type": "columns",
+              "base": {
+                "items": [
+                  {
+                    "label": "存款",
+                    "value": 2
+                  },
+                  {
+                    "label": "分期约",
+                    "value": 13
+                  },
+                  {
+                    "label": "信用卡约",
+                    "value": 18
+                  }
+                ],
+                "unit": "%"
+              },
+              "frames": [
+                {
+                  "set": {
+                    "play": 0,
+                    "step": 0
+                  },
+                  "cap": "先看骨架",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "play": 1,
+                    "step": 2
+                  },
+                  "cap": "看完整的图",
+                  "para": "takeaway"
+                }
+              ]
+            },
+            "why": "先还 18% 的欠款，等于每年少付 18% 的租金。比拿去存 2% 划算得多。这也是第 4 天要留应急金的原因：急用时不必借这种贵钱。",
+            "takeaway": "借钱先换成年化比；先还最贵的，靠应急金少借。",
             "check": {
               "q": "第 4 天的应急金，在这里起什么作用？",
               "options": [
@@ -9330,7 +23345,7 @@ window.DAYS = [
           ],
           "ref": 2
         },
-        "take": "复利也会反咬：高息欠款利滚利，越拖越多。先还最贵的债。",
+        "take": "复利也会反咬：欠款利滚利。分期的真实年化约是\"月费率 × 12\"的两倍。先还最贵的债。",
         "quiz": [
           {
             "q": "日利率 0.05%，粗算年利率大约是多少？",
@@ -9352,7 +23367,18 @@ window.DAYS = [
             ],
             "answer": 0,
             "why": "存起来每年多 2%，欠着每年多付 18%。先还信用卡，相当于拿到了 18% 的“收益”。",
-            "ref": 4
+            "ref": 6
+          },
+          {
+            "q": "分期广告写\"每期手续费 0.5%，分 12 期\"。真实年化大约是多少？",
+            "options": [
+              "约 11%",
+              "6%",
+              "0.5%"
+            ],
+            "answer": 0,
+            "why": "0.5% × 12 = 6%，这是按全额算的。你平均只借了约一半，真实年化约是它的两倍，约 11%～12%。「0.5%」是每个月的数，还没换成一年。",
+            "ref": 5
           }
         ]
       },
@@ -9368,14 +23394,74 @@ window.DAYS = [
             "why": "可他没解释：同一件事，为什么每个人感到的压力不一样？如果压力只是身体对压力源的反应，同一个压力源应该让所有人差不多紧张。",
             "takeaway": "同一个压力源，不同人的压力不同，差别从哪来？",
             "example": "同样被领导叫去谈话，有人觉得机会来了，有人一晚上睡不着。事情一样，反应差得很远。",
-            "review": true
+            "review": true,
+            "visual": {
+              "type": "appraise",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "同一个压力源，不同人的压力不同，差别从哪来",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "同一个压力源，不同人的压力不同，差别从哪来",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "同一个压力源，不同人的压力不同，差别从哪来？",
+                  "para": "takeaway"
+                }
+              ]
+            }
           },
           {
             "title": "初级评价：这事对我意味着什么",
             "idea": "拉扎勒斯认为，压力取决于你怎么评价这件事。第一步叫**初级评价**：这事和我有关吗？是威胁、挑战，还是无关？",
             "why": "拉扎勒斯在 1966 年系统提出这套理论。事情不会直接变成压力，中间要经过大脑的判断。判断为\"无关\"，就没有压力；判断为\"威胁\"，会担心失去什么；判断为\"挑战\"，会觉得有机会得到什么。初级评价不同，后面的感受就分了岔。",
             "takeaway": "初级评价：判断这事是威胁、挑战还是无关。",
-            "example": "拉扎勒斯团队在 1960 年代让人看同一段令人不适的割礼仪式纪录片，配不同的解说：强调疼痛的那组，皮肤出汗、心率明显更高；解说成\"不痛、是喜庆仪式\"或用冷静的学术口吻的组，反应低得多。"
+            "example": "拉扎勒斯团队在 1960 年代让人看同一段令人不适的割礼仪式纪录片，配不同的解说：强调疼痛的那组，皮肤出汗、心率明显更高；解说成\"不痛、是喜庆仪式\"或用冷静的学术口吻的组，反应低得多。",
+            "visual": {
+              "type": "appraise",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "初级评价：判断这事是威胁、挑战还是无关",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "初级评价：判断这事是威胁、挑战还是无关",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "初级评价：判断这事是威胁、挑战还是无关。",
+                  "para": "takeaway"
+                }
+              ]
+            }
           },
           {
             "title": "次级评价：我应付得了吗",
@@ -9397,6 +23483,36 @@ window.DAYS = [
               ],
               "answer": 0,
               "why": "难不难只是\"要求\"那一半，还要看资源够不够。觉得资源够，难事也可以是挑战，所以「只要事情很难就会」不对。"
+            },
+            "visual": {
+              "type": "appraise",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "要求大于资源时，压力就出现了",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "要求大于资源时，压力就出现了",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "要求大于资源时，压力就出现了。",
+                  "para": "takeaway"
+                }
+              ]
             }
           },
           {
@@ -9404,7 +23520,36 @@ window.DAYS = [
             "idea": "评价完了就要应对。第一类叫**问题聚焦应对**：直接去改变让你有压力的情境。",
             "why": "既然压力来自\"要求 > 资源\"，最直接的办法就是降低要求或增加资源：拆分任务、做计划、学新技能、找人帮忙。问题本身被解决了，压力也就没了来源。",
             "takeaway": "问题聚焦应对：改变情境，从源头减压。",
-            "example": "账号数据下滑让你焦虑。问题聚焦的做法是：翻看最近十条视频的数据，找出观众在哪几秒流失最多，下一条就改开头。"
+            "example": "账号数据下滑让你焦虑。问题聚焦的做法是：翻看最近十条视频的数据，找出观众在哪几秒流失最多，下一条就改开头。",
+            "visual": {
+              "type": "comic",
+              "panels": [
+                {
+                  "bg": "room",
+                  "cast": [
+                    {
+                      "who": "xiaoman",
+                      "x": 0.48,
+                      "y": 0.72,
+                      "face": "talk"
+                    }
+                  ],
+                  "cap": "问题聚焦应对：改变情境，从源"
+                },
+                {
+                  "bg": "street",
+                  "cast": [
+                    {
+                      "who": "xiaoyin",
+                      "x": 0.48,
+                      "y": 0.72,
+                      "face": "talk"
+                    }
+                  ],
+                  "cap": "问题聚焦应对：去改变情境"
+                }
+              ]
+            }
           },
           {
             "title": "情绪聚焦应对：去照顾感受",
@@ -9421,6 +23566,35 @@ window.DAYS = [
               ],
               "answer": 0,
               "why": "雨本身改不了，你做的是照顾自己的感受，所以是情绪聚焦。「问题聚焦应对」是带伞这类直接改变处境的做法。"
+            },
+            "visual": {
+              "type": "comic",
+              "panels": [
+                {
+                  "bg": "room",
+                  "cast": [
+                    {
+                      "who": "xiaoman",
+                      "x": 0.48,
+                      "y": 0.72,
+                      "face": "talk"
+                    }
+                  ],
+                  "cap": "能改变的解决问题，改变不了的"
+                },
+                {
+                  "bg": "street",
+                  "cast": [
+                    {
+                      "who": "xiaoyin",
+                      "x": 0.48,
+                      "y": 0.72,
+                      "face": "talk"
+                    }
+                  ],
+                  "cap": "情绪聚焦应对：去照顾感受"
+                }
+              ]
             }
           },
           {
@@ -9428,7 +23602,37 @@ window.DAYS = [
             "idea": "回到开头：同样被领导叫去谈话，有人兴奋有人慌，差别在评价：是挑战还是威胁，资源够不够。",
             "why": "这和第 4 天的二因素理论是同一个思路：大脑的\"解释\"决定了你的体验。塞利讲身体怎么扛，拉扎勒斯补上\"人怎么看\"。它的局限是：评价和情绪很难分开测量；也有学者（如扎荣茨）认为，有些情绪反应快到来不及评价就出现了。",
             "takeaway": "压力来自评价；应对分两类，按能不能改变来选。",
-            "example": "给粉丝的小练习：遇到压力先问自己两句——\"这事对我意味着什么？\"\"我手里有哪些资源？\"写下来，再决定是动手解决，还是先照顾情绪。"
+            "example": "给粉丝的小练习：遇到压力先问自己两句——\"这事对我意味着什么？\"\"我手里有哪些资源？\"写下来，再决定是动手解决，还是先照顾情绪。",
+            "visual": {
+              "type": "appraise",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "压力来自评价；应对分两类，按能不能改变来选",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "压力来自评价；应对分两类，按能不能改变来选",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "压力来自评价；应对分两类，按能不能改变来选。",
+                  "para": "takeaway"
+                }
+              ]
+            }
           }
         ],
         "interaction": {
@@ -9485,123 +23689,583 @@ window.DAYS = [
             "why": "改变不了的情境，硬去“解决”只会更无力。这时照顾自己的情绪更有效；能做的具体事（如安排照顾）可以配合问题聚焦。",
             "ref": 4
           }
-        ]
+        ],
+        "hookComic": {
+          "panels": [
+            {
+              "bg": "room",
+              "cast": [
+                {
+                  "who": "xiaoman",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "talk"
+                }
+              ],
+              "cap": "同样被领导叫去谈话，有人觉得"
+            },
+            {
+              "bg": "street",
+              "cast": [
+                {
+                  "who": "xiaoyin",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "talk"
+                }
+              ],
+              "cap": "差别在哪"
+            },
+            {
+              "bg": "shop",
+              "cast": [
+                {
+                  "who": "xiaoman",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "talk"
+                }
+              ],
+              "cap": "差别在哪"
+            },
+            {
+              "bg": "plain",
+              "cast": [
+                {
+                  "who": "xiaoyin",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "wow"
+                }
+              ],
+              "cap": "差别在哪"
+            }
+          ]
+        }
       },
       "english": {
         "id": "d10-english",
-        "title": "用英语讲颜色",
-        "minutes": 6,
-        "hook": "complementary 和 complimentary 只差一个字母，一个是\"互补的\"，一个是\"赞美的、免费的\"。",
+        "title": "Which Dress?：比一比，短词加 -er，长词用 more",
+        "minutes": 9,
+        "hook": "cheap 能说 cheaper，beautiful 却不能说 beautifuler。英语为什么要分两种比法？",
+        "hookComic": {
+          "panels": [
+            {
+              "bg": "kitchen",
+              "cast": [
+                {
+                  "who": "mia",
+                  "x": 0.32,
+                  "y": 0.72,
+                  "face": "happy"
+                },
+                {
+                  "who": "leo",
+                  "x": 0.62,
+                  "y": 0.74,
+                  "face": "talk"
+                },
+                {
+                  "who": "mochi",
+                  "x": 0.8,
+                  "y": 0.82,
+                  "face": "happy",
+                  "k": 0.7
+                }
+              ]
+            },
+            {
+              "bg": "room",
+              "cast": [
+                {
+                  "who": "mia",
+                  "x": 0.32,
+                  "y": 0.72,
+                  "face": "happy"
+                },
+                {
+                  "who": "leo",
+                  "x": 0.62,
+                  "y": 0.74,
+                  "face": "talk"
+                },
+                {
+                  "who": "mochi",
+                  "x": 0.8,
+                  "y": 0.82,
+                  "face": "happy",
+                  "k": 0.7
+                }
+              ]
+            },
+            {
+              "bg": "street",
+              "cast": [
+                {
+                  "who": "mia",
+                  "x": 0.32,
+                  "y": 0.72,
+                  "face": "happy"
+                },
+                {
+                  "who": "leo",
+                  "x": 0.62,
+                  "y": 0.74,
+                  "face": "talk"
+                },
+                {
+                  "who": "mochi",
+                  "x": 0.8,
+                  "y": 0.82,
+                  "face": "happy",
+                  "k": 0.7
+                }
+              ]
+            }
+          ]
+        },
+        "story": {
+          "title": "Which Dress?",
+          "panels": [
+            {
+              "bg": "kitchen",
+              "cast": [
+                {
+                  "who": "mia",
+                  "x": 0.32,
+                  "y": 0.72,
+                  "face": "happy"
+                },
+                {
+                  "who": "leo",
+                  "x": 0.62,
+                  "y": 0.74,
+                  "face": "talk"
+                },
+                {
+                  "who": "mochi",
+                  "x": 0.8,
+                  "y": 0.82,
+                  "face": "happy",
+                  "k": 0.7
+                }
+              ]
+            },
+            {
+              "bg": "room",
+              "cast": [
+                {
+                  "who": "mia",
+                  "x": 0.32,
+                  "y": 0.72,
+                  "face": "happy"
+                },
+                {
+                  "who": "leo",
+                  "x": 0.62,
+                  "y": 0.74,
+                  "face": "talk"
+                },
+                {
+                  "who": "mochi",
+                  "x": 0.8,
+                  "y": 0.82,
+                  "face": "happy",
+                  "k": 0.7
+                }
+              ]
+            },
+            {
+              "bg": "street",
+              "cast": [
+                {
+                  "who": "mia",
+                  "x": 0.32,
+                  "y": 0.72,
+                  "face": "happy"
+                },
+                {
+                  "who": "leo",
+                  "x": 0.62,
+                  "y": 0.74,
+                  "face": "talk"
+                },
+                {
+                  "who": "mochi",
+                  "x": 0.8,
+                  "y": 0.82,
+                  "face": "happy",
+                  "k": 0.7
+                }
+              ]
+            },
+            {
+              "bg": "shop",
+              "cast": [
+                {
+                  "who": "mia",
+                  "x": 0.32,
+                  "y": 0.72,
+                  "face": "happy"
+                },
+                {
+                  "who": "leo",
+                  "x": 0.62,
+                  "y": 0.74,
+                  "face": "talk"
+                },
+                {
+                  "who": "mochi",
+                  "x": 0.8,
+                  "y": 0.82,
+                  "face": "happy",
+                  "k": 0.7
+                }
+              ]
+            }
+          ],
+          "lines": [
+            {
+              "who": "A",
+              "en": "Leo, which dress is better? The red one or the green one?",
+              "zh": "Leo，哪条裙子更好？红的还是绿的？",
+              "panel": 0
+            },
+            {
+              "who": "B",
+              "en": "The red one is shorter. The green one is longer.",
+              "zh": "红的更短，绿的更长。",
+              "panel": 0
+            },
+            {
+              "who": "A",
+              "en": "I know! But which one is more beautiful?",
+              "zh": "这我知道！可哪条更好看？",
+              "panel": 1
+            },
+            {
+              "who": "B",
+              "en": "Hmm. The red one is brighter. But it's more expensive.",
+              "zh": "嗯……红的更鲜亮，可它更贵。",
+              "panel": 1
+            },
+            {
+              "who": "B",
+              "en": "The green one is cheaper.",
+              "zh": "绿的更便宜。",
+              "panel": 2
+            },
+            {
+              "who": "A",
+              "en": "Leo! That's not helpful!",
+              "zh": "Leo！你说了等于没说！",
+              "panel": 2
+            },
+            {
+              "who": "N",
+              "en": "Mochi is sleeping on the green dress.",
+              "zh": "Mochi 正睡在绿裙子上。",
+              "panel": 3
+            },
+            {
+              "who": "A",
+              "en": "Fine. The red one is mine. The green one is Mochi's.",
+              "zh": "好吧。红的归我，绿的归 Mochi。",
+              "panel": 3
+            }
+          ]
+        },
+        "words": [
+          {
+            "w": "bright",
+            "ipa": "braɪt",
+            "stress": "bright",
+            "pic": "🔆",
+            "zh": "鲜亮的，明亮的",
+            "ex": "The red one is brighter.",
+            "part": "gh 不读。时尚课里\"明度高\"的颜色就是 bright"
+          },
+          {
+            "w": "cheap",
+            "ipa": "tʃiːp",
+            "stress": "cheap",
+            "pic": "🪙",
+            "zh": "便宜的",
+            "ex": "The green one is cheaper.",
+            "part": "ea 读长音 /iː/"
+          },
+          {
+            "w": "expensive",
+            "ipa": "ɪkˈspensɪv",
+            "stress": "pen",
+            "pic": "💎",
+            "zh": "贵的",
+            "ex": "It's more expensive.",
+            "part": "ex- 向外 + pens 付钱：要往外付很多钱"
+          },
+          {
+            "w": "helpful",
+            "ipa": "ˈhelpfəl",
+            "stress": "help",
+            "pic": "🤝",
+            "zh": "有帮助的",
+            "ex": "That's not helpful!",
+            "part": "help + -ful 充满 → 很有帮助的（colorful、beautiful 也是）"
+          }
+        ],
         "steps": [
           {
-            "title": "三个旋钮和互补色",
-            "idea": "时尚课学过：颜色有三个旋钮，色相、明度、纯度；色轮上正对面的两个颜色叫互补色，比如红和绿。",
-            "why": "今天给这些概念配上英语名字。概念已经懂了，挂英语词会很快。",
-            "takeaway": "颜色三旋钮：色相、明度、纯度；互补色在色轮正对面。",
-            "example": "红的正对面是绿，绿 = 黄 + 蓝，一点红都不含（第 4 天）；红和绿放在一起，三原色就都齐了。",
-            "review": true
-          },
-          {
-            "title": "纯度叫 saturation",
-            "idea": "三个旋钮的英文是 hue（色相）、value 或 lightness（明度）、**saturation**（纯度，也叫饱和度）。",
-            "why": "saturation 来自动词 saturate，意思是\"浸透、灌满\"，比如海绵吸饱了水。颜色里的本色灌得越满，就越鲜艳；掺进灰，本色就不满了，颜色变浊。所以鲜艳的颜色是 highly saturated。",
-            "takeaway": "saturation = 本色\"浸\"得有多满：满就鲜艳，不满就浊。",
-            "example": "像第 3 天说的\"音量\"：saturation 开到最大，颜色最\"响\"；往下调，颜色越来越安静。莫兰迪色就是把 saturation 调低了。",
-            "exLabel": "打个比方",
-            "derive": [
-              "saturate = 浸透、灌满。",
-              "本色灌满 → 鲜艳 → 纯度高。",
-              "掺灰 → 不满 → 浊 → 纯度低。"
-            ],
+            "title": "先听故事",
+            "kind": "story-listen",
+            "idea": "看图听。最后谁拿到了绿裙子？",
             "check": {
-              "q": "莫兰迪色的 saturation 是？",
+              "q": "最后绿裙子归了谁？",
               "options": [
-                "低",
-                "高"
+                "Mochi",
+                "Mia"
               ],
               "answer": 0,
-              "why": "莫兰迪色都掺了灰，本色不满，saturation 低。「高」说的是鲜艳、刺激强的颜色。"
+              "why": "Mochi 睡在绿裙子上，Mia 说 [[The green one is Mochi's.]]。Mia 拿的是红的。"
             }
           },
           {
-            "title": "互补：把缺的补全",
-            "idea": "互补色叫 **complementary colors**。complement 的意思是\"补全\"：把缺的那一块补上，凑成完整。",
-            "why": "complement 和 complete（完整的）是同一个词根。互补色为什么叫\"补全\"？红只含红，绿含黄和蓝，两个合起来，三原色一个不缺，色轮的成分就补全了。",
-            "takeaway": "complementary = 补全的：两个颜色合起来，三原色就齐了。",
-            "example": "Pink and green are complementary colors. 粉是加了白的红，所以粉和绿也是一对互补色。蓝和橙也是：橙 = 红 + 黄，正好补上蓝缺的那两色。"
+            "title": "四个新词",
+            "kind": "words",
+            "idea": "每个词都点一下 ▶。expensive 的重音在中间 PEN。"
           },
           {
-            "title": "带 i 的词：赞美",
-            "idea": "把 e 换成 i，complimentary 就是另一个词：来自 compliment（赞美），意思是\"赞美的\"，也常指\"免费赠送的\"。",
-            "why": "免费赠送，是商家表示礼貌和好意的方式，所以酒店、餐厅写 complimentary，意思是不另收钱。两个词读音完全一样，只能靠拼写和语境分。记法：complement 带 e，像 complete（补全）；compliment 带 i，像 I like it（我喜欢）。",
-            "takeaway": "带 e 是补全（互补），带 i 是赞美、免费。",
-            "example": "complimentary breakfast 是免费早餐；She gave me a compliment. 是她夸了我。讲配色时，说的永远是 complementary colors。",
+            "title": "发音 · 长 ee 和短 i",
+            "idea": "[[cheap]] 里的 ee 是长音：嘴角往两边拉开，拖长。[[chip]] 里的 i 是短音：嘴巴放松，一下就收。",
+            "why": "中文的元音没有长短之分，所以很多人把两个读成一样。可英语里长短不同就是不同的词：[[cheap]] 是便宜，[[chip]] 是薯片；[[sheep]] 是绵羊，[[ship]] 是船。短音不只是短，嘴也更松，舌头稍低一点。",
+            "example": "[[green]]、[[sleep]]、[[cheaper]] 是长音；[[it]]、[[is]]、[[this]] 是短音。",
+            "takeaway": "ee 长而紧，嘴角拉开；i 短而松。",
+            "visual": {
+              "type": "mouth",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "ee 长而紧，嘴角拉开；i 短而松",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "ee 长而紧，嘴角拉开；i 短而松",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "ee 长而紧，嘴角拉开；i 短而松。",
+                  "para": "takeaway"
+                }
+              ]
+            },
             "check": {
-              "q": "酒店写着 complimentary breakfast，意思是？",
+              "q": "[[cheap]] 里的元音是？",
               "options": [
-                "免费早餐",
-                "互补的早餐"
+                "长音，嘴角拉开",
+                "短音，嘴放松"
               ],
               "answer": 0,
-              "why": "带 i 的 complimentary 是\"赠送的、免费的\"。「互补的」要拼成带 e 的 complementary。"
+              "why": "cheap 的 ea 读长音 /iː/。「短音」是 chip 里的 i。"
             }
           },
           {
-            "title": "串起来：同一个音，怎么分",
-            "idea": "回到开头：complementary 和 complimentary 读音一样，听的时候看不到拼写，只能靠语境。讲颜色搭配，就是带 e 的\"互补\"。",
-            "why": "耳朵只收到声音，拼写是看不见的。所以先判断这句话在讲什么：讲颜色、搭配，就是 complementary；讲夸人、送东西，才是 complimentary。同样，听到 saturated，就知道在说颜色鲜艳的程度。",
-            "takeaway": "同音词靠语境分；讲配色用 complementary、saturated。",
-            "example": "Pink and green are complementary colors.（粉和绿是互补色。）This color is too saturated.（这个颜色饱和度太高，太艳了。）第二句可以用来点评一件过于刺眼的单品。"
+            "title": "语法 · 比一比：短词加 -er，长词用 more，比谁用 than",
+            "idea": "比较两样东西，短的形容词加 -er：short → [[shorter]]；长的形容词前面加 more：[[more beautiful]]。比谁，后面接 than。",
+            "why": "-er 是个很老的词尾，接在短词后面又顺又快，cheap-er 只有两拍。长词本来就有三四个音节，再加 -er 就太长、太难读，所以英语改在前面放一个单独的 more。大致的分界：一个音节加 -er；三个音节以上用 more；两个音节以 -y 结尾的，变成 -ier，比如 happy → [[happier]]。",
+            "example": "[[cheap]] → [[cheaper]]，[[bright]] → [[brighter]]，[[expensive]] → [[more expensive]]。[[good]] → [[better]] 是例外，要单独记。",
+            "takeaway": "短词加 -er，长词用 more，比谁用 than。",
+            "visual": {
+              "type": "sentence",
+              "base": {
+                "rows": [
+                  {
+                    "bricks": [
+                      {
+                        "text": "The",
+                        "role": "who"
+                      },
+                      {
+                        "text": "is",
+                        "role": "verb"
+                      },
+                      {
+                        "text": "shorter",
+                        "role": "what"
+                      },
+                      {
+                        "text": "than",
+                        "role": "extra"
+                      },
+                      {
+                        "text": "The",
+                        "role": "who"
+                      },
+                      {
+                        "text": "is",
+                        "role": "verb"
+                      },
+                      {
+                        "text": "more",
+                        "role": "what"
+                      },
+                      {
+                        "text": "than",
+                        "role": "extra"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "frames": [
+                {
+                  "set": {
+                    "play": 0
+                  },
+                  "cap": "比较两样东西，短的形容词加 -er：short → [[shorter]]；长的",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "play": 1
+                  },
+                  "cap": "短词加 -er，长词用 more，比谁用 than。",
+                  "para": "takeaway"
+                }
+              ]
+            },
+            "check": {
+              "q": "expensive 怎么比？",
+              "options": [
+                "more expensive",
+                "expensiver"
+              ],
+              "answer": 0,
+              "why": "expensive 有三个音节，用 more。「expensiver」太长，英语不这么说。"
+            }
+          },
+          {
+            "title": "再读故事",
+            "kind": "story-read",
+            "idea": "看着字听，找出所有的 -er 和 more。"
+          },
+          {
+            "title": "红的比绿的……",
+            "kind": "drill",
+            "frame": "The red one is {a} than the green one.",
+            "zh": "红的比绿的{a}。",
+            "slots": {
+              "a": [
+                {
+                  "en": "brighter",
+                  "zh": "更鲜亮",
+                  "pic": "🔆"
+                },
+                {
+                  "en": "shorter",
+                  "zh": "更短",
+                  "pic": "📏"
+                },
+                {
+                  "en": "more expensive",
+                  "zh": "更贵",
+                  "pic": "💎"
+                },
+                {
+                  "en": "more beautiful",
+                  "zh": "更好看",
+                  "pic": "✨"
+                }
+              ]
+            },
+            "need": 3
+          },
+          {
+            "title": "跟读",
+            "kind": "shadow",
+            "tip": "cheaper、green 的 ee 要拖长、嘴角拉开。",
+            "lines": [
+              1,
+              4,
+              5
+            ]
+          },
+          {
+            "title": "复述：串起来",
+            "kind": "retell",
+            "idea": "看着图，用 -er 和 more 把两条裙子比一比。",
+            "keys": [
+              [
+                "red",
+                "green",
+                "shorter",
+                "longer"
+              ],
+              [
+                "more beautiful",
+                "brighter",
+                "more expensive"
+              ],
+              [
+                "cheaper",
+                "helpful"
+              ],
+              [
+                "Mochi",
+                "mine"
+              ]
+            ]
           }
         ],
         "interaction": {
           "type": "listen",
-          "prompt": "听一听，选出你听到的句子",
-          "audio": "Pink and green are complementary colors.",
-          "answer": 0,
-          "why": "「complementary」和「complimentary」读音完全一样。听力里要靠语境判断：讲颜色搭配，就是 complementary。注意 green 和 grey。",
+          "prompt": "听一听，这句话是什么意思？",
+          "audio": "The green one is cheaper.",
+          "showText": "after",
           "options": [
-            "Pink and green are complementary colors.",
-            "Pink and green are complimentary colors.",
-            "Pink and grey are complementary colors."
+            "绿的更便宜。",
+            "绿的更贵。",
+            "红的更便宜。"
           ],
-          "ref": [
-            3,
-            4
-          ]
+          "answer": 0,
+          "why": "开头是 the green one，后面是长音 ee 的 cheaper。「更贵」是 more expensive；「红的」要说 the red one。",
+          "ref": 3
         },
-        "take": "hue 色相、value 明度、saturation 纯度；complementary（补全的）= 互补色，complimentary = 赞美的、免费的。",
+        "take": "短词加 -er，长词用 more，比谁用 than；ee 长而紧，i 短而松。",
         "quiz": [
           {
-            "q": "complementary 和 complimentary 的区别是什么？",
+            "q": "中文\"红的比绿的更好看\"，英语怎么说？",
             "options": [
-              "complementary 是“互补的”，complimentary 是“赞美的、免费的”",
-              "两个完全同义",
-              "complementary 是“免费的”"
+              "The red one is more beautiful than the green one.",
+              "The red one is beautifuler than the green one.",
+              "The red one more beautiful than the green one."
             ],
             "answer": 0,
-            "why": "complement 是“补全”，compliment 是“赞美”。两者读音相同，拼写差一个字母。",
-            "ref": [
-              2,
-              3
-            ]
+            "why": "beautiful 是长词，用 more，比谁用 than。「beautifuler」不能这样加；「The red one more beautiful…」缺了动词 is（第 1 天）。",
+            "ref": 3
           },
           {
-            "q": "“这个颜色饱和度太高了”怎么说？",
+            "q": "听一听，是哪个词？",
             "options": [
-              "This color is too saturated.",
-              "This color is too neutral.",
-              "This color is too complementary."
+              "cheap",
+              "chip",
+              "jeep"
             ],
             "answer": 0,
-            "why": "饱和度高就是“浸得太满”，用 saturated。neutral 是中性色，正好相反。",
-            "ref": 1
+            "why": "元音长、嘴角拉开，开头是 ch，是 cheap。「chip」元音短；「jeep」开头是 j，喉咙要震。",
+            "ref": 2,
+            "audio": "cheap"
           }
-        ],
-        "tts": [
-          "hue",
-          "saturation",
-          "Pink and green are complementary colors."
         ]
       }
     }
@@ -9623,7 +24287,37 @@ window.DAYS = [
             "why": "这几条说的是同一件事：颜色之间要有主有次。今天把\"主次\"变成具体的面积比例。",
             "takeaway": "强颜色少用，颜色之间要分主次。",
             "example": "灰蓝大衣配正红小包，好看；正红上衣配正绿长裤，就打架。",
-            "review": true
+            "review": true,
+            "visual": {
+              "type": "outfit",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "强颜色少用，颜色之间要分主次",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "强颜色少用，颜色之间要分主次",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "强颜色少用，颜色之间要分主次。",
+                  "para": "takeaway"
+                }
+              ]
+            }
           },
           {
             "title": "70 / 25 / 5：主色、辅色、点缀色",
@@ -9646,6 +24340,36 @@ window.DAYS = [
               ],
               "answer": 0,
               "why": "主色约 70%，也就是七成左右。「5% 左右」是点缀色的面积。"
+            },
+            "visual": {
+              "type": "outfit",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "主色约 70、辅色约 25、点缀约 5，先定主角",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "主色约 70、辅色约 25、点缀约 5，先定主角",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "主色约 70、辅色约 25、点缀约 5，先定主角。",
+                  "para": "takeaway"
+                }
+              ]
             }
           },
           {
@@ -9662,6 +24386,36 @@ window.DAYS = [
               ],
               "answer": 0,
               "why": "一小块强色被安静的大面积包围，对比最强，所以显眼。点缀色面积最小，「它占的面积最大」不对。"
+            },
+            "visual": {
+              "type": "outfit",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "最强的颜色，放在最小的面积上",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "最强的颜色，放在最小的面积上",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "最强的颜色，放在最小的面积上。",
+                  "para": "takeaway"
+                }
+              ]
             }
           },
           {
@@ -9669,7 +24423,37 @@ window.DAYS = [
             "idea": "回到开头：颜色一样，差别在面积。有主有次就稳；平分，或者强色占大头，就乱。",
             "why": "平分时没有主角（卡 2）；强色占大头时，本该做点缀的颜色铺满全身，又刺眼又抢戏（卡 3）。70 / 25 / 5 不是精确的定律，和第 3 天金融课的 50/30/20 预算一样，是一个好用的起点，关键是有主有次。",
             "takeaway": "同样的颜色，排好主次就有秩序。",
-            "example": "同样是藏青、米白、红：藏青大衣 + 米白内搭 + 红包，很稳；三个颜色各占三分之一，就乱；一身红裙配藏青小包，就太冲。"
+            "example": "同样是藏青、米白、红：藏青大衣 + 米白内搭 + 红包，很稳；三个颜色各占三分之一，就乱；一身红裙配藏青小包，就太冲。",
+            "visual": {
+              "type": "outfit",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "同样的颜色，排好主次就有秩序",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "同样的颜色，排好主次就有秩序",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "同样的颜色，排好主次就有秩序。",
+                  "para": "takeaway"
+                }
+              ]
+            }
           }
         ],
         "interaction": {
@@ -9747,7 +24531,59 @@ window.DAYS = [
             "why": "问题出在比例，而不是颜色本身。分出主次后，同样的三个颜色就能变得有秩序。",
             "ref": 1
           }
-        ]
+        ],
+        "hookComic": {
+          "panels": [
+            {
+              "bg": "room",
+              "cast": [
+                {
+                  "who": "xiaoman",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "talk"
+                }
+              ],
+              "cap": "同样三个颜色，一种穿法好看，"
+            },
+            {
+              "bg": "street",
+              "cast": [
+                {
+                  "who": "xiaoyin",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "talk"
+                }
+              ],
+              "cap": "可能只是面积分错了"
+            },
+            {
+              "bg": "shop",
+              "cast": [
+                {
+                  "who": "xiaoman",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "talk"
+                }
+              ],
+              "cap": "可能只是面积分错了"
+            },
+            {
+              "bg": "plain",
+              "cast": [
+                {
+                  "who": "xiaoyin",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "wow"
+                }
+              ],
+              "cap": "可能只是面积分错了"
+            }
+          ]
+        }
       },
       "history": {
         "id": "d11-history",
@@ -9761,7 +24597,10 @@ window.DAYS = [
             "why": "他靠的正是五代那条规矩：兵强马壮者为天子。五代的五个朝代，都是这样上台、又这样倒台的。",
             "takeaway": "宋的开国，本身就是五代式的一场兵变。",
             "example": "传说兵变那天，部下把一件黄袍披到他身上，拥他称帝，这就是\"黄袍加身\"。",
-            "review": true
+            "review": true,
+            "visual": {
+              "recall": "d10-history#4"
+            }
           },
           {
             "title": "如果你是赵匡胤",
@@ -9773,7 +24612,36 @@ window.DAYS = [
               "五代的病根：兵和钱在将领、地方手里。",
               "杀功臣风险大。",
               "要和平地把兵、钱收回中央。"
-            ]
+            ],
+            "visual": {
+              "type": "comic",
+              "panels": [
+                {
+                  "bg": "room",
+                  "cast": [
+                    {
+                      "who": "xiaoman",
+                      "x": 0.48,
+                      "y": 0.72,
+                      "face": "talk"
+                    }
+                  ],
+                  "cap": "赵匡胤的难题：不流血，又要让"
+                },
+                {
+                  "bg": "street",
+                  "cast": [
+                    {
+                      "who": "xiaoyin",
+                      "x": 0.48,
+                      "y": 0.72,
+                      "face": "talk"
+                    }
+                  ],
+                  "cap": "如果你是赵匡胤"
+                }
+              ]
+            }
           },
           {
             "title": "杯酒释兵权：一笔交易",
@@ -9781,7 +24649,36 @@ window.DAYS = [
             "why": "这是一笔交易：大将交出兵权，换来荣华富贵和全家平安；皇帝收回兵权，又不用背杀功臣的骂名。对双方来说，都比互相猜疑、最后兵戎相见划算。",
             "takeaway": "杯酒释兵权：用富贵换兵权，不流血地收回开国大将的兵。",
             "example": "像一家公司的几位合伙人各自带着核心团队。老板不撕破脸，而是给足股份和分红，请他们退到幕后享清福，把团队交给公司统一管理。",
-            "exLabel": "打个比方"
+            "exLabel": "打个比方",
+            "visual": {
+              "type": "comic",
+              "panels": [
+                {
+                  "bg": "room",
+                  "cast": [
+                    {
+                      "who": "xiaoman",
+                      "x": 0.48,
+                      "y": 0.72,
+                      "face": "talk"
+                    }
+                  ],
+                  "cap": "杯酒释兵权：用富贵换兵权，不"
+                },
+                {
+                  "bg": "street",
+                  "cast": [
+                    {
+                      "who": "xiaoyin",
+                      "x": 0.48,
+                      "y": 0.72,
+                      "face": "talk"
+                    }
+                  ],
+                  "cap": "杯酒释兵权：一笔交易"
+                }
+              ]
+            }
           },
           {
             "title": "重文抑武：把兵、钱、地拆开",
@@ -9797,12 +24694,33 @@ window.DAYS = [
               "三样拆开，谁都凑不齐。"
             ],
             "visual": {
-              "type": "flow",
-              "nodes": [
-                "兵归皇帝",
-                "钱归中央",
-                "地方派文官",
-                "没人凑齐三样"
+              "type": "chain",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "重文抑武：把兵、钱、地拆开，交给不同的人，没人凑得齐",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "重文抑武：把兵、钱、地拆开，交给不同的人，没人凑得齐",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "重文抑武：把兵、钱、地拆开，交给不同的人，没人凑得齐。",
+                  "para": "takeaway"
+                }
               ]
             }
           },
@@ -9820,6 +24738,36 @@ window.DAYS = [
               ],
               "answer": 0,
               "why": "宋把兵、钱、地拆开，谁也凑不齐三样，所以「没有，这个老问题解决了」。「有，比唐朝还严重」不对，宋三百多年里没再出现藩镇割据。"
+            },
+            "visual": {
+              "type": "tug",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "拆开兵、钱、地，宋治好了五代\"武将篡位\"的病",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "拆开兵、钱、地，宋治好了五代\"武将篡位\"的病",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "拆开兵、钱、地，宋治好了五代\"武将篡位\"的病。",
+                  "para": "takeaway"
+                }
+              ]
             }
           },
           {
@@ -9833,7 +24781,37 @@ window.DAYS = [
               "防内乱，就让将领没法控制军队。",
               "将领控制不了军队，仗也就打不好。",
               "内部的安全，是用对外的弱换来的。"
-            ]
+            ],
+            "visual": {
+              "type": "chain",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "重文抑武防住了内乱，代价是对外作战的弱",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "重文抑武防住了内乱，代价是对外作战的弱",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "重文抑武防住了内乱，代价是对外作战的弱。",
+                  "para": "takeaway"
+                }
+              ]
+            }
           },
           {
             "title": "靖康之变：北宋变南宋",
@@ -9855,6 +24833,36 @@ window.DAYS = [
               ],
               "answer": 0,
               "why": "靖康之变后开封落入金人之手，南宋把都城定在「临安（今杭州）」。「开封」是北宋的都城。"
+            },
+            "visual": {
+              "type": "histmap",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "1127 年靖康之变，北宋亡；赵构南迁，南宋定都临安",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "1127 年靖康之变，北宋亡；赵构南迁，南宋定都临安",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "1127 年靖康之变，北宋亡；赵构南迁，南宋定都临安。",
+                  "para": "takeaway"
+                }
+              ]
             }
           },
           {
@@ -9872,6 +24880,36 @@ window.DAYS = [
               ],
               "answer": 0,
               "why": "四川流通的是铁钱，带着又重又不方便，纸质的交子就派上了用场。「四川人不会铸钱」不对，那些铁钱就是他们铸的。"
+            },
+            "visual": {
+              "type": "blocks",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "宋不打内战、南方繁荣，经济重心南移；四川铁钱太重，催生了交子",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "宋不打内战、南方繁荣，经济重心南移；四川铁钱太重，催生了交子",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "宋不打内战、南方繁荣，经济重心南移；四川铁钱太重，催生了交子。",
+                  "para": "takeaway"
+                }
+              ]
             }
           },
           {
@@ -9884,7 +24922,37 @@ window.DAYS = [
               "宋：内部稳，外部弱。",
               "蒙古：骑兵强，地盘大。",
               "下一关：这么大的地方怎么管？"
-            ]
+            ],
+            "visual": {
+              "type": "tug",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "宋稳住了内部、输给了外部；下一个王朝要回答\"这么大怎么管\"",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "宋稳住了内部、输给了外部；下一个王朝要回答\"这么大怎么管\"",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "宋稳住了内部、输给了外部；下一个王朝要回答\"这么大怎么管\"。",
+                  "para": "takeaway"
+                }
+              ]
+            }
           }
         ],
         "interaction": {
@@ -9982,7 +25050,59 @@ window.DAYS = [
             "id": "SC",
             "label": "交子"
           }
-        ]
+        ],
+        "hookComic": {
+          "panels": [
+            {
+              "bg": "room",
+              "cast": [
+                {
+                  "who": "xiaoman",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "talk"
+                }
+              ],
+              "cap": "赵匡胤靠兵变当上皇帝"
+            },
+            {
+              "bg": "street",
+              "cast": [
+                {
+                  "who": "xiaoyin",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "talk"
+                }
+              ],
+              "cap": "坐上皇位后，他最怕的是什么"
+            },
+            {
+              "bg": "shop",
+              "cast": [
+                {
+                  "who": "xiaoman",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "talk"
+                }
+              ],
+              "cap": "坐上皇位后，他最怕的是什么"
+            },
+            {
+              "bg": "plain",
+              "cast": [
+                {
+                  "who": "xiaoyin",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "wow"
+                }
+              ],
+              "cap": "坐上皇位后，他最怕的是什么"
+            }
+          ]
+        }
       },
       "geo": {
         "id": "d11-geo",
@@ -9995,7 +25115,37 @@ window.DAYS = [
             "idea": "打开中国地图看大城市，它们像被磁铁吸着一样，密密地挤在东边靠海的一圈。",
             "why": "一座城市要长大，至少要三样东西：能养活很多人的平地和粮食，方便进出的交通，能做生意的机会。今天要问的是：为什么这三样，偏偏在海边凑齐了？",
             "takeaway": "大城市挤在沿海；今天来找背后的原因。",
-            "example": "南宋的都城临安，就是今天的杭州；六朝古都建康，就是今天的南京；第一批经济特区里的深圳，紧挨着香港。三个不同时代的\"明星城市\"，全都落在沿海的省份里。"
+            "example": "南宋的都城临安，就是今天的杭州；六朝古都建康，就是今天的南京；第一批经济特区里的深圳，紧挨着香港。三个不同时代的\"明星城市\"，全都落在沿海的省份里。",
+            "visual": {
+              "type": "cnmap",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "大城市挤在沿海；今天来找背后的原因",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "大城市挤在沿海；今天来找背后的原因",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "大城市挤在沿海；今天来找背后的原因。",
+                  "para": "takeaway"
+                }
+              ]
+            }
           },
           {
             "title": "东边最低，河往东流",
@@ -10003,7 +25153,10 @@ window.DAYS = [
             "why": "水往低处流。河从高原一路往下，把水和泥沙都带到东边，最后在海边入海。今天的故事，就从河的终点——入海口开始。",
             "takeaway": "东边最低，大河向东，把水和泥沙送到海边。",
             "example": "长江从青藏高原出发，一路向东，在上海入海；黄河在山东入海；珠江在广东入海。三条大河的终点，都在东边的海岸上。",
-            "review": true
+            "review": true,
+            "visual": {
+              "recall": "d04-geo#0"
+            }
           },
           {
             "title": "泥水静置：河口为什么长出平原",
@@ -10025,6 +25178,36 @@ window.DAYS = [
               ],
               "answer": 0,
               "why": "水不流了，就托不住泥沙，泥沙往下沉。「泥沙浮到水面」不对，泥沙比水重。"
+            },
+            "visual": {
+              "type": "delta",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "河到海口变慢，泥沙沉积，堆出平坦肥沃的三角洲",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "河到海口变慢，泥沙沉积，堆出平坦肥沃的三角洲",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "河到海口变慢，泥沙沉积，堆出平坦肥沃的三角洲。",
+                  "para": "takeaway"
+                }
+              ]
             }
           },
           {
@@ -10038,7 +25221,37 @@ window.DAYS = [
               "河口把整条大河和大海接在一起。",
               "内陆的货、海外的货都在这里换船。",
               "港口兴旺，城市就长大。"
-            ]
+            ],
+            "visual": {
+              "type": "cnmap",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "入海口连起大河和大海，最容易长成大港口和大城市",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "入海口连起大河和大海，最容易长成大港口和大城市",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "入海口连起大河和大海，最容易长成大港口和大城市。",
+                  "para": "takeaway"
+                }
+              ]
+            }
           },
           {
             "title": "开放：先从海边开门",
@@ -10060,6 +25273,36 @@ window.DAYS = [
               ],
               "answer": 0,
               "why": "外贸要靠港口进出货，离港澳台近也方便合作。「沿海的人口最少」不对，沿海恰恰是人最密的地方。"
+            },
+            "visual": {
+              "type": "tilemap",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "平原、港口、开放三样凑齐，沿海最先富起来",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "平原、港口、开放三样凑齐，沿海最先富起来",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "平原、港口、开放三样凑齐，沿海最先富起来。",
+                  "para": "takeaway"
+                }
+              ]
             }
           },
           {
@@ -10070,19 +25313,33 @@ window.DAYS = [
             "example": "像唱一段 11 个音的旋律，分三句：辽—冀—津—鲁，苏—沪—浙，闽—粤—桂—琼。四个、三个、四个，唱几遍就顺了。",
             "exLabel": "打个比方",
             "visual": {
-              "type": "flow",
-              "nodes": [
-                "辽",
-                "冀",
-                "津",
-                "鲁",
-                "苏",
-                "沪",
-                "浙",
-                "闽",
-                "粤",
-                "桂",
-                "琼"
+              "type": "tilemap",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "沿海从北到南：辽、冀、津、鲁、苏、沪、浙、闽、粤、桂、琼",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "沿海从北到南：辽、冀、津、鲁、苏、沪、浙、闽、粤、桂、琼",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "沿海从北到南：辽、冀、津、鲁、苏、沪、浙、闽、粤、桂、琼。",
+                  "para": "takeaway"
+                }
               ]
             }
           },
@@ -10100,6 +25357,36 @@ window.DAYS = [
               ],
               "answer": 0,
               "why": "山东的省会是济南。「青岛」是山东最有名的海港，但不是省会。"
+            },
+            "visual": {
+              "type": "tilemap",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "沿海的省会多在内陆一侧；大港口城市不一定是省会",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "沿海的省会多在内陆一侧；大港口城市不一定是省会",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "沿海的省会多在内陆一侧；大港口城市不一定是省会。",
+                  "para": "takeaway"
+                }
+              ]
             }
           },
           {
@@ -10113,7 +25400,37 @@ window.DAYS = [
               "河口和海湾，有港口和贸易。",
               "先开放，资金技术先到。",
               "沿海一圈成了中国最富的地带。"
-            ]
+            ],
+            "visual": {
+              "type": "cnmap",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "平原、港口、开放在沿海凑齐，明星城市就长在这里",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "平原、港口、开放在沿海凑齐，明星城市就长在这里",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "平原、港口、开放在沿海凑齐，明星城市就长在这里。",
+                  "para": "takeaway"
+                }
+              ]
+            }
           }
         ],
         "interaction": {
@@ -10219,19 +25536,243 @@ window.DAYS = [
             "id": "HI",
             "label": "HI"
           }
-        ]
+        ],
+        "hookComic": {
+          "panels": [
+            {
+              "bg": "room",
+              "cast": [
+                {
+                  "who": "xiaoman",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "talk"
+                }
+              ],
+              "cap": "南宋的都城、六朝的古都、改革"
+            },
+            {
+              "bg": "street",
+              "cast": [
+                {
+                  "who": "xiaoyin",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "talk"
+                }
+              ],
+              "cap": "南宋的都城、六朝的古都、改革"
+            },
+            {
+              "bg": "shop",
+              "cast": [
+                {
+                  "who": "xiaoman",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "talk"
+                }
+              ],
+              "cap": "南宋的都城、六朝的古都、改革"
+            },
+            {
+              "bg": "plain",
+              "cast": [
+                {
+                  "who": "xiaoyin",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "wow"
+                }
+              ],
+              "cap": "南宋的都城、六朝的古都、改革"
+            }
+          ]
+        }
       },
       "finance": {
         "id": "d11-finance",
         "title": "资产与负债：真正属于你的有多少",
-        "minutes": 4,
+        "minutes": 7,
         "hook": "开着十几万的车，不一定比只有存款的人更有钱。",
+        "hookComic": {
+          "panels": [
+            {
+              "bg": "room",
+              "cast": [
+                {
+                  "who": "xiaoman",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "talk"
+                }
+              ],
+              "cap": "开着十几万的车，不一定比只有"
+            },
+            {
+              "bg": "street",
+              "cast": [
+                {
+                  "who": "xiaoyin",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "talk"
+                }
+              ],
+              "cap": "开着十几万的车，不一定比只有"
+            },
+            {
+              "bg": "shop",
+              "cast": [
+                {
+                  "who": "xiaoman",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "talk"
+                }
+              ],
+              "cap": "开着十几万的车，不一定比只有"
+            },
+            {
+              "bg": "plain",
+              "cast": [
+                {
+                  "who": "xiaoyin",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "wow"
+                }
+              ],
+              "cap": "开着十几万的车，不一定比只有"
+            }
+          ]
+        },
         "steps": [
           {
-            "text": "资产：你拥有的、有价值的东西——现金、存款、基金、房子、车。"
+            "title": "开好车，就更有钱吗？",
+            "idea": "看起来有钱，和真正有多少钱，是两回事。要把\"有的\"和\"欠的\"分开算。",
+            "visual": {
+              "type": "comic",
+              "panels": [
+                {
+                  "bg": "bank",
+                  "cast": [
+                    {
+                      "who": "xiaoman",
+                      "x": 0.5,
+                      "y": 0.72,
+                      "face": "talk"
+                    }
+                  ],
+                  "cap": "小 E 开着新车"
+                },
+                {
+                  "bg": "kitchen",
+                  "cast": [
+                    {
+                      "who": "xiaoman",
+                      "x": 0.5,
+                      "y": 0.72,
+                      "face": "talk"
+                    }
+                  ],
+                  "cap": "车钥匙后面挂着贷款"
+                },
+                {
+                  "bg": "room",
+                  "cast": [
+                    {
+                      "who": "xiaoman",
+                      "x": 0.5,
+                      "y": 0.72,
+                      "face": "talk"
+                    }
+                  ],
+                  "cap": "小 F 只有存款"
+                }
+              ]
+            },
+            "takeaway": "看着有钱，不等于真有钱。"
           },
           {
-            "text": "负债：你欠别人的——信用卡欠款、车贷、房贷、借朋友的钱。",
+            "title": "资产：你有的、值钱的东西",
+            "idea": "**资产**就是你拥有的、能换成钱的东西：现金、存款、手机、车、房子。",
+            "visual": {
+              "type": "columns",
+              "base": {
+                "items": [
+                  {
+                    "label": "存款",
+                    "value": 50000
+                  },
+                  {
+                    "label": "车（现在能卖）",
+                    "value": 100000
+                  }
+                ],
+                "unit": "元"
+              },
+              "frames": [
+                {
+                  "set": {
+                    "play": 0,
+                    "step": 0
+                  },
+                  "cap": "先看骨架",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "play": 1,
+                    "step": 2
+                  },
+                  "cap": "看完整的图",
+                  "para": "takeaway"
+                }
+              ]
+            },
+            "example": "你卡里的存款、手上的手机、衣柜里能卖二手的包，都是你的资产。",
+            "takeaway": "资产 = 你拥有、能换成钱的东西。"
+          },
+          {
+            "title": "负债：你欠别人的钱",
+            "idea": "**负债**就是你欠别人、以后要还的钱：信用卡、花呗、车贷、房贷、借朋友的钱。",
+            "visual": {
+              "type": "columns",
+              "base": {
+                "items": [
+                  {
+                    "label": "车贷",
+                    "value": 80000
+                  },
+                  {
+                    "label": "信用卡",
+                    "value": 10000
+                  }
+                ],
+                "unit": "元"
+              },
+              "frames": [
+                {
+                  "set": {
+                    "play": 0,
+                    "step": 0
+                  },
+                  "cap": "先看骨架",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "play": 1,
+                    "step": 2
+                  },
+                  "cap": "看完整的图",
+                  "para": "takeaway"
+                }
+              ]
+            },
+            "example": "买车时贷了 8 万，车是资产，那 8 万贷款就是负债。东西和欠的钱，要分开记。",
+            "takeaway": "负债 = 你欠别人、要还的钱。",
             "check": {
               "q": "车贷属于资产还是负债？",
               "options": [
@@ -10243,25 +25784,91 @@ window.DAYS = [
             }
           },
           {
-            "text": "推一下“真正属于你的”有多少：想象把拥有的东西全部卖掉换成钱，再把欠的钱全部还掉，剩下的才是你的。这叫净资产。",
-            "formula": "净资产 = 资产 − 负债"
-          },
-          {
-            "text": "代入：小 E 有存款 5 万、车 10 万，资产 15 万；车贷 8 万、信用卡欠 1 万，负债 9 万。小 F 只有存款 7 万，没有负债。看起来更“有钱”的小 E，净资产反而更少。",
-            "formula": "15 − 9 = 6（万）；7 − 0 = 7（万）",
+            "title": "净资产：全卖掉、全还清，还剩多少",
+            "idea": "**净资产**就是想象把有的东西全卖掉，再把欠的钱全还掉，最后剩下的。这才是真正属于你的。",
             "visual": {
-              "type": "bars",
-              "items": [
+              "type": "chain",
+              "base": {
+                "nodes": [
+                  "全部卖掉：15 万",
+                  "全部还清：−9 万",
+                  "剩下：6 万"
+                ]
+              },
+              "frames": [
                 {
-                  "label": "小 E 净资产 6 万",
-                  "value": 1
+                  "set": {
+                    "play": 0,
+                    "step": 0
+                  },
+                  "cap": "先看骨架",
+                  "para": "idea"
                 },
                 {
-                  "label": "小 F 净资产 7 万",
-                  "value": 1
+                  "set": {
+                    "play": 1,
+                    "step": 2
+                  },
+                  "cap": "看完整的图",
+                  "para": "takeaway"
                 }
               ]
             },
+            "formula": "净资产 = 资产 − 负债",
+            "takeaway": "净资产 = 资产 − 负债，是真正属于你的。",
+            "derive": [
+              "小 E 的资产：存款 5 万 + 车 10 万 = 15 万。",
+              "负债：车贷 8 万 + 信用卡 1 万 = 9 万。",
+              "15 − 9 = 6 万。"
+            ]
+          },
+          {
+            "title": "小 E 和小 F，谁更有钱？",
+            "idea": "小 F 只有 7 万存款，没有欠款，净资产 7 万。开车的小 E 只有 6 万。",
+            "visual": {
+              "type": "columns",
+              "base": {
+                "items": [
+                  {
+                    "label": "小 E 资产 15 万",
+                    "value": 1
+                  },
+                  {
+                    "label": "小 E 净资产 6 万",
+                    "value": 1
+                  },
+                  {
+                    "label": "小 F 资产 7 万",
+                    "value": 1
+                  },
+                  {
+                    "label": "小 F 净资产 7 万",
+                    "value": 1
+                  }
+                ],
+                "unit": "万"
+              },
+              "frames": [
+                {
+                  "set": {
+                    "play": 0,
+                    "step": 0
+                  },
+                  "cap": "先看骨架",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "play": 1,
+                    "step": 2
+                  },
+                  "cap": "看完整的图",
+                  "para": "takeaway"
+                }
+              ]
+            },
+            "example": "看图：小 E 的\"资产\"柱最高，可\"净资产\"柱比小 F 矮。差的那截，就是他欠的钱。",
+            "takeaway": "比谁更有钱，比净资产，不比资产。",
             "check": {
               "q": "小 E 资产 15 万，为什么净资产只有 6 万？",
               "options": [
@@ -10273,7 +25880,80 @@ window.DAYS = [
             }
           },
           {
-            "text": "注意：车、手机这类东西会贬值，算资产时要按“现在能卖多少钱”算，而不是买的时候花了多少。"
+            "title": "资产按\"现在能卖多少\"算",
+            "idea": "手机、车、衣服会越用越不值钱。算资产时，要按现在能卖多少算，不按当初花了多少。",
+            "visual": {
+              "type": "columns",
+              "base": {
+                "items": [
+                  {
+                    "label": "手机买价",
+                    "value": 6000
+                  },
+                  {
+                    "label": "现在二手价",
+                    "value": 2000
+                  }
+                ],
+                "unit": "元"
+              },
+              "frames": [
+                {
+                  "set": {
+                    "play": 0,
+                    "step": 0
+                  },
+                  "cap": "先看骨架",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "play": 1,
+                    "step": 2
+                  },
+                  "cap": "看完整的图",
+                  "para": "takeaway"
+                }
+              ]
+            },
+            "why": "净资产问的是\"全卖掉还剩多少\"。按买价算，会以为自己比实际更有钱。",
+            "takeaway": "资产按现在能卖的价格算。",
+            "check": {
+              "q": "手机买时 6000 元，现在二手能卖 2000 元。算资产时记多少？",
+              "options": [
+                "2000 元",
+                "6000 元"
+              ],
+              "answer": 0,
+              "why": "资产看的是现在值多少，所以记 2000 元。记「6000 元」会高估自己。"
+            }
+          },
+          {
+            "title": "串起来：给自己算一算",
+            "idea": "回到钩子。开车的人看起来有钱，但车背后可能挂着贷款。要看清一个人，就算三样：有什么、欠什么、剩多少。",
+            "visual": {
+              "type": "balance",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "play": 0,
+                    "step": 0
+                  },
+                  "cap": "先看骨架",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "play": 1,
+                    "step": 2
+                  },
+                  "cap": "看完整的图",
+                  "para": "takeaway"
+                }
+              ]
+            },
+            "takeaway": "先列有的，再列欠的，相减就是你的净资产。"
           }
         ],
         "interaction": {
@@ -10307,9 +25987,9 @@ window.DAYS = [
               "unit": "元"
             }
           ],
-          "ref": 2
+          "ref": 3
         },
-        "take": "净资产 = 资产 − 负债，是“全卖掉、全还清之后真正剩下的”。",
+        "take": "净资产 = 资产 − 负债，是\"全卖掉、全还清之后真正剩下的\"。",
         "quiz": [
           {
             "q": "存款 2 万，手机二手价 4000，信用卡欠款 1 万。净资产是多少？",
@@ -10321,8 +26001,8 @@ window.DAYS = [
             "answer": 0,
             "why": "资产 = 20000 + 4000 = 24000，负债 10000，24000 − 10000 = 14000。「34000」把负债加上去了。",
             "ref": [
-              2,
-              4
+              3,
+              5
             ]
           },
           {
@@ -10334,6 +26014,17 @@ window.DAYS = [
             ],
             "answer": 0,
             "why": "资产的意义是“现在值多少”。车会贬值，按买价算会高估自己的净资产。",
+            "ref": 5
+          },
+          {
+            "q": "柱状图里，小 H 的\"资产\"柱比小 J 高很多，但\"净资产\"柱比小 J 矮。最可能说明什么？",
+            "options": [
+              "小 H 欠的钱多",
+              "图画错了",
+              "小 H 更有钱"
+            ],
+            "answer": 0,
+            "why": "净资产 = 资产 − 负债。资产高、净资产反而低，差的部分就是欠款。比谁更有钱看净资产，所以「小 H 更有钱」不对；图也没画错。",
             "ref": 4
           }
         ]
@@ -10350,7 +26041,37 @@ window.DAYS = [
             "why": "既然解释这么关键，下一个问题是：情绪冒头时，能在哪个环节下手？\"忍住不说\"和\"换个角度想\"，其实是在两个不同的环节下手。",
             "takeaway": "今天比较两种调节：换解释，和压表现。",
             "example": "朋友当众开了你一个玩笑。你可以咬牙忍着不变脸，也可以想\"他就是嘴快，没恶意\"。",
-            "review": true
+            "review": true,
+            "visual": {
+              "type": "process",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "今天比较两种调节：换解释，和压表现",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "今天比较两种调节：换解释，和压表现",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "今天比较两种调节：换解释，和压表现。",
+                  "para": "takeaway"
+                }
+              ]
+            }
           },
           {
             "title": "情绪有一条时间线",
@@ -10359,12 +26080,33 @@ window.DAYS = [
             "takeaway": "情绪按情境、注意、评价、反应产生，越早介入越省力。",
             "example": "消息发出去两小时（情境）→ 你盯着\"已读\"两个字（注意）→ 你想\"他不想理我\"（评价）→ 心一沉、眼眶发热（反应）。",
             "visual": {
-              "type": "flow",
-              "nodes": [
-                "情境",
-                "注意",
-                "评价",
-                "反应"
+              "type": "process",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "情绪按情境、注意、评价、反应产生，越早介入越省力",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "情绪按情境、注意、评价、反应产生，越早介入越省力",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "情绪按情境、注意、评价、反应产生，越早介入越省力。",
+                  "para": "takeaway"
+                }
               ]
             },
             "check": {
@@ -10382,14 +26124,74 @@ window.DAYS = [
             "idea": "**认知重评**：在评价这一环介入，给同一件事换一个解释，让情绪从源头变小。",
             "why": "评价在反应之前，所以换掉评价，反应还没完全起来就被改了方向：主观体验、生理唤醒、外部表现都会跟着变小。它改的不是事情，而是事情对你的意义，和拉扎勒斯的\"评价\"、二因素的\"标签\"在同一个位置。",
             "takeaway": "认知重评：换解释，让情绪从源头变小。",
-            "example": "已读不回，把评价从\"他不想理我\"换成\"他可能在开会，晚点会回\"。事情没变，心沉下去的那一下就轻了很多。"
+            "example": "已读不回，把评价从\"他不想理我\"换成\"他可能在开会，晚点会回\"。事情没变，心沉下去的那一下就轻了很多。",
+            "visual": {
+              "type": "process",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "认知重评：换解释，让情绪从源头变小",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "认知重评：换解释，让情绪从源头变小",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "认知重评：换解释，让情绪从源头变小。",
+                  "para": "takeaway"
+                }
+              ]
+            }
           },
           {
             "title": "表达抑制：在\"反应\"这环压住",
             "idea": "**表达抑制**：在最后的反应这一环介入，情绪已经起来了，只是压住不表现出来。",
             "why": "抑制只管住了第 1 天说的外部表现，另外两块——心里的主观体验、身体的生理唤醒——都还在。而且\"压住\"本身也要花力气：你得一边感受情绪，一边盯着自己的脸和声音，所以更累，也更分心。",
             "takeaway": "表达抑制只压住外部表现，唤醒和感受都还在。",
-            "example": "开会时被当众否定，你笑着说\"好的我再改改\"，桌子底下的手却攥得发白。别人看不出来，可你的心跳、你的委屈一点没少。"
+            "example": "开会时被当众否定，你笑着说\"好的我再改改\"，桌子底下的手却攥得发白。别人看不出来，可你的心跳、你的委屈一点没少。",
+            "visual": {
+              "type": "process",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "表达抑制只压住外部表现，唤醒和感受都还在",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "表达抑制只压住外部表现，唤醒和感受都还在",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "表达抑制只压住外部表现，唤醒和感受都还在。",
+                  "para": "takeaway"
+                }
+              ]
+            }
           },
           {
             "title": "格罗斯的实验：同一段影片",
@@ -10410,6 +26212,35 @@ window.DAYS = [
               ],
               "answer": 0,
               "why": "像医生一样看，是换了一个看画面的角度，属于认知重评。「表达抑制」那组是尽量不让脸上露出感受。"
+            },
+            "visual": {
+              "type": "comic",
+              "panels": [
+                {
+                  "bg": "room",
+                  "cast": [
+                    {
+                      "who": "xiaoman",
+                      "x": 0.48,
+                      "y": 0.72,
+                      "face": "talk"
+                    }
+                  ],
+                  "cap": "重评降低了感受；抑制只压住表"
+                },
+                {
+                  "bg": "street",
+                  "cast": [
+                    {
+                      "who": "xiaoyin",
+                      "x": 0.48,
+                      "y": 0.72,
+                      "face": "talk"
+                    }
+                  ],
+                  "cap": "格罗斯的实验：同一段影片"
+                }
+              ]
             }
           },
           {
@@ -10417,7 +26248,37 @@ window.DAYS = [
             "idea": "回到开头：\"换个角度想\"通常比\"忍住不说\"对身体更好：重评改了情绪本身，抑制只压住了表面。",
             "why": "但重评不是万能的：情绪非常强烈时，很难临时换解释；处境本来能改、也应该改时，只换解释可能让人忍下不该忍的事。抑制也有它的场合，比如在正式场合短时间稳住。研究还发现，在更看重克制的文化里，抑制的代价相对小一些。",
             "takeaway": "认知重评改情绪本身，表达抑制只压表面；长期看重评更健康。",
-            "example": "账号选题提示：\"不是让你别难过，而是换个讲法看这件事。\"下一关的情绪 ABC，会把\"换个讲法\"拆成一步步能练的方法。"
+            "example": "账号选题提示：\"不是让你别难过，而是换个讲法看这件事。\"下一关的情绪 ABC，会把\"换个讲法\"拆成一步步能练的方法。",
+            "visual": {
+              "type": "process",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "认知重评改情绪本身，表达抑制只压表面；长期看重评更健康",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "认知重评改情绪本身，表达抑制只压表面；长期看重评更健康",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "认知重评改情绪本身，表达抑制只压表面；长期看重评更健康。",
+                  "para": "takeaway"
+                }
+              ]
+            }
           }
         ],
         "interaction": {
@@ -10477,118 +26338,587 @@ window.DAYS = [
             "why": "事件没变，变的是对它的解释——从“失败”变成“诊断”，这就是认知重评。",
             "ref": 2
           }
-        ]
+        ],
+        "hookComic": {
+          "panels": [
+            {
+              "bg": "room",
+              "cast": [
+                {
+                  "who": "xiaoman",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "talk"
+                }
+              ],
+              "cap": "生气的时候“忍住不说”，和“"
+            },
+            {
+              "bg": "street",
+              "cast": [
+                {
+                  "who": "xiaoyin",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "talk"
+                }
+              ],
+              "cap": "生气的时候“忍住不说”，和“"
+            },
+            {
+              "bg": "shop",
+              "cast": [
+                {
+                  "who": "xiaoman",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "talk"
+                }
+              ],
+              "cap": "生气的时候“忍住不说”，和“"
+            },
+            {
+              "bg": "plain",
+              "cast": [
+                {
+                  "who": "xiaoyin",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "wow"
+                }
+              ],
+              "cap": "生气的时候“忍住不说”，和“"
+            }
+          ]
+        }
       },
       "english": {
         "id": "d11-english",
-        "title": "定语从句：把两句话粘成一句",
-        "minutes": 6,
-        "hook": "who 不只是\"谁\"，它还是一块胶水。",
+        "title": "A Map on the Fridge：某处有某物，用 there is / there are",
+        "minutes": 9,
+        "hook": "中文说\"冰箱上有张地图\"。英语里的\"有\"是 have 吗？",
+        "hookComic": {
+          "panels": [
+            {
+              "bg": "kitchen",
+              "cast": [
+                {
+                  "who": "mia",
+                  "x": 0.32,
+                  "y": 0.72,
+                  "face": "happy"
+                },
+                {
+                  "who": "leo",
+                  "x": 0.62,
+                  "y": 0.74,
+                  "face": "talk"
+                },
+                {
+                  "who": "mochi",
+                  "x": 0.8,
+                  "y": 0.82,
+                  "face": "happy",
+                  "k": 0.7
+                }
+              ]
+            },
+            {
+              "bg": "room",
+              "cast": [
+                {
+                  "who": "mia",
+                  "x": 0.32,
+                  "y": 0.72,
+                  "face": "happy"
+                },
+                {
+                  "who": "leo",
+                  "x": 0.62,
+                  "y": 0.74,
+                  "face": "talk"
+                },
+                {
+                  "who": "mochi",
+                  "x": 0.8,
+                  "y": 0.82,
+                  "face": "happy",
+                  "k": 0.7
+                }
+              ]
+            },
+            {
+              "bg": "street",
+              "cast": [
+                {
+                  "who": "mia",
+                  "x": 0.32,
+                  "y": 0.72,
+                  "face": "happy"
+                },
+                {
+                  "who": "leo",
+                  "x": 0.62,
+                  "y": 0.74,
+                  "face": "talk"
+                },
+                {
+                  "who": "mochi",
+                  "x": 0.8,
+                  "y": 0.82,
+                  "face": "happy",
+                  "k": 0.7
+                }
+              ]
+            }
+          ]
+        },
+        "story": {
+          "title": "A Map on the Fridge",
+          "panels": [
+            {
+              "bg": "kitchen",
+              "cast": [
+                {
+                  "who": "mia",
+                  "x": 0.32,
+                  "y": 0.72,
+                  "face": "happy"
+                },
+                {
+                  "who": "leo",
+                  "x": 0.62,
+                  "y": 0.74,
+                  "face": "talk"
+                },
+                {
+                  "who": "mochi",
+                  "x": 0.8,
+                  "y": 0.82,
+                  "face": "happy",
+                  "k": 0.7
+                }
+              ]
+            },
+            {
+              "bg": "room",
+              "cast": [
+                {
+                  "who": "mia",
+                  "x": 0.32,
+                  "y": 0.72,
+                  "face": "happy"
+                },
+                {
+                  "who": "leo",
+                  "x": 0.62,
+                  "y": 0.74,
+                  "face": "talk"
+                },
+                {
+                  "who": "mochi",
+                  "x": 0.8,
+                  "y": 0.82,
+                  "face": "happy",
+                  "k": 0.7
+                }
+              ]
+            },
+            {
+              "bg": "street",
+              "cast": [
+                {
+                  "who": "mia",
+                  "x": 0.32,
+                  "y": 0.72,
+                  "face": "happy"
+                },
+                {
+                  "who": "leo",
+                  "x": 0.62,
+                  "y": 0.74,
+                  "face": "talk"
+                },
+                {
+                  "who": "mochi",
+                  "x": 0.8,
+                  "y": 0.82,
+                  "face": "happy",
+                  "k": 0.7
+                }
+              ]
+            },
+            {
+              "bg": "shop",
+              "cast": [
+                {
+                  "who": "mia",
+                  "x": 0.32,
+                  "y": 0.72,
+                  "face": "happy"
+                },
+                {
+                  "who": "leo",
+                  "x": 0.62,
+                  "y": 0.74,
+                  "face": "talk"
+                },
+                {
+                  "who": "mochi",
+                  "x": 0.8,
+                  "y": 0.82,
+                  "face": "happy",
+                  "k": 0.7
+                }
+              ]
+            }
+          ],
+          "lines": [
+            {
+              "who": "B",
+              "en": "Mia, there's a map on the fridge. What is it?",
+              "zh": "米娅，冰箱上有张地图。这是什么？",
+              "panel": 0
+            },
+            {
+              "who": "A",
+              "en": "It's my trip! There are three cities on it.",
+              "zh": "是我的旅行计划！上面有三个城市。",
+              "panel": 0
+            },
+            {
+              "who": "B",
+              "en": "There's a big river here.",
+              "zh": "这儿有一条大河。",
+              "panel": 1
+            },
+            {
+              "who": "A",
+              "en": "Yes. And there are mountains here.",
+              "zh": "对。这儿还有山。",
+              "panel": 1
+            },
+            {
+              "who": "B",
+              "en": "What's this blue circle? Is it a fish?",
+              "zh": "这个蓝圈圈是什么？是条鱼吗？",
+              "panel": 2
+            },
+            {
+              "who": "A",
+              "en": "No, it isn't. It's a lake.",
+              "zh": "不是。是个湖。",
+              "panel": 2
+            },
+            {
+              "who": "B",
+              "en": "And there's a cat on the map.",
+              "zh": "地图上还有一只猫。",
+              "panel": 3
+            },
+            {
+              "who": "A",
+              "en": "A cat? There isn't a cat on… Oh. There is.",
+              "zh": "猫？地图上没有……哦，还真有。",
+              "panel": 3
+            }
+          ]
+        },
+        "words": [
+          {
+            "w": "trip",
+            "ipa": "trɪp",
+            "stress": "trip",
+            "pic": "🧳",
+            "zh": "旅行",
+            "ex": "It's my trip!",
+            "part": "—"
+          },
+          {
+            "w": "city",
+            "ipa": "ˈsɪti",
+            "stress": "ci",
+            "pic": "🏙️",
+            "zh": "城市",
+            "ex": "There are three cities on it.",
+            "part": "复数 y 变 ies：city → cities"
+          },
+          {
+            "w": "mountain",
+            "ipa": "ˈmaʊntn",
+            "stress": "moun",
+            "pic": "⛰️",
+            "zh": "山",
+            "ex": "There are mountains here.",
+            "part": "第二个音节很轻，几乎只剩 n"
+          },
+          {
+            "w": "lake",
+            "ipa": "leɪk",
+            "stress": "lake",
+            "pic": "🏞️",
+            "zh": "湖",
+            "ex": "It's a lake.",
+            "part": "—"
+          }
+        ],
         "steps": [
           {
-            "title": "一句话说了两遍 friend",
-            "idea": "I have a friend. My friend runs an account about relationships. 两句都对，但第二句又说了一遍 friend，听起来像在一字一顿地念。",
-            "why": "第二句其实只是在给 friend 补充信息：这个朋友是做什么的。既然是补充，最好直接贴在 friend 身上，变成一句话，听的人不用在两句之间来回对号，也不用听同一个词说两遍。",
-            "takeaway": "第二句只是在补充 friend，可以贴到 friend 后面。",
-            "example": "中文也一样：\"我有个朋友。我朋友做情感账号。\"不如说\"我有个做情感账号的朋友\"。区别是中文把补充放在名词前面，英语放在名词后面。"
-          },
-          {
-            "title": "who：替身 + 胶水",
-            "idea": "用 who 代替第二句的 my friend，再把整句贴到 friend 后面：I have a friend who runs an account about relationships.",
-            "why": "贴上去的这一半叫**定语从句**，专门解释前面的名词。who 在里面做两件事：指回 friend，所以原来的 my friend 要删掉，不能说两遍；同时当连接点，把两句粘成一句。",
-            "takeaway": "who 指回前面的人，并把两句粘成一句。",
-            "example": "I have a friend. She sings in a band. → I have a friend who sings in a band.（我有个在乐队唱歌的朋友。）",
-            "derive": [
-              "找出重复的人：friend。",
-              "第二句的 my friend 换成 who。",
-              "把 who 开头的整句贴在 friend 后面。"
-            ],
+            "title": "先听故事",
+            "kind": "story-listen",
+            "idea": "看图听。地图上都有什么？",
             "check": {
-              "q": "I have a friend who sings in a band. 里的 who 指？",
+              "q": "Leo 说地图上\"有一只猫\"，那是什么？",
               "options": [
-                "a friend",
-                "I"
+                "Mochi 坐在了地图上",
+                "地图上画着一只猫"
               ],
               "answer": 0,
-              "why": "who 紧跟在 friend 后面，指回的就是这个朋友：唱歌的是朋友。「I」是说话的人，不是 who 代替的对象。"
+              "why": "最后一格地图掉在地上，Mochi 正坐在上面，Mia 才说 [[Oh. There is.]]。地图上画的是城市、河、山和湖，没有画猫。"
             }
           },
           {
-            "title": "人用 who，物用 which",
-            "idea": "被解释的是人，用 who；是东西，用 **which**。这两种情况都可以换成 that。",
-            "why": "who 当疑问词时问的就是\"谁\"，只能指人；which 问\"哪一个\"，常用来指东西。当胶水时它们保留了这个分工，一听就知道前面说的是人还是物。that 是通用的，人和物都能用。",
-            "takeaway": "人用 who，物用 which，两者都可以换成 that。",
-            "example": "I bought the dress that you recommended.（我买了你推荐的那条裙子。）裙子是物，用 that 或 which；原来第二句里的 the dress 被代替了，不再出现。",
-            "derive": [
-              "看前面的名词是人还是物。",
-              "人 → who 或 that；物 → which 或 that。",
-              "被代替的词删掉，不重复。"
-            ],
+            "title": "四个新词",
+            "kind": "words",
+            "idea": "每个词都点一下 ▶。"
+          },
+          {
+            "title": "发音 · 出声的 th：there、this、the",
+            "idea": "there、this、the 开头也是 th，口型和第 5 天一样：舌尖放在上下牙之间。不同的是喉咙要震动出声。",
+            "why": "第 5 天的 bath 是只吹气的 /θ/。这几个最常用的小词用的是出声的 /ð/。中文里没有，很多人读成 z 或 d，把 there 读成 zere 或 dere。舌尖出牙缝，再让喉咙震，就对了。这几个词天天用，练好它们，整句话听起来会顺很多。",
+            "example": "[[there]]、[[this]]、[[that]]、[[the]] 是出声的 /ð/；[[bath]]、[[three]]、[[think]] 是吹气的 /θ/。",
+            "takeaway": "th 有两种：吹气的 /θ/，出声的 /ð/；舌尖都在牙缝。",
+            "visual": {
+              "type": "mouth",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "th 有两种：吹气的 /θ/，出声的 /ð/；舌尖都在牙缝",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "th 有两种：吹气的 /θ/，出声的 /ð/；舌尖都在牙缝",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "th 有两种：吹气的 /θ/，出声的 /ð/；舌尖都在牙缝。",
+                  "para": "takeaway"
+                }
+              ]
+            },
             "check": {
-              "q": "the song ___ made me cry，空里填？",
+              "q": "说 [[there]] 时，喉咙要震吗？",
               "options": [
-                "which",
-                "who"
+                "要",
+                "不要"
               ],
               "answer": 0,
-              "why": "song 是东西，用 which（或 that）。「who」只能指人。"
+              "why": "there 是出声的 /ð/，喉咙要震。「不要」是 bath 里吹气的 /θ/。"
             }
           },
           {
-            "title": "串起来：名词后的 who",
-            "idea": "回到开头：who 除了问\"谁\"，还能当胶水。看到 who、which、that 紧跟在名词后面，就知道这里开始解释那个名词了。",
-            "why": "提问用的 who 通常在句首，后面是问号或升调：Who runs this account?（谁在运营这个账号？）当胶水的 who 紧跟在名词后面，前面的句子还没说完。看它的位置，用法就分清了。",
-            "takeaway": "名词后面的 who / which / that = 开始解释这个名词。",
-            "example": "I have a friend who runs an account about relationships. who 紧跟 friend，是在解释这个朋友。如果在 friend 后面停住，再升调问 Who runs…?，那就成了两句话：一句陈述，一句提问。"
+            "title": "语法 · 某处有某物：There is / There are + 东西 + 地点",
+            "idea": "说\"某个地方有某样东西\"，用 there is（一个）或 there are（多个），东西放在后面：[[There's a river here.]] 这儿有一条河。",
+            "why": "中文说\"冰箱上有张地图\"用\"有\"。英语不能用 have：have 是\"某人拥有\"，地图不归冰箱所有。英语句子开头又必须有个\"谁\"，而\"一张地图\"是对方还不知道的新东西，英语习惯把新东西放到后面说。于是开头放一个没有意思的占位词 there，is 还是 are，看后面的东西是一个还是多个。",
+            "example": "[[There's a map on the fridge.]] [[There are three cities on it.]] [[There isn't a cat on the map.]] 问句也是把 is 搬到前面：[[Is there a lake?]]",
+            "takeaway": "某处有某物：There is / There are + 东西 + 地点。",
+            "visual": {
+              "type": "sentence",
+              "base": {
+                "rows": [
+                  {
+                    "bricks": [
+                      {
+                        "text": "There",
+                        "role": "extra"
+                      },
+                      {
+                        "text": "is",
+                        "role": "verb"
+                      },
+                      {
+                        "text": "a",
+                        "role": "what"
+                      },
+                      {
+                        "text": "here",
+                        "role": "extra"
+                      },
+                      {
+                        "text": "There",
+                        "role": "extra"
+                      },
+                      {
+                        "text": "are",
+                        "role": "verb"
+                      },
+                      {
+                        "text": "three",
+                        "role": "what"
+                      },
+                      {
+                        "text": "on",
+                        "role": "extra"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "frames": [
+                {
+                  "set": {
+                    "play": 0
+                  },
+                  "cap": "说\"某个地方有某样东西\"，用 there is（一个）或 there are（多",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "play": 1
+                  },
+                  "cap": "某处有某物：There is / There are + 东西 + 地点。",
+                  "para": "takeaway"
+                }
+              ]
+            },
+            "check": {
+              "q": "地图上有三座山。",
+              "options": [
+                "There are three mountains on the map.",
+                "There is three mountains on the map."
+              ],
+              "answer": 0,
+              "why": "三座山是多个，用 are。「There is three…」把一个和多个配错了。"
+            }
+          },
+          {
+            "title": "再读故事",
+            "kind": "story-read",
+            "idea": "看着字听，找出每个 there's 和 there are。"
+          },
+          {
+            "title": "地图上有什么",
+            "kind": "drill",
+            "frame": "There {a} on the map.",
+            "zh": "地图上{a}。",
+            "slots": {
+              "a": [
+                {
+                  "en": "is a river",
+                  "zh": "有一条河",
+                  "pic": "🌊"
+                },
+                {
+                  "en": "are three cities",
+                  "zh": "有三个城市",
+                  "pic": "🏙️"
+                },
+                {
+                  "en": "is a lake",
+                  "zh": "有一个湖",
+                  "pic": "🏞️"
+                },
+                {
+                  "en": "are two mountains",
+                  "zh": "有两座山",
+                  "pic": "⛰️"
+                },
+                {
+                  "en": "is a cat",
+                  "zh": "有一只猫",
+                  "pic": "🐱"
+                }
+              ]
+            },
+            "need": 3
+          },
+          {
+            "title": "跟读",
+            "kind": "shadow",
+            "tip": "there 的 th：舌尖出牙缝，喉咙震。",
+            "lines": [
+              0,
+              1,
+              3
+            ]
+          },
+          {
+            "title": "复述：串起来",
+            "kind": "retell",
+            "idea": "看着图，用 there is、there are 说说地图上有什么。",
+            "keys": [
+              [
+                "map",
+                "fridge"
+              ],
+              [
+                "trip",
+                "three cities"
+              ],
+              [
+                "river",
+                "mountains",
+                "lake"
+              ],
+              [
+                "there's a cat"
+              ]
+            ]
           }
         ],
         "interaction": {
           "type": "listen",
           "prompt": "听一听，选出你听到的句子",
-          "audio": "I have a friend who runs an account about relationships.",
-          "answer": 0,
-          "why": "who 紧跟 friend，是在解释这个朋友；runs 是一般现在时，表示现在的状态。",
+          "audio": "There are three cities.",
+          "showText": "after",
           "options": [
-            "I have a friend who runs an account about relationships.",
-            "I have a friend who ran an account about relationships.",
-            "I have a friend. Who runs an account about relationships?"
+            "There are three cities.",
+            "There is a city.",
+            "They are three cities."
           ],
+          "answer": 0,
+          "why": "there 和 they 开头一样是 th，要听后半：there 的结尾像 /er/，they 像 /eɪ/；而且后面是 are three cities。「There is a city.」只有一个城市。",
           "ref": [
-            1,
+            2,
             3
           ]
         },
-        "take": "who / which / that 代替前面的名词，并把两句粘成一句。人用 who，物用 which。",
+        "take": "某处有某物，用 There is / There are + 东西 + 地点，不用 have；th 有吹气和出声两种。",
         "quiz": [
           {
-            "q": "“我买了你推荐的那条裙子”怎么说？",
+            "q": "中文\"地图上有一只猫\"，英语怎么说？",
             "options": [
-              "I bought the dress that you recommended.",
-              "I bought the dress who you recommended.",
-              "I bought the dress, you recommended it that."
+              "There's a cat on the map.",
+              "A cat has on the map.",
+              "Have a cat on the map."
             ],
             "answer": 0,
-            "why": "裙子是物，用 that 或 which，不能用 who。",
-            "ref": 2
+            "why": "某处有某物，用 there is。「A cat has…」「Have a cat…」把中文的\"有\"直接换成了 have，可 have 是\"某人拥有\"。",
+            "ref": 3
           },
           {
-            "q": "在定语从句里，who 起了什么作用？",
+            "q": "There ___ two lakes here.",
             "options": [
-              "代替前面的人，并把两句连起来",
-              "提出一个问题",
-              "表示过去时"
+              "are",
+              "is",
+              "have"
             ],
             "answer": 0,
-            "why": "这里的 who 不是疑问词“谁”，而是指回前面的 friend，同时当连接两句的胶水。",
-            "ref": [
-              1,
-              3
-            ]
+            "why": "two lakes 是多个，用 are。「is」配一个；「have」不能这样用。",
+            "ref": 3
           }
-        ],
-        "tts": [
-          "I have a friend who runs an account about relationships.",
-          "I bought the dress that you recommended."
         ]
       }
     }
@@ -10610,7 +26940,37 @@ window.DAYS = [
             "why": "两个都高纯度、面积又差不多时，张力没地方\"解决\"，就显得冲。今天找一种不用换颜色的解法。",
             "takeaway": "互补色等量又高纯度，就会冲。",
             "example": "圣诞装饰的大红配大绿，热闹，可要是原样穿在身上，常常太吵。",
-            "review": true
+            "review": true,
+            "visual": {
+              "type": "knobs",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "互补色等量又高纯度，就会冲",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "互补色等量又高纯度，就会冲",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "互补色等量又高纯度，就会冲。",
+                  "para": "takeaway"
+                }
+              ]
+            }
           },
           {
             "title": "中性色：几乎没有色相的颜色",
@@ -10626,6 +26986,36 @@ window.DAYS = [
               ],
               "answer": 0,
               "why": "没有哪种光特别多，就分不出是红还是蓝，所以几乎没有色相。要是「只反射蓝光」，它就成了蓝色。"
+            },
+            "visual": {
+              "type": "knobs",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "中性色几乎没有色相，不参与色相冲突，所以百搭",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "中性色几乎没有色相，不参与色相冲突，所以百搭",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "中性色几乎没有色相，不参与色相冲突，所以百搭。",
+                  "para": "takeaway"
+                }
+              ]
             }
           },
           {
@@ -10642,6 +27032,36 @@ window.DAYS = [
               ],
               "answer": 0,
               "why": "米色纯度很低，色相淡到几乎看不出，所以能像中性色一样百搭。「高纯度的黄」存在感很强，就当不了中性色。"
+            },
+            "visual": {
+              "type": "knobs",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "近中性色色相很弱，能当中性色用，又更温和",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "近中性色色相很弱，能当中性色用，又更温和",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "近中性色色相很弱，能当中性色用，又更温和。",
+                  "para": "takeaway"
+                }
+              ]
             }
           },
           {
@@ -10659,6 +27079,46 @@ window.DAYS = [
               ],
               "answer": 0,
               "why": "休止符不发声却让前后更清楚，中性色不带色相却让强色更清楚。「高纯度色」更像强音。"
+            },
+            "visual": {
+              "type": "beats",
+              "base": {
+                "rows": [
+                  {
+                    "parts": [
+                      "重",
+                      "音"
+                    ],
+                    "stress": 0
+                  }
+                ]
+              },
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "中性色能隔开冲突、给强色留白，像休止符",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "中性色能隔开冲突、给强色留白，像休止符",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "中性色能隔开冲突、给强色留白，像休止符。",
+                  "para": "takeaway"
+                }
+              ]
             }
           },
           {
@@ -10672,7 +27132,37 @@ window.DAYS = [
               "加入大面积米白：它不带色相，不参与冲突（卡 2、卡 3）。",
               "红、绿被隔开，也缩成了点缀（卡 4）。",
               "张力还在，有了\"休止\"，就好看了。"
-            ]
+            ],
+            "visual": {
+              "type": "outfit",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "红绿太冲时，加大面积中性色来隔开、来留白",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "红绿太冲时，加大面积中性色来隔开、来留白",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "红绿太冲时，加大面积中性色来隔开、来留白。",
+                  "para": "takeaway"
+                }
+              ]
+            }
           }
         ],
         "interaction": {
@@ -10748,7 +27238,59 @@ window.DAYS = [
             "why": "藏青是很深、很沉的蓝，色相存在感弱，所以能像黑色一样百搭，又比黑色柔和。",
             "ref": 2
           }
-        ]
+        ],
+        "hookComic": {
+          "panels": [
+            {
+              "bg": "room",
+              "cast": [
+                {
+                  "who": "xiaoman",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "talk"
+                }
+              ],
+              "cap": "红和绿撞在一起太冲"
+            },
+            {
+              "bg": "street",
+              "cast": [
+                {
+                  "who": "xiaoyin",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "talk"
+                }
+              ],
+              "cap": "不换颜色，只加一样东西就能救"
+            },
+            {
+              "bg": "shop",
+              "cast": [
+                {
+                  "who": "xiaoman",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "talk"
+                }
+              ],
+              "cap": "不换颜色，只加一样东西就能救"
+            },
+            {
+              "bg": "plain",
+              "cast": [
+                {
+                  "who": "xiaoyin",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "wow"
+                }
+              ],
+              "cap": "不换颜色，只加一样东西就能救"
+            }
+          ]
+        }
       },
       "history": {
         "id": "d12-history",
@@ -10762,14 +27304,74 @@ window.DAYS = [
             "why": "宋重文抑武，对外一直偏弱。草原上的人从小骑马，打仗时一人常带几匹马轮换着骑，跑得远、跑得快。统一之前，各部落互相打；统一之后，力量拧成一股往外扩张，一直打到欧洲东部。",
             "takeaway": "成吉思汗统一草原，蒙古骑兵又快又远，一路打到欧洲。",
             "example": "像一支本来各唱各的合唱队，终于有了一个指挥。还是同样的人，不再互相抢拍子，声音一下子整齐、响亮了好几倍。",
-            "exLabel": "打个比方"
+            "exLabel": "打个比方",
+            "visual": {
+              "type": "histmap",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "成吉思汗统一草原，蒙古骑兵又快又远，一路打到欧洲",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "成吉思汗统一草原，蒙古骑兵又快又远，一路打到欧洲",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "成吉思汗统一草原，蒙古骑兵又快又远，一路打到欧洲。",
+                  "para": "takeaway"
+                }
+              ]
+            }
           },
           {
             "title": "元：少数民族建立的统一王朝",
             "idea": "1271 年，忽必烈定国号为\"元\"，都城大都，就是今天的北京。1279 年，元灭南宋，统一全国。",
             "why": "这是第一次由少数民族建立的全国统一政权。疆域北到西伯利亚，南到南海，西藏也正式归中央管辖。都城选在大都，一边连着蒙古草原老家，一边对着中原，正好两头照应。",
             "takeaway": "1271 年元建立，1279 年灭南宋，北京第一次成为全国都城。",
-            "example": "北京第一次成为全国的都城，就是从元大都开始的。后来明朝迁都、清朝定都，也都选在这里。你今天在地图上看到的首都，位置就是那时定下的。"
+            "example": "北京第一次成为全国的都城，就是从元大都开始的。后来明朝迁都、清朝定都，也都选在这里。你今天在地图上看到的首都，位置就是那时定下的。",
+            "visual": {
+              "type": "tl",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "1271 年元建立，1279 年灭南宋，北京第一次成为全国都城",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "1271 年元建立，1279 年灭南宋，北京第一次成为全国都城",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "1271 年元建立，1279 年灭南宋，北京第一次成为全国都城。",
+                  "para": "takeaway"
+                }
+              ]
+            }
           },
           {
             "title": "如果你是忽必烈：怎么管",
@@ -10781,7 +27383,36 @@ window.DAYS = [
               "分封：亲戚会坐大。",
               "中央直管：太远太多。",
               "中间加一层，但这一层归中央。"
-            ]
+            ],
+            "visual": {
+              "type": "comic",
+              "panels": [
+                {
+                  "bg": "room",
+                  "cast": [
+                    {
+                      "who": "xiaoman",
+                      "x": 0.48,
+                      "y": 0.72,
+                      "face": "talk"
+                    }
+                  ],
+                  "cap": "太大的国家需要一个中间层，而"
+                },
+                {
+                  "bg": "street",
+                  "cast": [
+                    {
+                      "who": "xiaoyin",
+                      "x": 0.48,
+                      "y": 0.72,
+                      "face": "talk"
+                    }
+                  ],
+                  "cap": "如果你是忽必烈：怎么管"
+                }
+              ]
+            }
           },
           {
             "title": "行省制：中央派出的分部",
@@ -10798,6 +27429,36 @@ window.DAYS = [
               ],
               "answer": 0,
               "why": "行省是中央派出的分部，长官「由中央任命，可以调换」。「由长官的儿子世袭」是分封的做法，行省制恰恰要避免它。"
+            },
+            "visual": {
+              "type": "tree",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "行省是中央派出的分部，长官由中央任命，\"省\"由此而来",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "行省是中央派出的分部，长官由中央任命，\"省\"由此而来",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "行省是中央派出的分部，长官由中央任命，\"省\"由此而来。",
+                  "para": "takeaway"
+                }
+              ]
             }
           },
           {
@@ -10811,7 +27472,37 @@ window.DAYS = [
               "河决口 → 农民没了地。",
               "再征民工 → 民力耗尽。",
               "起义四起 → 元退出中原。"
-            ]
+            ],
+            "visual": {
+              "type": "chain",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "元末钱乱、河灾、徭役叠在一起，激起起义，明取而代之",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "元末钱乱、河灾、徭役叠在一起，激起起义，明取而代之",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "元末钱乱、河灾、徭役叠在一起，激起起义，明取而代之。",
+                  "para": "takeaway"
+                }
+              ]
+            }
           },
           {
             "title": "明：皇帝亲自抓权",
@@ -10823,7 +27514,37 @@ window.DAYS = [
               "丞相是中间的一层大权。",
               "拿掉它，六部直通皇帝。",
               "皇权空前集中。"
-            ]
+            ],
+            "visual": {
+              "type": "tree",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "明废丞相，六部直属皇帝，皇权空前集中",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "明废丞相，六部直属皇帝，皇权空前集中",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "明废丞相，六部直属皇帝，皇权空前集中。",
+                  "para": "takeaway"
+                }
+              ]
+            }
           },
           {
             "title": "天子守国门：迁都北京",
@@ -10845,6 +27566,36 @@ window.DAYS = [
               ],
               "answer": 0,
               "why": "北京靠近长城，皇帝在这里「离北边防线近，好亲自坐镇」。「北京冬天比南京暖和」不对，北京纬度更高，冬天冷得多。"
+            },
+            "visual": {
+              "type": "histmap",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "明迁都北京，皇帝亲自坐镇北边防线，叫\"天子守国门\"",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "明迁都北京，皇帝亲自坐镇北边防线，叫\"天子守国门\"",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "明迁都北京，皇帝亲自坐镇北边防线，叫\"天子守国门\"。",
+                  "para": "takeaway"
+                }
+              ]
             }
           },
           {
@@ -10862,6 +27613,36 @@ window.DAYS = [
               ],
               "answer": 0,
               "why": "郑和船队最远到达「非洲东岸」。到达「美洲」的是哥伦布，比郑和晚了约 90 年。"
+            },
+            "visual": {
+              "type": "histmap",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "郑和七下西洋，比哥伦布早约 90 年，后来因花费太大而停止",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "郑和七下西洋，比哥伦布早约 90 年，后来因花费太大而停止",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "郑和七下西洋，比哥伦布早约 90 年，后来因花费太大而停止。",
+                  "para": "takeaway"
+                }
+              ]
             }
           },
           {
@@ -10875,7 +27656,37 @@ window.DAYS = [
               "明：权力收到皇帝一人手里。",
               "再集中的权力，也挡不住财政崩溃和饥荒。",
               "李自成进了北京，女真随后入关。"
-            ]
+            ],
+            "visual": {
+              "type": "chain",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "明亡于财政和饥荒逼出的农民起义，东北的清随后入主中原",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "明亡于财政和饥荒逼出的农民起义，东北的清随后入主中原",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "明亡于财政和饥荒逼出的农民起义，东北的清随后入主中原。",
+                  "para": "takeaway"
+                }
+              ]
+            }
           }
         ],
         "interaction": {
@@ -10964,7 +27775,59 @@ window.DAYS = [
             "id": "JS",
             "label": "明初都城南京"
           }
-        ]
+        ],
+        "hookComic": {
+          "panels": [
+            {
+              "bg": "room",
+              "cast": [
+                {
+                  "who": "xiaoman",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "talk"
+                }
+              ],
+              "cap": "今天我们说“某某省”——这个"
+            },
+            {
+              "bg": "street",
+              "cast": [
+                {
+                  "who": "xiaoyin",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "talk"
+                }
+              ],
+              "cap": "今天我们说“某某省”——这个"
+            },
+            {
+              "bg": "shop",
+              "cast": [
+                {
+                  "who": "xiaoman",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "talk"
+                }
+              ],
+              "cap": "今天我们说“某某省”——这个"
+            },
+            {
+              "bg": "plain",
+              "cast": [
+                {
+                  "who": "xiaoyin",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "wow"
+                }
+              ],
+              "cap": "今天我们说“某某省”——这个"
+            }
+          ]
+        }
       },
       "geo": {
         "id": "d12-geo",
@@ -10977,7 +27840,37 @@ window.DAYS = [
             "idea": "昨天走完了沿海一圈，今天往里走：中部、西北、西南、东北。你会发现，离海越远，天越干。",
             "why": "云南南部的西双版纳有热带雨林，新疆的塔克拉玛干是中国最大的沙漠，东北冬天能冷到零下三十度。同一个国家差别这么大，背后各有原因：离海多远、有没有山挡、纬度多高、地形怎么来的。今天挨个推一遍。",
             "takeaway": "内陆四块各有性格，背后是距离、山、纬度和地形。",
-            "example": "从广州坐车一路往西北去新疆的吐鲁番：先是满眼绿色的稻田和山林，然后是黄土高原，再往后是戈壁和沙漠，绿色只剩下有水的绿洲。"
+            "example": "从广州坐车一路往西北去新疆的吐鲁番：先是满眼绿色的稻田和山林，然后是黄土高原，再往后是戈壁和沙漠，绿色只剩下有水的绿洲。",
+            "visual": {
+              "type": "cnmap",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "内陆四块各有性格，背后是距离、山、纬度和地形",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "内陆四块各有性格，背后是距离、山、纬度和地形",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "内陆四块各有性格，背后是距离、山、纬度和地形。",
+                  "para": "takeaway"
+                }
+              ]
+            }
           },
           {
             "title": "中部六省：两条大河中游的粮仓",
@@ -10993,6 +27886,36 @@ window.DAYS = [
               ],
               "answer": 0,
               "why": "种粮要平地、水和热量，中部三样都有。「它们都挨着大海」不对，中部六省一个都不靠海。"
+            },
+            "visual": {
+              "type": "tilemap",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "中部六省（晋豫皖鄂湘赣）有平原、大河和季风雨，是粮仓",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "中部六省（晋豫皖鄂湘赣）有平原、大河和季风雨，是粮仓",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "中部六省（晋豫皖鄂湘赣）有平原、大河和季风雨，是粮仓。",
+                  "para": "takeaway"
+                }
+              ]
             }
           },
           {
@@ -11008,22 +27931,34 @@ window.DAYS = [
               "越往西北，雨越少。"
             ],
             "visual": {
-              "type": "bars",
-              "items": [
+              "type": "cloudTrip",
+              "base": {},
+              "frames": [
                 {
-                  "label": "东南沿海（1600 以上）",
-                  "value": 1600
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "夏季风走一路下一路雨，降水从东南沿海向西北内陆减少",
+                  "para": "idea"
                 },
                 {
-                  "label": "秦岭—淮河（约 800）",
-                  "value": 800
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "夏季风走一路下一路雨，降水从东南沿海向西北内陆减少",
+                  "para": "why"
                 },
                 {
-                  "label": "西北内陆（多地不到 200）",
-                  "value": 200
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "夏季风走一路下一路雨，降水从东南沿海向西北内陆减少。",
+                  "para": "takeaway"
                 }
-              ],
-              "unit": "毫米"
+              ]
             }
           },
           {
@@ -11046,6 +27981,36 @@ window.DAYS = [
               ],
               "answer": 0,
               "why": "高原又高又宽，湿气爬不过去，在南边就落成了雨。「把它送进新疆」反了，正因为被挡住，新疆南部才这么干。"
+            },
+            "visual": {
+              "type": "cnmap",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "西北干旱：离海远，水汽到不了；高山高原再挡一道",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "西北干旱：离海远，水汽到不了；高山高原再挡一道",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "西北干旱：离海远，水汽到不了；高山高原再挡一道。",
+                  "para": "takeaway"
+                }
+              ]
             }
           },
           {
@@ -11059,7 +28024,37 @@ window.DAYS = [
               "挤得最狠的地方隆起成青藏高原。",
               "旁边被挤出一道道高山深谷。",
               "西南成了中国地形最崎岖的地方。"
-            ]
+            ],
+            "visual": {
+              "type": "plates",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "西南崎岖，是板块挤出的\"褶子\"：高原、高山、深谷、盆地挤在一起",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "西南崎岖，是板块挤出的\"褶子\"：高原、高山、深谷、盆地挤在一起",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "西南崎岖，是板块挤出的\"褶子\"：高原、高山、深谷、盆地挤在一起。",
+                  "para": "takeaway"
+                }
+              ]
+            }
           },
           {
             "title": "东北：纬度高，又挨着寒风口",
@@ -11073,7 +28068,34 @@ window.DAYS = [
               "两样叠加，冬季寒冷漫长。"
             ],
             "visual": {
-              "type": "beam"
+              "type": "globe3d",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "东北冷：纬度高、阳光斜，又最先挨冬季风",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "东北冷：纬度高、阳光斜，又最先挨冬季风",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "东北冷：纬度高、阳光斜，又最先挨冬季风。",
+                  "para": "takeaway"
+                }
+              ]
             }
           },
           {
@@ -11096,6 +28118,36 @@ window.DAYS = [
               ],
               "answer": 0,
               "why": "冷让细菌、真菌干活变慢，就像冰箱里的菜坏得慢。「东北的落叶特别硬」不是原因，同样的草放在南方，很快就烂了。"
+            },
+            "visual": {
+              "type": "soil",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "东北冬冷，落叶分解慢，养分攒成黑土；东北因此是重要的粮仓",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "东北冬冷，落叶分解慢，养分攒成黑土；东北因此是重要的粮仓",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "东北冬冷，落叶分解慢，养分攒成黑土；东北因此是重要的粮仓。",
+                  "para": "takeaway"
+                }
+              ]
             }
           },
           {
@@ -11109,7 +28161,37 @@ window.DAYS = [
               "离海越远，水汽落得越多，剩得越少。",
               "再有高山阻挡，就更干。",
               "所以中国东南湿、西北干。"
-            ]
+            ],
+            "visual": {
+              "type": "cnmap",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "离海越远、山挡得越多，夏季风越难到达，就越干旱",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "离海越远、山挡得越多，夏季风越难到达，就越干旱",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "离海越远、山挡得越多，夏季风越难到达，就越干旱。",
+                  "para": "takeaway"
+                }
+              ]
+            }
           }
         ],
         "interaction": {
@@ -11248,27 +28330,225 @@ window.DAYS = [
             "id": "BJ",
             "label": "BJ"
           }
-        ]
+        ],
+        "hookComic": {
+          "panels": [
+            {
+              "bg": "room",
+              "cast": [
+                {
+                  "who": "xiaoman",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "talk"
+                }
+              ],
+              "cap": "为什么离海越远，越容易干旱"
+            },
+            {
+              "bg": "street",
+              "cast": [
+                {
+                  "who": "xiaoyin",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "talk"
+                }
+              ],
+              "cap": "第 8 天的季风已经给了答案"
+            },
+            {
+              "bg": "shop",
+              "cast": [
+                {
+                  "who": "xiaoman",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "talk"
+                }
+              ],
+              "cap": "第 8 天的季风已经给了答案"
+            },
+            {
+              "bg": "plain",
+              "cast": [
+                {
+                  "who": "xiaoyin",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "wow"
+                }
+              ],
+              "cap": "第 8 天的季风已经给了答案"
+            }
+          ]
+        }
       },
       "finance": {
         "id": "d12-finance",
         "title": "资产 = 负债 + 净资产：一张永远平衡的表",
-        "minutes": 4,
+        "minutes": 7,
         "hook": "借钱买了一个包，你是变富了，还是没变？",
+        "hookComic": {
+          "panels": [
+            {
+              "bg": "room",
+              "cast": [
+                {
+                  "who": "xiaoman",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "talk"
+                }
+              ],
+              "cap": "借钱买了一个包，你是变富了，"
+            },
+            {
+              "bg": "street",
+              "cast": [
+                {
+                  "who": "xiaoyin",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "talk"
+                }
+              ],
+              "cap": "借钱买了一个包，你是变富了，"
+            },
+            {
+              "bg": "shop",
+              "cast": [
+                {
+                  "who": "xiaoman",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "talk"
+                }
+              ],
+              "cap": "借钱买了一个包，你是变富了，"
+            },
+            {
+              "bg": "plain",
+              "cast": [
+                {
+                  "who": "xiaoyin",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "wow"
+                }
+              ],
+              "cap": "借钱买了一个包，你是变富了，"
+            }
+          ]
+        },
         "steps": [
           {
-            "text": "从上一关的式子出发：净资产 = 资产 − 负债。两边同时加上负债，等式仍然成立。",
-            "formula": "资产 = 负债 + 净资产"
+            "title": "回顾 · 净资产 = 资产 − 负债",
+            "idea": "昨天小 E：资产 15 万，负债 9 万，净资产 6 万。15 − 9 = 6，反过来 9 + 6 = 15。",
+            "visual": {
+              "type": "balance",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "play": 0,
+                    "step": 0
+                  },
+                  "cap": "先看骨架",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "play": 1,
+                    "step": 2
+                  },
+                  "cap": "看完整的图",
+                  "para": "takeaway"
+                }
+              ]
+            },
+            "takeaway": "减法倒过来写，就是加法：资产 = 负债 + 净资产。"
           },
           {
-            "text": "用上一关小 E 的数验一下：资产 15 万，负债 9 万，净资产 6 万。15 − 9 = 6，反过来 9 + 6 = 15，两种写法说的是同一件事。"
+            "title": "买东西的钱，只有两个来源",
+            "idea": "你拥有的每样东西，买它的钱不是借来的，就是自己的。没有第三种来源。",
+            "visual": {
+              "type": "comic",
+              "panels": [
+                {
+                  "bg": "bank",
+                  "cast": [
+                    {
+                      "who": "xiaoman",
+                      "x": 0.5,
+                      "y": 0.72,
+                      "face": "talk"
+                    }
+                  ],
+                  "cap": "一个 1 万的包"
+                },
+                {
+                  "bg": "kitchen",
+                  "cast": [
+                    {
+                      "who": "xiaoman",
+                      "x": 0.5,
+                      "y": 0.72,
+                      "face": "talk"
+                    }
+                  ],
+                  "cap": "要么是借来的"
+                },
+                {
+                  "bg": "room",
+                  "cast": [
+                    {
+                      "who": "xiaoman",
+                      "x": 0.5,
+                      "y": 0.72,
+                      "face": "talk"
+                    }
+                  ],
+                  "cap": "要么是自己的"
+                }
+              ]
+            },
+            "why": "所以\"有的东西\"一定等于\"借来的钱 + 自己的钱\"。左右两边永远相等。",
+            "formula": "资产 = 负债 + 净资产",
+            "takeaway": "每样东西的钱，不是借的，就是自己的。"
           },
           {
-            "text": "推一下它的含义：你拥有的每一样东西，买它的钱只有两个来源——要么是借来的（负债），要么是自己的（净资产）。没有第三种来源，所以左右两边必然相等。"
-          },
-          {
-            "text": "代入：买一辆 15 万的车，首付 5 万是自己的，贷款 10 万是借的。",
-            "formula": "资产 15 万 = 负债 10 万 + 净资产 5 万",
+            "title": "一辆车的例子",
+            "idea": "买一辆 15 万的车：首付 5 万是自己的，贷款 10 万是借的。",
+            "visual": {
+              "type": "balance",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "play": 0,
+                    "step": 0
+                  },
+                  "cap": "先看骨架",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "play": 1,
+                    "step": 2
+                  },
+                  "cap": "看完整的图",
+                  "para": "takeaway"
+                }
+              ]
+            },
+            "takeaway": "首付是自己的钱，贷款是借来的钱。",
+            "derive": [
+              "资产：车 15 万。",
+              "借来的：10 万。",
+              "自己的：5 万。",
+              "15 = 10 + 5。"
+            ],
             "check": {
               "q": "15 万的车，首付 5 万、贷款 10 万。自己的钱是多少？",
               "options": [
@@ -11280,7 +28560,65 @@ window.DAYS = [
             }
           },
           {
-            "text": "公司也一模一样：资产 = 负债 + 所有者权益（所有者权益就是股东自己的钱，相当于公司的“净资产”）。这正是财报三张表之一“资产负债表”的骨架：左边列资产，右边列负债和所有者权益，两边永远相等。",
+            "title": "借钱买包，变富了吗？",
+            "idea": "借 1 万买一个 1 万的包。左边多了 1 万的包，右边多了 1 万的欠款。两边一起变高，自己的钱没变。",
+            "visual": {
+              "type": "balance",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "play": 0,
+                    "step": 0
+                  },
+                  "cap": "先看骨架",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "play": 1,
+                    "step": 2
+                  },
+                  "cap": "看完整的图",
+                  "para": "takeaway"
+                }
+              ]
+            },
+            "takeaway": "借钱买东西，表变大了，你没有变富。",
+            "derive": [
+              "资产 +1 万。",
+              "负债 +1 万。",
+              "净资产 = 资产 − 负债，没有变。",
+              "包以后变旧、卖不上价，净资产反而会变少。"
+            ]
+          },
+          {
+            "title": "公司也一样：所有者权益",
+            "idea": "公司也只有两种钱：借来的，和老板们自己投进来的。老板们自己的那份，叫**所有者权益**，就是公司的净资产。",
+            "visual": {
+              "type": "balance",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "play": 0,
+                    "step": 0
+                  },
+                  "cap": "先看骨架",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "play": 1,
+                    "step": 2
+                  },
+                  "cap": "看完整的图",
+                  "para": "takeaway"
+                }
+              ]
+            },
+            "example": "一家奶茶店有现金 5 万、设备 10 万，一共 15 万。其中 6 万是银行贷款，9 万是老板自己投的。15 = 6 + 9。",
+            "takeaway": "公司：资产 = 负债 + 所有者权益（老板们自己的钱）。",
             "check": {
               "q": "资产负债表左右两边的数？",
               "options": [
@@ -11292,7 +28630,36 @@ window.DAYS = [
             }
           },
           {
-            "text": "推一个反直觉的结论：借 1 万买一个值 1 万的包，资产多了 1 万，负债也多了 1 万，净资产不变——表变大了，你并没有变富。而包一旦贬值，净资产就减少了。"
+            "title": "串起来：财报里的第一张表",
+            "idea": "把左右两边列成一张表，就是公司财报里的**资产负债表**。左边写有什么，右边写钱从哪来。以后读真实公司的年报，第一张看的就是它。",
+            "visual": {
+              "type": "chain",
+              "base": {
+                "nodes": [
+                  "资产负债表 · 某奶茶店 · 12 月 31 日"
+                ]
+              },
+              "frames": [
+                {
+                  "set": {
+                    "play": 0,
+                    "step": 0
+                  },
+                  "cap": "先看骨架",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "play": 1,
+                    "step": 2
+                  },
+                  "cap": "看完整的图",
+                  "para": "takeaway"
+                }
+              ]
+            },
+            "example": "回到钩子。借钱买包，你的这张表两边一起变大，但右边\"自己的\"那块没变。所以你没有变富。",
+            "takeaway": "资产负债表：左边是有什么，右边是钱从哪来，两边永远相等。"
           }
         ],
         "interaction": {
@@ -11321,7 +28688,7 @@ window.DAYS = [
             }
           ],
           "ref": [
-            2,
+            1,
             4
           ]
         },
@@ -11336,7 +28703,7 @@ window.DAYS = [
             ],
             "answer": 0,
             "why": "资产 +1 万，负债 +1 万，净资产 = 资产 − 负债，没有变化。之后手机贬值，净资产才会减少。",
-            "ref": 5
+            "ref": 3
           },
           {
             "q": "公司的资产负债表里：“资产 = 负债 + ？”",
@@ -11347,6 +28714,17 @@ window.DAYS = [
             ],
             "answer": 0,
             "why": "公司版的“净资产”叫所有者权益，代表股东自己的钱。利润和收入属于另一张表——利润表。",
+            "ref": 4
+          },
+          {
+            "q": "一家奶茶店资产 20 万，负债 8 万。所有者权益是多少？",
+            "options": [
+              "12 万",
+              "28 万",
+              "8 万"
+            ],
+            "answer": 0,
+            "why": "资产 = 负债 + 所有者权益，所以所有者权益 = 20 − 8 = 12 万。「28 万」是把两个数加起来了；「8 万」是负债本身。",
             "ref": 4
           }
         ]
@@ -11363,7 +28741,37 @@ window.DAYS = [
             "why": "\"换个角度想\"说起来容易，做起来常常卡住：到底哪个想法该换？换成什么？今天的理论把它拆成清楚的步骤，也是心理咨询里最常用的工具之一。",
             "takeaway": "今天学把\"换解释\"拆成能练的步骤。",
             "example": "被拒绝时，朋友劝你\"想开点\"。你也想想开，可不知道该从哪一句开始。",
-            "review": true
+            "review": true,
+            "visual": {
+              "type": "abc",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "今天学把\"换解释\"拆成能练的步骤",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "今天学把\"换解释\"拆成能练的步骤",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "今天学把\"换解释\"拆成能练的步骤。",
+                  "para": "takeaway"
+                }
+              ]
+            }
           },
           {
             "title": "情绪 ABC：中间藏着一环",
@@ -11373,11 +28781,33 @@ window.DAYS = [
             "example": "同一段旋律，配上不同的歌词，听的人可能哭，也可能笑。诱发事件像旋律，信念像歌词，情绪后果是听的人的反应。",
             "exLabel": "打个比方",
             "visual": {
-              "type": "flow",
-              "nodes": [
-                "诱发事件",
-                "信念",
-                "情绪后果"
+              "type": "abc",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "情绪 ABC：诱发事件 → 信念 → 情绪后果，信念是直接原因",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "情绪 ABC：诱发事件 → 信念 → 情绪后果，信念是直接原因",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "情绪 ABC：诱发事件 → 信念 → 情绪后果，信念是直接原因。",
+                  "para": "takeaway"
+                }
               ]
             }
           },
@@ -11401,6 +28831,36 @@ window.DAYS = [
               ],
               "answer": 0,
               "why": "没来参加，摄像机拍得到，是发生了的事，属于诱发事件。「信念」是你对它的看法，比如\"他根本不重视我\"。"
+            },
+            "visual": {
+              "type": "abc",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "拍得到的是诱发事件，下判断的是信念",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "拍得到的是诱发事件，下判断的是信念",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "拍得到的是诱发事件，下判断的是信念。",
+                  "para": "takeaway"
+                }
+              ]
             }
           },
           {
@@ -11417,6 +28877,36 @@ window.DAYS = [
               ],
               "answer": 0,
               "why": "「必须」是典型的绝对化要求，把希望变成了非如此不可。「糟糕至极」是把结果想成\"一切都毁了\"。"
+            },
+            "visual": {
+              "type": "chain",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "不合理信念三特征：绝对化要求、过分概括化、糟糕至极",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "不合理信念三特征：绝对化要求、过分概括化、糟糕至极",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "不合理信念三特征：绝对化要求、过分概括化、糟糕至极。",
+                  "para": "takeaway"
+                }
+              ]
             }
           },
           {
@@ -11433,6 +28923,47 @@ window.DAYS = [
               ],
               "answer": 0,
               "why": "辩论是检验信念，问「证据在哪」能看出它站不站得住。「这是谁的错」是在找人追责，检验不了信念本身。"
+            },
+            "visual": {
+              "type": "comic",
+              "panels": [
+                {
+                  "bg": "room",
+                  "cast": [
+                    {
+                      "who": "xiaoman",
+                      "x": 0.48,
+                      "y": 0.72,
+                      "face": "talk"
+                    }
+                  ],
+                  "cap": "辩论三问：证据在哪"
+                },
+                {
+                  "bg": "street",
+                  "cast": [
+                    {
+                      "who": "xiaoyin",
+                      "x": 0.48,
+                      "y": 0.72,
+                      "face": "talk"
+                    }
+                  ],
+                  "cap": "别的解释"
+                },
+                {
+                  "bg": "shop",
+                  "cast": [
+                    {
+                      "who": "xiaoman",
+                      "x": 0.48,
+                      "y": 0.72,
+                      "face": "talk"
+                    }
+                  ],
+                  "cap": "真有那么糟"
+                }
+              ]
             }
           },
           {
@@ -11440,7 +28971,37 @@ window.DAYS = [
             "idea": "回到开头：同样被拒绝，有人一天就好，有人一蹶不振，差别不在事情，而在信念。",
             "why": "研究总体支持这种疗法有效，它也是认知行为疗法的源头之一，考证常考。局限也要知道：有些事件本身就很沉重，比如亲人离世，难过是正常的，不能都归到\"想错了\"；信念和情绪也会互相影响，不只是单向。",
             "takeaway": "情绪 ABC：决定情绪的是信念，不是诱发事件。",
-            "example": "账号选题可以这样写：\"让你难过的，也许不是他已读不回，而是你心里那句'他不在乎我'。\"先写下事件，再找出信念，最后换一个。"
+            "example": "账号选题可以这样写：\"让你难过的，也许不是他已读不回，而是你心里那句'他不在乎我'。\"先写下事件，再找出信念，最后换一个。",
+            "visual": {
+              "type": "abc",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "情绪 ABC：决定情绪的是信念，不是诱发事件",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "情绪 ABC：决定情绪的是信念，不是诱发事件",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "情绪 ABC：决定情绪的是信念，不是诱发事件。",
+                  "para": "takeaway"
+                }
+              ]
+            }
           }
         ],
         "interaction": {
@@ -11494,121 +29055,566 @@ window.DAYS = [
             "why": "从“一次没做好”直接推到“整个人一无是处”，是用一件事概括了全部，属于过分概括化。",
             "ref": 3
           }
-        ]
+        ],
+        "hookComic": {
+          "panels": [
+            {
+              "bg": "room",
+              "cast": [
+                {
+                  "who": "xiaoman",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "talk"
+                }
+              ],
+              "cap": "同样被拒绝，有人难过一天就好"
+            },
+            {
+              "bg": "street",
+              "cast": [
+                {
+                  "who": "xiaoyin",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "talk"
+                }
+              ],
+              "cap": "如果事情一样，差别从哪来"
+            },
+            {
+              "bg": "shop",
+              "cast": [
+                {
+                  "who": "xiaoman",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "talk"
+                }
+              ],
+              "cap": "如果事情一样，差别从哪来"
+            },
+            {
+              "bg": "plain",
+              "cast": [
+                {
+                  "who": "xiaoyin",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "wow"
+                }
+              ],
+              "cap": "如果事情一样，差别从哪来"
+            }
+          ]
+        }
       },
       "english": {
         "id": "d12-english",
-        "title": "长句拆解：先找主干",
-        "minutes": 6,
-        "hook": "四级阅读里一句话三行长。其实它的骨架往往只有五六个词。",
+        "title": "The Cake：打算做什么，用 be going to",
+        "minutes": 9,
+        "hook": "Mochi 盯着蛋糕，你不用问也知道它\"要\"干什么。英语怎么说这个\"要\"？",
+        "hookComic": {
+          "panels": [
+            {
+              "bg": "kitchen",
+              "cast": [
+                {
+                  "who": "mia",
+                  "x": 0.32,
+                  "y": 0.72,
+                  "face": "happy"
+                },
+                {
+                  "who": "leo",
+                  "x": 0.62,
+                  "y": 0.74,
+                  "face": "talk"
+                },
+                {
+                  "who": "mochi",
+                  "x": 0.8,
+                  "y": 0.82,
+                  "face": "happy",
+                  "k": 0.7
+                }
+              ]
+            },
+            {
+              "bg": "room",
+              "cast": [
+                {
+                  "who": "mia",
+                  "x": 0.32,
+                  "y": 0.72,
+                  "face": "happy"
+                },
+                {
+                  "who": "leo",
+                  "x": 0.62,
+                  "y": 0.74,
+                  "face": "talk"
+                },
+                {
+                  "who": "mochi",
+                  "x": 0.8,
+                  "y": 0.82,
+                  "face": "happy",
+                  "k": 0.7
+                }
+              ]
+            },
+            {
+              "bg": "street",
+              "cast": [
+                {
+                  "who": "mia",
+                  "x": 0.32,
+                  "y": 0.72,
+                  "face": "happy"
+                },
+                {
+                  "who": "leo",
+                  "x": 0.62,
+                  "y": 0.74,
+                  "face": "talk"
+                },
+                {
+                  "who": "mochi",
+                  "x": 0.8,
+                  "y": 0.82,
+                  "face": "happy",
+                  "k": 0.7
+                }
+              ]
+            }
+          ]
+        },
+        "story": {
+          "title": "The Cake",
+          "panels": [
+            {
+              "bg": "kitchen",
+              "cast": [
+                {
+                  "who": "mia",
+                  "x": 0.32,
+                  "y": 0.72,
+                  "face": "happy"
+                },
+                {
+                  "who": "leo",
+                  "x": 0.62,
+                  "y": 0.74,
+                  "face": "talk"
+                },
+                {
+                  "who": "mochi",
+                  "x": 0.8,
+                  "y": 0.82,
+                  "face": "happy",
+                  "k": 0.7
+                }
+              ]
+            },
+            {
+              "bg": "room",
+              "cast": [
+                {
+                  "who": "mia",
+                  "x": 0.32,
+                  "y": 0.72,
+                  "face": "happy"
+                },
+                {
+                  "who": "leo",
+                  "x": 0.62,
+                  "y": 0.74,
+                  "face": "talk"
+                },
+                {
+                  "who": "mochi",
+                  "x": 0.8,
+                  "y": 0.82,
+                  "face": "happy",
+                  "k": 0.7
+                }
+              ]
+            },
+            {
+              "bg": "street",
+              "cast": [
+                {
+                  "who": "mia",
+                  "x": 0.32,
+                  "y": 0.72,
+                  "face": "happy"
+                },
+                {
+                  "who": "leo",
+                  "x": 0.62,
+                  "y": 0.74,
+                  "face": "talk"
+                },
+                {
+                  "who": "mochi",
+                  "x": 0.8,
+                  "y": 0.82,
+                  "face": "happy",
+                  "k": 0.7
+                }
+              ]
+            },
+            {
+              "bg": "shop",
+              "cast": [
+                {
+                  "who": "mia",
+                  "x": 0.32,
+                  "y": 0.72,
+                  "face": "happy"
+                },
+                {
+                  "who": "leo",
+                  "x": 0.62,
+                  "y": 0.74,
+                  "face": "talk"
+                },
+                {
+                  "who": "mochi",
+                  "x": 0.8,
+                  "y": 0.82,
+                  "face": "happy",
+                  "k": 0.7
+                }
+              ]
+            }
+          ],
+          "lines": [
+            {
+              "who": "A",
+              "en": "Leo, I'm going to sing in a café next Friday!",
+              "zh": "Leo，下周五我要在一家咖啡馆唱歌！",
+              "panel": 0
+            },
+            {
+              "who": "B",
+              "en": "Great! I'm going to bring my friends.",
+              "zh": "太好了！我要带朋友去。",
+              "panel": 0
+            },
+            {
+              "who": "A",
+              "en": "I'm so nervous. I'm going to practice every day.",
+              "zh": "我好紧张。我打算每天练习。",
+              "panel": 1
+            },
+            {
+              "who": "B",
+              "en": "And I'm going to make a big cake for you. This is a test cake.",
+              "zh": "我还要给你做一个大蛋糕。这个是试做的。",
+              "panel": 2
+            },
+            {
+              "who": "A",
+              "en": "Thank you, Leo!",
+              "zh": "谢谢你，Leo！",
+              "panel": 2
+            },
+            {
+              "who": "N",
+              "en": "Mochi is looking at the cake.",
+              "zh": "Mochi 正盯着那个蛋糕。",
+              "panel": 3
+            },
+            {
+              "who": "A",
+              "en": "Oh no. Mochi is going to eat it!",
+              "zh": "哎呀。Mochi 要吃了它！",
+              "panel": 3
+            }
+          ]
+        },
+        "words": [
+          {
+            "w": "café",
+            "ipa": "kæˈfeɪ",
+            "stress": "fé",
+            "pic": "☕",
+            "zh": "咖啡馆",
+            "ex": "I'm going to sing in a café.",
+            "part": "来自法语，é 读 /eɪ/，重音在后面"
+          },
+          {
+            "w": "nervous",
+            "ipa": "ˈnɜːrvəs",
+            "stress": "ner",
+            "pic": "😬",
+            "zh": "紧张的",
+            "ex": "I'm so nervous.",
+            "part": "nerve 神经 + -ous 充满 → 神经绷满了。和第 9 天 famous 一样是 -ous"
+          },
+          {
+            "w": "practice",
+            "ipa": "ˈpræktɪs",
+            "stress": "prac",
+            "pic": "🎹",
+            "zh": "练习",
+            "ex": "I'm going to practice every day.",
+            "part": "—"
+          },
+          {
+            "w": "bring",
+            "ipa": "brɪŋ",
+            "stress": "bring",
+            "pic": "🎁",
+            "zh": "带来",
+            "ex": "I'm going to bring my friends.",
+            "part": "过去式 brought（第 13 天会用到）"
+          }
+        ],
         "steps": [
           {
-            "title": "三行长句，骨架很短",
-            "idea": "四级阅读里的长句看着有三行，骨架却往往只有五六个词，其余都是挂在骨架上的细节。",
-            "why": "长句之所以长，通常不是因为它说了很多件事，而是给其中几个名词加了一层又一层说明：什么样的人、在哪里、做什么用的。只要先把这些说明拿开，句子就短得多，意思一眼就清楚。",
-            "takeaway": "长句 = 一副短骨架 + 一层层细节。",
-            "example": "像一段带装饰音的旋律：颤音、倚音、经过音让它听起来很繁复，但把装饰音拿掉，主旋律只有几个音。先认出主旋律，再去听装饰。",
-            "exLabel": "打个比方"
-          },
-          {
-            "title": "定语从句是\"粘\"上去的",
-            "idea": "昨天学过：who、which、that 紧跟在名词后面，是在解释这个名词，把两句话粘成了一句。",
-            "why": "今天要反着用：粘上去的东西，也可以先拆下来。",
-            "takeaway": "名词后面的 who / which / that 部分，是贴上去的解释。",
-            "example": "people who feel overwhelmed by work 里，who feel overwhelmed by work 在解释 people：被工作压得喘不过气的人。",
-            "review": true
-          },
-          {
-            "title": "主干：谁 + 做了什么",
-            "idea": "一个句子的**主干**，就是\"谁 + 做了什么（+ 对什么）\"。主语和谓语动词是最少的两块，缺一块就不成句。",
-            "why": "英语的句子必须有主语和谓语动词，这是语法的底线。其他成分，比如介词短语（in…、of…、with…）、名词后面的从句，都只是给某个词加细节，不是骨架。所以找主干，就是先找\"谁\"和\"做了什么\"。",
-            "takeaway": "主干 = 谁 + 做了什么；其余都是细节。",
-            "example": "The girl in the red dress sings beautifully. 主语是 the girl，谓语是 sings。in the red dress 告诉你是哪个女孩，beautifully 告诉你唱得怎样。主干：The girl sings.",
+            "title": "先听故事",
+            "kind": "story-listen",
+            "idea": "看图听。最后 Mochi 要干什么？",
             "check": {
-              "q": "The girl in the red dress sings. 的主干是？",
+              "q": "Mochi 接下来要干什么？",
               "options": [
-                "The girl sings.",
-                "The red dress sings."
+                "吃蛋糕",
+                "去咖啡馆唱歌"
               ],
               "answer": 0,
-              "why": "in the red dress 只是说明哪个女孩，唱歌的是 the girl。「The red dress sings.」把修饰里的名词当成了主语。"
+              "why": "Mochi 盯着蛋糕，Mia 说 [[Mochi is going to eat it!]]。去咖啡馆唱歌的是 Mia。"
             }
           },
           {
-            "title": "先划掉修饰，再装回去",
-            "idea": "拆长句的第一步：先暂时划掉修饰成分，也就是介词短语和名词后面的从句，剩下的就是主干。读懂主干，再把细节一块块装回去。",
-            "why": "修饰成分只是给某个名词加细节，拿掉以后，语法依然完整，意思的大方向也不变，反而能看清谁做了什么。很多生词恰好藏在修饰里，先不查也能读懂主干。",
-            "takeaway": "先划掉介词短语和从句，剩下的就是主干。",
-            "example": "People who feel overwhelmed by work often find that a short walk in the park helps them calm down.",
-            "derive": [
-              "划掉 who feel overwhelmed by work（解释 people）。",
-              "划掉 in the park（解释 walk）。",
-              "剩下的 People often find that… 就是主干。"
-            ],
+            "title": "四个新词",
+            "kind": "words",
+            "idea": "每个词都点一下 ▶。café 的重音在后面。"
+          },
+          {
+            "title": "发音 · /æ/ 和 /e/：嘴张多大",
+            "idea": "[[practice]]、[[café]] 里的 a 读 /æ/：嘴张得很大，下巴往下。[[bed]]、[[friend]] 里的 e 读 /e/：嘴只张一半。",
+            "why": "中文里没有 /æ/，很多人读成 e，把 bad 说成 bed。两个音的区别在嘴张多大：/æ/ 下巴往下掉，像要咬一个大苹果；/e/ 只张一半。英语里这又是两个词：[[bad]] 是坏的，[[bed]] 是床；[[man]] 是一个男人，[[men]] 是好几个男人。",
+            "example": "[[cat]]、[[map]]、[[practice]] 是 /æ/；[[pen]]、[[friend]]、[[red]] 是 /e/。",
+            "takeaway": "/æ/ 嘴张大，/e/ 嘴半张。",
+            "visual": {
+              "type": "mouth",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "/æ/ 嘴张大，/e/ 嘴半张",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "/æ/ 嘴张大，/e/ 嘴半张",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "/æ/ 嘴张大，/e/ 嘴半张。",
+                  "para": "takeaway"
+                }
+              ]
+            },
             "check": {
-              "q": "a short walk in the park 里，in the park 修饰？",
+              "q": "说 [[bad]] 里的 a，嘴要？",
               "options": [
-                "walk",
-                "people"
+                "张大，下巴往下",
+                "只张一半"
               ],
               "answer": 0,
-              "why": "in the park 紧跟 walk，说的是在哪里散步。「people」离它很远，修饰 people 的是 who feel overwhelmed by work。"
+              "why": "bad 是 /æ/，嘴要张大。「只张一半」是 bed 的 /e/。"
             }
           },
           {
-            "title": "串起来：一个粘，一个拆",
-            "idea": "回到开头：三行长句的骨架往往只有五六个词。昨天学的是用 who、which、that 把句子粘长，今天学的是反过来把它拆短。",
-            "why": "会粘，就知道修饰贴在哪里；会拆，考场上就能很快抓住主干。两招合起来，读长句就是三步，顺序别反：先划掉修饰，再找主语和谓语，最后把细节装回去。",
-            "takeaway": "长句 = 主干 + 修饰：先划修饰，再找主干，最后装回细节。",
-            "example": "The singer who won the contest released a song that everyone loves. 划掉 who won the contest 和 that everyone loves，主干是 The singer released a song.（那位歌手发了一首歌。）再装回去：赢了比赛的那位歌手，发了一首人人都爱的歌。"
+            "title": "语法 · 打算、眼看要：am / is / are going to + 动词原形",
+            "idea": "说\"打算做什么\"，用 am / is / are going to + 动词原形：[[I'm going to sing.]] 我打算唱歌。",
+            "why": "going 是\"正在往……走\"（第 6 天的 -ing）。I'm going to sing 原本的意思是\"我正在朝'唱歌'这件事走去\"：人已经在路上了，事情在前面。所以它说的是心里已经定好的打算，或者眼前已经看得出要发生的事：Mochi 盯着蛋糕，他要吃了。",
+            "example": "[[I'm going to practice every day.]] [[Leo is going to make a cake.]] [[Mochi is going to eat it!]]（看得出来，马上要发生）",
+            "takeaway": "打算、眼看要：am / is / are going to + 动词原形。",
+            "visual": {
+              "type": "sentence",
+              "base": {
+                "rows": [
+                  {
+                    "bricks": [
+                      {
+                        "text": "{",
+                        "role": "extra"
+                      },
+                      {
+                        "text": "I",
+                        "role": "who"
+                      },
+                      {
+                        "text": "am",
+                        "role": "extra"
+                      },
+                      {
+                        "text": "sing",
+                        "role": "verb"
+                      },
+                      {
+                        "text": "in",
+                        "role": "extra"
+                      },
+                      {
+                        "text": "next",
+                        "role": "extra"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "frames": [
+                {
+                  "set": {
+                    "play": 0
+                  },
+                  "cap": "说\"打算做什么\"，用 am / is / are going to + 动词原形",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "play": 1
+                  },
+                  "cap": "打算、眼看要：am / is / are going to + 动词原形。",
+                  "para": "takeaway"
+                }
+              ]
+            },
+            "check": {
+              "q": "中文\"下周我打算去咖啡馆\"，英语怎么说？",
+              "options": [
+                "I'm going to go to the café next week.",
+                "I going to the café next week."
+              ],
+              "answer": 0,
+              "why": "要有 am（I'm），going to 后面跟动词原形 go。「I going to…」缺了 am，也缺了动词。"
+            }
+          },
+          {
+            "title": "再读故事",
+            "kind": "story-read",
+            "idea": "看着字听，找出每个 going to，看看后面跟的是什么动词。"
+          },
+          {
+            "title": "下周五我打算……",
+            "kind": "drill",
+            "frame": "I'm going to {a} next Friday.",
+            "zh": "下周五我打算{a}。",
+            "slots": {
+              "a": [
+                {
+                  "en": "sing in a café",
+                  "zh": "在咖啡馆唱歌",
+                  "pic": "🎤"
+                },
+                {
+                  "en": "bring my friends",
+                  "zh": "带朋友去",
+                  "pic": "👥"
+                },
+                {
+                  "en": "make a cake",
+                  "zh": "做个蛋糕",
+                  "pic": "🎂"
+                },
+                {
+                  "en": "practice",
+                  "zh": "练习",
+                  "pic": "🎹"
+                }
+              ]
+            },
+            "need": 3
+          },
+          {
+            "title": "跟读",
+            "kind": "shadow",
+            "tip": "café、practice 的 a，嘴张大。",
+            "lines": [
+              0,
+              2,
+              6
+            ]
+          },
+          {
+            "title": "复述：串起来",
+            "kind": "retell",
+            "idea": "看着图，用 going to 说说每个人打算做什么。",
+            "keys": [
+              [
+                "café",
+                "next Friday"
+              ],
+              [
+                "nervous",
+                "practice"
+              ],
+              [
+                "bring",
+                "friends",
+                "cake"
+              ],
+              [
+                "looking at",
+                "going to eat"
+              ]
+            ]
           }
         ],
         "interaction": {
           "type": "listen",
-          "prompt": "听这句话，选出它的主干",
-          "audio": "People who feel overwhelmed by work often find that a short walk in the park helps them calm down.",
-          "answer": 0,
-          "why": "who feel overwhelmed by work 解释 people，in the park 解释 walk，都是修饰。主语是 people，谓语是 find。",
+          "prompt": "听一听，这句话是什么意思？",
+          "audio": "I'm going to bring my friends.",
+          "showText": "after",
           "options": [
-            "People find that a short walk helps them calm down.",
-            "Work helps them calm down.",
-            "The park feels overwhelmed."
+            "我打算带朋友来。",
+            "我正在带朋友。",
+            "我带了朋友。"
           ],
+          "answer": 0,
+          "why": "听到 going to + bring，是打算。「正在带」要说 I'm bringing；「带了」是过去，要说 I brought。",
           "ref": 3
         },
-        "take": "长句 = 主干 + 修饰。先划掉介词短语和从句，找到“谁做了什么”，再把细节装回去。",
+        "take": "打算、眼看要：am / is / are going to + 动词原形；/æ/ 嘴张大，/e/ 嘴半张。",
         "quiz": [
           {
-            "q": "The emperor who unified China built a road system that connected the whole country. 这句的主干是？",
+            "q": "中文\"下周我打算在咖啡馆唱歌\"，英语怎么说？",
             "options": [
-              "The emperor built a road system.",
-              "China connected the whole country.",
-              "The emperor unified China."
+              "I'm going to sing in a café next week.",
+              "I going to sing in a café next week.",
+              "I'm going to singing in a café next week."
             ],
             "answer": 0,
-            "why": "who unified China 解释 emperor，that connected the whole country 解释 road system，划掉后剩下 The emperor built a road system。「The emperor unified China」是从句里的内容，不是主干。",
-            "ref": [
-              3,
-              4
-            ]
+            "why": "am / is / are going to + 动词原形。「I going to」缺了 am；「going to singing」后面的动词不该加 -ing。",
+            "ref": 3
           },
           {
-            "q": "拆长句的第一步是什么？",
+            "q": "看图回答（题目带What is Mochi going to do?",
             "options": [
-              "找到并暂时划掉从句和介词短语",
-              "查出每个生词",
-              "从最后一个词开始翻译"
+              "He's going to eat the cake.",
+              "He ate the cake.",
+              "He eats the cake every day."
             ],
             "answer": 0,
-            "why": "先找骨架，很多生词其实在修饰部分里，不影响理解主干。",
-            "ref": [
-              3,
-              4
-            ]
+            "why": "眼前看得出马上要发生，用 going to。「He ate the cake.」是已经吃了；「every day」是每天的习惯。",
+            "ref": 3
           }
-        ],
-        "tts": [
-          "People who feel overwhelmed by work often find that a short walk in the park helps them calm down."
         ]
       }
     }
@@ -11630,7 +29636,37 @@ window.DAYS = [
             "why": "零散的知识点用起来容易乱。归成四类，看一套衣服时就知道从哪几个方面看。",
             "takeaway": "四类工具：明度、色相关系、纯度与面积、冷暖。",
             "example": "明度差（第 2 天）；同类、邻近、互补、三角（第 6、8、9、10 天）；纯度、70/25/5、中性色（第 3、11、12 天）；冷暖（第 5 天）。",
-            "review": true
+            "review": true,
+            "visual": {
+              "type": "chain",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "四类工具：明度、色相关系、纯度与面积、冷暖",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "四类工具：明度、色相关系、纯度与面积、冷暖",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "四类工具：明度、色相关系、纯度与面积、冷暖。",
+                  "para": "takeaway"
+                }
+              ]
+            }
           },
           {
             "title": "点评四步法：按眼睛看的顺序",
@@ -11653,6 +29689,36 @@ window.DAYS = [
               ],
               "answer": 0,
               "why": "主色、辅色、点缀色的面积分配属于\"纯度与比例\"这一步。「冷暖」看的是整体偏暖还是偏冷。"
+            },
+            "visual": {
+              "type": "outfit",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "点评四步：明度、色相关系、纯度与比例、冷暖",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "点评四步：明度、色相关系、纯度与比例、冷暖",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "点评四步：明度、色相关系、纯度与比例、冷暖。",
+                  "para": "takeaway"
+                }
+              ]
             }
           },
           {
@@ -11668,11 +29734,33 @@ window.DAYS = [
               "冷暖：驼和红都偏暖，白不添冷暖，整体统一。"
             ],
             "visual": {
-              "type": "swatches",
-              "colors": [
-                "#FFFFFF",
-                "#C19A6B",
-                "#C62828"
+              "type": "outfit",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "四步都过关：和谐，还有一个亮点",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "四步都过关：和谐，还有一个亮点",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "四步都过关：和谐，还有一个亮点。",
+                  "para": "takeaway"
+                }
               ]
             }
           },
@@ -11695,6 +29783,36 @@ window.DAYS = [
               ],
               "answer": 0,
               "why": "深灰和黑都很暗，转成黑白分不清，是明度差太小。它们几乎没有色相，谈不上「冷暖不统一」。"
+            },
+            "visual": {
+              "type": "outfit",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "哪一步卡住，就改哪一步",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "哪一步卡住，就改哪一步",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "哪一步卡住，就改哪一步。",
+                  "para": "takeaway"
+                }
+              ]
             }
           },
           {
@@ -11702,7 +29820,37 @@ window.DAYS = [
             "idea": "回到开头：以后看到任何一套搭配，都可以按四步说出\"为什么好看\"或\"哪里可以改\"。",
             "why": "好看不是玄学。眼睛先看亮暗，再看色相合不合，再找主角，最后感受整体冷暖。四步就是把眼睛的这个过程一步步说出来。",
             "takeaway": "四步法把\"好看\"拆成能讲清的理由。",
-            "example": "刷到一张穿搭照，试着用一句话点评：\"浅蓝衬衫配藏青长裤，明度清楚；都是蓝，是同类色；一只红包做 5% 的亮点；整体偏冷，红包添了一点暖。\""
+            "example": "刷到一张穿搭照，试着用一句话点评：\"浅蓝衬衫配藏青长裤，明度清楚；都是蓝，是同类色；一只红包做 5% 的亮点；整体偏冷，红包添了一点暖。\"",
+            "visual": {
+              "type": "chain",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "四步法把\"好看\"拆成能讲清的理由",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "四步法把\"好看\"拆成能讲清的理由",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "四步法把\"好看\"拆成能讲清的理由。",
+                  "para": "takeaway"
+                }
+              ]
+            }
           }
         ],
         "interaction": {
@@ -11780,7 +29928,59 @@ window.DAYS = [
             "why": "红包面积小、纯度高，放在点缀位，正好吸引视线又不压过整体。",
             "ref": 2
           }
-        ]
+        ],
+        "hookComic": {
+          "panels": [
+            {
+              "bg": "room",
+              "cast": [
+                {
+                  "who": "xiaoman",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "talk"
+                }
+              ],
+              "cap": "两周学了 12 个知识点"
+            },
+            {
+              "bg": "street",
+              "cast": [
+                {
+                  "who": "xiaoyin",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "talk"
+                }
+              ],
+              "cap": "现在用它们，把“好看”讲成别"
+            },
+            {
+              "bg": "shop",
+              "cast": [
+                {
+                  "who": "xiaoman",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "talk"
+                }
+              ],
+              "cap": "现在用它们，把“好看”讲成别"
+            },
+            {
+              "bg": "plain",
+              "cast": [
+                {
+                  "who": "xiaoyin",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "wow"
+                }
+              ],
+              "cap": "现在用它们，把“好看”讲成别"
+            }
+          ]
+        }
       },
       "history": {
         "id": "d13-history",
@@ -11794,14 +29994,47 @@ window.DAYS = [
             "why": "骨架只剩最后一块：清。先看它从哪里来：明末朝廷加税去打的，正是东北的女真。",
             "takeaway": "明亡于农民军，但最后入主北京的是东北的女真。",
             "example": "像一场三方对局：明朝、农民军、东北的女真。明先倒下，剩下两家争北京。",
-            "review": true
+            "review": true,
+            "visual": {
+              "recall": "d12-history#8"
+            }
           },
           {
             "title": "东北的新力量：从后金到清",
             "idea": "1616 年，女真首领努尔哈赤建立后金；1636 年，皇太极改国号为**清**。",
             "why": "努尔哈赤把分散的女真各部统一起来，平时生产、战时出征，组织严密，战斗力很强。明朝后期正陷在财政危机和党争里，辽东防线一退再退。一边越来越强，一边越来越弱，力量对比就翻了过来。",
             "takeaway": "女真统一后建立后金，又改名为清，趁明朝衰弱不断壮大。",
-            "example": "有点像当年的蒙古：分散的部落一旦统一、组织起来，同样的人，力量就成倍放大。而它的对手，偏偏正在走下坡路。"
+            "example": "有点像当年的蒙古：分散的部落一旦统一、组织起来，同样的人，力量就成倍放大。而它的对手，偏偏正在走下坡路。",
+            "visual": {
+              "type": "histmap",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "女真统一后建立后金，又改名为清，趁明朝衰弱不断壮大",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "女真统一后建立后金，又改名为清，趁明朝衰弱不断壮大",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "女真统一后建立后金，又改名为清，趁明朝衰弱不断壮大。",
+                  "para": "takeaway"
+                }
+              ]
+            }
           },
           {
             "title": "入关：少数人怎么管大国",
@@ -11813,7 +30046,36 @@ window.DAYS = [
               "打天下：靠骑兵。",
               "治天下：靠现成的制度和读书人。",
               "沿用明制、继续科举，人心就稳了。"
-            ]
+            ],
+            "visual": {
+              "type": "comic",
+              "panels": [
+                {
+                  "bg": "room",
+                  "cast": [
+                    {
+                      "who": "xiaoman",
+                      "x": 0.48,
+                      "y": 0.72,
+                      "face": "talk"
+                    }
+                  ],
+                  "cap": "清入关后沿用明制、继续科举，"
+                },
+                {
+                  "bg": "street",
+                  "cast": [
+                    {
+                      "who": "xiaoyin",
+                      "x": 0.48,
+                      "y": 0.72,
+                      "face": "talk"
+                    }
+                  ],
+                  "cap": "入关：少数人怎么管大国"
+                }
+              ]
+            }
           },
           {
             "title": "康雍乾盛世：版图的底子",
@@ -11829,6 +30091,36 @@ window.DAYS = [
               ],
               "answer": 0,
               "why": "统一台湾、管理新疆和西藏，「奠定了今天中国版图的基础」。「让中国最早开始工业革命」不对，工业革命最早在英国开始，正是清朝没赶上的那件事。"
+            },
+            "visual": {
+              "type": "histmap",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "康雍乾盛世奠定了今天中国版图的基础",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "康雍乾盛世奠定了今天中国版图的基础",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "康雍乾盛世奠定了今天中国版图的基础。",
+                  "para": "takeaway"
+                }
+              ]
             }
           },
           {
@@ -11842,7 +30134,37 @@ window.DAYS = [
               "手工：产量受人数限制。",
               "机器加蒸汽：产量成倍增长。",
               "谁先用上机器，谁就领先一大截。"
-            ]
+            ],
+            "visual": {
+              "type": "tl",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "工业革命用机器和蒸汽代替手工，生产效率成倍提升",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "工业革命用机器和蒸汽代替手工，生产效率成倍提升",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "工业革命用机器和蒸汽代替手工，生产效率成倍提升。",
+                  "para": "takeaway"
+                }
+              ]
+            }
           },
           {
             "title": "清为什么没跟上",
@@ -11864,6 +30186,36 @@ window.DAYS = [
               ],
               "answer": 0,
               "why": "英国已经换上机器生产，清还「以农为本、少与外界往来」，差距才越拉越大。「清朝的疆域比明朝小」不对，前面讲过，清的疆域奠定了今天的版图。"
+            },
+            "visual": {
+              "type": "chain",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "清守着农业和\"什么都不缺\"，错过工业革命，1840 年进入近代",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "清守着农业和\"什么都不缺\"，错过工业革命，1840 年进入近代",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "清守着农业和\"什么都不缺\"，错过工业革命，1840 年进入近代。",
+                  "para": "takeaway"
+                }
+              ]
             }
           },
           {
@@ -11872,7 +30224,37 @@ window.DAYS = [
             "why": "鸦片战争后，清一再战败、割地赔款，越来越多的人认定：只换皇帝不够，必须换掉帝制本身。革命爆发后，各省纷纷宣布独立，清廷失去了地方的支持，只能退位。",
             "takeaway": "1912 年清帝退位，延续两千多年的帝制结束。",
             "example": "算一算帝制有多长：从前 221 年秦统一到 1912 年，一个在公元前、一个在公元后，要相加：221 + 1912 = 2133，两千一百多年。",
-            "formula": "221 + 1912 = 2133（年）"
+            "formula": "221 + 1912 = 2133（年）",
+            "visual": {
+              "type": "tl",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "1912 年清帝退位，延续两千多年的帝制结束",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "1912 年清帝退位，延续两千多年的帝制结束",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "1912 年清帝退位，延续两千多年的帝制结束。",
+                  "para": "takeaway"
+                }
+              ]
+            }
           },
           {
             "title": "整副骨架：一口气排出来",
@@ -11882,17 +30264,33 @@ window.DAYS = [
             "example": "像一首长曲子的乐章表：每个乐章有自己的调性，可整首曲子反复回到同一个主题——分与合。听熟了主题，每个乐章就都认得出。",
             "exLabel": "打个比方",
             "visual": {
-              "type": "flow",
-              "nodes": [
-                "夏商周",
-                "秦汉",
-                "三国两晋南北朝",
-                "隋唐",
-                "五代十国",
-                "宋",
-                "元",
-                "明",
-                "清"
+              "type": "tl",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "中国史的骨架：分合交替，从夏一路排到清",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "中国史的骨架：分合交替，从夏一路排到清",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "中国史的骨架：分合交替，从夏一路排到清。",
+                  "para": "takeaway"
+                }
               ]
             },
             "check": {
@@ -11915,7 +30313,37 @@ window.DAYS = [
               "看到分裂，先问：谁同时有兵、钱、地？",
               "看到改革，再问：它在拆哪一样？",
               "1912 年以后，问题换了：中国要面对的是整个世界。"
-            ]
+            ],
+            "visual": {
+              "type": "cycle",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "分裂公式贯穿两周；看懂它，就看懂了朝代的兴亡",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "分裂公式贯穿两周；看懂它，就看懂了朝代的兴亡",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "分裂公式贯穿两周；看懂它，就看懂了朝代的兴亡。",
+                  "para": "takeaway"
+                }
+              ]
+            }
           }
         ],
         "interaction": {
@@ -11989,7 +30417,59 @@ window.DAYS = [
             "label": "英国工业革命开始（约）",
             "kind": "event"
           }
-        ]
+        ],
+        "hookComic": {
+          "panels": [
+            {
+              "bg": "room",
+              "cast": [
+                {
+                  "who": "xiaoman",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "talk"
+                }
+              ],
+              "cap": "两周前你还分不清五代十国"
+            },
+            {
+              "bg": "street",
+              "cast": [
+                {
+                  "who": "xiaoyin",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "talk"
+                }
+              ],
+              "cap": "今天，把从夏到清的整副骨架一"
+            },
+            {
+              "bg": "shop",
+              "cast": [
+                {
+                  "who": "xiaoman",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "talk"
+                }
+              ],
+              "cap": "今天，把从夏到清的整副骨架一"
+            },
+            {
+              "bg": "plain",
+              "cast": [
+                {
+                  "who": "xiaoyin",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "wow"
+                }
+              ],
+              "cap": "今天，把从夏到清的整副骨架一"
+            }
+          ]
+        }
       },
       "geo": {
         "id": "d13-geo",
@@ -12002,7 +30482,37 @@ window.DAYS = [
             "idea": "把十国的地盘叠到今天的地图上：吴越差不多是浙江，闽差不多是福建，前蜀、后蜀差不多是四川，楚差不多是湖南。",
             "why": "一千多年里朝代换了好几轮，边界却像被\"钉\"在原地。能把边界钉住这么久的，不是哪个皇帝的命令，而是不会搬家的东西：山和河。还有一个怪现象：北方 53 年换了五个朝代，南方不少小国却能稳坐几十年。这两件事，今天用地形一起解释。",
             "takeaway": "十国的地盘像今天的省；北方换得快、南方坐得稳，都因为地形。",
-            "example": "今天福建简称\"闽\"，四川又称\"蜀\"，湖南常被叫作\"楚地\"。同一块地，名字和边界一起传了一千多年，像一首老歌换了好几代歌手，旋律一直没变。"
+            "example": "今天福建简称\"闽\"，四川又称\"蜀\"，湖南常被叫作\"楚地\"。同一块地，名字和边界一起传了一千多年，像一首老歌换了好几代歌手，旋律一直没变。",
+            "visual": {
+              "type": "histmap",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "十国的地盘像今天的省；北方换得快、南方坐得稳，都因为地形",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "十国的地盘像今天的省；北方换得快、南方坐得稳，都因为地形",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "十国的地盘像今天的省；北方换得快、南方坐得稳，都因为地形。",
+                  "para": "takeaway"
+                }
+              ]
+            }
           },
           {
             "title": "五代接力，十国并排",
@@ -12010,7 +30520,10 @@ window.DAYS = [
             "why": "五代的皇帝大多靠兵权上位，\"兵强马壮者为天子\"，所以换得快。十国里只有北汉在北方（今山西），其余都在南方。",
             "takeaway": "五代在北方接力、都城在河南；十国多在南方并排。",
             "example": "五代是后梁、后唐、后晋、后汉、后周，都城都在今天的河南；十国里有吴越、南唐、前蜀、后蜀、南汉、闽、楚等。",
-            "review": true
+            "review": true,
+            "visual": {
+              "recall": "d10-history#1"
+            }
           },
           {
             "title": "平原上，骑兵挡不住",
@@ -12032,6 +30545,36 @@ window.DAYS = [
               ],
               "answer": 0,
               "why": "平地上马跑得快，没有阻挡。「陡峭的高山」正是骑兵的克星，马爬不上去，也冲不起来。"
+            },
+            "visual": {
+              "type": "histmap",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "平原利于骑兵冲锋，无险可守，北方政权因此换得快",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "平原利于骑兵冲锋，无险可守，北方政权因此换得快",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "平原利于骑兵冲锋，无险可守，北方政权因此换得快。",
+                  "para": "takeaway"
+                }
+              ]
             }
           },
           {
@@ -12045,7 +30588,37 @@ window.DAYS = [
               "割让后，山和关口都归了契丹。",
               "骑兵出关就是华北平原，无险可守。",
               "中原从此一直受北方威胁。"
-            ]
+            ],
+            "visual": {
+              "type": "histmap",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "燕云十六州是平原北边的门；丢了它，华北平原无险可守",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "燕云十六州是平原北边的门；丢了它，华北平原无险可守",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "燕云十六州是平原北边的门；丢了它，华北平原无险可守。",
+                  "para": "takeaway"
+                }
+              ]
+            }
           },
           {
             "title": "长江和群山：南方的天然城墙",
@@ -12067,6 +30640,36 @@ window.DAYS = [
               ],
               "answer": 0,
               "why": "长江和大山是天然城墙，骑兵冲不过去。「南方的骑兵比北方多」不对，好马多产在北方草原。"
+            },
+            "visual": {
+              "type": "histmap",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "长江和群山挡住了北方骑兵，南方小国因此相对安稳",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "长江和群山挡住了北方骑兵，南方小国因此相对安稳",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "长江和群山挡住了北方骑兵，南方小国因此相对安稳。",
+                  "para": "takeaway"
+                }
+              ]
             }
           },
           {
@@ -12082,12 +30685,33 @@ window.DAYS = [
               "所以五代都城多在开封。"
             ],
             "visual": {
-              "type": "flow",
-              "nodes": [
-                "江南产粮",
-                "装船",
-                "运河（汴河）",
-                "开封"
+              "type": "histmap",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "五代多定都开封，是因为它在运河边，江南的粮食能直接运到",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "五代多定都开封，是因为它在运河边，江南的粮食能直接运到",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "五代多定都开封，是因为它在运河边，江南的粮食能直接运到。",
+                  "para": "takeaway"
+                }
               ]
             },
             "check": {
@@ -12111,7 +30735,37 @@ window.DAYS = [
               "被山围住的一块，里面自成一体。",
               "十国多以这样的一块为家。",
               "后来的省界也沿山河划，所以和十国很像。"
-            ]
+            ],
+            "visual": {
+              "type": "histmap",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "被山河围住的一块地，容易自成一国，后来也常成为一个省",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "被山河围住的一块地，容易自成一国，后来也常成为一个省",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "被山河围住的一块地，容易自成一国，后来也常成为一个省。",
+                  "para": "takeaway"
+                }
+              ]
+            }
           },
           {
             "title": "串起来：地形画出的分与合",
@@ -12124,7 +30778,37 @@ window.DAYS = [
               "长江、群山护住南方，一块一国。",
               "一国的边界沿山河，所以和今天的省很像。",
               "粮在南方，都城贴着运河定在开封。"
-            ]
+            ],
+            "visual": {
+              "type": "histmap",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "山河划出了十国和今天的省；平原和运河定下了北方的战与都",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "山河划出了十国和今天的省；平原和运河定下了北方的战与都",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "山河划出了十国和今天的省；平原和运河定下了北方的战与都。",
+                  "para": "takeaway"
+                }
+              ]
+            }
           }
         ],
         "interaction": {
@@ -12210,20 +30894,201 @@ window.DAYS = [
             "id": "BJ",
             "label": "BJ"
           }
-        ]
+        ],
+        "hookComic": {
+          "panels": [
+            {
+              "bg": "room",
+              "cast": [
+                {
+                  "who": "xiaoman",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "talk"
+                }
+              ],
+              "cap": "五代十国的地图，和今天的省份"
+            },
+            {
+              "bg": "street",
+              "cast": [
+                {
+                  "who": "xiaoyin",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "talk"
+                }
+              ],
+              "cap": "为什么"
+            },
+            {
+              "bg": "shop",
+              "cast": [
+                {
+                  "who": "xiaoman",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "talk"
+                }
+              ],
+              "cap": "为什么"
+            },
+            {
+              "bg": "plain",
+              "cast": [
+                {
+                  "who": "xiaoyin",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "wow"
+                }
+              ],
+              "cap": "为什么"
+            }
+          ]
+        }
       },
       "finance": {
         "id": "d13-finance",
         "title": "照片和录像：有资产不等于有现金",
-        "minutes": 4,
+        "minutes": 7,
         "hook": "有一套 200 万的房子，却可能下个月就交不起房贷。怎么会？",
+        "hookComic": {
+          "panels": [
+            {
+              "bg": "room",
+              "cast": [
+                {
+                  "who": "xiaoman",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "talk"
+                }
+              ],
+              "cap": "有一套 200 万的房子，却"
+            },
+            {
+              "bg": "street",
+              "cast": [
+                {
+                  "who": "xiaoyin",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "talk"
+                }
+              ],
+              "cap": "怎么会"
+            },
+            {
+              "bg": "shop",
+              "cast": [
+                {
+                  "who": "xiaoman",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "talk"
+                }
+              ],
+              "cap": "怎么会"
+            },
+            {
+              "bg": "plain",
+              "cast": [
+                {
+                  "who": "xiaoyin",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "wow"
+                }
+              ],
+              "cap": "怎么会"
+            }
+          ]
+        },
         "steps": [
           {
-            "text": "小 G 有一套房，资产 200 万；但每月房贷 8000，工资只有 7000。每个月都在往外漏 1000 元现金，存款很快就会用完。",
-            "formula": "7000 − 8000 = −1000"
+            "title": "有房，却交不起房贷",
+            "idea": "房子再值钱，也不会每月给她现金。可房贷每月都要拿现金还。",
+            "visual": {
+              "type": "comic",
+              "panels": [
+                {
+                  "bg": "bank",
+                  "cast": [
+                    {
+                      "who": "xiaoman",
+                      "x": 0.5,
+                      "y": 0.72,
+                      "face": "talk"
+                    }
+                  ],
+                  "cap": "小 G 有套 200 万的房"
+                },
+                {
+                  "bg": "kitchen",
+                  "cast": [
+                    {
+                      "who": "xiaoman",
+                      "x": 0.5,
+                      "y": 0.72,
+                      "face": "talk"
+                    }
+                  ],
+                  "cap": "工资 7000，房贷 800"
+                },
+                {
+                  "bg": "room",
+                  "cast": [
+                    {
+                      "who": "xiaoman",
+                      "x": 0.5,
+                      "y": 0.72,
+                      "face": "talk"
+                    }
+                  ],
+                  "cap": "每月都在漏钱"
+                }
+              ]
+            },
+            "takeaway": "值钱的东西，不等于手里有现金。"
           },
           {
-            "text": "现金流 = 一段时间里，现金实际流进来减去流出去。第 1 天学的“结余”，其实就是你个人的现金流。",
+            "title": "现金流：一段时间里钱的进出",
+            "idea": "**现金流**就是一段时间里，真金白银流进来减去流出去。第 1 天学的\"结余\"，就是你自己的现金流。",
+            "visual": {
+              "type": "chain",
+              "base": {
+                "nodes": [
+                  "这个月进：7000",
+                  "这个月出：8000",
+                  "现金流：−1000"
+                ]
+              },
+              "frames": [
+                {
+                  "set": {
+                    "play": 0,
+                    "step": 0
+                  },
+                  "cap": "先看骨架",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "play": 1,
+                    "step": 2
+                  },
+                  "cap": "看完整的图",
+                  "para": "takeaway"
+                }
+              ]
+            },
+            "takeaway": "现金流 = 一段时间里现金的进减出。",
+            "derive": [
+              "小 G 每月进 7000。",
+              "每月出 8000。",
+              "7000 − 8000 = −1000。"
+            ],
             "check": {
               "q": "小 G 有 200 万的房，她每月的现金流是？",
               "options": [
@@ -12235,7 +31100,39 @@ window.DAYS = [
             }
           },
           {
-            "text": "推一下两种视角：第 12 天的资产负债表是某一刻的“照片”——你在这一刻有什么、欠什么；现金流是一段时间的“录像”——钱是怎么进出的。照片很好看，录像却可能在亏。两个都要看。",
+            "title": "照片和录像",
+            "idea": "资产负债表像一张**照片**，只拍某一刻。现金流像一段**录像**，记一段时间。",
+            "visual": {
+              "type": "comic",
+              "panels": [
+                {
+                  "bg": "bank",
+                  "cast": [
+                    {
+                      "who": "xiaoman",
+                      "x": 0.5,
+                      "y": 0.72,
+                      "face": "talk"
+                    }
+                  ],
+                  "cap": "照片：这一刻有什么、欠什么"
+                },
+                {
+                  "bg": "kitchen",
+                  "cast": [
+                    {
+                      "who": "xiaoman",
+                      "x": 0.5,
+                      "y": 0.72,
+                      "face": "talk"
+                    }
+                  ],
+                  "cap": "录像：这段时间钱怎么进出"
+                }
+              ]
+            },
+            "why": "照片可能很好看，录像却在亏。只看一样会看走眼，所以两个都要看。",
+            "takeaway": "资产负债表是照片，现金流是录像。",
             "check": {
               "q": "资产负债表像\"照片\"，因为它记的是？",
               "options": [
@@ -12247,10 +31144,154 @@ window.DAYS = [
             }
           },
           {
-            "text": "公司也一样：货卖出去了，客户却还没付钱 → 账上记了收入，手里却没有现金。很多公司不是因为亏损倒闭，而是因为现金断了。以后学三张表时，会再见到“利润 ≠ 现金”。"
+            "title": "柱子加折线：一张图看两件事",
+            "idea": "柱子看每个月进出多少，折线看存款一共还剩多少。财报里常把两样画在一张图上。",
+            "visual": {
+              "type": "columns",
+              "base": {
+                "items": [
+                  {
+                    "label": "1 月",
+                    "value": -1000
+                  },
+                  {
+                    "label": "2 月",
+                    "value": -1000
+                  },
+                  {
+                    "label": "3 月",
+                    "value": -1000
+                  },
+                  {
+                    "label": "4 月",
+                    "value": -1000
+                  },
+                  {
+                    "label": "5 月",
+                    "value": -1000
+                  },
+                  {
+                    "label": "6 月",
+                    "value": -1000
+                  },
+                  {
+                    "label": "存款还剩",
+                    "value": 1
+                  }
+                ],
+                "unit": "元"
+              },
+              "frames": [
+                {
+                  "set": {
+                    "play": 0,
+                    "step": 0
+                  },
+                  "cap": "先看骨架",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "play": 1,
+                    "step": 2
+                  },
+                  "cap": "看完整的图",
+                  "para": "takeaway"
+                }
+              ]
+            },
+            "example": "小 G 原来有 6000 元存款。每根柱子都在 0 线下面，每月漏 1000。折线一路往下，6 个月后到 0。",
+            "takeaway": "柱子看每个月，折线看一共还剩多少。",
+            "check": {
+              "q": "照这张图，6 个月后小 G 的存款还剩多少？",
+              "options": [
+                "0，用完了",
+                "还是 6000"
+              ],
+              "answer": 0,
+              "why": "折线从 5000 一路降到 0，每月少 1000。柱子说的是每月漏多少，折线说的是还剩多少，所以「还是 6000」不对。"
+            }
           },
           {
-            "text": "自检两个问题：我的“照片”（净资产）是多少？我的“录像”（每月现金流）是正还是负？"
+            "title": "公司也会\"赚了钱，却没现金\"",
+            "idea": "奶茶卖出去了，账上就算赚了。可对方还没付钱，店里手上没有现金。房租、工资却要现金付。",
+            "visual": {
+              "type": "comic",
+              "panels": [
+                {
+                  "bg": "bank",
+                  "cast": [
+                    {
+                      "who": "xiaoman",
+                      "x": 0.5,
+                      "y": 0.72,
+                      "face": "talk"
+                    }
+                  ],
+                  "cap": "卖出 300 杯，6000 "
+                },
+                {
+                  "bg": "kitchen",
+                  "cast": [
+                    {
+                      "who": "xiaoman",
+                      "x": 0.5,
+                      "y": 0.72,
+                      "face": "talk"
+                    }
+                  ],
+                  "cap": "钱要月底才给"
+                },
+                {
+                  "bg": "room",
+                  "cast": [
+                    {
+                      "who": "xiaoman",
+                      "x": 0.5,
+                      "y": 0.72,
+                      "face": "talk"
+                    }
+                  ],
+                  "cap": "可房租今天就要交"
+                }
+              ]
+            },
+            "why": "很多公司不是因为亏钱倒闭，而是因为现金断了。第 4 季学三张表时，会再见到\"利润不等于现金\"。",
+            "takeaway": "账上赚了，不等于手里有现金。"
+          },
+          {
+            "title": "串起来：问自己两个问题",
+            "idea": "回到钩子。小 G 的照片很好看，有 200 万的房；录像却在亏，每月 −1000。存款一用完，就交不起房贷了。",
+            "visual": {
+              "type": "comic",
+              "panels": [
+                {
+                  "bg": "bank",
+                  "cast": [
+                    {
+                      "who": "xiaoman",
+                      "x": 0.5,
+                      "y": 0.72,
+                      "face": "talk"
+                    }
+                  ],
+                  "cap": "我的照片：净资产多少？"
+                },
+                {
+                  "bg": "kitchen",
+                  "cast": [
+                    {
+                      "who": "xiaoman",
+                      "x": 0.5,
+                      "y": 0.72,
+                      "face": "talk"
+                    }
+                  ],
+                  "cap": "我的录像：每月是正是负？"
+                }
+              ]
+            },
+            "takeaway": "照片和录像都要看；现金断了最危险。"
           }
         ],
         "interaction": {
@@ -12280,7 +31321,7 @@ window.DAYS = [
           ],
           "ref": 2
         },
-        "take": "资产负债表是“照片”，现金流是“录像”。有资产不等于有现金，现金断了才最危险。",
+        "take": "资产负债表是\"照片\"，现金流是\"录像\"。有资产不等于有现金，现金断了才最危险。",
         "quiz": [
           {
             "q": "一家公司利润很好，却突然倒闭了，最可能的原因是？",
@@ -12291,7 +31332,7 @@ window.DAYS = [
             ],
             "answer": 0,
             "why": "利润是账面上的，现金才是付工资、还债要用的。收不回钱，账面赚得再多也会周转不过来。资产负债表永远平衡，所以「资产负债表不平衡」不可能。",
-            "ref": 3
+            "ref": 4
           },
           {
             "q": "“这个月花了 5000 元”属于哪种视角？",
@@ -12303,6 +31344,17 @@ window.DAYS = [
             "answer": 0,
             "why": "它描述的是一段时间里钱的流动，所以是录像，也就是现金流。",
             "ref": 2
+          },
+          {
+            "q": "一张图里，柱子每个月都在 0 线下面，折线（存款还剩多少）一路往下。说明？",
+            "options": [
+              "每月都在漏钱，存款越来越少",
+              "每月都在赚钱",
+              "存款没有变化"
+            ],
+            "answer": 0,
+            "why": "柱子在 0 线下面，表示每月进的比出的少；折线往下，表示存款在减少。「每月都在赚钱」方向反了；存款有变化，折线才会往下。",
+            "ref": 3
           }
         ]
       },
@@ -12318,7 +31370,37 @@ window.DAYS = [
             "why": "记理论最累的方式，是一个个背名字和年份。更省力的方式，是先记住它在回答什么问题、在反驳谁。每个理论都是看到前一个的漏洞才出现的，顺着\"问题 → 回答 → 漏洞 → 下一个回答\"走一遍，名字和顺序自然就记住了。",
             "takeaway": "按\"它在回答什么问题\"来记理论，比背名字省力。",
             "example": "像一首曲子的乐句：每一句都在回应上一句，听懂了一呼一应，整首曲子就记住了，不用一个音一个音去背。",
-            "exLabel": "打个比方"
+            "exLabel": "打个比方",
+            "visual": {
+              "type": "chain",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "按\"它在回答什么问题\"来记理论，比背名字省力",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "按\"它在回答什么问题\"来记理论，比背名字省力",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "按\"它在回答什么问题\"来记理论，比背名字省力。",
+                  "para": "takeaway"
+                }
+              ]
+            }
           },
           {
             "title": "身体和感受：三个理论接力",
@@ -12339,6 +31421,36 @@ window.DAYS = [
               ],
               "answer": 0,
               "why": "坎农-巴德出现在 1927 年，反驳的是 1884 年的詹姆斯-兰格。「二因素理论」1962 年才出现，在它之后。"
+            },
+            "visual": {
+              "type": "wires",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "身体在先 → 同时发生 → 唤醒加标签，每一步都在补漏洞",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "身体在先 → 同时发生 → 唤醒加标签，每一步都在补漏洞",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "身体在先 → 同时发生 → 唤醒加标签，每一步都在补漏洞。",
+                  "para": "takeaway"
+                }
+              ]
             }
           },
           {
@@ -12347,7 +31459,37 @@ window.DAYS = [
             "why": "埃克曼说六种基本情绪的表情跨文化可识别；功能论说情绪帮人适应、推人行动、向人发信号；耶克斯-多德森说唤醒和表现呈倒 U 形。",
             "takeaway": "情绪有天生的基础、有功能，强度要适中。",
             "example": "直播前适度紧张，正在倒 U 的中间；观众从你脸上读出真诚，是信号功能。",
-            "review": true
+            "review": true,
+            "visual": {
+              "type": "chain",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "情绪有天生的基础、有功能，强度要适中",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "情绪有天生的基础、有功能，强度要适中",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "情绪有天生的基础、有功能，强度要适中。",
+                  "para": "takeaway"
+                }
+              ]
+            }
           },
           {
             "title": "压力和调节",
@@ -12355,7 +31497,37 @@ window.DAYS = [
             "why": "塞利讲身体扛压力的警觉、抵抗、衰竭；拉扎勒斯（1966 年系统提出）说压力取决于评价；格罗斯区分了认知重评和表达抑制；埃利斯用情绪 ABC 指出，决定情绪的是信念。",
             "takeaway": "压力看评价，调节看解释。",
             "example": "把\"我不行\"换成\"我还在学\"，既是重评，也是在换信念。",
-            "review": true
+            "review": true,
+            "visual": {
+              "type": "chain",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "压力看评价，调节看解释",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "压力看评价，调节看解释",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "压力看评价，调节看解释。",
+                  "para": "takeaway"
+                }
+              ]
+            }
           },
           {
             "title": "主线：从\"身体决定\"到\"解释决定\"",
@@ -12377,6 +31549,36 @@ window.DAYS = [
               ],
               "answer": 0,
               "why": "早期的詹姆斯-兰格把身体反应放在中心。「对事情的解释」是后来的理论越来越强调的。"
+            },
+            "visual": {
+              "type": "chain",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "情绪理论的主线：从\"身体决定\"走向\"解释决定\"",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "情绪理论的主线：从\"身体决定\"走向\"解释决定\"",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "情绪理论的主线：从\"身体决定\"走向\"解释决定\"。",
+                  "para": "takeaway"
+                }
+              ]
             }
           },
           {
@@ -12384,7 +31586,37 @@ window.DAYS = [
             "idea": "回到开头：十来个理论在接力回答一串问题，最后落到一句话：改变解释，就能改变情绪。",
             "why": "这条主线正是现代认知取向心理咨询（比如认知行为疗法）的基础。但别忘了身体那一头：慢呼气、睡眠、恢复期依然有用，解释也不是万能的。考证提示：这些内容对应基础心理学的\"情绪\"章节，以及咨询心理学里的\"合理情绪疗法\"。",
             "takeaway": "改变解释就能改变情绪，这是认知取向咨询的基础。",
-            "example": "账号练习：用 ABC 写一条三句话的选题。诱发事件：他已读不回；信念：我觉得他根本不在乎我；换一个信念：他可能正在忙，晚点会回。"
+            "example": "账号练习：用 ABC 写一条三句话的选题。诱发事件：他已读不回；信念：我觉得他根本不在乎我；换一个信念：他可能正在忙，晚点会回。",
+            "visual": {
+              "type": "chain",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "改变解释就能改变情绪，这是认知取向咨询的基础",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "改变解释就能改变情绪，这是认知取向咨询的基础",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "改变解释就能改变情绪，这是认知取向咨询的基础。",
+                  "para": "takeaway"
+                }
+              ]
+            }
           }
         ],
         "interaction": {
@@ -12425,120 +31657,631 @@ window.DAYS = [
             "why": "评价、重评、信念，说的都是同一件事：我们怎么解释一件事，决定了我们的感受。",
             "ref": 4
           }
-        ]
+        ],
+        "hookComic": {
+          "panels": [
+            {
+              "bg": "room",
+              "cast": [
+                {
+                  "who": "xiaoman",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "talk"
+                }
+              ],
+              "cap": "12 个理论听起来很多，其实"
+            },
+            {
+              "bg": "street",
+              "cast": [
+                {
+                  "who": "xiaoyin",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "talk"
+                }
+              ],
+              "cap": "12 个理论听起来很多，其实"
+            },
+            {
+              "bg": "shop",
+              "cast": [
+                {
+                  "who": "xiaoman",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "talk"
+                }
+              ],
+              "cap": "12 个理论听起来很多，其实"
+            },
+            {
+              "bg": "plain",
+              "cast": [
+                {
+                  "who": "xiaoyin",
+                  "x": 0.5,
+                  "y": 0.72,
+                  "face": "wow"
+                }
+              ],
+              "cap": "12 个理论听起来很多，其实"
+            }
+          ]
+        }
       },
       "english": {
         "id": "d13-english",
-        "title": "30 秒自我介绍",
-        "minutes": 6,
-        "hook": "用这两周学过的词和语法，说一段真正属于你的英文自我介绍。",
+        "title": "The Big Night：四种时间，一个故事",
+        "minutes": 9,
+        "hook": "这两周学了四种\"时间\"。今天的故事里四种都有，你能听出来吗？",
+        "hookComic": {
+          "panels": [
+            {
+              "bg": "kitchen",
+              "cast": [
+                {
+                  "who": "mia",
+                  "x": 0.32,
+                  "y": 0.72,
+                  "face": "happy"
+                },
+                {
+                  "who": "leo",
+                  "x": 0.62,
+                  "y": 0.74,
+                  "face": "talk"
+                },
+                {
+                  "who": "mochi",
+                  "x": 0.8,
+                  "y": 0.82,
+                  "face": "happy",
+                  "k": 0.7
+                }
+              ]
+            },
+            {
+              "bg": "room",
+              "cast": [
+                {
+                  "who": "mia",
+                  "x": 0.32,
+                  "y": 0.72,
+                  "face": "happy"
+                },
+                {
+                  "who": "leo",
+                  "x": 0.62,
+                  "y": 0.74,
+                  "face": "talk"
+                },
+                {
+                  "who": "mochi",
+                  "x": 0.8,
+                  "y": 0.82,
+                  "face": "happy",
+                  "k": 0.7
+                }
+              ]
+            },
+            {
+              "bg": "street",
+              "cast": [
+                {
+                  "who": "mia",
+                  "x": 0.32,
+                  "y": 0.72,
+                  "face": "happy"
+                },
+                {
+                  "who": "leo",
+                  "x": 0.62,
+                  "y": 0.74,
+                  "face": "talk"
+                },
+                {
+                  "who": "mochi",
+                  "x": 0.8,
+                  "y": 0.82,
+                  "face": "happy",
+                  "k": 0.7
+                }
+              ]
+            }
+          ]
+        },
+        "story": {
+          "title": "The Big Night",
+          "panels": [
+            {
+              "bg": "kitchen",
+              "cast": [
+                {
+                  "who": "mia",
+                  "x": 0.32,
+                  "y": 0.72,
+                  "face": "happy"
+                },
+                {
+                  "who": "leo",
+                  "x": 0.62,
+                  "y": 0.74,
+                  "face": "talk"
+                },
+                {
+                  "who": "mochi",
+                  "x": 0.8,
+                  "y": 0.82,
+                  "face": "happy",
+                  "k": 0.7
+                }
+              ]
+            },
+            {
+              "bg": "room",
+              "cast": [
+                {
+                  "who": "mia",
+                  "x": 0.32,
+                  "y": 0.72,
+                  "face": "happy"
+                },
+                {
+                  "who": "leo",
+                  "x": 0.62,
+                  "y": 0.74,
+                  "face": "talk"
+                },
+                {
+                  "who": "mochi",
+                  "x": 0.8,
+                  "y": 0.82,
+                  "face": "happy",
+                  "k": 0.7
+                }
+              ]
+            },
+            {
+              "bg": "street",
+              "cast": [
+                {
+                  "who": "mia",
+                  "x": 0.32,
+                  "y": 0.72,
+                  "face": "happy"
+                },
+                {
+                  "who": "leo",
+                  "x": 0.62,
+                  "y": 0.74,
+                  "face": "talk"
+                },
+                {
+                  "who": "mochi",
+                  "x": 0.8,
+                  "y": 0.82,
+                  "face": "happy",
+                  "k": 0.7
+                }
+              ]
+            },
+            {
+              "bg": "shop",
+              "cast": [
+                {
+                  "who": "mia",
+                  "x": 0.32,
+                  "y": 0.72,
+                  "face": "happy"
+                },
+                {
+                  "who": "leo",
+                  "x": 0.62,
+                  "y": 0.74,
+                  "face": "talk"
+                },
+                {
+                  "who": "mochi",
+                  "x": 0.8,
+                  "y": 0.82,
+                  "face": "happy",
+                  "k": 0.7
+                }
+              ]
+            },
+            {
+              "bg": "kitchen",
+              "cast": [
+                {
+                  "who": "mia",
+                  "x": 0.32,
+                  "y": 0.72,
+                  "face": "happy"
+                },
+                {
+                  "who": "leo",
+                  "x": 0.62,
+                  "y": 0.74,
+                  "face": "talk"
+                },
+                {
+                  "who": "mochi",
+                  "x": 0.8,
+                  "y": 0.82,
+                  "face": "happy",
+                  "k": 0.7
+                }
+              ]
+            },
+            {
+              "bg": "room",
+              "cast": [
+                {
+                  "who": "mia",
+                  "x": 0.32,
+                  "y": 0.72,
+                  "face": "happy"
+                },
+                {
+                  "who": "leo",
+                  "x": 0.62,
+                  "y": 0.74,
+                  "face": "talk"
+                },
+                {
+                  "who": "mochi",
+                  "x": 0.8,
+                  "y": 0.82,
+                  "face": "happy",
+                  "k": 0.7
+                }
+              ]
+            }
+          ],
+          "lines": [
+            {
+              "who": "N",
+              "en": "Last Friday, Mia sang in a small café. She was very nervous.",
+              "zh": "上周五，米娅在一家小咖啡馆唱歌。她非常紧张。",
+              "panel": 0
+            },
+            {
+              "who": "N",
+              "en": "Leo brought ten friends. He made a big cake, too.",
+              "zh": "Leo 带了十个朋友，还做了一个大蛋糕。",
+              "panel": 1
+            },
+            {
+              "who": "N",
+              "en": "Mia sang three songs. Everyone was quiet. Then they clapped and clapped.",
+              "zh": "米娅唱了三首歌。大家都安安静静的。然后掌声一阵接一阵。",
+              "panel": 2
+            },
+            {
+              "who": "N",
+              "en": "After the show, Leo looked for the cake. It wasn't on the table.",
+              "zh": "演出结束后，Leo 去找蛋糕。蛋糕不在桌上。",
+              "panel": 3
+            },
+            {
+              "who": "N",
+              "en": "There was a fat grey cat under the table. He was very happy.",
+              "zh": "桌子底下有一只胖胖的灰猫。他开心极了。",
+              "panel": 4
+            },
+            {
+              "who": "N",
+              "en": "Now Mia sings at the café every Friday, and Mochi goes with her. Next week, he's going to get his own chair!",
+              "zh": "现在米娅每周五都在那家咖啡馆唱歌，Mochi 也跟着去。下周，他要有一把自己的椅子了！",
+              "panel": 5
+            }
+          ]
+        },
+        "words": [
+          {
+            "w": "show",
+            "ipa": "ʃoʊ",
+            "stress": "show",
+            "pic": "🎭",
+            "zh": "演出；给……看",
+            "ex": "After the show, …",
+            "part": "—"
+          },
+          {
+            "w": "clap",
+            "ipa": "klæp",
+            "stress": "clap",
+            "pic": "👏",
+            "zh": "鼓掌",
+            "ex": "They clapped and clapped.",
+            "part": "过去式双写 p：clapped（短元音后的辅音要双写，保住短音）"
+          },
+          {
+            "w": "everyone",
+            "ipa": "ˈevriwʌn",
+            "stress": "ev",
+            "pic": "👥",
+            "zh": "每个人，大家",
+            "ex": "Everyone was quiet.",
+            "part": "every 每个 + one 一个 → 每一个人（everything 也是）"
+          },
+          {
+            "w": "own",
+            "ipa": "oʊn",
+            "stress": "own",
+            "pic": "🪑",
+            "zh": "自己的",
+            "ex": "his own chair",
+            "part": "—"
+          }
+        ],
         "steps": [
           {
-            "title": "两周攒下的三件工具",
-            "idea": "这两周的英语课攒下三件工具：辅音接元音会连读；英语按重音打拍子；现在完成时 have + 过去分词，把过去接到现在。",
-            "why": "今天不学新单词，而是把这三件工具用在一段属于你的话里。",
-            "takeaway": "连读、重音节拍、现在完成时，今天一起用上。",
-            "example": "run an account 连读成 ru-na-naccount；music 的重音在第一个音节 MU；I've been there 把经历接到现在。",
-            "review": true
-          },
-          {
-            "title": "四步搭起一段介绍",
-            "idea": "一段 30 秒的自我介绍，按四步走：我是谁 → 我在做什么 → 为什么 → 我正在学什么。",
-            "why": "听的人先要知道你是谁、在做什么，才有了解你的框架；\"为什么\"让人记住你，因为理由比身份更有个性；最后说正在学的东西，给对方一个能接着聊的话题。顺序反了，对方会一直在猜\"她到底是做什么的\"。",
-            "takeaway": "我是谁 → 在做什么 → 为什么 → 在学什么。",
-            "example": "像一首歌的结构：前奏亮出身份，主歌讲你在做的事，副歌是最打动人的\"为什么\"，结尾留一个开放的和弦，让人想接着听。",
-            "exLabel": "打个比方",
+            "title": "先听故事",
+            "kind": "story-listen",
+            "idea": "这是到现在最长的故事。听不懂每个词没关系，跟着图走。",
             "check": {
-              "q": "四步里，最先说的是？",
+              "q": "蛋糕去哪儿了？",
               "options": [
-                "我是谁",
-                "我正在学什么"
+                "被 Mochi 吃了",
+                "被 Leo 的朋友带走了"
               ],
               "answer": 0,
-              "why": "先让对方知道你是谁，后面的内容才有挂靠的地方。「我正在学什么」放在最后，留给对方接话。"
+              "why": "第 5 格桌子底下的胖灰猫满脸奶油，[[He was very happy.]]。故事里没说朋友带走蛋糕。"
             }
           },
           {
-            "title": "时态跟着\"和现在的关系\"走",
-            "idea": "一段介绍里会用到好几个时态。选哪个，只看这件事和现在是什么关系：已经结束了，还是现在的日常。",
-            "why": "第 6 天学过，时态在告诉听的人\"这件事的落脚点在哪\"。学音乐是已经结束的一段经历，落脚点在过去，用一般过去时 studied；做账号是你现在每天的状态，用一般现在时 run。",
-            "takeaway": "结束了用一般过去时，现在的日常用一般现在时。",
-            "example": "I studied music（学音乐：已经结束），and now I run an account about relationships and emotions（做账号：现在的日常）。中间的 now 也在提醒：前一半是过去，后一半是现在。"
+            "title": "四个新词",
+            "kind": "words",
+            "idea": "每个词都点一下 ▶。"
           },
           {
-            "title": "从过去一直持续到现在",
-            "idea": "一件事从过去某时开始、现在还在做，就用**现在完成进行时**：have been + 动词 -ing。I've been learning six subjects every day.",
-            "why": "它是第 6 天现在完成时的延伸：have 仍然把句子钉在\"现在\"；been learning 说明动作不是做完了，而是一直在进行。合起来就是：从两周前开始学，到现在还在学。",
-            "takeaway": "现在完成进行时 = 从过去开始，现在还在做。",
-            "example": "She has been practicing the piano since this morning.（她从早上一直练琴，现在还在练。）如果说 She practiced the piano this morning.，就是早上练过，已经结束了。",
+            "title": "发音 · 英语按重音打拍子",
+            "idea": "英语说话有拍子：重读的词落在拍子上，中间的小词又轻又快地挤过去，像音乐里的强拍和弱拍。",
+            "why": "中文差不多一个字一拍，字越多说得越久。英语按重音算时间：两个重音之间的时间差不多，中间小词再多，也得挤进去，所以 a、the、was、and 会变轻变快。一个字一个字平均地念，节奏就不像英语，也会听不出那些被挤扁的小词。",
+            "takeaway": "英语按重音打拍子，小词挤在拍子之间。",
+            "visual": {
+              "type": "beats",
+              "base": {
+                "rows": [
+                  {
+                    "parts": [
+                      "重",
+                      "音"
+                    ],
+                    "stress": 0
+                  }
+                ]
+              },
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "英语按重音打拍子，小词挤在拍子之间",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "英语按重音打拍子，小词挤在拍子之间",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "英语按重音打拍子，小词挤在拍子之间。",
+                  "para": "takeaway"
+                }
+              ]
+            },
             "check": {
-              "q": "She has been practicing since this morning. 她现在？",
+              "q": "跟读时，手上的拍子应该落在？",
               "options": [
-                "还在练",
-                "早就练完了"
+                "重读的词上",
+                "每一个词上"
               ],
               "answer": 0,
-              "why": "have been + -ing 表示动作一直持续到现在，所以她还在练。「早就练完了」要说 She practiced this morning."
+              "why": "英语按重音打拍子，拍子只落在重读音节上。「每一个词上」是中文一字一拍的习惯，会把小词也念重。"
             }
           },
           {
-            "title": "串起来：标好重音和连线再读",
-            "idea": "回到开头：四步结构加上三种时态，就是一段属于你的介绍。读之前，先标重音、画连线。",
-            "why": "内容对了，节奏也要对：重音落在实词的重读音节上，弱读的小词挤进拍子之间，辅音接元音的地方连起来。标好再读，才像一口气说出来的英语。",
-            "takeaway": "自我介绍 = 四步结构 + 按关系选时态 + 标好重音和连读。",
-            "example": "I studied MUsic, and now I run an acCOUNT about reLAtionships and eMOtions. I've been learning SIX SUBjects every day.",
-            "derive": [
-              "大写的是重读音节，每个占一拍。",
-              "连读：run_an_account、and_emotions。",
-              "时态：studied 已结束，run 是日常，I've been learning 还在继续。"
+            "title": "回顾 · 先问时间在哪，再选动词",
+            "idea": "这两周学了四种说时间的办法。选哪个，只问一句：这件事在时间线的哪里？",
+            "why": "英语把时间做在动词上（第 8 天）。中文有\"上周\"\"现在\"\"下周\"就够了，英语有了这些词，动词还是要跟着变。所以说每个动词之前，都先想一下它在时间线的哪里。",
+            "example": "[[Last Friday, Mia sang.]] 过去的一次。[[Mia sings every Friday.]] 每次都这样。[[Mia is singing.]] 此刻。[[Mochi is going to get a chair.]] 打算。故事里的 [[There was a cat.]]，就是第 11 天的 there is 换成了过去的 was。",
+            "takeaway": "先问时间在哪，再选动词的样子。",
+            "visual": {
+              "type": "tense",
+              "base": {},
+              "frames": [
+                {
+                  "set": {
+                    "step": 0,
+                    "play": 0
+                  },
+                  "cap": "先问时间在哪，再选动词的样子",
+                  "para": "idea"
+                },
+                {
+                  "set": {
+                    "step": 1,
+                    "play": 0.5
+                  },
+                  "cap": "先问时间在哪，再选动词的样子",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "step": 2,
+                    "play": 1
+                  },
+                  "cap": "先问时间在哪，再选动词的样子。",
+                  "para": "takeaway"
+                }
+              ]
+            },
+            "check": {
+              "q": "Now Mia ___ at the café every Friday.",
+              "options": [
+                "sings",
+                "sang"
+              ],
+              "answer": 0,
+              "why": "every Friday 是每次都这样，用现在时，Mia 是一个别人，加 -s。「sang」是过去的一次。"
+            }
+          },
+          {
+            "title": "再读故事",
+            "kind": "story-read",
+            "idea": "看着字听。每个动词在时间线的哪里？"
+          },
+          {
+            "title": "同一件事，换一个时间",
+            "kind": "drill",
+            "frame": "Mia {a} at the café {b}.",
+            "zh": "米娅{b}在咖啡馆{a}。",
+            "slots": {
+              "b": [
+                {
+                  "en": "last Friday",
+                  "zh": "上周五",
+                  "pic": "⏪"
+                },
+                {
+                  "en": "every Friday",
+                  "zh": "每周五",
+                  "pic": "🔁"
+                },
+                {
+                  "en": "now",
+                  "zh": "现在",
+                  "pic": "⏺️"
+                },
+                {
+                  "en": "next week",
+                  "zh": "下周",
+                  "pic": "⏩"
+                }
+              ],
+              "a": [
+                {
+                  "en": "sang",
+                  "zh": "唱了歌",
+                  "pic": ""
+                },
+                {
+                  "en": "sings",
+                  "zh": "唱歌",
+                  "pic": ""
+                },
+                {
+                  "en": "is singing",
+                  "zh": "正唱着",
+                  "pic": ""
+                },
+                {
+                  "en": "is going to sing",
+                  "zh": "要唱歌",
+                  "pic": ""
+                }
+              ]
+            },
+            "need": 4,
+            "linked": true
+          },
+          {
+            "title": "跟读",
+            "kind": "shadow",
+            "tip": "用手打拍子，拍子只落在重读的词上。",
+            "lines": [
+              0,
+              2,
+              5
+            ]
+          },
+          {
+            "title": "复述：串起来",
+            "kind": "retell",
+            "idea": "前五格用过去式讲，最后一格用现在时和 going to。",
+            "keys": [
+              [
+                "last Friday",
+                "sang",
+                "nervous"
+              ],
+              [
+                "brought",
+                "made",
+                "cake"
+              ],
+              [
+                "three songs",
+                "quiet",
+                "clapped"
+              ],
+              [
+                "after the show",
+                "looked for"
+              ],
+              [
+                "there was",
+                "under the table"
+              ],
+              [
+                "every Friday",
+                "going to",
+                "own chair"
+              ]
             ]
           }
         ],
         "interaction": {
           "type": "listen",
-          "prompt": "听一听，选出你听到的句子",
-          "audio": "I've been learning six subjects every day.",
-          "answer": 0,
-          "why": "注意 six 和 sixty；I've been learning 表示从过去开始、一直持续到现在。",
+          "prompt": "听一听，这句话是什么意思？",
+          "audio": "Now Mia sings at the café every Friday.",
+          "showText": "after",
           "options": [
-            "I've been learning six subjects every day.",
-            "I've been learning sixty subjects every day.",
-            "I was learning six subjects yesterday."
+            "现在米娅每周五都在咖啡馆唱。",
+            "米娅上周五在咖啡馆唱了。",
+            "米娅下周五要去咖啡馆唱。"
           ],
-          "ref": [
-            3,
-            4
-          ]
+          "answer": 0,
+          "why": "听到 sings 和 every Friday，是每次都这样。「上周五唱了」要用 sang；「下周五要去」要用 going to。",
+          "ref": 3
         },
-        "take": "自我介绍 = 我是谁 + 在做什么 + 为什么 + 在学什么；时态按“结束了 / 现在的状态 / 从过去持续到现在”来选。",
+        "take": "先问时间在哪，再选动词：过去 sang，习惯 sings，此刻 is singing，打算 is going to sing。英语按重音打拍子。",
         "quiz": [
           {
-            "q": "“我（从两周前开始）每天都在学六门课，现在还在学”，最贴切的是？",
+            "q": "Last Friday, Mia ___ three songs.",
             "options": [
-              "I've been learning six subjects every day.",
-              "I learned six subjects every day.",
-              "I will learn six subjects every day."
+              "sang",
+              "sings",
+              "is going to sing"
             ],
             "answer": 0,
-            "why": "动作从过去开始、一直持续到现在，用现在完成进行时。「I learned six subjects every day.」表示已经结束，「I will learn six subjects every day.」是将来。",
+            "why": "last Friday 是过去的一次，用过去式 sang。「sings」是习惯；「is going to sing」是打算。",
             "ref": 3
           },
           {
-            "q": "“I studied music” 为什么用一般过去时？",
+            "q": "意思是？",
             "options": [
-              "学音乐是已经结束的阶段",
-              "因为 music 是不可数名词",
-              "因为这句话里有 I"
+              "大家都很安静。",
+              "每个人都很紧张。",
+              "有一个人很安静。"
             ],
             "answer": 0,
-            "why": "时态由“动作和现在的关系”决定。学音乐这段经历已经结束，所以用过去时。",
-            "ref": 2
+            "why": "everyone 是\"每个人、大家\"，quiet 是安静。「紧张」是 nervous；「有一个人」把 every 漏听了。",
+            "ref": 1,
+            "audio": "Everyone was quiet."
           }
-        ],
-        "tts": [
-          "Hi, I'm Feifei. I studied music, and now I run an account about relationships and emotions.",
-          "I've been learning six subjects every day.",
-          "Psychology helps me understand why we feel the way we feel."
         ]
       }
     }
@@ -12549,7 +32292,7 @@ window.DAYS = [
     "week": 2,
     "boss": {
       "title": "五代十国的一天",
-      "intro": "四道题，横跨历史、地理、金融、心理和时尚。全对拿到“第 2 周徽章”和“第一期通关”称号。",
+      "intro": "六道题，横跨历史、地理、金融、心理、时尚和英语。全对拿到“第 2 周徽章”和“第一期通关”称号。",
       "parts": [
         {
           "q": "五代中有四个朝代定都开封，是哪四个？",
@@ -12609,8 +32352,90 @@ window.DAYS = [
               4
             ]
           }
+        },
+        {
+          "q": "分期广告写“每期手续费 0.6%，分 12 期”。真实年化大约是多少？",
+          "options": [
+            "约 13%",
+            "7.2%",
+            "0.6%"
+          ],
+          "answer": 0,
+          "why": "0.6% × 12 = 7.2% 是按全额算的。你每月都在还本金，平均只借了约一半，真实年化约 13%。「0.6%」是每个月的数。",
+          "ref": {
+            "lesson": "d10-finance",
+            "step": 5
+          }
+        },
+        {
+          "q": "听一听，Mochi 的椅子是什么时候的事？",
+          "audio": "Next week, he is going to get his own chair.",
+          "options": [
+            "下周才会有",
+            "上周就有了",
+            "他每周都换一把"
+          ],
+          "answer": 0,
+          "why": "听到 is going to get 和 next week，是打算、还没发生。「上周就有了」要用过去式 got；「每周都换」要用 every week 和 gets。",
+          "ref": {
+            "lesson": "d13-english",
+            "step": 3
+          }
         }
-      ]
+      ],
+      "hookComic": {
+        "panels": [
+          {
+            "bg": "palace",
+            "cast": [
+              {
+                "who": "scholar",
+                "x": 0.5,
+                "y": 0.72
+              }
+            ],
+            "cap": "五代换得很勤"
+          },
+          {
+            "bg": "street",
+            "cast": [
+              {
+                "who": "xiaoman",
+                "x": 0.45,
+                "y": 0.72
+              }
+            ],
+            "cap": "一天里六件事"
+          },
+          {
+            "bg": "shop",
+            "cast": [
+              {
+                "who": "xiaoman",
+                "x": 0.5,
+                "y": 0.72
+              }
+            ],
+            "cap": "钱、颜色、心跳"
+          },
+          {
+            "bg": "kitchen",
+            "cast": [
+              {
+                "who": "mia",
+                "x": 0.4,
+                "y": 0.72
+              },
+              {
+                "who": "mochi",
+                "x": 0.7,
+                "y": 0.8
+              }
+            ],
+            "cap": "英语也要接上"
+          }
+        ]
+      }
     }
   }
 ];

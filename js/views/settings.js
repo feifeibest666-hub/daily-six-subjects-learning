@@ -15,19 +15,41 @@
     screen.appendChild(row('减少动效', switchBtn(state.settings.reduceMotion, function (on) {
       LKStore.setSetting('reduceMotion', on);
     })));
-    const rates = LK.h('div', { class: 'rate-row' });
-    [0.8, 0.9, 1.0].forEach(function (r) {
-      const b = LK.h('button', { class: 'zoom-btn' + (state.settings.ttsRate === r ? ' is-on' : ''), text: String(r) });
-      b.addEventListener('click', function () {
-        LKStore.setSetting('ttsRate', r);
-        rates.querySelectorAll('.zoom-btn').forEach(function (n) { n.classList.toggle('is-on', n === b); });
+    function rateRow(label, key, values) {
+      const rates = LK.h('div', { class: 'rate-row' });
+      values.forEach(function (r) {
+        const b = LK.h('button', { class: 'zoom-btn' + (state.settings[key] === r ? ' is-on' : ''), text: String(r) });
+        b.addEventListener('click', function () {
+          LKStore.setSetting(key, r);
+          rates.querySelectorAll('.zoom-btn').forEach(function (n) { n.classList.toggle('is-on', n === b); });
+        });
+        rates.appendChild(b);
       });
-      rates.appendChild(b);
+      screen.appendChild(LK.h('section', { class: 'set-block' }, [
+        LK.h('p', { class: 'set-label', text: label }),
+        rates
+      ]));
+    }
+    rateRow('英语慢速', 'ttsSlow', [0.6, 0.7, 0.8]);
+    rateRow('英语常速', 'ttsNormal', [0.9, 1.0, 1.1]);
+    const voiceBlock = LK.h('section', { class: 'set-block' });
+    voiceBlock.appendChild(LK.h('p', { class: 'set-label', text: '英语声音' }));
+    const voiceList = LK.h('div', { class: 'rate-row' });
+    const voices = global.LKSpeech ? LKSpeech.englishVoices() : [];
+    if (!voices.length) voiceBlock.appendChild(LK.h('p', { class: 'sheet-copy', text: '这台设备还没有英语声音。课程可以照常学，只是听不到朗读。' }));
+    voices.forEach(function (v) {
+      const on = state.settings.ttsVoice === v.voiceURI || (!state.settings.ttsVoice && v.recommended);
+      const b = LK.h('button', { class: 'zoom-btn' + (state.settings.ttsVoice === v.voiceURI ? ' is-on' : ''), text: v.name });
+      b.addEventListener('click', function () {
+        LKStore.setSetting('ttsVoice', v.voiceURI);
+        if (global.LKSpeech) LKSpeech.say('Hi. I am ready.', { speed: 'normal' });
+        voiceList.querySelectorAll('.zoom-btn').forEach(function (n) { n.classList.toggle('is-on', n === b); });
+      });
+      if (on && state.settings.ttsVoice) b.classList.add('is-on');
+      voiceList.appendChild(b);
     });
-    screen.appendChild(LK.h('section', { class: 'set-block' }, [
-      LK.h('p', { class: 'set-label', text: '英语语速' }),
-      rates
-    ]));
+    voiceBlock.appendChild(voiceList);
+    screen.appendChild(voiceBlock);
     screen.appendChild(row('迷你模式默认开', switchBtn(state.settings.miniDefault, function (on) {
       LKStore.setSetting('miniDefault', on);
     })));

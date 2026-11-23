@@ -98,9 +98,12 @@
     stations.innerHTML = '';
     STATIONS.forEach(function (s) {
       const on = p + 0.02 >= s.x;
+      const near = Math.abs(p - s.x) < 0.08;
+      const nx = X(s.x) + (near ? (s.x > 0.9 ? -28 : -34) : 0);
+      const ny = Y(s.m) - (near ? 18 : 8);
       stations.appendChild(LK.svg('circle', { cx: X(s.x), cy: Y(s.m), r: 4, fill: on ? '#2F9E8F' : '#fff', stroke: '#2F9E8F', 'stroke-width': 1.6 }));
-      stations.appendChild(text({ x: X(s.x), y: Y(s.m) - 8, 'text-anchor': 'middle', 'font-size': 10, 'font-weight': 700, fill: '#3A302A', 'font-family': FONT }, s.name));
-      if (on) stations.appendChild(text({ x: X(s.x), y: Y(s.m) + 14, 'text-anchor': 'middle', 'font-size': 9, fill: '#6E655C', 'font-family': FONT }, s.m + ' m'));
+      stations.appendChild(text({ x: nx, y: ny, 'text-anchor': 'middle', 'font-size': 10, 'font-weight': 700, fill: '#3A302A', 'font-family': FONT }, s.name));
+      if (on) stations.appendChild(text({ x: nx, y: ny + 12, 'text-anchor': 'middle', 'font-size': 9, fill: '#6E655C', 'font-family': FONT }, s.m + ' m'));
     });
     if (p > 0.12) stations.appendChild(text({ x: X(0.15), y: Y(4700) - 8, 'text-anchor': 'middle', 'font-size': 9, fill: '#7A4E2D', 'font-family': FONT }, '唐古拉山口 5000+'));
     [{ x: 0.30, name: '坎①', color: '#7A4E2D' }, { x: 0.65, name: '坎②', color: '#2F9E8F' }].forEach(function (k) {
@@ -116,7 +119,7 @@
     const route = p < 0.2 ? 'lhasa' : (p < 0.55 ? 'lhasa>lanzhou' : (p < 0.9 ? 'lhasa>lanzhou>zhengzhou' : 'lhasa>lanzhou>zhengzhou>shanghai'));
     if (global.LKCn) LKCn.paintMini(map, { s: 2.2, dx: 2, dy: 4, route: route });
     const plate = svg.querySelector('.plate');
-    if (global.LKPlates) LKPlates.draw(plate, 'collide', state.plates == null ? 0 : state.plates, 156, 132);
+    if (global.LKPlates) LKPlates.draw(plate, 'steps', state.plates == null ? 1 : Math.max(state.plates, 0.35), 156, 132);
     if (state.brackets) {
       const b = svg.querySelector('.brackets') || LK.svg('g', { class: 'brackets' });
       if (!b.parentNode) svg.appendChild(b);
@@ -133,6 +136,19 @@
     const e = t < 0.5 ? 2 * t * t : 1 - Math.pow(-2 * t + 2, 2) / 2;
     api.apply({ progress: from + (to - from) * e, dropFrom: altAt(from) });
   }
+
+  global.LKProfile = {
+    readout: function (p) {
+      let best = STATIONS[0];
+      let bd = 99;
+      STATIONS.forEach(function (s) {
+        const d = Math.abs(s.x - p);
+        if (d < bd) { bd = d; best = s; }
+      });
+      if (bd <= 0.08) return best.name + ' · ' + best.m + ' m';
+      return '约 ' + Math.round(altAt(p)) + ' m';
+    }
+  };
 
   LKStage.register('profileTrip', {
     viewBox: '0 0 342 330',

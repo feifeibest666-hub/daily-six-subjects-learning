@@ -22,7 +22,10 @@
       xp: 0,
       streak: { count: 0, lastDate: null, freezeLeft: 2, freezeMonth: today.slice(0, 7) },
       badges: [],
-      settings: { reduceMotion: false, ttsRate: 0.9, miniDefault: false, debug: false, aheadNoteDate: null, peekHintShown: false },
+      settings: { reduceMotion: false, ttsSlow: 0.7, ttsNormal: 0.95, ttsVoice: null, ttsProbe: null, muteHintShown: false, miniDefault: false, debug: false, aheadNoteDate: null, peekHintShown: false },
+      words: {},
+      english: { retell: {} },
+      contentVer: { english: 2 },
       miniOn: false,
       welcomeBack: false,
       notice: null,
@@ -50,8 +53,34 @@
       state.dayCompletedDate = parsed.dayCompletedDate || {};
       state.clearedOn = parsed.clearedOn || {};
       if (!state.seed) state.seed = Math.floor(Math.random() * 1e9);
+      migrateEnglish();
     } catch (e) {
       state = blank();
+    }
+  }
+
+  function migrateEnglish() {
+    const s = state.settings;
+    if (s.ttsNormal == null) {
+      const old = s.ttsRate;
+      s.ttsNormal = old === 0.8 ? 0.9 : (old == null ? 0.95 : old);
+    }
+    if (s.ttsSlow == null) s.ttsSlow = 0.7;
+    if (s.ttsVoice === undefined) s.ttsVoice = null;
+    if (s.ttsProbe === undefined) s.ttsProbe = null;
+    if (!s.muteHintShown) s.muteHintShown = false;
+    delete s.ttsRate;
+    if (!state.words) state.words = {};
+    if (!state.english) state.english = { retell: {} };
+    if (!state.english.retell) state.english.retell = {};
+    if (!state.contentVer) state.contentVer = {};
+    if ((state.contentVer.english || 0) < 2) {
+      Object.keys(state.mistakes || {}).forEach(function (k) {
+        if (/^d\d+-english#/.test(k)) delete state.mistakes[k];
+      });
+      state.mastered = (state.mastered || []).filter(function (k) { return !/^d\d+-english#/.test(k); });
+      if (state.draft && /-english$/.test(state.draft.id || '')) state.draft = null;
+      state.contentVer.english = 2;
     }
   }
 
@@ -261,6 +290,37 @@
       state.welcomeBack = false;
       save();
     },
-    INTERVALS: INTERVALS
+    INTERVALS: INTERVALS,
+    learnWords: function (lessonId, words, day) {
+      (words || []).forEach(function (w) {
+        if (!w || !w.w || state.words[w.w]) return;
+        state.words[w.w] = { from: lessonId, stage: 0, due: (day || 1) + 1, lastSeen: null, zh: w.zh || '', pic: w.pic || '' };
+      });
+      save();
+    },
+    dueWords: function (day) {
+      const today = LK.todayStr();
+      return Object.keys(state.words || {}).filter(function (k) {
+        const w = state.words[k];
+        return w.stage < 4 && w.due <= day && w.lastSeen !== today;
+      }).map(function (k) { return Object.assign({ w: k }, state.words[k]); });
+    },
+    gradeWord: function (word, ok, day) {
+      const w = state.words && state.words[word];
+      if (!w) return;
+      w.lastSeen = LK.todayStr();
+      if (ok) {
+        w.stage = Math.min(4, w.stage + 1);
+        w.due = day + (INTERVALS[Math.max(0, w.stage - 1)] || 21);
+      } else {
+        w.stage = 0;
+        w.due = day + 1;
+      }
+      save();
+    },
+    setRetell: function (id, n) {
+      state.english.retell[id] = n;
+      save();
+    }
   };
 })(window);

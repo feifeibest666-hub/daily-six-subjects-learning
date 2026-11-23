@@ -1,6 +1,7 @@
 (function () {
   function boot() {
     LKStore.init();
+    if (window.LKSpeech) window.LKSpeech.init();
     LKMotion.init();
     const notice = LKStore.consumeNotice();
     LKRouter.start();

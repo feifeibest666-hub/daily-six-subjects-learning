@@ -20,6 +20,12 @@
   function mount(day, subject) {
     const les = LKCatalog.lesson(day, subject);
     if (!les) return blocked('没有这一关。');
+    const opened = LKStore.get();
+    const draftPeek = opened.draft && opened.draft.id === les.id ? opened.draft : null;
+    if (subject === 'english' && !draftPeek && les.day > 1 && global.LKStore.dueWords) {
+      const due = LKStore.dueWords(les.day).slice(0, 4);
+      if (due.length) les.steps = [{ kind: 'warmup', title: '回顾 · 听音认词', words: due }].concat(les.steps || []);
+    }
     const state = LKStore.get();
     if (day > state.currentDay && !state.settings.debug) return blocked('这一天还没解锁。');
     const sub = subject === 'boss'
@@ -527,7 +533,23 @@
       titleRow.appendChild(LK.h('h3', { text: s.title || '' }));
       if (s.review) titleRow.appendChild(LK.h('span', { class: 'tag', text: '回顾' }));
       current.appendChild(titleRow);
-      if (isFramed(s.visual)) mountFramed(s, index, current);
+      if (s.kind && global.LKEnglish) {
+        frameCtl = null;
+        if (liveStage && liveStage.api) { liveStage.api.destroy(); liveStage = null; }
+        s._ready = false;
+        LKEnglish.mount(current, s, les, {
+          onReady: function () {
+            s._ready = true;
+            wireFoot(index);
+          }
+        });
+        if (s.check) {
+          mountCheck(s, index, current, function () {
+            wireFoot(index);
+            LKMotion.rebound(footBtn);
+          });
+        }
+      } else if (isFramed(s.visual)) mountFramed(s, index, current);
       else {
         frameCtl = null;
         if (liveStage && liveStage.api) { liveStage.api.destroy(); liveStage = null; }
@@ -542,6 +564,10 @@
 
     function wireFoot(index) {
       const s = les.steps[index];
+      if (s && s.kind && !s._ready) {
+        setAction({ label: '先完成这张', disabled: true, onClick: function () {} });
+        return;
+      }
       if (frameCtl && !frameCtl.done()) {
         setAction({ label: '下一帧', disabled: false, onClick: function () { frameCtl.next(); } });
         return;
@@ -725,8 +751,14 @@
         const id = String(q.key || '').split('#')[0];
         return { lesson: LKCatalog.lessonById(id), steps: q.ref, from: true };
       }
-      if (phase === 'interact') return { lesson: les, steps: les.interaction && les.interaction.ref, from: false };
-      return { lesson: les, steps: q ? q.ref : null, from: false };
+      const warm = les.steps && les.steps[0] && les.steps[0].kind === 'warmup';
+      function shift(ref) {
+        if (!warm || ref == null) return ref;
+        if (Array.isArray(ref)) return ref.map(function (n) { return typeof n === 'number' ? n + 1 : n; });
+        return typeof ref === 'number' ? ref + 1 : ref;
+      }
+      if (phase === 'interact') return { lesson: les, steps: shift(les.interaction && les.interaction.ref), from: false };
+      return { lesson: les, steps: shift(q ? q.ref : null), from: false };
     }
 
     function openLookback(target, opener) {
@@ -876,7 +908,19 @@
       card.appendChild(LK.h('span', { class: 'tag', text: sub.name }));
       card.appendChild(LK.h('h2', { class: 'card-h', text: '本周带走' }));
       const ul = LK.h('ul', { class: 'take-list' });
-      (les.takes || []).forEach(function (t) { ul.appendChild(LK.h('li', { text: t })); });
+      (les.takes || []).forEach(function (t, i) {
+        const li = LK.h('li');
+        const srcDay = (les.week || [])[i];
+        const src = srcDay && LKCatalog.lessonById(LK.lessonId(srcDay, les.subject));
+        const vis = src && src.steps && src.steps.filter(function (st) { return st.visual; }).pop();
+        if (vis && global.LKStage) {
+          const thumb = LK.h('div', { class: 'take-thumb' });
+          li.appendChild(thumb);
+          LKStage.poster(thumb, vis.visual, { subject: SUBJECTS[les.subject] });
+        }
+        li.appendChild(document.createTextNode(t));
+        ul.appendChild(li);
+      });
       card.appendChild(ul);
       phaseBody.appendChild(card);
       setAction({ label: '开始做题', onClick: showQuiz });
@@ -890,8 +934,16 @@
       const card = LK.h('div', { class: 'stage-card hook-card' });
       card.appendChild(LK.h('span', { class: 'tag', text: '跨科 Boss' }));
       card.appendChild(LK.h('h2', { class: 'card-h', text: les.title }));
-      card.appendChild(LK.h('p', { class: 'hook-text', text: les.intro }));
-      phaseBody.appendChild(card);
+      if (les.hookComic && global.LKStage && LKStage.has('comic')) {
+        const host = LK.h('div', { class: 'stage-host' });
+        card.appendChild(host);
+        card.appendChild(LK.h('p', { class: 'hook-text', text: les.intro }));
+        phaseBody.appendChild(card);
+        LKStage.mount(host, Object.assign({ type: 'comic' }, les.hookComic), { subject: sub, onFrame: function () {} });
+      } else {
+        card.appendChild(LK.h('p', { class: 'hook-text', text: les.intro }));
+        phaseBody.appendChild(card);
+      }
       setAction({ label: '开始挑战', onClick: showQuiz });
       paintChrome();
       saveDraft();
@@ -909,7 +961,18 @@
       const card = LK.h('div', { class: 'stage-card q-card' });
       if (q.review || les.review) card.appendChild(LK.h('span', { class: 'tag', text: '回炉' }));
       const row = LK.h('div', { class: 'q-row' });
-      row.appendChild(LK.h('p', { class: 'q-text', text: q.q }));
+      row.appendChild(LK.h('p', { class: 'q-text' }));
+      row.lastChild.appendChild(LK.rich(q.q));
+      if (q.visual && global.LKStage) {
+        const host = LK.h('div', { class: 'stage-host' });
+        card.appendChild(host);
+        LKStage.poster(host, q.visual, { subject: sub });
+      }
+      if (q.audio && global.LKSpeech && LKSpeech.status() !== 'none') {
+        const play = LK.h('button', { class: 'say-btn', type: 'button', text: '听题' });
+        play.addEventListener('click', function () { LKSpeech.say(q.audio, { speed: 'normal' }); });
+        row.appendChild(play);
+      }
       row.appendChild(peekButton(function () { return sourceOf(q); }, qi === 0));
       card.appendChild(row);
       const list = LK.h('div', { class: 'opt-list' });
