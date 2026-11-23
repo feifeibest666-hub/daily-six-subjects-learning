@@ -291,88 +291,8 @@ window.DAYS = [
             "ref": 2
           }
         ],
-        "hookComic": {
-          "panels": [
-            {
-              "bg": "room",
-              "cast": [
-                {
-                  "who": "xiaoman",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "cheer"
-                }
-              ],
-              "props": [
-                {
-                  "what": "skirt",
-                  "x": 0.78,
-                  "y": 0.78,
-                  "k": 0.95
-                }
-              ],
-              "bubbles": [],
-              "cap": "小满拿着樱花粉的裙子"
-            },
-            {
-              "bg": "room",
-              "cast": [
-                {
-                  "who": "ale",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "cheer"
-                }
-              ],
-              "props": [
-                {
-                  "what": "bag",
-                  "x": 0.78,
-                  "y": 0.78,
-                  "k": 0.95
-                }
-              ],
-              "bubbles": [
-                {
-                  "who": "ale",
-                  "text": "都是粉啊"
-                }
-              ],
-              "cap": "阿乐拿着玫红的包"
-            },
-            {
-              "bg": "room",
-              "cast": [
-                {
-                  "who": "xiaoman",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [],
-              "cap": "两人放在一起"
-            },
-            {
-              "bg": "room",
-              "cast": [
-                {
-                  "who": "xiaoyin",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [],
-              "cap": "小音拿出三个旋钮"
-            }
-          ]
+        "hookPic": {
+          "scene": "hook.1.fashion"
         }
       },
       "history": {
@@ -472,32 +392,13 @@ window.DAYS = [
             "takeaway": "中国史的主节奏：统一 → 分裂 → 再统一，反复出现。",
             "example": "秦汉统一 → 三国两晋南北朝分裂 → 隋唐统一 → 五代十国分裂 → 宋和辽、金、西夏并立 → 元统一 → 明、清统一。像一首曲子的主歌和副歌，轮流出现。",
             "visual": {
-              "type": "cycle",
-              "base": {},
-              "frames": [
+              "type": "deck",
+              "id": "still.1.history.2",
+              "slides": [
                 {
-                  "set": {
-                    "step": 0,
-                    "play": 0
-                  },
+                  "scene": "still.1.history.2",
                   "cap": "中国史的主节奏：统一 → 分裂 → 再统一，反复出现",
-                  "para": "idea"
-                },
-                {
-                  "set": {
-                    "step": 1,
-                    "play": 0.5
-                  },
-                  "cap": "中国史的主节奏：统一 → 分裂 → 再统一，反复出现",
-                  "para": "why"
-                },
-                {
-                  "set": {
-                    "step": 2,
-                    "play": 1
-                  },
-                  "cap": "中国史的主节奏：统一 → 分裂 → 再统一，反复出现。",
-                  "para": "takeaway"
+                  "sec": "takeaway"
                 }
               ]
             }
@@ -515,32 +416,46 @@ window.DAYS = [
               "每个地方长官都这么想，天下就裂成了好几块。"
             ],
             "visual": {
-              "type": "tug",
-              "base": {},
-              "frames": [
+              "type": "deck",
+              "id": "deck.history.1.4",
+              "slides": [
                 {
-                  "set": {
-                    "step": 0,
-                    "play": 0
-                  },
-                  "cap": "地方有兵有粮、中央变弱，天下就会裂开",
-                  "para": "idea"
+                  "scene": "g.history.1.4.0",
+                  "cap": "地方手里有了自己的兵。",
+                  "sec": "idea"
                 },
                 {
-                  "set": {
-                    "step": 1,
-                    "play": 0.5
-                  },
-                  "cap": "地方有兵有粮、中央变弱，天下就会裂开",
-                  "para": "why"
+                  "scene": "g.history.1.4.1",
+                  "cap": "粮也在地方，不在中央。",
+                  "sec": "why"
                 },
                 {
-                  "set": {
-                    "step": 2,
-                    "play": 1
-                  },
-                  "cap": "地方有兵有粮、中央变弱，天下就会裂开。",
-                  "para": "takeaway"
+                  "scene": "g.history.1.4.2",
+                  "cap": "朝廷能调动的越来越少。",
+                  "sec": "example"
+                },
+                {
+                  "scene": "g.history.1.4.3",
+                  "cap": "地方强了，就可以不听调。",
+                  "sec": [
+                    "derive",
+                    0,
+                    1
+                  ]
+                },
+                {
+                  "scene": "g.history.1.4.4",
+                  "cap": "一块地、一支兵、一个主张。",
+                  "sec": [
+                    "derive",
+                    2,
+                    3
+                  ]
+                },
+                {
+                  "scene": "g.history.1.4.5",
+                  "cap": "地方有兵，中央就管不住。",
+                  "sec": "takeaway"
                 }
               ]
             }
@@ -562,32 +477,13 @@ window.DAYS = [
               "why": "统一的好处是少打仗、能全国一起出力，比如治河、修路。统一的王朝照样收税，所以「统一后就不用交税了」不对。"
             },
             "visual": {
-              "type": "chain",
-              "base": {},
-              "frames": [
+              "type": "deck",
+              "id": "still.1.history.4",
+              "slides": [
                 {
-                  "set": {
-                    "step": 0,
-                    "play": 0
-                  },
-                  "cap": "统一省掉打仗的消耗，又能办大事，所以分裂之后总有人重新统一",
-                  "para": "idea"
-                },
-                {
-                  "set": {
-                    "step": 1,
-                    "play": 0.5
-                  },
-                  "cap": "统一省掉打仗的消耗，又能办大事，所以分裂之后总有人重新统一",
-                  "para": "why"
-                },
-                {
-                  "set": {
-                    "step": 2,
-                    "play": 1
-                  },
-                  "cap": "统一省掉打仗的消耗，又能办大事，所以分裂之后总有人重新统一。",
-                  "para": "takeaway"
+                  "scene": "still.1.history.4",
+                  "cap": "为什么又会统一：统一的好处太大",
+                  "sec": "takeaway"
                 }
               ]
             }
@@ -600,32 +496,13 @@ window.DAYS = [
             "example": "像温度计。零上往上数，零下往下数。零下 10 度比零下 2 度更冷，就像前 221 年比前 207 年更早。公元元年附近，就是温度计上的\"0\"。",
             "exLabel": "打个比方",
             "visual": {
-              "type": "yearline",
-              "base": {},
-              "frames": [
+              "type": "deck",
+              "id": "still.1.history.5",
+              "slides": [
                 {
-                  "set": {
-                    "step": 0,
-                    "play": 0
-                  },
+                  "scene": "still.1.history.5",
                   "cap": "公元前倒着数，数字越大越早；公元后正着数，数字越大越晚",
-                  "para": "idea"
-                },
-                {
-                  "set": {
-                    "step": 1,
-                    "play": 0.5
-                  },
-                  "cap": "公元前倒着数，数字越大越早；公元后正着数，数字越大越晚",
-                  "para": "why"
-                },
-                {
-                  "set": {
-                    "step": 2,
-                    "play": 1
-                  },
-                  "cap": "公元前倒着数，数字越大越早；公元后正着数，数字越大越晚。",
-                  "para": "takeaway"
+                  "sec": "takeaway"
                 }
               ]
             }
@@ -653,32 +530,46 @@ window.DAYS = [
               "why": "一个在公元前、一个在公元后，要相加：100 + 100 = 200。「约 0 年」是把两个数直接相减了。"
             },
             "visual": {
-              "type": "yearline",
-              "base": {},
-              "frames": [
+              "type": "deck",
+              "id": "deck.history.1.7",
+              "slides": [
                 {
-                  "set": {
-                    "step": 0,
-                    "play": 0
-                  },
-                  "cap": "同一边就相减，跨过公元元年就相加",
-                  "para": "idea"
+                  "scene": "g.history.1.7.0",
+                  "cap": "年份在公元前，数字越大越早。",
+                  "sec": "idea"
                 },
                 {
-                  "set": {
-                    "step": 1,
-                    "play": 0.5
-                  },
-                  "cap": "同一边就相减，跨过公元元年就相加",
-                  "para": "why"
+                  "scene": "g.history.1.7.1",
+                  "cap": "过了元年，数字越大越晚。",
+                  "sec": "why"
                 },
                 {
-                  "set": {
-                    "step": 2,
-                    "play": 1
-                  },
-                  "cap": "同一边就相减，跨过公元元年就相加。",
-                  "para": "takeaway"
+                  "scene": "g.history.1.7.2",
+                  "cap": "公元元年是分界的那一年。",
+                  "sec": "example"
+                },
+                {
+                  "scene": "g.history.1.7.3",
+                  "cap": "一边在前、一边在后，年数相加。",
+                  "sec": [
+                    "derive",
+                    0,
+                    1
+                  ]
+                },
+                {
+                  "scene": "g.history.1.7.4",
+                  "cap": "两年都在同一边，就相减。",
+                  "sec": [
+                    "derive",
+                    2,
+                    3
+                  ]
+                },
+                {
+                  "scene": "g.history.1.7.5",
+                  "cap": "跨过元年算多长，要把两边相加。",
+                  "sec": "takeaway"
                 }
               ]
             }
@@ -767,74 +658,8 @@ window.DAYS = [
             "ref": 6
           }
         ],
-        "hookComic": {
-          "panels": [
-            {
-              "bg": "palace",
-              "cast": [
-                {
-                  "who": "xiaoman",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [
-                {
-                  "who": "xiaoman",
-                  "text": "唐宋元明……南北朝在哪？"
-                }
-              ],
-              "cap": "小满念"
-            },
-            {
-              "bg": "palace",
-              "cast": [
-                {
-                  "who": "xiaoman",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [],
-              "cap": "一堆朝代名在她头上乱飞"
-            },
-            {
-              "bg": "palace",
-              "cast": [
-                {
-                  "who": "xiaoyin",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [],
-              "cap": "小音扛来一根长竹竿"
-            },
-            {
-              "bg": "palace",
-              "cast": [
-                {
-                  "who": "kingWu",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [],
-              "cap": "朝代名一个个挂到竹竿上排好队"
-            }
-          ]
+        "hookPic": {
+          "scene": "hook.1.history"
         }
       },
       "geo": {
@@ -842,94 +667,6 @@ window.DAYS = [
         "title": "用两个数找到任何地方",
         "minutes": 9,
         "hook": "在一张白纸上点一个点，要让朋友在她那张纸上点到同一个位置，你得告诉她几个数？换成一颗球呢？",
-        "hookComic": {
-          "panels": [
-            {
-              "bg": "mountain",
-              "cast": [
-                {
-                  "who": "xiaoman",
-                  "x": 0.32,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "cheer"
-                },
-                {
-                  "who": "ale",
-                  "x": 0.64,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "cheer"
-                }
-              ],
-              "props": [],
-              "bubbles": [],
-              "cap": "小满在白纸上点一个点"
-            },
-            {
-              "bg": "mountain",
-              "cast": [
-                {
-                  "who": "xiaoman",
-                  "x": 0.32,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                },
-                {
-                  "who": "ale",
-                  "x": 0.64,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [
-                {
-                  "who": "xiaoman",
-                  "text": "点在哪？"
-                }
-              ],
-              "cap": "小满"
-            },
-            {
-              "bg": "mountain",
-              "cast": [
-                {
-                  "who": "xiaoyin",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [],
-              "cap": "小音把白纸卷成一颗球"
-            },
-            {
-              "bg": "mountain",
-              "cast": [
-                {
-                  "who": "ale",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "think"
-                }
-              ],
-              "props": [],
-              "bubbles": [
-                {
-                  "who": "ale",
-                  "text": "球上怎么数？"
-                }
-              ],
-              "cap": "阿乐挠头"
-            }
-          ]
-        },
         "stages": {
           "d01globe": {
             "type": "globe3d",
@@ -1499,205 +1236,28 @@ window.DAYS = [
             "why": "纬度越小，离赤道越近。20° 小于 40°，所以海口更近，这也是海口更热的主要原因之一。",
             "ref": 3
           }
-        ]
+        ],
+        "hookPic": {
+          "scene": "hook.1.geo"
+        }
       },
       "finance": {
         "id": "d01-finance",
         "title": "钱包往哪边变",
         "minutes": 7,
         "hook": "月入两万的人，可能比月入六千的人更\"穷\"。怎么会？",
-        "hookComic": {
-          "panels": [
-            {
-              "bg": "room",
-              "cast": [
-                {
-                  "who": "xiaoA",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "cheer"
-                }
-              ],
-              "props": [
-                {
-                  "what": "payslip",
-                  "x": 0.78,
-                  "y": 0.78,
-                  "k": 0.95
-                },
-                {
-                  "what": "bag",
-                  "x": 0.62,
-                  "y": 0.78,
-                  "k": 0.95
-                }
-              ],
-              "bubbles": [],
-              "cap": "小 A 背名牌包"
-            },
-            {
-              "bg": "room",
-              "cast": [
-                {
-                  "who": "xiaoB",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "cheer"
-                }
-              ],
-              "props": [
-                {
-                  "what": "payslip",
-                  "x": 0.78,
-                  "y": 0.78,
-                  "k": 0.95
-                },
-                {
-                  "what": "bag",
-                  "x": 0.62,
-                  "y": 0.78,
-                  "k": 0.95
-                }
-              ],
-              "bubbles": [],
-              "cap": "小 B 背帆布包"
-            },
-            {
-              "bg": "room",
-              "cast": [
-                {
-                  "who": "xiaoA",
-                  "x": 0.32,
-                  "y": 0.74,
-                  "face": "happy",
-                  "pose": "stand"
-                },
-                {
-                  "who": "xiaoB",
-                  "x": 0.64,
-                  "y": 0.74,
-                  "face": "happy",
-                  "pose": "stand"
-                }
-              ],
-              "props": [
-                {
-                  "what": "jar",
-                  "x": 0.78,
-                  "y": 0.78,
-                  "k": 0.95
-                }
-              ],
-              "bubbles": [],
-              "cap": "月底：小 A 刷信用卡"
-            },
-            {
-              "bg": "room",
-              "cast": [
-                {
-                  "who": "xiaoyin",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [
-                {
-                  "who": "xiaoyin",
-                  "text": "谁更穷？"
-                }
-              ],
-              "cap": "谁更穷？"
-            }
-          ]
-        },
         "steps": [
           {
             "title": "赚得多，钱就多吗？",
             "idea": "钱多不多，不只看赚多少，还要看花多少。",
             "visual": {
-              "type": "comic",
-              "panels": [
+              "type": "deck",
+              "id": "still.1.finance.0",
+              "slides": [
                 {
-                  "bg": "room",
-                  "cast": [
-                    {
-                      "who": "xiaoA",
-                      "x": 0.46,
-                      "y": 0.74,
-                      "face": "calm",
-                      "pose": "cheer"
-                    }
-                  ],
-                  "props": [
-                    {
-                      "what": "payslip",
-                      "x": 0.78,
-                      "y": 0.78,
-                      "k": 0.95
-                    }
-                  ],
-                  "bubbles": [],
-                  "cap": "小 A 月入两万"
-                },
-                {
-                  "bg": "room",
-                  "cast": [
-                    {
-                      "who": "xiaoA",
-                      "x": 0.46,
-                      "y": 0.74,
-                      "face": "worry",
-                      "pose": "stand"
-                    }
-                  ],
-                  "props": [
-                    {
-                      "what": "paper",
-                      "x": 0.78,
-                      "y": 0.78,
-                      "k": 0.95
-                    }
-                  ],
-                  "bubbles": [],
-                  "cap": "可她花了两万一"
-                },
-                {
-                  "bg": "room",
-                  "cast": [
-                    {
-                      "who": "xiaoB",
-                      "x": 0.46,
-                      "y": 0.74,
-                      "face": "calm",
-                      "pose": "stand"
-                    }
-                  ],
-                  "props": [
-                    {
-                      "what": "jar",
-                      "x": 0.78,
-                      "y": 0.78,
-                      "k": 0.95
-                    },
-                    {
-                      "what": "coin",
-                      "x": 0.62,
-                      "y": 0.78,
-                      "k": 0.95
-                    }
-                  ],
-                  "bubbles": [
-                    {
-                      "who": "xiaoB",
-                      "text": "+1500"
-                    }
-                  ],
-                  "cap": "小 B 月入六千"
+                  "scene": "still.1.finance.0",
+                  "cap": "只看赚多少，看不出钱包会不会变空",
+                  "sec": "takeaway"
                 }
               ]
             },
@@ -1708,30 +1268,13 @@ window.DAYS = [
             "title": "钱只有两个方向",
             "idea": "流进钱包的钱，叫收入：工资、稿费、接广告。流出去的钱，叫支出：房租、奶茶、买衣服。",
             "visual": {
-              "type": "chain",
-              "base": {
-                "nodes": [
-                  "收入：流进来",
-                  "钱包",
-                  "支出：流出去"
-                ]
-              },
-              "frames": [
+              "type": "deck",
+              "id": "still.1.finance.1",
+              "slides": [
                 {
-                  "set": {
-                    "play": 0,
-                    "step": 0
-                  },
-                  "cap": "先看骨架",
-                  "para": "idea"
-                },
-                {
-                  "set": {
-                    "play": 1,
-                    "step": 2
-                  },
-                  "cap": "看完整的图",
-                  "para": "takeaway"
+                  "scene": "still.1.finance.1",
+                  "cap": "钱只有两个方向：收入流进来，支出流出去",
+                  "sec": "takeaway"
                 }
               ]
             },
@@ -1914,37 +1457,13 @@ window.DAYS = [
             "title": "串起来：看正负，不看收入",
             "idea": "钱包一年后是变多还是变少，看结余是正还是负。收入高低决定不了方向。",
             "visual": {
-              "type": "comic",
-              "panels": [
+              "type": "deck",
+              "id": "still.1.finance.5",
+              "slides": [
                 {
-                  "bg": "room",
-                  "cast": [
-                    {
-                      "who": "xiaoman",
-                      "x": 0.46,
-                      "y": 0.74,
-                      "face": "calm",
-                      "pose": "stand"
-                    }
-                  ],
-                  "props": [],
-                  "bubbles": [],
-                  "cap": "进得多"
-                },
-                {
-                  "bg": "room",
-                  "cast": [
-                    {
-                      "who": "xiaoman",
-                      "x": 0.46,
-                      "y": 0.74,
-                      "face": "calm",
-                      "pose": "stand"
-                    }
-                  ],
-                  "props": [],
-                  "bubbles": [],
-                  "cap": "进得少"
+                  "scene": "still.1.finance.5",
+                  "cap": "钱包往哪边变，看结余的正负，不看收入多高",
+                  "sec": "takeaway"
                 }
               ]
             },
@@ -2071,7 +1590,10 @@ window.DAYS = [
               ]
             }
           }
-        ]
+        ],
+        "hookPic": {
+          "scene": "hook.1.finance"
+        }
       },
       "psych": {
         "id": "d01-psych",
@@ -2086,32 +1608,13 @@ window.DAYS = [
             "takeaway": "情绪不是一整团，可以拆成几块分别看。",
             "example": "直播前十分钟，你心里一直在想\"等会儿卡壳怎么办\"，同时手心冒汗、心跳变快，脸上笑得有点僵。这三件事同时发生，但一件在心里，一件在身体里，一件在别人眼里。",
             "visual": {
-              "type": "body3",
-              "base": {},
-              "frames": [
+              "type": "deck",
+              "id": "still.1.psych.0",
+              "slides": [
                 {
-                  "set": {
-                    "step": 0,
-                    "play": 0
-                  },
+                  "scene": "still.1.psych.0",
                   "cap": "情绪不是一整团，可以拆成几块分别看",
-                  "para": "idea"
-                },
-                {
-                  "set": {
-                    "step": 1,
-                    "play": 0.5
-                  },
-                  "cap": "情绪不是一整团，可以拆成几块分别看",
-                  "para": "why"
-                },
-                {
-                  "set": {
-                    "step": 2,
-                    "play": 1
-                  },
-                  "cap": "情绪不是一整团，可以拆成几块分别看。",
-                  "para": "takeaway"
+                  "sec": "takeaway"
                 }
               ]
             }
@@ -2123,32 +1626,13 @@ window.DAYS = [
             "takeaway": "主观体验 = 你自己心里的感觉，只能靠本人说出来。",
             "example": "同样是上台，你可能给自己的紧张打 8 分，旁边的朋友看你却觉得\"挺淡定的\"。打分以你说的为准，因为主观体验只有你自己知道。",
             "visual": {
-              "type": "body3",
-              "base": {},
-              "frames": [
+              "type": "deck",
+              "id": "still.1.psych.1",
+              "slides": [
                 {
-                  "set": {
-                    "step": 0,
-                    "play": 0
-                  },
+                  "scene": "still.1.psych.1",
                   "cap": "主观体验 = 你自己心里的感觉，只能靠本人说出来",
-                  "para": "idea"
-                },
-                {
-                  "set": {
-                    "step": 1,
-                    "play": 0.5
-                  },
-                  "cap": "主观体验 = 你自己心里的感觉，只能靠本人说出来",
-                  "para": "why"
-                },
-                {
-                  "set": {
-                    "step": 2,
-                    "play": 1
-                  },
-                  "cap": "主观体验 = 你自己心里的感觉，只能靠本人说出来。",
-                  "para": "takeaway"
+                  "sec": "takeaway"
                 }
               ]
             }
@@ -2160,32 +1644,13 @@ window.DAYS = [
             "takeaway": "生理唤醒 = 身体内部的变化，由自主神经发动，不听命令。",
             "example": "面试前你明明告诉自己\"不紧张\"，手心还是湿的。不是你不够努力，而是汗腺归交感神经管，不归你的意志管。",
             "visual": {
-              "type": "body3",
-              "base": {},
-              "frames": [
+              "type": "deck",
+              "id": "still.1.psych.2",
+              "slides": [
                 {
-                  "set": {
-                    "step": 0,
-                    "play": 0
-                  },
+                  "scene": "still.1.psych.2",
                   "cap": "生理唤醒 = 身体内部的变化，由自主神经发动，不听命令",
-                  "para": "idea"
-                },
-                {
-                  "set": {
-                    "step": 1,
-                    "play": 0.5
-                  },
-                  "cap": "生理唤醒 = 身体内部的变化，由自主神经发动，不听命令",
-                  "para": "why"
-                },
-                {
-                  "set": {
-                    "step": 2,
-                    "play": 1
-                  },
-                  "cap": "生理唤醒 = 身体内部的变化，由自主神经发动，不听命令。",
-                  "para": "takeaway"
+                  "sec": "takeaway"
                 }
               ]
             }
@@ -2206,32 +1671,13 @@ window.DAYS = [
               "why": "表情、声音、姿势露在外面，别人能看到、听到，属于外部表现。「主观体验」是心里的感觉，只有本人知道。"
             },
             "visual": {
-              "type": "body3",
-              "base": {},
-              "frames": [
+              "type": "deck",
+              "id": "still.1.psych.3",
+              "slides": [
                 {
-                  "set": {
-                    "step": 0,
-                    "play": 0
-                  },
+                  "scene": "still.1.psych.3",
                   "cap": "外部表现 = 表情、声音、姿势，是情绪里别人能看到的部分",
-                  "para": "idea"
-                },
-                {
-                  "set": {
-                    "step": 1,
-                    "play": 0.5
-                  },
-                  "cap": "外部表现 = 表情、声音、姿势，是情绪里别人能看到的部分",
-                  "para": "why"
-                },
-                {
-                  "set": {
-                    "step": 2,
-                    "play": 1
-                  },
-                  "cap": "外部表现 = 表情、声音、姿势，是情绪里别人能看到的部分。",
-                  "para": "takeaway"
+                  "sec": "takeaway"
                 }
               ]
             }
@@ -2250,32 +1696,46 @@ window.DAYS = [
               "生理唤醒降了，心里的慌也跟着松一些。"
             ],
             "visual": {
-              "type": "chain",
-              "base": {},
-              "frames": [
+              "type": "deck",
+              "id": "deck.psych.1.5",
+              "slides": [
                 {
-                  "set": {
-                    "step": 0,
-                    "play": 0
-                  },
-                  "cap": "心里改不动时，先从呼吸和姿势这两个入口下手",
-                  "para": "idea"
+                  "scene": "g.psych.1.5.0",
+                  "cap": "心里的念头，最难直接改。",
+                  "sec": "idea"
                 },
                 {
-                  "set": {
-                    "step": 1,
-                    "play": 0.5
-                  },
-                  "cap": "心里改不动时，先从呼吸和姿势这两个入口下手",
-                  "para": "why"
+                  "scene": "g.psych.1.5.1",
+                  "cap": "感受跟着念头一起出现。",
+                  "sec": "why"
                 },
                 {
-                  "set": {
-                    "step": 2,
-                    "play": 1
-                  },
-                  "cap": "心里改不动时，先从呼吸和姿势这两个入口下手。",
-                  "para": "takeaway"
+                  "scene": "g.psych.1.5.2",
+                  "cap": "身体的反应，比较好下手。",
+                  "sec": "example"
+                },
+                {
+                  "scene": "g.psych.1.5.3",
+                  "cap": "站姿和表情，也能当入口。",
+                  "sec": [
+                    "derive",
+                    0,
+                    1
+                  ]
+                },
+                {
+                  "scene": "g.psych.1.5.4",
+                  "cap": "念头、身体、姿势，是三扇门。",
+                  "sec": [
+                    "derive",
+                    2,
+                    3
+                  ]
+                },
+                {
+                  "scene": "g.psych.1.5.5",
+                  "cap": "先动好改的那一扇。",
+                  "sec": "takeaway"
                 }
               ]
             },
@@ -2296,72 +1756,13 @@ window.DAYS = [
             "takeaway": "情绪 = 主观体验 + 生理唤醒 + 外部表现，三块都是调节入口。",
             "example": "账号选题提示：「焦虑的时候，先别和念头吵架，先管身体」——背后就是这三成分模型。一条视频可以按三块讲：你心里在想什么，身体有什么信号，别人从你脸上看到了什么。",
             "visual": {
-              "type": "comic",
-              "panels": [
+              "type": "deck",
+              "id": "still.1.psych.5",
+              "slides": [
                 {
-                  "bg": "room",
-                  "cast": [
-                    {
-                      "who": "xiaoman",
-                      "x": 0.46,
-                      "y": 0.74,
-                      "face": "calm",
-                      "pose": "stand"
-                    }
-                  ],
-                  "props": [],
-                  "bubbles": [
-                    {
-                      "who": "xiaoman",
-                      "text": "完了"
-                    }
-                  ],
-                  "cap": "心里"
-                },
-                {
-                  "bg": "room",
-                  "cast": [
-                    {
-                      "who": "xiaoman",
-                      "x": 0.46,
-                      "y": 0.74,
-                      "face": "calm",
-                      "pose": "stand"
-                    }
-                  ],
-                  "props": [],
-                  "bubbles": [],
-                  "cap": "手心出汗"
-                },
-                {
-                  "bg": "room",
-                  "cast": [
-                    {
-                      "who": "xiaoman",
-                      "x": 0.46,
-                      "y": 0.74,
-                      "face": "calm",
-                      "pose": "stand"
-                    }
-                  ],
-                  "props": [],
-                  "bubbles": [],
-                  "cap": "搓手"
-                },
-                {
-                  "bg": "room",
-                  "cast": [
-                    {
-                      "who": "xiaoman",
-                      "x": 0.46,
-                      "y": 0.74,
-                      "face": "calm",
-                      "pose": "give"
-                    }
-                  ],
-                  "props": [],
-                  "bubbles": [],
-                  "cap": "小满分别给三处写标签"
+                  "scene": "still.1.psych.5",
+                  "cap": "串起来：把\"我好紧张\"拆开",
+                  "sec": "takeaway"
                 }
               ]
             }
@@ -2430,79 +1831,8 @@ window.DAYS = [
             "ref": 4
           }
         ],
-        "hookComic": {
-          "panels": [
-            {
-              "bg": "room",
-              "cast": [
-                {
-                  "who": "xiaoman",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "worry",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [
-                {
-                  "who": "xiaoman",
-                  "text": "我好紧张"
-                }
-              ],
-              "cap": "小满上台前说"
-            },
-            {
-              "bg": "room",
-              "cast": [
-                {
-                  "who": "xiaoyin",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [],
-              "cap": "小音拿出放大镜"
-            },
-            {
-              "bg": "room",
-              "cast": [
-                {
-                  "who": "xiaoman",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "worry",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [],
-              "cap": "放大看：紧张是三块拼起来的"
-            },
-            {
-              "bg": "room",
-              "cast": [
-                {
-                  "who": "xiaoman",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [
-                {
-                  "who": "xiaoman",
-                  "text": "能拆开吗？"
-                }
-              ],
-              "cap": "能拆开吗？"
-            }
-          ]
+        "hookPic": {
+          "scene": "hook.1.psych"
         }
       },
       "english": {
@@ -3152,32 +2482,46 @@ window.DAYS = [
               "why": "光弱时主要靠视杆细胞，它只管亮暗，所以颜色先分不清。「轮廓」靠亮暗就能看出来，还看得见。"
             },
             "visual": {
-              "type": "chain",
-              "base": {},
-              "frames": [
+              "type": "deck",
+              "id": "deck.fashion.2.2",
+              "slides": [
                 {
-                  "set": {
-                    "step": 0,
-                    "play": 0
-                  },
-                  "cap": "管亮暗的细胞多约二十倍，亮暗比颜色先被看到",
-                  "para": "idea"
+                  "scene": "g.fashion.2.2.0",
+                  "cap": "管亮暗的细胞，叫视杆细胞。",
+                  "sec": "idea"
                 },
                 {
-                  "set": {
-                    "step": 1,
-                    "play": 0.5
-                  },
-                  "cap": "管亮暗的细胞多约二十倍，亮暗比颜色先被看到",
-                  "para": "why"
+                  "scene": "g.fashion.2.2.1",
+                  "cap": "管颜色的细胞，叫视锥细胞。",
+                  "sec": "why"
                 },
                 {
-                  "set": {
-                    "step": 2,
-                    "play": 1
-                  },
-                  "cap": "管亮暗的细胞多约二十倍，亮暗比颜色先被看到。",
-                  "para": "takeaway"
+                  "scene": "g.fashion.2.2.2",
+                  "cap": "管亮暗的那种，数量多得多。",
+                  "sec": "example"
+                },
+                {
+                  "scene": "g.fashion.2.2.3",
+                  "cap": "暗处先靠亮暗，颜色会变弱。",
+                  "sec": [
+                    "derive",
+                    0,
+                    1
+                  ]
+                },
+                {
+                  "scene": "g.fashion.2.2.4",
+                  "cap": "眼睛里是两种传感器在分工。",
+                  "sec": [
+                    "derive",
+                    2,
+                    2
+                  ]
+                },
+                {
+                  "scene": "g.fashion.2.2.5",
+                  "cap": "天黑时，先看见形状，后看见色。",
+                  "sec": "takeaway"
                 }
               ]
             }
@@ -3326,69 +2670,8 @@ window.DAYS = [
             "ref": 1
           }
         ],
-        "hookComic": {
-          "panels": [
-            {
-              "bg": "room",
-              "cast": [
-                {
-                  "who": "xiaoman",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [],
-              "cap": "两人穿同一套颜色的衣服"
-            },
-            {
-              "bg": "room",
-              "cast": [
-                {
-                  "who": "xiaoman",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [],
-              "cap": "一个看着利落"
-            },
-            {
-              "bg": "room",
-              "cast": [
-                {
-                  "who": "xiaoyin",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [],
-              "cap": "小音按下黑白滤镜"
-            },
-            {
-              "bg": "room",
-              "cast": [
-                {
-                  "who": "xiaoman",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [],
-              "cap": "发闷那套在黑白里糊成一片"
-            }
-          ]
+        "hookPic": {
+          "scene": "hook.2.fashion"
         }
       },
       "history": {
@@ -3424,32 +2707,13 @@ window.DAYS = [
               "why": "甲骨文是商人自己留下的字，所以是直接证据。「后世的书里写得很详细」说的是夏的主要依据，那是后人的记载，不算直接证据。"
             },
             "visual": {
-              "type": "chain",
-              "base": {},
-              "frames": [
+              "type": "deck",
+              "id": "still.2.history.1",
+              "slides": [
                 {
-                  "set": {
-                    "step": 0,
-                    "play": 0
-                  },
+                  "scene": "still.2.history.1",
                   "cap": "夏多靠文献，考古还在讨论；商有甲骨文作直接证据",
-                  "para": "idea"
-                },
-                {
-                  "set": {
-                    "step": 1,
-                    "play": 0.5
-                  },
-                  "cap": "夏多靠文献，考古还在讨论；商有甲骨文作直接证据",
-                  "para": "why"
-                },
-                {
-                  "set": {
-                    "step": 2,
-                    "play": 1
-                  },
-                  "cap": "夏多靠文献，考古还在讨论；商有甲骨文作直接证据。",
-                  "para": "takeaway"
+                  "sec": "takeaway"
                 }
               ]
             }
@@ -3468,117 +2732,46 @@ window.DAYS = [
               "周选了第三条。"
             ],
             "visual": {
-              "type": "comic",
-              "panels": [
+              "type": "deck",
+              "id": "deck.history.2.3",
+              "slides": [
                 {
-                  "bg": "palace",
-                  "cast": [
-                    {
-                      "who": "kingWu",
-                      "x": 0.42,
-                      "y": 0.74,
-                      "face": "wow",
-                      "pose": "cheer"
-                    }
-                  ],
-                  "props": [
-                    {
-                      "what": "mapScroll",
-                      "x": 0.74,
-                      "y": 0.72,
-                      "k": 1
-                    }
-                  ],
-                  "bubbles": [],
-                  "cap": "地盘一下大了"
+                  "scene": "g.history.2.3.0",
+                  "cap": "周的都城在今天西安附近。",
+                  "sec": "idea"
                 },
                 {
-                  "bg": "street",
-                  "cast": [
-                    {
-                      "who": "rider",
-                      "x": 0.4,
-                      "y": 0.74,
-                      "face": "worry",
-                      "pose": "run"
-                    }
-                  ],
-                  "props": [
-                    {
-                      "what": "horse",
-                      "x": 0.72,
-                      "y": 0.78,
-                      "k": 1
-                    }
-                  ],
-                  "bubbles": [
-                    {
-                      "who": "rider",
-                      "text": "我一个人管不过来"
-                    }
-                  ],
-                  "cap": "送信要一个多月"
+                  "scene": "g.history.2.3.1",
+                  "cap": "前 1046 年，周武王灭了商。",
+                  "sec": "why"
                 },
                 {
-                  "bg": "palace",
-                  "cast": [
-                    {
-                      "who": "kingWu",
-                      "x": 0.32,
-                      "y": 0.74,
-                      "face": "calm",
-                      "pose": "give"
-                    },
-                    {
-                      "who": "noble",
-                      "x": 0.64,
-                      "y": 0.74,
-                      "face": "calm",
-                      "pose": "take"
-                    }
-                  ],
-                  "props": [
-                    {
-                      "what": "token",
-                      "x": 0.5,
-                      "y": 0.62,
-                      "k": 0.9
-                    }
-                  ],
-                  "bubbles": [
-                    {
-                      "who": "kingWu",
-                      "text": "你带人去东边守着"
-                    }
-                  ],
-                  "cap": "把地分给弟弟"
+                  "scene": "g.history.2.3.2",
+                  "cap": "地盘一下伸到东边的海。",
+                  "sec": "example"
                 },
                 {
-                  "bg": "street",
-                  "cast": [
-                    {
-                      "who": "xiaoyin",
-                      "x": 0.4,
-                      "y": 0.74,
-                      "face": "happy",
-                      "pose": "point"
-                    }
-                  ],
-                  "props": [
-                    {
-                      "what": "castle",
-                      "x": 0.74,
-                      "y": 0.7,
-                      "k": 1.1
-                    }
-                  ],
-                  "bubbles": [
-                    {
-                      "who": "xiaoyin",
-                      "text": "这就叫分封"
-                    }
-                  ],
-                  "cap": "各地建起小城"
+                  "scene": "g.history.2.3.3",
+                  "cap": "人少，地却突然变大。",
+                  "sec": [
+                    "derive",
+                    0,
+                    2
+                  ]
+                },
+                {
+                  "scene": "g.history.2.3.4",
+                  "cap": "他把地分给子弟和功臣。",
+                  "sec": [
+                    "derive",
+                    3,
+                    4
+                  ]
+                },
+                {
+                  "scene": "g.history.2.3.5",
+                  "cap": "自己守不住，就让亲戚去守。",
+                  "sec": "takeaway"
                 }
               ]
             }
@@ -3590,32 +2783,13 @@ window.DAYS = [
             "takeaway": "分封 = 天子交出管理权，换诸侯的朝贡和出兵。",
             "example": "功臣姜太公被封在齐（今山东北部），周公的儿子被封在鲁（今山东南部），都在原来商的势力很强的东方。他们像一颗颗钉子，替周守住新地盘。",
             "visual": {
-              "type": "tree",
-              "base": {},
-              "frames": [
+              "type": "deck",
+              "id": "still.2.history.3",
+              "slides": [
                 {
-                  "set": {
-                    "step": 0,
-                    "play": 0
-                  },
+                  "scene": "still.2.history.3",
                   "cap": "分封 = 天子交出管理权，换诸侯的朝贡和出兵",
-                  "para": "idea"
-                },
-                {
-                  "set": {
-                    "step": 1,
-                    "play": 0.5
-                  },
-                  "cap": "分封 = 天子交出管理权，换诸侯的朝贡和出兵",
-                  "para": "why"
-                },
-                {
-                  "set": {
-                    "step": 2,
-                    "play": 1
-                  },
-                  "cap": "分封 = 天子交出管理权，换诸侯的朝贡和出兵。",
-                  "para": "takeaway"
+                  "sec": "takeaway"
                 }
               ]
             }
@@ -3637,32 +2811,13 @@ window.DAYS = [
               "why": "第一代诸侯是天子的亲人，在东方站稳也要靠天子。诸侯靠自己的封地养活自己，天子并不发工资，所以「天子每月给他们发工资」不对。"
             },
             "visual": {
-              "type": "histmap",
-              "base": {},
-              "frames": [
+              "type": "deck",
+              "id": "still.2.history.4",
+              "slides": [
                 {
-                  "set": {
-                    "step": 0,
-                    "play": 0
-                  },
+                  "scene": "still.2.history.4",
                   "cap": "一开始血缘近、彼此需要，分封就很稳",
-                  "para": "idea"
-                },
-                {
-                  "set": {
-                    "step": 1,
-                    "play": 0.5
-                  },
-                  "cap": "一开始血缘近、彼此需要，分封就很稳",
-                  "para": "why"
-                },
-                {
-                  "set": {
-                    "step": 2,
-                    "play": 1
-                  },
-                  "cap": "一开始血缘近、彼此需要，分封就很稳。",
-                  "para": "takeaway"
+                  "sec": "takeaway"
                 }
               ]
             }
@@ -3675,32 +2830,13 @@ window.DAYS = [
             "example": "乐团的首席座位，如果每次演出前都重新比一轮，乐手们会天天较劲。事先定好\"谁坐首席\"，大家才能安心排练。宗法制就是一张事先排好的座次表。",
             "exLabel": "打个比方",
             "visual": {
-              "type": "tree",
-              "base": {},
-              "frames": [
+              "type": "deck",
+              "id": "still.2.history.5",
+              "slides": [
                 {
-                  "set": {
-                    "step": 0,
-                    "play": 0
-                  },
+                  "scene": "still.2.history.5",
                   "cap": "宗法制 = 嫡长子继承，用固定的规则换来少争夺",
-                  "para": "idea"
-                },
-                {
-                  "set": {
-                    "step": 1,
-                    "play": 0.5
-                  },
-                  "cap": "宗法制 = 嫡长子继承，用固定的规则换来少争夺",
-                  "para": "why"
-                },
-                {
-                  "set": {
-                    "step": 2,
-                    "play": 1
-                  },
-                  "cap": "宗法制 = 嫡长子继承，用固定的规则换来少争夺。",
-                  "para": "takeaway"
+                  "sec": "takeaway"
                 }
               ]
             }
@@ -3721,32 +2857,13 @@ window.DAYS = [
               "why": "宗法制只看出身和出生顺序，由正妻生的大儿子继承。选「最能干的儿子」要比来比去，兄弟容易相争，宗法制正是为了避开这一点。"
             },
             "visual": {
-              "type": "tree",
-              "base": {},
-              "frames": [
+              "type": "deck",
+              "id": "still.2.history.6",
+              "slides": [
                 {
-                  "set": {
-                    "step": 0,
-                    "play": 0
-                  },
+                  "scene": "still.2.history.6",
                   "cap": "分封分土地，宗法定辈分；天子是大宗，诸侯是小宗",
-                  "para": "idea"
-                },
-                {
-                  "set": {
-                    "step": 1,
-                    "play": 0.5
-                  },
-                  "cap": "分封分土地，宗法定辈分；天子是大宗，诸侯是小宗",
-                  "para": "why"
-                },
-                {
-                  "set": {
-                    "step": 2,
-                    "play": 1
-                  },
-                  "cap": "分封分土地，宗法定辈分；天子是大宗，诸侯是小宗。",
-                  "para": "takeaway"
+                  "sec": "takeaway"
                 }
               ]
             }
@@ -3765,32 +2882,46 @@ window.DAYS = [
               "你会想：少交一点、少去一次，好像也没什么。"
             ],
             "visual": {
-              "type": "tug",
-              "base": {},
-              "frames": [
+              "type": "deck",
+              "id": "deck.history.2.8",
+              "slides": [
                 {
-                  "set": {
-                    "step": 0,
-                    "play": 0
-                  },
-                  "cap": "血缘一代代变淡、诸侯一代代变强，分封就松了",
-                  "para": "idea"
+                  "scene": "g.history.2.8.0",
+                  "cap": "第一代是亲兄弟，一条心。",
+                  "sec": "idea"
                 },
                 {
-                  "set": {
-                    "step": 1,
-                    "play": 0.5
-                  },
-                  "cap": "血缘一代代变淡、诸侯一代代变强，分封就松了",
-                  "para": "why"
+                  "scene": "g.history.2.8.1",
+                  "cap": "传了几代，血缘就淡了。",
+                  "sec": "why"
                 },
                 {
-                  "set": {
-                    "step": 2,
-                    "play": 1
-                  },
-                  "cap": "血缘一代代变淡、诸侯一代代变强，分封就松了。",
-                  "para": "takeaway"
+                  "scene": "g.history.2.8.2",
+                  "cap": "诸侯的兵和地却越来越强。",
+                  "sec": "example"
+                },
+                {
+                  "scene": "g.history.2.8.3",
+                  "cap": "大家更认自己的国。",
+                  "sec": [
+                    "derive",
+                    0,
+                    2
+                  ]
+                },
+                {
+                  "scene": "g.history.2.8.4",
+                  "cap": "亲戚最后打成对手。",
+                  "sec": [
+                    "derive",
+                    3,
+                    4
+                  ]
+                },
+                {
+                  "scene": "g.history.2.8.5",
+                  "cap": "靠亲戚维系的网，会自己松开。",
+                  "sec": "takeaway"
                 }
               ]
             }
@@ -3802,32 +2933,13 @@ window.DAYS = [
             "takeaway": "平王东迁，天子从\"靠山\"变成要人保护的人。诸侯会怎么做？",
             "example": "就像家族企业的总部被烧了，老板搬去投靠几家分公司，办公室也是借分公司的。名义上还是老板，说话的分量已经不一样了。",
             "visual": {
-              "type": "histmap",
-              "base": {},
-              "frames": [
+              "type": "deck",
+              "id": "still.2.history.8",
+              "slides": [
                 {
-                  "set": {
-                    "step": 0,
-                    "play": 0
-                  },
+                  "scene": "still.2.history.8",
                   "cap": "平王东迁，天子从\"靠山\"变成要人保护的人",
-                  "para": "idea"
-                },
-                {
-                  "set": {
-                    "step": 1,
-                    "play": 0.5
-                  },
-                  "cap": "诸侯会怎么做",
-                  "para": "why"
-                },
-                {
-                  "set": {
-                    "step": 2,
-                    "play": 1
-                  },
-                  "cap": "平王东迁，天子从\"靠山\"变成要人保护的人。诸侯会怎么做？",
-                  "para": "takeaway"
+                  "sec": "takeaway"
                 }
               ]
             }
@@ -3908,88 +3020,8 @@ window.DAYS = [
             "kind": "event"
           }
         ],
-        "hookComic": {
-          "panels": [
-            {
-              "bg": "street",
-              "cast": [
-                {
-                  "who": "kingWu",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [
-                {
-                  "what": "mapScroll",
-                  "x": 0.78,
-                  "y": 0.78,
-                  "k": 0.95
-                }
-              ],
-              "bubbles": [],
-              "cap": "三千年前"
-            },
-            {
-              "bg": "palace",
-              "cast": [
-                {
-                  "who": "kingWu",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [],
-              "cap": "国王站在中间"
-            },
-            {
-              "bg": "street",
-              "cast": [
-                {
-                  "who": "rider",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "run"
-                }
-              ],
-              "props": [
-                {
-                  "what": "horse",
-                  "x": 0.78,
-                  "y": 0.78,
-                  "k": 0.95
-                }
-              ],
-              "bubbles": [],
-              "cap": "一个信使骑马跑了一个月"
-            },
-            {
-              "bg": "palace",
-              "cast": [
-                {
-                  "who": "xiaoyin",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [
-                {
-                  "who": "xiaoyin",
-                  "text": "怎么管住几千里？"
-                }
-              ],
-              "cap": "怎么管住几千里？"
-            }
-          ]
+        "hookPic": {
+          "scene": "hook.2.history"
         }
       },
       "geo": {
@@ -4173,32 +3205,46 @@ window.DAYS = [
               "所以地方时跟着经度走：每往西 15°，正午晚 1 小时。"
             ],
             "visual": {
-              "type": "sundial",
-              "base": {},
-              "frames": [
+              "type": "deck",
+              "id": "deck.geo.2.5",
+              "slides": [
                 {
-                  "set": {
-                    "step": 0,
-                    "play": 0
-                  },
-                  "cap": "地方时按本地太阳算，太阳最高时是正午；经度不同，地方时就不同",
-                  "para": "idea"
+                  "scene": "g.geo.2.5.0",
+                  "cap": "太阳升到最高，就是当地正午。",
+                  "sec": "idea"
                 },
                 {
-                  "set": {
-                    "step": 1,
-                    "play": 0.5
-                  },
-                  "cap": "地方时按本地太阳算，太阳最高时是正午；经度不同，地方时就不同",
-                  "para": "why"
+                  "scene": "g.geo.2.5.1",
+                  "cap": "古人把这一刻叫做中午十二点。",
+                  "sec": "why"
                 },
                 {
-                  "set": {
-                    "step": 2,
-                    "play": 1
-                  },
-                  "cap": "地方时按本地太阳算，太阳最高时是正午；经度不同，地方时就不同。",
-                  "para": "takeaway"
+                  "scene": "g.geo.2.5.2",
+                  "cap": "越靠东，太阳越早升到头顶。",
+                  "sec": "example"
+                },
+                {
+                  "scene": "g.geo.2.5.3",
+                  "cap": "经度差 15 度，太阳时间差 1 小时。",
+                  "sec": [
+                    "derive",
+                    0,
+                    1
+                  ]
+                },
+                {
+                  "scene": "g.geo.2.5.4",
+                  "cap": "看太阳定出来的时间，叫地方时。",
+                  "sec": [
+                    "derive",
+                    2,
+                    2
+                  ]
+                },
+                {
+                  "scene": "g.geo.2.5.5",
+                  "cap": "各地的正午，不在同一刻。",
+                  "sec": "takeaway"
                 }
               ]
             }
@@ -4219,32 +3265,13 @@ window.DAYS = [
               "why": "北京时间用的是东经 120° 的时间，不是北京城本身的 116°。叫\"北京时间\"是因为它是首都定的标准时间。"
             },
             "visual": {
-              "type": "clocks",
-              "base": {},
-              "frames": [
+              "type": "deck",
+              "id": "still.2.geo.5",
+              "slides": [
                 {
-                  "set": {
-                    "step": 0,
-                    "play": 0
-                  },
-                  "cap": "北京时间 = 东经 120° 的太阳时间，全国共用；越往西，钟比太阳越\"快\"",
-                  "para": "idea"
-                },
-                {
-                  "set": {
-                    "step": 1,
-                    "play": 0.5
-                  },
-                  "cap": "北京时间 = 东经 120° 的太阳时间，全国共用；越往西，钟比太阳越\"快\"",
-                  "para": "why"
-                },
-                {
-                  "set": {
-                    "step": 2,
-                    "play": 1
-                  },
-                  "cap": "北京时间 = 东经 120° 的太阳时间，全国共用；越往西，钟比太阳越\"快\"。",
-                  "para": "takeaway"
+                  "scene": "still.2.geo.5",
+                  "cap": "北京时间：全国看同一只钟",
+                  "sec": "takeaway"
                 }
               ]
             }
@@ -4261,77 +3288,46 @@ window.DAYS = [
               "钟上 22:00，当地太阳时约 22:00 − 2.2 小时 ≈ 19:50。"
             ],
             "visual": {
-              "type": "comic",
-              "panels": [
+              "type": "deck",
+              "id": "deck.geo.2.7",
+              "slides": [
                 {
-                  "bg": "mountain",
-                  "cast": [
-                    {
-                      "who": "xiaoman",
-                      "x": 0.46,
-                      "y": 0.74,
-                      "face": "calm",
-                      "pose": "stand"
-                    }
-                  ],
-                  "props": [],
-                  "bubbles": [],
-                  "cap": "北京时间 22:00"
+                  "scene": "g.geo.2.7.0",
+                  "cap": "钟上是晚上十点。",
+                  "sec": "idea"
                 },
                 {
-                  "bg": "mountain",
-                  "cast": [
-                    {
-                      "who": "xiaoman",
-                      "x": 0.46,
-                      "y": 0.74,
-                      "face": "calm",
-                      "pose": "stand"
-                    }
-                  ],
-                  "props": [],
-                  "bubbles": [
-                    {
-                      "who": "xiaoman",
-                      "text": "太阳钟"
-                    }
-                  ],
-                  "cap": "小满看才 20:00 左右"
+                  "scene": "g.geo.2.7.1",
+                  "cap": "乌鲁木齐的太阳还在西边。",
+                  "sec": "why"
                 },
                 {
-                  "bg": "mountain",
-                  "cast": [
-                    {
-                      "who": "xiaoman",
-                      "x": 0.46,
-                      "y": 0.74,
-                      "face": "calm",
-                      "pose": "stand"
-                    }
-                  ],
-                  "props": [],
-                  "bubbles": [],
-                  "cap": "当地人 10 点上班"
+                  "scene": "g.geo.2.7.2",
+                  "cap": "按当地太阳，才傍晚七点多。",
+                  "sec": "example"
                 },
                 {
-                  "bg": "mountain",
-                  "cast": [
-                    {
-                      "who": "xiaoyin",
-                      "x": 0.46,
-                      "y": 0.74,
-                      "face": "calm",
-                      "pose": "stand"
-                    }
-                  ],
-                  "props": [],
-                  "bubbles": [
-                    {
-                      "who": "xiaoyin",
-                      "text": "不是熬夜"
-                    }
-                  ],
-                  "cap": "不是熬夜"
+                  "scene": "g.geo.2.7.3",
+                  "cap": "同一国家，两地太阳不一样高。",
+                  "sec": [
+                    "derive",
+                    0,
+                    1
+                  ]
+                },
+                {
+                  "scene": "g.geo.2.7.4",
+                  "cap": "夏天日头晚落，十点天还亮。",
+                  "sec": [
+                    "derive",
+                    2,
+                    2
+                  ]
+                },
+                {
+                  "scene": "g.geo.2.7.5",
+                  "cap": "钟和太阳，大约差三个小时。",
+                  "sec": "takeaway"
                 }
               ]
             }
@@ -4401,81 +3397,8 @@ window.DAYS = [
             "label": "SH"
           }
         ],
-        "hookComic": {
-          "panels": [
-            {
-              "bg": "kitchen",
-              "cast": [
-                {
-                  "who": "xiaoman",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [],
-              "cap": "晚上十点"
-            },
-            {
-              "bg": "mountain",
-              "cast": [
-                {
-                  "who": "ale",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [],
-              "cap": "视频里北京的阿乐已经关灯"
-            },
-            {
-              "bg": "mountain",
-              "cast": [
-                {
-                  "who": "xiaoman",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [
-                {
-                  "what": "phone",
-                  "x": 0.78,
-                  "y": 0.78,
-                  "k": 0.95
-                }
-              ],
-              "bubbles": [],
-              "cap": "两人手机上都是 22:00"
-            },
-            {
-              "bg": "mountain",
-              "cast": [
-                {
-                  "who": "xiaoyin",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [
-                {
-                  "who": "xiaoyin",
-                  "text": "是谁熬夜了？"
-                }
-              ],
-              "cap": "是谁熬夜了？"
-            }
-          ]
+        "hookPic": {
+          "scene": "hook.2.geo"
         }
       },
       "finance": {
@@ -4483,143 +3406,18 @@ window.DAYS = [
         "title": "百分比：每 100 份里有几份",
         "minutes": 7,
         "hook": "\"存下收入的 20%\"——这句话到底是存多少？",
-        "hookComic": {
-          "panels": [
-            {
-              "bg": "room",
-              "cast": [
-                {
-                  "who": "xiaoman",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [
-                {
-                  "who": "xiaoman",
-                  "text": "存下收入的 20%"
-                }
-              ],
-              "cap": "理财博主"
-            },
-            {
-              "bg": "room",
-              "cast": [
-                {
-                  "who": "xiaoman",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "worry",
-                  "pose": "think"
-                }
-              ],
-              "props": [
-                {
-                  "what": "payslip",
-                  "x": 0.78,
-                  "y": 0.78,
-                  "k": 0.95
-                }
-              ],
-              "bubbles": [],
-              "cap": "小满拿着工资条发呆"
-            },
-            {
-              "bg": "room",
-              "cast": [
-                {
-                  "who": "xiaoman",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [
-                {
-                  "who": "xiaoman",
-                  "text": "到底存多少？"
-                }
-              ],
-              "cap": "到底存多少？"
-            },
-            {
-              "bg": "room",
-              "cast": [
-                {
-                  "who": "xiaoyin",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [],
-              "cap": "小音拿出 100 个格子"
-            }
-          ]
-        },
         "steps": [
           {
             "title": "\"20%\"到底是多少？",
             "idea": "同样是\"20%\"，月入 3000 和月入 3 万，存的钱完全不一样。我们需要一个能换算成钱的办法。",
             "visual": {
-              "type": "comic",
-              "panels": [
+              "type": "deck",
+              "id": "still.2.finance.0",
+              "slides": [
                 {
-                  "bg": "room",
-                  "cast": [
-                    {
-                      "who": "xiaoman",
-                      "x": 0.46,
-                      "y": 0.74,
-                      "face": "calm",
-                      "pose": "stand"
-                    }
-                  ],
-                  "props": [],
-                  "bubbles": [
-                    {
-                      "who": "xiaoman",
-                      "text": "存下收入的 20%"
-                    }
-                  ],
-                  "cap": "朋友说存 20%"
-                },
-                {
-                  "bg": "room",
-                  "cast": [
-                    {
-                      "who": "xiaoman",
-                      "x": 0.46,
-                      "y": 0.74,
-                      "face": "worry",
-                      "pose": "think"
-                    }
-                  ],
-                  "props": [],
-                  "bubbles": [],
-                  "cap": "20% 是多少钱？"
-                },
-                {
-                  "bg": "room",
-                  "cast": [
-                    {
-                      "who": "xiaoman",
-                      "x": 0.46,
-                      "y": 0.74,
-                      "face": "calm",
-                      "pose": "stand"
-                    }
-                  ],
-                  "props": [],
-                  "bubbles": [],
-                  "cap": "先画 100 个小格"
+                  "scene": "still.2.finance.0",
+                  "cap": "百分比要换成具体的钱，才知道该存多少",
+                  "sec": "takeaway"
                 }
               ]
             },
@@ -4660,31 +3458,36 @@ window.DAYS = [
             "title": "推一下：3000 元的 20%",
             "idea": "先数有几个 100，再每个 100 里取 20。",
             "visual": {
-              "type": "chain",
-              "base": {
-                "nodes": [
-                  "3000 元",
-                  "里面有 30 个 100",
-                  "每个 100 取 20",
-                  "30 × 20 = 600"
-                ]
-              },
-              "frames": [
+              "type": "deck",
+              "id": "deck.finance.2.3",
+              "slides": [
                 {
-                  "set": {
-                    "play": 0,
-                    "step": 0
-                  },
-                  "cap": "先看骨架",
-                  "para": "idea"
+                  "scene": "g.finance.2.3.0",
+                  "cap": "先看 3000 元里有几个 100。",
+                  "sec": "idea"
                 },
                 {
-                  "set": {
-                    "play": 1,
-                    "step": 2
-                  },
-                  "cap": "看完整的图",
-                  "para": "takeaway"
+                  "scene": "g.finance.2.3.1",
+                  "cap": "3000 里面有 30 个 100。",
+                  "sec": [
+                    "derive",
+                    0,
+                    1
+                  ]
+                },
+                {
+                  "scene": "g.finance.2.3.2",
+                  "cap": "每个 100 里取出 20。",
+                  "sec": [
+                    "derive",
+                    2,
+                    3
+                  ]
+                },
+                {
+                  "scene": "g.finance.2.3.3",
+                  "cap": "30 个 20，就是 600 元。",
+                  "sec": "takeaway"
                 }
               ]
             },
@@ -4909,7 +3712,10 @@ window.DAYS = [
             "why": "柱子只画了钱数。收入高的人，存的钱数自然多。换成\"占收入的百分比\"，才能比力度。图本身没错，是画法只回答了一个问题。",
             "ref": 4
           }
-        ]
+        ],
+        "hookPic": {
+          "scene": "hook.2.finance"
+        }
       },
       "psych": {
         "id": "d02-psych",
@@ -4925,32 +3731,13 @@ window.DAYS = [
             "example": "一条狗突然冲你大叫，你心里一惊，心也\"咚\"地跳起来。看起来是同时的，但真的同时吗？",
             "review": true,
             "visual": {
-              "type": "wires",
-              "base": {},
-              "frames": [
+              "type": "deck",
+              "id": "still.2.psych.0",
+              "slides": [
                 {
-                  "set": {
-                    "step": 0,
-                    "play": 0
-                  },
+                  "scene": "still.2.psych.0",
                   "cap": "今天要回答：身体反应和情绪感受，谁在前",
-                  "para": "idea"
-                },
-                {
-                  "set": {
-                    "step": 1,
-                    "play": 0.5
-                  },
-                  "cap": "今天要回答：身体反应和情绪感受，谁在前",
-                  "para": "why"
-                },
-                {
-                  "set": {
-                    "step": 2,
-                    "play": 1
-                  },
-                  "cap": "今天要回答：身体反应和情绪感受，谁在前？",
-                  "para": "takeaway"
+                  "sec": "takeaway"
                 }
               ]
             }
@@ -4968,32 +3755,46 @@ window.DAYS = [
               "这份\"察觉\"本身，就是害怕的感受。"
             ],
             "visual": {
-              "type": "wires",
-              "base": {},
-              "frames": [
+              "type": "deck",
+              "id": "deck.psych.2.2",
+              "slides": [
                 {
-                  "set": {
-                    "step": 0,
-                    "play": 0
-                  },
-                  "cap": "詹姆斯-兰格：先有身体反应，大脑察觉后才有情绪",
-                  "para": "idea"
+                  "scene": "g.psych.2.2.0",
+                  "cap": "人先发抖，后觉得害怕。",
+                  "sec": "idea"
                 },
                 {
-                  "set": {
-                    "step": 1,
-                    "play": 0.5
-                  },
-                  "cap": "詹姆斯-兰格：先有身体反应，大脑察觉后才有情绪",
-                  "para": "why"
+                  "scene": "g.psych.2.2.1",
+                  "cap": "身体的变化发生在前。",
+                  "sec": "why"
                 },
                 {
-                  "set": {
-                    "step": 2,
-                    "play": 1
-                  },
-                  "cap": "詹姆斯-兰格：先有身体反应，大脑察觉后才有情绪。",
-                  "para": "takeaway"
+                  "scene": "g.psych.2.2.2",
+                  "cap": "大脑察觉到身体，才有感受。",
+                  "sec": "example"
+                },
+                {
+                  "scene": "g.psych.2.2.3",
+                  "cap": "心跳加快，是感受的材料。",
+                  "sec": [
+                    "derive",
+                    0,
+                    1
+                  ]
+                },
+                {
+                  "scene": "g.psych.2.2.4",
+                  "cap": "这和常识说的顺序相反。",
+                  "sec": [
+                    "derive",
+                    2,
+                    3
+                  ]
+                },
+                {
+                  "scene": "g.psych.2.2.5",
+                  "cap": "先有身体，再有情绪。",
+                  "sec": "takeaway"
                 }
               ]
             }
@@ -5014,72 +3815,13 @@ window.DAYS = [
               "why": "他保留\"看到熊\"，只拿掉心跳、发抖这些身体感觉，看情绪还剩多少。拿掉「让人害怕的那头熊」就没有刺激了，检验不了他的说法。"
             },
             "visual": {
-              "type": "comic",
-              "panels": [
+              "type": "deck",
+              "id": "still.2.psych.2",
+              "slides": [
                 {
-                  "bg": "room",
-                  "cast": [
-                    {
-                      "who": "xiaoman",
-                      "x": 0.46,
-                      "y": 0.74,
-                      "face": "worry",
-                      "pose": "think"
-                    }
-                  ],
-                  "props": [],
-                  "bubbles": [],
-                  "cap": "想象害怕"
-                },
-                {
-                  "bg": "room",
-                  "cast": [
-                    {
-                      "who": "xiaoman",
-                      "x": 0.46,
-                      "y": 0.74,
-                      "face": "calm",
-                      "pose": "stand"
-                    }
-                  ],
-                  "props": [],
-                  "bubbles": [],
-                  "cap": "去掉心跳"
-                },
-                {
-                  "bg": "room",
-                  "cast": [
-                    {
-                      "who": "xiaoman",
-                      "x": 0.46,
-                      "y": 0.74,
-                      "face": "calm",
-                      "pose": "stand"
-                    }
-                  ],
-                  "props": [],
-                  "bubbles": [],
-                  "cap": "去掉发抖"
-                },
-                {
-                  "bg": "room",
-                  "cast": [
-                    {
-                      "who": "xiaoman",
-                      "x": 0.46,
-                      "y": 0.74,
-                      "face": "worry",
-                      "pose": "stand"
-                    }
-                  ],
-                  "props": [],
-                  "bubbles": [
-                    {
-                      "who": "xiaoman",
-                      "text": "冷静的念头"
-                    }
-                  ],
-                  "cap": "只剩一个 → 卡 4 `wi"
+                  "scene": "still.2.psych.2",
+                  "cap": "詹姆斯靠想象实验论证：拿掉身体感觉，情绪就所剩无几",
+                  "sec": "takeaway"
                 }
               ]
             }
@@ -5100,32 +3842,13 @@ window.DAYS = [
               "why": "害怕、愤怒、兴奋都会让心跳加快，这正是这个理论难以解释的地方。「只有害怕时加快」不符合实际。"
             },
             "visual": {
-              "type": "wires",
-              "base": {},
-              "frames": [
+              "type": "deck",
+              "id": "still.2.psych.3",
+              "slides": [
                 {
-                  "set": {
-                    "step": 0,
-                    "play": 0
-                  },
+                  "scene": "still.2.psych.3",
                   "cap": "最大的漏洞：不同情绪的身体反应很相似，难以靠它区分情绪",
-                  "para": "idea"
-                },
-                {
-                  "set": {
-                    "step": 1,
-                    "play": 0.5
-                  },
-                  "cap": "最大的漏洞：不同情绪的身体反应很相似，难以靠它区分情绪",
-                  "para": "why"
-                },
-                {
-                  "set": {
-                    "step": 2,
-                    "play": 1
-                  },
-                  "cap": "最大的漏洞：不同情绪的身体反应很相似，难以靠它区分情绪。",
-                  "para": "takeaway"
+                  "sec": "takeaway"
                 }
               ]
             }
@@ -5137,32 +3860,13 @@ window.DAYS = [
             "takeaway": "身体会影响感受，但单靠身体，分不清是哪种情绪。",
             "example": "第 1 天的\"慢呼气\"就是这个思路的日常版：先让身体慢下来，感受跟着缓和。但你不会因为跑完步心跳快，就觉得自己在\"害怕\"——说明还缺了点什么。",
             "visual": {
-              "type": "chain",
-              "base": {},
-              "frames": [
+              "type": "deck",
+              "id": "still.2.psych.4",
+              "slides": [
                 {
-                  "set": {
-                    "step": 0,
-                    "play": 0
-                  },
+                  "scene": "still.2.psych.4",
                   "cap": "身体会影响感受，但单靠身体，分不清是哪种情绪",
-                  "para": "idea"
-                },
-                {
-                  "set": {
-                    "step": 1,
-                    "play": 0.5
-                  },
-                  "cap": "身体会影响感受，但单靠身体，分不清是哪种情绪",
-                  "para": "why"
-                },
-                {
-                  "set": {
-                    "step": 2,
-                    "play": 1
-                  },
-                  "cap": "身体会影响感受，但单靠身体，分不清是哪种情绪。",
-                  "para": "takeaway"
+                  "sec": "takeaway"
                 }
               ]
             }
@@ -5204,74 +3908,8 @@ window.DAYS = [
             "ref": 3
           }
         ],
-        "hookComic": {
-          "panels": [
-            {
-              "bg": "mountain",
-              "cast": [
-                {
-                  "who": "xiaoman",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [],
-              "cap": "小满在林中遇到熊"
-            },
-            {
-              "bg": "room",
-              "cast": [
-                {
-                  "who": "xiaoman",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "worry",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [],
-              "cap": "常识：害怕所以发抖"
-            },
-            {
-              "bg": "room",
-              "cast": [
-                {
-                  "who": "james",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "cheer"
-                }
-              ],
-              "props": [],
-              "bubbles": [
-                {
-                  "who": "james",
-                  "text": "反了"
-                }
-              ],
-              "cap": "詹姆斯（`james`）举牌"
-            },
-            {
-              "bg": "room",
-              "cast": [
-                {
-                  "who": "xiaoman",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [],
-              "cap": "箭头调转"
-            }
-          ]
+        "hookPic": {
+          "scene": "hook.2.psych"
         }
       },
       "english": {
@@ -6015,74 +4653,8 @@ window.DAYS = [
             "ref": 2
           }
         ],
-        "hookComic": {
-          "panels": [
-            {
-              "bg": "shop",
-              "cast": [
-                {
-                  "who": "xiaoman",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [],
-              "cap": "一间莫兰迪色的咖啡馆"
-            },
-            {
-              "bg": "room",
-              "cast": [
-                {
-                  "who": "xiaoman",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [
-                {
-                  "who": "xiaoman",
-                  "text": "为什么看着高级？"
-                }
-              ],
-              "cap": "为什么看着高级？"
-            },
-            {
-              "bg": "room",
-              "cast": [
-                {
-                  "who": "xiaoyin",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [],
-              "cap": "小音把纯度钮往下拧"
-            },
-            {
-              "bg": "room",
-              "cast": [
-                {
-                  "who": "xiaoman",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [],
-              "cap": "鲜艳的颜色都变得安静"
-            }
-          ]
+        "hookPic": {
+          "scene": "hook.3.fashion"
         }
       },
       "history": {
@@ -6109,32 +4681,28 @@ window.DAYS = [
             "takeaway": "东周 = 春秋 + 战国，合起来五百多年。",
             "example": "用第 1 天的算法：前 770 年到前 476 年，两个都在公元前，同一边，相减：770 − 476 = 294，春秋约 295 年。战国到前 221 年，约 255 年。合起来五百多年，就是钩子里的\"打了五百多年\"。",
             "visual": {
-              "type": "tl",
-              "base": {},
-              "frames": [
+              "type": "deck",
+              "id": "deck.history.3.2",
+              "slides": [
                 {
-                  "set": {
-                    "step": 0,
-                    "play": 0
-                  },
-                  "cap": "东周 = 春秋 + 战国，合起来五百多年",
-                  "para": "idea"
+                  "scene": "g.history.3.2.0",
+                  "cap": "周王东迁之后，叫东周。",
+                  "sec": "idea"
                 },
                 {
-                  "set": {
-                    "step": 1,
-                    "play": 0.5
-                  },
-                  "cap": "东周 = 春秋 + 战国，合起来五百多年",
-                  "para": "why"
+                  "scene": "g.history.3.2.1",
+                  "cap": "前一段，诸侯还打着尊王的旗。",
+                  "sec": "why"
                 },
                 {
-                  "set": {
-                    "step": 2,
-                    "play": 1
-                  },
-                  "cap": "东周 = 春秋 + 战国，合起来五百多年。",
-                  "para": "takeaway"
+                  "scene": "g.history.3.2.2",
+                  "cap": "大约前 476 年，分成后一段。",
+                  "sec": "example"
+                },
+                {
+                  "scene": "g.history.3.2.3",
+                  "cap": "后一段，大国直接互相吞并。",
+                  "sec": "takeaway"
                 }
               ]
             }
@@ -6153,79 +4721,13 @@ window.DAYS = [
               "再替大家挡住外族的进攻，别国还会感谢你。"
             ],
             "visual": {
-              "type": "comic",
-              "panels": [
+              "type": "deck",
+              "id": "still.3.history.2",
+              "slides": [
                 {
-                  "bg": "palace",
-                  "cast": [
-                    {
-                      "who": "kingWu",
-                      "x": 0.46,
-                      "y": 0.74,
-                      "face": "calm",
-                      "pose": "stand"
-                    }
-                  ],
-                  "props": [
-                    {
-                      "what": "horse",
-                      "x": 0.78,
-                      "y": 0.78,
-                      "k": 0.95
-                    }
-                  ],
-                  "bubbles": [],
-                  "cap": "你兵强马壮"
-                },
-                {
-                  "bg": "palace",
-                  "cast": [
-                    {
-                      "who": "kingWu",
-                      "x": 0.46,
-                      "y": 0.74,
-                      "face": "calm",
-                      "pose": "stand"
-                    }
-                  ],
-                  "props": [],
-                  "bubbles": [],
-                  "cap": "但周天子名分还在"
-                },
-                {
-                  "bg": "palace",
-                  "cast": [
-                    {
-                      "who": "kingWu",
-                      "x": 0.46,
-                      "y": 0.74,
-                      "face": "calm",
-                      "pose": "stand"
-                    }
-                  ],
-                  "props": [],
-                  "bubbles": [
-                    {
-                      "who": "kingWu",
-                      "text": "尊王"
-                    }
-                  ],
-                  "cap": "你打着的旗号召集小国"
-                },
-                {
-                  "bg": "palace",
-                  "cast": [
-                    {
-                      "who": "kingWu",
-                      "x": 0.46,
-                      "y": 0.74,
-                      "face": "calm",
-                      "pose": "stand"
-                    }
-                  ],
-                  "props": [],
-                  "bubbles": [],
-                  "cap": "大家听你的：当上霸主"
+                  "scene": "still.3.history.2",
+                  "cap": "留着天子、借他的名义，比废掉他更划算",
+                  "sec": "takeaway"
                 }
               ]
             }
@@ -6247,32 +4749,13 @@ window.DAYS = [
               "why": "天子没兵没地，霸主的地位是自己争来的；打\"尊王\"的旗号，是为了名正言顺地号令别国。所以「天子下令让他们当霸主」不对。"
             },
             "visual": {
-              "type": "histmap",
-              "base": {},
-              "frames": [
+              "type": "deck",
+              "id": "still.3.history.3",
+              "slides": [
                 {
-                  "set": {
-                    "step": 0,
-                    "play": 0
-                  },
+                  "scene": "still.3.history.3",
                   "cap": "春秋争霸：打着天子的旗号当老大，还承认天子的名分",
-                  "para": "idea"
-                },
-                {
-                  "set": {
-                    "step": 1,
-                    "play": 0.5
-                  },
-                  "cap": "春秋争霸：打着天子的旗号当老大，还承认天子的名分",
-                  "para": "why"
-                },
-                {
-                  "set": {
-                    "step": 2,
-                    "play": 1
-                  },
-                  "cap": "春秋争霸：打着天子的旗号当老大，还承认天子的名分。",
-                  "para": "takeaway"
+                  "sec": "takeaway"
                 }
               ]
             }
@@ -6289,32 +4772,13 @@ window.DAYS = [
               "旧规矩没人守了 → 打仗不再\"点到为止\"。"
             ],
             "visual": {
-              "type": "chain",
-              "base": {},
-              "frames": [
+              "type": "deck",
+              "id": "still.3.history.4",
+              "slides": [
                 {
-                  "set": {
-                    "step": 0,
-                    "play": 0
-                  },
+                  "scene": "still.3.history.4",
                   "cap": "粮更多、对手更少、规矩更松，争霸就升级成了兼并",
-                  "para": "idea"
-                },
-                {
-                  "set": {
-                    "step": 1,
-                    "play": 0.5
-                  },
-                  "cap": "粮更多、对手更少、规矩更松，争霸就升级成了兼并",
-                  "para": "why"
-                },
-                {
-                  "set": {
-                    "step": 2,
-                    "play": 1
-                  },
-                  "cap": "粮更多、对手更少、规矩更松，争霸就升级成了兼并。",
-                  "para": "takeaway"
+                  "sec": "takeaway"
                 }
               ]
             }
@@ -6336,32 +4800,13 @@ window.DAYS = [
               "why": "战国剩下的是\"七雄\"。「一百多个」是春秋初年诸侯国的数量，后来被一个个吞并了。"
             },
             "visual": {
-              "type": "histmap",
-              "base": {},
-              "frames": [
+              "type": "deck",
+              "id": "still.3.history.5",
+              "slides": [
                 {
-                  "set": {
-                    "step": 0,
-                    "play": 0
-                  },
+                  "scene": "still.3.history.5",
                   "cap": "战国七雄：齐楚燕韩赵魏秦，目标从当老大变成吞并对方",
-                  "para": "idea"
-                },
-                {
-                  "set": {
-                    "step": 1,
-                    "play": 0.5
-                  },
-                  "cap": "战国七雄：齐楚燕韩赵魏秦，目标从当老大变成吞并对方",
-                  "para": "why"
-                },
-                {
-                  "set": {
-                    "step": 2,
-                    "play": 1
-                  },
-                  "cap": "战国七雄：齐楚燕韩赵魏秦，目标从当老大变成吞并对方。",
-                  "para": "takeaway"
+                  "sec": "takeaway"
                 }
               ]
             }
@@ -6379,67 +4824,13 @@ window.DAYS = [
               "主张一多，互相辩论，这就叫**百家争鸣**。"
             ],
             "visual": {
-              "type": "comic",
-              "panels": [
+              "type": "deck",
+              "id": "still.3.history.6",
+              "slides": [
                 {
-                  "bg": "palace",
-                  "cast": [
-                    {
-                      "who": "kingWu",
-                      "x": 0.46,
-                      "y": 0.74,
-                      "face": "calm",
-                      "pose": "stand"
-                    }
-                  ],
-                  "props": [],
-                  "bubbles": [],
-                  "cap": "隔壁越来越强"
-                },
-                {
-                  "bg": "palace",
-                  "cast": [
-                    {
-                      "who": "kingWu",
-                      "x": 0.46,
-                      "y": 0.74,
-                      "face": "calm",
-                      "pose": "stand"
-                    }
-                  ],
-                  "props": [],
-                  "bubbles": [],
-                  "cap": "你最缺：粮和兵"
-                },
-                {
-                  "bg": "palace",
-                  "cast": [
-                    {
-                      "who": "kingWu",
-                      "x": 0.46,
-                      "y": 0.74,
-                      "face": "calm",
-                      "pose": "stand"
-                    }
-                  ],
-                  "props": [],
-                  "bubbles": [],
-                  "cap": "你贴出招贤榜"
-                },
-                {
-                  "bg": "palace",
-                  "cast": [
-                    {
-                      "who": "kingWu",
-                      "x": 0.46,
-                      "y": 0.74,
-                      "face": "calm",
-                      "pose": "stand"
-                    }
-                  ],
-                  "props": [],
-                  "bubbles": [],
-                  "cap": "谁能让国家变强就重用谁"
+                  "scene": "still.3.history.6",
+                  "cap": "竞争制造了对人才和思想的需求，百家争鸣由此而来",
+                  "sec": "takeaway"
                 }
               ]
             }
@@ -6461,32 +4852,13 @@ window.DAYS = [
               "why": "法家用赏罚让人马上为国家种地、打仗，见效最快。「儒家：礼和仁爱」要靠慢慢教化，不是乱世国君最急着要的。"
             },
             "visual": {
-              "type": "chain",
-              "base": {},
-              "frames": [
+              "type": "deck",
+              "id": "still.3.history.7",
+              "slides": [
                 {
-                  "set": {
-                    "step": 0,
-                    "play": 0
-                  },
+                  "scene": "still.3.history.7",
                   "cap": "百家都在给乱世开药方；打仗最急时，法家最受国君欢迎",
-                  "para": "idea"
-                },
-                {
-                  "set": {
-                    "step": 1,
-                    "play": 0.5
-                  },
-                  "cap": "百家都在给乱世开药方；打仗最急时，法家最受国君欢迎",
-                  "para": "why"
-                },
-                {
-                  "set": {
-                    "step": 2,
-                    "play": 1
-                  },
-                  "cap": "百家都在给乱世开药方；打仗最急时，法家最受国君欢迎。",
-                  "para": "takeaway"
+                  "sec": "takeaway"
                 }
               ]
             }
@@ -6505,32 +4877,46 @@ window.DAYS = [
               "人人都这样，秦越打越强。"
             ],
             "visual": {
-              "type": "histmap",
-              "base": {},
-              "frames": [
+              "type": "deck",
+              "id": "deck.history.3.9",
+              "slides": [
                 {
-                  "set": {
-                    "step": 0,
-                    "play": 0
-                  },
-                  "cap": "秦靠变法统一天下；它的县制，下一关会推广到全国",
-                  "para": "idea"
+                  "scene": "g.history.3.9.0",
+                  "cap": "前 356 年起，商鞅在秦国变法。",
+                  "sec": "idea"
                 },
                 {
-                  "set": {
-                    "step": 1,
-                    "play": 0.5
-                  },
-                  "cap": "秦靠变法统一天下；它的县制，下一关会推广到全国",
-                  "para": "why"
+                  "scene": "g.history.3.9.1",
+                  "cap": "种田和打仗的人得到奖赏。",
+                  "sec": "why"
                 },
                 {
-                  "set": {
-                    "step": 2,
-                    "play": 1
-                  },
-                  "cap": "秦靠变法统一天下；它的县制，下一关会推广到全国。",
-                  "para": "takeaway"
+                  "scene": "g.history.3.9.2",
+                  "cap": "东方六国变得没有秦彻底。",
+                  "sec": "example"
+                },
+                {
+                  "scene": "g.history.3.9.3",
+                  "cap": "一百多年后，秦统一了六国。",
+                  "sec": [
+                    "derive",
+                    0,
+                    2
+                  ]
+                },
+                {
+                  "scene": "g.history.3.9.4",
+                  "cap": "号令从咸阳发到各地。",
+                  "sec": [
+                    "derive",
+                    3,
+                    4
+                  ]
+                },
+                {
+                  "scene": "g.history.3.9.5",
+                  "cap": "变法最彻底的那一国，赢到了最后。",
+                  "sec": "takeaway"
                 }
               ]
             }
@@ -6614,81 +5000,8 @@ window.DAYS = [
             "kind": "event"
           }
         ],
-        "hookComic": {
-          "panels": [
-            {
-              "bg": "palace",
-              "cast": [
-                {
-                  "who": "kingWu",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "sit"
-                }
-              ],
-              "props": [
-                {
-                  "what": "castle",
-                  "x": 0.78,
-                  "y": 0.78,
-                  "k": 0.95
-                }
-              ],
-              "bubbles": [],
-              "cap": "周天子坐在小小的王城里"
-            },
-            {
-              "bg": "palace",
-              "cast": [
-                {
-                  "who": "noble",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [],
-              "cap": "外面一群诸侯在打架"
-            },
-            {
-              "bg": "palace",
-              "cast": [
-                {
-                  "who": "kingWu",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [],
-              "cap": "打了五百多年"
-            },
-            {
-              "bg": "palace",
-              "cast": [
-                {
-                  "who": "xiaoyin",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [
-                {
-                  "who": "xiaoyin",
-                  "text": "他们在争什么？"
-                }
-              ],
-              "cap": "他们在争什么？"
-            }
-          ]
+        "hookPic": {
+          "scene": "hook.3.history"
         }
       },
       "geo": {
@@ -6696,92 +5009,6 @@ window.DAYS = [
         "title": "三级阶梯：中国地形的骨架",
         "minutes": 9,
         "hook": "从拉萨坐火车到上海，一路是在“下楼梯”。一共下了几级？",
-        "hookComic": {
-          "panels": [
-            {
-              "bg": "mountain",
-              "cast": [
-                {
-                  "who": "xiaoman",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "cheer"
-                }
-              ],
-              "props": [
-                {
-                  "what": "bag",
-                  "x": 0.78,
-                  "y": 0.78,
-                  "k": 0.95
-                }
-              ],
-              "bubbles": [
-                {
-                  "who": "xiaoman",
-                  "text": "海拔 3650"
-                }
-              ],
-              "cap": "拉萨站"
-            },
-            {
-              "bg": "mountain",
-              "cast": [
-                {
-                  "who": "xiaoman",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [],
-              "cap": "车窗外：雪山 → 黄土坡 →"
-            },
-            {
-              "bg": "mountain",
-              "cast": [
-                {
-                  "who": "xiaoman",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [
-                {
-                  "who": "xiaoman",
-                  "text": "海拔 4"
-                }
-              ],
-              "cap": "上海站牌"
-            },
-            {
-              "bg": "street",
-              "cast": [
-                {
-                  "who": "xiaoyin",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [
-                {
-                  "who": "xiaoyin",
-                  "text": "一路在下楼梯"
-                }
-              ],
-              "cap": "小音画了三级台阶"
-            }
-          ]
-        },
         "stages": {
           "d03geo": {
             "type": "cnmap",
@@ -6973,180 +5200,36 @@ window.DAYS = [
             "takeaway": "第二级多高原和盆地，第三级多平原和丘陵；盆地看它坐在哪一级。",
             "example": "第二级有内蒙古高原、黄土高原、云贵高原，还有四川盆地、塔里木盆地、准噶尔盆地。第三级有东北平原、华北平原、长江中下游平原和东南丘陵。就像把脸盆放在二楼：盆底再低，它也还在二楼。",
             "visual": {
-              "type": "cnmap",
-              "stage": "d03geo",
-              "base": {
-                "steps": [
-                  2,
-                  3
-                ]
-              },
-              "frames": [
+              "type": "deck",
+              "id": "deck.geo.3.3",
+              "slides": [
                 {
-                  "cap": "第二级多高原和盆地",
-                  "para": "idea",
-                  "set": {
-                    "steps": [
-                      2,
-                      3
-                    ]
-                  }
+                  "scene": "s14.geo.1",
+                  "cap": "**盆地**：四周高、中间低，像一只脸盆。",
+                  "sec": "why"
                 },
                 {
-                  "cap": "高原：内蒙古、黄土、云贵",
-                  "para": "why",
-                  "set": {
-                    "focus": [
-                      "plateau:neimenggu",
-                      "plateau:huangtu",
-                      "plateau:yungui"
-                    ],
-                    "labels": [
-                      "neimenggu",
-                      "huangtu",
-                      "yungui"
-                    ]
-                  }
+                  "scene": "s14.geo.2",
+                  "cap": "把**四川盆地**切开看：一圈山，围着一块平地。",
+                  "sec": "idea"
                 },
                 {
-                  "cap": "塔里木盆地，四周高、中间低",
-                  "para": null,
-                  "set": {
-                    "focus": [
-                      "basin:tarim"
-                    ],
-                    "hotspot": "tarim",
-                    "labels": [
-                      "tarim"
-                    ]
-                  }
+                  "scene": "s14.geo.3",
+                  "cap": "盆底再低，它也还在**第二级**台阶上。",
+                  "sec": "example"
                 },
                 {
-                  "cap": "准噶尔盆地，也是一只脸盆",
-                  "para": null,
-                  "set": {
-                    "focus": [
-                      "basin:junggar"
-                    ],
-                    "hotspot": "junggar",
-                    "labels": [
-                      "junggar"
-                    ]
-                  }
+                  "scene": "s14.geo.4",
+                  "cap": "**平原**：又低又平，一直铺到海边。",
+                  "sec": "idea"
                 },
                 {
-                  "cap": "四川盆地坐在第二级台阶上",
-                  "para": "example",
-                  "set": {
-                    "focus": [
-                      "basin:sichuan"
-                    ],
-                    "hotspot": "sichuan",
-                    "labels": [
-                      "sichuan"
-                    ]
-                  }
-                },
-                {
-                  "cap": "柴达木盆地也是一个碗",
-                  "para": null,
-                  "set": {
-                    "focus": [
-                      "basin:qaidam"
-                    ],
-                    "hotspot": "qaidam",
-                    "labels": [
-                      "qaidam"
-                    ]
-                  }
-                },
-                {
-                  "cap": "第三级多在 500 米以下",
-                  "para": null,
-                  "set": {
-                    "steps": [
-                      1,
-                      2,
-                      3
-                    ],
-                    "focus": [],
-                    "hotspot": null
-                  }
-                },
-                {
-                  "cap": "东北平原又低又平",
-                  "para": null,
-                  "set": {
-                    "focus": [
-                      "plain:dongbei"
-                    ],
-                    "hotspot": "dongbei",
-                    "labels": [
-                      "dongbei"
-                    ]
-                  }
-                },
-                {
-                  "cap": "华北平原铺到海边",
-                  "para": null,
-                  "set": {
-                    "focus": [
-                      "plain:huabei"
-                    ],
-                    "hotspot": "huabei",
-                    "labels": [
-                      "huabei"
-                    ]
-                  }
-                },
-                {
-                  "cap": "长江中下游平原，又低又平",
-                  "para": null,
-                  "set": {
-                    "focus": [
-                      "plain:changjiang"
-                    ],
-                    "hotspot": "changjiang",
-                    "labels": [
-                      "changjiang"
-                    ]
-                  }
-                },
-                {
-                  "cap": "三级、盆地和平原，都标在这张图上",
-                  "para": "takeaway",
-                  "set": {
-                    "steps": [
-                      1,
-                      2,
-                      3
-                    ],
-                    "focus": [],
-                    "hotspot": null,
-                    "units": "all",
-                    "labels": [
-                      "qingzang",
-                      "tarim",
-                      "junggar",
-                      "qaidam",
-                      "sichuan",
-                      "dongbei",
-                      "huabei",
-                      "changjiang",
-                      "neimenggu",
-                      "huangtu",
-                      "yungui"
-                    ],
-                    "hotspots": [
-                      "tarim",
-                      "junggar",
-                      "qaidam",
-                      "sichuan",
-                      "dongbei",
-                      "huabei",
-                      "changjiang"
-                    ]
-                  }
+                  "scene": "s14.geo.5",
+                  "cap": "三大平原都在第三级；四个盆地里，三个在第二级，柴达木在第一级。",
+                  "secs": [
+                    "example",
+                    "takeaway"
+                  ]
                 }
               ]
             }
@@ -7598,190 +5681,28 @@ window.DAYS = [
             "id": "QH",
             "label": "QH"
           }
-        ]
+        ],
+        "hookPic": {
+          "scene": "hook.3.geo"
+        }
       },
       "finance": {
         "id": "d03-finance",
         "title": "先付钱给自己",
         "minutes": 7,
         "hook": "\"月底剩多少就存多少\"——为什么这样做，常常一分都存不下？",
-        "hookComic": {
-          "panels": [
-            {
-              "bg": "room",
-              "cast": [
-                {
-                  "who": "xiaoman",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [
-                {
-                  "who": "xiaoman",
-                  "text": "剩多少存多少"
-                }
-              ],
-              "cap": "月初小满说"
-            },
-            {
-              "bg": "street",
-              "cast": [
-                {
-                  "who": "xiaoman",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [
-                {
-                  "what": "cup",
-                  "x": 0.78,
-                  "y": 0.78,
-                  "k": 0.95
-                }
-              ],
-              "bubbles": [],
-              "cap": "一路奶茶"
-            },
-            {
-              "bg": "room",
-              "cast": [
-                {
-                  "who": "xiaoman",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "worry",
-                  "pose": "stand"
-                }
-              ],
-              "props": [
-                {
-                  "what": "bag",
-                  "x": 0.78,
-                  "y": 0.78,
-                  "k": 0.95
-                },
-                {
-                  "what": "purse",
-                  "x": 0.62,
-                  "y": 0.78,
-                  "k": 0.95
-                }
-              ],
-              "bubbles": [],
-              "cap": "月底钱包空了"
-            },
-            {
-              "bg": "room",
-              "cast": [
-                {
-                  "who": "xiaoyin",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [
-                {
-                  "who": "xiaoyin",
-                  "text": "顺序反了"
-                }
-              ],
-              "cap": "顺序反了"
-            }
-          ]
-        },
         "steps": [
           {
             "title": "钱都去哪了？",
             "idea": "钱不是一下子花光的，是一笔一笔被小开销带走的。",
             "visual": {
-              "type": "comic",
-              "panels": [
+              "type": "deck",
+              "id": "still.3.finance.0",
+              "slides": [
                 {
-                  "bg": "room",
-                  "cast": [
-                    {
-                      "who": "xiaoman",
-                      "x": 0.46,
-                      "y": 0.74,
-                      "face": "calm",
-                      "pose": "stand"
-                    }
-                  ],
-                  "props": [
-                    {
-                      "what": "phone",
-                      "x": 0.78,
-                      "y": 0.78,
-                      "k": 0.95
-                    }
-                  ],
-                  "bubbles": [
-                    {
-                      "who": "xiaoman",
-                      "text": "工资到账 8000"
-                    }
-                  ],
-                  "cap": "发工资了"
-                },
-                {
-                  "bg": "room",
-                  "cast": [
-                    {
-                      "who": "xiaoman",
-                      "x": 0.46,
-                      "y": 0.74,
-                      "face": "calm",
-                      "pose": "stand"
-                    }
-                  ],
-                  "props": [
-                    {
-                      "what": "bag",
-                      "x": 0.78,
-                      "y": 0.78,
-                      "k": 0.95
-                    },
-                    {
-                      "what": "purse",
-                      "x": 0.62,
-                      "y": 0.78,
-                      "k": 0.95
-                    }
-                  ],
-                  "bubbles": [],
-                  "cap": "一笔一笔飞走"
-                },
-                {
-                  "bg": "room",
-                  "cast": [
-                    {
-                      "who": "xiaoman",
-                      "x": 0.46,
-                      "y": 0.74,
-                      "face": "worry",
-                      "pose": "stand"
-                    }
-                  ],
-                  "props": [
-                    {
-                      "what": "jar",
-                      "x": 0.78,
-                      "y": 0.78,
-                      "k": 0.95
-                    }
-                  ],
-                  "bubbles": [],
-                  "cap": "月底一看"
+                  "scene": "still.3.finance.0",
+                  "cap": "先花后存，月底常常什么都不剩",
+                  "sec": "takeaway"
                 }
               ]
             },
@@ -7791,30 +5712,13 @@ window.DAYS = [
             "title": "预算：花之前先分好",
             "idea": "**预算**就是钱花出去之前，先决定每一份去哪儿。",
             "visual": {
-              "type": "chain",
-              "base": {
-                "nodes": [
-                  "工资到账",
-                  "先分成几份",
-                  "再按份花"
-                ]
-              },
-              "frames": [
+              "type": "deck",
+              "id": "still.3.finance.1",
+              "slides": [
                 {
-                  "set": {
-                    "play": 0,
-                    "step": 0
-                  },
-                  "cap": "先看骨架",
-                  "para": "idea"
-                },
-                {
-                  "set": {
-                    "play": 1,
-                    "step": 2
-                  },
-                  "cap": "看完整的图",
-                  "para": "takeaway"
+                  "scene": "still.3.finance.1",
+                  "cap": "预算 = 先定去向，再花钱",
+                  "sec": "takeaway"
                 }
               ]
             },
@@ -7825,37 +5729,13 @@ window.DAYS = [
             "title": "为什么存钱要排第一",
             "idea": "发工资当天，先把要存的那份转走，剩下的再花。这叫\"先付钱给自己\"。",
             "visual": {
-              "type": "comic",
-              "panels": [
+              "type": "deck",
+              "id": "still.3.finance.2",
+              "slides": [
                 {
-                  "bg": "room",
-                  "cast": [
-                    {
-                      "who": "xiaoman",
-                      "x": 0.46,
-                      "y": 0.74,
-                      "face": "calm",
-                      "pose": "think"
-                    }
-                  ],
-                  "props": [],
-                  "bubbles": [],
-                  "cap": "存钱排最后"
-                },
-                {
-                  "bg": "room",
-                  "cast": [
-                    {
-                      "who": "xiaoman",
-                      "x": 0.46,
-                      "y": 0.74,
-                      "face": "calm",
-                      "pose": "cheer"
-                    }
-                  ],
-                  "props": [],
-                  "bubbles": [],
-                  "cap": "存钱排第一"
+                  "scene": "still.3.finance.2",
+                  "cap": "先存后花，储蓄才不会被挤掉",
+                  "sec": "takeaway"
                 }
               ]
             },
@@ -7928,29 +5808,13 @@ window.DAYS = [
             "title": "怎么读饼图",
             "idea": "**饼图**就是把\"全部\"画成一个圆，切成几块。每块多大，就占几成。",
             "visual": {
-              "type": "chain",
-              "base": {
-                "nodes": [
-                  "因",
-                  "果"
-                ]
-              },
-              "frames": [
+              "type": "deck",
+              "id": "still.3.finance.4",
+              "slides": [
                 {
-                  "set": {
-                    "play": 0,
-                    "step": 0
-                  },
-                  "cap": "先看骨架",
-                  "para": "idea"
-                },
-                {
-                  "set": {
-                    "play": 1,
-                    "step": 2
-                  },
-                  "cap": "看完整的图",
-                  "para": "takeaway"
+                  "scene": "still.3.finance.4",
+                  "cap": "饼图：整个圆 = 100%，每块大小 = 占几成",
+                  "sec": "takeaway"
                 }
               ]
             },
@@ -8146,7 +6010,10 @@ window.DAYS = [
               ]
             }
           }
-        ]
+        ],
+        "hookPic": {
+          "scene": "hook.3.finance"
+        }
       },
       "psych": {
         "id": "d03-psych",
@@ -8178,32 +6045,46 @@ window.DAYS = [
               "所以内脏反应当不了情绪的原因。"
             ],
             "visual": {
-              "type": "wires",
-              "base": {},
-              "frames": [
+              "type": "deck",
+              "id": "deck.psych.3.2",
+              "slides": [
                 {
-                  "set": {
-                    "step": 0,
-                    "play": 0
-                  },
-                  "cap": "内脏反应太像、太慢，当不了情绪的\"原因\"",
-                  "para": "idea"
+                  "scene": "g.psych.3.2.0",
+                  "cap": "几种情绪的心跳，长得很像。",
+                  "sec": "idea"
                 },
                 {
-                  "set": {
-                    "step": 1,
-                    "play": 0.5
-                  },
-                  "cap": "内脏反应太像、太慢，当不了情绪的\"原因\"",
-                  "para": "why"
+                  "scene": "g.psych.3.2.1",
+                  "cap": "身体变化，跟不上情绪出现。",
+                  "sec": "why"
                 },
                 {
-                  "set": {
-                    "step": 2,
-                    "play": 1
-                  },
-                  "cap": "内脏反应太像、太慢，当不了情绪的\"原因\"。",
-                  "para": "takeaway"
+                  "scene": "g.psych.3.2.2",
+                  "cap": "1927 年，坎农指出这两点。",
+                  "sec": "example"
+                },
+                {
+                  "scene": "g.psych.3.2.3",
+                  "cap": "只看内脏，分不出是怕还是怒。",
+                  "sec": [
+                    "derive",
+                    0,
+                    1
+                  ]
+                },
+                {
+                  "scene": "g.psych.3.2.4",
+                  "cap": "情绪已经来了，身体还没跟上。",
+                  "sec": [
+                    "derive",
+                    2,
+                    3
+                  ]
+                },
+                {
+                  "scene": "g.psych.3.2.5",
+                  "cap": "只靠身体，解释不完情绪。",
+                  "sec": "takeaway"
                 }
               ]
             }
@@ -8225,72 +6106,13 @@ window.DAYS = [
               "why": "它们遇到威胁仍会发怒、害怕，所以「再也没有情绪了」不对。这说明情绪不靠察觉内脏变化。"
             },
             "visual": {
-              "type": "comic",
-              "panels": [
+              "type": "deck",
+              "id": "still.3.psych.2",
+              "slides": [
                 {
-                  "bg": "room",
-                  "cast": [
-                    {
-                      "who": "xiaoman",
-                      "x": 0.46,
-                      "y": 0.74,
-                      "face": "calm",
-                      "pose": "stand"
-                    }
-                  ],
-                  "props": [],
-                  "bubbles": [],
-                  "cap": "切断神经的猫"
-                },
-                {
-                  "bg": "room",
-                  "cast": [
-                    {
-                      "who": "xiaoman",
-                      "x": 0.46,
-                      "y": 0.74,
-                      "face": "calm",
-                      "pose": "stand"
-                    }
-                  ],
-                  "props": [],
-                  "bubbles": [],
-                  "cap": "看到狗"
-                },
-                {
-                  "bg": "room",
-                  "cast": [
-                    {
-                      "who": "xiaoman",
-                      "x": 0.46,
-                      "y": 0.74,
-                      "face": "calm",
-                      "pose": "cheer"
-                    }
-                  ],
-                  "props": [],
-                  "bubbles": [],
-                  "cap": "仍然弓背炸毛"
-                },
-                {
-                  "bg": "room",
-                  "cast": [
-                    {
-                      "who": "cannon",
-                      "x": 0.46,
-                      "y": 0.74,
-                      "face": "calm",
-                      "pose": "stand"
-                    }
-                  ],
-                  "props": [],
-                  "bubbles": [
-                    {
-                      "who": "cannon",
-                      "text": "情绪还在"
-                    }
-                  ],
-                  "cap": "坎农： → 卡 4 `wir"
+                  "scene": "still.3.psych.2",
+                  "cap": "切断内脏信号，动物照样有情绪，内脏反应不是情绪的必要条件",
+                  "sec": "takeaway"
                 }
               ]
             }
@@ -8302,32 +6124,13 @@ window.DAYS = [
             "takeaway": "坎农-巴德：丘脑同时触发感受和身体反应，两者并行。",
             "example": "深夜门锁一响，信号到了丘脑，一边让你\"怕\"，一边让你心跳加速。这两件事是兄弟，不是父子。",
             "visual": {
-              "type": "wires",
-              "base": {},
-              "frames": [
+              "type": "deck",
+              "id": "still.3.psych.3",
+              "slides": [
                 {
-                  "set": {
-                    "step": 0,
-                    "play": 0
-                  },
+                  "scene": "still.3.psych.3",
                   "cap": "坎农-巴德：丘脑同时触发感受和身体反应，两者并行",
-                  "para": "idea"
-                },
-                {
-                  "set": {
-                    "step": 1,
-                    "play": 0.5
-                  },
-                  "cap": "坎农-巴德：丘脑同时触发感受和身体反应，两者并行",
-                  "para": "why"
-                },
-                {
-                  "set": {
-                    "step": 2,
-                    "play": 1
-                  },
-                  "cap": "坎农-巴德：丘脑同时触发感受和身体反应，两者并行。",
-                  "para": "takeaway"
+                  "sec": "takeaway"
                 }
               ]
             }
@@ -8348,32 +6151,13 @@ window.DAYS = [
               "why": "杏仁核、下丘脑、前额叶等都参与情绪，所以「只靠丘脑一处」不对，这是对坎农-巴德理论的修正。"
             },
             "visual": {
-              "type": "chain",
-              "base": {},
-              "frames": [
+              "type": "deck",
+              "id": "still.3.psych.4",
+              "slides": [
                 {
-                  "set": {
-                    "step": 0,
-                    "play": 0
-                  },
+                  "scene": "still.3.psych.4",
                   "cap": "丘脑不是唯一中枢，但\"身体分不清情绪\"的批评留了下来",
-                  "para": "idea"
-                },
-                {
-                  "set": {
-                    "step": 1,
-                    "play": 0.5
-                  },
-                  "cap": "丘脑不是唯一中枢，但\"身体分不清情绪\"的批评留了下来",
-                  "para": "why"
-                },
-                {
-                  "set": {
-                    "step": 2,
-                    "play": 1
-                  },
-                  "cap": "丘脑不是唯一中枢，但\"身体分不清情绪\"的批评留了下来。",
-                  "para": "takeaway"
+                  "sec": "takeaway"
                 }
               ]
             }
@@ -8385,32 +6169,13 @@ window.DAYS = [
             "takeaway": "詹姆斯-兰格是串联，坎农-巴德是并联。",
             "example": "你在后台听到观众欢呼，心跳加速。是兴奋还是怯场？心跳本身不会告诉你答案。下一关的二因素理论说：答案来自你怎么解释它。",
             "visual": {
-              "type": "wires",
-              "base": {},
-              "frames": [
+              "type": "deck",
+              "id": "still.3.psych.5",
+              "slides": [
                 {
-                  "set": {
-                    "step": 0,
-                    "play": 0
-                  },
+                  "scene": "still.3.psych.5",
                   "cap": "詹姆斯-兰格是串联，坎农-巴德是并联",
-                  "para": "idea"
-                },
-                {
-                  "set": {
-                    "step": 1,
-                    "play": 0.5
-                  },
-                  "cap": "詹姆斯-兰格是串联，坎农-巴德是并联",
-                  "para": "why"
-                },
-                {
-                  "set": {
-                    "step": 2,
-                    "play": 1
-                  },
-                  "cap": "詹姆斯-兰格是串联，坎农-巴德是并联。",
-                  "para": "takeaway"
+                  "sec": "takeaway"
                 }
               ]
             }
@@ -8474,74 +6239,8 @@ window.DAYS = [
             "ref": 5
           }
         ],
-        "hookComic": {
-          "panels": [
-            {
-              "bg": "room",
-              "cast": [
-                {
-                  "who": "xiaoman",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [],
-              "cap": "突然一声巨响"
-            },
-            {
-              "bg": "room",
-              "cast": [
-                {
-                  "who": "xiaoman",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "worry",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [],
-              "cap": "小满瞬间就怕了"
-            },
-            {
-              "bg": "room",
-              "cast": [
-                {
-                  "who": "xiaoman",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [],
-              "cap": "心跳还没来得及加快"
-            },
-            {
-              "bg": "room",
-              "cast": [
-                {
-                  "who": "xiaoyin",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "worry",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [
-                {
-                  "who": "xiaoyin",
-                  "text": "身体还没动"
-                }
-              ],
-              "cap": "身体还没动"
-            }
-          ]
+        "hookPic": {
+          "scene": "hook.3.psych"
         }
       },
       "english": {
@@ -9266,32 +6965,46 @@ window.DAYS = [
             ],
             "formula": "3 + 3 + 6 = 12",
             "visual": {
-              "type": "wheelBuild",
-              "base": {},
-              "frames": [
+              "type": "deck",
+              "id": "deck.fashion.4.4",
+              "slides": [
                 {
-                  "set": {
-                    "step": 0,
-                    "play": 0
-                  },
-                  "cap": "三次色 = 相邻两色再混；12 色轮就这样围成",
-                  "para": "idea"
+                  "scene": "g.fashion.4.4.0",
+                  "cap": "红、黄、蓝是一次色。",
+                  "sec": "idea"
                 },
                 {
-                  "set": {
-                    "step": 1,
-                    "play": 0.5
-                  },
-                  "cap": "三次色 = 相邻两色再混；12 色轮就这样围成",
-                  "para": "why"
+                  "scene": "g.fashion.4.4.1",
+                  "cap": "两两相混，得到三个二次色。",
+                  "sec": "why"
                 },
                 {
-                  "set": {
-                    "step": 2,
-                    "play": 1
-                  },
-                  "cap": "三次色 = 相邻两色再混；12 色轮就这样围成。",
-                  "para": "takeaway"
+                  "scene": "g.fashion.4.4.2",
+                  "cap": "相邻的两个再混，得到三次色。",
+                  "sec": "example"
+                },
+                {
+                  "scene": "g.fashion.4.4.3",
+                  "cap": "三次色一共有六个。",
+                  "sec": [
+                    "derive",
+                    0,
+                    1
+                  ]
+                },
+                {
+                  "scene": "g.fashion.4.4.4",
+                  "cap": "加上前面 6 个，色轮有 12 色。",
+                  "sec": [
+                    "derive",
+                    2,
+                    3
+                  ]
+                },
+                {
+                  "scene": "g.fashion.4.4.5",
+                  "cap": "再混一次，色轮才凑满。",
+                  "sec": "takeaway"
                 }
               ]
             },
@@ -9382,74 +7095,8 @@ window.DAYS = [
             "ref": 3
           }
         ],
-        "hookComic": {
-          "panels": [
-            {
-              "bg": "room",
-              "cast": [
-                {
-                  "who": "xiaoman",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [],
-              "cap": "小满在调色盘里混颜料"
-            },
-            {
-              "bg": "room",
-              "cast": [
-                {
-                  "who": "xiaoman",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [],
-              "cap": "黄 + 蓝 = 绿"
-            },
-            {
-              "bg": "room",
-              "cast": [
-                {
-                  "who": "xiaoman",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [],
-              "cap": "她把色块排成一圈"
-            },
-            {
-              "bg": "room",
-              "cast": [
-                {
-                  "who": "xiaoyin",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [
-                {
-                  "who": "xiaoyin",
-                  "text": "位置就是配方"
-                }
-              ],
-              "cap": "位置就是配方"
-            }
-          ]
+        "hookPic": {
+          "scene": "hook.4.fashion"
         }
       },
       "history": {
@@ -9490,86 +7137,7 @@ window.DAYS = [
               "answer": 0,
               "why": "秦始皇采纳了李斯的意见，不再分封，由朝廷派官管地方。「像周一样分封」是王绾的主张，没有被采纳。"
             },
-            "visual": {
-              "type": "comic",
-              "panels": [
-                {
-                  "bg": "palace",
-                  "cast": [
-                    {
-                      "who": "official",
-                      "x": 0.46,
-                      "y": 0.74,
-                      "face": "calm",
-                      "pose": "give"
-                    }
-                  ],
-                  "props": [],
-                  "bubbles": [
-                    {
-                      "who": "official",
-                      "text": "封给皇子们吧"
-                    }
-                  ],
-                  "cap": "大臣甲"
-                },
-                {
-                  "bg": "palace",
-                  "cast": [
-                    {
-                      "who": "official",
-                      "x": 0.46,
-                      "y": 0.74,
-                      "face": "calm",
-                      "pose": "stand"
-                    }
-                  ],
-                  "props": [],
-                  "bubbles": [
-                    {
-                      "who": "official",
-                      "text": "周就是这么乱的"
-                    }
-                  ],
-                  "cap": "大臣乙（李斯）"
-                },
-                {
-                  "bg": "palace",
-                  "cast": [
-                    {
-                      "who": "qinShi",
-                      "x": 0.46,
-                      "y": 0.74,
-                      "face": "calm",
-                      "pose": "stand"
-                    }
-                  ],
-                  "props": [],
-                  "bubbles": [],
-                  "cap": "秦始皇看着周的结局"
-                },
-                {
-                  "bg": "palace",
-                  "cast": [
-                    {
-                      "who": "kingWu",
-                      "x": 0.46,
-                      "y": 0.74,
-                      "face": "calm",
-                      "pose": "stand"
-                    }
-                  ],
-                  "props": [],
-                  "bubbles": [
-                    {
-                      "who": "kingWu",
-                      "text": "不封了"
-                    }
-                  ],
-                  "cap": "拍板"
-                }
-              ]
-            }
+            "deckHost": 2
           },
           {
             "title": "郡县制：地方官由皇帝派",
@@ -9579,33 +7147,67 @@ window.DAYS = [
             "example": "分封像开加盟店：店是老板自己的，赚了归自己，还能传给孩子，总部管不太动。郡县像开直营店：店长是总部派的、领工资，随时可以调去别的城市，店永远是总部的。",
             "exLabel": "打个比方",
             "visual": {
-              "type": "tree",
-              "base": {},
-              "frames": [
+              "type": "deck",
+              "id": "deck.history.4.3",
+              "slides": [
                 {
-                  "set": {
-                    "step": 0,
-                    "play": 0
-                  },
-                  "cap": "郡县制 = 地方官由皇帝任免、可调换、不世袭",
-                  "para": "idea"
+                  "scene": "s14.hist.1",
+                  "cap": "朝堂上吵起来：远方要不要分给皇子当王？",
+                  "sec": [
+                    2,
+                    "idea"
+                  ]
                 },
                 {
-                  "set": {
-                    "step": 1,
-                    "play": 0.5
-                  },
-                  "cap": "郡县制 = 地方官由皇帝任免、可调换、不世袭",
-                  "para": "why"
+                  "scene": "s14.hist.2",
+                  "cap": "分封：亲戚一代代变远，最后成了对手。",
+                  "sec": [
+                    2,
+                    "why"
+                  ]
                 },
                 {
-                  "set": {
-                    "step": 2,
-                    "play": 1
-                  },
-                  "cap": "郡县制 = 地方官由皇帝任免、可调换、不世袭。",
-                  "para": "takeaway"
+                  "scene": "s14.hist.3",
+                  "cap": "郡县：各地的官都是皇帝派去的。",
+                  "secs": [
+                    [
+                      3,
+                      "idea"
+                    ],
+                    [
+                      3,
+                      "example"
+                    ]
+                  ]
+                },
+                {
+                  "scene": "s14.hist.4",
+                  "cap": "不世袭、常调动：官在一个地方扎不下根。",
+                  "sec": [
+                    4,
+                    "example"
+                  ]
+                },
+                {
+                  "scene": "s14.hist.5",
+                  "cap": "工资皇帝发；管百姓和管兵，分给两个人。",
+                  "sec": [
+                    4,
+                    "why"
+                  ]
+                },
+                {
+                  "scene": "s14.hist.6",
+                  "cap": "分封靠血缘，会变淡；郡县靠制度，不会。",
+                  "sec": [
+                    5,
+                    "takeaway"
+                  ]
                 }
+              ],
+              "span": [
+                2,
+                5
               ]
             }
           },
@@ -9621,36 +7223,7 @@ window.DAYS = [
               "领俸禄 → 靠皇帝吃饭。",
               "军政分开 → 一个人说了不算。"
             ],
-            "visual": {
-              "type": "tug",
-              "base": {},
-              "frames": [
-                {
-                  "set": {
-                    "step": 0,
-                    "play": 0
-                  },
-                  "cap": "不世袭、能调动、拿俸禄，地方官就坐不大",
-                  "para": "idea"
-                },
-                {
-                  "set": {
-                    "step": 1,
-                    "play": 0.5
-                  },
-                  "cap": "不世袭、能调动、拿俸禄，地方官就坐不大",
-                  "para": "why"
-                },
-                {
-                  "set": {
-                    "step": 2,
-                    "play": 1
-                  },
-                  "cap": "不世袭、能调动、拿俸禄，地方官就坐不大。",
-                  "para": "takeaway"
-                }
-              ]
-            }
+            "deckHost": 2
           },
           {
             "title": "对照：分封和郡县",
@@ -9667,36 +7240,7 @@ window.DAYS = [
               "answer": 0,
               "why": "郡县制靠官僚制度和皇帝任免维系，和血缘远近无关。「分封制」靠血缘维系，血缘一淡就松了。"
             },
-            "visual": {
-              "type": "tree",
-              "base": {},
-              "frames": [
-                {
-                  "set": {
-                    "step": 0,
-                    "play": 0
-                  },
-                  "cap": "分封靠血缘、权在地方；郡县靠制度、权在中央",
-                  "para": "idea"
-                },
-                {
-                  "set": {
-                    "step": 1,
-                    "play": 0.5
-                  },
-                  "cap": "分封靠血缘、权在地方；郡县靠制度、权在中央",
-                  "para": "why"
-                },
-                {
-                  "set": {
-                    "step": 2,
-                    "play": 1
-                  },
-                  "cap": "分封靠血缘、权在地方；郡县靠制度、权在中央。",
-                  "para": "takeaway"
-                }
-              ]
-            }
+            "deckHost": 2
           },
           {
             "title": "统一标准：全国用同一套\"格式\"",
@@ -9706,32 +7250,13 @@ window.DAYS = [
             "example": "乐团开演前，所有乐器先对着同一个音调音。如果每件乐器的标准音不同，各自都照着谱子演对了，合在一起也是一团噪音。秦统一标准，就是给全国定了同一个标准音。",
             "exLabel": "打个比方",
             "visual": {
-              "type": "chain",
-              "base": {},
-              "frames": [
+              "type": "deck",
+              "id": "still.4.history.5",
+              "slides": [
                 {
-                  "set": {
-                    "step": 0,
-                    "play": 0
-                  },
+                  "scene": "still.4.history.5",
                   "cap": "统一文字、货币、度量衡，让全国用同一套\"格式\"运转",
-                  "para": "idea"
-                },
-                {
-                  "set": {
-                    "step": 1,
-                    "play": 0.5
-                  },
-                  "cap": "统一文字、货币、度量衡，让全国用同一套\"格式\"运转",
-                  "para": "why"
-                },
-                {
-                  "set": {
-                    "step": 2,
-                    "play": 1
-                  },
-                  "cap": "统一文字、货币、度量衡，让全国用同一套\"格式\"运转。",
-                  "para": "takeaway"
+                  "sec": "takeaway"
                 }
               ]
             }
@@ -9796,72 +7321,46 @@ window.DAYS = [
               "他们选了起义，各地纷纷响应。"
             ],
             "visual": {
-              "type": "comic",
-              "panels": [
+              "type": "deck",
+              "id": "deck.history.4.8",
+              "slides": [
                 {
-                  "bg": "palace",
-                  "cast": [
-                    {
-                      "who": "kingWu",
-                      "x": 0.46,
-                      "y": 0.74,
-                      "face": "calm",
-                      "pose": "stand"
-                    }
-                  ],
-                  "props": [],
-                  "bubbles": [],
-                  "cap": "雨下大了"
+                  "scene": "g.history.4.8.0",
+                  "cap": "制度很成功，国却很短。",
+                  "sec": "idea"
                 },
                 {
-                  "bg": "palace",
-                  "cast": [
-                    {
-                      "who": "kingWu",
-                      "x": 0.46,
-                      "y": 0.74,
-                      "face": "calm",
-                      "pose": "stand"
-                    }
-                  ],
-                  "props": [],
-                  "bubbles": [],
-                  "cap": "迟到按秦法要杀头"
+                  "scene": "g.history.4.8.1",
+                  "cap": "陈胜举起了反旗。",
+                  "sec": "why"
                 },
                 {
-                  "bg": "palace",
-                  "cast": [
-                    {
-                      "who": "kingWu",
-                      "x": 0.46,
-                      "y": 0.74,
-                      "face": "calm",
-                      "pose": "stand"
-                    }
-                  ],
-                  "props": [],
-                  "bubbles": [
-                    {
-                      "who": "kingWu",
-                      "text": "反正都是死"
-                    }
-                  ],
-                  "cap": "反正都是死"
+                  "scene": "g.history.4.8.2",
+                  "cap": "修长城、建宫殿、征伐，一起上。",
+                  "sec": "example"
                 },
                 {
-                  "bg": "palace",
-                  "cast": [
-                    {
-                      "who": "kingWu",
-                      "x": 0.46,
-                      "y": 0.74,
-                      "face": "calm",
-                      "pose": "stand"
-                    }
-                  ],
-                  "props": [],
-                  "bubbles": [],
-                  "cap": "振臂一呼"
+                  "scene": "g.history.4.8.3",
+                  "cap": "从统一到灭亡，大约 15 年。",
+                  "sec": [
+                    "derive",
+                    0,
+                    2
+                  ]
+                },
+                {
+                  "scene": "g.history.4.8.4",
+                  "cap": "前 207 年，秦朝结束。",
+                  "sec": [
+                    "derive",
+                    3,
+                    4
+                  ]
+                },
+                {
+                  "scene": "g.history.4.8.5",
+                  "cap": "不是制度没用，是把人用尽了。",
+                  "sec": "takeaway"
                 }
               ]
             }
@@ -9999,88 +7498,8 @@ window.DAYS = [
             "label": "秦都咸阳在今陕西"
           }
         ],
-        "hookComic": {
-          "panels": [
-            {
-              "bg": "palace",
-              "cast": [
-                {
-                  "who": "qinShi",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [
-                {
-                  "what": "mapScroll",
-                  "x": 0.78,
-                  "y": 0.78,
-                  "k": 0.95
-                }
-              ],
-              "bubbles": [],
-              "cap": "秦始皇站在刚统一的大地图前"
-            },
-            {
-              "bg": "palace",
-              "cast": [
-                {
-                  "who": "kingWu",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "worry",
-                  "pose": "stand"
-                }
-              ],
-              "props": [
-                {
-                  "what": "mapScroll",
-                  "x": 0.78,
-                  "y": 0.78,
-                  "k": 0.95
-                }
-              ],
-              "bubbles": [],
-              "cap": "地图上空出 15 年的一小段"
-            },
-            {
-              "bg": "palace",
-              "cast": [
-                {
-                  "who": "kingWu",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [],
-              "cap": "却有一条线一直延伸了两千年"
-            },
-            {
-              "bg": "palace",
-              "cast": [
-                {
-                  "who": "xiaoyin",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [
-                {
-                  "who": "xiaoyin",
-                  "text": "是什么？"
-                }
-              ],
-              "cap": "是什么？"
-            }
-          ]
+        "hookPic": {
+          "scene": "hook.4.history"
         }
       },
       "geo": {
@@ -10158,32 +7577,46 @@ window.DAYS = [
               "why": "重力把水往低处拉，所以「往右边低处流」。水不会自己往高处爬，「往左边高处流」不对。"
             },
             "visual": {
-              "type": "tilt",
-              "base": {},
-              "frames": [
+              "type": "deck",
+              "id": "deck.geo.4.3",
+              "slides": [
                 {
-                  "set": {
-                    "step": 0,
-                    "play": 0
-                  },
-                  "cap": "水往低处流，河往哪流由地势决定；中国西高东低，所以大河向东",
-                  "para": "idea"
+                  "scene": "g.geo.4.3.0",
+                  "cap": "水总被拉着，往更低的地方走。",
+                  "sec": "idea"
                 },
                 {
-                  "set": {
-                    "step": 1,
-                    "play": 0.5
-                  },
-                  "cap": "水往低处流，河往哪流由地势决定；中国西高东低，所以大河向东",
-                  "para": "why"
+                  "scene": "g.geo.4.3.1",
+                  "cap": "西边是高台阶，东边是低地。",
+                  "sec": "why"
                 },
                 {
-                  "set": {
-                    "step": 2,
-                    "play": 1
-                  },
-                  "cap": "水往低处流，河往哪流由地势决定；中国西高东低，所以大河向东。",
-                  "para": "takeaway"
+                  "scene": "g.geo.4.3.2",
+                  "cap": "大江大河大多向东入海。",
+                  "sec": "example"
+                },
+                {
+                  "scene": "g.geo.4.3.3",
+                  "cap": "台阶之间落差大，水就流得急。",
+                  "sec": [
+                    "derive",
+                    0,
+                    1
+                  ]
+                },
+                {
+                  "scene": "g.geo.4.3.4",
+                  "cap": "到了低平的地方，水就慢下来。",
+                  "sec": [
+                    "derive",
+                    2,
+                    2
+                  ]
+                },
+                {
+                  "scene": "g.geo.4.3.5",
+                  "cap": "地势决定河往哪边流。",
+                  "sec": "takeaway"
                 }
               ]
             }
@@ -10284,32 +7717,46 @@ window.DAYS = [
             ],
             "formula": "落差 × 水量：2 × 2 = 4（份）",
             "visual": {
-              "type": "drop",
-              "base": {},
-              "frames": [
+              "type": "deck",
+              "id": "deck.geo.4.6",
+              "slides": [
                 {
-                  "set": {
-                    "step": 0,
-                    "play": 0
-                  },
-                  "cap": "水能跟着\"落差 × 水量\"走：落得越高、水越多，越能发电",
-                  "para": "idea"
+                  "scene": "g.geo.4.6.0",
+                  "cap": "水从高处落下，会攒下一股力气。",
+                  "sec": "idea"
                 },
                 {
-                  "set": {
-                    "step": 1,
-                    "play": 0.5
-                  },
-                  "cap": "水能跟着\"落差 × 水量\"走：落得越高、水越多，越能发电",
-                  "para": "why"
+                  "scene": "g.geo.4.6.1",
+                  "cap": "落得越高，这股力气越大。",
+                  "sec": "why"
                 },
                 {
-                  "set": {
-                    "step": 2,
-                    "play": 1
-                  },
-                  "cap": "水能跟着\"落差 × 水量\"走：落得越高、水越多，越能发电。",
-                  "para": "takeaway"
+                  "scene": "g.geo.4.6.2",
+                  "cap": "水越多，力气也越大。",
+                  "sec": "example"
+                },
+                {
+                  "scene": "g.geo.4.6.3",
+                  "cap": "人们用这股力气来发电。",
+                  "sec": [
+                    "derive",
+                    0,
+                    1
+                  ]
+                },
+                {
+                  "scene": "g.geo.4.6.4",
+                  "cap": "这股能量，就叫水能。",
+                  "sec": [
+                    "derive",
+                    2,
+                    2
+                  ]
+                },
+                {
+                  "scene": "g.geo.4.6.5",
+                  "cap": "落差和水量都大的地方，水能多。",
+                  "sec": "takeaway"
                 }
               ]
             }
@@ -10377,72 +7824,13 @@ window.DAYS = [
               "一路下台阶：交界处落差大，水能多。"
             ],
             "visual": {
-              "type": "comic",
-              "panels": [
+              "type": "deck",
+              "id": "still.4.geo.7",
+              "slides": [
                 {
-                  "bg": "mountain",
-                  "cast": [
-                    {
-                      "who": "xiaoman",
-                      "x": 0.46,
-                      "y": 0.74,
-                      "face": "calm",
-                      "pose": "stand"
-                    }
-                  ],
-                  "props": [],
-                  "bubbles": [],
-                  "cap": "源头雪山融水"
-                },
-                {
-                  "bg": "mountain",
-                  "cast": [
-                    {
-                      "who": "xiaoman",
-                      "x": 0.46,
-                      "y": 0.74,
-                      "face": "calm",
-                      "pose": "stand"
-                    }
-                  ],
-                  "props": [],
-                  "bubbles": [],
-                  "cap": "冲下峡谷"
-                },
-                {
-                  "bg": "mountain",
-                  "cast": [
-                    {
-                      "who": "xiaoman",
-                      "x": 0.46,
-                      "y": 0.74,
-                      "face": "calm",
-                      "pose": "stand"
-                    }
-                  ],
-                  "props": [],
-                  "bubbles": [],
-                  "cap": "流过平原"
-                },
-                {
-                  "bg": "mountain",
-                  "cast": [
-                    {
-                      "who": "xiaoyin",
-                      "x": 0.46,
-                      "y": 0.74,
-                      "face": "calm",
-                      "pose": "stand"
-                    }
-                  ],
-                  "props": [],
-                  "bubbles": [
-                    {
-                      "who": "xiaoyin",
-                      "text": "一江春水向东流"
-                    }
-                  ],
-                  "cap": "入海"
+                  "scene": "still.4.geo.7",
+                  "cap": "串起来：一江春水为什么向东",
+                  "sec": "takeaway"
                 }
               ]
             }
@@ -10508,79 +7896,8 @@ window.DAYS = [
             "label": "SH"
           }
         ],
-        "hookComic": {
-          "panels": [
-            {
-              "bg": "mountain",
-              "cast": [
-                {
-                  "who": "xiaoman",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [
-                {
-                  "who": "xiaoman",
-                  "text": "一江春水向东流"
-                }
-              ],
-              "cap": "小满在江上划船"
-            },
-            {
-              "bg": "mountain",
-              "cast": [
-                {
-                  "who": "xiaoyin",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [
-                {
-                  "who": "xiaoyin",
-                  "text": "为什么不向西？"
-                }
-              ],
-              "cap": "为什么不向西？"
-            },
-            {
-              "bg": "mountain",
-              "cast": [
-                {
-                  "who": "xiaoman",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [],
-              "cap": "小满把一张桌子一头垫高"
-            },
-            {
-              "bg": "mountain",
-              "cast": [
-                {
-                  "who": "xiaoman",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [],
-              "cap": "水全流到低的那头"
-            }
-          ]
+        "hookPic": {
+          "scene": "hook.4.geo"
         }
       },
       "finance": {
@@ -10588,185 +7905,18 @@ window.DAYS = [
         "title": "应急金：任务是\"在\"，不是\"赚\"",
         "minutes": 7,
         "hook": "手机突然坏了要 3000 块，你会从哪里拿？",
-        "hookComic": {
-          "panels": [
-            {
-              "bg": "room",
-              "cast": [
-                {
-                  "who": "xiaoman",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "worry",
-                  "pose": "stand"
-                }
-              ],
-              "props": [
-                {
-                  "what": "phone",
-                  "x": 0.78,
-                  "y": 0.78,
-                  "k": 0.95
-                }
-              ],
-              "bubbles": [],
-              "cap": "手机摔碎"
-            },
-            {
-              "bg": "room",
-              "cast": [
-                {
-                  "who": "xiaoman",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [],
-              "cap": "修要 3000"
-            },
-            {
-              "bg": "room",
-              "cast": [
-                {
-                  "who": "xiaoman",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [
-                {
-                  "what": "bag",
-                  "x": 0.78,
-                  "y": 0.78,
-                  "k": 0.95
-                },
-                {
-                  "what": "purse",
-                  "x": 0.62,
-                  "y": 0.78,
-                  "k": 0.95
-                }
-              ],
-              "bubbles": [],
-              "cap": "小满翻钱包"
-            },
-            {
-              "bg": "room",
-              "cast": [
-                {
-                  "who": "xiaoyin",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "give"
-                }
-              ],
-              "props": [
-                {
-                  "what": "jar",
-                  "x": 0.78,
-                  "y": 0.78,
-                  "k": 0.95
-                }
-              ],
-              "bubbles": [
-                {
-                  "who": "xiaoyin",
-                  "text": "应急"
-                }
-              ],
-              "cap": "小音递上一个写着的罐子"
-            }
-          ]
-        },
         "steps": [
           {
             "title": "意外总会来",
             "idea": "生病、失业、手机坏了，这些事不会提前打招呼。到时候钱从哪来？",
             "visual": {
-              "type": "comic",
-              "panels": [
+              "type": "deck",
+              "id": "still.4.finance.0",
+              "slides": [
                 {
-                  "bg": "room",
-                  "cast": [
-                    {
-                      "who": "xiaoman",
-                      "x": 0.46,
-                      "y": 0.74,
-                      "face": "worry",
-                      "pose": "stand"
-                    }
-                  ],
-                  "props": [
-                    {
-                      "what": "phone",
-                      "x": 0.78,
-                      "y": 0.78,
-                      "k": 0.95
-                    }
-                  ],
-                  "bubbles": [],
-                  "cap": "手机摔碎了"
-                },
-                {
-                  "bg": "room",
-                  "cast": [
-                    {
-                      "who": "xiaoman",
-                      "x": 0.46,
-                      "y": 0.74,
-                      "face": "worry",
-                      "pose": "stand"
-                    }
-                  ],
-                  "props": [
-                    {
-                      "what": "bag",
-                      "x": 0.78,
-                      "y": 0.78,
-                      "k": 0.95
-                    },
-                    {
-                      "what": "purse",
-                      "x": 0.62,
-                      "y": 0.78,
-                      "k": 0.95
-                    }
-                  ],
-                  "bubbles": [],
-                  "cap": "修要 3000"
-                },
-                {
-                  "bg": "room",
-                  "cast": [
-                    {
-                      "who": "xiaoman",
-                      "x": 0.46,
-                      "y": 0.74,
-                      "face": "calm",
-                      "pose": "stand"
-                    }
-                  ],
-                  "props": [
-                    {
-                      "what": "paper",
-                      "x": 0.78,
-                      "y": 0.78,
-                      "k": 0.95
-                    }
-                  ],
-                  "bubbles": [
-                    {
-                      "who": "xiaoman",
-                      "text": "利息"
-                    }
-                  ],
-                  "cap": "只能刷卡……"
+                  "scene": "still.4.finance.0",
+                  "cap": "意外一定会来，只是不知道哪天",
+                  "sec": "takeaway"
                 }
               ]
             },
@@ -10776,31 +7926,13 @@ window.DAYS = [
             "title": "应急金：专门给意外的钱",
             "idea": "**应急金**就是专门留着应付意外的一笔钱。平时不动它。",
             "visual": {
-              "type": "chain",
-              "base": {
-                "nodes": [
-                  "意外",
-                  "没有应急金 → 刷卡借钱",
-                  "付利息",
-                  "一次意外，拖好几个月"
-                ]
-              },
-              "frames": [
+              "type": "deck",
+              "id": "still.4.finance.1",
+              "slides": [
                 {
-                  "set": {
-                    "play": 0,
-                    "step": 0
-                  },
-                  "cap": "先看骨架",
-                  "para": "idea"
-                },
-                {
-                  "set": {
-                    "play": 1,
-                    "step": 2
-                  },
-                  "cap": "看完整的图",
-                  "para": "takeaway"
+                  "scene": "still.4.finance.1",
+                  "cap": "应急金让意外只是意外，不变成欠债",
+                  "sec": "takeaway"
                 }
               ]
             },
@@ -10820,51 +7952,13 @@ window.DAYS = [
             "title": "按\"花多少\"来算",
             "idea": "应急金要按每个月的**支出**来算，不按收入。",
             "visual": {
-              "type": "comic",
-              "panels": [
+              "type": "deck",
+              "id": "still.4.finance.2",
+              "slides": [
                 {
-                  "bg": "room",
-                  "cast": [
-                    {
-                      "who": "xiaoman",
-                      "x": 0.46,
-                      "y": 0.74,
-                      "face": "calm",
-                      "pose": "stand"
-                    }
-                  ],
-                  "props": [
-                    {
-                      "what": "payslip",
-                      "x": 0.78,
-                      "y": 0.78,
-                      "k": 0.95
-                    }
-                  ],
-                  "bubbles": [],
-                  "cap": "收入突然没了"
-                },
-                {
-                  "bg": "room",
-                  "cast": [
-                    {
-                      "who": "xiaoman",
-                      "x": 0.46,
-                      "y": 0.74,
-                      "face": "calm",
-                      "pose": "stand"
-                    }
-                  ],
-                  "props": [
-                    {
-                      "what": "paper",
-                      "x": 0.78,
-                      "y": 0.78,
-                      "k": 0.95
-                    }
-                  ],
-                  "bubbles": [],
-                  "cap": "账单还在照常来"
+                  "scene": "still.4.finance.2",
+                  "cap": "应急金按每月支出算",
+                  "sec": "takeaway"
                 }
               ]
             },
@@ -10884,36 +7978,41 @@ window.DAYS = [
             "title": "留几个月：3～6 个月",
             "idea": "常见建议是留 3～6 个月的支出。",
             "visual": {
-              "type": "columns",
-              "base": {
-                "items": [
-                  {
-                    "label": "3 个月",
-                    "value": 15000
-                  },
-                  {
-                    "label": "6 个月",
-                    "value": 30000
-                  }
-                ],
-                "unit": "元"
-              },
-              "frames": [
+              "type": "deck",
+              "id": "deck.finance.4.4",
+              "slides": [
                 {
-                  "set": {
-                    "play": 0,
-                    "step": 0
-                  },
-                  "cap": "先看骨架",
-                  "para": "idea"
+                  "scene": "g.finance.4.4.0",
+                  "cap": "先算清一个月要花多少。",
+                  "sec": "idea"
                 },
                 {
-                  "set": {
-                    "play": 1,
-                    "step": 2
-                  },
-                  "cap": "看完整的图",
-                  "para": "takeaway"
+                  "scene": "g.finance.4.4.1",
+                  "cap": "少的时候，留三个月。",
+                  "sec": "why"
+                },
+                {
+                  "scene": "g.finance.4.4.2",
+                  "cap": "多的时候，留六个月。",
+                  "sec": [
+                    "derive",
+                    0,
+                    1
+                  ]
+                },
+                {
+                  "scene": "g.finance.4.4.3",
+                  "cap": "这笔钱是为突然的事准备的。",
+                  "sec": [
+                    "derive",
+                    2,
+                    2
+                  ]
+                },
+                {
+                  "scene": "g.finance.4.4.4",
+                  "cap": "它要躺着，不能拿去冒险。",
+                  "sec": "takeaway"
                 }
               ]
             },
@@ -10998,62 +8097,13 @@ window.DAYS = [
             "title": "串起来：回到摔碎的手机",
             "idea": "有了应急金，修手机的 3000 直接从里面拿，不用借钱，也不付利息。之后每月存一点，把它补满。",
             "visual": {
-              "type": "comic",
-              "panels": [
+              "type": "deck",
+              "id": "still.4.finance.5",
+              "slides": [
                 {
-                  "bg": "room",
-                  "cast": [
-                    {
-                      "who": "xiaoman",
-                      "x": 0.46,
-                      "y": 0.74,
-                      "face": "calm",
-                      "pose": "stand"
-                    }
-                  ],
-                  "props": [
-                    {
-                      "what": "envelope",
-                      "x": 0.78,
-                      "y": 0.78,
-                      "k": 0.95
-                    },
-                    {
-                      "what": "phone",
-                      "x": 0.62,
-                      "y": 0.78,
-                      "k": 0.95
-                    }
-                  ],
-                  "bubbles": [
-                    {
-                      "who": "xiaoman",
-                      "text": "应急金"
-                    }
-                  ],
-                  "cap": "从应急金里拿"
-                },
-                {
-                  "bg": "room",
-                  "cast": [
-                    {
-                      "who": "xiaoman",
-                      "x": 0.46,
-                      "y": 0.74,
-                      "face": "calm",
-                      "pose": "stand"
-                    }
-                  ],
-                  "props": [
-                    {
-                      "what": "envelope",
-                      "x": 0.78,
-                      "y": 0.78,
-                      "k": 0.95
-                    }
-                  ],
-                  "bubbles": [],
-                  "cap": "之后再慢慢补回去"
+                  "scene": "still.4.finance.5",
+                  "cap": "应急金的任务是\"在\"，不是\"赚\"",
+                  "sec": "takeaway"
                 }
               ]
             },
@@ -11131,7 +8181,10 @@ window.DAYS = [
             "why": "应急金要「不会亏 + 随时能取」。「要锁三年才能取的产品」急用时拿不出来；「价格每天上上下下的东西」可能在你急用那天正好跌了。",
             "ref": 4
           }
-        ]
+        ],
+        "hookPic": {
+          "scene": "hook.4.finance"
+        }
       },
       "psych": {
         "id": "d04-psych",
@@ -11147,32 +8200,13 @@ window.DAYS = [
             "example": "1924 年，西班牙医生马拉尼翁给人注射肾上腺素，很多人说感觉\"好像要害怕了\"，却并不真的害怕。有了身体反应，还缺一个理由。",
             "review": true,
             "visual": {
-              "type": "wires",
-              "base": {},
-              "frames": [
+              "type": "deck",
+              "id": "still.4.psych.0",
+              "slides": [
                 {
-                  "set": {
-                    "step": 0,
-                    "play": 0
-                  },
+                  "scene": "still.4.psych.0",
                   "cap": "身体只给出\"激动\"，还缺一样东西来定是哪种情绪",
-                  "para": "idea"
-                },
-                {
-                  "set": {
-                    "step": 1,
-                    "play": 0.5
-                  },
-                  "cap": "身体只给出\"激动\"，还缺一样东西来定是哪种情绪",
-                  "para": "why"
-                },
-                {
-                  "set": {
-                    "step": 2,
-                    "play": 1
-                  },
-                  "cap": "身体只给出\"激动\"，还缺一样东西来定是哪种情绪。",
-                  "para": "takeaway"
+                  "sec": "takeaway"
                 }
               ]
             }
@@ -11191,32 +8225,13 @@ window.DAYS = [
               "于是体验到这种情绪。"
             ],
             "visual": {
-              "type": "wires",
-              "base": {},
-              "frames": [
+              "type": "deck",
+              "id": "still.4.psych.1",
+              "slides": [
                 {
-                  "set": {
-                    "step": 0,
-                    "play": 0
-                  },
+                  "scene": "still.4.psych.1",
                   "cap": "二因素理论：情绪 = 生理唤醒 + 认知标签",
-                  "para": "idea"
-                },
-                {
-                  "set": {
-                    "step": 1,
-                    "play": 0.5
-                  },
-                  "cap": "二因素理论：情绪 = 生理唤醒 + 认知标签",
-                  "para": "why"
-                },
-                {
-                  "set": {
-                    "step": 2,
-                    "play": 1
-                  },
-                  "cap": "二因素理论：情绪 = 生理唤醒 + 认知标签。",
-                  "para": "takeaway"
+                  "sec": "takeaway"
                 }
               ]
             }
@@ -11243,67 +8258,46 @@ window.DAYS = [
               "why": "同伴是实验助手，故意表现得欢快或恼火，给被试提供一个\"可以借的标签\"。如果是「另一位普通被试」，研究者就控制不了环境里的情绪了。"
             },
             "visual": {
-              "type": "comic",
-              "panels": [
+              "type": "deck",
+              "id": "deck.psych.4.3",
+              "slides": [
                 {
-                  "bg": "room",
-                  "cast": [
-                    {
-                      "who": "xiaoman",
-                      "x": 0.46,
-                      "y": 0.74,
-                      "face": "calm",
-                      "pose": "stand"
-                    }
-                  ],
-                  "props": [],
-                  "bubbles": [],
-                  "cap": "打针"
+                  "scene": "g.psych.4.3.0",
+                  "cap": "先给人一份说不清的心跳。",
+                  "sec": "idea"
                 },
                 {
-                  "bg": "room",
-                  "cast": [
-                    {
-                      "who": "xiaoman",
-                      "x": 0.46,
-                      "y": 0.74,
-                      "face": "happy",
-                      "pose": "stand"
-                    }
-                  ],
-                  "props": [],
-                  "bubbles": [],
-                  "cap": "屋里有个开心的人 / 生气的"
+                  "scene": "g.psych.4.3.1",
+                  "cap": "旁边的人在笑，或者在生气。",
+                  "sec": "why"
                 },
                 {
-                  "bg": "room",
-                  "cast": [
-                    {
-                      "who": "xiaoman",
-                      "x": 0.46,
-                      "y": 0.74,
-                      "face": "happy",
-                      "pose": "stand"
-                    }
-                  ],
-                  "props": [],
-                  "bubbles": [],
-                  "cap": "被试跟着开心 / 生气"
+                  "scene": "g.psych.4.3.2",
+                  "cap": "自己给心跳找一个名字。",
+                  "sec": "example"
                 },
                 {
-                  "bg": "room",
-                  "cast": [
-                    {
-                      "who": "xiaoman",
-                      "x": 0.46,
-                      "y": 0.74,
-                      "face": "calm",
-                      "pose": "stand"
-                    }
-                  ],
-                  "props": [],
-                  "bubbles": [],
-                  "cap": "标签是借来的 →"
+                  "scene": "g.psych.4.3.3",
+                  "cap": "名字常常是从旁边借来的。",
+                  "sec": [
+                    "derive",
+                    0,
+                    1
+                  ]
+                },
+                {
+                  "scene": "g.psych.4.3.4",
+                  "cap": "同样的心跳，可以叫成不同情绪。",
+                  "sec": [
+                    "derive",
+                    2,
+                    3
+                  ]
+                },
+                {
+                  "scene": "g.psych.4.3.5",
+                  "cap": "环境递过来的标签，会被用上。",
+                  "sec": "takeaway"
                 }
               ]
             }
@@ -11320,67 +8314,13 @@ window.DAYS = [
               "大脑把心跳标成\"对她心动\"。"
             ],
             "visual": {
-              "type": "comic",
-              "panels": [
+              "type": "deck",
+              "id": "still.4.psych.3",
+              "slides": [
                 {
-                  "bg": "street",
-                  "cast": [
-                    {
-                      "who": "xiaoman",
-                      "x": 0.46,
-                      "y": 0.74,
-                      "face": "calm",
-                      "pose": "shrug"
-                    }
-                  ],
-                  "props": [],
-                  "bubbles": [],
-                  "cap": "摇晃的吊桥"
-                },
-                {
-                  "bg": "room",
-                  "cast": [
-                    {
-                      "who": "xiaoman",
-                      "x": 0.46,
-                      "y": 0.74,
-                      "face": "calm",
-                      "pose": "stand"
-                    }
-                  ],
-                  "props": [],
-                  "bubbles": [],
-                  "cap": "桥上遇到问卷女士"
-                },
-                {
-                  "bg": "room",
-                  "cast": [
-                    {
-                      "who": "xiaoman",
-                      "x": 0.46,
-                      "y": 0.74,
-                      "face": "calm",
-                      "pose": "stand"
-                    }
-                  ],
-                  "props": [],
-                  "bubbles": [],
-                  "cap": "留了电话"
-                },
-                {
-                  "bg": "room",
-                  "cast": [
-                    {
-                      "who": "xiaoman",
-                      "x": 0.46,
-                      "y": 0.74,
-                      "face": "calm",
-                      "pose": "stand"
-                    }
-                  ],
-                  "props": [],
-                  "bubbles": [],
-                  "cap": "晚上打来的人更多 → 卡 5"
+                  "scene": "still.4.psych.3",
+                  "cap": "错误归因：把吊桥带来的心跳，当成了对人的心动",
+                  "sec": "takeaway"
                 }
               ]
             }
@@ -11401,32 +8341,13 @@ window.DAYS = [
               "why": "随机分组让两组人原本的性格差不多，差别只来自\"以为要挨多痛的电击\"。「自己挑选组别」就又回到\"胆大的人自己选\"的老问题了。"
             },
             "visual": {
-              "type": "chain",
-              "base": {},
-              "frames": [
+              "type": "deck",
+              "id": "still.4.psych.4",
+              "slides": [
                 {
-                  "set": {
-                    "step": 0,
-                    "play": 0
-                  },
+                  "scene": "still.4.psych.4",
                   "cap": "随机分组后效果还在，但二因素理论只是情绪的一部分解释",
-                  "para": "idea"
-                },
-                {
-                  "set": {
-                    "step": 1,
-                    "play": 0.5
-                  },
-                  "cap": "随机分组后效果还在，但二因素理论只是情绪的一部分解释",
-                  "para": "why"
-                },
-                {
-                  "set": {
-                    "step": 2,
-                    "play": 1
-                  },
-                  "cap": "随机分组后效果还在，但二因素理论只是情绪的一部分解释。",
-                  "para": "takeaway"
+                  "sec": "takeaway"
                 }
               ]
             }
@@ -11438,33 +8359,13 @@ window.DAYS = [
             "takeaway": "同样的心跳，解释不同，情绪就不同。",
             "example": "账号选题提示：\"为什么看恐怖片、坐过山车的约会更容易心动\"——就是唤醒的错误归因。反过来也成立：刚跑完步、喝完咖啡心跳正快时看到一条刺耳的评论，会格外生气，其中一部分火其实来自跑步和咖啡。",
             "visual": {
-              "type": "comic",
-              "panels": [
+              "type": "deck",
+              "id": "still.4.psych.5",
+              "slides": [
                 {
-                  "bg": "room",
-                  "cast": [
-                    {
-                      "who": "xiaoman",
-                      "x": 0.46,
-                      "y": 0.74,
-                      "face": "calm",
-                      "pose": "stand"
-                    }
-                  ],
-                  "cap": "同样的心跳，解释不同，情绪就"
-                },
-                {
-                  "bg": "street",
-                  "cast": [
-                    {
-                      "who": "xiaoman",
-                      "x": 0.46,
-                      "y": 0.74,
-                      "face": "calm",
-                      "pose": "stand"
-                    }
-                  ],
-                  "cap": "串起来：恐怖片约会"
+                  "scene": "still.4.psych.5",
+                  "cap": "同样的心跳，解释不同，情绪就不同",
+                  "sec": "takeaway"
                 }
               ]
             }
@@ -11509,74 +8410,8 @@ window.DAYS = [
             "ref": 2
           }
         ],
-        "hookComic": {
-          "panels": [
-            {
-              "bg": "street",
-              "cast": [
-                {
-                  "who": "xiaoman",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "shrug"
-                }
-              ],
-              "props": [],
-              "bubbles": [],
-              "cap": "小满走过摇晃的吊桥"
-            },
-            {
-              "bg": "room",
-              "cast": [
-                {
-                  "who": "ale",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [],
-              "cap": "桥那头遇见阿乐"
-            },
-            {
-              "bg": "room",
-              "cast": [
-                {
-                  "who": "xiaoman",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [],
-              "cap": "心形泡泡冒出来"
-            },
-            {
-              "bg": "room",
-              "cast": [
-                {
-                  "who": "xiaoyin",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [
-                {
-                  "who": "xiaoyin",
-                  "text": "是心动"
-                }
-              ],
-              "cap": "是心动"
-            }
-          ]
+        "hookPic": {
+          "scene": "hook.4.psych"
         }
       },
       "english": {
@@ -12422,81 +9257,8 @@ window.DAYS = [
             ]
           }
         ],
-        "hookComic": {
-          "panels": [
-            {
-              "bg": "room",
-              "cast": [
-                {
-                  "who": "xiaoman",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [
-                {
-                  "what": "skirt",
-                  "x": 0.78,
-                  "y": 0.78,
-                  "k": 0.95
-                }
-              ],
-              "bubbles": [],
-              "cap": "小满试番茄红的裙子：热情"
-            },
-            {
-              "bg": "room",
-              "cast": [
-                {
-                  "who": "xiaoman",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [],
-              "cap": "换酒红：冷静"
-            },
-            {
-              "bg": "room",
-              "cast": [
-                {
-                  "who": "xiaoman",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [
-                {
-                  "who": "xiaoman",
-                  "text": "红色不都是暖色吗？"
-                }
-              ],
-              "cap": "红色不都是暖色吗？"
-            },
-            {
-              "bg": "room",
-              "cast": [
-                {
-                  "who": "xiaoyin",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [],
-              "cap": "小音把两个红放到色轮上"
-            }
-          ]
+        "hookPic": {
+          "scene": "hook.5.fashion"
         }
       },
       "history": {
@@ -12528,32 +9290,46 @@ window.DAYS = [
               "打到最后，拼的是人心和粮草。"
             ],
             "visual": {
-              "type": "chain",
-              "base": {},
-              "frames": [
+              "type": "deck",
+              "id": "deck.history.5.2",
+              "slides": [
                 {
-                  "set": {
-                    "step": 0,
-                    "play": 0
-                  },
-                  "cap": "刘邦赢在人心和粮草；汉一开始就在纠正秦的\"太严\"",
-                  "para": "idea"
+                  "scene": "g.history.5.2.0",
+                  "cap": "项羽一边，叫楚。",
+                  "sec": "idea"
                 },
                 {
-                  "set": {
-                    "step": 1,
-                    "play": 0.5
-                  },
-                  "cap": "刘邦赢在人心和粮草；汉一开始就在纠正秦的\"太严\"",
-                  "para": "why"
+                  "scene": "g.history.5.2.1",
+                  "cap": "刘邦一边，叫汉。",
+                  "sec": "why"
                 },
                 {
-                  "set": {
-                    "step": 2,
-                    "play": 1
-                  },
-                  "cap": "刘邦赢在人心和粮草；汉一开始就在纠正秦的\"太严\"。",
-                  "para": "takeaway"
+                  "scene": "g.history.5.2.2",
+                  "cap": "前 202 年，刘邦称帝。",
+                  "sec": "example"
+                },
+                {
+                  "scene": "g.history.5.2.3",
+                  "cap": "西汉定都长安，就是今天的西安。",
+                  "sec": [
+                    "derive",
+                    0,
+                    1
+                  ]
+                },
+                {
+                  "scene": "g.history.5.2.4",
+                  "cap": "他更能让人愿意跟着走。",
+                  "sec": [
+                    "derive",
+                    2,
+                    2
+                  ]
+                },
+                {
+                  "scene": "g.history.5.2.5",
+                  "cap": "楚汉打完，赢的是刘邦。",
+                  "sec": "takeaway"
                 }
               ]
             }
@@ -12572,67 +9348,13 @@ window.DAYS = [
               "等人多了、粮多了，税自然就多了。"
             ],
             "visual": {
-              "type": "comic",
-              "panels": [
+              "type": "deck",
+              "id": "still.5.history.2",
+              "slides": [
                 {
-                  "bg": "palace",
-                  "cast": [
-                    {
-                      "who": "kingWu",
-                      "x": 0.46,
-                      "y": 0.74,
-                      "face": "calm",
-                      "pose": "stand"
-                    }
-                  ],
-                  "props": [],
-                  "bubbles": [],
-                  "cap": "打了多年仗"
-                },
-                {
-                  "bg": "palace",
-                  "cast": [
-                    {
-                      "who": "kingWu",
-                      "x": 0.46,
-                      "y": 0.74,
-                      "face": "calm",
-                      "pose": "stand"
-                    }
-                  ],
-                  "props": [],
-                  "bubbles": [],
-                  "cap": "农民累坏了"
-                },
-                {
-                  "bg": "palace",
-                  "cast": [
-                    {
-                      "who": "kingWu",
-                      "x": 0.46,
-                      "y": 0.74,
-                      "face": "calm",
-                      "pose": "stand"
-                    }
-                  ],
-                  "props": [],
-                  "bubbles": [],
-                  "cap": "少收税"
-                },
-                {
-                  "bg": "palace",
-                  "cast": [
-                    {
-                      "who": "kingWu",
-                      "x": 0.46,
-                      "y": 0.74,
-                      "face": "calm",
-                      "pose": "stand"
-                    }
-                  ],
-                  "props": [],
-                  "bubbles": [],
-                  "cap": "田里重新长满庄稼"
+                  "scene": "still.5.history.2",
+                  "cap": "休养生息 = 先少收少用，让百姓恢复元气",
+                  "sec": "takeaway"
                 }
               ]
             }
@@ -12691,32 +9413,13 @@ window.DAYS = [
             "takeaway": "汉一半郡县、一半王国；王国坐大，就有了七国之乱。",
             "example": "前 154 年，吴王刘濞等七个诸侯王联合起兵，叫\"七国之乱\"。叛乱大约三个月就被平定，可根子还在：大的王国还在。",
             "visual": {
-              "type": "histmap",
-              "base": {},
-              "frames": [
+              "type": "deck",
+              "id": "still.5.history.4",
+              "slides": [
                 {
-                  "set": {
-                    "step": 0,
-                    "play": 0
-                  },
+                  "scene": "still.5.history.4",
                   "cap": "汉一半郡县、一半王国；王国坐大，就有了七国之乱",
-                  "para": "idea"
-                },
-                {
-                  "set": {
-                    "step": 1,
-                    "play": 0.5
-                  },
-                  "cap": "汉一半郡县、一半王国；王国坐大，就有了七国之乱",
-                  "para": "why"
-                },
-                {
-                  "set": {
-                    "step": 2,
-                    "play": 1
-                  },
-                  "cap": "汉一半郡县、一半王国；王国坐大，就有了七国之乱。",
-                  "para": "takeaway"
+                  "sec": "takeaway"
                 }
               ]
             }
@@ -12746,32 +9449,46 @@ window.DAYS = [
               "why": "以前封地只归嫡长子，小儿子分不到；推恩令让他们也有份，所以最欢迎。「想独占王国的嫡长子」反而要把地分出去，最吃亏。"
             },
             "visual": {
-              "type": "tree",
-              "base": {},
-              "frames": [
+              "type": "deck",
+              "id": "deck.history.5.6",
+              "slides": [
                 {
-                  "set": {
-                    "step": 0,
-                    "play": 0
-                  },
-                  "cap": "推恩令靠继承规则，不打仗就把大王国拆小了",
-                  "para": "idea"
+                  "scene": "g.history.5.6.0",
+                  "cap": "诸侯王的地又大又整。",
+                  "sec": "idea"
                 },
                 {
-                  "set": {
-                    "step": 1,
-                    "play": 0.5
-                  },
-                  "cap": "推恩令靠继承规则，不打仗就把大王国拆小了",
-                  "para": "why"
+                  "scene": "g.history.5.6.1",
+                  "cap": "汉武帝允许把地分给所有儿子。",
+                  "sec": "why"
                 },
                 {
-                  "set": {
-                    "step": 2,
-                    "play": 1
-                  },
-                  "cap": "推恩令靠继承规则，不打仗就把大王国拆小了。",
-                  "para": "takeaway"
+                  "scene": "g.history.5.6.2",
+                  "cap": "一块地分成许多小块。",
+                  "sec": "example"
+                },
+                {
+                  "scene": "g.history.5.6.3",
+                  "cap": "儿子的儿子再分，越分越小。",
+                  "sec": [
+                    "derive",
+                    0,
+                    2
+                  ]
+                },
+                {
+                  "scene": "g.history.5.6.4",
+                  "cap": "不用出兵，王国自己变小。",
+                  "sec": [
+                    "derive",
+                    3,
+                    4
+                  ]
+                },
+                {
+                  "scene": "g.history.5.6.5",
+                  "cap": "地小了，就难以再对抗朝廷。",
+                  "sec": "takeaway"
                 }
               ]
             }
@@ -12784,32 +9501,13 @@ window.DAYS = [
             "example": "本来是去谈一场合作，没谈成，却带回一整本\"沿途通讯录\"。后来的商队和使者，都是照着这本通讯录一站站走过去的。",
             "exLabel": "打个比方",
             "visual": {
-              "type": "histmap",
-              "base": {},
-              "frames": [
+              "type": "deck",
+              "id": "still.5.history.6",
+              "slides": [
                 {
-                  "set": {
-                    "step": 0,
-                    "play": 0
-                  },
+                  "scene": "still.5.history.6",
                   "cap": "张骞出使本为夹击匈奴，却意外打开了通往西方的路",
-                  "para": "idea"
-                },
-                {
-                  "set": {
-                    "step": 1,
-                    "play": 0.5
-                  },
-                  "cap": "张骞出使本为夹击匈奴，却意外打开了通往西方的路",
-                  "para": "why"
-                },
-                {
-                  "set": {
-                    "step": 2,
-                    "play": 1
-                  },
-                  "cap": "张骞出使本为夹击匈奴，却意外打开了通往西方的路。",
-                  "para": "takeaway"
+                  "sec": "takeaway"
                 }
               ]
             }
@@ -12977,79 +9675,8 @@ window.DAYS = [
             "kind": "event"
           }
         ],
-        "hookComic": {
-          "panels": [
-            {
-              "bg": "palace",
-              "cast": [
-                {
-                  "who": "kingWu",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [],
-              "cap": "汉人"
-            },
-            {
-              "bg": "palace",
-              "cast": [
-                {
-                  "who": "xiaoman",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [
-                {
-                  "who": "xiaoman",
-                  "text": "为什么都叫汉？"
-                }
-              ],
-              "cap": "为什么都叫汉？"
-            },
-            {
-              "bg": "palace",
-              "cast": [
-                {
-                  "who": "xiaoyin",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [],
-              "cap": "小音翻开 `tl` 上很长的"
-            },
-            {
-              "bg": "palace",
-              "cast": [
-                {
-                  "who": "kingWu",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [
-                {
-                  "who": "kingWu",
-                  "text": "因为这个朝代够长"
-                }
-              ],
-              "cap": "因为这个朝代够长"
-            }
-          ]
+        "hookPic": {
+          "scene": "hook.5.history"
         }
       },
       "geo": {
@@ -13065,32 +9692,13 @@ window.DAYS = [
             "takeaway": "正常的河在低处；开封的黄河却高过城市，背后一定有原因。",
             "example": "站在开封城里抬头看，黄河大堤像一道长长的土墙。爬上大堤才看到河面，而河床比你刚才站的街道还高十米左右，差不多是三层楼那么高。",
             "visual": {
-              "type": "sediment",
-              "base": {},
-              "frames": [
+              "type": "deck",
+              "id": "still.5.geo.0",
+              "slides": [
                 {
-                  "set": {
-                    "step": 0,
-                    "play": 0
-                  },
+                  "scene": "still.5.geo.0",
                   "cap": "正常的河在低处；开封的黄河却高过城市，背后一定有原因",
-                  "para": "idea"
-                },
-                {
-                  "set": {
-                    "step": 1,
-                    "play": 0.5
-                  },
-                  "cap": "正常的河在低处；开封的黄河却高过城市，背后一定有原因",
-                  "para": "why"
-                },
-                {
-                  "set": {
-                    "step": 2,
-                    "play": 1
-                  },
-                  "cap": "正常的河在低处；开封的黄河却高过城市，背后一定有原因。",
-                  "para": "takeaway"
+                  "sec": "takeaway"
                 }
               ]
             }
@@ -13119,32 +9727,46 @@ window.DAYS = [
               "三样凑在一起：水土大量流失。"
             ],
             "visual": {
-              "type": "soil",
-              "base": {},
-              "frames": [
+              "type": "deck",
+              "id": "deck.geo.5.3",
+              "slides": [
                 {
-                  "set": {
-                    "step": 0,
-                    "play": 0
-                  },
-                  "cap": "土细松 + 夏季暴雨 + 草木少 → 黄土高原水土流失严重",
-                  "para": "idea"
+                  "scene": "g.geo.5.3.0",
+                  "cap": "黄土又细又松，站不稳。",
+                  "sec": "idea"
                 },
                 {
-                  "set": {
-                    "step": 1,
-                    "play": 0.5
-                  },
-                  "cap": "土细松 + 夏季暴雨 + 草木少 → 黄土高原水土流失严重",
-                  "para": "why"
+                  "scene": "g.geo.5.3.1",
+                  "cap": "夏天一场暴雨，就把土冲起来。",
+                  "sec": "why"
                 },
                 {
-                  "set": {
-                    "step": 2,
-                    "play": 1
-                  },
-                  "cap": "土细松 + 夏季暴雨 + 草木少 → 黄土高原水土流失严重。",
-                  "para": "takeaway"
+                  "scene": "g.geo.5.3.2",
+                  "cap": "地上草木少，土没有根抓着。",
+                  "sec": "example"
+                },
+                {
+                  "scene": "g.geo.5.3.3",
+                  "cap": "雨水带着土，一起往低处跑。",
+                  "sec": [
+                    "derive",
+                    0,
+                    1
+                  ]
+                },
+                {
+                  "scene": "g.geo.5.3.4",
+                  "cap": "土越冲越少，地就瘦了。",
+                  "sec": [
+                    "derive",
+                    2,
+                    3
+                  ]
+                },
+                {
+                  "scene": "g.geo.5.3.5",
+                  "cap": "土被水冲走，叫水土流失。",
+                  "sec": "takeaway"
                 }
               ]
             }
@@ -13216,32 +9838,13 @@ window.DAYS = [
               "why": "停手后水变慢，托不住泥沙，泥沙就「慢慢沉到杯底」。没有水流再把泥沙卷起来，所以不会「越放越浑」。"
             },
             "visual": {
-              "type": "sediment",
-              "base": {},
-              "frames": [
+              "type": "deck",
+              "id": "still.5.geo.4",
+              "slides": [
                 {
-                  "set": {
-                    "step": 0,
-                    "play": 0
-                  },
+                  "scene": "still.5.geo.4",
                   "cap": "水快能带走泥沙，水慢泥沙就沉积下来",
-                  "para": "idea"
-                },
-                {
-                  "set": {
-                    "step": 1,
-                    "play": 0.5
-                  },
-                  "cap": "水快能带走泥沙，水慢泥沙就沉积下来",
-                  "para": "why"
-                },
-                {
-                  "set": {
-                    "step": 2,
-                    "play": 1
-                  },
-                  "cap": "水快能带走泥沙，水慢泥沙就沉积下来。",
-                  "para": "takeaway"
+                  "sec": "takeaway"
                 }
               ]
             }
@@ -13297,32 +9900,13 @@ window.DAYS = [
             "example": "像一条总往里倒沙的长水槽：槽底被沙垫高，水快溢出来了，你就把槽壁再接高一截。接一次、垫一次，槽里的沙面越抬越高，最后高过了旁边的桌面。",
             "exLabel": "打个比方",
             "visual": {
-              "type": "sediment",
-              "base": {},
-              "frames": [
+              "type": "deck",
+              "id": "still.5.geo.6",
+              "slides": [
                 {
-                  "set": {
-                    "step": 0,
-                    "play": 0
-                  },
+                  "scene": "still.5.geo.6",
                   "cap": "泥沙垫高河床，大堤越修越高，河床高过地面，就成了地上河",
-                  "para": "idea"
-                },
-                {
-                  "set": {
-                    "step": 1,
-                    "play": 0.5
-                  },
-                  "cap": "泥沙垫高河床，大堤越修越高，河床高过地面，就成了地上河",
-                  "para": "why"
-                },
-                {
-                  "set": {
-                    "step": 2,
-                    "play": 1
-                  },
-                  "cap": "泥沙垫高河床，大堤越修越高，河床高过地面，就成了地上河。",
-                  "para": "takeaway"
+                  "sec": "takeaway"
                 }
               ]
             },
@@ -13343,32 +9927,13 @@ window.DAYS = [
             "takeaway": "泥沙来自中游、沉在下游；治黄河，根本在中游的黄土高原。",
             "example": "怎么治？只在下游加高大堤是\"治标\"：泥沙还在来，河床还在长。根本办法是在中游的黄土高原植树种草、修梯田、建淤地坝，把土留在山坡上，从泥沙产生的地方减少进河的沙，这才是\"治本\"。",
             "visual": {
-              "type": "chain",
-              "base": {},
-              "frames": [
+              "type": "deck",
+              "id": "still.5.geo.7",
+              "slides": [
                 {
-                  "set": {
-                    "step": 0,
-                    "play": 0
-                  },
+                  "scene": "still.5.geo.7",
                   "cap": "泥沙来自中游、沉在下游；治黄河，根本在中游的黄土高原",
-                  "para": "idea"
-                },
-                {
-                  "set": {
-                    "step": 1,
-                    "play": 0.5
-                  },
-                  "cap": "泥沙来自中游、沉在下游；治黄河，根本在中游的黄土高原",
-                  "para": "why"
-                },
-                {
-                  "set": {
-                    "step": 2,
-                    "play": 1
-                  },
-                  "cap": "泥沙来自中游、沉在下游；治黄河，根本在中游的黄土高原。",
-                  "para": "takeaway"
+                  "sec": "takeaway"
                 }
               ]
             }
@@ -13440,79 +10005,8 @@ window.DAYS = [
             "label": "开封"
           }
         ],
-        "hookComic": {
-          "panels": [
-            {
-              "bg": "mountain",
-              "cast": [
-                {
-                  "who": "xiaoman",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [],
-              "cap": "开封"
-            },
-            {
-              "bg": "mountain",
-              "cast": [
-                {
-                  "who": "xiaoman",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [],
-              "cap": "抬头：一条船在比屋顶还高的河"
-            },
-            {
-              "bg": "mountain",
-              "cast": [
-                {
-                  "who": "xiaoman",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "wow",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [
-                {
-                  "who": "xiaoman",
-                  "text": "河在我头上？！"
-                }
-              ],
-              "cap": "（惊讶表情）"
-            },
-            {
-              "bg": "mountain",
-              "cast": [
-                {
-                  "who": "xiaoyin",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "cheer"
-                }
-              ],
-              "props": [],
-              "bubbles": [
-                {
-                  "who": "xiaoyin",
-                  "text": "秘密在泥里"
-                }
-              ],
-              "cap": "小音举起一杯黄泥水"
-            }
-          ]
+        "hookPic": {
+          "scene": "hook.5.geo"
         }
       },
       "finance": {
@@ -13520,138 +10014,18 @@ window.DAYS = [
         "title": "利息：钱的租金",
         "minutes": 7,
         "hook": "你把钱存进银行，银行为什么要付钱给你？",
-        "hookComic": {
-          "panels": [
-            {
-              "bg": "bank",
-              "cast": [
-                {
-                  "who": "xiaoman",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [],
-              "cap": "小满把 1000 元存进银行"
-            },
-            {
-              "bg": "room",
-              "cast": [
-                {
-                  "who": "xiaoman",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [],
-              "cap": "一年后多了 30 元"
-            },
-            {
-              "bg": "bank",
-              "cast": [
-                {
-                  "who": "xiaoman",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "give"
-                }
-              ],
-              "props": [],
-              "bubbles": [
-                {
-                  "who": "xiaoman",
-                  "text": "银行为什么给我钱？"
-                }
-              ],
-              "cap": "银行为什么给我钱？"
-            },
-            {
-              "bg": "room",
-              "cast": [
-                {
-                  "who": "xiaoyin",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [
-                {
-                  "who": "xiaoyin",
-                  "text": "你把钱租出去了"
-                }
-              ],
-              "cap": "你把钱租出去了"
-            }
-          ]
-        },
         "steps": [
           {
             "title": "银行为什么给你钱？",
             "idea": "钱存进银行，银行不会让它躺着。银行会把它借出去，收租金。",
             "visual": {
-              "type": "comic",
-              "panels": [
+              "type": "deck",
+              "id": "still.5.finance.0",
+              "slides": [
                 {
-                  "bg": "bank",
-                  "cast": [
-                    {
-                      "who": "xiaoman",
-                      "x": 0.46,
-                      "y": 0.74,
-                      "face": "calm",
-                      "pose": "give"
-                    }
-                  ],
-                  "props": [],
-                  "bubbles": [],
-                  "cap": "我存 1000"
-                },
-                {
-                  "bg": "bank",
-                  "cast": [
-                    {
-                      "who": "xiaoman",
-                      "x": 0.46,
-                      "y": 0.74,
-                      "face": "calm",
-                      "pose": "give"
-                    }
-                  ],
-                  "props": [
-                    {
-                      "what": "cup",
-                      "x": 0.78,
-                      "y": 0.78,
-                      "k": 0.95
-                    }
-                  ],
-                  "bubbles": [],
-                  "cap": "银行借给老板开店"
-                },
-                {
-                  "bg": "bank",
-                  "cast": [
-                    {
-                      "who": "xiaoman",
-                      "x": 0.46,
-                      "y": 0.74,
-                      "face": "calm",
-                      "pose": "stand"
-                    }
-                  ],
-                  "props": [],
-                  "bubbles": [],
-                  "cap": "老板付租金"
+                  "scene": "still.5.finance.0",
+                  "cap": "你存的钱，其实被银行借给了别人",
+                  "sec": "takeaway"
                 }
               ]
             },
@@ -13661,30 +10035,13 @@ window.DAYS = [
             "title": "利息：用钱的租金",
             "idea": "**利息**就是用别人的钱要付的租金。你存钱，等于借钱给银行，银行付你租金。你借钱，就是你付租金。",
             "visual": {
-              "type": "chain",
-              "base": {
-                "nodes": [
-                  "你借出 1000",
-                  "一年后",
-                  "拿回 1000 + 租金"
-                ]
-              },
-              "frames": [
+              "type": "deck",
+              "id": "still.5.finance.1",
+              "slides": [
                 {
-                  "set": {
-                    "play": 0,
-                    "step": 0
-                  },
-                  "cap": "先看骨架",
-                  "para": "idea"
-                },
-                {
-                  "set": {
-                    "play": 1,
-                    "step": 2
-                  },
-                  "cap": "看完整的图",
-                  "para": "takeaway"
+                  "scene": "still.5.finance.1",
+                  "cap": "利息 = 钱的租金",
+                  "sec": "takeaway"
                 }
               ]
             },
@@ -13695,50 +10052,13 @@ window.DAYS = [
             "title": "钱为什么要收租金？",
             "idea": "借出钱的人，吃了两样亏，所以要补偿。",
             "visual": {
-              "type": "comic",
-              "panels": [
+              "type": "deck",
+              "id": "still.5.finance.2",
+              "slides": [
                 {
-                  "bg": "shop",
-                  "cast": [
-                    {
-                      "who": "xiaoman",
-                      "x": 0.46,
-                      "y": 0.74,
-                      "face": "calm",
-                      "pose": "stand"
-                    }
-                  ],
-                  "props": [
-                    {
-                      "what": "bag",
-                      "x": 0.78,
-                      "y": 0.78,
-                      "k": 0.95
-                    },
-                    {
-                      "what": "purse",
-                      "x": 0.62,
-                      "y": 0.78,
-                      "k": 0.95
-                    }
-                  ],
-                  "bubbles": [],
-                  "cap": "借出去"
-                },
-                {
-                  "bg": "room",
-                  "cast": [
-                    {
-                      "who": "xiaoman",
-                      "x": 0.46,
-                      "y": 0.74,
-                      "face": "worry",
-                      "pose": "run"
-                    }
-                  ],
-                  "props": [],
-                  "bubbles": [],
-                  "cap": "万一不还呢？"
+                  "scene": "still.5.finance.2",
+                  "cap": "利息补偿两件事：暂时不能用，和可能收不回",
+                  "sec": "takeaway"
                 }
               ]
             },
@@ -13852,37 +10172,13 @@ window.DAYS = [
             "title": "串起来：银行给你的是租金",
             "idea": "回到钩子。银行付你钱，是因为它在用你的钱。反过来，你借钱时，就轮到你付租金。",
             "visual": {
-              "type": "comic",
-              "panels": [
+              "type": "deck",
+              "id": "still.5.finance.5",
+              "slides": [
                 {
-                  "bg": "bank",
-                  "cast": [
-                    {
-                      "who": "xiaoman",
-                      "x": 0.46,
-                      "y": 0.74,
-                      "face": "calm",
-                      "pose": "give"
-                    }
-                  ],
-                  "props": [],
-                  "bubbles": [],
-                  "cap": "你是房东"
-                },
-                {
-                  "bg": "bank",
-                  "cast": [
-                    {
-                      "who": "xiaoman",
-                      "x": 0.46,
-                      "y": 0.74,
-                      "face": "calm",
-                      "pose": "give"
-                    }
-                  ],
-                  "props": [],
-                  "bubbles": [],
-                  "cap": "你是租客"
+                  "scene": "still.5.finance.5",
+                  "cap": "存钱是收租金，借钱是付租金",
+                  "sec": "takeaway"
                 }
               ]
             },
@@ -14009,7 +10305,10 @@ window.DAYS = [
               ]
             }
           }
-        ]
+        ],
+        "hookPic": {
+          "scene": "hook.5.finance"
+        }
       },
       "psych": {
         "id": "d05-psych",
@@ -14067,67 +10366,46 @@ window.DAYS = [
               "他们也认得出，就支持\"天生\"。"
             ],
             "visual": {
-              "type": "comic",
-              "panels": [
+              "type": "deck",
+              "id": "deck.psych.5.2",
+              "slides": [
                 {
-                  "bg": "room",
-                  "cast": [
-                    {
-                      "who": "ekman",
-                      "x": 0.46,
-                      "y": 0.74,
-                      "face": "calm",
-                      "pose": "stand"
-                    }
-                  ],
-                  "props": [],
-                  "bubbles": [],
-                  "cap": "埃克曼带着照片"
+                  "scene": "g.psych.5.2.0",
+                  "cap": "埃克曼去了一个很少接触外界的部落。",
+                  "sec": "idea"
                 },
                 {
-                  "bg": "room",
-                  "cast": [
-                    {
-                      "who": "xiaoman",
-                      "x": 0.46,
-                      "y": 0.74,
-                      "face": "calm",
-                      "pose": "stand"
-                    }
-                  ],
-                  "props": [],
-                  "bubbles": [],
-                  "cap": "部落里没看过电视的人"
+                  "scene": "g.psych.5.2.1",
+                  "cap": "他拿出写着表情的脸。",
+                  "sec": "why"
                 },
                 {
-                  "bg": "room",
-                  "cast": [
-                    {
-                      "who": "xiaoman",
-                      "x": 0.46,
-                      "y": 0.74,
-                      "face": "calm",
-                      "pose": "stand"
-                    }
-                  ],
-                  "props": [],
-                  "bubbles": [],
-                  "cap": "讲一个故事"
+                  "scene": "g.psych.5.2.2",
+                  "cap": "部落里的人也能认出这些脸。",
+                  "sec": "example"
                 },
                 {
-                  "bg": "room",
-                  "cast": [
-                    {
-                      "who": "xiaoman",
-                      "x": 0.46,
-                      "y": 0.74,
-                      "face": "calm",
-                      "pose": "point"
-                    }
-                  ],
-                  "props": [],
-                  "bubbles": [],
-                  "cap": "他指出对应的表情 → 卡 3"
+                  "scene": "g.psych.5.2.3",
+                  "cap": "他们几乎没看过外面的电影。",
+                  "sec": [
+                    "derive",
+                    0,
+                    1
+                  ]
+                },
+                {
+                  "scene": "g.psych.5.2.4",
+                  "cap": "有些表情，不靠文化来教。",
+                  "sec": [
+                    "derive",
+                    2,
+                    3
+                  ]
+                },
+                {
+                  "scene": "g.psych.5.2.5",
+                  "cap": "基本表情，很多地方都懂。",
+                  "sec": "takeaway"
                 }
               ]
             }
@@ -14196,32 +10474,13 @@ window.DAYS = [
               "why": "不给选项时，没法靠排除法选对，所以一致程度下降了。「换成更清晰的照片」不是这里说的改动。"
             },
             "visual": {
-              "type": "chain",
-              "base": {},
-              "frames": [
+              "type": "deck",
+              "id": "still.5.psych.3",
+              "slides": [
                 {
-                  "set": {
-                    "step": 0,
-                    "play": 0
-                  },
+                  "scene": "still.5.psych.3",
                   "cap": "基本表情有跨文化共通性，但程度可能没那么高",
-                  "para": "idea"
-                },
-                {
-                  "set": {
-                    "step": 1,
-                    "play": 0.5
-                  },
-                  "cap": "基本表情有跨文化共通性，但程度可能没那么高",
-                  "para": "why"
-                },
-                {
-                  "set": {
-                    "step": 2,
-                    "play": 1
-                  },
-                  "cap": "基本表情有跨文化共通性，但程度可能没那么高。",
-                  "para": "takeaway"
+                  "sec": "takeaway"
                 }
               ]
             }
@@ -14242,39 +10501,13 @@ window.DAYS = [
               "why": "旁人在场，表达规则起了作用，学生用微笑盖住了不适。独自看时两国表情很像，说明差别来自场合规则，不是天生不同。"
             },
             "visual": {
-              "type": "comic",
-              "panels": [
+              "type": "deck",
+              "id": "still.5.psych.4",
+              "slides": [
                 {
-                  "bg": "room",
-                  "cast": [
-                    {
-                      "who": "xiaoman",
-                      "x": 0.46,
-                      "y": 0.74,
-                      "face": "calm",
-                      "pose": "stand"
-                    }
-                  ],
-                  "cap": "表情这门\"语言\"多半天生，什",
-                  "bubbles": [
-                    {
-                      "who": "xiaoman",
-                      "text": "语言"
-                    }
-                  ]
-                },
-                {
-                  "bg": "street",
-                  "cast": [
-                    {
-                      "who": "xiaoman",
-                      "x": 0.46,
-                      "y": 0.74,
-                      "face": "calm",
-                      "pose": "stand"
-                    }
-                  ],
-                  "cap": "表达规则：天生的语言，学来的"
+                  "scene": "still.5.psych.4",
+                  "cap": "表情这门\"语言\"多半天生，什么场合说出来由文化规则决定",
+                  "sec": "takeaway"
                 }
               ]
             }
@@ -14286,32 +10519,13 @@ window.DAYS = [
             "takeaway": "表情是天生的语言，表达规则决定说多少。",
             "example": "账号提示：读评论和私信时，对方没表现出来，不等于没有感受。一句很平静的\"没事，我挺好的\"，背后可能是被规则压住的难过。",
             "visual": {
-              "type": "body3",
-              "base": {},
-              "frames": [
+              "type": "deck",
+              "id": "still.5.psych.5",
+              "slides": [
                 {
-                  "set": {
-                    "step": 0,
-                    "play": 0
-                  },
+                  "scene": "still.5.psych.5",
                   "cap": "表情是天生的语言，表达规则决定说多少",
-                  "para": "idea"
-                },
-                {
-                  "set": {
-                    "step": 1,
-                    "play": 0.5
-                  },
-                  "cap": "表情是天生的语言，表达规则决定说多少",
-                  "para": "why"
-                },
-                {
-                  "set": {
-                    "step": 2,
-                    "play": 1
-                  },
-                  "cap": "表情是天生的语言，表达规则决定说多少。",
-                  "para": "takeaway"
+                  "sec": "takeaway"
                 }
               ]
             }
@@ -14377,79 +10591,8 @@ window.DAYS = [
             "ref": 2
           }
         ],
-        "hookComic": {
-          "panels": [
-            {
-              "bg": "room",
-              "cast": [
-                {
-                  "who": "xiaoman",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [],
-              "cap": "一位从没看过电视的老人"
-            },
-            {
-              "bg": "room",
-              "cast": [
-                {
-                  "who": "xiaoman",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "worry",
-                  "pose": "give"
-                }
-              ],
-              "props": [],
-              "bubbles": [
-                {
-                  "who": "xiaoman",
-                  "text": "害怕"
-                }
-              ],
-              "cap": "小满递上一张的照片"
-            },
-            {
-              "bg": "room",
-              "cast": [
-                {
-                  "who": "xiaoman",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "point"
-                }
-              ],
-              "props": [],
-              "bubbles": [],
-              "cap": "他点头"
-            },
-            {
-              "bg": "room",
-              "cast": [
-                {
-                  "who": "xiaoyin",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [
-                {
-                  "who": "xiaoyin",
-                  "text": "表情是天生的吗？"
-                }
-              ],
-              "cap": "表情是天生的吗？"
-            }
-          ]
+        "hookPic": {
+          "scene": "hook.5.psych"
         }
       },
       "english": {
@@ -15214,83 +11357,8 @@ window.DAYS = [
             "ref": 1
           }
         ],
-        "hookComic": {
-          "panels": [
-            {
-              "bg": "room",
-              "cast": [
-                {
-                  "who": "xiaoman",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [],
-              "cap": "两个人都穿一身驼色"
-            },
-            {
-              "bg": "room",
-              "cast": [
-                {
-                  "who": "xiaoman",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [
-                {
-                  "what": "bag",
-                  "x": 0.78,
-                  "y": 0.78,
-                  "k": 0.95
-                }
-              ],
-              "bubbles": [],
-              "cap": "一个高级"
-            },
-            {
-              "bg": "room",
-              "cast": [
-                {
-                  "who": "xiaoyin",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [],
-              "cap": "小音按下黑白滤镜"
-            },
-            {
-              "bg": "room",
-              "cast": [
-                {
-                  "who": "xiaoman",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [
-                {
-                  "what": "bag",
-                  "x": 0.78,
-                  "y": 0.78,
-                  "k": 0.95
-                }
-              ],
-              "bubbles": [],
-              "cap": "面包那套糊成一块"
-            }
-          ]
+        "hookPic": {
+          "scene": "hook.6.fashion"
         }
       },
       "history": {
@@ -15323,32 +11391,13 @@ window.DAYS = [
               "有人一呼 → 遍地起义。"
             ],
             "visual": {
-              "type": "chain",
-              "base": {},
-              "frames": [
+              "type": "deck",
+              "id": "still.6.history.1",
+              "slides": [
                 {
-                  "set": {
-                    "step": 0,
-                    "play": 0
-                  },
+                  "scene": "still.6.history.1",
                   "cap": "中央内斗加土地兼并，把农民逼进了黄巾起义",
-                  "para": "idea"
-                },
-                {
-                  "set": {
-                    "step": 1,
-                    "play": 0.5
-                  },
-                  "cap": "中央内斗加土地兼并，把农民逼进了黄巾起义",
-                  "para": "why"
-                },
-                {
-                  "set": {
-                    "step": 2,
-                    "play": 1
-                  },
-                  "cap": "中央内斗加土地兼并，把农民逼进了黄巾起义。",
-                  "para": "takeaway"
+                  "sec": "takeaway"
                 }
               ]
             }
@@ -15376,72 +11425,13 @@ window.DAYS = [
               "why": "朝廷让各地自己招兵，地方长官就有了兵和地盘。「皇帝把土地分封给了亲戚」是周朝的做法，东汉末不是这样。"
             },
             "visual": {
-              "type": "comic",
-              "panels": [
+              "type": "deck",
+              "id": "still.6.history.2",
+              "slides": [
                 {
-                  "bg": "palace",
-                  "cast": [
-                    {
-                      "who": "kingWu",
-                      "x": 0.46,
-                      "y": 0.74,
-                      "face": "calm",
-                      "pose": "stand"
-                    }
-                  ],
-                  "props": [],
-                  "bubbles": [],
-                  "cap": "起义四起"
-                },
-                {
-                  "bg": "palace",
-                  "cast": [
-                    {
-                      "who": "kingWu",
-                      "x": 0.46,
-                      "y": 0.74,
-                      "face": "calm",
-                      "pose": "stand"
-                    }
-                  ],
-                  "props": [],
-                  "bubbles": [
-                    {
-                      "who": "kingWu",
-                      "text": "让各地自己招兵吧"
-                    }
-                  ],
-                  "cap": "让各地自己招兵吧"
-                },
-                {
-                  "bg": "palace",
-                  "cast": [
-                    {
-                      "who": "kingWu",
-                      "x": 0.46,
-                      "y": 0.74,
-                      "face": "calm",
-                      "pose": "stand"
-                    }
-                  ],
-                  "props": [],
-                  "bubbles": [],
-                  "cap": "地方长官手里有了兵"
-                },
-                {
-                  "bg": "palace",
-                  "cast": [
-                    {
-                      "who": "kingWu",
-                      "x": 0.46,
-                      "y": 0.74,
-                      "face": "calm",
-                      "pose": "stand"
-                    }
-                  ],
-                  "props": [],
-                  "bubbles": [],
-                  "cap": "起义平了"
+                  "scene": "still.6.history.2",
+                  "cap": "让地方自己招兵救了急，也造出了割据的军阀",
+                  "sec": "takeaway"
                 }
               ]
             }
@@ -15459,32 +11449,46 @@ window.DAYS = [
               "群山围着四川 → 蜀守得住。"
             ],
             "visual": {
-              "type": "histmap",
-              "base": {},
-              "frames": [
+              "type": "deck",
+              "id": "deck.history.6.4",
+              "slides": [
                 {
-                  "set": {
-                    "step": 0,
-                    "play": 0
-                  },
-                  "cap": "赤壁之后三国鼎立；长江和群山，把天下分成了三块",
-                  "para": "idea"
+                  "scene": "g.history.6.4.0",
+                  "cap": "曹丕在北边建魏。",
+                  "sec": "idea"
                 },
                 {
-                  "set": {
-                    "step": 1,
-                    "play": 0.5
-                  },
-                  "cap": "赤壁之后三国鼎立；长江和群山，把天下分成了三块",
-                  "para": "why"
+                  "scene": "g.history.6.4.1",
+                  "cap": "刘备在四川建蜀。",
+                  "sec": "why"
                 },
                 {
-                  "set": {
-                    "step": 2,
-                    "play": 1
-                  },
-                  "cap": "赤壁之后三国鼎立；长江和群山，把天下分成了三块。",
-                  "para": "takeaway"
+                  "scene": "g.history.6.4.2",
+                  "cap": "孙权在江东建吴。",
+                  "sec": "example"
+                },
+                {
+                  "scene": "g.history.6.4.3",
+                  "cap": "一条大江，把南北隔开。",
+                  "sec": [
+                    "derive",
+                    0,
+                    1
+                  ]
+                },
+                {
+                  "scene": "g.history.6.4.4",
+                  "cap": "山和河把地盘分成三块。",
+                  "sec": [
+                    "derive",
+                    2,
+                    3
+                  ]
+                },
+                {
+                  "scene": "g.history.6.4.5",
+                  "cap": "赤壁之后，形成三国鼎立。",
+                  "sec": "takeaway"
                 }
               ]
             }
@@ -15512,67 +11516,46 @@ window.DAYS = [
               "why": "曹魏把宗室管得太严，司马家夺权时没人来救，司马炎想避开这一点。「宗法制规定必须这样做」不对，宗法制只管谁来继承，分不分权是皇帝自己的选择。"
             },
             "visual": {
-              "type": "comic",
-              "panels": [
+              "type": "deck",
+              "id": "deck.history.6.5",
+              "slides": [
                 {
-                  "bg": "palace",
-                  "cast": [
-                    {
-                      "who": "kingWu",
-                      "x": 0.46,
-                      "y": 0.74,
-                      "face": "calm",
-                      "pose": "stand"
-                    }
-                  ],
-                  "props": [],
-                  "bubbles": [],
-                  "cap": "统一了"
+                  "scene": "g.history.6.5.0",
+                  "cap": "266 年，司马炎建立西晋。",
+                  "sec": "idea"
                 },
                 {
-                  "bg": "palace",
-                  "cast": [
-                    {
-                      "who": "kingWu",
-                      "x": 0.46,
-                      "y": 0.74,
-                      "face": "calm",
-                      "pose": "stand"
-                    }
-                  ],
-                  "props": [],
-                  "bubbles": [],
-                  "cap": "兄弟们手里有兵"
+                  "scene": "g.history.6.5.1",
+                  "cap": "后来灭吴，短暂统一。",
+                  "sec": "why"
                 },
                 {
-                  "bg": "palace",
-                  "cast": [
-                    {
-                      "who": "kingWu",
-                      "x": 0.46,
-                      "y": 0.74,
-                      "face": "calm",
-                      "pose": "stand"
-                    }
-                  ],
-                  "props": [],
-                  "bubbles": [],
-                  "cap": "互相打起来（八王之乱）"
+                  "scene": "g.history.6.5.2",
+                  "cap": "皇族诸王自己打了起来。",
+                  "sec": "example"
                 },
                 {
-                  "bg": "palace",
-                  "cast": [
-                    {
-                      "who": "kingWu",
-                      "x": 0.46,
-                      "y": 0.74,
-                      "face": "calm",
-                      "pose": "stand"
-                    }
-                  ],
-                  "props": [],
-                  "bubbles": [],
-                  "cap": "西晋散了"
+                  "scene": "g.history.6.5.3",
+                  "cap": "仗打在自家人里面。",
+                  "sec": [
+                    "derive",
+                    0,
+                    2
+                  ]
+                },
+                {
+                  "scene": "g.history.6.5.4",
+                  "cap": "316 年，西晋灭亡。",
+                  "sec": [
+                    "derive",
+                    3,
+                    4
+                  ]
+                },
+                {
+                  "scene": "g.history.6.5.5",
+                  "cap": "统一没多久，就被自家人拆开。",
+                  "sec": "takeaway"
                 }
               ]
             }
@@ -15584,32 +11567,13 @@ window.DAYS = [
             "takeaway": "北方混战成十六国，晋室南迁建东晋，长江再次隔开南北。",
             "example": "\"十六国\"其实不止十六个政权，这个数字是后来的史书挑出的代表。你不用一个个记名字，记住\"北方政权很多、换得很快、很乱\"就够了。",
             "visual": {
-              "type": "histmap",
-              "base": {},
-              "frames": [
+              "type": "deck",
+              "id": "still.6.history.5",
+              "slides": [
                 {
-                  "set": {
-                    "step": 0,
-                    "play": 0
-                  },
+                  "scene": "still.6.history.5",
                   "cap": "北方混战成十六国，晋室南迁建东晋，长江再次隔开南北",
-                  "para": "idea"
-                },
-                {
-                  "set": {
-                    "step": 1,
-                    "play": 0.5
-                  },
-                  "cap": "北方混战成十六国，晋室南迁建东晋，长江再次隔开南北",
-                  "para": "why"
-                },
-                {
-                  "set": {
-                    "step": 2,
-                    "play": 1
-                  },
-                  "cap": "北方混战成十六国，晋室南迁建东晋，长江再次隔开南北。",
-                  "para": "takeaway"
+                  "sec": "takeaway"
                 }
               ]
             }
@@ -15637,32 +11601,13 @@ window.DAYS = [
               "why": "江南水多、天暖，缺的是人。「河流和雨水」江南本来就很充足，不是它缺的东西。"
             },
             "visual": {
-              "type": "histmap",
-              "base": {},
-              "frames": [
+              "type": "deck",
+              "id": "still.6.history.6",
+              "slides": [
                 {
-                  "set": {
-                    "step": 0,
-                    "play": 0
-                  },
+                  "scene": "still.6.history.6",
                   "cap": "北方人口南迁，带去劳动力和技术，江南从此被开发",
-                  "para": "idea"
-                },
-                {
-                  "set": {
-                    "step": 1,
-                    "play": 0.5
-                  },
-                  "cap": "北方人口南迁，带去劳动力和技术，江南从此被开发",
-                  "para": "why"
-                },
-                {
-                  "set": {
-                    "step": 2,
-                    "play": 1
-                  },
-                  "cap": "北方人口南迁，带去劳动力和技术，江南从此被开发。",
-                  "para": "takeaway"
+                  "sec": "takeaway"
                 }
               ]
             }
@@ -15674,32 +11619,13 @@ window.DAYS = [
             "takeaway": "南朝宋齐梁陈都在建康；北朝北魏统一，后分东西。",
             "example": "建康就是今天的南京。三国的吴、东晋，加上南朝四朝，先后有六个朝代在这里定都，所以南京被叫作\"六朝古都\"。",
             "visual": {
-              "type": "histmap",
-              "base": {},
-              "frames": [
+              "type": "deck",
+              "id": "still.6.history.7",
+              "slides": [
                 {
-                  "set": {
-                    "step": 0,
-                    "play": 0
-                  },
+                  "scene": "still.6.history.7",
                   "cap": "南朝宋齐梁陈都在建康；北朝北魏统一，后分东西",
-                  "para": "idea"
-                },
-                {
-                  "set": {
-                    "step": 1,
-                    "play": 0.5
-                  },
-                  "cap": "南朝宋齐梁陈都在建康；北朝北魏统一，后分东西",
-                  "para": "why"
-                },
-                {
-                  "set": {
-                    "step": 2,
-                    "play": 1
-                  },
-                  "cap": "南朝宋齐梁陈都在建康；北朝北魏统一，后分东西。",
-                  "para": "takeaway"
+                  "sec": "takeaway"
                 }
               ]
             }
@@ -15718,32 +11644,13 @@ window.DAYS = [
             ],
             "formula": "589 − 220 = 369，约 370 年",
             "visual": {
-              "type": "cycle",
-              "base": {},
-              "frames": [
+              "type": "deck",
+              "id": "still.6.history.8",
+              "slides": [
                 {
-                  "set": {
-                    "step": 0,
-                    "play": 0
-                  },
+                  "scene": "still.6.history.8",
                   "cap": "589 年隋统一，分裂约 370 年；下一关看隋唐",
-                  "para": "idea"
-                },
-                {
-                  "set": {
-                    "step": 1,
-                    "play": 0.5
-                  },
-                  "cap": "589 年隋统一，分裂约 370 年；下一关看隋唐",
-                  "para": "why"
-                },
-                {
-                  "set": {
-                    "step": 2,
-                    "play": 1
-                  },
-                  "cap": "589 年隋统一，分裂约 370 年；下一关看隋唐。",
-                  "para": "takeaway"
+                  "sec": "takeaway"
                 }
               ]
             }
@@ -15848,79 +11755,8 @@ window.DAYS = [
             "label": "建康，今南京"
           }
         ],
-        "hookComic": {
-          "panels": [
-            {
-              "bg": "palace",
-              "cast": [
-                {
-                  "who": "kingWu",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [],
-              "cap": "一串朝代名排成长队：三国"
-            },
-            {
-              "bg": "palace",
-              "cast": [
-                {
-                  "who": "xiaoman",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [],
-              "cap": "小满晕了"
-            },
-            {
-              "bg": "palace",
-              "cast": [
-                {
-                  "who": "xiaoyin",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [
-                {
-                  "who": "xiaoyin",
-                  "text": "它本身就乱"
-                }
-              ],
-              "cap": "它本身就乱"
-            },
-            {
-              "bg": "palace",
-              "cast": [
-                {
-                  "who": "kingWu",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [
-                {
-                  "who": "kingWu",
-                  "text": "分合发动机"
-                }
-              ],
-              "cap": "把它们放进"
-            }
-          ]
+        "hookPic": {
+          "scene": "hook.6.history"
         }
       },
       "geo": {
@@ -16089,32 +11925,13 @@ window.DAYS = [
             "example": "拿手电筒照桌面。竖直照，是一个又小又亮的圆；斜着照，光斑拉成又大又暗的椭圆。光没有变少，只是被摊开了。",
             "exLabel": "打个比方",
             "visual": {
-              "type": "beam2",
-              "base": {},
-              "frames": [
+              "type": "deck",
+              "id": "still.6.geo.4",
+              "slides": [
                 {
-                  "set": {
-                    "step": 0,
-                    "play": 0
-                  },
+                  "scene": "still.6.geo.4",
                   "cap": "纬度低 → 阳光照得更直 → 热量更集中 → 更暖",
-                  "para": "idea"
-                },
-                {
-                  "set": {
-                    "step": 1,
-                    "play": 0.5
-                  },
-                  "cap": "纬度低 → 阳光照得更直 → 热量更集中 → 更暖",
-                  "para": "why"
-                },
-                {
-                  "set": {
-                    "step": 2,
-                    "play": 1
-                  },
-                  "cap": "纬度低 → 阳光照得更直 → 热量更集中 → 更暖。",
-                  "para": "takeaway"
+                  "sec": "takeaway"
                 }
               ]
             },
@@ -16150,32 +11967,46 @@ window.DAYS = [
               "why": "纬度越高，冬天阳光越斜、越冷。「哈尔滨（约北纬 46°）」冬天长期在 0°C 以下，河会封冻；「武汉（约北纬 30°）」冬季多在 0°C 以上。"
             },
             "visual": {
-              "type": "gauge",
-              "base": {},
-              "frames": [
+              "type": "deck",
+              "id": "deck.geo.6.6",
+              "slides": [
                 {
-                  "set": {
-                    "step": 0,
-                    "play": 0
-                  },
-                  "cap": "长江纬度低，冬季多在 0°C 以上，大部分河段不结冰",
-                  "para": "idea"
+                  "scene": "g.geo.6.6.0",
+                  "cap": "长江大部分河段纬度不高。",
+                  "sec": "idea"
                 },
                 {
-                  "set": {
-                    "step": 1,
-                    "play": 0.5
-                  },
-                  "cap": "长江纬度低，冬季多在 0°C 以上，大部分河段不结冰",
-                  "para": "why"
+                  "scene": "g.geo.6.6.1",
+                  "cap": "冬季气温多在 0°C 以上。",
+                  "sec": "why"
                 },
                 {
-                  "set": {
-                    "step": 2,
-                    "play": 1
-                  },
-                  "cap": "长江纬度低，冬季多在 0°C 以上，大部分河段不结冰。",
-                  "para": "takeaway"
+                  "scene": "g.geo.6.6.2",
+                  "cap": "所以江面冬天不结冰。",
+                  "sec": "example"
+                },
+                {
+                  "scene": "g.geo.6.6.3",
+                  "cap": "不结冰，船冬天也过得去。",
+                  "sec": [
+                    "derive",
+                    0,
+                    1
+                  ]
+                },
+                {
+                  "scene": "g.geo.6.6.4",
+                  "cap": "上游冷一点，中下游仍不冻。",
+                  "sec": [
+                    "derive",
+                    2,
+                    3
+                  ]
+                },
+                {
+                  "scene": "g.geo.6.6.5",
+                  "cap": "不结冰、水量大，才成为水道。",
+                  "sec": "takeaway"
                 }
               ]
             }
@@ -16192,72 +12023,46 @@ window.DAYS = [
               "水量大 + 不结冰 + 含沙少：常年通航，成了黄金水道。"
             ],
             "visual": {
-              "type": "comic",
-              "panels": [
+              "type": "deck",
+              "id": "deck.geo.6.7",
+              "slides": [
                 {
-                  "bg": "mountain",
-                  "cast": [
-                    {
-                      "who": "xiaoman",
-                      "x": 0.46,
-                      "y": 0.74,
-                      "face": "calm",
-                      "pose": "stand"
-                    }
-                  ],
-                  "props": [],
-                  "bubbles": [],
-                  "cap": "上海港装货"
+                  "scene": "g.geo.6.7.0",
+                  "cap": "上游落差大，水又急又吵。",
+                  "sec": "idea"
                 },
                 {
-                  "bg": "mountain",
-                  "cast": [
-                    {
-                      "who": "xiaoman",
-                      "x": 0.46,
-                      "y": 0.74,
-                      "face": "calm",
-                      "pose": "stand"
-                    }
-                  ],
-                  "props": [],
-                  "bubbles": [],
-                  "cap": "船沿江而上"
+                  "scene": "g.geo.6.7.1",
+                  "cap": "下游地平，水就安静下来。",
+                  "sec": "why"
                 },
                 {
-                  "bg": "mountain",
-                  "cast": [
-                    {
-                      "who": "xiaoman",
-                      "x": 0.46,
-                      "y": 0.74,
-                      "face": "calm",
-                      "pose": "stand"
-                    }
-                  ],
-                  "props": [],
-                  "bubbles": [],
-                  "cap": "经过武汉"
+                  "scene": "g.geo.6.7.2",
+                  "cap": "中下游水缓，大船走得动。",
+                  "sec": "example"
                 },
                 {
-                  "bg": "mountain",
-                  "cast": [
-                    {
-                      "who": "xiaoyin",
-                      "x": 0.46,
-                      "y": 0.74,
-                      "face": "calm",
-                      "pose": "stand"
-                    }
-                  ],
-                  "props": [],
-                  "bubbles": [
-                    {
-                      "who": "xiaoyin",
-                      "text": "黄金水道"
-                    }
-                  ],
-                  "cap": "到重庆卸货"
+                  "scene": "g.geo.6.7.3",
+                  "cap": "沿江长出一座座城。",
+                  "sec": [
+                    "derive",
+                    0,
+                    1
+                  ]
+                },
+                {
+                  "scene": "g.geo.6.7.4",
+                  "cap": "船把粮和货从上游运到下游。",
+                  "sec": [
+                    "derive",
+                    2,
+                    2
+                  ]
+                },
+                {
+                  "scene": "g.geo.6.7.5",
+                  "cap": "一条河，两种性格，一条水道。",
+                  "sec": "takeaway"
                 }
               ]
             }
@@ -16324,81 +12129,8 @@ window.DAYS = [
             "label": "JX"
           }
         ],
-        "hookComic": {
-          "panels": [
-            {
-              "bg": "mountain",
-              "cast": [
-                {
-                  "who": "xiaoman",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "sit"
-                }
-              ],
-              "props": [],
-              "bubbles": [],
-              "cap": "上游峡谷"
-            },
-            {
-              "bg": "mountain",
-              "cast": [
-                {
-                  "who": "xiaoman",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [],
-              "cap": "下游宽阔的江面"
-            },
-            {
-              "bg": "mountain",
-              "cast": [
-                {
-                  "who": "xiaoman",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [
-                {
-                  "who": "xiaoman",
-                  "text": "这是同一条河？"
-                }
-              ],
-              "cap": "这是同一条河？"
-            },
-            {
-              "bg": "mountain",
-              "cast": [
-                {
-                  "who": "xiaoyin",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [
-                {
-                  "what": "mapScroll",
-                  "x": 0.78,
-                  "y": 0.78,
-                  "k": 0.95
-                }
-              ],
-              "bubbles": [],
-              "cap": "小音在地图上把长江切成三段"
-            }
-          ]
+        "hookPic": {
+          "scene": "hook.6.geo"
         }
       },
       "finance": {
@@ -16406,82 +12138,6 @@ window.DAYS = [
         "title": "复利：利息也会生利息",
         "minutes": 7,
         "hook": "同样存 1000 元，同样 10% 的利率，20 年后一种方式拿到 3000，另一种拿到 6700 多。差在哪？",
-        "hookComic": {
-          "panels": [
-            {
-              "bg": "room",
-              "cast": [
-                {
-                  "who": "xiaoman",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [
-                {
-                  "what": "jar",
-                  "x": 0.78,
-                  "y": 0.78,
-                  "k": 0.95
-                }
-              ],
-              "bubbles": [],
-              "cap": "两个一样的存钱罐"
-            },
-            {
-              "bg": "room",
-              "cast": [
-                {
-                  "who": "xiaoman",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [],
-              "cap": "一个把利息拿走"
-            },
-            {
-              "bg": "room",
-              "cast": [
-                {
-                  "who": "xiaoman",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [],
-              "cap": "20 年后一个 3000"
-            },
-            {
-              "bg": "room",
-              "cast": [
-                {
-                  "who": "xiaoyin",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [
-                {
-                  "who": "xiaoyin",
-                  "text": "差在利息有没有生利息"
-                }
-              ],
-              "cap": "差在利息有没有生利息"
-            }
-          ]
-        },
         "steps": [
           {
             "title": "回顾 · 单利每年一样多",
@@ -16530,73 +12186,13 @@ window.DAYS = [
             "title": "复利：利息滚进本金",
             "idea": "**复利**就是每年把利息加进本金。第二年，用\"本金 + 利息\"一起算利息。",
             "visual": {
-              "type": "comic",
-              "panels": [
+              "type": "deck",
+              "id": "still.6.finance.1",
+              "slides": [
                 {
-                  "bg": "room",
-                  "cast": [
-                    {
-                      "who": "xiaoman",
-                      "x": 0.46,
-                      "y": 0.74,
-                      "face": "calm",
-                      "pose": "stand"
-                    }
-                  ],
-                  "props": [
-                    {
-                      "what": "snowball",
-                      "x": 0.78,
-                      "y": 0.78,
-                      "k": 0.95
-                    }
-                  ],
-                  "bubbles": [],
-                  "cap": "1000 元"
-                },
-                {
-                  "bg": "room",
-                  "cast": [
-                    {
-                      "who": "xiaoman",
-                      "x": 0.46,
-                      "y": 0.74,
-                      "face": "calm",
-                      "pose": "stand"
-                    }
-                  ],
-                  "props": [
-                    {
-                      "what": "snowball",
-                      "x": 0.78,
-                      "y": 0.78,
-                      "k": 0.95
-                    }
-                  ],
-                  "bubbles": [],
-                  "cap": "利息粘上去"
-                },
-                {
-                  "bg": "room",
-                  "cast": [
-                    {
-                      "who": "xiaoman",
-                      "x": 0.46,
-                      "y": 0.74,
-                      "face": "calm",
-                      "pose": "stand"
-                    }
-                  ],
-                  "props": [
-                    {
-                      "what": "snowball",
-                      "x": 0.78,
-                      "y": 0.78,
-                      "k": 0.95
-                    }
-                  ],
-                  "bubbles": [],
-                  "cap": "下一年按更大的球算"
+                  "scene": "still.6.finance.1",
+                  "cap": "复利 = 利息也会生利息",
+                  "sec": "takeaway"
                 }
               ]
             },
@@ -16654,7 +12250,19 @@ window.DAYS = [
               "第 1 年：1000 的 10% 是 100，变成 1100。",
               "第 2 年：1100 的 10% 是 110，变成 1210。",
               "第 3 年：1210 的 10% 是 121，变成 1331。"
-            ]
+            ],
+            "deck": {
+              "type": "deck",
+              "id": "deck.finance.6.3",
+              "slides": [
+                {
+                  "scene": "g.finance.6.3.0",
+                  "cap": "利息要一年一年往上加。",
+                  "sec": "why"
+                }
+              ],
+              "mode": "aside"
+            }
           },
           {
             "title": "多出的 31 元从哪来？",
@@ -16713,32 +12321,13 @@ window.DAYS = [
             "title": "更快的算法：每年乘 1.1",
             "idea": "\"加上 10%\"就是\"乘以 1.1\"。",
             "visual": {
-              "type": "chain",
-              "base": {
-                "nodes": [
-                  "1000",
-                  "× 1.1",
-                  "× 1.1",
-                  "× 1.1",
-                  "1331"
-                ]
-              },
-              "frames": [
+              "type": "deck",
+              "id": "still.6.finance.4",
+              "slides": [
                 {
-                  "set": {
-                    "play": 0,
-                    "step": 0
-                  },
-                  "cap": "先看骨架",
-                  "para": "idea"
-                },
-                {
-                  "set": {
-                    "play": 1,
-                    "step": 2
-                  },
-                  "cap": "看完整的图",
-                  "para": "takeaway"
+                  "scene": "still.6.finance.4",
+                  "cap": "复利：每年乘一次\"1 + 利率\"",
+                  "sec": "takeaway"
                 }
               ]
             },
@@ -16947,7 +12536,10 @@ window.DAYS = [
             "why": "单利每年涨一样多，画出来是直线。复利会越来越陡；没有利息就是一条平线。",
             "ref": 5
           }
-        ]
+        ],
+        "hookPic": {
+          "scene": "hook.6.finance"
+        }
       },
       "psych": {
         "id": "d06-psych",
@@ -17006,32 +12598,46 @@ window.DAYS = [
               "悲伤：让人停下来，并引来他人的支持。"
             ],
             "visual": {
-              "type": "chain",
-              "base": {},
-              "frames": [
+              "type": "deck",
+              "id": "deck.psych.6.2",
+              "slides": [
                 {
-                  "set": {
-                    "step": 0,
-                    "play": 0
-                  },
-                  "cap": "难受的情绪能留下来，是因为它们曾帮祖先活下来",
-                  "para": "idea"
+                  "scene": "g.psych.6.2.0",
+                  "cap": "一种反应能留下，多半帮过祖先。",
+                  "sec": "idea"
                 },
                 {
-                  "set": {
-                    "step": 1,
-                    "play": 0.5
-                  },
-                  "cap": "难受的情绪能留下来，是因为它们曾帮祖先活下来",
-                  "para": "why"
+                  "scene": "g.psych.6.2.1",
+                  "cap": "怕让人躲开危险。",
+                  "sec": "why"
                 },
                 {
-                  "set": {
-                    "step": 2,
-                    "play": 1
-                  },
-                  "cap": "难受的情绪能留下来，是因为它们曾帮祖先活下来。",
-                  "para": "takeaway"
+                  "scene": "g.psych.6.2.2",
+                  "cap": "怒让人守住自己的东西。",
+                  "sec": "example"
+                },
+                {
+                  "scene": "g.psych.6.2.3",
+                  "cap": "没有用的反应，不容易传下来。",
+                  "sec": [
+                    "derive",
+                    0,
+                    1
+                  ]
+                },
+                {
+                  "scene": "g.psych.6.2.4",
+                  "cap": "情绪就这样传到了我们。",
+                  "sec": [
+                    "derive",
+                    2,
+                    3
+                  ]
+                },
+                {
+                  "scene": "g.psych.6.2.5",
+                  "cap": "情绪帮人应对环境，叫适应。",
+                  "sec": "takeaway"
                 }
               ]
             }
@@ -17052,33 +12658,13 @@ window.DAYS = [
               "why": "睁大眼睛会扩大视野，帮人发现周围的威胁。「让自己显得更凶」不是这项研究测到的作用，研究测的是视野和吸气量。"
             },
             "visual": {
-              "type": "comic",
-              "panels": [
+              "type": "deck",
+              "id": "still.6.psych.2",
+              "slides": [
                 {
-                  "bg": "room",
-                  "cast": [
-                    {
-                      "who": "xiaoman",
-                      "x": 0.46,
-                      "y": 0.74,
-                      "face": "calm",
-                      "pose": "stand"
-                    }
-                  ],
-                  "cap": "表情和恐惧本身都有实际作用"
-                },
-                {
-                  "bg": "street",
-                  "cast": [
-                    {
-                      "who": "xiaoman",
-                      "x": 0.46,
-                      "y": 0.74,
-                      "face": "calm",
-                      "pose": "stand"
-                    }
-                  ],
-                  "cap": "证据：情绪本身就有用"
+                  "scene": "still.6.psych.2",
+                  "cap": "表情和恐惧本身都有实际作用，支持\"情绪帮人适应环境\"",
+                  "sec": "takeaway"
                 }
               ]
             }
@@ -17090,32 +12676,13 @@ window.DAYS = [
             "takeaway": "动机功能：情绪提供推力，把你推向某个行动。",
             "example": "账号该更新了却一直拖着，直到\"再不发就要掉粉了\"的焦虑冒出来，你才打开剪辑软件。这份焦虑不舒服，却把你推到了桌前。",
             "visual": {
-              "type": "chain",
-              "base": {},
-              "frames": [
+              "type": "deck",
+              "id": "still.6.psych.3",
+              "slides": [
                 {
-                  "set": {
-                    "step": 0,
-                    "play": 0
-                  },
+                  "scene": "still.6.psych.3",
                   "cap": "动机功能：情绪提供推力，把你推向某个行动",
-                  "para": "idea"
-                },
-                {
-                  "set": {
-                    "step": 1,
-                    "play": 0.5
-                  },
-                  "cap": "动机功能：情绪提供推力，把你推向某个行动",
-                  "para": "why"
-                },
-                {
-                  "set": {
-                    "step": 2,
-                    "play": 1
-                  },
-                  "cap": "动机功能：情绪提供推力，把你推向某个行动。",
-                  "para": "takeaway"
+                  "sec": "takeaway"
                 }
               ]
             }
@@ -17136,33 +12703,13 @@ window.DAYS = [
               "why": "你的表情把难过告诉了观众，引来回应，这是信号功能。「动机功能」是情绪推动你自己去行动，这里是别人接收到了你的信号。"
             },
             "visual": {
-              "type": "comic",
-              "panels": [
+              "type": "deck",
+              "id": "still.6.psych.4",
+              "slides": [
                 {
-                  "bg": "room",
-                  "cast": [
-                    {
-                      "who": "xiaoman",
-                      "x": 0.46,
-                      "y": 0.74,
-                      "face": "calm",
-                      "pose": "stand"
-                    }
-                  ],
-                  "cap": "信号功能：情绪把你的状态告诉"
-                },
-                {
-                  "bg": "street",
-                  "cast": [
-                    {
-                      "who": "xiaoman",
-                      "x": 0.46,
-                      "y": 0.74,
-                      "face": "calm",
-                      "pose": "give"
-                    }
-                  ],
-                  "cap": "信号功能：情绪是发给别人的"
+                  "scene": "still.6.psych.4",
+                  "cap": "信号功能：情绪把你的状态告诉别人，引来回应",
+                  "sec": "takeaway"
                 }
               ]
             }
@@ -17174,32 +12721,13 @@ window.DAYS = [
             "takeaway": "情绪没有好坏，是信息；要调的是强度和时机。",
             "example": "账号选题提示：\"你的焦虑在提醒你什么？\"先听懂它在提醒什么，再看它是不是太大声、来得不是时候。",
             "visual": {
-              "type": "chain",
-              "base": {},
-              "frames": [
+              "type": "deck",
+              "id": "still.6.psych.5",
+              "slides": [
                 {
-                  "set": {
-                    "step": 0,
-                    "play": 0
-                  },
+                  "scene": "still.6.psych.5",
                   "cap": "情绪没有好坏，是信息；要调的是强度和时机",
-                  "para": "idea"
-                },
-                {
-                  "set": {
-                    "step": 1,
-                    "play": 0.5
-                  },
-                  "cap": "情绪没有好坏，是信息；要调的是强度和时机",
-                  "para": "why"
-                },
-                {
-                  "set": {
-                    "step": 2,
-                    "play": 1
-                  },
-                  "cap": "情绪没有好坏，是信息；要调的是强度和时机。",
-                  "para": "takeaway"
+                  "sec": "takeaway"
                 }
               ]
             }
@@ -17260,74 +12788,8 @@ window.DAYS = [
             "ref": 5
           }
         ],
-        "hookComic": {
-          "panels": [
-            {
-              "bg": "room",
-              "cast": [
-                {
-                  "who": "xiaoman",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "sit"
-                }
-              ],
-              "props": [],
-              "bubbles": [],
-              "cap": "小满难过地抱膝"
-            },
-            {
-              "bg": "room",
-              "cast": [
-                {
-                  "who": "xiaoman",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [
-                {
-                  "who": "xiaoman",
-                  "text": "要是没有这些情绪多好"
-                }
-              ],
-              "cap": "要是没有这些情绪多好"
-            },
-            {
-              "bg": "room",
-              "cast": [
-                {
-                  "who": "xiaoyin",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [],
-              "cap": "小音翻开一本远古相册"
-            },
-            {
-              "bg": "room",
-              "cast": [
-                {
-                  "who": "xiaoman",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "run"
-                }
-              ],
-              "props": [],
-              "bubbles": [],
-              "cap": "祖先们正被一条蛇吓跑"
-            }
-          ]
+        "hookPic": {
+          "scene": "hook.6.psych"
         }
       },
       "english": {
@@ -18216,74 +13678,8 @@ window.DAYS = [
             "ref": 2
           }
         ],
-        "hookComic": {
-          "panels": [
-            {
-              "bg": "street",
-              "cast": [
-                {
-                  "who": "xiaoman",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [],
-              "cap": "秋天的银杏街道"
-            },
-            {
-              "bg": "room",
-              "cast": [
-                {
-                  "who": "xiaoman",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [],
-              "cap": "小满穿黄"
-            },
-            {
-              "bg": "street",
-              "cast": [
-                {
-                  "who": "xiaoman",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [],
-              "cap": "和街景融在一起"
-            },
-            {
-              "bg": "room",
-              "cast": [
-                {
-                  "who": "xiaoyin",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [
-                {
-                  "who": "xiaoyin",
-                  "text": "一家人"
-                }
-              ],
-              "cap": "一家人"
-            }
-          ]
+        "hookPic": {
+          "scene": "hook.8.fashion"
         }
       },
       "history": {
@@ -18317,32 +13713,13 @@ window.DAYS = [
               "那就只能自己挖一条南北向的河。"
             ],
             "visual": {
-              "type": "histmap",
-              "base": {},
-              "frames": [
+              "type": "deck",
+              "id": "still.8.history.1",
+              "slides": [
                 {
-                  "set": {
-                    "step": 0,
-                    "play": 0
-                  },
+                  "scene": "still.8.history.1",
                   "cap": "南粮北运离不开水路，天然河道不通南北，只能人工开挖",
-                  "para": "idea"
-                },
-                {
-                  "set": {
-                    "step": 1,
-                    "play": 0.5
-                  },
-                  "cap": "南粮北运离不开水路，天然河道不通南北，只能人工开挖",
-                  "para": "why"
-                },
-                {
-                  "set": {
-                    "step": 2,
-                    "play": 1
-                  },
-                  "cap": "南粮北运离不开水路，天然河道不通南北，只能人工开挖。",
-                  "para": "takeaway"
+                  "sec": "takeaway"
                 }
               ]
             }
@@ -18355,32 +13732,13 @@ window.DAYS = [
             "example": "像地铁加了一条换乘线：几条东西向的线路本来各跑各的，加一条南北向的线，在每个交叉口都能换乘，全城就都连通了。",
             "exLabel": "打个比方",
             "visual": {
-              "type": "histmap",
-              "base": {},
-              "frames": [
+              "type": "deck",
+              "id": "still.8.history.2",
+              "slides": [
                 {
-                  "set": {
-                    "step": 0,
-                    "play": 0
-                  },
-                  "cap": "大运河以洛阳为中心，北到涿郡、南到余杭，把南方的粮运到北方",
-                  "para": "idea"
-                },
-                {
-                  "set": {
-                    "step": 1,
-                    "play": 0.5
-                  },
-                  "cap": "大运河以洛阳为中心，北到涿郡、南到余杭，把南方的粮运到北方",
-                  "para": "why"
-                },
-                {
-                  "set": {
-                    "step": 2,
-                    "play": 1
-                  },
-                  "cap": "大运河以洛阳为中心，北到涿郡、南到余杭，把南方的粮运到北方。",
-                  "para": "takeaway"
+                  "scene": "still.8.history.2",
+                  "cap": "大运河：人工的南北水路",
+                  "sec": "takeaway"
                 }
               ]
             },
@@ -18407,32 +13765,46 @@ window.DAYS = [
               "活不下去的人越来越多，起义遍地。"
             ],
             "visual": {
-              "type": "chain",
-              "base": {},
-              "frames": [
+              "type": "deck",
+              "id": "deck.history.8.4",
+              "slides": [
                 {
-                  "set": {
-                    "step": 0,
-                    "play": 0
-                  },
-                  "cap": "隋不是亡于运河本身，而是亡于用力过猛、耗尽民力",
-                  "para": "idea"
+                  "scene": "g.history.8.4.0",
+                  "cap": "大运河把南北连了起来。",
+                  "sec": "idea"
                 },
                 {
-                  "set": {
-                    "step": 1,
-                    "play": 0.5
-                  },
-                  "cap": "隋不是亡于运河本身，而是亡于用力过猛、耗尽民力",
-                  "para": "why"
+                  "scene": "g.history.8.4.1",
+                  "cap": "同时又建东都洛阳。",
+                  "sec": "why"
                 },
                 {
-                  "set": {
-                    "step": 2,
-                    "play": 1
-                  },
-                  "cap": "隋不是亡于运河本身，而是亡于用力过猛、耗尽民力。",
-                  "para": "takeaway"
+                  "scene": "g.history.8.4.2",
+                  "cap": "还三次出兵高句丽。",
+                  "sec": "example"
+                },
+                {
+                  "scene": "g.history.8.4.3",
+                  "cap": "三件大事叠在一起，人被压垮。",
+                  "sec": [
+                    "derive",
+                    0,
+                    1
+                  ]
+                },
+                {
+                  "scene": "g.history.8.4.4",
+                  "cap": "运河留下了，隋只存了 37 年。",
+                  "sec": [
+                    "derive",
+                    2,
+                    3
+                  ]
+                },
+                {
+                  "scene": "g.history.8.4.5",
+                  "cap": "工程在，王朝却没撑住。",
+                  "sec": "takeaway"
                 }
               ]
             }
@@ -18450,72 +13822,13 @@ window.DAYS = [
               "皇帝推行命令，常要看大族的脸色。"
             ],
             "visual": {
-              "type": "comic",
-              "panels": [
+              "type": "deck",
+              "id": "still.8.history.4",
+              "slides": [
                 {
-                  "bg": "palace",
-                  "cast": [
-                    {
-                      "who": "kingWu",
-                      "x": 0.46,
-                      "y": 0.74,
-                      "face": "calm",
-                      "pose": "sit"
-                    }
-                  ],
-                  "props": [],
-                  "bubbles": [],
-                  "cap": "贵族子弟坐着轿子进官府"
-                },
-                {
-                  "bg": "palace",
-                  "cast": [
-                    {
-                      "who": "kingWu",
-                      "x": 0.46,
-                      "y": 0.74,
-                      "face": "calm",
-                      "pose": "stand"
-                    }
-                  ],
-                  "props": [],
-                  "bubbles": [],
-                  "cap": "寒门书生在门外读书"
-                },
-                {
-                  "bg": "palace",
-                  "cast": [
-                    {
-                      "who": "kingWu",
-                      "x": 0.46,
-                      "y": 0.74,
-                      "face": "calm",
-                      "pose": "stand"
-                    }
-                  ],
-                  "props": [],
-                  "bubbles": [
-                    {
-                      "who": "kingWu",
-                      "text": "只看家世"
-                    }
-                  ],
-                  "cap": "门口牌子"
-                },
-                {
-                  "bg": "palace",
-                  "cast": [
-                    {
-                      "who": "kingWu",
-                      "x": 0.46,
-                      "y": 0.74,
-                      "face": "calm",
-                      "pose": "stand"
-                    }
-                  ],
-                  "props": [],
-                  "bubbles": [],
-                  "cap": "书生叹气"
+                  "scene": "still.8.history.4",
+                  "cap": "世家大族垄断官位，皇帝用人受制于人，人才也上不来",
+                  "sec": "takeaway"
                 }
               ]
             }
@@ -18542,72 +13855,13 @@ window.DAYS = [
               "why": "科举就是用考试选官，看「考试成绩」。看「家族门第」正是科举之前的老办法，科举要打破的就是它。"
             },
             "visual": {
-              "type": "comic",
-              "panels": [
+              "type": "deck",
+              "id": "still.8.history.5",
+              "slides": [
                 {
-                  "bg": "palace",
-                  "cast": [
-                    {
-                      "who": "kingWu",
-                      "x": 0.46,
-                      "y": 0.74,
-                      "face": "calm",
-                      "pose": "stand"
-                    }
-                  ],
-                  "props": [],
-                  "bubbles": [],
-                  "cap": "考场里一排排考生"
-                },
-                {
-                  "bg": "palace",
-                  "cast": [
-                    {
-                      "who": "kingWu",
-                      "x": 0.46,
-                      "y": 0.74,
-                      "face": "calm",
-                      "pose": "give"
-                    }
-                  ],
-                  "props": [],
-                  "bubbles": [],
-                  "cap": "寒门书生交卷"
-                },
-                {
-                  "bg": "palace",
-                  "cast": [
-                    {
-                      "who": "kingWu",
-                      "x": 0.46,
-                      "y": 0.74,
-                      "face": "calm",
-                      "pose": "stand"
-                    }
-                  ],
-                  "props": [],
-                  "bubbles": [],
-                  "cap": "放榜他考中了"
-                },
-                {
-                  "bg": "palace",
-                  "cast": [
-                    {
-                      "who": "xiaoyin",
-                      "x": 0.46,
-                      "y": 0.74,
-                      "face": "calm",
-                      "pose": "stand"
-                    }
-                  ],
-                  "props": [],
-                  "bubbles": [
-                    {
-                      "who": "xiaoyin",
-                      "text": "凭考试做官"
-                    }
-                  ],
-                  "cap": "进官府"
+                  "scene": "still.8.history.5",
+                  "cap": "科举让出身不再决定一切，官员更依赖皇帝，中央更集权",
+                  "sec": "takeaway"
                 }
               ]
             }
@@ -18624,32 +13878,46 @@ window.DAYS = [
               "好制度加上松一点的手，才稳得住。"
             ],
             "visual": {
-              "type": "tug",
-              "base": {},
-              "frames": [
+              "type": "deck",
+              "id": "deck.history.8.7",
+              "slides": [
                 {
-                  "set": {
-                    "step": 0,
-                    "play": 0
-                  },
-                  "cap": "唐继承隋的制度，减轻百姓负担，迎来贞观之治",
-                  "para": "idea"
+                  "scene": "g.history.8.7.0",
+                  "cap": "618 年，李渊建立唐。",
+                  "sec": "idea"
                 },
                 {
-                  "set": {
-                    "step": 1,
-                    "play": 0.5
-                  },
-                  "cap": "唐继承隋的制度，减轻百姓负担，迎来贞观之治",
-                  "para": "why"
+                  "scene": "g.history.8.7.1",
+                  "cap": "都城仍在长安。",
+                  "sec": "why"
                 },
                 {
-                  "set": {
-                    "step": 2,
-                    "play": 1
-                  },
-                  "cap": "唐继承隋的制度，减轻百姓负担，迎来贞观之治。",
-                  "para": "takeaway"
+                  "scene": "g.history.8.7.2",
+                  "cap": "运河继续用来运粮。",
+                  "sec": "example"
+                },
+                {
+                  "scene": "g.history.8.7.3",
+                  "cap": "科举也接了过来。",
+                  "sec": [
+                    "derive",
+                    0,
+                    1
+                  ]
+                },
+                {
+                  "scene": "g.history.8.7.4",
+                  "cap": "同样的制度，用力轻得多。",
+                  "sec": [
+                    "derive",
+                    2,
+                    2
+                  ]
+                },
+                {
+                  "scene": "g.history.8.7.5",
+                  "cap": "隋的办法留下了，人不再被压尽。",
+                  "sec": "takeaway"
                 }
               ]
             }
@@ -18841,74 +14109,8 @@ window.DAYS = [
             "label": "长安"
           }
         ],
-        "hookComic": {
-          "panels": [
-            {
-              "bg": "palace",
-              "cast": [
-                {
-                  "who": "kingWu",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [],
-              "cap": "两组卡片：秦 15 年 +"
-            },
-            {
-              "bg": "palace",
-              "cast": [
-                {
-                  "who": "kingWu",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [],
-              "cap": "两组并排"
-            },
-            {
-              "bg": "palace",
-              "cast": [
-                {
-                  "who": "xiaoman",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [
-                {
-                  "who": "xiaoman",
-                  "text": "好眼熟"
-                }
-              ],
-              "cap": "好眼熟"
-            },
-            {
-              "bg": "palace",
-              "cast": [
-                {
-                  "who": "xiaoyin",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [],
-              "cap": "小音把两组叠在一起"
-            }
-          ]
+        "hookPic": {
+          "scene": "hook.8.history"
         }
       },
       "geo": {
@@ -18967,32 +14169,46 @@ window.DAYS = [
               "散热也一样：沙子凉得快，海水凉得慢。"
             ],
             "visual": {
-              "type": "seaLand",
-              "base": {},
-              "frames": [
+              "type": "deck",
+              "id": "deck.geo.8.2",
+              "slides": [
                 {
-                  "set": {
-                    "step": 0,
-                    "play": 0
-                  },
-                  "cap": "陆地升温快、降温也快；海水比热大，升温慢、降温也慢",
-                  "para": "idea"
+                  "scene": "g.geo.8.2.0",
+                  "cap": "同一中午，沙子和海水一起晒。",
+                  "sec": "idea"
                 },
                 {
-                  "set": {
-                    "step": 1,
-                    "play": 0.5
-                  },
-                  "cap": "陆地升温快、降温也快；海水比热大，升温慢、降温也慢",
-                  "para": "why"
+                  "scene": "g.geo.8.2.1",
+                  "cap": "沙子烫脚，热得快。",
+                  "sec": "why"
                 },
                 {
-                  "set": {
-                    "step": 2,
-                    "play": 1
-                  },
-                  "cap": "陆地升温快、降温也快；海水比热大，升温慢、降温也慢。",
-                  "para": "takeaway"
+                  "scene": "g.geo.8.2.2",
+                  "cap": "海水还凉，热得慢。",
+                  "sec": "example"
+                },
+                {
+                  "scene": "g.geo.8.2.3",
+                  "cap": "太阳下山，沙子很快变凉。",
+                  "sec": [
+                    "derive",
+                    0,
+                    1
+                  ]
+                },
+                {
+                  "scene": "g.geo.8.2.4",
+                  "cap": "海水却还温温的。",
+                  "sec": [
+                    "derive",
+                    2,
+                    3
+                  ]
+                },
+                {
+                  "scene": "g.geo.8.2.5",
+                  "cap": "沙热得快也凉得快，海正好相反。",
+                  "sec": "takeaway"
                 }
               ]
             }
@@ -19013,32 +14229,13 @@ window.DAYS = [
               "why": "陆地比热小，夏天被晒得快，所以更热。「海洋」升温慢，夏天反而比陆地凉。"
             },
             "visual": {
-              "type": "seaLand",
-              "base": {},
-              "frames": [
+              "type": "deck",
+              "id": "still.8.geo.2",
+              "slides": [
                 {
-                  "set": {
-                    "step": 0,
-                    "play": 0
-                  },
+                  "scene": "still.8.geo.2",
                   "cap": "夏季陆地比海洋热，冬季陆地比海洋冷",
-                  "para": "idea"
-                },
-                {
-                  "set": {
-                    "step": 1,
-                    "play": 0.5
-                  },
-                  "cap": "夏季陆地比海洋热，冬季陆地比海洋冷",
-                  "para": "why"
-                },
-                {
-                  "set": {
-                    "step": 2,
-                    "play": 1
-                  },
-                  "cap": "夏季陆地比海洋热，冬季陆地比海洋冷。",
-                  "para": "takeaway"
+                  "sec": "takeaway"
                 }
               ]
             }
@@ -19054,32 +14251,13 @@ window.DAYS = [
               "变冷：空气收缩下沉，地面气压高。"
             ],
             "visual": {
-              "type": "seaLand",
-              "base": {},
-              "frames": [
+              "type": "deck",
+              "id": "still.8.geo.3",
+              "slides": [
                 {
-                  "set": {
-                    "step": 0,
-                    "play": 0
-                  },
+                  "scene": "still.8.geo.3",
                   "cap": "热的地方空气上升、气压低；冷的地方空气下沉、气压高",
-                  "para": "idea"
-                },
-                {
-                  "set": {
-                    "step": 1,
-                    "play": 0.5
-                  },
-                  "cap": "热的地方空气上升、气压低；冷的地方空气下沉、气压高",
-                  "para": "why"
-                },
-                {
-                  "set": {
-                    "step": 2,
-                    "play": 1
-                  },
-                  "cap": "热的地方空气上升、气压低；冷的地方空气下沉、气压高。",
-                  "para": "takeaway"
+                  "sec": "takeaway"
                 }
               ]
             }
@@ -19096,32 +14274,13 @@ window.DAYS = [
               "所以贴近地面的风，是从冷的地方吹向热的地方。"
             ],
             "visual": {
-              "type": "seaLand",
-              "base": {},
-              "frames": [
+              "type": "deck",
+              "id": "still.8.geo.4",
+              "slides": [
                 {
-                  "set": {
-                    "step": 0,
-                    "play": 0
-                  },
+                  "scene": "still.8.geo.4",
                   "cap": "风从高压吹向低压；贴近地面，就是从冷处吹向热处",
-                  "para": "idea"
-                },
-                {
-                  "set": {
-                    "step": 1,
-                    "play": 0.5
-                  },
-                  "cap": "风从高压吹向低压；贴近地面，就是从冷处吹向热处",
-                  "para": "why"
-                },
-                {
-                  "set": {
-                    "step": 2,
-                    "play": 1
-                  },
-                  "cap": "风从高压吹向低压；贴近地面，就是从冷处吹向热处。",
-                  "para": "takeaway"
+                  "sec": "takeaway"
                 }
               ]
             },
@@ -19242,32 +14401,46 @@ window.DAYS = [
               "热和雨同进同出，就是雨热同期。"
             ],
             "visual": {
-              "type": "cnmap",
-              "base": {},
-              "frames": [
+              "type": "deck",
+              "id": "deck.geo.8.8",
+              "slides": [
                 {
-                  "set": {
-                    "step": 0,
-                    "play": 0
-                  },
-                  "cap": "季风让热和雨在夏天一起到来，叫雨热同期，对农业很有利",
-                  "para": "idea"
+                  "scene": "g.geo.8.8.0",
+                  "cap": "夏天陆地被晒得更热。",
+                  "sec": "idea"
                 },
                 {
-                  "set": {
-                    "step": 1,
-                    "play": 0.5
-                  },
-                  "cap": "季风让热和雨在夏天一起到来，叫雨热同期，对农业很有利",
-                  "para": "why"
+                  "scene": "g.geo.8.8.1",
+                  "cap": "海还比较凉，气压更高。",
+                  "sec": "why"
                 },
                 {
-                  "set": {
-                    "step": 2,
-                    "play": 1
-                  },
-                  "cap": "季风让热和雨在夏天一起到来，叫雨热同期，对农业很有利。",
-                  "para": "takeaway"
+                  "scene": "g.geo.8.8.2",
+                  "cap": "风从海上把湿气送上陆地。",
+                  "sec": "example"
+                },
+                {
+                  "scene": "g.geo.8.8.3",
+                  "cap": "湿气遇冷凝成雨。",
+                  "sec": [
+                    "derive",
+                    0,
+                    1
+                  ]
+                },
+                {
+                  "scene": "g.geo.8.8.4",
+                  "cap": "热和雨，常常一起来。",
+                  "sec": [
+                    "derive",
+                    2,
+                    2
+                  ]
+                },
+                {
+                  "scene": "g.geo.8.8.5",
+                  "cap": "同一个原因，带来热，也带来雨。",
+                  "sec": "takeaway"
                 }
               ]
             }
@@ -19309,74 +14482,8 @@ window.DAYS = [
             "ref": 7
           }
         ],
-        "hookComic": {
-          "panels": [
-            {
-              "bg": "mountain",
-              "cast": [
-                {
-                  "who": "xiaoman",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [],
-              "cap": "七月"
-            },
-            {
-              "bg": "mountain",
-              "cast": [
-                {
-                  "who": "ale",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [],
-              "cap": "一月"
-            },
-            {
-              "bg": "mountain",
-              "cast": [
-                {
-                  "who": "xiaoman",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [
-                {
-                  "who": "xiaoman",
-                  "text": "风怎么换方向了？"
-                }
-              ],
-              "cap": "两人视频"
-            },
-            {
-              "bg": "mountain",
-              "cast": [
-                {
-                  "who": "xiaoyin",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "cheer"
-                }
-              ],
-              "props": [],
-              "bubbles": [],
-              "cap": "小音拿着一把沙和一杯海水"
-            }
-          ]
+        "hookPic": {
+          "scene": "hook.8.geo"
         }
       },
       "finance": {
@@ -19384,154 +14491,18 @@ window.DAYS = [
         "title": "通胀：钱的数字没变，东西变贵了",
         "minutes": 7,
         "hook": "你存着的 1 万块，数字一分没少，却在悄悄缩水。",
-        "hookComic": {
-          "panels": [
-            {
-              "bg": "room",
-              "cast": [
-                {
-                  "who": "xiaoman",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [
-                {
-                  "what": "payslip",
-                  "x": 0.78,
-                  "y": 0.78,
-                  "k": 0.95
-                }
-              ],
-              "bubbles": [],
-              "cap": "存折上 10000 一分没少"
-            },
-            {
-              "bg": "room",
-              "cast": [
-                {
-                  "who": "xiaoman",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [],
-              "cap": "一年前能买 500 碗面"
-            },
-            {
-              "bg": "room",
-              "cast": [
-                {
-                  "who": "xiaoman",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [],
-              "cap": "今年只能买 485 碗"
-            },
-            {
-              "bg": "room",
-              "cast": [
-                {
-                  "who": "xiaoyin",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [
-                {
-                  "who": "xiaoyin",
-                  "text": "钱在悄悄缩水"
-                }
-              ],
-              "cap": "钱在悄悄缩水"
-            }
-          ]
-        },
         "steps": [
           {
             "title": "钱没少，却买得少了",
             "idea": "钱的数字没变，东西变贵了，能买到的就少了。",
             "visual": {
-              "type": "comic",
-              "panels": [
+              "type": "deck",
+              "id": "still.8.finance.0",
+              "slides": [
                 {
-                  "bg": "room",
-                  "cast": [
-                    {
-                      "who": "xiaoman",
-                      "x": 0.46,
-                      "y": 0.74,
-                      "face": "calm",
-                      "pose": "stand"
-                    }
-                  ],
-                  "props": [
-                    {
-                      "what": "payslip",
-                      "x": 0.78,
-                      "y": 0.78,
-                      "k": 0.95
-                    }
-                  ],
-                  "bubbles": [],
-                  "cap": "存款一分没少"
-                },
-                {
-                  "bg": "room",
-                  "cast": [
-                    {
-                      "who": "xiaoman",
-                      "x": 0.46,
-                      "y": 0.74,
-                      "face": "calm",
-                      "pose": "stand"
-                    }
-                  ],
-                  "props": [
-                    {
-                      "what": "bowl",
-                      "x": 0.78,
-                      "y": 0.78,
-                      "k": 0.95
-                    }
-                  ],
-                  "bubbles": [],
-                  "cap": "面贵了 1 块"
-                },
-                {
-                  "bg": "room",
-                  "cast": [
-                    {
-                      "who": "xiaoman",
-                      "x": 0.46,
-                      "y": 0.74,
-                      "face": "calm",
-                      "pose": "stand"
-                    }
-                  ],
-                  "props": [
-                    {
-                      "what": "bowl",
-                      "x": 0.78,
-                      "y": 0.78,
-                      "k": 0.95
-                    }
-                  ],
-                  "bubbles": [],
-                  "cap": "能买的面变少了"
+                  "scene": "still.8.finance.0",
+                  "cap": "钱会\"缩水\"，不是数字变小，是东西变贵",
+                  "sec": "takeaway"
                 }
               ]
             },
@@ -19639,66 +14610,13 @@ window.DAYS = [
             "title": "为什么会通胀？",
             "idea": "市面上的钱多得比东西快。东西还是那么多，钱却多了，每样东西就要换更多的钱。",
             "visual": {
-              "type": "comic",
-              "panels": [
+              "type": "deck",
+              "id": "still.8.finance.3",
+              "slides": [
                 {
-                  "bg": "room",
-                  "cast": [
-                    {
-                      "who": "xiaoman",
-                      "x": 0.46,
-                      "y": 0.74,
-                      "face": "calm",
-                      "pose": "stand"
-                    }
-                  ],
-                  "props": [
-                    {
-                      "what": "apple",
-                      "x": 0.78,
-                      "y": 0.78,
-                      "k": 0.95
-                    }
-                  ],
-                  "bubbles": [],
-                  "cap": "10 个苹果"
-                },
-                {
-                  "bg": "room",
-                  "cast": [
-                    {
-                      "who": "xiaoman",
-                      "x": 0.46,
-                      "y": 0.74,
-                      "face": "calm",
-                      "pose": "stand"
-                    }
-                  ],
-                  "props": [
-                    {
-                      "what": "apple",
-                      "x": 0.78,
-                      "y": 0.78,
-                      "k": 0.95
-                    }
-                  ],
-                  "bubbles": [],
-                  "cap": "钱多了"
-                },
-                {
-                  "bg": "room",
-                  "cast": [
-                    {
-                      "who": "xiaoman",
-                      "x": 0.46,
-                      "y": 0.74,
-                      "face": "calm",
-                      "pose": "stand"
-                    }
-                  ],
-                  "props": [],
-                  "bubbles": [],
-                  "cap": "每个苹果变 2 元"
+                  "scene": "still.8.finance.3",
+                  "cap": "钱比东西长得快，东西就变贵",
+                  "sec": "takeaway"
                 }
               ]
             },
@@ -19709,30 +14627,36 @@ window.DAYS = [
             "title": "100 元，一年后只剩 97 元的本事",
             "idea": "通胀 3%，就是去年 100 元的东西，今年卖 103 元。",
             "visual": {
-              "type": "chain",
-              "base": {
-                "nodes": [
-                  "去年 100 元的东西",
-                  "今年卖 103 元",
-                  "你的 100 元 ≈ 去年的 97 元"
-                ]
-              },
-              "frames": [
+              "type": "deck",
+              "id": "deck.finance.8.5",
+              "slides": [
                 {
-                  "set": {
-                    "play": 0,
-                    "step": 0
-                  },
-                  "cap": "先看骨架",
-                  "para": "idea"
+                  "scene": "g.finance.8.5.0",
+                  "cap": "去年 100 元能买下的东西。",
+                  "sec": "idea"
                 },
                 {
-                  "set": {
-                    "play": 1,
-                    "step": 2
-                  },
-                  "cap": "看完整的图",
-                  "para": "takeaway"
+                  "scene": "g.finance.8.5.1",
+                  "cap": "今年要 103 元才买得到。",
+                  "sec": [
+                    "derive",
+                    0,
+                    1
+                  ]
+                },
+                {
+                  "scene": "g.finance.8.5.2",
+                  "cap": "多出来的 3 元，就是通胀。",
+                  "sec": [
+                    "derive",
+                    2,
+                    2
+                  ]
+                },
+                {
+                  "scene": "g.finance.8.5.3",
+                  "cap": "100 元的本事，大约只剩 97。",
+                  "sec": "takeaway"
                 }
               ]
             },
@@ -19806,56 +14730,13 @@ window.DAYS = [
             "title": "串起来：1 万块是怎么缩水的",
             "idea": "回到钩子。存款数字一分没少，但物价每年涨，它能买的东西每年都少一点。",
             "visual": {
-              "type": "comic",
-              "panels": [
+              "type": "deck",
+              "id": "still.8.finance.6",
+              "slides": [
                 {
-                  "bg": "room",
-                  "cast": [
-                    {
-                      "who": "xiaoman",
-                      "x": 0.46,
-                      "y": 0.74,
-                      "face": "calm",
-                      "pose": "stand"
-                    }
-                  ],
-                  "props": [
-                    {
-                      "what": "payslip",
-                      "x": 0.78,
-                      "y": 0.78,
-                      "k": 0.95
-                    }
-                  ],
-                  "bubbles": [
-                    {
-                      "who": "xiaoman",
-                      "text": "物价 +3%"
-                    }
-                  ],
-                  "cap": "数字不变"
-                },
-                {
-                  "bg": "room",
-                  "cast": [
-                    {
-                      "who": "xiaoman",
-                      "x": 0.46,
-                      "y": 0.74,
-                      "face": "calm",
-                      "pose": "cheer"
-                    }
-                  ],
-                  "props": [
-                    {
-                      "what": "payslip",
-                      "x": 0.78,
-                      "y": 0.78,
-                      "k": 0.95
-                    }
-                  ],
-                  "bubbles": [],
-                  "cap": "能买的一年比一年少"
+                  "scene": "still.8.finance.6",
+                  "cap": "通胀不偷你的钱，偷的是钱能买到的东西",
+                  "sec": "takeaway"
                 }
               ]
             },
@@ -19982,7 +14863,10 @@ window.DAYS = [
               ]
             }
           }
-        ]
+        ],
+        "hookPic": {
+          "scene": "hook.8.finance"
+        }
       },
       "psych": {
         "id": "d08-psych",
@@ -19998,32 +14882,13 @@ window.DAYS = [
             "example": "上台前心怦怦跳，是唤醒高；下午犯困、提不起劲，是唤醒低。",
             "review": true,
             "visual": {
-              "type": "curve2",
-              "base": {},
-              "frames": [
+              "type": "deck",
+              "id": "still.8.psych.0",
+              "slides": [
                 {
-                  "set": {
-                    "step": 0,
-                    "play": 0
-                  },
+                  "scene": "still.8.psych.0",
                   "cap": "生理唤醒有高有低，今天看它和表现的关系",
-                  "para": "idea"
-                },
-                {
-                  "set": {
-                    "step": 1,
-                    "play": 0.5
-                  },
-                  "cap": "生理唤醒有高有低，今天看它和表现的关系",
-                  "para": "why"
-                },
-                {
-                  "set": {
-                    "step": 2,
-                    "play": 1
-                  },
-                  "cap": "生理唤醒有高有低，今天看它和表现的关系。",
-                  "para": "takeaway"
+                  "sec": "takeaway"
                 }
               ]
             }
@@ -20035,32 +14900,13 @@ window.DAYS = [
             "takeaway": "唤醒太低、太高都不好，适中时表现最好。",
             "example": "一场重要的直播：毫无紧张感时，你可能说话拖沓；适度紧张，反应快、节奏好；紧张到脑子一片空白，词全忘了。三种状态正好对应曲线的左、中、右。",
             "visual": {
-              "type": "curve2",
-              "base": {},
-              "frames": [
+              "type": "deck",
+              "id": "still.8.psych.1",
+              "slides": [
                 {
-                  "set": {
-                    "step": 0,
-                    "play": 0
-                  },
+                  "scene": "still.8.psych.1",
                   "cap": "唤醒太低、太高都不好，适中时表现最好",
-                  "para": "idea"
-                },
-                {
-                  "set": {
-                    "step": 1,
-                    "play": 0.5
-                  },
-                  "cap": "唤醒太低、太高都不好，适中时表现最好",
-                  "para": "why"
-                },
-                {
-                  "set": {
-                    "step": 2,
-                    "play": 1
-                  },
-                  "cap": "唤醒太低、太高都不好，适中时表现最好。",
-                  "para": "takeaway"
+                  "sec": "takeaway"
                 }
               ]
             },
@@ -20081,33 +14927,13 @@ window.DAYS = [
             "takeaway": "任务越难，最佳唤醒越低；任务越简单，最佳唤醒越高。",
             "example": "结果：黑白很好分（容易）时，电击越强，学得越快；黑白很难分（困难）时，中等强度学得最快，太强反而变慢。也就是说，任务越难，最合适的刺激强度越低。",
             "visual": {
-              "type": "comic",
-              "panels": [
+              "type": "deck",
+              "id": "still.8.psych.2",
+              "slides": [
                 {
-                  "bg": "room",
-                  "cast": [
-                    {
-                      "who": "xiaoman",
-                      "x": 0.46,
-                      "y": 0.74,
-                      "face": "calm",
-                      "pose": "stand"
-                    }
-                  ],
-                  "cap": "任务越难，最佳唤醒越低；任务"
-                },
-                {
-                  "bg": "street",
-                  "cast": [
-                    {
-                      "who": "xiaoman",
-                      "x": 0.46,
-                      "y": 0.74,
-                      "face": "calm",
-                      "pose": "stand"
-                    }
-                  ],
-                  "cap": "1908 年的小鼠实验"
+                  "scene": "still.8.psych.2",
+                  "cap": "任务越难，最佳唤醒越低；任务越简单，最佳唤醒越高",
+                  "sec": "takeaway"
                 }
               ]
             }
@@ -20134,32 +14960,46 @@ window.DAYS = [
               "why": "简单任务只需要盯住一件事，注意力窄一点反而更集中。「一定会出错」说的是复杂任务里唤醒过高的情况。"
             },
             "visual": {
-              "type": "curve2",
-              "base": {},
-              "frames": [
+              "type": "deck",
+              "id": "deck.psych.8.4",
+              "slides": [
                 {
-                  "set": {
-                    "step": 0,
-                    "play": 0
-                  },
-                  "cap": "唤醒让注意力变窄：简单任务受益，复杂任务受损",
-                  "para": "idea"
+                  "scene": "g.psych.8.4.0",
+                  "cap": "难的任务，要同时看很多东西。",
+                  "sec": "idea"
                 },
                 {
-                  "set": {
-                    "step": 1,
-                    "play": 0.5
-                  },
-                  "cap": "唤醒让注意力变窄：简单任务受益，复杂任务受损",
-                  "para": "why"
+                  "scene": "g.psych.8.4.1",
+                  "cap": "人一紧张，注意力就变窄。",
+                  "sec": "why"
                 },
                 {
-                  "set": {
-                    "step": 2,
-                    "play": 1
-                  },
-                  "cap": "唤醒让注意力变窄：简单任务受益，复杂任务受损。",
-                  "para": "takeaway"
+                  "scene": "g.psych.8.4.2",
+                  "cap": "窄了，就容易看漏关键的一步。",
+                  "sec": "example"
+                },
+                {
+                  "scene": "g.psych.8.4.3",
+                  "cap": "所以难任务最怕太紧张。",
+                  "sec": [
+                    "derive",
+                    0,
+                    1
+                  ]
+                },
+                {
+                  "scene": "g.psych.8.4.4",
+                  "cap": "简单重复的事，紧张一点反而快。",
+                  "sec": [
+                    "derive",
+                    2,
+                    3
+                  ]
+                },
+                {
+                  "scene": "g.psych.8.4.5",
+                  "cap": "任务越难，越需要冷静。",
+                  "sec": "takeaway"
                 }
               ]
             }
@@ -20171,32 +15011,13 @@ window.DAYS = [
             "takeaway": "倒 U 是粗略规律：看方向，别当精确公式。",
             "example": "所以不能拿这条曲线算出\"紧张 6 分最好\"。它的价值是给你一个方向：先看任务难不难，再决定把紧张调高一点，还是降下来。",
             "visual": {
-              "type": "chain",
-              "base": {},
-              "frames": [
+              "type": "deck",
+              "id": "still.8.psych.4",
+              "slides": [
                 {
-                  "set": {
-                    "step": 0,
-                    "play": 0
-                  },
+                  "scene": "still.8.psych.4",
                   "cap": "倒 U 是粗略规律：看方向，别当精确公式",
-                  "para": "idea"
-                },
-                {
-                  "set": {
-                    "step": 1,
-                    "play": 0.5
-                  },
-                  "cap": "倒 U 是粗略规律：看方向，别当精确公式",
-                  "para": "why"
-                },
-                {
-                  "set": {
-                    "step": 2,
-                    "play": 1
-                  },
-                  "cap": "倒 U 是粗略规律：看方向，别当精确公式。",
-                  "para": "takeaway"
+                  "sec": "takeaway"
                 }
               ]
             }
@@ -20208,32 +15029,13 @@ window.DAYS = [
             "takeaway": "先看任务难度，再把紧张调到合适的位置。",
             "example": "演奏熟练的曲子，紧张一点反而更有激情；演奏刚学的新曲，就要先把唤醒降下来，用慢呼气稳住。",
             "visual": {
-              "type": "curve2",
-              "base": {},
-              "frames": [
+              "type": "deck",
+              "id": "still.8.psych.5",
+              "slides": [
                 {
-                  "set": {
-                    "step": 0,
-                    "play": 0
-                  },
+                  "scene": "still.8.psych.5",
                   "cap": "先看任务难度，再把紧张调到合适的位置",
-                  "para": "idea"
-                },
-                {
-                  "set": {
-                    "step": 1,
-                    "play": 0.5
-                  },
-                  "cap": "先看任务难度，再把紧张调到合适的位置",
-                  "para": "why"
-                },
-                {
-                  "set": {
-                    "step": 2,
-                    "play": 1
-                  },
-                  "cap": "先看任务难度，再把紧张调到合适的位置。",
-                  "para": "takeaway"
+                  "sec": "takeaway"
                 }
               ]
             }
@@ -20294,69 +15096,8 @@ window.DAYS = [
             "ref": 3
           }
         ],
-        "hookComic": {
-          "panels": [
-            {
-              "bg": "room",
-              "cast": [
-                {
-                  "who": "xiaoman",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "worry",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [],
-              "cap": "演出前小满一点都不紧张"
-            },
-            {
-              "bg": "room",
-              "cast": [
-                {
-                  "who": "xiaoman",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [],
-              "cap": "上台弹错了好几处"
-            },
-            {
-              "bg": "room",
-              "cast": [
-                {
-                  "who": "xiaoman",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "worry",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [],
-              "cap": "下一次有点紧张"
-            },
-            {
-              "bg": "room",
-              "cast": [
-                {
-                  "who": "xiaoyin",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [],
-              "cap": "小音画出一条倒 U"
-            }
-          ]
+        "hookPic": {
+          "scene": "hook.8.psych"
         }
       },
       "english": {
@@ -21058,33 +15799,46 @@ window.DAYS = [
               "让一方让步，张力就有了解决（卡 4）。"
             ],
             "visual": {
-              "type": "comic",
-              "panels": [
+              "type": "deck",
+              "id": "deck.fashion.9.5",
+              "slides": [
                 {
-                  "bg": "room",
-                  "cast": [
-                    {
-                      "who": "xiaoman",
-                      "x": 0.46,
-                      "y": 0.74,
-                      "face": "calm",
-                      "pose": "stand"
-                    }
-                  ],
-                  "cap": "互补色是眼睛里的天生对立，对"
+                  "scene": "g.fashion.9.5.0",
+                  "cap": "盯久了红色，再看白墙。",
+                  "sec": "idea"
                 },
                 {
-                  "bg": "street",
-                  "cast": [
-                    {
-                      "who": "xiaoman",
-                      "x": 0.46,
-                      "y": 0.74,
-                      "face": "calm",
-                      "pose": "stand"
-                    }
-                  ],
-                  "cap": "串起来：从残像到穿搭"
+                  "scene": "g.fashion.9.5.1",
+                  "cap": "墙上会浮出绿色的影子。",
+                  "sec": "why"
+                },
+                {
+                  "scene": "g.fashion.9.5.2",
+                  "cap": "红和绿在眼睛里是一对。",
+                  "sec": "example"
+                },
+                {
+                  "scene": "g.fashion.9.5.3",
+                  "cap": "一对对立色放在一起最醒目。",
+                  "sec": [
+                    "derive",
+                    0,
+                    1
+                  ]
+                },
+                {
+                  "scene": "g.fashion.9.5.4",
+                  "cap": "衣服上也可以这样配。",
+                  "sec": [
+                    "derive",
+                    2,
+                    2
+                  ]
+                },
+                {
+                  "scene": "g.fashion.9.5.5",
+                  "cap": "残像告诉你，哪两个颜色最响。",
+                  "sec": "takeaway"
                 }
               ]
             }
@@ -21145,74 +15899,8 @@ window.DAYS = [
             "ref": 3
           }
         ],
-        "hookComic": {
-          "panels": [
-            {
-              "bg": "room",
-              "cast": [
-                {
-                  "who": "xiaoman",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [],
-              "cap": "小满盯着一块红布"
-            },
-            {
-              "bg": "room",
-              "cast": [
-                {
-                  "who": "xiaoman",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [],
-              "cap": "30 秒后看白墙"
-            },
-            {
-              "bg": "room",
-              "cast": [
-                {
-                  "who": "xiaoman",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [],
-              "cap": "墙上出现淡绿色"
-            },
-            {
-              "bg": "room",
-              "cast": [
-                {
-                  "who": "xiaoyin",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [
-                {
-                  "who": "xiaoyin",
-                  "text": "眼睛在补颜色"
-                }
-              ],
-              "cap": "眼睛在补颜色"
-            }
-          ]
+        "hookPic": {
+          "scene": "hook.9.fashion"
         }
       },
       "history": {
@@ -21245,32 +15933,13 @@ window.DAYS = [
               "也需要一个就地拍板的指挥官。"
             ],
             "visual": {
-              "type": "histmap",
-              "base": {},
-              "frames": [
+              "type": "deck",
+              "id": "still.9.history.1",
+              "slides": [
                 {
-                  "set": {
-                    "step": 0,
-                    "play": 0
-                  },
+                  "scene": "still.9.history.1",
                   "cap": "边境太长，唐需要常驻边疆的军队和就地拍板的指挥官",
-                  "para": "idea"
-                },
-                {
-                  "set": {
-                    "step": 1,
-                    "play": 0.5
-                  },
-                  "cap": "边境太长，唐需要常驻边疆的军队和就地拍板的指挥官",
-                  "para": "why"
-                },
-                {
-                  "set": {
-                    "step": 2,
-                    "play": 1
-                  },
-                  "cap": "边境太长，唐需要常驻边疆的军队和就地拍板的指挥官。",
-                  "para": "takeaway"
+                  "sec": "takeaway"
                 }
               ]
             }
@@ -21283,32 +15952,13 @@ window.DAYS = [
             "example": "像一家公司在外地开分部，派一位总经理常驻。当地的事他直接拍板，不用事事打电话问总部。刚开始，这很高效。",
             "exLabel": "打个比方",
             "visual": {
-              "type": "histmap",
-              "base": {},
-              "frames": [
+              "type": "deck",
+              "id": "still.9.history.2",
+              "slides": [
                 {
-                  "set": {
-                    "step": 0,
-                    "play": 0
-                  },
+                  "scene": "still.9.history.2",
                   "cap": "节度使是常驻边疆、就地指挥的军区长官，一开始很管用",
-                  "para": "idea"
-                },
-                {
-                  "set": {
-                    "step": 1,
-                    "play": 0.5
-                  },
-                  "cap": "节度使是常驻边疆、就地指挥的军区长官，一开始很管用",
-                  "para": "why"
-                },
-                {
-                  "set": {
-                    "step": 2,
-                    "play": 1
-                  },
-                  "cap": "节度使是常驻边疆、就地指挥的军区长官，一开始很管用。",
-                  "para": "takeaway"
+                  "sec": "takeaway"
                 }
               ]
             }
@@ -21327,32 +15977,13 @@ window.DAYS = [
               "三样齐了，中央就管不住他。"
             ],
             "visual": {
-              "type": "chain",
-              "base": {},
-              "frames": [
+              "type": "deck",
+              "id": "still.9.history.3",
+              "slides": [
                 {
-                  "set": {
-                    "step": 0,
-                    "play": 0
-                  },
+                  "scene": "still.9.history.3",
                   "cap": "节度使兵、财、地一手抓，就成了中央管不住的\"小朝廷\"",
-                  "para": "idea"
-                },
-                {
-                  "set": {
-                    "step": 1,
-                    "play": 0.5
-                  },
-                  "cap": "节度使兵、财、地一手抓，就成了中央管不住的\"小朝廷\"",
-                  "para": "why"
-                },
-                {
-                  "set": {
-                    "step": 2,
-                    "play": 1
-                  },
-                  "cap": "节度使兵、财、地一手抓，就成了中央管不住的\"小朝廷\"。",
-                  "para": "takeaway"
+                  "sec": "takeaway"
                 }
               ]
             },
@@ -21379,72 +16010,13 @@ window.DAYS = [
               "乱打了 8 年，唐元气大伤。"
             ],
             "visual": {
-              "type": "comic",
-              "panels": [
+              "type": "deck",
+              "id": "still.9.history.4",
+              "slides": [
                 {
-                  "bg": "mountain",
-                  "cast": [
-                    {
-                      "who": "kingWu",
-                      "x": 0.46,
-                      "y": 0.74,
-                      "face": "calm",
-                      "pose": "stand"
-                    }
-                  ],
-                  "props": [],
-                  "bubbles": [],
-                  "cap": "安禄山（`anLushan`"
-                },
-                {
-                  "bg": "palace",
-                  "cast": [
-                    {
-                      "who": "kingWu",
-                      "x": 0.46,
-                      "y": 0.74,
-                      "face": "calm",
-                      "pose": "stand"
-                    }
-                  ],
-                  "props": [],
-                  "bubbles": [
-                    {
-                      "who": "kingWu",
-                      "text": "清君侧！"
-                    }
-                  ],
-                  "cap": "清君侧！"
-                },
-                {
-                  "bg": "palace",
-                  "cast": [
-                    {
-                      "who": "kingWu",
-                      "x": 0.46,
-                      "y": 0.74,
-                      "face": "calm",
-                      "pose": "stand"
-                    }
-                  ],
-                  "props": [],
-                  "bubbles": [],
-                  "cap": "大军南下"
-                },
-                {
-                  "bg": "palace",
-                  "cast": [
-                    {
-                      "who": "kingWu",
-                      "x": 0.46,
-                      "y": 0.74,
-                      "face": "calm",
-                      "pose": "stand"
-                    }
-                  ],
-                  "props": [],
-                  "bubbles": [],
-                  "cap": "唐玄宗逃往四川"
+                  "scene": "still.9.history.4",
+                  "cap": "安史之乱，是节度使权力过大的一次总爆发",
+                  "sec": "takeaway"
                 }
               ]
             }
@@ -21471,32 +16043,46 @@ window.DAYS = [
               "why": "朝廷靠封节度使换将领出力、换叛将投降，所以「变多了，内地也设」。「变少了，朝廷都收回了」正好相反，朝廷那时没有收回的力量。"
             },
             "visual": {
-              "type": "chain",
-              "base": {},
-              "frames": [
+              "type": "deck",
+              "id": "deck.history.9.6",
+              "slides": [
                 {
-                  "set": {
-                    "step": 0,
-                    "play": 0
-                  },
-                  "cap": "为了尽快平乱，唐朝拿\"加封节度使\"换和平，反而养出更多小朝廷",
-                  "para": "idea"
+                  "scene": "g.history.9.6.0",
+                  "cap": "节度使本来是去守边境的。",
+                  "sec": "idea"
                 },
                 {
-                  "set": {
-                    "step": 1,
-                    "play": 0.5
-                  },
-                  "cap": "为了尽快平乱，唐朝拿\"加封节度使\"换和平，反而养出更多小朝廷",
-                  "para": "why"
+                  "scene": "g.history.9.6.1",
+                  "cap": "安史之乱，内地也危险了。",
+                  "sec": "why"
                 },
                 {
-                  "set": {
-                    "step": 2,
-                    "play": 1
-                  },
-                  "cap": "为了尽快平乱，唐朝拿\"加封节度使\"换和平，反而养出更多小朝廷。",
-                  "para": "takeaway"
+                  "scene": "g.history.9.6.2",
+                  "cap": "内地也开始设节度使。",
+                  "sec": "example"
+                },
+                {
+                  "scene": "g.history.9.6.3",
+                  "cap": "兵、钱、地到了一个人手里。",
+                  "sec": [
+                    "derive",
+                    0,
+                    1
+                  ]
+                },
+                {
+                  "scene": "g.history.9.6.4",
+                  "cap": "乱平了，这样的人反而更多。",
+                  "sec": [
+                    "derive",
+                    2,
+                    3
+                  ]
+                },
+                {
+                  "scene": "g.history.9.6.5",
+                  "cap": "平乱的办法，造出更多藩镇。",
+                  "sec": "takeaway"
                 }
               ]
             }
@@ -21518,32 +16104,13 @@ window.DAYS = [
               "why": "藩镇的位子常由「他的儿子或部将」接，朝廷只能事后承认。「长安派来的新官」是中央说了算的样子，藩镇割据时恰恰做不到。"
             },
             "visual": {
-              "type": "histmap",
-              "base": {},
-              "frames": [
+              "type": "deck",
+              "id": "still.9.history.6",
+              "slides": [
                 {
-                  "set": {
-                    "step": 0,
-                    "play": 0
-                  },
+                  "scene": "still.9.history.6",
                   "cap": "藩镇割据：节度使自己用人、自己收税、自己传位，中央管不了",
-                  "para": "idea"
-                },
-                {
-                  "set": {
-                    "step": 1,
-                    "play": 0.5
-                  },
-                  "cap": "藩镇割据：节度使自己用人、自己收税、自己传位，中央管不了",
-                  "para": "why"
-                },
-                {
-                  "set": {
-                    "step": 2,
-                    "play": 1
-                  },
-                  "cap": "藩镇割据：节度使自己用人、自己收税、自己传位，中央管不了。",
-                  "para": "takeaway"
+                  "sec": "takeaway"
                 }
               ]
             }
@@ -21560,32 +16127,13 @@ window.DAYS = [
               "最强的那个，直接取代皇帝。"
             ],
             "visual": {
-              "type": "chain",
-              "base": {},
-              "frames": [
+              "type": "deck",
+              "id": "still.9.history.7",
+              "slides": [
                 {
-                  "set": {
-                    "step": 0,
-                    "play": 0
-                  },
+                  "scene": "still.9.history.7",
                   "cap": "唐亡于节度使之手：907 年朱温废唐，建立后梁",
-                  "para": "idea"
-                },
-                {
-                  "set": {
-                    "step": 1,
-                    "play": 0.5
-                  },
-                  "cap": "唐亡于节度使之手：907 年朱温废唐，建立后梁",
-                  "para": "why"
-                },
-                {
-                  "set": {
-                    "step": 2,
-                    "play": 1
-                  },
-                  "cap": "唐亡于节度使之手：907 年朱温废唐，建立后梁。",
-                  "para": "takeaway"
+                  "sec": "takeaway"
                 }
               ]
             }
@@ -21603,32 +16151,46 @@ window.DAYS = [
               "下一关：53 年换 5 个朝代，公式的\"满级版\"。"
             ],
             "visual": {
-              "type": "chain",
-              "base": {},
-              "frames": [
+              "type": "deck",
+              "id": "deck.history.9.9",
+              "slides": [
                 {
-                  "set": {
-                    "step": 0,
-                    "play": 0
-                  },
-                  "cap": "地方兵、财、地一手抓 → 中央失控 → 分裂；五代是它的满级版",
-                  "para": "idea"
+                  "scene": "g.history.9.9.0",
+                  "cap": "先是设人去守边。",
+                  "sec": "idea"
                 },
                 {
-                  "set": {
-                    "step": 1,
-                    "play": 0.5
-                  },
-                  "cap": "地方兵、财、地一手抓 → 中央失控 → 分裂；五代是它的满级版",
-                  "para": "why"
+                  "scene": "g.history.9.9.1",
+                  "cap": "兵、财、地慢慢到他手里。",
+                  "sec": "why"
                 },
                 {
-                  "set": {
-                    "step": 2,
-                    "play": 1
-                  },
-                  "cap": "地方兵、财、地一手抓 → 中央失控 → 分裂；五代是它的满级版。",
-                  "para": "takeaway"
+                  "scene": "g.history.9.9.2",
+                  "cap": "然后爆发安史之乱。",
+                  "sec": "example"
+                },
+                {
+                  "scene": "g.history.9.9.3",
+                  "cap": "乱后，藩镇在各地扎下。",
+                  "sec": [
+                    "derive",
+                    0,
+                    1
+                  ]
+                },
+                {
+                  "scene": "g.history.9.9.4",
+                  "cap": "唐最后亡在这些节度使手里。",
+                  "sec": [
+                    "derive",
+                    2,
+                    2
+                  ]
+                },
+                {
+                  "scene": "g.history.9.9.5",
+                  "cap": "守边的人太强，朝廷就会空。",
+                  "sec": "takeaway"
                 }
               ]
             }
@@ -21700,88 +16262,8 @@ window.DAYS = [
             "kind": "event"
           }
         ],
-        "hookComic": {
-          "panels": [
-            {
-              "bg": "palace",
-              "cast": [
-                {
-                  "who": "kingWu",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [
-                {
-                  "what": "castle",
-                  "x": 0.78,
-                  "y": 0.78,
-                  "k": 0.95
-                }
-              ],
-              "bubbles": [],
-              "cap": "开元盛世"
-            },
-            {
-              "bg": "palace",
-              "cast": [
-                {
-                  "who": "kingWu",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [
-                {
-                  "what": "castle",
-                  "x": 0.78,
-                  "y": 0.78,
-                  "k": 0.95
-                }
-              ],
-              "bubbles": [],
-              "cap": "不到 20 年后"
-            },
-            {
-              "bg": "palace",
-              "cast": [
-                {
-                  "who": "xiaoman",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [
-                {
-                  "who": "xiaoman",
-                  "text": "谁推了第一把？"
-                }
-              ],
-              "cap": "谁推了第一把？"
-            },
-            {
-              "bg": "palace",
-              "cast": [
-                {
-                  "who": "xiaoyin",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "point"
-                }
-              ],
-              "props": [],
-              "bubbles": [],
-              "cap": "小音指向边疆"
-            }
-          ]
+        "hookPic": {
+          "scene": "hook.9.history"
         }
       },
       "geo": {
@@ -21925,32 +16407,13 @@ window.DAYS = [
               "山北冬天更冷，山南更暖。"
             ],
             "visual": {
-              "type": "ridge2",
-              "base": {},
-              "frames": [
+              "type": "deck",
+              "id": "still.9.geo.3",
+              "slides": [
                 {
-                  "set": {
-                    "step": 0,
-                    "play": 0
-                  },
+                  "scene": "still.9.geo.3",
                   "cap": "秦岭挡住南下的冷空气：山北冬冷，山南冬暖",
-                  "para": "idea"
-                },
-                {
-                  "set": {
-                    "step": 1,
-                    "play": 0.5
-                  },
-                  "cap": "秦岭挡住南下的冷空气：山北冬冷，山南冬暖",
-                  "para": "why"
-                },
-                {
-                  "set": {
-                    "step": 2,
-                    "play": 1
-                  },
-                  "cap": "秦岭挡住南下的冷空气：山北冬冷，山南冬暖。",
-                  "para": "takeaway"
+                  "sec": "takeaway"
                 }
               ]
             }
@@ -21968,32 +16431,13 @@ window.DAYS = [
               "翻过山的空气变干，山北雨少。"
             ],
             "visual": {
-              "type": "ridge2",
-              "base": {},
-              "frames": [
+              "type": "deck",
+              "id": "still.9.geo.4",
+              "slides": [
                 {
-                  "set": {
-                    "step": 0,
-                    "play": 0
-                  },
+                  "scene": "still.9.geo.4",
                   "cap": "湿气被秦岭逼着爬坡，在南坡下成雨，山北就干了",
-                  "para": "idea"
-                },
-                {
-                  "set": {
-                    "step": 1,
-                    "play": 0.5
-                  },
-                  "cap": "湿气被秦岭逼着爬坡，在南坡下成雨，山北就干了",
-                  "para": "why"
-                },
-                {
-                  "set": {
-                    "step": 2,
-                    "play": 1
-                  },
-                  "cap": "湿气被秦岭逼着爬坡，在南坡下成雨，山北就干了。",
-                  "para": "takeaway"
+                  "sec": "takeaway"
                 }
               ]
             },
@@ -22075,32 +16519,46 @@ window.DAYS = [
               "why": "10 毫米是 1 厘米，800 毫米就是 80 厘米。「8 米」是把毫米当成了厘米。"
             },
             "visual": {
-              "type": "gauge",
-              "base": {},
-              "frames": [
+              "type": "deck",
+              "id": "deck.geo.9.7",
+              "slides": [
                 {
-                  "set": {
-                    "step": 0,
-                    "play": 0
-                  },
-                  "cap": "秦岭—淮河 ≈ 800 毫米年降水量线 ≈ 水田和旱地的分界",
-                  "para": "idea"
+                  "scene": "g.geo.9.7.0",
+                  "cap": "这条线大约也是 800 毫米雨线。",
+                  "sec": "idea"
                 },
                 {
-                  "set": {
-                    "step": 1,
-                    "play": 0.5
-                  },
-                  "cap": "秦岭—淮河 ≈ 800 毫米年降水量线 ≈ 水田和旱地的分界",
-                  "para": "why"
+                  "scene": "g.geo.9.7.1",
+                  "cap": "线以南，一年的雨更多。",
+                  "sec": "why"
                 },
                 {
-                  "set": {
-                    "step": 2,
-                    "play": 1
-                  },
-                  "cap": "秦岭—淮河 ≈ 800 毫米年降水量线 ≈ 水田和旱地的分界。",
-                  "para": "takeaway"
+                  "scene": "g.geo.9.7.2",
+                  "cap": "线以北，一年的雨更少。",
+                  "sec": "example"
+                },
+                {
+                  "scene": "g.geo.9.7.3",
+                  "cap": "把一年的雨积起来，能有多深。",
+                  "sec": [
+                    "derive",
+                    0,
+                    1
+                  ]
+                },
+                {
+                  "scene": "g.geo.9.7.4",
+                  "cap": "雨多的一边更适合种稻。",
+                  "sec": [
+                    "derive",
+                    2,
+                    2
+                  ]
+                },
+                {
+                  "scene": "g.geo.9.7.5",
+                  "cap": "800 毫米，把南和北分开。",
+                  "sec": "takeaway"
                 }
               ]
             }
@@ -22117,32 +16575,46 @@ window.DAYS = [
               "北边旱地种小麦吃面，南边水田种水稻吃米。"
             ],
             "visual": {
-              "type": "cnmap",
-              "base": {},
-              "frames": [
+              "type": "deck",
+              "id": "deck.geo.9.8",
+              "slides": [
                 {
-                  "set": {
-                    "step": 0,
-                    "play": 0
-                  },
-                  "cap": "秦岭—淮河 ≈ 1 月 0°C 等温线 ≈ 800 毫米线；北麦南稻，北面南米",
-                  "para": "idea"
+                  "scene": "g.geo.9.8.0",
+                  "cap": "一堵东西向的高墙。",
+                  "sec": "idea"
                 },
                 {
-                  "set": {
-                    "step": 1,
-                    "play": 0.5
-                  },
-                  "cap": "秦岭—淮河 ≈ 1 月 0°C 等温线 ≈ 800 毫米线；北麦南稻，北面南米",
-                  "para": "why"
+                  "scene": "g.geo.9.8.1",
+                  "cap": "冬天，冷空气翻不过去。",
+                  "sec": "why"
                 },
                 {
-                  "set": {
-                    "step": 2,
-                    "play": 1
-                  },
-                  "cap": "秦岭—淮河 ≈ 1 月 0°C 等温线 ≈ 800 毫米线；北麦南稻，北面南米。",
-                  "para": "takeaway"
+                  "scene": "g.geo.9.8.2",
+                  "cap": "夏天，湿气在南坡先下雨。",
+                  "sec": "example"
+                },
+                {
+                  "scene": "g.geo.9.8.3",
+                  "cap": "墙北少雨，人们吃面。",
+                  "sec": [
+                    "derive",
+                    0,
+                    1
+                  ]
+                },
+                {
+                  "scene": "g.geo.9.8.4",
+                  "cap": "墙南多雨，人们吃米。",
+                  "sec": [
+                    "derive",
+                    2,
+                    2
+                  ]
+                },
+                {
+                  "scene": "g.geo.9.8.5",
+                  "cap": "一堵墙，分出两种日子。",
+                  "sec": "takeaway"
                 }
               ]
             }
@@ -22228,74 +16700,8 @@ window.DAYS = [
             "label": "JS"
           }
         ],
-        "hookComic": {
-          "panels": [
-            {
-              "bg": "mountain",
-              "cast": [
-                {
-                  "who": "xiaoman",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [],
-              "cap": "北方：小满在暖气房里吃面"
-            },
-            {
-              "bg": "mountain",
-              "cast": [
-                {
-                  "who": "ale",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [],
-              "cap": "南方：阿乐裹着毯子吃米饭"
-            },
-            {
-              "bg": "mountain",
-              "cast": [
-                {
-                  "who": "xiaoman",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [],
-              "cap": "两碗饭中间一条线"
-            },
-            {
-              "bg": "mountain",
-              "cast": [
-                {
-                  "who": "xiaoyin",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [
-                {
-                  "who": "xiaoyin",
-                  "text": "答案在一座山和一条河里"
-                }
-              ],
-              "cap": "答案在一座山和一条河里"
-            }
-          ]
+        "hookPic": {
+          "scene": "hook.9.geo"
         }
       },
       "finance": {
@@ -22303,128 +16709,18 @@ window.DAYS = [
         "title": "收益要换成同一把尺子",
         "minutes": 7,
         "hook": "理财收益 2%，看起来在赚钱。如果物价涨了 3% 呢？另一个产品\"3 个月赚 1%\"，又该怎么比？",
-        "hookComic": {
-          "panels": [
-            {
-              "bg": "room",
-              "cast": [
-                {
-                  "who": "xiaoman",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [],
-              "cap": "理财 App 显示 +2%"
-            },
-            {
-              "bg": "room",
-              "cast": [
-                {
-                  "who": "xiaoman",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "happy",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [],
-              "cap": "小满开心"
-            },
-            {
-              "bg": "room",
-              "cast": [
-                {
-                  "who": "xiaoman",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [],
-              "cap": "超市价签涨了 3%"
-            },
-            {
-              "bg": "room",
-              "cast": [
-                {
-                  "who": "xiaoyin",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [],
-              "cap": "小音把两个数放上天平"
-            }
-          ]
-        },
         "steps": [
           {
             "title": "赚了 2%，真的赚了吗？",
             "idea": "账上的钱变多了，不等于你能买的东西变多了。",
             "visual": {
-              "type": "comic",
-              "panels": [
+              "type": "deck",
+              "id": "still.9.finance.0",
+              "slides": [
                 {
-                  "bg": "room",
-                  "cast": [
-                    {
-                      "who": "xiaoman",
-                      "x": 0.46,
-                      "y": 0.74,
-                      "face": "happy",
-                      "pose": "stand"
-                    }
-                  ],
-                  "props": [],
-                  "bubbles": [],
-                  "cap": "钱多了 2 元"
-                },
-                {
-                  "bg": "room",
-                  "cast": [
-                    {
-                      "who": "xiaoman",
-                      "x": 0.46,
-                      "y": 0.74,
-                      "face": "calm",
-                      "pose": "stand"
-                    }
-                  ],
-                  "props": [],
-                  "bubbles": [],
-                  "cap": "面也贵了"
-                },
-                {
-                  "bg": "room",
-                  "cast": [
-                    {
-                      "who": "xiaoman",
-                      "x": 0.46,
-                      "y": 0.74,
-                      "face": "worry",
-                      "pose": "think"
-                    }
-                  ],
-                  "props": [
-                    {
-                      "what": "bowl",
-                      "x": 0.78,
-                      "y": 0.78,
-                      "k": 0.95
-                    }
-                  ],
-                  "bubbles": [],
-                  "cap": "能买的反而少了"
+                  "scene": "still.9.finance.0",
+                  "cap": "钱变多，不一定是变富",
+                  "sec": "takeaway"
                 }
               ]
             },
@@ -22524,93 +16820,71 @@ window.DAYS = [
           {
             "title": "时间不一样长，没法直接比",
             "idea": "一个 3 个月赚 1%，一个 1 年赚 3%。哪个更好？直接比 1 和 3，是不公平的。",
-            "visual": {
-              "type": "duo",
-              "base": {
-                "a": {
-                  "type": "columns",
-                  "base": {
-                    "items": [
-                      {
-                        "label": "产品甲",
-                        "value": 1
-                      },
-                      {
-                        "label": "3 个月赚",
-                        "value": 1
-                      }
-                    ]
-                  }
-                },
-                "b": {
-                  "type": "columns",
-                  "base": {
-                    "items": [
-                      {
-                        "label": "产品乙",
-                        "value": 1
-                      },
-                      {
-                        "label": "1 年赚",
-                        "value": 3
-                      }
-                    ]
-                  }
-                },
-                "dir": "row",
-                "vs": ""
-              },
-              "frames": [
-                {
-                  "set": {
-                    "both": 0
-                  },
-                  "cap": "先看一边",
-                  "para": "idea"
-                },
-                {
-                  "set": {
-                    "both": 1
-                  },
-                  "cap": "两边放一起看",
-                  "para": "takeaway"
-                }
-              ]
-            },
             "example": "像比两个人跑得快不快。一个跑了 3 分钟，一个跑了 12 分钟，只比谁跑得远，不公平。要都换成\"每分钟跑多远\"。",
-            "takeaway": "时长不同的收益，不能直接比数字。"
+            "takeaway": "时长不同的收益，不能直接比数字。",
+            "deckHost": 4
           },
           {
             "title": "年化：都换成\"一年\"",
             "idea": "**年化**就是假装一直这样赚，满一年大约是多少。把所有产品都换成\"一年\"，才能放在一起比。",
             "visual": {
-              "type": "chain",
-              "base": {
-                "nodes": [
-                  "3 个月 1%",
-                  "3 个月 1%",
-                  "3 个月 1%",
-                  "3 个月 1%",
-                  "一年约 4%"
-                ]
-              },
-              "frames": [
+              "type": "deck",
+              "id": "deck.finance.9.5",
+              "slides": [
                 {
-                  "set": {
-                    "play": 0,
-                    "step": 0
-                  },
-                  "cap": "先看骨架",
-                  "para": "idea"
+                  "scene": "s14.fin.1",
+                  "cap": "甲：3 个月赚 1%；乙：1 年赚 3%。哪个更好？",
+                  "sec": [
+                    4,
+                    "idea"
+                  ]
                 },
                 {
-                  "set": {
-                    "play": 1,
-                    "step": 2
-                  },
-                  "cap": "看完整的图",
-                  "para": "takeaway"
+                  "scene": "s14.fin.2",
+                  "cap": "像比赛跑：一个跑 3 分钟，一个跑 12 分钟。",
+                  "sec": [
+                    4,
+                    "example"
+                  ]
+                },
+                {
+                  "scene": "s14.fin.3",
+                  "cap": "一年里能放下 4 个\"3 个月\"，每段赚 1%。",
+                  "sec": [
+                    5,
+                    "derive",
+                    0,
+                    9
+                  ]
+                },
+                {
+                  "scene": "s14.fin.4",
+                  "cap": "同一把\"一年\"的尺子上：甲约 4%，比乙的 3% 高。",
+                  "sec": [
+                    5,
+                    "takeaway"
+                  ]
+                },
+                {
+                  "scene": "s14.fin.5",
+                  "cap": "广告上的\"7 日年化 3%\"：是换算成一年，不是 7 天就赚 3%。",
+                  "secs": [
+                    [
+                      6,
+                      "derive",
+                      0,
+                      9
+                    ],
+                    [
+                      6,
+                      "takeaway"
+                    ]
+                  ]
                 }
+              ],
+              "span": [
+                4,
+                6
               ]
             },
             "takeaway": "年化 = 换成\"一年赚多少\"，时长不同也能比。",
@@ -22633,32 +16907,6 @@ window.DAYS = [
           {
             "title": "年化不是你真能拿到的钱",
             "idea": "广告写\"7 日年化 3%\"，意思是：按最近 7 天的赚法，换算成一年约 3%。不是 7 天就赚 3%。",
-            "visual": {
-              "type": "tag",
-              "base": {
-                "title": "某现金产品",
-                "big": "7 日年化 3%",
-                "small": "存 1 万元 7 天，约得 5.75 元"
-              },
-              "frames": [
-                {
-                  "set": {
-                    "play": 0,
-                    "step": 0
-                  },
-                  "cap": "先看骨架",
-                  "para": "idea"
-                },
-                {
-                  "set": {
-                    "play": 1,
-                    "step": 2
-                  },
-                  "cap": "看完整的图",
-                  "para": "takeaway"
-                }
-              ]
-            },
             "takeaway": "年化是换算出来的尺子；存多久，才拿多久的份。",
             "derive": [
               "1 万元存满一年，约得 10000 × 3% = 300 元。",
@@ -22673,37 +16921,20 @@ window.DAYS = [
               ],
               "answer": 0,
               "why": "3% 是一整年的数，7 天只占一年的一小段：300 ÷ 365 × 7 ≈ 5.75，约 6 元。「300 元」是存满一年才有的。"
-            }
+            },
+            "deckHost": 4
           },
           {
             "title": "串起来：先换尺子，再扣物价",
             "idea": "以后看到任何收益，走三步：先看是多长时间的；再换成年化；最后减掉通胀。",
             "visual": {
-              "type": "chain",
-              "base": {
-                "nodes": [
-                  "看清是多久",
-                  "换成年化",
-                  "减去通胀",
-                  "真实赚了多少"
-                ]
-              },
-              "frames": [
+              "type": "deck",
+              "id": "still.9.finance.6",
+              "slides": [
                 {
-                  "set": {
-                    "play": 0,
-                    "step": 0
-                  },
-                  "cap": "先看骨架",
-                  "para": "idea"
-                },
-                {
-                  "set": {
-                    "play": 1,
-                    "step": 2
-                  },
-                  "cap": "看完整的图",
-                  "para": "takeaway"
+                  "scene": "still.9.finance.6",
+                  "cap": "比收益三步：看时长、换年化、减通胀",
+                  "sec": "takeaway"
                 }
               ]
             },
@@ -22784,7 +17015,10 @@ window.DAYS = [
             "why": "一年有 2 个半年，2% × 2 = 4%。「2%」只是半年的；「1%」是把它除了 2，方向反了。",
             "ref": 4
           }
-        ]
+        ],
+        "hookPic": {
+          "scene": "hook.9.finance"
+        }
       },
       "psych": {
         "id": "d09-psych",
@@ -22819,33 +17053,13 @@ window.DAYS = [
               "why": "不同压力源引起了同一组变化，所以是「很相似」。这正是塞利最重要的发现，「完全不同」正好相反。"
             },
             "visual": {
-              "type": "comic",
-              "panels": [
+              "type": "deck",
+              "id": "still.9.psych.1",
+              "slides": [
                 {
-                  "bg": "room",
-                  "cast": [
-                    {
-                      "who": "xiaoman",
-                      "x": 0.46,
-                      "y": 0.74,
-                      "face": "calm",
-                      "pose": "stand"
-                    }
-                  ],
-                  "cap": "压力源各不相同，身体的压力反"
-                },
-                {
-                  "bg": "street",
-                  "cast": [
-                    {
-                      "who": "selye",
-                      "x": 0.46,
-                      "y": 0.74,
-                      "face": "calm",
-                      "pose": "stand"
-                    }
-                  ],
-                  "cap": "塞利的发现：不同的苦，同一种"
+                  "scene": "still.9.psych.1",
+                  "cap": "压力源各不相同，身体的压力反应却很相似",
+                  "sec": "takeaway"
                 }
               ]
             }
@@ -22857,32 +17071,13 @@ window.DAYS = [
             "takeaway": "一般适应综合征第一段：警觉期，身体紧急动员。",
             "example": "接到\"明天上午要交方案\"的消息，你一下子清醒了，心跳加快，晚饭都顾不上吃，一口气干到深夜。这就是警觉期。",
             "visual": {
-              "type": "gas",
-              "base": {},
-              "frames": [
+              "type": "deck",
+              "id": "still.9.psych.2",
+              "slides": [
                 {
-                  "set": {
-                    "step": 0,
-                    "play": 0
-                  },
+                  "scene": "still.9.psych.2",
                   "cap": "一般适应综合征第一段：警觉期，身体紧急动员",
-                  "para": "idea"
-                },
-                {
-                  "set": {
-                    "step": 1,
-                    "play": 0.5
-                  },
-                  "cap": "一般适应综合征第一段：警觉期，身体紧急动员",
-                  "para": "why"
-                },
-                {
-                  "set": {
-                    "step": 2,
-                    "play": 1
-                  },
-                  "cap": "一般适应综合征第一段：警觉期，身体紧急动员。",
-                  "para": "takeaway"
+                  "sec": "takeaway"
                 }
               ]
             }
@@ -22895,32 +17090,13 @@ window.DAYS = [
             "example": "像手机屏幕看着一切正常，后台却一直有程序在跑，电量一格格往下掉。",
             "exLabel": "打个比方",
             "visual": {
-              "type": "gas",
-              "base": {},
-              "frames": [
+              "type": "deck",
+              "id": "still.9.psych.3",
+              "slides": [
                 {
-                  "set": {
-                    "step": 0,
-                    "play": 0
-                  },
+                  "scene": "still.9.psych.3",
                   "cap": "抵抗期的\"适应\"，是靠持续消耗储备撑出来的",
-                  "para": "idea"
-                },
-                {
-                  "set": {
-                    "step": 1,
-                    "play": 0.5
-                  },
-                  "cap": "抵抗期的\"适应\"，是靠持续消耗储备撑出来的",
-                  "para": "why"
-                },
-                {
-                  "set": {
-                    "step": 2,
-                    "play": 1
-                  },
-                  "cap": "抵抗期的\"适应\"，是靠持续消耗储备撑出来的。",
-                  "para": "takeaway"
+                  "sec": "takeaway"
                 }
               ]
             }
@@ -22947,32 +17123,46 @@ window.DAYS = [
               "why": "衰竭期储备已经耗尽，抵抗力下降，所以更容易生病、倦怠。「精力比警觉期更旺」正好相反。"
             },
             "visual": {
-              "type": "gas",
-              "base": {},
-              "frames": [
+              "type": "deck",
+              "id": "deck.psych.9.5",
+              "slides": [
                 {
-                  "set": {
-                    "step": 0,
-                    "play": 0
-                  },
-                  "cap": "危险的不是压力本身，而是长期没有恢复期",
-                  "para": "idea"
+                  "scene": "g.psych.9.5.0",
+                  "cap": "压力一直不解除，警报就不停。",
+                  "sec": "idea"
                 },
                 {
-                  "set": {
-                    "step": 1,
-                    "play": 0.5
-                  },
-                  "cap": "危险的不是压力本身，而是长期没有恢复期",
-                  "para": "why"
+                  "scene": "g.psych.9.5.1",
+                  "cap": "身体得不到休息。",
+                  "sec": "why"
                 },
                 {
-                  "set": {
-                    "step": 2,
-                    "play": 1
-                  },
-                  "cap": "危险的不是压力本身，而是长期没有恢复期。",
-                  "para": "takeaway"
+                  "scene": "g.psych.9.5.2",
+                  "cap": "存着的力气被花光。",
+                  "sec": "example"
+                },
+                {
+                  "scene": "g.psych.9.5.3",
+                  "cap": "这时候人更容易生病、倦怠。",
+                  "sec": [
+                    "derive",
+                    0,
+                    1
+                  ]
+                },
+                {
+                  "scene": "g.psych.9.5.4",
+                  "cap": "这一段叫衰竭期。",
+                  "sec": [
+                    "derive",
+                    2,
+                    3
+                  ]
+                },
+                {
+                  "scene": "g.psych.9.5.5",
+                  "cap": "警报停不下来，人就会透支。",
+                  "sec": "takeaway"
                 }
               ]
             }
@@ -22984,32 +17174,13 @@ window.DAYS = [
             "takeaway": "警觉 → 抵抗 → 衰竭；恢复期是打断这条链的关键。",
             "example": "给粉丝的一句话：短期的忙不可怕，可怕的是忙完从不收尾。把休息写进日程，和把截止日期写进日程一样重要。",
             "visual": {
-              "type": "gas",
-              "base": {},
-              "frames": [
+              "type": "deck",
+              "id": "still.9.psych.5",
+              "slides": [
                 {
-                  "set": {
-                    "step": 0,
-                    "play": 0
-                  },
+                  "scene": "still.9.psych.5",
                   "cap": "警觉 → 抵抗 → 衰竭；恢复期是打断这条链的关键",
-                  "para": "idea"
-                },
-                {
-                  "set": {
-                    "step": 1,
-                    "play": 0.5
-                  },
-                  "cap": "警觉 → 抵抗 → 衰竭；恢复期是打断这条链的关键",
-                  "para": "why"
-                },
-                {
-                  "set": {
-                    "step": 2,
-                    "play": 1
-                  },
-                  "cap": "警觉 → 抵抗 → 衰竭；恢复期是打断这条链的关键。",
-                  "para": "takeaway"
+                  "sec": "takeaway"
                 }
               ]
             }
@@ -23051,79 +17222,8 @@ window.DAYS = [
             "ref": 4
           }
         ],
-        "hookComic": {
-          "panels": [
-            {
-              "bg": "palace",
-              "cast": [
-                {
-                  "who": "xiaoman",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [],
-              "cap": "连续加班第 1 周：累"
-            },
-            {
-              "bg": "palace",
-              "cast": [
-                {
-                  "who": "xiaoman",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [
-                {
-                  "who": "xiaoman",
-                  "text": "习惯了"
-                }
-              ],
-              "cap": "第 3 周"
-            },
-            {
-              "bg": "palace",
-              "cast": [
-                {
-                  "who": "xiaoman",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "worry",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [],
-              "cap": "第 5 周：病倒"
-            },
-            {
-              "bg": "room",
-              "cast": [
-                {
-                  "who": "xiaoyin",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [
-                {
-                  "who": "xiaoyin",
-                  "text": "身体真的适应了吗？"
-                }
-              ],
-              "cap": "身体真的适应了吗？"
-            }
-          ]
+        "hookPic": {
+          "scene": "hook.9.psych"
         }
       },
       "english": {
@@ -23713,32 +17813,46 @@ window.DAYS = [
             ],
             "formula": "12 ÷ 3 = 4",
             "visual": {
-              "type": "wheelBuild",
-              "base": {},
-              "frames": [
+              "type": "deck",
+              "id": "deck.fashion.10.2",
+              "slides": [
                 {
-                  "set": {
-                    "step": 0,
-                    "play": 0
-                  },
-                  "cap": "三角配色 = 色轮上等距的三个颜色，各隔 4 格",
-                  "para": "idea"
+                  "scene": "g.fashion.10.2.0",
+                  "cap": "先有一个 12 色的轮子。",
+                  "sec": "idea"
                 },
                 {
-                  "set": {
-                    "step": 1,
-                    "play": 0.5
-                  },
-                  "cap": "三角配色 = 色轮上等距的三个颜色，各隔 4 格",
-                  "para": "why"
+                  "scene": "g.fashion.10.2.1",
+                  "cap": "在轮上取三个距离相等的点。",
+                  "sec": "why"
                 },
                 {
-                  "set": {
-                    "step": 2,
-                    "play": 1
-                  },
-                  "cap": "三角配色 = 色轮上等距的三个颜色，各隔 4 格。",
-                  "para": "takeaway"
+                  "scene": "g.fashion.10.2.2",
+                  "cap": "三个点连起来，是等边三角形。",
+                  "sec": "example"
+                },
+                {
+                  "scene": "g.fashion.10.2.3",
+                  "cap": "这三种颜色一起用，叫三角配色。",
+                  "sec": [
+                    "derive",
+                    0,
+                    1
+                  ]
+                },
+                {
+                  "scene": "g.fashion.10.2.4",
+                  "cap": "它们在轮上离得一样远。",
+                  "sec": [
+                    "derive",
+                    2,
+                    3
+                  ]
+                },
+                {
+                  "scene": "g.fashion.10.2.5",
+                  "cap": "不是挨在一起的邻居色。",
+                  "sec": "takeaway"
                 }
               ]
             },
@@ -23893,74 +18007,8 @@ window.DAYS = [
             "ref": 3
           }
         ],
-        "hookComic": {
-          "panels": [
-            {
-              "bg": "room",
-              "cast": [
-                {
-                  "who": "xiaoman",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [],
-              "cap": "儿童玩具：红黄蓝"
-            },
-            {
-              "bg": "room",
-              "cast": [
-                {
-                  "who": "xiaoman",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [],
-              "cap": "舞台剧海报：橙绿紫"
-            },
-            {
-              "bg": "room",
-              "cast": [
-                {
-                  "who": "xiaoman",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [
-                {
-                  "who": "xiaoman",
-                  "text": "这是同一种配色？"
-                }
-              ],
-              "cap": "这是同一种配色？"
-            },
-            {
-              "bg": "room",
-              "cast": [
-                {
-                  "who": "xiaoyin",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [],
-              "cap": "小音在色轮上转三角形"
-            }
-          ]
+        "hookPic": {
+          "scene": "hook.10.fashion"
         }
       },
       "history": {
@@ -24082,32 +18130,13 @@ window.DAYS = [
               "why": "开封的好处是「靠着运河，南方粮船开得到」，都城和军队吃饭不愁。开封在黄河边的平原上，离长城很远，「离长城最近，方便防守」不对。"
             },
             "visual": {
-              "type": "histmap",
-              "base": {},
-              "frames": [
+              "type": "deck",
+              "id": "still.10.history.3",
+              "slides": [
                 {
-                  "set": {
-                    "step": 0,
-                    "play": 0
-                  },
+                  "scene": "still.10.history.3",
                   "cap": "五代有四个朝代定都开封，因为开封靠着运河，接得到江南的粮",
-                  "para": "idea"
-                },
-                {
-                  "set": {
-                    "step": 1,
-                    "play": 0.5
-                  },
-                  "cap": "五代有四个朝代定都开封，因为开封靠着运河，接得到江南的粮",
-                  "para": "why"
-                },
-                {
-                  "set": {
-                    "step": 2,
-                    "play": 1
-                  },
-                  "cap": "五代有四个朝代定都开封，因为开封靠着运河，接得到江南的粮。",
-                  "para": "takeaway"
+                  "sec": "takeaway"
                 }
               ]
             }
@@ -24134,32 +18163,46 @@ window.DAYS = [
               "why": "五代皇帝大多是「节度使或带兵的将领」，靠兵权上位。「科举考上来的文官」手里没兵，在五代反而说不上话。"
             },
             "visual": {
-              "type": "chain",
-              "base": {},
-              "frames": [
+              "type": "deck",
+              "id": "deck.history.10.5",
+              "slides": [
                 {
-                  "set": {
-                    "step": 0,
-                    "play": 0
-                  },
-                  "cap": "兵强马壮者为天子：皇位靠兵抢来，也会被兵抢走",
-                  "para": "idea"
+                  "scene": "g.history.10.5.0",
+                  "cap": "五代的皇帝，很多本人就是节度使。",
+                  "sec": "idea"
                 },
                 {
-                  "set": {
-                    "step": 1,
-                    "play": 0.5
-                  },
-                  "cap": "兵强马壮者为天子：皇位靠兵抢来，也会被兵抢走",
-                  "para": "why"
+                  "scene": "g.history.10.5.1",
+                  "cap": "谁手里有兵，谁就能坐上皇位。",
+                  "sec": "why"
                 },
                 {
-                  "set": {
-                    "step": 2,
-                    "play": 1
-                  },
-                  "cap": "兵强马壮者为天子：皇位靠兵抢来，也会被兵抢走。",
-                  "para": "takeaway"
+                  "scene": "g.history.10.5.2",
+                  "cap": "北方的朝代一个接一个换。",
+                  "sec": "example"
+                },
+                {
+                  "scene": "g.history.10.5.3",
+                  "cap": "一个朝代往往只有十几年。",
+                  "sec": [
+                    "derive",
+                    0,
+                    1
+                  ]
+                },
+                {
+                  "scene": "g.history.10.5.4",
+                  "cap": "下一位带兵的人又来了。",
+                  "sec": [
+                    "derive",
+                    2,
+                    3
+                  ]
+                },
+                {
+                  "scene": "g.history.10.5.5",
+                  "cap": "北方换得快，因为皇位靠兵不靠制。",
+                  "sec": "takeaway"
                 }
               ]
             }
@@ -24178,32 +18221,46 @@ window.DAYS = [
               "南边的华北平原一马平川，骑兵可以直冲南下。"
             ],
             "visual": {
-              "type": "histmap",
-              "base": {},
-              "frames": [
+              "type": "deck",
+              "id": "deck.history.10.6",
+              "slides": [
                 {
-                  "set": {
-                    "step": 0,
-                    "play": 0
-                  },
-                  "cap": "燕云十六州一丢，中原北边的门户就开了，影响了此后几百年",
-                  "para": "idea"
+                  "scene": "g.history.10.6.0",
+                  "cap": "石敬瑭想借契丹的兵当皇帝。",
+                  "sec": "idea"
                 },
                 {
-                  "set": {
-                    "step": 1,
-                    "play": 0.5
-                  },
-                  "cap": "燕云十六州一丢，中原北边的门户就开了，影响了此后几百年",
-                  "para": "why"
+                  "scene": "g.history.10.6.1",
+                  "cap": "兵是契丹借给他的。",
+                  "sec": "why"
                 },
                 {
-                  "set": {
-                    "step": 2,
-                    "play": 1
-                  },
-                  "cap": "燕云十六州一丢，中原北边的门户就开了，影响了此后几百年。",
-                  "para": "takeaway"
+                  "scene": "g.history.10.6.2",
+                  "cap": "代价是燕云十六州。",
+                  "sec": "example"
+                },
+                {
+                  "scene": "g.history.10.6.3",
+                  "cap": "那一片是中原北边的门户。",
+                  "sec": [
+                    "derive",
+                    0,
+                    1
+                  ]
+                },
+                {
+                  "scene": "g.history.10.6.4",
+                  "cap": "门一让出去，骑兵就进得来。",
+                  "sec": [
+                    "derive",
+                    2,
+                    3
+                  ]
+                },
+                {
+                  "scene": "g.history.10.6.5",
+                  "cap": "借来的皇位，用一道门换走了。",
+                  "sec": "takeaway"
                 }
               ]
             }
@@ -24267,32 +18324,13 @@ window.DAYS = [
               "why": "十国「远离北方主战场，各守一方」，打仗少，才能安心发展。「南方各国都没有军队」不对，它们各有军队，只是多用来守自己的地盘。"
             },
             "visual": {
-              "type": "histmap",
-              "base": {},
-              "frames": [
+              "type": "deck",
+              "id": "still.10.history.7",
+              "slides": [
                 {
-                  "set": {
-                    "step": 0,
-                    "play": 0
-                  },
+                  "scene": "still.10.history.7",
                   "cap": "南方远离战场、各守一方，在乱世里反而保住了发展",
-                  "para": "idea"
-                },
-                {
-                  "set": {
-                    "step": 1,
-                    "play": 0.5
-                  },
-                  "cap": "南方远离战场、各守一方，在乱世里反而保住了发展",
-                  "para": "why"
-                },
-                {
-                  "set": {
-                    "step": 2,
-                    "play": 1
-                  },
-                  "cap": "南方远离战场、各守一方，在乱世里反而保住了发展。",
-                  "para": "takeaway"
+                  "sec": "takeaway"
                 }
               ]
             }
@@ -24309,32 +18347,13 @@ window.DAYS = [
               "下一关：他怎样才能不当\"第六代\"？"
             ],
             "visual": {
-              "type": "cycle",
-              "base": {},
-              "frames": [
+              "type": "deck",
+              "id": "still.10.history.8",
+              "slides": [
                 {
-                  "set": {
-                    "step": 0,
-                    "play": 0
-                  },
-                  "cap": "960 年宋代后周，979 年灭北汉；可宋的开国，也是一场兵变",
-                  "para": "idea"
-                },
-                {
-                  "set": {
-                    "step": 1,
-                    "play": 0.5
-                  },
-                  "cap": "960 年宋代后周，979 年灭北汉；可宋的开国，也是一场兵变",
-                  "para": "why"
-                },
-                {
-                  "set": {
-                    "step": 2,
-                    "play": 1
-                  },
-                  "cap": "960 年宋代后周，979 年灭北汉；可宋的开国，也是一场兵变。",
-                  "para": "takeaway"
+                  "scene": "still.10.history.8",
+                  "cap": "串起来：谁来收拾这个局面",
+                  "sec": "takeaway"
                 }
               ]
             }
@@ -24442,74 +18461,8 @@ window.DAYS = [
             "label": "燕云十六州一带"
           }
         ],
-        "hookComic": {
-          "panels": [
-            {
-              "bg": "palace",
-              "cast": [
-                {
-                  "who": "xiaoman",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [],
-              "cap": "小满面前一团乱麻（五代十国）"
-            },
-            {
-              "bg": "palace",
-              "cast": [
-                {
-                  "who": "xiaoyin",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [],
-              "cap": "小音抽出两根线"
-            },
-            {
-              "bg": "palace",
-              "cast": [
-                {
-                  "who": "kingWu",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [
-                {
-                  "who": "kingWu",
-                  "text": "接力"
-                }
-              ],
-              "cap": "一根"
-            },
-            {
-              "bg": "palace",
-              "cast": [
-                {
-                  "who": "kingWu",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [],
-              "cap": "乱麻变成两条整齐的线"
-            }
-          ]
+        "hookPic": {
+          "scene": "hook.10.history"
         }
       },
       "geo": {
@@ -24615,32 +18568,46 @@ window.DAYS = [
               "why": "直辖市和省平级，直接对中央。「所在的省」不对，直辖市本身不属于任何省。"
             },
             "visual": {
-              "type": "tilemap",
-              "base": {},
-              "frames": [
+              "type": "deck",
+              "id": "deck.geo.10.3",
+              "slides": [
                 {
-                  "set": {
-                    "step": 0,
-                    "play": 0
-                  },
-                  "cap": "直辖市直接由中央管理，共四个：北京、天津、上海、重庆",
-                  "para": "idea"
+                  "scene": "g.geo.10.3.0",
+                  "cap": "北京不归任何省管。",
+                  "sec": "idea"
                 },
                 {
-                  "set": {
-                    "step": 1,
-                    "play": 0.5
-                  },
-                  "cap": "直辖市直接由中央管理，共四个：北京、天津、上海、重庆",
-                  "para": "why"
+                  "scene": "g.geo.10.3.1",
+                  "cap": "上海也直接对中央。",
+                  "sec": "why"
                 },
                 {
-                  "set": {
-                    "step": 2,
-                    "play": 1
-                  },
-                  "cap": "直辖市直接由中央管理，共四个：北京、天津、上海、重庆。",
-                  "para": "takeaway"
+                  "scene": "g.geo.10.3.2",
+                  "cap": "天津同样是直辖市。",
+                  "sec": "example"
+                },
+                {
+                  "scene": "g.geo.10.3.3",
+                  "cap": "重庆是最晚的一个。",
+                  "sec": [
+                    "derive",
+                    0,
+                    1
+                  ]
+                },
+                {
+                  "scene": "g.geo.10.3.4",
+                  "cap": "话不用先经过省里。",
+                  "sec": [
+                    "derive",
+                    2,
+                    2
+                  ]
+                },
+                {
+                  "scene": "g.geo.10.3.5",
+                  "cap": "四个市，都由中央直接管。",
+                  "sec": "takeaway"
                 }
               ]
             }
@@ -24667,32 +18634,46 @@ window.DAYS = [
               "why": "宁夏夹在甘肃、内蒙古、陕西中间。「新疆」在西北，和好几个国家接壤。"
             },
             "visual": {
-              "type": "tilemap",
-              "base": {},
-              "frames": [
+              "type": "deck",
+              "id": "deck.geo.10.4",
+              "slides": [
                 {
-                  "set": {
-                    "step": 0,
-                    "play": 0
-                  },
-                  "cap": "五个自治区：内蒙古、新疆、西藏、广西、宁夏，除宁夏外都在边疆",
-                  "para": "idea"
+                  "scene": "g.geo.10.4.0",
+                  "cap": "五个自治区，多在边疆。",
+                  "sec": "idea"
                 },
                 {
-                  "set": {
-                    "step": 1,
-                    "play": 0.5
-                  },
-                  "cap": "五个自治区：内蒙古、新疆、西藏、广西、宁夏，除宁夏外都在边疆",
-                  "para": "why"
+                  "scene": "g.geo.10.4.1",
+                  "cap": "新疆在西北边疆。",
+                  "sec": "why"
                 },
                 {
-                  "set": {
-                    "step": 2,
-                    "play": 1
-                  },
-                  "cap": "五个自治区：内蒙古、新疆、西藏、广西、宁夏，除宁夏外都在边疆。",
-                  "para": "takeaway"
+                  "scene": "g.geo.10.4.2",
+                  "cap": "西藏在西南高原。",
+                  "sec": "example"
+                },
+                {
+                  "scene": "g.geo.10.4.3",
+                  "cap": "广西靠南边的边境。",
+                  "sec": [
+                    "derive",
+                    0,
+                    1
+                  ]
+                },
+                {
+                  "scene": "g.geo.10.4.4",
+                  "cap": "宁夏在黄河边上。",
+                  "sec": [
+                    "derive",
+                    2,
+                    3
+                  ]
+                },
+                {
+                  "scene": "g.geo.10.4.5",
+                  "cap": "少数民族聚居，自己管自己的事。",
+                  "sec": "takeaway"
                 }
               ]
             }
@@ -24865,79 +18846,8 @@ window.DAYS = [
             "label": "NX"
           }
         ],
-        "hookComic": {
-          "panels": [
-            {
-              "bg": "mountain",
-              "cast": [
-                {
-                  "who": "xiaoman",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [
-                {
-                  "who": "xiaoman",
-                  "text": "川 A"
-                }
-              ],
-              "cap": "停车场"
-            },
-            {
-              "bg": "mountain",
-              "cast": [
-                {
-                  "who": "xiaoman",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [
-                {
-                  "who": "xiaoman",
-                  "text": "川是哪？粤是哪？"
-                }
-              ],
-              "cap": "川是哪？粤是哪？"
-            },
-            {
-              "bg": "mountain",
-              "cast": [
-                {
-                  "who": "xiaoyin",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [],
-              "cap": "小音倒出一盒拼图"
-            },
-            {
-              "bg": "mountain",
-              "cast": [
-                {
-                  "who": "xiaoman",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [],
-              "cap": "34 块拼成一张中国"
-            }
-          ]
+        "hookPic": {
+          "scene": "hook.10.geo"
         }
       },
       "finance": {
@@ -24945,175 +18855,18 @@ window.DAYS = [
         "title": "复利反咬：信用卡和分期的真实成本",
         "minutes": 7,
         "hook": "复利能帮你存钱滚雪球，也能让欠款滚雪球。分期广告上写着\"每期手续费只要 0.6%\"，真的只要这么点吗？",
-        "hookComic": {
-          "panels": [
-            {
-              "bg": "room",
-              "cast": [
-                {
-                  "who": "xiaoman",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [
-                {
-                  "what": "phone",
-                  "x": 0.78,
-                  "y": 0.78,
-                  "k": 0.95
-                }
-              ],
-              "bubbles": [],
-              "cap": "刷卡买了一部新手机"
-            },
-            {
-              "bg": "room",
-              "cast": [
-                {
-                  "who": "xiaoman",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [
-                {
-                  "what": "paper",
-                  "x": 0.78,
-                  "y": 0.78,
-                  "k": 0.95
-                }
-              ],
-              "bubbles": [
-                {
-                  "who": "xiaoman",
-                  "text": "最低还款"
-                }
-              ],
-              "cap": "账单只还了"
-            },
-            {
-              "bg": "room",
-              "cast": [
-                {
-                  "who": "xiaoman",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [
-                {
-                  "what": "paper",
-                  "x": 0.78,
-                  "y": 0.78,
-                  "k": 0.95
-                }
-              ],
-              "bubbles": [],
-              "cap": "几个月后账单越来越长"
-            },
-            {
-              "bg": "room",
-              "cast": [
-                {
-                  "who": "xiaoyin",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [
-                {
-                  "what": "snowball",
-                  "x": 0.78,
-                  "y": 0.78,
-                  "k": 0.95
-                }
-              ],
-              "bubbles": [],
-              "cap": "小音推来一个大雪球"
-            }
-          ]
-        },
         "steps": [
           {
             "title": "雪球也会朝你滚来",
             "idea": "存钱时，复利帮你。欠钱时，同一个复利在帮对方。",
             "visual": {
-              "type": "comic",
-              "panels": [
+              "type": "deck",
+              "id": "still.10.finance.0",
+              "slides": [
                 {
-                  "bg": "room",
-                  "cast": [
-                    {
-                      "who": "xiaoman",
-                      "x": 0.46,
-                      "y": 0.74,
-                      "face": "calm",
-                      "pose": "stand"
-                    }
-                  ],
-                  "props": [
-                    {
-                      "what": "snowball",
-                      "x": 0.78,
-                      "y": 0.78,
-                      "k": 0.95
-                    }
-                  ],
-                  "bubbles": [],
-                  "cap": "复利也能反过来"
-                },
-                {
-                  "bg": "room",
-                  "cast": [
-                    {
-                      "who": "xiaoman",
-                      "x": 0.46,
-                      "y": 0.74,
-                      "face": "calm",
-                      "pose": "stand"
-                    }
-                  ],
-                  "props": [
-                    {
-                      "what": "paper",
-                      "x": 0.78,
-                      "y": 0.78,
-                      "k": 0.95
-                    }
-                  ],
-                  "bubbles": [],
-                  "cap": "欠了一万没还"
-                },
-                {
-                  "bg": "room",
-                  "cast": [
-                    {
-                      "who": "xiaoman",
-                      "x": 0.46,
-                      "y": 0.74,
-                      "face": "calm",
-                      "pose": "stand"
-                    }
-                  ],
-                  "props": [
-                    {
-                      "what": "paper",
-                      "x": 0.78,
-                      "y": 0.78,
-                      "k": 0.95
-                    }
-                  ],
-                  "bubbles": [],
-                  "cap": "一年后变成快一万二"
+                  "scene": "still.10.finance.0",
+                  "cap": "复利对存钱的人有利，对欠钱的人不利",
+                  "sec": "takeaway"
                 }
               ]
             },
@@ -25265,56 +19018,36 @@ window.DAYS = [
             "title": "可你并没有一直欠 12000",
             "idea": "你每月都在还本金。所以欠的钱一个月比一个月少。可手续费每个月还是按 12000 算。",
             "visual": {
-              "type": "columns",
-              "base": {
-                "items": [
-                  {
-                    "label": "第 1 月",
-                    "value": 12000
-                  },
-                  {
-                    "label": "第 2 月",
-                    "value": 11000
-                  },
-                  {
-                    "label": "第 3 月",
-                    "value": 10000
-                  },
-                  {
-                    "label": "…",
-                    "value": 1
-                  },
-                  {
-                    "label": "第 11 月",
-                    "value": 2000
-                  },
-                  {
-                    "label": "第 12 月",
-                    "value": 1000
-                  },
-                  {
-                    "label": "平均只欠约",
-                    "value": 6500
-                  }
-                ],
-                "unit": "元"
-              },
-              "frames": [
+              "type": "deck",
+              "id": "deck.finance.10.5",
+              "slides": [
                 {
-                  "set": {
-                    "play": 0,
-                    "step": 0
-                  },
-                  "cap": "先看骨架",
-                  "para": "idea"
+                  "scene": "g.finance.10.5.0",
+                  "cap": "账单上一直写着 12000。",
+                  "sec": "idea"
                 },
                 {
-                  "set": {
-                    "play": 1,
-                    "step": 2
-                  },
-                  "cap": "看完整的图",
-                  "para": "takeaway"
+                  "scene": "g.finance.10.5.1",
+                  "cap": "你每个月都在还掉一部分本金。",
+                  "sec": [
+                    "derive",
+                    0,
+                    1
+                  ]
+                },
+                {
+                  "scene": "g.finance.10.5.2",
+                  "cap": "真正欠的钱，一个月比一个月少。",
+                  "sec": [
+                    "derive",
+                    2,
+                    3
+                  ]
+                },
+                {
+                  "scene": "g.finance.10.5.3",
+                  "cap": "手续费还在按 12000 算。",
+                  "sec": "takeaway"
                 }
               ]
             },
@@ -25508,7 +19241,10 @@ window.DAYS = [
             "why": "0.5% × 12 = 6%，这是按全额算的。你平均只借了约一半，真实年化约是它的两倍，约 11%～12%。「0.5%」是每个月的数，还没换成一年。",
             "ref": 5
           }
-        ]
+        ],
+        "hookPic": {
+          "scene": "hook.10.finance"
+        }
       },
       "psych": {
         "id": "d10-psych",
@@ -25524,32 +19260,13 @@ window.DAYS = [
             "example": "同样被领导叫去谈话，有人觉得机会来了，有人一晚上睡不着。事情一样，反应差得很远。",
             "review": true,
             "visual": {
-              "type": "appraise",
-              "base": {},
-              "frames": [
+              "type": "deck",
+              "id": "still.10.psych.0",
+              "slides": [
                 {
-                  "set": {
-                    "step": 0,
-                    "play": 0
-                  },
+                  "scene": "still.10.psych.0",
                   "cap": "同一个压力源，不同人的压力不同，差别从哪来",
-                  "para": "idea"
-                },
-                {
-                  "set": {
-                    "step": 1,
-                    "play": 0.5
-                  },
-                  "cap": "同一个压力源，不同人的压力不同，差别从哪来",
-                  "para": "why"
-                },
-                {
-                  "set": {
-                    "step": 2,
-                    "play": 1
-                  },
-                  "cap": "同一个压力源，不同人的压力不同，差别从哪来？",
-                  "para": "takeaway"
+                  "sec": "takeaway"
                 }
               ]
             }
@@ -25561,32 +19278,13 @@ window.DAYS = [
             "takeaway": "初级评价：判断这事是威胁、挑战还是无关。",
             "example": "拉扎勒斯团队在 1960 年代让人看同一段令人不适的割礼仪式纪录片，配不同的解说：强调疼痛的那组，皮肤出汗、心率明显更高；解说成\"不痛、是喜庆仪式\"或用冷静的学术口吻的组，反应低得多。",
             "visual": {
-              "type": "appraise",
-              "base": {},
-              "frames": [
+              "type": "deck",
+              "id": "still.10.psych.1",
+              "slides": [
                 {
-                  "set": {
-                    "step": 0,
-                    "play": 0
-                  },
+                  "scene": "still.10.psych.1",
                   "cap": "初级评价：判断这事是威胁、挑战还是无关",
-                  "para": "idea"
-                },
-                {
-                  "set": {
-                    "step": 1,
-                    "play": 0.5
-                  },
-                  "cap": "初级评价：判断这事是威胁、挑战还是无关",
-                  "para": "why"
-                },
-                {
-                  "set": {
-                    "step": 2,
-                    "play": 1
-                  },
-                  "cap": "初级评价：判断这事是威胁、挑战还是无关。",
-                  "para": "takeaway"
+                  "sec": "takeaway"
                 }
               ]
             }
@@ -25613,32 +19311,46 @@ window.DAYS = [
               "why": "难不难只是\"要求\"那一半，还要看资源够不够。觉得资源够，难事也可以是挑战，所以「只要事情很难就会」不对。"
             },
             "visual": {
-              "type": "appraise",
-              "base": {},
-              "frames": [
+              "type": "deck",
+              "id": "deck.psych.10.3",
+              "slides": [
                 {
-                  "set": {
-                    "step": 0,
-                    "play": 0
-                  },
-                  "cap": "要求大于资源时，压力就出现了",
-                  "para": "idea"
+                  "scene": "g.psych.10.3.0",
+                  "cap": "先看：这件事对我有什么影响。",
+                  "sec": "idea"
                 },
                 {
-                  "set": {
-                    "step": 1,
-                    "play": 0.5
-                  },
-                  "cap": "要求大于资源时，压力就出现了",
-                  "para": "why"
+                  "scene": "g.psych.10.3.1",
+                  "cap": "再问：我应付得了吗。",
+                  "sec": "why"
                 },
                 {
-                  "set": {
-                    "step": 2,
-                    "play": 1
-                  },
-                  "cap": "要求大于资源时，压力就出现了。",
-                  "para": "takeaway"
+                  "scene": "g.psych.10.3.2",
+                  "cap": "时间是一种资源。",
+                  "sec": "example"
+                },
+                {
+                  "scene": "g.psych.10.3.3",
+                  "cap": "钱也是一种资源。",
+                  "sec": [
+                    "derive",
+                    0,
+                    1
+                  ]
+                },
+                {
+                  "scene": "g.psych.10.3.4",
+                  "cap": "能帮忙的人，同样算资源。",
+                  "sec": [
+                    "derive",
+                    2,
+                    3
+                  ]
+                },
+                {
+                  "scene": "g.psych.10.3.5",
+                  "cap": "资源够，压力的味道就不一样。",
+                  "sec": "takeaway"
                 }
               ]
             }
@@ -25650,33 +19362,13 @@ window.DAYS = [
             "takeaway": "问题聚焦应对：改变情境，从源头减压。",
             "example": "账号数据下滑让你焦虑。问题聚焦的做法是：翻看最近十条视频的数据，找出观众在哪几秒流失最多，下一条就改开头。",
             "visual": {
-              "type": "comic",
-              "panels": [
+              "type": "deck",
+              "id": "still.10.psych.3",
+              "slides": [
                 {
-                  "bg": "room",
-                  "cast": [
-                    {
-                      "who": "xiaoman",
-                      "x": 0.46,
-                      "y": 0.74,
-                      "face": "calm",
-                      "pose": "stand"
-                    }
-                  ],
-                  "cap": "问题聚焦应对：改变情境，从源"
-                },
-                {
-                  "bg": "street",
-                  "cast": [
-                    {
-                      "who": "xiaoman",
-                      "x": 0.46,
-                      "y": 0.74,
-                      "face": "calm",
-                      "pose": "stand"
-                    }
-                  ],
-                  "cap": "问题聚焦应对：去改变情境"
+                  "scene": "still.10.psych.3",
+                  "cap": "问题聚焦应对：改变情境，从源头减压",
+                  "sec": "takeaway"
                 }
               ]
             }
@@ -25698,33 +19390,13 @@ window.DAYS = [
               "why": "雨本身改不了，你做的是照顾自己的感受，所以是情绪聚焦。「问题聚焦应对」是带伞这类直接改变处境的做法。"
             },
             "visual": {
-              "type": "comic",
-              "panels": [
+              "type": "deck",
+              "id": "still.10.psych.4",
+              "slides": [
                 {
-                  "bg": "room",
-                  "cast": [
-                    {
-                      "who": "xiaoman",
-                      "x": 0.46,
-                      "y": 0.74,
-                      "face": "calm",
-                      "pose": "stand"
-                    }
-                  ],
-                  "cap": "能改变的解决问题，改变不了的"
-                },
-                {
-                  "bg": "street",
-                  "cast": [
-                    {
-                      "who": "xiaoman",
-                      "x": 0.46,
-                      "y": 0.74,
-                      "face": "calm",
-                      "pose": "stand"
-                    }
-                  ],
-                  "cap": "情绪聚焦应对：去照顾感受"
+                  "scene": "still.10.psych.4",
+                  "cap": "能改变的解决问题，改变不了的照顾情绪",
+                  "sec": "takeaway"
                 }
               ]
             }
@@ -25736,32 +19408,13 @@ window.DAYS = [
             "takeaway": "压力来自评价；应对分两类，按能不能改变来选。",
             "example": "给粉丝的小练习：遇到压力先问自己两句——\"这事对我意味着什么？\"\"我手里有哪些资源？\"写下来，再决定是动手解决，还是先照顾情绪。",
             "visual": {
-              "type": "appraise",
-              "base": {},
-              "frames": [
+              "type": "deck",
+              "id": "still.10.psych.5",
+              "slides": [
                 {
-                  "set": {
-                    "step": 0,
-                    "play": 0
-                  },
+                  "scene": "still.10.psych.5",
                   "cap": "压力来自评价；应对分两类，按能不能改变来选",
-                  "para": "idea"
-                },
-                {
-                  "set": {
-                    "step": 1,
-                    "play": 0.5
-                  },
-                  "cap": "压力来自评价；应对分两类，按能不能改变来选",
-                  "para": "why"
-                },
-                {
-                  "set": {
-                    "step": 2,
-                    "play": 1
-                  },
-                  "cap": "压力来自评价；应对分两类，按能不能改变来选。",
-                  "para": "takeaway"
+                  "sec": "takeaway"
                 }
               ]
             }
@@ -25822,79 +19475,8 @@ window.DAYS = [
             "ref": 4
           }
         ],
-        "hookComic": {
-          "panels": [
-            {
-              "bg": "office",
-              "cast": [
-                {
-                  "who": "xiaoman",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [
-                {
-                  "who": "xiaoman",
-                  "text": "来我办公室一下"
-                }
-              ],
-              "cap": "领导"
-            },
-            {
-              "bg": "room",
-              "cast": [
-                {
-                  "who": "xiaoman",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [],
-              "cap": "机会来了！"
-            },
-            {
-              "bg": "room",
-              "cast": [
-                {
-                  "who": "ale",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [],
-              "cap": "完了……"
-            },
-            {
-              "bg": "room",
-              "cast": [
-                {
-                  "who": "xiaoyin",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [
-                {
-                  "who": "xiaoyin",
-                  "text": "同一句话"
-                }
-              ],
-              "cap": "同一句话"
-            }
-          ]
+        "hookPic": {
+          "scene": "hook.10.psych"
         }
       },
       "english": {
@@ -26686,69 +20268,8 @@ window.DAYS = [
             "ref": 1
           }
         ],
-        "hookComic": {
-          "panels": [
-            {
-              "bg": "room",
-              "cast": [
-                {
-                  "who": "xiaoman",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [],
-              "cap": "同样三种颜色的两套衣服"
-            },
-            {
-              "bg": "room",
-              "cast": [
-                {
-                  "who": "xiaoman",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [],
-              "cap": "一套好看"
-            },
-            {
-              "bg": "room",
-              "cast": [
-                {
-                  "who": "xiaoyin",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [],
-              "cap": "小音量了面积"
-            },
-            {
-              "bg": "room",
-              "cast": [
-                {
-                  "who": "xiaoman",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [],
-              "cap": "乱的那套三色各占三分之一"
-            }
-          ]
+        "hookPic": {
+          "scene": "hook.11.fashion"
         }
       },
       "history": {
@@ -26780,72 +20301,13 @@ window.DAYS = [
               "要和平地把兵、钱收回中央。"
             ],
             "visual": {
-              "type": "comic",
-              "panels": [
+              "type": "deck",
+              "id": "still.11.history.1",
+              "slides": [
                 {
-                  "bg": "palace",
-                  "cast": [
-                    {
-                      "who": "kingWu",
-                      "x": 0.46,
-                      "y": 0.74,
-                      "face": "calm",
-                      "pose": "stand"
-                    }
-                  ],
-                  "props": [],
-                  "bubbles": [],
-                  "cap": "你知道自己是怎么上来的"
-                },
-                {
-                  "bg": "palace",
-                  "cast": [
-                    {
-                      "who": "general",
-                      "x": 0.46,
-                      "y": 0.74,
-                      "face": "calm",
-                      "pose": "stand"
-                    }
-                  ],
-                  "props": [],
-                  "bubbles": [],
-                  "cap": "看着手下的将军们"
-                },
-                {
-                  "bg": "palace",
-                  "cast": [
-                    {
-                      "who": "kingWu",
-                      "x": 0.46,
-                      "y": 0.74,
-                      "face": "calm",
-                      "pose": "stand"
-                    }
-                  ],
-                  "props": [],
-                  "bubbles": [
-                    {
-                      "who": "kingWu",
-                      "text": "他们会不会也来一次？"
-                    }
-                  ],
-                  "cap": "他们会不会也来一次？"
-                },
-                {
-                  "bg": "palace",
-                  "cast": [
-                    {
-                      "who": "kingWu",
-                      "x": 0.46,
-                      "y": 0.74,
-                      "face": "calm",
-                      "pose": "think"
-                    }
-                  ],
-                  "props": [],
-                  "bubbles": [],
-                  "cap": "你想到一个办法"
+                  "scene": "still.11.history.1",
+                  "cap": "赵匡胤的难题：不流血，又要让谁都没法再搞兵变",
+                  "sec": "takeaway"
                 }
               ]
             }
@@ -26858,72 +20320,13 @@ window.DAYS = [
             "example": "像一家公司的几位合伙人各自带着核心团队。老板不撕破脸，而是给足股份和分红，请他们退到幕后享清福，把团队交给公司统一管理。",
             "exLabel": "打个比方",
             "visual": {
-              "type": "comic",
-              "panels": [
+              "type": "deck",
+              "id": "still.11.history.2",
+              "slides": [
                 {
-                  "bg": "palace",
-                  "cast": [
-                    {
-                      "who": "kingWu",
-                      "x": 0.46,
-                      "y": 0.74,
-                      "face": "calm",
-                      "pose": "cheer"
-                    }
-                  ],
-                  "props": [],
-                  "bubbles": [],
-                  "cap": "宴席上举杯"
-                },
-                {
-                  "bg": "palace",
-                  "cast": [
-                    {
-                      "who": "kingWu",
-                      "x": 0.46,
-                      "y": 0.74,
-                      "face": "calm",
-                      "pose": "give"
-                    }
-                  ],
-                  "props": [],
-                  "bubbles": [
-                    {
-                      "who": "kingWu",
-                      "text": "不如交出兵权"
-                    }
-                  ],
-                  "cap": "不如交出兵权"
-                },
-                {
-                  "bg": "palace",
-                  "cast": [
-                    {
-                      "who": "general",
-                      "x": 0.46,
-                      "y": 0.74,
-                      "face": "calm",
-                      "pose": "give"
-                    }
-                  ],
-                  "props": [],
-                  "bubbles": [],
-                  "cap": "将军们交出兵符"
-                },
-                {
-                  "bg": "palace",
-                  "cast": [
-                    {
-                      "who": "kingWu",
-                      "x": 0.46,
-                      "y": 0.74,
-                      "face": "calm",
-                      "pose": "stand"
-                    }
-                  ],
-                  "props": [],
-                  "bubbles": [],
-                  "cap": "换来金银田宅"
+                  "scene": "still.11.history.2",
+                  "cap": "杯酒释兵权：用富贵换兵权，不流血地收回开国大将的兵",
+                  "sec": "takeaway"
                 }
               ]
             }
@@ -26942,32 +20345,13 @@ window.DAYS = [
               "三样拆开，谁都凑不齐。"
             ],
             "visual": {
-              "type": "chain",
-              "base": {},
-              "frames": [
+              "type": "deck",
+              "id": "still.11.history.3",
+              "slides": [
                 {
-                  "set": {
-                    "step": 0,
-                    "play": 0
-                  },
+                  "scene": "still.11.history.3",
                   "cap": "重文抑武：把兵、钱、地拆开，交给不同的人，没人凑得齐",
-                  "para": "idea"
-                },
-                {
-                  "set": {
-                    "step": 1,
-                    "play": 0.5
-                  },
-                  "cap": "重文抑武：把兵、钱、地拆开，交给不同的人，没人凑得齐",
-                  "para": "why"
-                },
-                {
-                  "set": {
-                    "step": 2,
-                    "play": 1
-                  },
-                  "cap": "重文抑武：把兵、钱、地拆开，交给不同的人，没人凑得齐。",
-                  "para": "takeaway"
+                  "sec": "takeaway"
                 }
               ]
             }
@@ -26988,32 +20372,13 @@ window.DAYS = [
               "why": "宋把兵、钱、地拆开，谁也凑不齐三样，所以「没有，这个老问题解决了」。「有，比唐朝还严重」不对，宋三百多年里没再出现藩镇割据。"
             },
             "visual": {
-              "type": "tug",
-              "base": {},
-              "frames": [
+              "type": "deck",
+              "id": "still.11.history.4",
+              "slides": [
                 {
-                  "set": {
-                    "step": 0,
-                    "play": 0
-                  },
+                  "scene": "still.11.history.4",
                   "cap": "拆开兵、钱、地，宋治好了五代\"武将篡位\"的病",
-                  "para": "idea"
-                },
-                {
-                  "set": {
-                    "step": 1,
-                    "play": 0.5
-                  },
-                  "cap": "拆开兵、钱、地，宋治好了五代\"武将篡位\"的病",
-                  "para": "why"
-                },
-                {
-                  "set": {
-                    "step": 2,
-                    "play": 1
-                  },
-                  "cap": "拆开兵、钱、地，宋治好了五代\"武将篡位\"的病。",
-                  "para": "takeaway"
+                  "sec": "takeaway"
                 }
               ]
             }
@@ -27031,32 +20396,13 @@ window.DAYS = [
               "内部的安全，是用对外的弱换来的。"
             ],
             "visual": {
-              "type": "chain",
-              "base": {},
-              "frames": [
+              "type": "deck",
+              "id": "still.11.history.5",
+              "slides": [
                 {
-                  "set": {
-                    "step": 0,
-                    "play": 0
-                  },
+                  "scene": "still.11.history.5",
                   "cap": "重文抑武防住了内乱，代价是对外作战的弱",
-                  "para": "idea"
-                },
-                {
-                  "set": {
-                    "step": 1,
-                    "play": 0.5
-                  },
-                  "cap": "重文抑武防住了内乱，代价是对外作战的弱",
-                  "para": "why"
-                },
-                {
-                  "set": {
-                    "step": 2,
-                    "play": 1
-                  },
-                  "cap": "重文抑武防住了内乱，代价是对外作战的弱。",
-                  "para": "takeaway"
+                  "sec": "takeaway"
                 }
               ]
             }
@@ -27083,32 +20429,46 @@ window.DAYS = [
               "why": "靖康之变后开封落入金人之手，南宋把都城定在「临安（今杭州）」。「开封」是北宋的都城。"
             },
             "visual": {
-              "type": "histmap",
-              "base": {},
-              "frames": [
+              "type": "deck",
+              "id": "deck.history.11.7",
+              "slides": [
                 {
-                  "set": {
-                    "step": 0,
-                    "play": 0
-                  },
-                  "cap": "1127 年靖康之变，北宋亡；赵构南迁，南宋定都临安",
-                  "para": "idea"
+                  "scene": "g.history.11.7.0",
+                  "cap": "北宋的都城在开封。",
+                  "sec": "idea"
                 },
                 {
-                  "set": {
-                    "step": 1,
-                    "play": 0.5
-                  },
-                  "cap": "1127 年靖康之变，北宋亡；赵构南迁，南宋定都临安",
-                  "para": "why"
+                  "scene": "g.history.11.7.1",
+                  "cap": "金军打到了城下。",
+                  "sec": "why"
                 },
                 {
-                  "set": {
-                    "step": 2,
-                    "play": 1
-                  },
-                  "cap": "1127 年靖康之变，北宋亡；赵构南迁，南宋定都临安。",
-                  "para": "takeaway"
+                  "scene": "g.history.11.7.2",
+                  "cap": "徽宗和钦宗被掳走。",
+                  "sec": "example"
+                },
+                {
+                  "scene": "g.history.11.7.3",
+                  "cap": "1127 年，北宋结束。",
+                  "sec": [
+                    "derive",
+                    0,
+                    1
+                  ]
+                },
+                {
+                  "scene": "g.history.11.7.4",
+                  "cap": "剩下的人渡过长江，变成南宋。",
+                  "sec": [
+                    "derive",
+                    2,
+                    3
+                  ]
+                },
+                {
+                  "scene": "g.history.11.7.5",
+                  "cap": "这一年叫靖康之变。",
+                  "sec": "takeaway"
                 }
               ]
             }
@@ -27172,32 +20532,46 @@ window.DAYS = [
               "下一关：这么大的地方怎么管？"
             ],
             "visual": {
-              "type": "tug",
-              "base": {},
-              "frames": [
+              "type": "deck",
+              "id": "deck.history.11.9",
+              "slides": [
                 {
-                  "set": {
-                    "step": 0,
-                    "play": 0
-                  },
-                  "cap": "宋稳住了内部、输给了外部；下一个王朝要回答\"这么大怎么管\"",
-                  "para": "idea"
+                  "scene": "g.history.11.9.0",
+                  "cap": "五代的内乱，宋想办法按住了。",
+                  "sec": "idea"
                 },
                 {
-                  "set": {
-                    "step": 1,
-                    "play": 0.5
-                  },
-                  "cap": "宋稳住了内部、输给了外部；下一个王朝要回答\"这么大怎么管\"",
-                  "para": "why"
+                  "scene": "g.history.11.9.1",
+                  "cap": "北边先是辽。",
+                  "sec": "why"
                 },
                 {
-                  "set": {
-                    "step": 2,
-                    "play": 1
-                  },
-                  "cap": "宋稳住了内部、输给了外部；下一个王朝要回答\"这么大怎么管\"。",
-                  "para": "takeaway"
+                  "scene": "g.history.11.9.2",
+                  "cap": "西北还有西夏。",
+                  "sec": "example"
+                },
+                {
+                  "scene": "g.history.11.9.3",
+                  "cap": "后来金更强，占了北方。",
+                  "sec": [
+                    "derive",
+                    0,
+                    1
+                  ]
+                },
+                {
+                  "scene": "g.history.11.9.4",
+                  "cap": "里面安静了，外面的压力却在。",
+                  "sec": [
+                    "derive",
+                    2,
+                    2
+                  ]
+                },
+                {
+                  "scene": "g.history.11.9.5",
+                  "cap": "草原上，一个更强的力量正在起来。",
+                  "sec": "takeaway"
                 }
               ]
             }
@@ -27299,74 +20673,8 @@ window.DAYS = [
             "label": "交子"
           }
         ],
-        "hookComic": {
-          "panels": [
-            {
-              "bg": "palace",
-              "cast": [
-                {
-                  "who": "kingWu",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [],
-              "cap": "陈桥驿"
-            },
-            {
-              "bg": "palace",
-              "cast": [
-                {
-                  "who": "kingWu",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [],
-              "cap": "他当上皇帝"
-            },
-            {
-              "bg": "palace",
-              "cast": [
-                {
-                  "who": "kingWu",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [],
-              "cap": "晚上睡不着"
-            },
-            {
-              "bg": "palace",
-              "cast": [
-                {
-                  "who": "xiaoyin",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "worry",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [
-                {
-                  "who": "xiaoyin",
-                  "text": "他最怕什么？"
-                }
-              ],
-              "cap": "他最怕什么？"
-            }
-          ]
+        "hookPic": {
+          "scene": "hook.11.history"
         }
       },
       "geo": {
@@ -27445,32 +20753,13 @@ window.DAYS = [
               "why": "水不流了，就托不住泥沙，泥沙往下沉。「泥沙浮到水面」不对，泥沙比水重。"
             },
             "visual": {
-              "type": "delta",
-              "base": {},
-              "frames": [
+              "type": "deck",
+              "id": "still.11.geo.2",
+              "slides": [
                 {
-                  "set": {
-                    "step": 0,
-                    "play": 0
-                  },
+                  "scene": "still.11.geo.2",
                   "cap": "河到海口变慢，泥沙沉积，堆出平坦肥沃的三角洲",
-                  "para": "idea"
-                },
-                {
-                  "set": {
-                    "step": 1,
-                    "play": 0.5
-                  },
-                  "cap": "河到海口变慢，泥沙沉积，堆出平坦肥沃的三角洲",
-                  "para": "why"
-                },
-                {
-                  "set": {
-                    "step": 2,
-                    "play": 1
-                  },
-                  "cap": "河到海口变慢，泥沙沉积，堆出平坦肥沃的三角洲。",
-                  "para": "takeaway"
+                  "sec": "takeaway"
                 }
               ]
             }
@@ -27488,32 +20777,46 @@ window.DAYS = [
               "港口兴旺，城市就长大。"
             ],
             "visual": {
-              "type": "cnmap",
-              "base": {},
-              "frames": [
+              "type": "deck",
+              "id": "deck.geo.11.4",
+              "slides": [
                 {
-                  "set": {
-                    "step": 0,
-                    "play": 0
-                  },
-                  "cap": "入海口连起大河和大海，最容易长成大港口和大城市",
-                  "para": "idea"
+                  "scene": "g.geo.11.4.0",
+                  "cap": "河水流到这里，遇见大海。",
+                  "sec": "idea"
                 },
                 {
-                  "set": {
-                    "step": 1,
-                    "play": 0.5
-                  },
-                  "cap": "入海口连起大河和大海，最容易长成大港口和大城市",
-                  "para": "why"
+                  "scene": "g.geo.11.4.1",
+                  "cap": "海上的大船从这里进来。",
+                  "sec": "why"
                 },
                 {
-                  "set": {
-                    "step": 2,
-                    "play": 1
-                  },
-                  "cap": "入海口连起大河和大海，最容易长成大港口和大城市。",
-                  "para": "takeaway"
+                  "scene": "g.geo.11.4.2",
+                  "cap": "江船和海船在这里换货。",
+                  "sec": "example"
+                },
+                {
+                  "scene": "g.geo.11.4.3",
+                  "cap": "换船的地方，容易长出港口。",
+                  "sec": [
+                    "derive",
+                    0,
+                    1
+                  ]
+                },
+                {
+                  "scene": "g.geo.11.4.4",
+                  "cap": "港口旁边，城就大起来。",
+                  "sec": [
+                    "derive",
+                    2,
+                    3
+                  ]
+                },
+                {
+                  "scene": "g.geo.11.4.5",
+                  "cap": "河口是内河和大海的接口。",
+                  "sec": "takeaway"
                 }
               ]
             }
@@ -27540,32 +20843,46 @@ window.DAYS = [
               "why": "外贸要靠港口进出货，离港澳台近也方便合作。「沿海的人口最少」不对，沿海恰恰是人最密的地方。"
             },
             "visual": {
-              "type": "tilemap",
-              "base": {},
-              "frames": [
+              "type": "deck",
+              "id": "deck.geo.11.5",
+              "slides": [
                 {
-                  "set": {
-                    "step": 0,
-                    "play": 0
-                  },
-                  "cap": "平原、港口、开放三样凑齐，沿海最先富起来",
-                  "para": "idea"
+                  "scene": "g.geo.11.5.0",
+                  "cap": "1980 年，深圳先开门。",
+                  "sec": "idea"
                 },
                 {
-                  "set": {
-                    "step": 1,
-                    "play": 0.5
-                  },
-                  "cap": "平原、港口、开放三样凑齐，沿海最先富起来",
-                  "para": "why"
+                  "scene": "g.geo.11.5.1",
+                  "cap": "珠海也在广东沿海。",
+                  "sec": "why"
                 },
                 {
-                  "set": {
-                    "step": 2,
-                    "play": 1
-                  },
-                  "cap": "平原、港口、开放三样凑齐，沿海最先富起来。",
-                  "para": "takeaway"
+                  "scene": "g.geo.11.5.2",
+                  "cap": "汕头是第三扇门。",
+                  "sec": "example"
+                },
+                {
+                  "scene": "g.geo.11.5.3",
+                  "cap": "厦门在福建，同样靠海。",
+                  "sec": [
+                    "derive",
+                    0,
+                    1
+                  ]
+                },
+                {
+                  "scene": "g.geo.11.5.4",
+                  "cap": "四扇门都开在东南沿海。",
+                  "sec": [
+                    "derive",
+                    2,
+                    3
+                  ]
+                },
+                {
+                  "scene": "g.geo.11.5.5",
+                  "cap": "先从海边开门，再往里面走。",
+                  "sec": "takeaway"
                 }
               ]
             }
@@ -27802,81 +21119,8 @@ window.DAYS = [
             "label": "HI"
           }
         ],
-        "hookComic": {
-          "panels": [
-            {
-              "bg": "mountain",
-              "cast": [
-                {
-                  "who": "xiaoman",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [],
-              "cap": "夜里的卫星图：东边一片亮"
-            },
-            {
-              "bg": "mountain",
-              "cast": [
-                {
-                  "who": "xiaoman",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [],
-              "cap": "西边大多是暗的"
-            },
-            {
-              "bg": "mountain",
-              "cast": [
-                {
-                  "who": "xiaoman",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [
-                {
-                  "what": "castle",
-                  "x": 0.78,
-                  "y": 0.78,
-                  "k": 0.95
-                }
-              ],
-              "bubbles": [
-                {
-                  "who": "xiaoman",
-                  "text": "大城市为什么挤在东边？"
-                }
-              ],
-              "cap": "大城市为什么挤在东边？"
-            },
-            {
-              "bg": "mountain",
-              "cast": [
-                {
-                  "who": "xiaoyin",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "point"
-                }
-              ],
-              "props": [],
-              "bubbles": [],
-              "cap": "小音指着一条船和一条河"
-            }
-          ]
+        "hookPic": {
+          "scene": "hook.11.geo"
         }
       },
       "finance": {
@@ -27884,163 +21128,18 @@ window.DAYS = [
         "title": "资产与负债：真正属于你的有多少",
         "minutes": 7,
         "hook": "开着十几万的车，不一定比只有存款的人更有钱。",
-        "hookComic": {
-          "panels": [
-            {
-              "bg": "room",
-              "cast": [
-                {
-                  "who": "xiaoE",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [
-                {
-                  "what": "car",
-                  "x": 0.78,
-                  "y": 0.78,
-                  "k": 0.95
-                }
-              ],
-              "bubbles": [],
-              "cap": "小 E 开着新车"
-            },
-            {
-              "bg": "room",
-              "cast": [
-                {
-                  "who": "xiaoF",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [
-                {
-                  "what": "payslip",
-                  "x": 0.78,
-                  "y": 0.78,
-                  "k": 0.95
-                }
-              ],
-              "bubbles": [],
-              "cap": "小 F 只有一张存折"
-            },
-            {
-              "bg": "room",
-              "cast": [
-                {
-                  "who": "xiaoman",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [],
-              "cap": "两人比谁有钱"
-            },
-            {
-              "bg": "room",
-              "cast": [
-                {
-                  "who": "xiaoE",
-                  "x": 0.32,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                },
-                {
-                  "who": "xiaoyin",
-                  "x": 0.64,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [
-                {
-                  "what": "car",
-                  "x": 0.78,
-                  "y": 0.78,
-                  "k": 0.95
-                }
-              ],
-              "bubbles": [],
-              "cap": "小音把小 E 的车贷单翻出来"
-            }
-          ]
-        },
         "steps": [
           {
             "title": "开好车，就更有钱吗？",
             "idea": "看起来有钱，和真正有多少钱，是两回事。要把\"有的\"和\"欠的\"分开算。",
             "visual": {
-              "type": "comic",
-              "panels": [
+              "type": "deck",
+              "id": "still.11.finance.0",
+              "slides": [
                 {
-                  "bg": "room",
-                  "cast": [
-                    {
-                      "who": "xiaoE",
-                      "x": 0.46,
-                      "y": 0.74,
-                      "face": "calm",
-                      "pose": "stand"
-                    }
-                  ],
-                  "props": [
-                    {
-                      "what": "car",
-                      "x": 0.78,
-                      "y": 0.78,
-                      "k": 0.95
-                    }
-                  ],
-                  "bubbles": [],
-                  "cap": "小 E 开着新车"
-                },
-                {
-                  "bg": "room",
-                  "cast": [
-                    {
-                      "who": "xiaoman",
-                      "x": 0.46,
-                      "y": 0.74,
-                      "face": "calm",
-                      "pose": "cheer"
-                    }
-                  ],
-                  "props": [],
-                  "bubbles": [],
-                  "cap": "车钥匙后面挂着贷款"
-                },
-                {
-                  "bg": "room",
-                  "cast": [
-                    {
-                      "who": "xiaoF",
-                      "x": 0.46,
-                      "y": 0.74,
-                      "face": "happy",
-                      "pose": "cheer"
-                    }
-                  ],
-                  "props": [
-                    {
-                      "what": "payslip",
-                      "x": 0.78,
-                      "y": 0.78,
-                      "k": 0.95
-                    }
-                  ],
-                  "bubbles": [],
-                  "cap": "小 F 只有存款"
+                  "scene": "still.11.finance.0",
+                  "cap": "看着有钱，不等于真有钱",
+                  "sec": "takeaway"
                 }
               ]
             },
@@ -28139,30 +21238,36 @@ window.DAYS = [
             "title": "净资产：全卖掉、全还清，还剩多少",
             "idea": "**净资产**就是想象把有的东西全卖掉，再把欠的钱全还掉，最后剩下的。这才是真正属于你的。",
             "visual": {
-              "type": "chain",
-              "base": {
-                "nodes": [
-                  "全部卖掉：15 万",
-                  "全部还清：−9 万",
-                  "剩下：6 万"
-                ]
-              },
-              "frames": [
+              "type": "deck",
+              "id": "deck.finance.11.4",
+              "slides": [
                 {
-                  "set": {
-                    "play": 0,
-                    "step": 0
-                  },
-                  "cap": "先看骨架",
-                  "para": "idea"
+                  "scene": "g.finance.11.4.0",
+                  "cap": "想象把有的东西全部卖掉。",
+                  "sec": "idea"
                 },
                 {
-                  "set": {
-                    "play": 1,
-                    "step": 2
-                  },
-                  "cap": "看完整的图",
-                  "para": "takeaway"
+                  "scene": "g.finance.11.4.1",
+                  "cap": "再把欠的钱全部还掉。",
+                  "sec": [
+                    "derive",
+                    0,
+                    1
+                  ]
+                },
+                {
+                  "scene": "g.finance.11.4.2",
+                  "cap": "最后留在手里的，才是净资产。",
+                  "sec": [
+                    "derive",
+                    2,
+                    2
+                  ]
+                },
+                {
+                  "scene": "g.finance.11.4.3",
+                  "cap": "不是名下有多少，是还完还剩多少。",
+                  "sec": "takeaway"
                 }
               ]
             },
@@ -28379,7 +21484,10 @@ window.DAYS = [
             "why": "净资产 = 资产 − 负债。资产高、净资产反而低，差的部分就是欠款。比谁更有钱看净资产，所以「小 H 更有钱」不对；图也没画错。",
             "ref": 4
           }
-        ]
+        ],
+        "hookPic": {
+          "scene": "hook.11.finance"
+        }
       },
       "psych": {
         "id": "d11-psych",
@@ -28395,32 +21503,13 @@ window.DAYS = [
             "example": "朋友当众开了你一个玩笑。你可以咬牙忍着不变脸，也可以想\"他就是嘴快，没恶意\"。",
             "review": true,
             "visual": {
-              "type": "process",
-              "base": {},
-              "frames": [
+              "type": "deck",
+              "id": "still.11.psych.0",
+              "slides": [
                 {
-                  "set": {
-                    "step": 0,
-                    "play": 0
-                  },
+                  "scene": "still.11.psych.0",
                   "cap": "今天比较两种调节：换解释，和压表现",
-                  "para": "idea"
-                },
-                {
-                  "set": {
-                    "step": 1,
-                    "play": 0.5
-                  },
-                  "cap": "今天比较两种调节：换解释，和压表现",
-                  "para": "why"
-                },
-                {
-                  "set": {
-                    "step": 2,
-                    "play": 1
-                  },
-                  "cap": "今天比较两种调节：换解释，和压表现。",
-                  "para": "takeaway"
+                  "sec": "takeaway"
                 }
               ]
             }
@@ -28432,32 +21521,13 @@ window.DAYS = [
             "takeaway": "情绪按情境、注意、评价、反应产生，越早介入越省力。",
             "example": "消息发出去两小时（情境）→ 你盯着\"已读\"两个字（注意）→ 你想\"他不想理我\"（评价）→ 心一沉、眼眶发热（反应）。",
             "visual": {
-              "type": "process",
-              "base": {},
-              "frames": [
+              "type": "deck",
+              "id": "still.11.psych.1",
+              "slides": [
                 {
-                  "set": {
-                    "step": 0,
-                    "play": 0
-                  },
+                  "scene": "still.11.psych.1",
                   "cap": "情绪按情境、注意、评价、反应产生，越早介入越省力",
-                  "para": "idea"
-                },
-                {
-                  "set": {
-                    "step": 1,
-                    "play": 0.5
-                  },
-                  "cap": "情绪按情境、注意、评价、反应产生，越早介入越省力",
-                  "para": "why"
-                },
-                {
-                  "set": {
-                    "step": 2,
-                    "play": 1
-                  },
-                  "cap": "情绪按情境、注意、评价、反应产生，越早介入越省力。",
-                  "para": "takeaway"
+                  "sec": "takeaway"
                 }
               ]
             },
@@ -28478,32 +21548,13 @@ window.DAYS = [
             "takeaway": "认知重评：换解释，让情绪从源头变小。",
             "example": "已读不回，把评价从\"他不想理我\"换成\"他可能在开会，晚点会回\"。事情没变，心沉下去的那一下就轻了很多。",
             "visual": {
-              "type": "process",
-              "base": {},
-              "frames": [
+              "type": "deck",
+              "id": "still.11.psych.2",
+              "slides": [
                 {
-                  "set": {
-                    "step": 0,
-                    "play": 0
-                  },
+                  "scene": "still.11.psych.2",
                   "cap": "认知重评：换解释，让情绪从源头变小",
-                  "para": "idea"
-                },
-                {
-                  "set": {
-                    "step": 1,
-                    "play": 0.5
-                  },
-                  "cap": "认知重评：换解释，让情绪从源头变小",
-                  "para": "why"
-                },
-                {
-                  "set": {
-                    "step": 2,
-                    "play": 1
-                  },
-                  "cap": "认知重评：换解释，让情绪从源头变小。",
-                  "para": "takeaway"
+                  "sec": "takeaway"
                 }
               ]
             }
@@ -28515,32 +21566,13 @@ window.DAYS = [
             "takeaway": "表达抑制只压住外部表现，唤醒和感受都还在。",
             "example": "开会时被当众否定，你笑着说\"好的我再改改\"，桌子底下的手却攥得发白。别人看不出来，可你的心跳、你的委屈一点没少。",
             "visual": {
-              "type": "process",
-              "base": {},
-              "frames": [
+              "type": "deck",
+              "id": "still.11.psych.3",
+              "slides": [
                 {
-                  "set": {
-                    "step": 0,
-                    "play": 0
-                  },
+                  "scene": "still.11.psych.3",
                   "cap": "表达抑制只压住外部表现，唤醒和感受都还在",
-                  "para": "idea"
-                },
-                {
-                  "set": {
-                    "step": 1,
-                    "play": 0.5
-                  },
-                  "cap": "表达抑制只压住外部表现，唤醒和感受都还在",
-                  "para": "why"
-                },
-                {
-                  "set": {
-                    "step": 2,
-                    "play": 1
-                  },
-                  "cap": "表达抑制只压住外部表现，唤醒和感受都还在。",
-                  "para": "takeaway"
+                  "sec": "takeaway"
                 }
               ]
             }
@@ -28566,33 +21598,46 @@ window.DAYS = [
               "why": "像医生一样看，是换了一个看画面的角度，属于认知重评。「表达抑制」那组是尽量不让脸上露出感受。"
             },
             "visual": {
-              "type": "comic",
-              "panels": [
+              "type": "deck",
+              "id": "deck.psych.11.5",
+              "slides": [
                 {
-                  "bg": "room",
-                  "cast": [
-                    {
-                      "who": "xiaoman",
-                      "x": 0.46,
-                      "y": 0.74,
-                      "face": "calm",
-                      "pose": "stand"
-                    }
-                  ],
-                  "cap": "重评降低了感受；抑制只压住表"
+                  "scene": "g.psych.11.5.0",
+                  "cap": "两组人看的是同一段难懂的片子。",
+                  "sec": "idea"
                 },
                 {
-                  "bg": "street",
-                  "cast": [
-                    {
-                      "who": "gross",
-                      "x": 0.46,
-                      "y": 0.74,
-                      "face": "calm",
-                      "pose": "stand"
-                    }
-                  ],
-                  "cap": "格罗斯的实验：同一段影片"
+                  "scene": "g.psych.11.5.1",
+                  "cap": "一组人试着换一种看法。",
+                  "sec": "why"
+                },
+                {
+                  "scene": "g.psych.11.5.2",
+                  "cap": "另一组人只是忍住脸上的表情。",
+                  "sec": "example"
+                },
+                {
+                  "scene": "g.psych.11.5.3",
+                  "cap": "换看法的人，难受更轻。",
+                  "sec": [
+                    "derive",
+                    0,
+                    1
+                  ]
+                },
+                {
+                  "scene": "g.psych.11.5.4",
+                  "cap": "身体的反应也不一样。",
+                  "sec": [
+                    "derive",
+                    2,
+                    2
+                  ]
+                },
+                {
+                  "scene": "g.psych.11.5.5",
+                  "cap": "这是格罗斯 1998 年的实验。",
+                  "sec": "takeaway"
                 }
               ]
             }
@@ -28604,32 +21649,13 @@ window.DAYS = [
             "takeaway": "认知重评改情绪本身，表达抑制只压表面；长期看重评更健康。",
             "example": "账号选题提示：\"不是让你别难过，而是换个讲法看这件事。\"下一关的情绪 ABC，会把\"换个讲法\"拆成一步步能练的方法。",
             "visual": {
-              "type": "process",
-              "base": {},
-              "frames": [
+              "type": "deck",
+              "id": "still.11.psych.5",
+              "slides": [
                 {
-                  "set": {
-                    "step": 0,
-                    "play": 0
-                  },
+                  "scene": "still.11.psych.5",
                   "cap": "认知重评改情绪本身，表达抑制只压表面；长期看重评更健康",
-                  "para": "idea"
-                },
-                {
-                  "set": {
-                    "step": 1,
-                    "play": 0.5
-                  },
-                  "cap": "认知重评改情绪本身，表达抑制只压表面；长期看重评更健康",
-                  "para": "why"
-                },
-                {
-                  "set": {
-                    "step": 2,
-                    "play": 1
-                  },
-                  "cap": "认知重评改情绪本身，表达抑制只压表面；长期看重评更健康。",
-                  "para": "takeaway"
+                  "sec": "takeaway"
                 }
               ]
             }
@@ -28693,74 +21719,8 @@ window.DAYS = [
             "ref": 2
           }
         ],
-        "hookComic": {
-          "panels": [
-            {
-              "bg": "room",
-              "cast": [
-                {
-                  "who": "ale",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [],
-              "cap": "阿乐说了一句难听的话"
-            },
-            {
-              "bg": "room",
-              "cast": [
-                {
-                  "who": "xiaoman",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [],
-              "cap": "小满咬牙忍住"
-            },
-            {
-              "bg": "room",
-              "cast": [
-                {
-                  "who": "xiaoman",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "think"
-                }
-              ],
-              "props": [],
-              "bubbles": [
-                {
-                  "who": "xiaoman",
-                  "text": "他今天压力大"
-                }
-              ],
-              "cap": "另一个平行世界的小满想"
-            },
-            {
-              "bg": "room",
-              "cast": [
-                {
-                  "who": "xiaoman",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [],
-              "cap": "两个小满的心跳计对比"
-            }
-          ]
+        "hookPic": {
+          "scene": "hook.11.psych"
         }
       },
       "english": {
@@ -29622,76 +22582,8 @@ window.DAYS = [
             "ref": 2
           }
         ],
-        "hookComic": {
-          "panels": [
-            {
-              "bg": "room",
-              "cast": [
-                {
-                  "who": "xiaoman",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [
-                {
-                  "what": "skirt",
-                  "x": 0.78,
-                  "y": 0.78,
-                  "k": 0.95
-                }
-              ],
-              "bubbles": [],
-              "cap": "红上衣配绿裙子"
-            },
-            {
-              "bg": "room",
-              "cast": [
-                {
-                  "who": "xiaoman",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "think"
-                }
-              ],
-              "props": [],
-              "bubbles": [],
-              "cap": "小满想换掉一件"
-            },
-            {
-              "bg": "room",
-              "cast": [
-                {
-                  "who": "xiaoyin",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "give"
-                }
-              ],
-              "props": [],
-              "bubbles": [],
-              "cap": "小音递上一条米白腰带"
-            },
-            {
-              "bg": "room",
-              "cast": [
-                {
-                  "who": "xiaoman",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [],
-              "cap": "系上后立刻和谐"
-            }
-          ]
+        "hookPic": {
+          "scene": "hook.12.fashion"
         }
       },
       "history": {
@@ -29708,32 +22600,13 @@ window.DAYS = [
             "example": "像一支本来各唱各的合唱队，终于有了一个指挥。还是同样的人，不再互相抢拍子，声音一下子整齐、响亮了好几倍。",
             "exLabel": "打个比方",
             "visual": {
-              "type": "histmap",
-              "base": {},
-              "frames": [
+              "type": "deck",
+              "id": "still.12.history.0",
+              "slides": [
                 {
-                  "set": {
-                    "step": 0,
-                    "play": 0
-                  },
+                  "scene": "still.12.history.0",
                   "cap": "成吉思汗统一草原，蒙古骑兵又快又远，一路打到欧洲",
-                  "para": "idea"
-                },
-                {
-                  "set": {
-                    "step": 1,
-                    "play": 0.5
-                  },
-                  "cap": "成吉思汗统一草原，蒙古骑兵又快又远，一路打到欧洲",
-                  "para": "why"
-                },
-                {
-                  "set": {
-                    "step": 2,
-                    "play": 1
-                  },
-                  "cap": "成吉思汗统一草原，蒙古骑兵又快又远，一路打到欧洲。",
-                  "para": "takeaway"
+                  "sec": "takeaway"
                 }
               ]
             }
@@ -29787,77 +22660,13 @@ window.DAYS = [
               "中间加一层，但这一层归中央。"
             ],
             "visual": {
-              "type": "comic",
-              "panels": [
+              "type": "deck",
+              "id": "still.12.history.2",
+              "slides": [
                 {
-                  "bg": "palace",
-                  "cast": [
-                    {
-                      "who": "kingWu",
-                      "x": 0.46,
-                      "y": 0.74,
-                      "face": "calm",
-                      "pose": "stand"
-                    }
-                  ],
-                  "props": [],
-                  "bubbles": [],
-                  "cap": "地太大"
-                },
-                {
-                  "bg": "palace",
-                  "cast": [
-                    {
-                      "who": "kingWu",
-                      "x": 0.46,
-                      "y": 0.74,
-                      "face": "calm",
-                      "pose": "stand"
-                    }
-                  ],
-                  "props": [],
-                  "bubbles": [],
-                  "cap": "从首都管不过来"
-                },
-                {
-                  "bg": "palace",
-                  "cast": [
-                    {
-                      "who": "kingWu",
-                      "x": 0.46,
-                      "y": 0.74,
-                      "face": "calm",
-                      "pose": "stand"
-                    }
-                  ],
-                  "props": [],
-                  "bubbles": [
-                    {
-                      "who": "kingWu",
-                      "text": "分部"
-                    }
-                  ],
-                  "cap": "派中书省的到各地"
-                },
-                {
-                  "bg": "palace",
-                  "cast": [
-                    {
-                      "who": "kingWu",
-                      "x": 0.46,
-                      "y": 0.74,
-                      "face": "calm",
-                      "pose": "stand"
-                    }
-                  ],
-                  "props": [],
-                  "bubbles": [
-                    {
-                      "who": "kingWu",
-                      "text": "行省"
-                    }
-                  ],
-                  "cap": "——行走的中书省"
+                  "scene": "still.12.history.2",
+                  "cap": "太大的国家需要一个中间层，而且这一层必须属于中央",
+                  "sec": "takeaway"
                 }
               ]
             }
@@ -29879,32 +22688,13 @@ window.DAYS = [
               "why": "行省是中央派出的分部，长官「由中央任命，可以调换」。「由长官的儿子世袭」是分封的做法，行省制恰恰要避免它。"
             },
             "visual": {
-              "type": "tree",
-              "base": {},
-              "frames": [
+              "type": "deck",
+              "id": "still.12.history.3",
+              "slides": [
                 {
-                  "set": {
-                    "step": 0,
-                    "play": 0
-                  },
+                  "scene": "still.12.history.3",
                   "cap": "行省是中央派出的分部，长官由中央任命，\"省\"由此而来",
-                  "para": "idea"
-                },
-                {
-                  "set": {
-                    "step": 1,
-                    "play": 0.5
-                  },
-                  "cap": "行省是中央派出的分部，长官由中央任命，\"省\"由此而来",
-                  "para": "why"
-                },
-                {
-                  "set": {
-                    "step": 2,
-                    "play": 1
-                  },
-                  "cap": "行省是中央派出的分部，长官由中央任命，\"省\"由此而来。",
-                  "para": "takeaway"
+                  "sec": "takeaway"
                 }
               ]
             }
@@ -29922,32 +22712,46 @@ window.DAYS = [
               "起义四起 → 元退出中原。"
             ],
             "visual": {
-              "type": "chain",
-              "base": {},
-              "frames": [
+              "type": "deck",
+              "id": "deck.history.12.5",
+              "slides": [
                 {
-                  "set": {
-                    "step": 0,
-                    "play": 0
-                  },
-                  "cap": "元末钱乱、河灾、徭役叠在一起，激起起义，明取而代之",
-                  "para": "idea"
+                  "scene": "g.history.12.5.0",
+                  "cap": "元朝定都大都，就是今天的北京。",
+                  "sec": "idea"
                 },
                 {
-                  "set": {
-                    "step": 1,
-                    "play": 0.5
-                  },
-                  "cap": "元末钱乱、河灾、徭役叠在一起，激起起义，明取而代之",
-                  "para": "why"
+                  "scene": "g.history.12.5.1",
+                  "cap": "从入主到退出，不到 100 年。",
+                  "sec": "why"
                 },
                 {
-                  "set": {
-                    "step": 2,
-                    "play": 1
-                  },
-                  "cap": "元末钱乱、河灾、徭役叠在一起，激起起义，明取而代之。",
-                  "para": "takeaway"
+                  "scene": "g.history.12.5.2",
+                  "cap": "钱的账越来越乱。",
+                  "sec": "example"
+                },
+                {
+                  "scene": "g.history.12.5.3",
+                  "cap": "黄河又多次泛滥。",
+                  "sec": [
+                    "derive",
+                    0,
+                    1
+                  ]
+                },
+                {
+                  "scene": "g.history.12.5.4",
+                  "cap": "中后期，各地的火气压不住。",
+                  "sec": [
+                    "derive",
+                    2,
+                    3
+                  ]
+                },
+                {
+                  "scene": "g.history.12.5.5",
+                  "cap": "账乱、河患、人心散，国就短。",
+                  "sec": "takeaway"
                 }
               ]
             }
@@ -29964,32 +22768,13 @@ window.DAYS = [
               "皇权空前集中。"
             ],
             "visual": {
-              "type": "tree",
-              "base": {},
-              "frames": [
+              "type": "deck",
+              "id": "still.12.history.5",
+              "slides": [
                 {
-                  "set": {
-                    "step": 0,
-                    "play": 0
-                  },
+                  "scene": "still.12.history.5",
                   "cap": "明废丞相，六部直属皇帝，皇权空前集中",
-                  "para": "idea"
-                },
-                {
-                  "set": {
-                    "step": 1,
-                    "play": 0.5
-                  },
-                  "cap": "明废丞相，六部直属皇帝，皇权空前集中",
-                  "para": "why"
-                },
-                {
-                  "set": {
-                    "step": 2,
-                    "play": 1
-                  },
-                  "cap": "明废丞相，六部直属皇帝，皇权空前集中。",
-                  "para": "takeaway"
+                  "sec": "takeaway"
                 }
               ]
             }
@@ -30016,32 +22801,13 @@ window.DAYS = [
               "why": "北京靠近长城，皇帝在这里「离北边防线近，好亲自坐镇」。「北京冬天比南京暖和」不对，北京纬度更高，冬天冷得多。"
             },
             "visual": {
-              "type": "histmap",
-              "base": {},
-              "frames": [
+              "type": "deck",
+              "id": "still.12.history.6",
+              "slides": [
                 {
-                  "set": {
-                    "step": 0,
-                    "play": 0
-                  },
+                  "scene": "still.12.history.6",
                   "cap": "明迁都北京，皇帝亲自坐镇北边防线，叫\"天子守国门\"",
-                  "para": "idea"
-                },
-                {
-                  "set": {
-                    "step": 1,
-                    "play": 0.5
-                  },
-                  "cap": "明迁都北京，皇帝亲自坐镇北边防线，叫\"天子守国门\"",
-                  "para": "why"
-                },
-                {
-                  "set": {
-                    "step": 2,
-                    "play": 1
-                  },
-                  "cap": "明迁都北京，皇帝亲自坐镇北边防线，叫\"天子守国门\"。",
-                  "para": "takeaway"
+                  "sec": "takeaway"
                 }
               ]
             }
@@ -30063,32 +22829,13 @@ window.DAYS = [
               "why": "郑和船队最远到达「非洲东岸」。到达「美洲」的是哥伦布，比郑和晚了约 90 年。"
             },
             "visual": {
-              "type": "histmap",
-              "base": {},
-              "frames": [
+              "type": "deck",
+              "id": "still.12.history.7",
+              "slides": [
                 {
-                  "set": {
-                    "step": 0,
-                    "play": 0
-                  },
-                  "cap": "郑和七下西洋，比哥伦布早约 90 年，后来因花费太大而停止",
-                  "para": "idea"
-                },
-                {
-                  "set": {
-                    "step": 1,
-                    "play": 0.5
-                  },
-                  "cap": "郑和七下西洋，比哥伦布早约 90 年，后来因花费太大而停止",
-                  "para": "why"
-                },
-                {
-                  "set": {
-                    "step": 2,
-                    "play": 1
-                  },
-                  "cap": "郑和七下西洋，比哥伦布早约 90 年，后来因花费太大而停止。",
-                  "para": "takeaway"
+                  "scene": "still.12.history.7",
+                  "cap": "郑和下西洋",
+                  "sec": "takeaway"
                 }
               ]
             }
@@ -30106,32 +22853,46 @@ window.DAYS = [
               "李自成进了北京，女真随后入关。"
             ],
             "visual": {
-              "type": "chain",
-              "base": {},
-              "frames": [
+              "type": "deck",
+              "id": "deck.history.12.9",
+              "slides": [
                 {
-                  "set": {
-                    "step": 0,
-                    "play": 0
-                  },
-                  "cap": "明亡于财政和饥荒逼出的农民起义，东北的清随后入主中原",
-                  "para": "idea"
+                  "scene": "g.history.12.9.0",
+                  "cap": "1368 年，明朝开始。",
+                  "sec": "idea"
                 },
                 {
-                  "set": {
-                    "step": 1,
-                    "play": 0.5
-                  },
-                  "cap": "明亡于财政和饥荒逼出的农民起义，东北的清随后入主中原",
-                  "para": "why"
+                  "scene": "g.history.12.9.1",
+                  "cap": "一直延续了 276 年。",
+                  "sec": "why"
                 },
                 {
-                  "set": {
-                    "step": 2,
-                    "play": 1
-                  },
-                  "cap": "明亡于财政和饥荒逼出的农民起义，东北的清随后入主中原。",
-                  "para": "takeaway"
+                  "scene": "g.history.12.9.2",
+                  "cap": "1644 年，李自成的军队进北京。",
+                  "sec": "example"
+                },
+                {
+                  "scene": "g.history.12.9.3",
+                  "cap": "明朝在这一年结束。",
+                  "sec": [
+                    "derive",
+                    0,
+                    1
+                  ]
+                },
+                {
+                  "scene": "g.history.12.9.4",
+                  "cap": "清军随后入关。",
+                  "sec": [
+                    "derive",
+                    2,
+                    3
+                  ]
+                },
+                {
+                  "scene": "g.history.12.9.5",
+                  "cap": "一个朝代结束，下一个从关外进来。",
+                  "sec": "takeaway"
                 }
               ]
             }
@@ -30224,100 +22985,8 @@ window.DAYS = [
             "label": "明初都城南京"
           }
         ],
-        "hookComic": {
-          "panels": [
-            {
-              "bg": "palace",
-              "cast": [
-                {
-                  "who": "kingWu",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [
-                {
-                  "what": "mapScroll",
-                  "x": 0.78,
-                  "y": 0.78,
-                  "k": 0.95
-                }
-              ],
-              "bubbles": [
-                {
-                  "who": "kingWu",
-                  "text": "某某省"
-                }
-              ],
-              "cap": "今天地图上的四个字"
-            },
-            {
-              "bg": "palace",
-              "cast": [
-                {
-                  "who": "xiaoman",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [
-                {
-                  "who": "xiaoman",
-                  "text": "这个省字哪来的？"
-                }
-              ],
-              "cap": "这个省字哪来的？"
-            },
-            {
-              "bg": "palace",
-              "cast": [
-                {
-                  "who": "xiaoyin",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [
-                {
-                  "what": "mapScroll",
-                  "x": 0.78,
-                  "y": 0.78,
-                  "k": 0.95
-                }
-              ],
-              "bubbles": [],
-              "cap": "小音把地图往回翻了七百年"
-            },
-            {
-              "bg": "palace",
-              "cast": [
-                {
-                  "who": "kingWu",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [
-                {
-                  "what": "mapScroll",
-                  "x": 0.78,
-                  "y": 0.78,
-                  "k": 0.95
-                }
-              ],
-              "bubbles": [],
-              "cap": "元朝的大地图"
-            }
-          ]
+        "hookPic": {
+          "scene": "hook.12.history"
         }
       },
       "geo": {
@@ -30422,32 +23091,13 @@ window.DAYS = [
               "越往西北，雨越少。"
             ],
             "visual": {
-              "type": "cloudTrip",
-              "base": {},
-              "frames": [
+              "type": "deck",
+              "id": "still.12.geo.2",
+              "slides": [
                 {
-                  "set": {
-                    "step": 0,
-                    "play": 0
-                  },
+                  "scene": "still.12.geo.2",
                   "cap": "夏季风走一路下一路雨，降水从东南沿海向西北内陆减少",
-                  "para": "idea"
-                },
-                {
-                  "set": {
-                    "step": 1,
-                    "play": 0.5
-                  },
-                  "cap": "夏季风走一路下一路雨，降水从东南沿海向西北内陆减少",
-                  "para": "why"
-                },
-                {
-                  "set": {
-                    "step": 2,
-                    "play": 1
-                  },
-                  "cap": "夏季风走一路下一路雨，降水从东南沿海向西北内陆减少。",
-                  "para": "takeaway"
+                  "sec": "takeaway"
                 }
               ]
             }
@@ -30545,6 +23195,50 @@ window.DAYS = [
                   "para": "takeaway"
                 }
               ]
+            },
+            "deck": {
+              "type": "deck",
+              "id": "deck.geo.12.5",
+              "slides": [
+                {
+                  "scene": "g.geo.12.5.0",
+                  "cap": "板块一挤，地面皱成高山。",
+                  "sec": "idea"
+                },
+                {
+                  "scene": "g.geo.12.5.1",
+                  "cap": "皱褶之间，是深深的谷。",
+                  "sec": "why"
+                },
+                {
+                  "scene": "g.geo.12.5.2",
+                  "cap": "盆地被山围在中间。",
+                  "sec": "example"
+                },
+                {
+                  "scene": "g.geo.12.5.3",
+                  "cap": "云贵高原也是挤出来的。",
+                  "sec": [
+                    "derive",
+                    0,
+                    1
+                  ]
+                },
+                {
+                  "scene": "g.geo.12.5.4",
+                  "cap": "再往西，是更高的高原。",
+                  "sec": [
+                    "derive",
+                    2,
+                    3
+                  ]
+                },
+                {
+                  "scene": "g.geo.12.5.5",
+                  "cap": "高原、高山、盆地挤在一起。",
+                  "sec": "takeaway"
+                }
+              ]
             }
           },
           {
@@ -30611,32 +23305,46 @@ window.DAYS = [
               "why": "冷让细菌、真菌干活变慢，就像冰箱里的菜坏得慢。「东北的落叶特别硬」不是原因，同样的草放在南方，很快就烂了。"
             },
             "visual": {
-              "type": "soil",
-              "base": {},
-              "frames": [
+              "type": "deck",
+              "id": "deck.geo.12.7",
+              "slides": [
                 {
-                  "set": {
-                    "step": 0,
-                    "play": 0
-                  },
-                  "cap": "东北冬冷，落叶分解慢，养分攒成黑土；东北因此是重要的粮仓",
-                  "para": "idea"
+                  "scene": "g.geo.12.7.0",
+                  "cap": "东北平原铺着一层厚黑土。",
+                  "sec": "idea"
                 },
                 {
-                  "set": {
-                    "step": 1,
-                    "play": 0.5
-                  },
-                  "cap": "东北冬冷，落叶分解慢，养分攒成黑土；东北因此是重要的粮仓",
-                  "para": "why"
+                  "scene": "g.geo.12.7.1",
+                  "cap": "秋天的叶子年年落下来。",
+                  "sec": "why"
                 },
                 {
-                  "set": {
-                    "step": 2,
-                    "play": 1
-                  },
-                  "cap": "东北冬冷，落叶分解慢，养分攒成黑土；东北因此是重要的粮仓。",
-                  "para": "takeaway"
+                  "scene": "g.geo.12.7.2",
+                  "cap": "天冷，叶子烂不完。",
+                  "sec": "example"
+                },
+                {
+                  "scene": "g.geo.12.7.3",
+                  "cap": "没烂完的叶子，变成黑色养分。",
+                  "sec": [
+                    "derive",
+                    0,
+                    1
+                  ]
+                },
+                {
+                  "scene": "g.geo.12.7.4",
+                  "cap": "黑土又厚又肥，庄稼喜欢。",
+                  "sec": [
+                    "derive",
+                    2,
+                    3
+                  ]
+                },
+                {
+                  "scene": "g.geo.12.7.5",
+                  "cap": "正因为冷，养分才留得住。",
+                  "sec": "takeaway"
                 }
               ]
             }
@@ -30822,74 +23530,8 @@ window.DAYS = [
             "label": "BJ"
           }
         ],
-        "hookComic": {
-          "panels": [
-            {
-              "bg": "mountain",
-              "cast": [
-                {
-                  "who": "xiaoman",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [],
-              "cap": "西双版纳雨林"
-            },
-            {
-              "bg": "mountain",
-              "cast": [
-                {
-                  "who": "ale",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [],
-              "cap": "同一天塔克拉玛干沙漠"
-            },
-            {
-              "bg": "mountain",
-              "cast": [
-                {
-                  "who": "xiaoman",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [],
-              "cap": "两张明信片放在一起"
-            },
-            {
-              "bg": "mountain",
-              "cast": [
-                {
-                  "who": "xiaoyin",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [
-                {
-                  "who": "xiaoyin",
-                  "text": "一个国家"
-                }
-              ],
-              "cap": "一个国家"
-            }
-          ]
+        "hookPic": {
+          "scene": "hook.12.geo"
         }
       },
       "finance": {
@@ -30897,95 +23539,6 @@ window.DAYS = [
         "title": "资产 = 负债 + 净资产：一张永远平衡的表",
         "minutes": 7,
         "hook": "借钱买了一个包，你是变富了，还是没变？",
-        "hookComic": {
-          "panels": [
-            {
-              "bg": "room",
-              "cast": [
-                {
-                  "who": "xiaoman",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [
-                {
-                  "what": "bag",
-                  "x": 0.78,
-                  "y": 0.78,
-                  "k": 0.95
-                }
-              ],
-              "bubbles": [],
-              "cap": "小满借钱买了一个包"
-            },
-            {
-              "bg": "room",
-              "cast": [
-                {
-                  "who": "xiaoman",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "happy",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [],
-              "cap": "镜子前很开心"
-            },
-            {
-              "bg": "room",
-              "cast": [
-                {
-                  "who": "xiaoyin",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [
-                {
-                  "what": "paper",
-                  "x": 0.78,
-                  "y": 0.78,
-                  "k": 0.95
-                },
-                {
-                  "what": "bag",
-                  "x": 0.62,
-                  "y": 0.78,
-                  "k": 0.95
-                }
-              ],
-              "bubbles": [],
-              "cap": "小音拿出天平"
-            },
-            {
-              "bg": "room",
-              "cast": [
-                {
-                  "who": "xiaoman",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [
-                {
-                  "who": "xiaoman",
-                  "text": "变富了吗？"
-                }
-              ],
-              "cap": "变富了吗？"
-            }
-          ]
-        },
         "steps": [
           {
             "title": "回顾 · 净资产 = 资产 − 负债",
@@ -31018,76 +23571,13 @@ window.DAYS = [
             "title": "买东西的钱，只有两个来源",
             "idea": "你拥有的每样东西，买它的钱不是借来的，就是自己的。没有第三种来源。",
             "visual": {
-              "type": "comic",
-              "panels": [
+              "type": "deck",
+              "id": "still.12.finance.1",
+              "slides": [
                 {
-                  "bg": "room",
-                  "cast": [
-                    {
-                      "who": "xiaoman",
-                      "x": 0.46,
-                      "y": 0.74,
-                      "face": "calm",
-                      "pose": "stand"
-                    }
-                  ],
-                  "props": [
-                    {
-                      "what": "bag",
-                      "x": 0.78,
-                      "y": 0.78,
-                      "k": 0.95
-                    }
-                  ],
-                  "bubbles": [],
-                  "cap": "一个 1 万的包"
-                },
-                {
-                  "bg": "bank",
-                  "cast": [
-                    {
-                      "who": "xiaoman",
-                      "x": 0.46,
-                      "y": 0.74,
-                      "face": "calm",
-                      "pose": "stand"
-                    }
-                  ],
-                  "props": [],
-                  "bubbles": [
-                    {
-                      "who": "xiaoman",
-                      "text": "借"
-                    }
-                  ],
-                  "cap": "要么是借来的"
-                },
-                {
-                  "bg": "room",
-                  "cast": [
-                    {
-                      "who": "xiaoman",
-                      "x": 0.46,
-                      "y": 0.74,
-                      "face": "calm",
-                      "pose": "stand"
-                    }
-                  ],
-                  "props": [
-                    {
-                      "what": "jar",
-                      "x": 0.78,
-                      "y": 0.78,
-                      "k": 0.95
-                    }
-                  ],
-                  "bubbles": [
-                    {
-                      "who": "xiaoman",
-                      "text": "自己的"
-                    }
-                  ],
-                  "cap": "要么是自己的"
+                  "scene": "still.12.finance.1",
+                  "cap": "每样东西的钱，不是借的，就是自己的",
+                  "sec": "takeaway"
                 }
               ]
             },
@@ -31211,28 +23701,13 @@ window.DAYS = [
             "title": "串起来：财报里的第一张表",
             "idea": "把左右两边列成一张表，就是公司财报里的**资产负债表**。左边写有什么，右边写钱从哪来。以后读真实公司的年报，第一张看的就是它。",
             "visual": {
-              "type": "chain",
-              "base": {
-                "nodes": [
-                  "资产负债表 · 某奶茶店 · 12 月 31 日"
-                ]
-              },
-              "frames": [
+              "type": "deck",
+              "id": "still.12.finance.5",
+              "slides": [
                 {
-                  "set": {
-                    "play": 0,
-                    "step": 0
-                  },
-                  "cap": "先看骨架",
-                  "para": "idea"
-                },
-                {
-                  "set": {
-                    "play": 1,
-                    "step": 2
-                  },
-                  "cap": "看完整的图",
-                  "para": "takeaway"
+                  "scene": "still.12.finance.5",
+                  "cap": "资产负债表：左边是有什么，右边是钱从哪来，两边永远相等",
+                  "sec": "takeaway"
                 }
               ]
             },
@@ -31305,7 +23780,10 @@ window.DAYS = [
             "why": "资产 = 负债 + 所有者权益，所以所有者权益 = 20 − 8 = 12 万。「28 万」是把两个数加起来了；「8 万」是负债本身。",
             "ref": 4
           }
-        ]
+        ],
+        "hookPic": {
+          "scene": "hook.12.finance"
+        }
       },
       "psych": {
         "id": "d12-psych",
@@ -31321,32 +23799,13 @@ window.DAYS = [
             "example": "被拒绝时，朋友劝你\"想开点\"。你也想想开，可不知道该从哪一句开始。",
             "review": true,
             "visual": {
-              "type": "abc",
-              "base": {},
-              "frames": [
+              "type": "deck",
+              "id": "still.12.psych.0",
+              "slides": [
                 {
-                  "set": {
-                    "step": 0,
-                    "play": 0
-                  },
+                  "scene": "still.12.psych.0",
                   "cap": "今天学把\"换解释\"拆成能练的步骤",
-                  "para": "idea"
-                },
-                {
-                  "set": {
-                    "step": 1,
-                    "play": 0.5
-                  },
-                  "cap": "今天学把\"换解释\"拆成能练的步骤",
-                  "para": "why"
-                },
-                {
-                  "set": {
-                    "step": 2,
-                    "play": 1
-                  },
-                  "cap": "今天学把\"换解释\"拆成能练的步骤。",
-                  "para": "takeaway"
+                  "sec": "takeaway"
                 }
               ]
             }
@@ -31359,32 +23818,13 @@ window.DAYS = [
             "example": "同一段旋律，配上不同的歌词，听的人可能哭，也可能笑。诱发事件像旋律，信念像歌词，情绪后果是听的人的反应。",
             "exLabel": "打个比方",
             "visual": {
-              "type": "abc",
-              "base": {},
-              "frames": [
+              "type": "deck",
+              "id": "still.12.psych.1",
+              "slides": [
                 {
-                  "set": {
-                    "step": 0,
-                    "play": 0
-                  },
-                  "cap": "情绪 ABC：诱发事件 → 信念 → 情绪后果，信念是直接原因",
-                  "para": "idea"
-                },
-                {
-                  "set": {
-                    "step": 1,
-                    "play": 0.5
-                  },
-                  "cap": "情绪 ABC：诱发事件 → 信念 → 情绪后果，信念是直接原因",
-                  "para": "why"
-                },
-                {
-                  "set": {
-                    "step": 2,
-                    "play": 1
-                  },
-                  "cap": "情绪 ABC：诱发事件 → 信念 → 情绪后果，信念是直接原因。",
-                  "para": "takeaway"
+                  "scene": "still.12.psych.1",
+                  "cap": "情绪 ABC：中间藏着一环",
+                  "sec": "takeaway"
                 }
               ]
             }
@@ -31411,32 +23851,46 @@ window.DAYS = [
               "why": "没来参加，摄像机拍得到，是发生了的事，属于诱发事件。「信念」是你对它的看法，比如\"他根本不重视我\"。"
             },
             "visual": {
-              "type": "abc",
-              "base": {},
-              "frames": [
+              "type": "deck",
+              "id": "deck.psych.12.3",
+              "slides": [
                 {
-                  "set": {
-                    "step": 0,
-                    "play": 0
-                  },
-                  "cap": "拍得到的是诱发事件，下判断的是信念",
-                  "para": "idea"
+                  "scene": "g.psych.12.3.0",
+                  "cap": "先写下真正发生的事。",
+                  "sec": "idea"
                 },
                 {
-                  "set": {
-                    "step": 1,
-                    "play": 0.5
-                  },
-                  "cap": "拍得到的是诱发事件，下判断的是信念",
-                  "para": "why"
+                  "scene": "g.psych.12.3.1",
+                  "cap": "再写下自己的解释。",
+                  "sec": "why"
                 },
                 {
-                  "set": {
-                    "step": 2,
-                    "play": 1
-                  },
-                  "cap": "拍得到的是诱发事件，下判断的是信念。",
-                  "para": "takeaway"
+                  "scene": "g.psych.12.3.2",
+                  "cap": "事实和解释，不是同一句话。",
+                  "sec": "example"
+                },
+                {
+                  "scene": "g.psych.12.3.3",
+                  "cap": "事实这一栏，叫诱发事件。",
+                  "sec": [
+                    "derive",
+                    0,
+                    1
+                  ]
+                },
+                {
+                  "scene": "g.psych.12.3.4",
+                  "cap": "解释这一栏，叫信念。",
+                  "sec": [
+                    "derive",
+                    2,
+                    3
+                  ]
+                },
+                {
+                  "scene": "g.psych.12.3.5",
+                  "cap": "分开之后，才好检查哪一句在加重情绪。",
+                  "sec": "takeaway"
                 }
               ]
             }
@@ -31457,32 +23911,13 @@ window.DAYS = [
               "why": "「必须」是典型的绝对化要求，把希望变成了非如此不可。「糟糕至极」是把结果想成\"一切都毁了\"。"
             },
             "visual": {
-              "type": "chain",
-              "base": {},
-              "frames": [
+              "type": "deck",
+              "id": "still.12.psych.3",
+              "slides": [
                 {
-                  "set": {
-                    "step": 0,
-                    "play": 0
-                  },
+                  "scene": "still.12.psych.3",
                   "cap": "不合理信念三特征：绝对化要求、过分概括化、糟糕至极",
-                  "para": "idea"
-                },
-                {
-                  "set": {
-                    "step": 1,
-                    "play": 0.5
-                  },
-                  "cap": "不合理信念三特征：绝对化要求、过分概括化、糟糕至极",
-                  "para": "why"
-                },
-                {
-                  "set": {
-                    "step": 2,
-                    "play": 1
-                  },
-                  "cap": "不合理信念三特征：绝对化要求、过分概括化、糟糕至极。",
-                  "para": "takeaway"
+                  "sec": "takeaway"
                 }
               ]
             }
@@ -31503,46 +23938,13 @@ window.DAYS = [
               "why": "辩论是检验信念，问「证据在哪」能看出它站不站得住。「这是谁的错」是在找人追责，检验不了信念本身。"
             },
             "visual": {
-              "type": "comic",
-              "panels": [
+              "type": "deck",
+              "id": "still.12.psych.4",
+              "slides": [
                 {
-                  "bg": "room",
-                  "cast": [
-                    {
-                      "who": "xiaoman",
-                      "x": 0.46,
-                      "y": 0.74,
-                      "face": "calm",
-                      "pose": "stand"
-                    }
-                  ],
-                  "cap": "辩论三问：证据在哪"
-                },
-                {
-                  "bg": "street",
-                  "cast": [
-                    {
-                      "who": "xiaoman",
-                      "x": 0.46,
-                      "y": 0.74,
-                      "face": "calm",
-                      "pose": "stand"
-                    }
-                  ],
-                  "cap": "别的解释"
-                },
-                {
-                  "bg": "shop",
-                  "cast": [
-                    {
-                      "who": "xiaoman",
-                      "x": 0.46,
-                      "y": 0.74,
-                      "face": "calm",
-                      "pose": "stand"
-                    }
-                  ],
-                  "cap": "真有那么糟"
+                  "scene": "still.12.psych.4",
+                  "cap": "辩论三问：证据在哪",
+                  "sec": "takeaway"
                 }
               ]
             }
@@ -31554,32 +23956,13 @@ window.DAYS = [
             "takeaway": "情绪 ABC：决定情绪的是信念，不是诱发事件。",
             "example": "账号选题可以这样写：\"让你难过的，也许不是他已读不回，而是你心里那句'他不在乎我'。\"先写下事件，再找出信念，最后换一个。",
             "visual": {
-              "type": "abc",
-              "base": {},
-              "frames": [
+              "type": "deck",
+              "id": "still.12.psych.5",
+              "slides": [
                 {
-                  "set": {
-                    "step": 0,
-                    "play": 0
-                  },
+                  "scene": "still.12.psych.5",
                   "cap": "情绪 ABC：决定情绪的是信念，不是诱发事件",
-                  "para": "idea"
-                },
-                {
-                  "set": {
-                    "step": 1,
-                    "play": 0.5
-                  },
-                  "cap": "情绪 ABC：决定情绪的是信念，不是诱发事件",
-                  "para": "why"
-                },
-                {
-                  "set": {
-                    "step": 2,
-                    "play": 1
-                  },
-                  "cap": "情绪 ABC：决定情绪的是信念，不是诱发事件。",
-                  "para": "takeaway"
+                  "sec": "takeaway"
                 }
               ]
             }
@@ -31637,79 +24020,8 @@ window.DAYS = [
             "ref": 3
           }
         ],
-        "hookComic": {
-          "panels": [
-            {
-              "bg": "room",
-              "cast": [
-                {
-                  "who": "xiaoman",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [
-                {
-                  "who": "xiaoman",
-                  "text": "已读"
-                }
-              ],
-              "cap": "消息显示"
-            },
-            {
-              "bg": "room",
-              "cast": [
-                {
-                  "who": "xiaoman",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [],
-              "cap": "迟迟没有回复"
-            },
-            {
-              "bg": "room",
-              "cast": [
-                {
-                  "who": "xiaoman",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [],
-              "cap": "他讨厌我了"
-            },
-            {
-              "bg": "room",
-              "cast": [
-                {
-                  "who": "xiaoyin",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [
-                {
-                  "who": "xiaoyin",
-                  "text": "让你难过的是哪一环？"
-                }
-              ],
-              "cap": "让你难过的是哪一环？"
-            }
-          ]
+        "hookPic": {
+          "scene": "hook.12.psych"
         }
       },
       "english": {
@@ -32213,32 +24525,13 @@ window.DAYS = [
             "example": "明度差（第 2 天）；同类、邻近、互补、三角（第 6、8、9、10 天）；纯度、70/25/5、中性色（第 3、11、12 天）；冷暖（第 5 天）。",
             "review": true,
             "visual": {
-              "type": "chain",
-              "base": {},
-              "frames": [
+              "type": "deck",
+              "id": "still.13.fashion.0",
+              "slides": [
                 {
-                  "set": {
-                    "step": 0,
-                    "play": 0
-                  },
+                  "scene": "still.13.fashion.0",
                   "cap": "四类工具：明度、色相关系、纯度与面积、冷暖",
-                  "para": "idea"
-                },
-                {
-                  "set": {
-                    "step": 1,
-                    "play": 0.5
-                  },
-                  "cap": "四类工具：明度、色相关系、纯度与面积、冷暖",
-                  "para": "why"
-                },
-                {
-                  "set": {
-                    "step": 2,
-                    "play": 1
-                  },
-                  "cap": "四类工具：明度、色相关系、纯度与面积、冷暖。",
-                  "para": "takeaway"
+                  "sec": "takeaway"
                 }
               ]
             }
@@ -32397,32 +24690,13 @@ window.DAYS = [
             "takeaway": "四步法把\"好看\"拆成能讲清的理由。",
             "example": "刷到一张穿搭照，试着用一句话点评：\"浅蓝衬衫配藏青长裤，明度清楚；都是蓝，是同类色；一只红包做 5% 的亮点；整体偏冷，红包添了一点暖。\"",
             "visual": {
-              "type": "chain",
-              "base": {},
-              "frames": [
+              "type": "deck",
+              "id": "still.13.fashion.4",
+              "slides": [
                 {
-                  "set": {
-                    "step": 0,
-                    "play": 0
-                  },
+                  "scene": "still.13.fashion.4",
                   "cap": "四步法把\"好看\"拆成能讲清的理由",
-                  "para": "idea"
-                },
-                {
-                  "set": {
-                    "step": 1,
-                    "play": 0.5
-                  },
-                  "cap": "四步法把\"好看\"拆成能讲清的理由",
-                  "para": "why"
-                },
-                {
-                  "set": {
-                    "step": 2,
-                    "play": 1
-                  },
-                  "cap": "四步法把\"好看\"拆成能讲清的理由。",
-                  "para": "takeaway"
+                  "sec": "takeaway"
                 }
               ]
             }
@@ -32504,79 +24778,8 @@ window.DAYS = [
             "ref": 2
           }
         ],
-        "hookComic": {
-          "panels": [
-            {
-              "bg": "room",
-              "cast": [
-                {
-                  "who": "xiaoman",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [
-                {
-                  "who": "xiaoman",
-                  "text": "我这身好看吗？"
-                }
-              ],
-              "cap": "闺蜜问"
-            },
-            {
-              "bg": "room",
-              "cast": [
-                {
-                  "who": "xiaoman",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [
-                {
-                  "who": "xiaoman",
-                  "text": "好看！"
-                }
-              ],
-              "cap": "——为什么？说不出"
-            },
-            {
-              "bg": "room",
-              "cast": [
-                {
-                  "who": "xiaoyin",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "give"
-                }
-              ],
-              "props": [],
-              "bubbles": [],
-              "cap": "小音递上四张卡"
-            },
-            {
-              "bg": "room",
-              "cast": [
-                {
-                  "who": "xiaoman",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [],
-              "cap": "小满一条条讲出理由"
-            }
-          ]
+        "hookPic": {
+          "scene": "hook.13.fashion"
         }
       },
       "history": {
@@ -32603,32 +24806,13 @@ window.DAYS = [
             "takeaway": "女真统一后建立后金，又改名为清，趁明朝衰弱不断壮大。",
             "example": "有点像当年的蒙古：分散的部落一旦统一、组织起来，同样的人，力量就成倍放大。而它的对手，偏偏正在走下坡路。",
             "visual": {
-              "type": "histmap",
-              "base": {},
-              "frames": [
+              "type": "deck",
+              "id": "still.13.history.1",
+              "slides": [
                 {
-                  "set": {
-                    "step": 0,
-                    "play": 0
-                  },
+                  "scene": "still.13.history.1",
                   "cap": "女真统一后建立后金，又改名为清，趁明朝衰弱不断壮大",
-                  "para": "idea"
-                },
-                {
-                  "set": {
-                    "step": 1,
-                    "play": 0.5
-                  },
-                  "cap": "女真统一后建立后金，又改名为清，趁明朝衰弱不断壮大",
-                  "para": "why"
-                },
-                {
-                  "set": {
-                    "step": 2,
-                    "play": 1
-                  },
-                  "cap": "女真统一后建立后金，又改名为清，趁明朝衰弱不断壮大。",
-                  "para": "takeaway"
+                  "sec": "takeaway"
                 }
               ]
             }
@@ -32645,67 +24829,46 @@ window.DAYS = [
               "沿用明制、继续科举，人心就稳了。"
             ],
             "visual": {
-              "type": "comic",
-              "panels": [
+              "type": "deck",
+              "id": "deck.history.13.3",
+              "slides": [
                 {
-                  "bg": "mountain",
-                  "cast": [
-                    {
-                      "who": "kingWu",
-                      "x": 0.46,
-                      "y": 0.74,
-                      "face": "calm",
-                      "pose": "stand"
-                    }
-                  ],
-                  "props": [],
-                  "bubbles": [],
-                  "cap": "山海关大门打开"
+                  "scene": "g.history.13.3.0",
+                  "cap": "山海关是进中原的门。",
+                  "sec": "idea"
                 },
                 {
-                  "bg": "palace",
-                  "cast": [
-                    {
-                      "who": "kingWu",
-                      "x": 0.46,
-                      "y": 0.74,
-                      "face": "calm",
-                      "pose": "stand"
-                    }
-                  ],
-                  "props": [],
-                  "bubbles": [],
-                  "cap": "八旗进京"
+                  "scene": "g.history.13.3.1",
+                  "cap": "守将吴三桂打开了这道门。",
+                  "sec": "why"
                 },
                 {
-                  "bg": "palace",
-                  "cast": [
-                    {
-                      "who": "kingWu",
-                      "x": 0.46,
-                      "y": 0.74,
-                      "face": "calm",
-                      "pose": "stand"
-                    }
-                  ],
-                  "props": [],
-                  "bubbles": [],
-                  "cap": "少数人看着一大片疆域"
+                  "scene": "g.history.13.3.2",
+                  "cap": "1644 年，清军入关。",
+                  "sec": "example"
                 },
                 {
-                  "bg": "palace",
-                  "cast": [
-                    {
-                      "who": "kingWu",
-                      "x": 0.46,
-                      "y": 0.74,
-                      "face": "calm",
-                      "pose": "stand"
-                    }
-                  ],
-                  "props": [],
-                  "bubbles": [],
-                  "cap": "沿用明的制度和官员"
+                  "scene": "g.history.13.3.3",
+                  "cap": "打败李自成后，定都北京。",
+                  "sec": [
+                    "derive",
+                    0,
+                    1
+                  ]
+                },
+                {
+                  "scene": "g.history.13.3.4",
+                  "cap": "进来的人少，要管的国家大。",
+                  "sec": [
+                    "derive",
+                    2,
+                    2
+                  ]
+                },
+                {
+                  "scene": "g.history.13.3.5",
+                  "cap": "这套统治一直延续到 1912 年。",
+                  "sec": "takeaway"
                 }
               ]
             }
@@ -32726,32 +24889,13 @@ window.DAYS = [
               "why": "统一台湾、管理新疆和西藏，「奠定了今天中国版图的基础」。「让中国最早开始工业革命」不对，工业革命最早在英国开始，正是清朝没赶上的那件事。"
             },
             "visual": {
-              "type": "histmap",
-              "base": {},
-              "frames": [
+              "type": "deck",
+              "id": "still.13.history.3",
+              "slides": [
                 {
-                  "set": {
-                    "step": 0,
-                    "play": 0
-                  },
+                  "scene": "still.13.history.3",
                   "cap": "康雍乾盛世奠定了今天中国版图的基础",
-                  "para": "idea"
-                },
-                {
-                  "set": {
-                    "step": 1,
-                    "play": 0.5
-                  },
-                  "cap": "康雍乾盛世奠定了今天中国版图的基础",
-                  "para": "why"
-                },
-                {
-                  "set": {
-                    "step": 2,
-                    "play": 1
-                  },
-                  "cap": "康雍乾盛世奠定了今天中国版图的基础。",
-                  "para": "takeaway"
+                  "sec": "takeaway"
                 }
               ]
             }
@@ -32821,32 +24965,46 @@ window.DAYS = [
               "why": "英国已经换上机器生产，清还「以农为本、少与外界往来」，差距才越拉越大。「清朝的疆域比明朝小」不对，前面讲过，清的疆域奠定了今天的版图。"
             },
             "visual": {
-              "type": "chain",
-              "base": {},
-              "frames": [
+              "type": "deck",
+              "id": "deck.history.13.6",
+              "slides": [
                 {
-                  "set": {
-                    "step": 0,
-                    "play": 0
-                  },
-                  "cap": "清守着农业和\"什么都不缺\"，错过工业革命，1840 年进入近代",
-                  "para": "idea"
+                  "scene": "g.history.13.6.0",
+                  "cap": "国家仍把农业当成根本。",
+                  "sec": "idea"
                 },
                 {
-                  "set": {
-                    "step": 1,
-                    "play": 0.5
-                  },
-                  "cap": "清守着农业和\"什么都不缺\"，错过工业革命，1840 年进入近代",
-                  "para": "why"
+                  "scene": "g.history.13.6.1",
+                  "cap": "和西方做生意，只留广州一口。",
+                  "sec": "why"
                 },
                 {
-                  "set": {
-                    "step": 2,
-                    "play": 1
-                  },
-                  "cap": "清守着农业和\"什么都不缺\"，错过工业革命，1840 年进入近代。",
-                  "para": "takeaway"
+                  "scene": "g.history.13.6.2",
+                  "cap": "别的港口关着。",
+                  "sec": "example"
+                },
+                {
+                  "scene": "g.history.13.6.3",
+                  "cap": "外面的变化，一年年拉大差距。",
+                  "sec": [
+                    "derive",
+                    0,
+                    1
+                  ]
+                },
+                {
+                  "scene": "g.history.13.6.4",
+                  "cap": "1840 年，鸦片战争爆发。",
+                  "sec": [
+                    "derive",
+                    2,
+                    3
+                  ]
+                },
+                {
+                  "scene": "g.history.13.6.5",
+                  "cap": "门开得太少，步子就落下了。",
+                  "sec": "takeaway"
                 }
               ]
             }
@@ -32948,32 +25106,13 @@ window.DAYS = [
               "1912 年以后，问题换了：中国要面对的是整个世界。"
             ],
             "visual": {
-              "type": "cycle",
-              "base": {},
-              "frames": [
+              "type": "deck",
+              "id": "still.13.history.8",
+              "slides": [
                 {
-                  "set": {
-                    "step": 0,
-                    "play": 0
-                  },
+                  "scene": "still.13.history.8",
                   "cap": "分裂公式贯穿两周；看懂它，就看懂了朝代的兴亡",
-                  "para": "idea"
-                },
-                {
-                  "set": {
-                    "step": 1,
-                    "play": 0.5
-                  },
-                  "cap": "分裂公式贯穿两周；看懂它，就看懂了朝代的兴亡",
-                  "para": "why"
-                },
-                {
-                  "set": {
-                    "step": 2,
-                    "play": 1
-                  },
-                  "cap": "分裂公式贯穿两周；看懂它，就看懂了朝代的兴亡。",
-                  "para": "takeaway"
+                  "sec": "takeaway"
                 }
               ]
             }
@@ -33051,69 +25190,8 @@ window.DAYS = [
             "kind": "event"
           }
         ],
-        "hookComic": {
-          "panels": [
-            {
-              "bg": "palace",
-              "cast": [
-                {
-                  "who": "xiaoman",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [],
-              "cap": "两周前小满面对一团乱麻"
-            },
-            {
-              "bg": "palace",
-              "cast": [
-                {
-                  "who": "kingWu",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [],
-              "cap": "今天手里是一根挂满朝代的竹竿"
-            },
-            {
-              "bg": "palace",
-              "cast": [
-                {
-                  "who": "xiaoman",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [],
-              "cap": "她从夏数到清"
-            },
-            {
-              "bg": "palace",
-              "cast": [
-                {
-                  "who": "xiaoyin",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [],
-              "cap": "小音鼓掌"
-            }
-          ]
+        "hookPic": {
+          "scene": "hook.13.history"
         }
       },
       "geo": {
@@ -33129,32 +25207,13 @@ window.DAYS = [
             "takeaway": "十国的地盘像今天的省；北方换得快、南方坐得稳，都因为地形。",
             "example": "今天福建简称\"闽\"，四川又称\"蜀\"，湖南常被叫作\"楚地\"。同一块地，名字和边界一起传了一千多年，像一首老歌换了好几代歌手，旋律一直没变。",
             "visual": {
-              "type": "histmap",
-              "base": {},
-              "frames": [
+              "type": "deck",
+              "id": "still.13.geo.0",
+              "slides": [
                 {
-                  "set": {
-                    "step": 0,
-                    "play": 0
-                  },
+                  "scene": "still.13.geo.0",
                   "cap": "十国的地盘像今天的省；北方换得快、南方坐得稳，都因为地形",
-                  "para": "idea"
-                },
-                {
-                  "set": {
-                    "step": 1,
-                    "play": 0.5
-                  },
-                  "cap": "十国的地盘像今天的省；北方换得快、南方坐得稳，都因为地形",
-                  "para": "why"
-                },
-                {
-                  "set": {
-                    "step": 2,
-                    "play": 1
-                  },
-                  "cap": "十国的地盘像今天的省；北方换得快、南方坐得稳，都因为地形。",
-                  "para": "takeaway"
+                  "sec": "takeaway"
                 }
               ]
             }
@@ -33192,32 +25251,13 @@ window.DAYS = [
               "why": "平地上马跑得快，没有阻挡。「陡峭的高山」正是骑兵的克星，马爬不上去，也冲不起来。"
             },
             "visual": {
-              "type": "histmap",
-              "base": {},
-              "frames": [
+              "type": "deck",
+              "id": "still.13.geo.2",
+              "slides": [
                 {
-                  "set": {
-                    "step": 0,
-                    "play": 0
-                  },
+                  "scene": "still.13.geo.2",
                   "cap": "平原利于骑兵冲锋，无险可守，北方政权因此换得快",
-                  "para": "idea"
-                },
-                {
-                  "set": {
-                    "step": 1,
-                    "play": 0.5
-                  },
-                  "cap": "平原利于骑兵冲锋，无险可守，北方政权因此换得快",
-                  "para": "why"
-                },
-                {
-                  "set": {
-                    "step": 2,
-                    "play": 1
-                  },
-                  "cap": "平原利于骑兵冲锋，无险可守，北方政权因此换得快。",
-                  "para": "takeaway"
+                  "sec": "takeaway"
                 }
               ]
             }
@@ -33235,32 +25275,13 @@ window.DAYS = [
               "中原从此一直受北方威胁。"
             ],
             "visual": {
-              "type": "histmap",
-              "base": {},
-              "frames": [
+              "type": "deck",
+              "id": "still.13.geo.3",
+              "slides": [
                 {
-                  "set": {
-                    "step": 0,
-                    "play": 0
-                  },
+                  "scene": "still.13.geo.3",
                   "cap": "燕云十六州是平原北边的门；丢了它，华北平原无险可守",
-                  "para": "idea"
-                },
-                {
-                  "set": {
-                    "step": 1,
-                    "play": 0.5
-                  },
-                  "cap": "燕云十六州是平原北边的门；丢了它，华北平原无险可守",
-                  "para": "why"
-                },
-                {
-                  "set": {
-                    "step": 2,
-                    "play": 1
-                  },
-                  "cap": "燕云十六州是平原北边的门；丢了它，华北平原无险可守。",
-                  "para": "takeaway"
+                  "sec": "takeaway"
                 }
               ]
             }
@@ -33287,32 +25308,13 @@ window.DAYS = [
               "why": "长江和大山是天然城墙，骑兵冲不过去。「南方的骑兵比北方多」不对，好马多产在北方草原。"
             },
             "visual": {
-              "type": "histmap",
-              "base": {},
-              "frames": [
+              "type": "deck",
+              "id": "still.13.geo.4",
+              "slides": [
                 {
-                  "set": {
-                    "step": 0,
-                    "play": 0
-                  },
+                  "scene": "still.13.geo.4",
                   "cap": "长江和群山挡住了北方骑兵，南方小国因此相对安稳",
-                  "para": "idea"
-                },
-                {
-                  "set": {
-                    "step": 1,
-                    "play": 0.5
-                  },
-                  "cap": "长江和群山挡住了北方骑兵，南方小国因此相对安稳",
-                  "para": "why"
-                },
-                {
-                  "set": {
-                    "step": 2,
-                    "play": 1
-                  },
-                  "cap": "长江和群山挡住了北方骑兵，南方小国因此相对安稳。",
-                  "para": "takeaway"
+                  "sec": "takeaway"
                 }
               ]
             }
@@ -33330,32 +25332,46 @@ window.DAYS = [
               "所以五代都城多在开封。"
             ],
             "visual": {
-              "type": "histmap",
-              "base": {},
-              "frames": [
+              "type": "deck",
+              "id": "deck.geo.13.6",
+              "slides": [
                 {
-                  "set": {
-                    "step": 0,
-                    "play": 0
-                  },
-                  "cap": "五代多定都开封，是因为它在运河边，江南的粮食能直接运到",
-                  "para": "idea"
+                  "scene": "g.geo.13.6.0",
+                  "cap": "南方的粮，装在船上。",
+                  "sec": "idea"
                 },
                 {
-                  "set": {
-                    "step": 1,
-                    "play": 0.5
-                  },
-                  "cap": "五代多定都开封，是因为它在运河边，江南的粮食能直接运到",
-                  "para": "why"
+                  "scene": "g.geo.13.6.1",
+                  "cap": "运河把粮船一直送到城下。",
+                  "sec": "why"
                 },
                 {
-                  "set": {
-                    "step": 2,
-                    "play": 1
-                  },
-                  "cap": "五代多定都开封，是因为它在运河边，江南的粮食能直接运到。",
-                  "para": "takeaway"
+                  "scene": "g.geo.13.6.2",
+                  "cap": "开封就在这条河边。",
+                  "sec": "example"
+                },
+                {
+                  "scene": "g.geo.13.6.3",
+                  "cap": "四个朝代把都城放在这里。",
+                  "sec": [
+                    "derive",
+                    0,
+                    1
+                  ]
+                },
+                {
+                  "scene": "g.geo.13.6.4",
+                  "cap": "都城跟着粮走，不跟着山走。",
+                  "sec": [
+                    "derive",
+                    2,
+                    3
+                  ]
+                },
+                {
+                  "scene": "g.geo.13.6.5",
+                  "cap": "没有险要的山，却有运粮的河。",
+                  "sec": "takeaway"
                 }
               ]
             },
@@ -33382,32 +25398,46 @@ window.DAYS = [
               "后来的省界也沿山河划，所以和十国很像。"
             ],
             "visual": {
-              "type": "histmap",
-              "base": {},
-              "frames": [
+              "type": "deck",
+              "id": "deck.geo.13.7",
+              "slides": [
                 {
-                  "set": {
-                    "step": 0,
-                    "play": 0
-                  },
-                  "cap": "被山河围住的一块地，容易自成一国，后来也常成为一个省",
-                  "para": "idea"
+                  "scene": "g.geo.13.7.0",
+                  "cap": "四周是山，中间是一块地。",
+                  "sec": "idea"
                 },
                 {
-                  "set": {
-                    "step": 1,
-                    "play": 0.5
-                  },
-                  "cap": "被山河围住的一块地，容易自成一国，后来也常成为一个省",
-                  "para": "why"
+                  "scene": "g.geo.13.7.1",
+                  "cap": "吴越待在杭州。",
+                  "sec": "why"
                 },
                 {
-                  "set": {
-                    "step": 2,
-                    "play": 1
-                  },
-                  "cap": "被山河围住的一块地，容易自成一国，后来也常成为一个省。",
-                  "para": "takeaway"
+                  "scene": "g.geo.13.7.2",
+                  "cap": "南唐待在南京。",
+                  "sec": "example"
+                },
+                {
+                  "scene": "g.geo.13.7.3",
+                  "cap": "前蜀、后蜀待在成都。",
+                  "sec": [
+                    "derive",
+                    0,
+                    1
+                  ]
+                },
+                {
+                  "scene": "g.geo.13.7.4",
+                  "cap": "南汉待在广州。",
+                  "sec": [
+                    "derive",
+                    2,
+                    3
+                  ]
+                },
+                {
+                  "scene": "g.geo.13.7.5",
+                  "cap": "山一围，这块地就像一国。",
+                  "sec": "takeaway"
                 }
               ]
             }
@@ -33425,32 +25455,13 @@ window.DAYS = [
               "粮在南方，都城贴着运河定在开封。"
             ],
             "visual": {
-              "type": "histmap",
-              "base": {},
-              "frames": [
+              "type": "deck",
+              "id": "still.13.geo.7",
+              "slides": [
                 {
-                  "set": {
-                    "step": 0,
-                    "play": 0
-                  },
+                  "scene": "still.13.geo.7",
                   "cap": "山河划出了十国和今天的省；平原和运河定下了北方的战与都",
-                  "para": "idea"
-                },
-                {
-                  "set": {
-                    "step": 1,
-                    "play": 0.5
-                  },
-                  "cap": "山河划出了十国和今天的省；平原和运河定下了北方的战与都",
-                  "para": "why"
-                },
-                {
-                  "set": {
-                    "step": 2,
-                    "play": 1
-                  },
-                  "cap": "山河划出了十国和今天的省；平原和运河定下了北方的战与都。",
-                  "para": "takeaway"
+                  "sec": "takeaway"
                 }
               ]
             }
@@ -33540,81 +25551,8 @@ window.DAYS = [
             "label": "BJ"
           }
         ],
-        "hookComic": {
-          "panels": [
-            {
-              "bg": "mountain",
-              "cast": [
-                {
-                  "who": "xiaoman",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "sit"
-                }
-              ],
-              "props": [
-                {
-                  "what": "castle",
-                  "x": 0.78,
-                  "y": 0.78,
-                  "k": 0.95
-                }
-              ],
-              "bubbles": [],
-              "cap": "开封城里"
-            },
-            {
-              "bg": "street",
-              "cast": [
-                {
-                  "who": "xiaoman",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "run"
-                }
-              ],
-              "props": [],
-              "bubbles": [],
-              "cap": "北边草原上"
-            },
-            {
-              "bg": "mountain",
-              "cast": [
-                {
-                  "who": "xiaoman",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "sit"
-                }
-              ],
-              "props": [],
-              "bubbles": [],
-              "cap": "江南"
-            },
-            {
-              "bg": "mountain",
-              "cast": [
-                {
-                  "who": "xiaoyin",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [
-                {
-                  "who": "xiaoyin",
-                  "text": "谁难打"
-                }
-              ],
-              "cap": "谁难打"
-            }
-          ]
+        "hookPic": {
+          "scene": "hook.13.geo"
         }
       },
       "finance": {
@@ -33622,161 +25560,18 @@ window.DAYS = [
         "title": "照片和录像：有资产不等于有现金",
         "minutes": 7,
         "hook": "有一套 200 万的房子，却可能下个月就交不起房贷。怎么会？",
-        "hookComic": {
-          "panels": [
-            {
-              "bg": "room",
-              "cast": [
-                {
-                  "who": "xiaoG",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [
-                {
-                  "what": "house",
-                  "x": 0.78,
-                  "y": 0.78,
-                  "k": 0.95
-                }
-              ],
-              "bubbles": [],
-              "cap": "小 G 站在大房子前"
-            },
-            {
-              "bg": "room",
-              "cast": [
-                {
-                  "who": "xiaoman",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [
-                {
-                  "what": "phone",
-                  "x": 0.78,
-                  "y": 0.78,
-                  "k": 0.95
-                }
-              ],
-              "bubbles": [],
-              "cap": "手机提示房贷扣款"
-            },
-            {
-              "bg": "room",
-              "cast": [
-                {
-                  "who": "xiaoman",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [],
-              "cap": "工资还没到"
-            },
-            {
-              "bg": "room",
-              "cast": [
-                {
-                  "who": "xiaoyin",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [
-                {
-                  "what": "house",
-                  "x": 0.78,
-                  "y": 0.78,
-                  "k": 0.95
-                }
-              ],
-              "bubbles": [
-                {
-                  "who": "xiaoyin",
-                  "text": "有房子"
-                }
-              ],
-              "cap": "有房子"
-            }
-          ]
-        },
         "steps": [
           {
             "title": "有房，却交不起房贷",
             "idea": "房子再值钱，也不会每月给她现金。可房贷每月都要拿现金还。",
             "visual": {
-              "type": "comic",
-              "panels": [
+              "type": "deck",
+              "id": "still.13.finance.0",
+              "slides": [
                 {
-                  "bg": "room",
-                  "cast": [
-                    {
-                      "who": "xiaoG",
-                      "x": 0.46,
-                      "y": 0.74,
-                      "face": "calm",
-                      "pose": "stand"
-                    }
-                  ],
-                  "props": [
-                    {
-                      "what": "house",
-                      "x": 0.78,
-                      "y": 0.78,
-                      "k": 0.95
-                    }
-                  ],
-                  "bubbles": [],
-                  "cap": "小 G 有套 200 万的房"
-                },
-                {
-                  "bg": "room",
-                  "cast": [
-                    {
-                      "who": "xiaoman",
-                      "x": 0.46,
-                      "y": 0.74,
-                      "face": "calm",
-                      "pose": "stand"
-                    }
-                  ],
-                  "props": [],
-                  "bubbles": [],
-                  "cap": "工资 7000"
-                },
-                {
-                  "bg": "room",
-                  "cast": [
-                    {
-                      "who": "xiaoman",
-                      "x": 0.46,
-                      "y": 0.74,
-                      "face": "worry",
-                      "pose": "stand"
-                    }
-                  ],
-                  "props": [
-                    {
-                      "what": "jar",
-                      "x": 0.78,
-                      "y": 0.78,
-                      "k": 0.95
-                    }
-                  ],
-                  "bubbles": [],
-                  "cap": "每月都在漏钱"
+                  "scene": "still.13.finance.0",
+                  "cap": "值钱的东西，不等于手里有现金",
+                  "sec": "takeaway"
                 }
               ]
             },
@@ -33786,30 +25581,36 @@ window.DAYS = [
             "title": "现金流：一段时间里钱的进出",
             "idea": "**现金流**就是一段时间里，真金白银流进来减去流出去。第 1 天学的\"结余\"，就是你自己的现金流。",
             "visual": {
-              "type": "chain",
-              "base": {
-                "nodes": [
-                  "这个月进：7000",
-                  "这个月出：8000",
-                  "现金流：−1000"
-                ]
-              },
-              "frames": [
+              "type": "deck",
+              "id": "deck.finance.13.2",
+              "slides": [
                 {
-                  "set": {
-                    "play": 0,
-                    "step": 0
-                  },
-                  "cap": "先看骨架",
-                  "para": "idea"
+                  "scene": "g.finance.13.2.0",
+                  "cap": "一段时间里，真金白银流进来。",
+                  "sec": "idea"
                 },
                 {
-                  "set": {
-                    "play": 1,
-                    "step": 2
-                  },
-                  "cap": "看完整的图",
-                  "para": "takeaway"
+                  "scene": "g.finance.13.2.1",
+                  "cap": "同一段时间，又流出去。",
+                  "sec": [
+                    "derive",
+                    0,
+                    1
+                  ]
+                },
+                {
+                  "scene": "g.finance.13.2.2",
+                  "cap": "进来减去出去，就是现金流。",
+                  "sec": [
+                    "derive",
+                    2,
+                    2
+                  ]
+                },
+                {
+                  "scene": "g.finance.13.2.3",
+                  "cap": "第 1 天说的结余，就是你的现金流。",
+                  "sec": "takeaway"
                 }
               ]
             },
@@ -33833,50 +25634,13 @@ window.DAYS = [
             "title": "照片和录像",
             "idea": "资产负债表像一张**照片**，只拍某一刻。现金流像一段**录像**，记一段时间。",
             "visual": {
-              "type": "comic",
-              "panels": [
+              "type": "deck",
+              "id": "still.13.finance.2",
+              "slides": [
                 {
-                  "bg": "room",
-                  "cast": [
-                    {
-                      "who": "xiaoman",
-                      "x": 0.46,
-                      "y": 0.74,
-                      "face": "calm",
-                      "pose": "stand"
-                    }
-                  ],
-                  "props": [
-                    {
-                      "what": "payslip",
-                      "x": 0.78,
-                      "y": 0.78,
-                      "k": 0.95
-                    },
-                    {
-                      "what": "house",
-                      "x": 0.62,
-                      "y": 0.78,
-                      "k": 0.95
-                    }
-                  ],
-                  "bubbles": [],
-                  "cap": "照片：这一刻有什么"
-                },
-                {
-                  "bg": "room",
-                  "cast": [
-                    {
-                      "who": "xiaoman",
-                      "x": 0.46,
-                      "y": 0.74,
-                      "face": "calm",
-                      "pose": "stand"
-                    }
-                  ],
-                  "props": [],
-                  "bubbles": [],
-                  "cap": "录像：这段时间钱怎么进出"
+                  "scene": "still.13.finance.2",
+                  "cap": "资产负债表是照片，现金流是录像",
+                  "sec": "takeaway"
                 }
               ]
             },
@@ -33965,64 +25729,13 @@ window.DAYS = [
             "title": "公司也会\"赚了钱，却没现金\"",
             "idea": "奶茶卖出去了，账上就算赚了。可对方还没付钱，店里手上没有现金。房租、工资却要现金付。",
             "visual": {
-              "type": "comic",
-              "panels": [
+              "type": "deck",
+              "id": "still.13.finance.4",
+              "slides": [
                 {
-                  "bg": "shop",
-                  "cast": [
-                    {
-                      "who": "xiaoman",
-                      "x": 0.46,
-                      "y": 0.74,
-                      "face": "calm",
-                      "pose": "give"
-                    }
-                  ],
-                  "props": [
-                    {
-                      "what": "cup",
-                      "x": 0.78,
-                      "y": 0.78,
-                      "k": 0.95
-                    }
-                  ],
-                  "bubbles": [],
-                  "cap": "卖出 300 杯"
-                },
-                {
-                  "bg": "room",
-                  "cast": [
-                    {
-                      "who": "xiaoman",
-                      "x": 0.46,
-                      "y": 0.74,
-                      "face": "calm",
-                      "pose": "stand"
-                    }
-                  ],
-                  "props": [],
-                  "bubbles": [
-                    {
-                      "who": "xiaoman",
-                      "text": "月底再付"
-                    }
-                  ],
-                  "cap": "钱要月底才给"
-                },
-                {
-                  "bg": "room",
-                  "cast": [
-                    {
-                      "who": "xiaoman",
-                      "x": 0.46,
-                      "y": 0.74,
-                      "face": "worry",
-                      "pose": "stand"
-                    }
-                  ],
-                  "props": [],
-                  "bubbles": [],
-                  "cap": "可房租今天就要交"
+                  "scene": "still.13.finance.4",
+                  "cap": "账上赚了，不等于手里有现金",
+                  "sec": "takeaway"
                 }
               ]
             },
@@ -34033,37 +25746,13 @@ window.DAYS = [
             "title": "串起来：问自己两个问题",
             "idea": "回到钩子。小 G 的照片很好看，有 200 万的房；录像却在亏，每月 −1000。存款一用完，就交不起房贷了。",
             "visual": {
-              "type": "comic",
-              "panels": [
+              "type": "deck",
+              "id": "still.13.finance.5",
+              "slides": [
                 {
-                  "bg": "room",
-                  "cast": [
-                    {
-                      "who": "xiaoman",
-                      "x": 0.46,
-                      "y": 0.74,
-                      "face": "calm",
-                      "pose": "cheer"
-                    }
-                  ],
-                  "props": [],
-                  "bubbles": [],
-                  "cap": "我的照片：净资产多少？"
-                },
-                {
-                  "bg": "room",
-                  "cast": [
-                    {
-                      "who": "xiaoman",
-                      "x": 0.46,
-                      "y": 0.74,
-                      "face": "calm",
-                      "pose": "stand"
-                    }
-                  ],
-                  "props": [],
-                  "bubbles": [],
-                  "cap": "我的录像：每月是正是负？"
+                  "scene": "still.13.finance.5",
+                  "cap": "照片和录像都要看；现金断了最危险",
+                  "sec": "takeaway"
                 }
               ]
             },
@@ -34132,7 +25821,10 @@ window.DAYS = [
             "why": "柱子在 0 线下面，表示每月进的比出的少；折线往下，表示存款在减少。「每月都在赚钱」方向反了；存款有变化，折线才会往下。",
             "ref": 3
           }
-        ]
+        ],
+        "hookPic": {
+          "scene": "hook.13.finance"
+        }
       },
       "psych": {
         "id": "d13-psych",
@@ -34148,32 +25840,13 @@ window.DAYS = [
             "example": "像一首曲子的乐句：每一句都在回应上一句，听懂了一呼一应，整首曲子就记住了，不用一个音一个音去背。",
             "exLabel": "打个比方",
             "visual": {
-              "type": "chain",
-              "base": {},
-              "frames": [
+              "type": "deck",
+              "id": "still.13.psych.0",
+              "slides": [
                 {
-                  "set": {
-                    "step": 0,
-                    "play": 0
-                  },
+                  "scene": "still.13.psych.0",
                   "cap": "按\"它在回答什么问题\"来记理论，比背名字省力",
-                  "para": "idea"
-                },
-                {
-                  "set": {
-                    "step": 1,
-                    "play": 0.5
-                  },
-                  "cap": "按\"它在回答什么问题\"来记理论，比背名字省力",
-                  "para": "why"
-                },
-                {
-                  "set": {
-                    "step": 2,
-                    "play": 1
-                  },
-                  "cap": "按\"它在回答什么问题\"来记理论，比背名字省力。",
-                  "para": "takeaway"
+                  "sec": "takeaway"
                 }
               ]
             }
@@ -34199,32 +25872,46 @@ window.DAYS = [
               "why": "坎农-巴德出现在 1927 年，反驳的是 1884 年的詹姆斯-兰格。「二因素理论」1962 年才出现，在它之后。"
             },
             "visual": {
-              "type": "wires",
-              "base": {},
-              "frames": [
+              "type": "deck",
+              "id": "deck.psych.13.2",
+              "slides": [
                 {
-                  "set": {
-                    "step": 0,
-                    "play": 0
-                  },
-                  "cap": "身体在先 → 同时发生 → 唤醒加标签，每一步都在补漏洞",
-                  "para": "idea"
+                  "scene": "g.psych.13.2.0",
+                  "cap": "1884 年：先有身体，再有感受。",
+                  "sec": "idea"
                 },
                 {
-                  "set": {
-                    "step": 1,
-                    "play": 0.5
-                  },
-                  "cap": "身体在先 → 同时发生 → 唤醒加标签，每一步都在补漏洞",
-                  "para": "why"
+                  "scene": "g.psych.13.2.1",
+                  "cap": "1927 年：身体太像，也太慢。",
+                  "sec": "why"
                 },
                 {
-                  "set": {
-                    "step": 2,
-                    "play": 1
-                  },
-                  "cap": "身体在先 → 同时发生 → 唤醒加标签，每一步都在补漏洞。",
-                  "para": "takeaway"
+                  "scene": "g.psych.13.2.2",
+                  "cap": "1962 年：还要向环境借标签。",
+                  "sec": "example"
+                },
+                {
+                  "scene": "g.psych.13.2.3",
+                  "cap": "三个理论接的是同一件事。",
+                  "sec": [
+                    "derive",
+                    0,
+                    1
+                  ]
+                },
+                {
+                  "scene": "g.psych.13.2.4",
+                  "cap": "后一个接着前一个没说完的地方。",
+                  "sec": [
+                    "derive",
+                    2,
+                    2
+                  ]
+                },
+                {
+                  "scene": "g.psych.13.2.5",
+                  "cap": "三个年份，答的是同一问。",
+                  "sec": "takeaway"
                 }
               ]
             }
@@ -34237,32 +25924,13 @@ window.DAYS = [
             "example": "直播前适度紧张，正在倒 U 的中间；观众从你脸上读出真诚，是信号功能。",
             "review": true,
             "visual": {
-              "type": "chain",
-              "base": {},
-              "frames": [
+              "type": "deck",
+              "id": "still.13.psych.2",
+              "slides": [
                 {
-                  "set": {
-                    "step": 0,
-                    "play": 0
-                  },
+                  "scene": "still.13.psych.2",
                   "cap": "情绪有天生的基础、有功能，强度要适中",
-                  "para": "idea"
-                },
-                {
-                  "set": {
-                    "step": 1,
-                    "play": 0.5
-                  },
-                  "cap": "情绪有天生的基础、有功能，强度要适中",
-                  "para": "why"
-                },
-                {
-                  "set": {
-                    "step": 2,
-                    "play": 1
-                  },
-                  "cap": "情绪有天生的基础、有功能，强度要适中。",
-                  "para": "takeaway"
+                  "sec": "takeaway"
                 }
               ]
             }
@@ -34275,32 +25943,13 @@ window.DAYS = [
             "example": "把\"我不行\"换成\"我还在学\"，既是重评，也是在换信念。",
             "review": true,
             "visual": {
-              "type": "chain",
-              "base": {},
-              "frames": [
+              "type": "deck",
+              "id": "still.13.psych.3",
+              "slides": [
                 {
-                  "set": {
-                    "step": 0,
-                    "play": 0
-                  },
+                  "scene": "still.13.psych.3",
                   "cap": "压力看评价，调节看解释",
-                  "para": "idea"
-                },
-                {
-                  "set": {
-                    "step": 1,
-                    "play": 0.5
-                  },
-                  "cap": "压力看评价，调节看解释",
-                  "para": "why"
-                },
-                {
-                  "set": {
-                    "step": 2,
-                    "play": 1
-                  },
-                  "cap": "压力看评价，调节看解释。",
-                  "para": "takeaway"
+                  "sec": "takeaway"
                 }
               ]
             }
@@ -34327,32 +25976,13 @@ window.DAYS = [
               "why": "早期的詹姆斯-兰格把身体反应放在中心。「对事情的解释」是后来的理论越来越强调的。"
             },
             "visual": {
-              "type": "chain",
-              "base": {},
-              "frames": [
+              "type": "deck",
+              "id": "still.13.psych.4",
+              "slides": [
                 {
-                  "set": {
-                    "step": 0,
-                    "play": 0
-                  },
+                  "scene": "still.13.psych.4",
                   "cap": "情绪理论的主线：从\"身体决定\"走向\"解释决定\"",
-                  "para": "idea"
-                },
-                {
-                  "set": {
-                    "step": 1,
-                    "play": 0.5
-                  },
-                  "cap": "情绪理论的主线：从\"身体决定\"走向\"解释决定\"",
-                  "para": "why"
-                },
-                {
-                  "set": {
-                    "step": 2,
-                    "play": 1
-                  },
-                  "cap": "情绪理论的主线：从\"身体决定\"走向\"解释决定\"。",
-                  "para": "takeaway"
+                  "sec": "takeaway"
                 }
               ]
             }
@@ -34364,32 +25994,13 @@ window.DAYS = [
             "takeaway": "改变解释就能改变情绪，这是认知取向咨询的基础。",
             "example": "账号练习：用 ABC 写一条三句话的选题。诱发事件：他已读不回；信念：我觉得他根本不在乎我；换一个信念：他可能正在忙，晚点会回。",
             "visual": {
-              "type": "chain",
-              "base": {},
-              "frames": [
+              "type": "deck",
+              "id": "still.13.psych.5",
+              "slides": [
                 {
-                  "set": {
-                    "step": 0,
-                    "play": 0
-                  },
+                  "scene": "still.13.psych.5",
                   "cap": "改变解释就能改变情绪，这是认知取向咨询的基础",
-                  "para": "idea"
-                },
-                {
-                  "set": {
-                    "step": 1,
-                    "play": 0.5
-                  },
-                  "cap": "改变解释就能改变情绪，这是认知取向咨询的基础",
-                  "para": "why"
-                },
-                {
-                  "set": {
-                    "step": 2,
-                    "play": 1
-                  },
-                  "cap": "改变解释就能改变情绪，这是认知取向咨询的基础。",
-                  "para": "takeaway"
+                  "sec": "takeaway"
                 }
               ]
             }
@@ -34434,69 +26045,8 @@ window.DAYS = [
             "ref": 4
           }
         ],
-        "hookComic": {
-          "panels": [
-            {
-              "bg": "room",
-              "cast": [
-                {
-                  "who": "xiaoman",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [],
-              "cap": "12 张理论卡散在桌上"
-            },
-            {
-              "bg": "room",
-              "cast": [
-                {
-                  "who": "xiaoman",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "worry",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [],
-              "cap": "小满头大"
-            },
-            {
-              "bg": "room",
-              "cast": [
-                {
-                  "who": "xiaoyin",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [],
-              "cap": "小音用一根线把它们串起来"
-            },
-            {
-              "bg": "room",
-              "cast": [
-                {
-                  "who": "xiaoman",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "run"
-                }
-              ],
-              "props": [],
-              "bubbles": [],
-              "cap": "变成一条接力跑道"
-            }
-          ]
+        "hookPic": {
+          "scene": "hook.13.psych"
         }
       },
       "english": {

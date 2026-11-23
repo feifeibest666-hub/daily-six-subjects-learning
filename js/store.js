@@ -25,7 +25,7 @@
       settings: { reduceMotion: false, ttsSlow: 0.7, ttsNormal: 0.95, ttsVoice: null, ttsProbe: null, muteHintShown: false, miniDefault: false, debug: false, aheadNoteDate: null, peekHintShown: false },
       words: {},
       english: { retell: {} },
-      contentVer: { english: 2 },
+      contentVer: { english: 2, deck: 1 },
       miniOn: false,
       welcomeBack: false,
       notice: null,
@@ -82,6 +82,7 @@
       if (state.draft && /-english$/.test(state.draft.id || '')) state.draft = null;
       state.contentVer.english = 2;
     }
+    if ((state.contentVer.deck || 0) < 1) state.contentVer.deck = 1;
   }
 
   function save() {

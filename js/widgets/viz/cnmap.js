@@ -335,10 +335,11 @@
     }, 0));
     const h = 22 + lines.length * 14;
     const g = LK.svg('g', { class: 'bubble', transform: 'translate(' + x + ' ' + (y - 36) + ')' });
-    g.appendChild(LK.svg('rect', { x: -w / 2, y: -h - 6, width: w, height: h, rx: 10, fill: '#2F9E8F' }));
-    g.appendChild(text({ x: 0, y: -h + 12, 'text-anchor': 'middle', 'font-size': 12, 'font-weight': 700, fill: '#fff', 'font-family': FONT }, label));
+    g.appendChild(LK.svg('path', { d: 'M0 -6 L0 30', fill: 'none', stroke: '#4A3B30', 'stroke-width': 1.2 }));
+    g.appendChild(LK.svg('rect', { x: -w / 2, y: -h - 6, width: w, height: h, rx: 10, fill: '#fff', stroke: '#4A3B30', 'stroke-width': 1.2 }));
+    g.appendChild(text({ x: 0, y: -h + 12, 'text-anchor': 'middle', 'font-size': 12, 'font-weight': 700, fill: '#4A3B30', 'font-family': FONT }, label));
     lines.forEach(function (line, i) {
-      g.appendChild(text({ x: 0, y: -h + 26 + i * 13, 'text-anchor': 'middle', 'font-size': 10, fill: '#fff', 'font-family': FONT }, line));
+      g.appendChild(text({ x: 0, y: -h + 26 + i * 13, 'text-anchor': 'middle', 'font-size': 11, fill: '#4A3B30', 'font-family': FONT }, line));
     });
     svg.appendChild(g);
     if (!instant && global.LKMotion && !LKMotion.reduce()) {

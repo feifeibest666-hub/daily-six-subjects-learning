@@ -7,7 +7,8 @@
     plates: '#F7F1E8',
     globe3d: '#152B3A',
     grid: '#F4EEE6',
-    comic: '#FBF7F1'
+    comic: '#FBF7F1',
+    deck: '#FBF6EE'
   };
 
   function register(type, def) { types[type] = def; }
@@ -28,6 +29,7 @@
 
   function framesOf(visual) {
     if (!visual) return [];
+    if (visual.type === 'deck' && visual.slides && visual.slides.length) return visual.slides;
     if (visual.panels && visual.panels.length) return visual.panels;
     return visual.frames || [];
   }
@@ -154,6 +156,12 @@
     svg.style.fontFamily = FONT;
     if (nocaption()) svg.classList.add('is-nocaption');
     stage.appendChild(svg);
+    let badge = null;
+    if (typeName === 'deck') {
+      badge = LK.h('span', { class: 'deck-badge', text: '' });
+      stage.appendChild(badge);
+      svg.setAttribute('viewBox', '0 0 344 236');
+    }
     const toggle = LK.h('div', { class: 'comic-toggle', hidden: true });
     const scrub = LK.h('div', { class: 'stage-scrub', hidden: true });
     const scrubVal = LK.h('span', { class: 'scrub-val' });
@@ -377,6 +385,25 @@
       });
     }
 
+    function paintDeck(frame) {
+      const html = global.LKScene ? LKScene.draw(frame.scene, { add: frame.add, hl: frame.hl }) : '';
+      svg.setAttribute('viewBox', '0 0 344 236');
+      if (reduced || opts.poster) {
+        svg.style.transition = 'none';
+        svg.style.opacity = '1';
+        svg.innerHTML = html;
+        return;
+      }
+      svg.style.transition = 'none';
+      svg.style.opacity = '0';
+      svg.innerHTML = html;
+      requestAnimationFrame(function () {
+        if (destroyed) return;
+        svg.style.transition = 'opacity 200ms linear';
+        svg.style.opacity = '1';
+      });
+    }
+
     function show(i, mode) {
       if (!frameList().length) return;
       index = Math.max(0, Math.min(frameList().length - 1, i));
@@ -390,11 +417,22 @@
       cap.innerHTML = capHtml(frame.cap || '');
       svg.setAttribute('aria-label', frame.cap || live.visual.type || '');
       paintDots();
-      const playable = frame.play && !reduced && !opts.poster;
-      next.setAttribute('aria-label', playable ? '播放' : '下一帧');
-      next.innerHTML = playable ? '<span aria-hidden="true">▶</span>' : '<span aria-hidden="true">›</span>';
+      const isDeck = live.visual.type === 'deck';
+      if (isDeck && global.LKScene && live.visual.id) LKScene.remember(live.visual.id, index);
+      const playable = !isDeck && frame.play && !reduced && !opts.poster;
+      const lastDeck = isDeck && index === frameList().length - 1;
+      next.setAttribute('aria-label', isDeck ? (lastDeck ? '我懂了' : '下一张') : (playable ? '播放' : '下一帧'));
+      if (isDeck) {
+        prev.textContent = '‹ 上一张';
+        prev.setAttribute('aria-label', '上一张');
+        next.textContent = lastDeck ? '我懂了 ›' : '下一张 ›';
+        if (badge) badge.textContent = (index + 1) + ' / ' + frameList().length;
+      } else {
+        next.innerHTML = playable ? '<span aria-hidden="true">▶</span>' : '<span aria-hidden="true">›</span>';
+      }
       prev.disabled = index === 0;
-      if (frame.play) runPlay(frame);
+      if (isDeck) paintDeck(frame);
+      else if (frame.play) runPlay(frame);
       else if (mode === 'jump' || reduced || opts.poster) {
         applyAt(current, 1, frame);
         svg._shown = merge({}, current);
@@ -414,6 +452,7 @@
     prev.addEventListener('click', function () { if (index > 0) go(index - 1); });
 
     function armHold() {
+      if (live.visual.type === 'deck') return;
       held = false;
       clearTimeout(holdTimer);
       holdTimer = setTimeout(function () {
@@ -450,6 +489,18 @@
       if (!stage.isConnected) return;
       const top = stage.getBoundingClientRect().top;
       stage.classList.toggle('is-mini', top <= 53 && top >= 40);
+    }
+    if (typeName === 'deck') {
+      let sx = 0;
+      let sy = 0;
+      stage.addEventListener('pointerdown', function (e) { sx = e.clientX; sy = e.clientY; });
+      stage.addEventListener('pointerup', function (e) {
+        const dx = e.clientX - sx;
+        const dy = e.clientY - sy;
+        if (Math.abs(dx) < 42 || Math.abs(dx) < Math.abs(dy)) return;
+        if (dx < 0) goNext();
+        else if (index > 0) go(index - 1);
+      });
     }
     global.addEventListener('scroll', onScroll, { passive: true });
 
@@ -508,12 +559,23 @@
   function poster(el, visual, opts) {
     const vis = materialize(visual) || visual;
     const frames = framesOf(vis);
+    let start = Math.max(0, frames.length - 1);
+    if (vis && vis.type === 'deck' && vis.id && global.LKScene && LKScene.recall(vis.id) != null) {
+      start = LKScene.recall(vis.id);
+    }
     return mount(el, vis, Object.assign({}, opts || {}, {
       poster: true,
       reduced: true,
-      start: Math.max(0, frames.length - 1)
+      start: start
     }));
   }
+
+  register('deck', {
+    viewBox: '0 0 344 236',
+    build: function () {},
+    apply: function () {},
+    anim: {}
+  });
 
   function roll(el, from, to, ms, reduced) {
     if (!el) return;

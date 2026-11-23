@@ -58,8 +58,10 @@
     let paused = 0;
     let pauseAt = 0;
     const checks = draft && draft.checks ? draft.checks : {};
+    let spanRead = draft && draft.spanRead ? draft.spanRead : {};
     let frameCtl = null;
     let liveStage = null;
+    let extraStages = [];
     if (qi >= quiz.length && phase === 'quiz') phase = les.boss ? 'intro' : 'take';
 
     const screen = LK.h('div', { class: 'screen lesson-screen' });
@@ -167,6 +169,7 @@
         mini: useMini,
         elapsed: elapsed(),
         checks: checks,
+        spanRead: spanRead,
         quizKeys: quiz.map(function (q) { return q.key; })
       });
     }
@@ -345,7 +348,24 @@
       releaseStage();
       const card = LK.h('div', { class: 'stage-card hook-card' });
       card.appendChild(LK.h('span', { class: 'tag', text: sub.name }));
-      if (les.hookComic && global.LKStage && LKStage.has('comic')) {
+      if (les.hookPic && global.LKScene) {
+        const svg = LK.svg('svg', { viewBox: '0 0 344 236', role: 'img', focusable: 'false' });
+        svg.classList.add('hook-scene');
+        svg.innerHTML = LKScene.draw(les.hookPic.scene, {});
+        card.appendChild(svg);
+        card.appendChild(LK.h('p', { class: 'hook-text', text: les.hook }));
+        phaseBody.appendChild(card);
+        setAction({
+          label: '开始',
+          onClick: function () {
+            LKMotion.flip(card, function () {
+              phase = 'steps';
+              step = 0;
+              showSteps(0, false);
+            });
+          }
+        });
+      } else if (les.hookComic && global.LKStage && LKStage.has('comic')) {
         const host = LK.h('div', { class: 'stage-host' });
         const text = LK.h('p', { class: 'hook-text', hidden: true, text: les.hook });
         card.appendChild(host);
@@ -406,15 +426,29 @@
 
     function isFramed(v) {
       if (!v || !global.LKStage) return false;
+      if (v.type === 'deck' && v.slides && v.slides.length && LKStage.has('deck')) return true;
       if (v.recall) return true;
       const frames = v.frames || v.panels;
       return !!(frames && frames.length >= 2 && LKStage.has(v.type || 'comic'));
     }
 
+    function pictureOf(s) {
+      if (s && s.deck && s.deck.slides && s.deck.slides.length) return s.deck;
+      return s && s.visual;
+    }
+
     function releaseStage() {
       if (liveStage && liveStage.api) liveStage.api.destroy();
       liveStage = null;
+      extraStages.forEach(function (api) { if (api && api.destroy) api.destroy(); });
+      extraStages = [];
       frameCtl = null;
+    }
+
+    function markSpan(s) {
+      const span = (s.deck && s.deck.span) || (s.visual && s.visual.span);
+      if (!span) return;
+      for (let n = span[0]; n <= span[1]; n++) spanRead[n - 1] = true;
     }
 
     function paraBlock(slot) {
@@ -428,10 +462,47 @@
       return part;
     }
 
-    function mountFramed(s, index, current) {
-      const visual = s.visual;
-      const frames = visual.frames || visual.panels || [];
-      const plan = LKStage.paras(s, frames);
+    function mountFramed(s, index, current, visual) {
+      visual = visual || s.visual;
+      function secSlots(sec) {
+        if (sec == null) return [];
+        let step = s;
+        let field = sec;
+        let from = 0;
+        let to = null;
+        if (Array.isArray(sec)) {
+          if (typeof sec[0] === 'number') {
+            step = les.steps[sec[0] - 1] || s;
+            field = sec[1];
+            if (sec.length >= 4) { from = sec[2]; to = sec[3]; }
+          } else {
+            field = sec[0];
+            from = sec.length > 1 ? sec[1] : 0;
+            to = sec.length > 2 ? sec[2] : null;
+          }
+        }
+        if (field === 'derive') {
+          const lines = (step && step.derive) || [];
+          const end = to == null ? lines.length - 1 : to;
+          const slots = [];
+          for (let n = from; n <= end && n < lines.length; n++) {
+            slots.push({ key: 'derive', index: n, label: n === from ? '推一下' : '', text: lines[n] });
+          }
+          return slots;
+        }
+        if (!step || step[field] == null || step[field] === '') return [];
+        const labels = { idea: '白话', why: '为什么', example: step.exLabel || '举个例子', takeaway: '一句话' };
+        return [{ key: field, label: labels[field] || '', text: step[field], extra: field === 'takeaway' ? ' k-take' : '' }];
+      }
+      function slotsFor(slide) {
+        const list = (slide && slide.secs) || (slide && slide.sec != null ? [slide.sec] : []);
+        const out = [];
+        list.forEach(function (sec) { secSlots(sec).forEach(function (slot) { out.push(slot); }); });
+        return out;
+      }
+      const deckMode = visual.type === 'deck';
+      const frames = deckMode ? (visual.slides || []) : (visual.frames || visual.panels || []);
+      const plan = deckMode ? frames.map(slotsFor) : LKStage.paras(s, frames);
       const stageHost = LK.h('div', { class: 'stage-host' });
       const fold = LK.h('button', { class: 'read-fold', type: 'button', hidden: true });
       const foldClip = LK.h('div', { class: 'read-clip' });
@@ -472,7 +543,7 @@
           if (slot.label && labels.indexOf(slot.label) < 0) labels.push(slot.label);
         });
         fold.hidden = labels.length === 0;
-        fold.textContent = labels.join(' · ') + '（已读，点开回看）';
+        fold.textContent = deckMode ? ('已读：' + labels.join(' · ')) : (labels.join(' · ') + '（已读，点开回看）');
         seen.forEach(function (slot) { foldInner.appendChild(paraBlock(slot)); });
         (plan[i] || []).forEach(function (slot) { paraHost.appendChild(paraBlock(slot)); });
         checkHost.hidden = !(i >= frames.length - 1 && s.check);
@@ -490,18 +561,34 @@
         );
       });
 
-      function onFrame(i) {
+      function onFrame(i, meta) {
+        if (meta && meta.last) markSpan(s);
         paintParas(showAll ? frames.length - 1 : i);
         frameCtl = {
           next: function () { if (api) api.next(); },
-          done: function () { return showAll || i >= frames.length - 1; }
+          done: function () { return showAll || i >= frames.length - 1; },
+          deck: deckMode
         };
         wireFoot(index);
+      }
+
+      function leaveCard() {
+        markSpan(s);
+        if (s.check && checks[index] == null) {
+          if (frameCtl) frameCtl.done = function () { return true; };
+          wireFoot(index);
+          return;
+        }
+        const n = visibleCount();
+        if (index < n - 1) showSteps(index + 1, true);
+        else if (!useMini && les.interaction) showInteract();
+        else showQuiz();
       }
 
       const opts = {
         subject: sub,
         onFrame: onFrame,
+        onPastEnd: deckMode ? leaveCard : null,
         onExpandAll: function () {
           showAll = true;
           paintParas(frames.length - 1);
@@ -521,11 +608,14 @@
       }
       frameCtl = {
         next: function () { if (api) api.next(); },
-        done: function () { return false; }
+        done: function () { return false; },
+        deck: deckMode
       };
     }
 
     function makeCurrent(index) {
+      extraStages.forEach(function (api) { if (api && api.destroy) api.destroy(); });
+      extraStages = [];
       const s = les.steps[index];
       const current = LK.h('article', { class: 'kcard is-current' });
       const titleRow = LK.h('div', { class: 'kcard-h' });
@@ -549,8 +639,35 @@
             LKMotion.rebound(footBtn);
           });
         }
-      } else if (isFramed(s.visual)) mountFramed(s, index, current);
-      else {
+      } else if (typeof s.deckHost === 'number') {
+        releaseStage();
+        current.appendChild(LK.h('p', { class: 'deck-point', text: '在第 ' + (s.deckHost + 1) + ' 张卡的插图组里讲' }));
+        const go = LK.h('button', { class: 'btn btn-primary deck-go', type: 'button', text: '去看' });
+        go.addEventListener('click', function () { showSteps(s.deckHost, true); });
+        current.appendChild(go);
+      } else if (s.deck && s.deck.mode === 'aside') {
+        releaseStage();
+        const host = LK.h('div', { class: 'stage-host' });
+        current.appendChild(host);
+        extraStages.push(LKStage.mount(host, s.deck, { subject: sub, onFrame: function () {}, onPastEnd: function () {} }));
+        renderBody(s, current);
+        if (s.visual) {
+          const host2 = LK.h('div', { class: 'stage-host' });
+          current.appendChild(host2);
+          extraStages.push(LKStage.mount(host2, s.visual, { subject: sub }));
+        }
+        mountCheck(s, index, current, function () {
+          wireFoot(index);
+          LKMotion.rebound(footBtn);
+        });
+      } else if (isFramed(pictureOf(s))) {
+        mountFramed(s, index, current, pictureOf(s));
+        if (s.deck && s.visual && s.visual.type !== 'deck') {
+          const host2 = LK.h('div', { class: 'stage-host' });
+          current.appendChild(host2);
+          extraStages.push(LKStage.mount(host2, s.visual, { subject: sub }));
+        }
+      } else {
         frameCtl = null;
         if (liveStage && liveStage.api) { liveStage.api.destroy(); liveStage = null; }
         renderBody(s, current);
@@ -568,12 +685,16 @@
         setAction({ label: '先完成这张', disabled: true, onClick: function () {} });
         return;
       }
+      if (typeof s.deckHost === 'number' && !spanRead[index]) {
+        setAction({ label: '去看插图组', disabled: false, onClick: function () { showSteps(s.deckHost, true); } });
+        return;
+      }
       if (frameCtl && !frameCtl.done()) {
-        setAction({ label: '下一帧', disabled: false, onClick: function () { frameCtl.next(); } });
+        setAction({ label: frameCtl.deck ? '下一张' : '下一帧', disabled: false, onClick: function () { frameCtl.next(); } });
         return;
       }
       const n = visibleCount();
-      const need = s.check && checks[index] == null;
+      const need = s.check && checks[index] == null && typeof s.deckHost !== 'number';
       const last = index >= n - 1;
       setAction({
         label: need ? '先答上面的小问题' : (last ? '我懂了，去练一练' : ('下一张（' + (index + 1) + '/' + n + '）')),
@@ -849,10 +970,11 @@
       const clip = LK.h('div', { class: 'peek-clip' });
       const inner = LK.h('div', { class: 'peek-inner' });
       if (skipped) inner.appendChild(LK.h('span', { class: 'tag', text: '迷你模式时跳过了' }));
-      if (isFramed(s.visual) && global.LKStage) {
+      const peekPic = pictureOf(s);
+      if (isFramed(peekPic) && global.LKStage) {
         const holder = LK.h('div', { class: 'peek-poster' });
         inner.appendChild(holder);
-        LKStage.poster(holder, s.visual, { subject: srcSub, reduced: true });
+        LKStage.poster(holder, peekPic, { subject: srcSub, reduced: true });
       }
       renderBody(s, inner);
       if (s.check) {

@@ -1,5 +1,10 @@
 (function (global) {
-  const INK = '#3A302A';
+  const INK = '#4A3B30';
+  const RETIRED = {
+    beam2: 1, ridge2: 1, seaLand: 1, sediment: 1, delta: 1, soil: 1, clocks: 1, sundial: 1,
+    gauge: 1, cloudTrip: 1, tilt: 1, drop: 1, cycle: 1, histmap: 1, tree: 1, tug: 1, chain: 1,
+    yearline: 1, body3: 1, wires: 1, curve2: 1, gas: 1, process: 1, abc: 1, appraise: 1
+  };
   const FONT = '-apple-system, "PingFang SC", "HarmonyOS Sans SC", "Noto Sans SC", "Microsoft YaHei", sans-serif';
   const GEO = '#2F9E8F';
   const HIST = '#C8664A';
@@ -20,6 +25,7 @@
   function clear(svgEl) { while (svgEl.firstChild) svgEl.removeChild(svgEl.firstChild); }
   function stepOf(state) { return state.step == null ? 1 : state.step; }
   function reg(type, box, draw) {
+    if (RETIRED[type]) return;
     LKStage.register(type, {
       viewBox: box,
       build: function (el) { el._ready = true; },
@@ -33,10 +39,10 @@
       }
     });
   }
-  function bg(g, color) { g.appendChild(svg('rect', { width: 340, height: 220, fill: color || '#FBF7F1' })); }
+  function bg(g, color) { g.appendChild(svg('rect', { width: 340, height: 220, fill: color || '#FBF6EE' })); }
 
   reg('tilemap', '0 0 340 220', function (g, state) {
-    bg(g, '#F4EEE6');
+    bg(g, '#FBF6EE');
     const list = global.PROVINCES || [];
     const on = state.on || [];
     const all = state.step == null || state.step >= 1;
@@ -191,7 +197,7 @@
   });
 
   reg('tl', '0 0 340 160', function (g, state) {
-    g.appendChild(svg('rect', { width: 340, height: 160, fill: '#FBF3EC' }));
+    g.appendChild(svg('rect', { width: 340, height: 160, fill: '#FBF6EE' }));
     const list = (global.DYNASTIES || []).slice(0, state.count || 22);
     const focus = state.focus || '';
     list.forEach(function (d, i) {
@@ -356,7 +362,7 @@
   });
 
   reg('faces', '0 0 340 180', function (g, state) {
-    g.appendChild(svg('rect', { width: 340, height: 180, fill: '#F6F1FA' }));
+    g.appendChild(svg('rect', { width: 340, height: 180, fill: '#FBF6EE' }));
     const names = state.names || ['喜', '怒', '哀', '惧', '厌', '惊'];
     names.forEach(function (name, i) {
       const x = 36 + (i % 6) * 52;
@@ -407,7 +413,7 @@
   });
 
   reg('outfit', '0 0 340 210', function (g, state) {
-    g.appendChild(svg('rect', { width: 340, height: 210, fill: '#FDF2F5' }));
+    g.appendChild(svg('rect', { width: 340, height: 210, fill: '#FBF6EE' }));
     g.appendChild(svg('circle', { cx: 120, cy: 48, r: 16, fill: '#F6D7BF', stroke: INK, 'stroke-width': 1.3 }));
     g.appendChild(svg('rect', { x: 100, y: 68, width: 40, height: 36, rx: 6, fill: state.top || FASH }));
     g.appendChild(svg('rect', { x: 104, y: 108, width: 32, height: 40, rx: 4, fill: state.bottom || '#3A302A' }));

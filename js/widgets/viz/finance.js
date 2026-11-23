@@ -148,16 +148,22 @@
     const fill = state.fill || 0;
     const play = state.play == null ? 1 : state.play;
     const n = Math.round(fill * play);
+    g.appendChild(el('rect', { width: 200, height: 210, fill: '#FBF6EE' }));
     for (let i = 0; i < 100; i++) {
       const x = 16 + (i % 10) * 18;
       const y = 16 + Math.floor(i / 10) * 18;
-      g.appendChild(el('circle', { cx: x, cy: y, r: 7, fill: i < n ? GOLD : LINE }));
+      g.appendChild(el('rect', {
+        x: x - 7, y: y - 7, width: 14, height: 14, rx: 3,
+        fill: i < n ? '#F2B640' : '#fff', stroke: '#4A3B30', 'stroke-width': 0.8
+      }));
     }
-    T(g, 100, 200, state.label || ('100 格里涂了 ' + fill + ' 格'), 11, INK);
+    T(g, 100, 200, state.label || ('100 格里涂了 ' + fill + ' 格'), 11, '#4A3B30');
   });
 
   reg('balance', '0 0 300 210', function (g, state) {
-    g.appendChild(el('rect', { width: 300, height: 210, fill: '#FCF1DC' }));
+    g.appendChild(el('rect', { width: 300, height: 210, fill: '#FBF6EE' }));
+    g.appendChild(el('rect', { x: 36, y: 148, width: 228, height: 5, rx: 2, fill: '#4A3B30' }));
+    g.appendChild(el('path', { d: 'M150 153 L138 170 L162 170 Z', fill: '#4A3B30' }));
     function col(side, x) {
       const items = (side && side.items) || [];
       const sum = items.reduce(function (a, it) { return a + (+it.value || 0); }, 0) || 1;

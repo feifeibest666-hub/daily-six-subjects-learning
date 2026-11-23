@@ -52,6 +52,20 @@
     section('背景', LKArt.bgs, function (svg, name) {
       LKArt.bg(svg, name, 120, 140);
     });
+    if (global.LKScene && LKScene.parts && LKScene.parts.length) {
+      screen.appendChild(LK.h('h2', { class: 'set-label', text: '场景零件' }));
+      const row = LK.h('div', { class: 'art-grid' });
+      LKScene.parts.forEach(function (p) {
+        const fig = LK.h('figure', { class: 'art-cell scene-cell' });
+        const svg = LK.svg('svg', { viewBox: '0 0 160 120' });
+        const body = typeof p.svg === 'function' ? p.svg() : p.svg;
+        svg.innerHTML = LKScene.defs() + '<rect width="160" height="120" fill="#FBF6EE"/>' + body;
+        fig.appendChild(svg);
+        fig.appendChild(LK.h('figcaption', { text: p.name }));
+        row.appendChild(fig);
+      });
+      screen.appendChild(row);
+    }
     return screen;
   }
 
