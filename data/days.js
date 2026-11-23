@@ -298,48 +298,79 @@ window.DAYS = [
               "cast": [
                 {
                   "who": "xiaoman",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "talk"
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "cheer"
                 }
               ],
-              "cap": "同样叫“粉色”，樱花粉温柔，"
+              "props": [
+                {
+                  "what": "skirt",
+                  "x": 0.78,
+                  "y": 0.78,
+                  "k": 0.95
+                }
+              ],
+              "bubbles": [],
+              "cap": "小满拿着樱花粉的裙子"
             },
             {
-              "bg": "street",
+              "bg": "room",
               "cast": [
                 {
-                  "who": "xiaoyin",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "talk"
+                  "who": "ale",
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "cheer"
                 }
               ],
-              "cap": "差别到底在哪"
+              "props": [
+                {
+                  "what": "bag",
+                  "x": 0.78,
+                  "y": 0.78,
+                  "k": 0.95
+                }
+              ],
+              "bubbles": [
+                {
+                  "who": "ale",
+                  "text": "都是粉啊"
+                }
+              ],
+              "cap": "阿乐拿着玫红的包"
             },
             {
-              "bg": "shop",
+              "bg": "room",
               "cast": [
                 {
                   "who": "xiaoman",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "talk"
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
                 }
               ],
-              "cap": "差别到底在哪"
+              "props": [],
+              "bubbles": [],
+              "cap": "两人放在一起"
             },
             {
-              "bg": "plain",
+              "bg": "room",
               "cast": [
                 {
                   "who": "xiaoyin",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "wow"
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
                 }
               ],
-              "cap": "差别到底在哪"
+              "props": [],
+              "bubbles": [],
+              "cap": "小音拿出三个旋钮"
             }
           ]
         }
@@ -739,52 +770,69 @@ window.DAYS = [
         "hookComic": {
           "panels": [
             {
-              "bg": "room",
+              "bg": "palace",
               "cast": [
                 {
                   "who": "xiaoman",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "talk"
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
                 }
               ],
-              "cap": "五代十国、南北朝、两晋……总"
-            },
-            {
-              "bg": "street",
-              "cast": [
+              "props": [],
+              "bubbles": [
                 {
-                  "who": "xiaoyin",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "talk"
+                  "who": "xiaoman",
+                  "text": "唐宋元明……南北朝在哪？"
                 }
               ],
-              "cap": "问题可能不在记性，而在缺一副"
+              "cap": "小满念"
             },
             {
-              "bg": "shop",
+              "bg": "palace",
               "cast": [
                 {
                   "who": "xiaoman",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "talk"
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
                 }
               ],
-              "cap": "问题可能不在记性，而在缺一副"
+              "props": [],
+              "bubbles": [],
+              "cap": "一堆朝代名在她头上乱飞"
             },
             {
-              "bg": "plain",
+              "bg": "palace",
               "cast": [
                 {
                   "who": "xiaoyin",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "wow"
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
                 }
               ],
-              "cap": "问题可能不在记性，而在缺一副"
+              "props": [],
+              "bubbles": [],
+              "cap": "小音扛来一根长竹竿"
+            },
+            {
+              "bg": "palace",
+              "cast": [
+                {
+                  "who": "kingWu",
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
+                }
+              ],
+              "props": [],
+              "bubbles": [],
+              "cap": "朝代名一个个挂到竹竿上排好队"
             }
           ]
         }
@@ -797,133 +845,88 @@ window.DAYS = [
         "hookComic": {
           "panels": [
             {
-              "bg": "room",
-              "tint": "#F7F1E8",
+              "bg": "mountain",
               "cast": [
                 {
                   "who": "xiaoman",
                   "x": 0.32,
-                  "y": 0.78,
-                  "pose": "point",
-                  "face": "happy"
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "cheer"
                 },
                 {
                   "who": "ale",
-                  "x": 0.72,
-                  "y": 0.78,
-                  "pose": "stand",
-                  "face": "calm"
+                  "x": 0.64,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "cheer"
                 }
               ],
-              "props": [
-                {
-                  "what": "paper",
-                  "x": 0.34,
-                  "y": 0.55,
-                  "k": 0.8
-                }
-              ],
-              "caption": "一张白纸",
-              "cap": "先在纸上点一个点"
+              "props": [],
+              "bubbles": [],
+              "cap": "小满在白纸上点一个点"
             },
             {
-              "bg": "room",
-              "tint": "#F7F1E8",
+              "bg": "mountain",
               "cast": [
                 {
-                  "who": "ale",
-                  "x": 0.28,
-                  "y": 0.78,
-                  "pose": "shrug",
-                  "face": "worry"
+                  "who": "xiaoman",
+                  "x": 0.32,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
                 },
                 {
-                  "who": "xiaoman",
-                  "x": 0.7,
-                  "y": 0.78,
-                  "pose": "point",
-                  "face": "happy"
+                  "who": "ale",
+                  "x": 0.64,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
                 }
               ],
-              "props": [
-                {
-                  "what": "paper",
-                  "x": 0.68,
-                  "y": 0.52,
-                  "k": 0.7
-                }
-              ],
+              "props": [],
               "bubbles": [
                 {
-                  "who": "ale",
-                  "text": "点在哪？"
-                },
-                {
                   "who": "xiaoman",
-                  "text": "左数3格|下数2格"
+                  "text": "点在哪？"
                 }
               ],
-              "cap": "报两个数，才能找到"
+              "cap": "小满"
             },
             {
-              "bg": "room",
-              "tint": "#F7F1E8",
+              "bg": "mountain",
               "cast": [
                 {
                   "who": "xiaoyin",
-                  "x": 0.28,
-                  "y": 0.82,
-                  "k": 1.1
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
                 }
               ],
-              "props": [
-                {
-                  "what": "ball",
-                  "x": 0.62,
-                  "y": 0.55,
-                  "k": 1.1
-                }
-              ],
-              "caption": "纸卷成球",
-              "cap": "纸可以卷成一颗球"
+              "props": [],
+              "bubbles": [],
+              "cap": "小音把白纸卷成一颗球"
             },
             {
-              "bg": "room",
-              "tint": "#F7F1E8",
+              "bg": "mountain",
               "cast": [
                 {
                   "who": "ale",
-                  "x": 0.66,
-                  "y": 0.78,
-                  "pose": "head",
-                  "face": "worry"
-                },
-                {
-                  "who": "xiaoyin",
-                  "x": 0.28,
-                  "y": 0.84,
-                  "k": 1
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "think"
                 }
               ],
-              "props": [
-                {
-                  "what": "ball",
-                  "x": 0.42,
-                  "y": 0.48,
-                  "k": 0.9
-                }
-              ],
+              "props": [],
               "bubbles": [
                 {
                   "who": "ale",
                   "text": "球上怎么数？"
-                },
-                {
-                  "who": "xiaoyin",
-                  "text": "球没有边"
                 }
               ],
-              "cap": "球上没有边，怎么数？"
+              "cap": "阿乐挠头"
             }
           ]
         },
@@ -1509,49 +1512,106 @@ window.DAYS = [
               "bg": "room",
               "cast": [
                 {
-                  "who": "xiaoman",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "talk"
+                  "who": "xiaoA",
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "cheer"
                 }
               ],
-              "cap": "月入两万的人，可能比月入六千"
+              "props": [
+                {
+                  "what": "payslip",
+                  "x": 0.78,
+                  "y": 0.78,
+                  "k": 0.95
+                },
+                {
+                  "what": "bag",
+                  "x": 0.62,
+                  "y": 0.78,
+                  "k": 0.95
+                }
+              ],
+              "bubbles": [],
+              "cap": "小 A 背名牌包"
             },
             {
-              "bg": "street",
+              "bg": "room",
+              "cast": [
+                {
+                  "who": "xiaoB",
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "cheer"
+                }
+              ],
+              "props": [
+                {
+                  "what": "payslip",
+                  "x": 0.78,
+                  "y": 0.78,
+                  "k": 0.95
+                },
+                {
+                  "what": "bag",
+                  "x": 0.62,
+                  "y": 0.78,
+                  "k": 0.95
+                }
+              ],
+              "bubbles": [],
+              "cap": "小 B 背帆布包"
+            },
+            {
+              "bg": "room",
+              "cast": [
+                {
+                  "who": "xiaoA",
+                  "x": 0.32,
+                  "y": 0.74,
+                  "face": "happy",
+                  "pose": "stand"
+                },
+                {
+                  "who": "xiaoB",
+                  "x": 0.64,
+                  "y": 0.74,
+                  "face": "happy",
+                  "pose": "stand"
+                }
+              ],
+              "props": [
+                {
+                  "what": "jar",
+                  "x": 0.78,
+                  "y": 0.78,
+                  "k": 0.95
+                }
+              ],
+              "bubbles": [],
+              "cap": "月底：小 A 刷信用卡"
+            },
+            {
+              "bg": "room",
               "cast": [
                 {
                   "who": "xiaoyin",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "talk"
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
                 }
               ],
-              "cap": "怎么会"
-            },
-            {
-              "bg": "shop",
-              "cast": [
-                {
-                  "who": "xiaoman",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "talk"
-                }
-              ],
-              "cap": "怎么会"
-            },
-            {
-              "bg": "plain",
-              "cast": [
+              "props": [],
+              "bubbles": [
                 {
                   "who": "xiaoyin",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "wow"
+                  "text": "谁更穷？"
                 }
               ],
-              "cap": "怎么会"
+              "cap": "谁更穷？"
             }
           ]
         },
@@ -1563,40 +1623,81 @@ window.DAYS = [
               "type": "comic",
               "panels": [
                 {
-                  "bg": "bank",
+                  "bg": "room",
                   "cast": [
                     {
-                      "who": "xiaoman",
-                      "x": 0.5,
-                      "y": 0.72,
-                      "face": "talk"
+                      "who": "xiaoA",
+                      "x": 0.46,
+                      "y": 0.74,
+                      "face": "calm",
+                      "pose": "cheer"
                     }
                   ],
+                  "props": [
+                    {
+                      "what": "payslip",
+                      "x": 0.78,
+                      "y": 0.78,
+                      "k": 0.95
+                    }
+                  ],
+                  "bubbles": [],
                   "cap": "小 A 月入两万"
                 },
                 {
-                  "bg": "kitchen",
+                  "bg": "room",
                   "cast": [
                     {
-                      "who": "xiaoman",
-                      "x": 0.5,
-                      "y": 0.72,
-                      "face": "talk"
+                      "who": "xiaoA",
+                      "x": 0.46,
+                      "y": 0.74,
+                      "face": "worry",
+                      "pose": "stand"
                     }
                   ],
+                  "props": [
+                    {
+                      "what": "paper",
+                      "x": 0.78,
+                      "y": 0.78,
+                      "k": 0.95
+                    }
+                  ],
+                  "bubbles": [],
                   "cap": "可她花了两万一"
                 },
                 {
                   "bg": "room",
                   "cast": [
                     {
-                      "who": "xiaoman",
-                      "x": 0.5,
-                      "y": 0.72,
-                      "face": "talk"
+                      "who": "xiaoB",
+                      "x": 0.46,
+                      "y": 0.74,
+                      "face": "calm",
+                      "pose": "stand"
                     }
                   ],
-                  "cap": "小 B 月入六千，还剩钱"
+                  "props": [
+                    {
+                      "what": "jar",
+                      "x": 0.78,
+                      "y": 0.78,
+                      "k": 0.95
+                    },
+                    {
+                      "what": "coin",
+                      "x": 0.62,
+                      "y": 0.78,
+                      "k": 0.95
+                    }
+                  ],
+                  "bubbles": [
+                    {
+                      "who": "xiaoB",
+                      "text": "+1500"
+                    }
+                  ],
+                  "cap": "小 B 月入六千"
                 }
               ]
             },
@@ -1726,7 +1827,8 @@ window.DAYS = [
                   "cap": "看完整的图",
                   "para": "takeaway"
                 }
-              ]
+              ],
+              "stage": "d01fin-ab"
             },
             "takeaway": "收入高的小 A，一年后反而倒欠一万二。",
             "derive": [
@@ -1741,6 +1843,7 @@ window.DAYS = [
             "idea": "**柱状图**就是用柱子的长短比大小。柱子越长，数越大。",
             "visual": {
               "type": "columns",
+              "stage": "d01fin-ab",
               "base": {
                 "items": [
                   {
@@ -1752,23 +1855,44 @@ window.DAYS = [
                     "value": 18000
                   }
                 ],
-                "unit": "元（同卡"
+                "unit": "元",
+                "play": 1
               },
               "frames": [
                 {
                   "set": {
-                    "play": 0,
-                    "step": 0
+                    "play": 1,
+                    "flash": ""
                   },
-                  "cap": "先看骨架",
+                  "cap": "先看两根柱子",
                   "para": "idea"
                 },
                 {
                   "set": {
-                    "play": 1,
-                    "step": 2
+                    "flash": "zero"
                   },
-                  "cap": "看完整的图",
+                  "cap": "先闪 0 线",
+                  "para": "why"
+                },
+                {
+                  "set": {
+                    "flash": "小 B"
+                  },
+                  "cap": "再闪小 B 的柱",
+                  "para": "example"
+                },
+                {
+                  "set": {
+                    "flash": "小 A"
+                  },
+                  "cap": "再闪小 A 的柱",
+                  "para": "takeaway"
+                },
+                {
+                  "set": {
+                    "flash": ""
+                  },
+                  "cap": "朝上是赚，朝下是亏",
                   "para": "takeaway"
                 }
               ]
@@ -1793,28 +1917,34 @@ window.DAYS = [
               "type": "comic",
               "panels": [
                 {
-                  "bg": "bank",
+                  "bg": "room",
                   "cast": [
                     {
                       "who": "xiaoman",
-                      "x": 0.5,
-                      "y": 0.72,
-                      "face": "talk"
+                      "x": 0.46,
+                      "y": 0.74,
+                      "face": "calm",
+                      "pose": "stand"
                     }
                   ],
-                  "cap": "进得多，出得更多"
+                  "props": [],
+                  "bubbles": [],
+                  "cap": "进得多"
                 },
                 {
-                  "bg": "kitchen",
+                  "bg": "room",
                   "cast": [
                     {
                       "who": "xiaoman",
-                      "x": 0.5,
-                      "y": 0.72,
-                      "face": "talk"
+                      "x": 0.46,
+                      "y": 0.74,
+                      "face": "calm",
+                      "pose": "stand"
                     }
                   ],
-                  "cap": "进得少，出得更少"
+                  "props": [],
+                  "bubbles": [],
+                  "cap": "进得少"
                 }
               ]
             },
@@ -1919,7 +2049,7 @@ window.DAYS = [
                     "value": -6000
                   }
                 ],
-                "unit": "元。这两根柱子"
+                "unit": "元"
               },
               "frames": [
                 {
@@ -2173,24 +2303,65 @@ window.DAYS = [
                   "cast": [
                     {
                       "who": "xiaoman",
-                      "x": 0.48,
-                      "y": 0.72,
-                      "face": "talk"
+                      "x": 0.46,
+                      "y": 0.74,
+                      "face": "calm",
+                      "pose": "stand"
                     }
                   ],
-                  "cap": "情绪 = 主观体验 + 生理"
+                  "props": [],
+                  "bubbles": [
+                    {
+                      "who": "xiaoman",
+                      "text": "完了"
+                    }
+                  ],
+                  "cap": "心里"
                 },
                 {
-                  "bg": "street",
+                  "bg": "room",
                   "cast": [
                     {
-                      "who": "xiaoyin",
-                      "x": 0.48,
-                      "y": 0.72,
-                      "face": "talk"
+                      "who": "xiaoman",
+                      "x": 0.46,
+                      "y": 0.74,
+                      "face": "calm",
+                      "pose": "stand"
                     }
                   ],
-                  "cap": "串起来：把\"我好紧张\"拆开"
+                  "props": [],
+                  "bubbles": [],
+                  "cap": "手心出汗"
+                },
+                {
+                  "bg": "room",
+                  "cast": [
+                    {
+                      "who": "xiaoman",
+                      "x": 0.46,
+                      "y": 0.74,
+                      "face": "calm",
+                      "pose": "stand"
+                    }
+                  ],
+                  "props": [],
+                  "bubbles": [],
+                  "cap": "搓手"
+                },
+                {
+                  "bg": "room",
+                  "cast": [
+                    {
+                      "who": "xiaoman",
+                      "x": 0.46,
+                      "y": 0.74,
+                      "face": "calm",
+                      "pose": "give"
+                    }
+                  ],
+                  "props": [],
+                  "bubbles": [],
+                  "cap": "小满分别给三处写标签"
                 }
               ]
             }
@@ -2266,48 +2437,70 @@ window.DAYS = [
               "cast": [
                 {
                   "who": "xiaoman",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "talk"
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "worry",
+                  "pose": "stand"
                 }
               ],
-              "cap": "你说“我好紧张”"
+              "props": [],
+              "bubbles": [
+                {
+                  "who": "xiaoman",
+                  "text": "我好紧张"
+                }
+              ],
+              "cap": "小满上台前说"
             },
             {
-              "bg": "street",
+              "bg": "room",
               "cast": [
                 {
                   "who": "xiaoyin",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "talk"
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
                 }
               ],
-              "cap": "这个“紧张”能不能拆开看"
+              "props": [],
+              "bubbles": [],
+              "cap": "小音拿出放大镜"
             },
             {
-              "bg": "shop",
+              "bg": "room",
               "cast": [
                 {
                   "who": "xiaoman",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "talk"
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "worry",
+                  "pose": "stand"
                 }
               ],
-              "cap": "这个“紧张”能不能拆开看"
+              "props": [],
+              "bubbles": [],
+              "cap": "放大看：紧张是三块拼起来的"
             },
             {
-              "bg": "plain",
+              "bg": "room",
               "cast": [
                 {
-                  "who": "xiaoyin",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "wow"
+                  "who": "xiaoman",
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
                 }
               ],
-              "cap": "这个“紧张”能不能拆开看"
+              "props": [],
+              "bubbles": [
+                {
+                  "who": "xiaoman",
+                  "text": "能拆开吗？"
+                }
+              ],
+              "cap": "能拆开吗？"
             }
           ]
         }
@@ -2320,76 +2513,63 @@ window.DAYS = [
         "hookComic": {
           "panels": [
             {
-              "bg": "kitchen",
+              "bg": "room",
               "cast": [
                 {
                   "who": "mia",
-                  "x": 0.32,
-                  "y": 0.72,
-                  "face": "happy"
-                },
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "cheer"
+                }
+              ],
+              "props": [
+                {
+                  "what": "mic",
+                  "x": 0.78,
+                  "y": 0.78,
+                  "k": 0.95
+                }
+              ],
+              "bubbles": [],
+              "cap": ""
+            },
+            {
+              "bg": "kitchen",
+              "cast": [
                 {
                   "who": "leo",
-                  "x": 0.62,
+                  "x": 0.46,
                   "y": 0.74,
-                  "face": "talk"
-                },
-                {
-                  "who": "mochi",
-                  "x": 0.8,
-                  "y": 0.82,
-                  "face": "happy",
-                  "k": 0.7
+                  "face": "calm",
+                  "pose": "cheer"
                 }
-              ]
+              ],
+              "props": [
+                {
+                  "what": "pan",
+                  "x": 0.78,
+                  "y": 0.78,
+                  "k": 0.95
+                }
+              ],
+              "bubbles": [],
+              "cap": ""
             },
             {
               "bg": "room",
               "cast": [
                 {
-                  "who": "mia",
-                  "x": 0.32,
-                  "y": 0.72,
-                  "face": "happy"
-                },
-                {
-                  "who": "leo",
-                  "x": 0.62,
-                  "y": 0.74,
-                  "face": "talk"
-                },
-                {
                   "who": "mochi",
-                  "x": 0.8,
-                  "y": 0.82,
-                  "face": "happy",
-                  "k": 0.7
-                }
-              ]
-            },
-            {
-              "bg": "street",
-              "cast": [
-                {
-                  "who": "mia",
-                  "x": 0.32,
-                  "y": 0.72,
-                  "face": "happy"
-                },
-                {
-                  "who": "leo",
-                  "x": 0.62,
+                  "x": 0.46,
                   "y": 0.74,
-                  "face": "talk"
-                },
-                {
-                  "who": "mochi",
-                  "x": 0.8,
-                  "y": 0.82,
-                  "face": "happy",
-                  "k": 0.7
+                  "face": "calm",
+                  "pose": "sit"
                 }
-              ]
+              ],
+              "props": [],
+              "bubbles": [],
+              "cap": ""
             }
           ]
         },
@@ -2397,100 +2577,92 @@ window.DAYS = [
           "title": "Meet Mochi",
           "panels": [
             {
-              "bg": "kitchen",
+              "bg": "room",
               "cast": [
                 {
                   "who": "mia",
-                  "x": 0.32,
-                  "y": 0.72,
-                  "face": "happy"
-                },
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "cheer"
+                }
+              ],
+              "props": [
+                {
+                  "what": "mic",
+                  "x": 0.78,
+                  "y": 0.78,
+                  "k": 0.95
+                }
+              ],
+              "bubbles": [],
+              "cap": ""
+            },
+            {
+              "bg": "kitchen",
+              "cast": [
                 {
                   "who": "leo",
-                  "x": 0.62,
+                  "x": 0.46,
                   "y": 0.74,
-                  "face": "talk"
-                },
-                {
-                  "who": "mochi",
-                  "x": 0.8,
-                  "y": 0.82,
-                  "face": "happy",
-                  "k": 0.7
+                  "face": "calm",
+                  "pose": "cheer"
                 }
-              ]
+              ],
+              "props": [
+                {
+                  "what": "pan",
+                  "x": 0.78,
+                  "y": 0.78,
+                  "k": 0.95
+                }
+              ],
+              "bubbles": [],
+              "cap": ""
             },
             {
               "bg": "room",
               "cast": [
                 {
-                  "who": "mia",
-                  "x": 0.32,
-                  "y": 0.72,
-                  "face": "happy"
-                },
-                {
-                  "who": "leo",
-                  "x": 0.62,
-                  "y": 0.74,
-                  "face": "talk"
-                },
-                {
                   "who": "mochi",
-                  "x": 0.8,
-                  "y": 0.82,
-                  "face": "happy",
-                  "k": 0.7
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "sit"
                 }
-              ]
+              ],
+              "props": [],
+              "bubbles": [],
+              "cap": ""
             },
             {
-              "bg": "street",
+              "bg": "kitchen",
               "cast": [
                 {
-                  "who": "mia",
-                  "x": 0.32,
-                  "y": 0.72,
-                  "face": "happy"
-                },
-                {
                   "who": "leo",
-                  "x": 0.62,
+                  "x": 0.32,
                   "y": 0.74,
-                  "face": "talk"
+                  "face": "worry",
+                  "pose": "think"
                 },
                 {
                   "who": "mochi",
-                  "x": 0.8,
-                  "y": 0.82,
-                  "face": "happy",
-                  "k": 0.7
-                }
-              ]
-            },
-            {
-              "bg": "shop",
-              "cast": [
-                {
-                  "who": "mia",
-                  "x": 0.32,
-                  "y": 0.72,
-                  "face": "happy"
-                },
-                {
-                  "who": "leo",
-                  "x": 0.62,
+                  "x": 0.64,
                   "y": 0.74,
-                  "face": "talk"
-                },
-                {
-                  "who": "mochi",
-                  "x": 0.8,
-                  "y": 0.82,
                   "face": "happy",
-                  "k": 0.7
+                  "pose": "sit"
                 }
-              ]
+              ],
+              "props": [
+                {
+                  "what": "fish",
+                  "x": 0.78,
+                  "y": 0.78,
+                  "k": 0.95
+                }
+              ],
+              "bubbles": [],
+              "cap": ""
             }
           ],
           "lines": [
@@ -3161,48 +3333,60 @@ window.DAYS = [
               "cast": [
                 {
                   "who": "xiaoman",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "talk"
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
                 }
               ],
-              "cap": "同一套衣服，有人穿着利落，有"
+              "props": [],
+              "bubbles": [],
+              "cap": "两人穿同一套颜色的衣服"
             },
             {
-              "bg": "street",
-              "cast": [
-                {
-                  "who": "xiaoyin",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "talk"
-                }
-              ],
-              "cap": "很多时候不是颜色选错，而是亮"
-            },
-            {
-              "bg": "shop",
+              "bg": "room",
               "cast": [
                 {
                   "who": "xiaoman",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "talk"
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
                 }
               ],
-              "cap": "很多时候不是颜色选错，而是亮"
+              "props": [],
+              "bubbles": [],
+              "cap": "一个看着利落"
             },
             {
-              "bg": "plain",
+              "bg": "room",
               "cast": [
                 {
                   "who": "xiaoyin",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "wow"
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
                 }
               ],
-              "cap": "很多时候不是颜色选错，而是亮"
+              "props": [],
+              "bubbles": [],
+              "cap": "小音按下黑白滤镜"
+            },
+            {
+              "bg": "room",
+              "cast": [
+                {
+                  "who": "xiaoman",
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
+                }
+              ],
+              "props": [],
+              "bubbles": [],
+              "cap": "发闷那套在黑白里糊成一片"
             }
           ]
         }
@@ -3287,28 +3471,114 @@ window.DAYS = [
               "type": "comic",
               "panels": [
                 {
-                  "bg": "room",
+                  "bg": "palace",
                   "cast": [
                     {
-                      "who": "xiaoman",
-                      "x": 0.48,
-                      "y": 0.72,
-                      "face": "talk"
+                      "who": "kingWu",
+                      "x": 0.42,
+                      "y": 0.74,
+                      "face": "wow",
+                      "pose": "cheer"
                     }
                   ],
-                  "cap": "周的难题：地太大、路太慢，天"
+                  "props": [
+                    {
+                      "what": "mapScroll",
+                      "x": 0.74,
+                      "y": 0.72,
+                      "k": 1
+                    }
+                  ],
+                  "bubbles": [],
+                  "cap": "地盘一下大了"
+                },
+                {
+                  "bg": "street",
+                  "cast": [
+                    {
+                      "who": "rider",
+                      "x": 0.4,
+                      "y": 0.74,
+                      "face": "worry",
+                      "pose": "run"
+                    }
+                  ],
+                  "props": [
+                    {
+                      "what": "horse",
+                      "x": 0.72,
+                      "y": 0.78,
+                      "k": 1
+                    }
+                  ],
+                  "bubbles": [
+                    {
+                      "who": "rider",
+                      "text": "我一个人管不过来"
+                    }
+                  ],
+                  "cap": "送信要一个多月"
+                },
+                {
+                  "bg": "palace",
+                  "cast": [
+                    {
+                      "who": "kingWu",
+                      "x": 0.32,
+                      "y": 0.74,
+                      "face": "calm",
+                      "pose": "give"
+                    },
+                    {
+                      "who": "noble",
+                      "x": 0.64,
+                      "y": 0.74,
+                      "face": "calm",
+                      "pose": "take"
+                    }
+                  ],
+                  "props": [
+                    {
+                      "what": "token",
+                      "x": 0.5,
+                      "y": 0.62,
+                      "k": 0.9
+                    }
+                  ],
+                  "bubbles": [
+                    {
+                      "who": "kingWu",
+                      "text": "你带人去东边守着"
+                    }
+                  ],
+                  "cap": "把地分给弟弟"
                 },
                 {
                   "bg": "street",
                   "cast": [
                     {
                       "who": "xiaoyin",
-                      "x": 0.48,
-                      "y": 0.72,
-                      "face": "talk"
+                      "x": 0.4,
+                      "y": 0.74,
+                      "face": "happy",
+                      "pose": "point"
                     }
                   ],
-                  "cap": "如果你是周武王：地盘一下变大"
+                  "props": [
+                    {
+                      "what": "castle",
+                      "x": 0.74,
+                      "y": 0.7,
+                      "k": 1.1
+                    }
+                  ],
+                  "bubbles": [
+                    {
+                      "who": "xiaoyin",
+                      "text": "这就叫分封"
+                    }
+                  ],
+                  "cap": "各地建起小城"
                 }
               ]
             }
@@ -3641,52 +3911,83 @@ window.DAYS = [
         "hookComic": {
           "panels": [
             {
-              "bg": "room",
+              "bg": "street",
               "cast": [
                 {
-                  "who": "xiaoman",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "talk"
+                  "who": "kingWu",
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
                 }
               ],
-              "cap": "三千年前没有电话、没有公路，"
+              "props": [
+                {
+                  "what": "mapScroll",
+                  "x": 0.78,
+                  "y": 0.78,
+                  "k": 0.95
+                }
+              ],
+              "bubbles": [],
+              "cap": "三千年前"
+            },
+            {
+              "bg": "palace",
+              "cast": [
+                {
+                  "who": "kingWu",
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
+                }
+              ],
+              "props": [],
+              "bubbles": [],
+              "cap": "国王站在中间"
             },
             {
               "bg": "street",
               "cast": [
                 {
-                  "who": "xiaoyin",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "talk"
+                  "who": "rider",
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "run"
                 }
               ],
-              "cap": "三千年前没有电话、没有公路，"
-            },
-            {
-              "bg": "shop",
-              "cast": [
+              "props": [
                 {
-                  "who": "xiaoman",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "talk"
+                  "what": "horse",
+                  "x": 0.78,
+                  "y": 0.78,
+                  "k": 0.95
                 }
               ],
-              "cap": "三千年前没有电话、没有公路，"
+              "bubbles": [],
+              "cap": "一个信使骑马跑了一个月"
             },
             {
-              "bg": "plain",
+              "bg": "palace",
               "cast": [
                 {
                   "who": "xiaoyin",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "wow"
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
                 }
               ],
-              "cap": "三千年前没有电话、没有公路，"
+              "props": [],
+              "bubbles": [
+                {
+                  "who": "xiaoyin",
+                  "text": "怎么管住几千里？"
+                }
+              ],
+              "cap": "怎么管住几千里？"
             }
           ]
         }
@@ -3963,28 +4264,74 @@ window.DAYS = [
               "type": "comic",
               "panels": [
                 {
-                  "bg": "room",
+                  "bg": "mountain",
                   "cast": [
                     {
                       "who": "xiaoman",
-                      "x": 0.48,
-                      "y": 0.72,
-                      "face": "talk"
+                      "x": 0.46,
+                      "y": 0.74,
+                      "face": "calm",
+                      "pose": "stand"
                     }
                   ],
-                  "cap": "钟按东经 120° 走，太阳"
+                  "props": [],
+                  "bubbles": [],
+                  "cap": "北京时间 22:00"
                 },
                 {
-                  "bg": "street",
+                  "bg": "mountain",
+                  "cast": [
+                    {
+                      "who": "xiaoman",
+                      "x": 0.46,
+                      "y": 0.74,
+                      "face": "calm",
+                      "pose": "stand"
+                    }
+                  ],
+                  "props": [],
+                  "bubbles": [
+                    {
+                      "who": "xiaoman",
+                      "text": "太阳钟"
+                    }
+                  ],
+                  "cap": "小满看才 20:00 左右"
+                },
+                {
+                  "bg": "mountain",
+                  "cast": [
+                    {
+                      "who": "xiaoman",
+                      "x": 0.46,
+                      "y": 0.74,
+                      "face": "calm",
+                      "pose": "stand"
+                    }
+                  ],
+                  "props": [],
+                  "bubbles": [],
+                  "cap": "当地人 10 点上班"
+                },
+                {
+                  "bg": "mountain",
                   "cast": [
                     {
                       "who": "xiaoyin",
-                      "x": 0.48,
-                      "y": 0.72,
-                      "face": "talk"
+                      "x": 0.46,
+                      "y": 0.74,
+                      "face": "calm",
+                      "pose": "stand"
                     }
                   ],
-                  "cap": "串起来：乌鲁木齐的晚上十点"
+                  "props": [],
+                  "bubbles": [
+                    {
+                      "who": "xiaoyin",
+                      "text": "不是熬夜"
+                    }
+                  ],
+                  "cap": "不是熬夜"
                 }
               ]
             }
@@ -4057,52 +4404,76 @@ window.DAYS = [
         "hookComic": {
           "panels": [
             {
-              "bg": "room",
+              "bg": "kitchen",
               "cast": [
                 {
                   "who": "xiaoman",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "talk"
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
                 }
               ],
-              "cap": "夏天晚上十点，乌鲁木齐的天还"
+              "props": [],
+              "bubbles": [],
+              "cap": "晚上十点"
             },
             {
-              "bg": "street",
+              "bg": "mountain",
               "cast": [
                 {
-                  "who": "xiaoyin",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "talk"
+                  "who": "ale",
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
                 }
               ],
-              "cap": "是新疆人爱熬夜吗"
+              "props": [],
+              "bubbles": [],
+              "cap": "视频里北京的阿乐已经关灯"
             },
             {
-              "bg": "shop",
+              "bg": "mountain",
               "cast": [
                 {
                   "who": "xiaoman",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "talk"
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
                 }
               ],
-              "cap": "是新疆人爱熬夜吗"
+              "props": [
+                {
+                  "what": "phone",
+                  "x": 0.78,
+                  "y": 0.78,
+                  "k": 0.95
+                }
+              ],
+              "bubbles": [],
+              "cap": "两人手机上都是 22:00"
             },
             {
-              "bg": "plain",
+              "bg": "mountain",
               "cast": [
                 {
                   "who": "xiaoyin",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "wow"
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
                 }
               ],
-              "cap": "是新疆人爱熬夜吗"
+              "props": [],
+              "bubbles": [
+                {
+                  "who": "xiaoyin",
+                  "text": "是谁熬夜了？"
+                }
+              ],
+              "cap": "是谁熬夜了？"
             }
           ]
         }
@@ -4119,48 +4490,77 @@ window.DAYS = [
               "cast": [
                 {
                   "who": "xiaoman",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "talk"
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
                 }
               ],
-              "cap": "\"存下收入的 20%\"——这"
-            },
-            {
-              "bg": "street",
-              "cast": [
+              "props": [],
+              "bubbles": [
                 {
-                  "who": "xiaoyin",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "talk"
+                  "who": "xiaoman",
+                  "text": "存下收入的 20%"
                 }
               ],
-              "cap": "\"存下收入的 20%\"——这"
+              "cap": "理财博主"
             },
             {
-              "bg": "shop",
+              "bg": "room",
               "cast": [
                 {
                   "who": "xiaoman",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "talk"
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "worry",
+                  "pose": "think"
                 }
               ],
-              "cap": "\"存下收入的 20%\"——这"
+              "props": [
+                {
+                  "what": "payslip",
+                  "x": 0.78,
+                  "y": 0.78,
+                  "k": 0.95
+                }
+              ],
+              "bubbles": [],
+              "cap": "小满拿着工资条发呆"
             },
             {
-              "bg": "plain",
+              "bg": "room",
+              "cast": [
+                {
+                  "who": "xiaoman",
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
+                }
+              ],
+              "props": [],
+              "bubbles": [
+                {
+                  "who": "xiaoman",
+                  "text": "到底存多少？"
+                }
+              ],
+              "cap": "到底存多少？"
+            },
+            {
+              "bg": "room",
               "cast": [
                 {
                   "who": "xiaoyin",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "wow"
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
                 }
               ],
-              "cap": "\"存下收入的 20%\"——这"
+              "props": [],
+              "bubbles": [],
+              "cap": "小音拿出 100 个格子"
             }
           ]
         },
@@ -4172,27 +4572,38 @@ window.DAYS = [
               "type": "comic",
               "panels": [
                 {
-                  "bg": "bank",
+                  "bg": "room",
                   "cast": [
                     {
                       "who": "xiaoman",
-                      "x": 0.5,
-                      "y": 0.72,
-                      "face": "talk"
+                      "x": 0.46,
+                      "y": 0.74,
+                      "face": "calm",
+                      "pose": "stand"
+                    }
+                  ],
+                  "props": [],
+                  "bubbles": [
+                    {
+                      "who": "xiaoman",
+                      "text": "存下收入的 20%"
                     }
                   ],
                   "cap": "朋友说存 20%"
                 },
                 {
-                  "bg": "kitchen",
+                  "bg": "room",
                   "cast": [
                     {
                       "who": "xiaoman",
-                      "x": 0.5,
-                      "y": 0.72,
-                      "face": "talk"
+                      "x": 0.46,
+                      "y": 0.74,
+                      "face": "worry",
+                      "pose": "think"
                     }
                   ],
+                  "props": [],
+                  "bubbles": [],
                   "cap": "20% 是多少钱？"
                 },
                 {
@@ -4200,11 +4611,14 @@ window.DAYS = [
                   "cast": [
                     {
                       "who": "xiaoman",
-                      "x": 0.5,
-                      "y": 0.72,
-                      "face": "talk"
+                      "x": 0.46,
+                      "y": 0.74,
+                      "face": "calm",
+                      "pose": "stand"
                     }
                   ],
+                  "props": [],
+                  "bubbles": [],
                   "cap": "先画 100 个小格"
                 }
               ]
@@ -4607,24 +5021,65 @@ window.DAYS = [
                   "cast": [
                     {
                       "who": "xiaoman",
-                      "x": 0.48,
-                      "y": 0.72,
-                      "face": "talk"
+                      "x": 0.46,
+                      "y": 0.74,
+                      "face": "worry",
+                      "pose": "think"
                     }
                   ],
-                  "cap": "詹姆斯靠想象实验论证：拿掉身"
+                  "props": [],
+                  "bubbles": [],
+                  "cap": "想象害怕"
                 },
                 {
-                  "bg": "street",
+                  "bg": "room",
                   "cast": [
                     {
-                      "who": "xiaoyin",
-                      "x": 0.48,
-                      "y": 0.72,
-                      "face": "talk"
+                      "who": "xiaoman",
+                      "x": 0.46,
+                      "y": 0.74,
+                      "face": "calm",
+                      "pose": "stand"
                     }
                   ],
-                  "cap": "他怎么论证：一个想象实验"
+                  "props": [],
+                  "bubbles": [],
+                  "cap": "去掉心跳"
+                },
+                {
+                  "bg": "room",
+                  "cast": [
+                    {
+                      "who": "xiaoman",
+                      "x": 0.46,
+                      "y": 0.74,
+                      "face": "calm",
+                      "pose": "stand"
+                    }
+                  ],
+                  "props": [],
+                  "bubbles": [],
+                  "cap": "去掉发抖"
+                },
+                {
+                  "bg": "room",
+                  "cast": [
+                    {
+                      "who": "xiaoman",
+                      "x": 0.46,
+                      "y": 0.74,
+                      "face": "worry",
+                      "pose": "stand"
+                    }
+                  ],
+                  "props": [],
+                  "bubbles": [
+                    {
+                      "who": "xiaoman",
+                      "text": "冷静的念头"
+                    }
+                  ],
+                  "cap": "只剩一个 → 卡 4 `wi"
                 }
               ]
             }
@@ -4752,52 +5207,69 @@ window.DAYS = [
         "hookComic": {
           "panels": [
             {
+              "bg": "mountain",
+              "cast": [
+                {
+                  "who": "xiaoman",
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
+                }
+              ],
+              "props": [],
+              "bubbles": [],
+              "cap": "小满在林中遇到熊"
+            },
+            {
               "bg": "room",
               "cast": [
                 {
                   "who": "xiaoman",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "talk"
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "worry",
+                  "pose": "stand"
                 }
               ],
-              "cap": "你以为是“害怕所以发抖”"
+              "props": [],
+              "bubbles": [],
+              "cap": "常识：害怕所以发抖"
             },
             {
-              "bg": "street",
+              "bg": "room",
               "cast": [
                 {
-                  "who": "xiaoyin",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "talk"
+                  "who": "james",
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "cheer"
                 }
               ],
-              "cap": "一百多年前有人说：反了，是“"
+              "props": [],
+              "bubbles": [
+                {
+                  "who": "james",
+                  "text": "反了"
+                }
+              ],
+              "cap": "詹姆斯（`james`）举牌"
             },
             {
-              "bg": "shop",
+              "bg": "room",
               "cast": [
                 {
                   "who": "xiaoman",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "talk"
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
                 }
               ],
-              "cap": "一百多年前有人说：反了，是“"
-            },
-            {
-              "bg": "plain",
-              "cast": [
-                {
-                  "who": "xiaoyin",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "wow"
-                }
-              ],
-              "cap": "一百多年前有人说：反了，是“"
+              "props": [],
+              "bubbles": [],
+              "cap": "箭头调转"
             }
           ]
         }
@@ -4810,28 +5282,41 @@ window.DAYS = [
         "hookComic": {
           "panels": [
             {
-              "bg": "kitchen",
+              "bg": "room",
               "cast": [
                 {
                   "who": "mia",
                   "x": 0.32,
-                  "y": 0.72,
-                  "face": "happy"
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "shrug"
                 },
                 {
                   "who": "leo",
-                  "x": 0.62,
+                  "x": 0.64,
                   "y": 0.74,
-                  "face": "talk"
-                },
-                {
-                  "who": "mochi",
-                  "x": 0.8,
-                  "y": 0.82,
-                  "face": "happy",
-                  "k": 0.7
+                  "face": "calm",
+                  "pose": "point"
                 }
-              ]
+              ],
+              "props": [],
+              "bubbles": [],
+              "cap": ""
+            },
+            {
+              "bg": "kitchen",
+              "cast": [
+                {
+                  "who": "mia",
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
+                }
+              ],
+              "props": [],
+              "bubbles": [],
+              "cap": ""
             },
             {
               "bg": "room",
@@ -4839,47 +5324,21 @@ window.DAYS = [
                 {
                   "who": "mia",
                   "x": 0.32,
-                  "y": 0.72,
-                  "face": "happy"
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "point"
                 },
                 {
                   "who": "leo",
-                  "x": 0.62,
+                  "x": 0.64,
                   "y": 0.74,
-                  "face": "talk"
-                },
-                {
-                  "who": "mochi",
-                  "x": 0.8,
-                  "y": 0.82,
-                  "face": "happy",
-                  "k": 0.7
+                  "face": "calm",
+                  "pose": "stand"
                 }
-              ]
-            },
-            {
-              "bg": "street",
-              "cast": [
-                {
-                  "who": "mia",
-                  "x": 0.32,
-                  "y": 0.72,
-                  "face": "happy"
-                },
-                {
-                  "who": "leo",
-                  "x": 0.62,
-                  "y": 0.74,
-                  "face": "talk"
-                },
-                {
-                  "who": "mochi",
-                  "x": 0.8,
-                  "y": 0.82,
-                  "face": "happy",
-                  "k": 0.7
-                }
-              ]
+              ],
+              "props": [],
+              "bubbles": [],
+              "cap": ""
             }
           ]
         },
@@ -4887,28 +5346,41 @@ window.DAYS = [
           "title": "Is That Mochi?",
           "panels": [
             {
-              "bg": "kitchen",
+              "bg": "room",
               "cast": [
                 {
                   "who": "mia",
                   "x": 0.32,
-                  "y": 0.72,
-                  "face": "happy"
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "shrug"
                 },
                 {
                   "who": "leo",
-                  "x": 0.62,
+                  "x": 0.64,
                   "y": 0.74,
-                  "face": "talk"
-                },
-                {
-                  "who": "mochi",
-                  "x": 0.8,
-                  "y": 0.82,
-                  "face": "happy",
-                  "k": 0.7
+                  "face": "calm",
+                  "pose": "point"
                 }
-              ]
+              ],
+              "props": [],
+              "bubbles": [],
+              "cap": ""
+            },
+            {
+              "bg": "kitchen",
+              "cast": [
+                {
+                  "who": "mia",
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
+                }
+              ],
+              "props": [],
+              "bubbles": [],
+              "cap": ""
             },
             {
               "bg": "room",
@@ -4916,71 +5388,43 @@ window.DAYS = [
                 {
                   "who": "mia",
                   "x": 0.32,
-                  "y": 0.72,
-                  "face": "happy"
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "point"
                 },
                 {
                   "who": "leo",
-                  "x": 0.62,
+                  "x": 0.64,
                   "y": 0.74,
-                  "face": "talk"
-                },
-                {
-                  "who": "mochi",
-                  "x": 0.8,
-                  "y": 0.82,
-                  "face": "happy",
-                  "k": 0.7
+                  "face": "calm",
+                  "pose": "stand"
                 }
-              ]
+              ],
+              "props": [],
+              "bubbles": [],
+              "cap": ""
             },
             {
-              "bg": "street",
+              "bg": "room",
               "cast": [
                 {
-                  "who": "mia",
-                  "x": 0.32,
-                  "y": 0.72,
-                  "face": "happy"
-                },
-                {
                   "who": "leo",
-                  "x": 0.62,
+                  "x": 0.32,
                   "y": 0.74,
-                  "face": "talk"
+                  "face": "calm",
+                  "pose": "stand"
                 },
                 {
                   "who": "mochi",
-                  "x": 0.8,
-                  "y": 0.82,
-                  "face": "happy",
-                  "k": 0.7
-                }
-              ]
-            },
-            {
-              "bg": "shop",
-              "cast": [
-                {
-                  "who": "mia",
-                  "x": 0.32,
-                  "y": 0.72,
-                  "face": "happy"
-                },
-                {
-                  "who": "leo",
-                  "x": 0.62,
+                  "x": 0.64,
                   "y": 0.74,
-                  "face": "talk"
-                },
-                {
-                  "who": "mochi",
-                  "x": 0.8,
-                  "y": 0.82,
-                  "face": "happy",
-                  "k": 0.7
+                  "face": "calm",
+                  "pose": "stand"
                 }
-              ]
+              ],
+              "props": [],
+              "bubbles": [],
+              "cap": ""
             }
           ],
           "lines": [
@@ -5574,52 +6018,69 @@ window.DAYS = [
         "hookComic": {
           "panels": [
             {
-              "bg": "room",
-              "cast": [
-                {
-                  "who": "xiaoman",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "talk"
-                }
-              ],
-              "cap": "为什么“莫兰迪色”看起来高级"
-            },
-            {
-              "bg": "street",
-              "cast": [
-                {
-                  "who": "xiaoyin",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "talk"
-                }
-              ],
-              "cap": "秘密在纯度"
-            },
-            {
               "bg": "shop",
               "cast": [
                 {
                   "who": "xiaoman",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "talk"
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
                 }
               ],
-              "cap": "秘密在纯度"
+              "props": [],
+              "bubbles": [],
+              "cap": "一间莫兰迪色的咖啡馆"
             },
             {
-              "bg": "plain",
+              "bg": "room",
+              "cast": [
+                {
+                  "who": "xiaoman",
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
+                }
+              ],
+              "props": [],
+              "bubbles": [
+                {
+                  "who": "xiaoman",
+                  "text": "为什么看着高级？"
+                }
+              ],
+              "cap": "为什么看着高级？"
+            },
+            {
+              "bg": "room",
               "cast": [
                 {
                   "who": "xiaoyin",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "wow"
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
                 }
               ],
-              "cap": "秘密在纯度"
+              "props": [],
+              "bubbles": [],
+              "cap": "小音把纯度钮往下拧"
+            },
+            {
+              "bg": "room",
+              "cast": [
+                {
+                  "who": "xiaoman",
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
+                }
+              ],
+              "props": [],
+              "bubbles": [],
+              "cap": "鲜艳的颜色都变得安静"
             }
           ]
         }
@@ -5695,28 +6156,76 @@ window.DAYS = [
               "type": "comic",
               "panels": [
                 {
-                  "bg": "room",
+                  "bg": "palace",
                   "cast": [
                     {
-                      "who": "xiaoman",
-                      "x": 0.48,
-                      "y": 0.72,
-                      "face": "talk"
+                      "who": "kingWu",
+                      "x": 0.46,
+                      "y": 0.74,
+                      "face": "calm",
+                      "pose": "stand"
                     }
                   ],
-                  "cap": "留着天子、借他的名义，比废掉"
+                  "props": [
+                    {
+                      "what": "horse",
+                      "x": 0.78,
+                      "y": 0.78,
+                      "k": 0.95
+                    }
+                  ],
+                  "bubbles": [],
+                  "cap": "你兵强马壮"
                 },
                 {
-                  "bg": "street",
+                  "bg": "palace",
                   "cast": [
                     {
-                      "who": "xiaoyin",
-                      "x": 0.48,
-                      "y": 0.72,
-                      "face": "talk"
+                      "who": "kingWu",
+                      "x": 0.46,
+                      "y": 0.74,
+                      "face": "calm",
+                      "pose": "stand"
                     }
                   ],
-                  "cap": "如果你是春秋的大诸侯"
+                  "props": [],
+                  "bubbles": [],
+                  "cap": "但周天子名分还在"
+                },
+                {
+                  "bg": "palace",
+                  "cast": [
+                    {
+                      "who": "kingWu",
+                      "x": 0.46,
+                      "y": 0.74,
+                      "face": "calm",
+                      "pose": "stand"
+                    }
+                  ],
+                  "props": [],
+                  "bubbles": [
+                    {
+                      "who": "kingWu",
+                      "text": "尊王"
+                    }
+                  ],
+                  "cap": "你打着的旗号召集小国"
+                },
+                {
+                  "bg": "palace",
+                  "cast": [
+                    {
+                      "who": "kingWu",
+                      "x": 0.46,
+                      "y": 0.74,
+                      "face": "calm",
+                      "pose": "stand"
+                    }
+                  ],
+                  "props": [],
+                  "bubbles": [],
+                  "cap": "大家听你的：当上霸主"
                 }
               ]
             }
@@ -5873,28 +6382,64 @@ window.DAYS = [
               "type": "comic",
               "panels": [
                 {
-                  "bg": "room",
+                  "bg": "palace",
                   "cast": [
                     {
-                      "who": "xiaoman",
-                      "x": 0.48,
-                      "y": 0.72,
-                      "face": "talk"
+                      "who": "kingWu",
+                      "x": 0.46,
+                      "y": 0.74,
+                      "face": "calm",
+                      "pose": "stand"
                     }
                   ],
-                  "cap": "竞争制造了对人才和思想的需求"
+                  "props": [],
+                  "bubbles": [],
+                  "cap": "隔壁越来越强"
                 },
                 {
-                  "bg": "street",
+                  "bg": "palace",
                   "cast": [
                     {
-                      "who": "xiaoyin",
-                      "x": 0.48,
-                      "y": 0.72,
-                      "face": "talk"
+                      "who": "kingWu",
+                      "x": 0.46,
+                      "y": 0.74,
+                      "face": "calm",
+                      "pose": "stand"
                     }
                   ],
-                  "cap": "如果你是战国的国君，最缺什么"
+                  "props": [],
+                  "bubbles": [],
+                  "cap": "你最缺：粮和兵"
+                },
+                {
+                  "bg": "palace",
+                  "cast": [
+                    {
+                      "who": "kingWu",
+                      "x": 0.46,
+                      "y": 0.74,
+                      "face": "calm",
+                      "pose": "stand"
+                    }
+                  ],
+                  "props": [],
+                  "bubbles": [],
+                  "cap": "你贴出招贤榜"
+                },
+                {
+                  "bg": "palace",
+                  "cast": [
+                    {
+                      "who": "kingWu",
+                      "x": 0.46,
+                      "y": 0.74,
+                      "face": "calm",
+                      "pose": "stand"
+                    }
+                  ],
+                  "props": [],
+                  "bubbles": [],
+                  "cap": "谁能让国家变强就重用谁"
                 }
               ]
             }
@@ -6072,52 +6617,76 @@ window.DAYS = [
         "hookComic": {
           "panels": [
             {
-              "bg": "room",
+              "bg": "palace",
               "cast": [
                 {
-                  "who": "xiaoman",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "talk"
+                  "who": "kingWu",
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "sit"
                 }
               ],
-              "cap": "周天子还在，诸侯却打了五百多"
+              "props": [
+                {
+                  "what": "castle",
+                  "x": 0.78,
+                  "y": 0.78,
+                  "k": 0.95
+                }
+              ],
+              "bubbles": [],
+              "cap": "周天子坐在小小的王城里"
             },
             {
-              "bg": "street",
+              "bg": "palace",
+              "cast": [
+                {
+                  "who": "noble",
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
+                }
+              ],
+              "props": [],
+              "bubbles": [],
+              "cap": "外面一群诸侯在打架"
+            },
+            {
+              "bg": "palace",
+              "cast": [
+                {
+                  "who": "kingWu",
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
+                }
+              ],
+              "props": [],
+              "bubbles": [],
+              "cap": "打了五百多年"
+            },
+            {
+              "bg": "palace",
               "cast": [
                 {
                   "who": "xiaoyin",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "talk"
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
                 }
               ],
-              "cap": "他们到底在争什么"
-            },
-            {
-              "bg": "shop",
-              "cast": [
-                {
-                  "who": "xiaoman",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "talk"
-                }
-              ],
-              "cap": "他们到底在争什么"
-            },
-            {
-              "bg": "plain",
-              "cast": [
+              "props": [],
+              "bubbles": [
                 {
                   "who": "xiaoyin",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "wow"
+                  "text": "他们在争什么？"
                 }
               ],
-              "cap": "他们到底在争什么"
+              "cap": "他们在争什么？"
             }
           ]
         }
@@ -6131,94 +6700,85 @@ window.DAYS = [
           "panels": [
             {
               "bg": "mountain",
-              "tint": "#F7F1E8",
               "cast": [
                 {
                   "who": "xiaoman",
-                  "x": 0.38,
-                  "y": 0.82,
-                  "pose": "stand",
-                  "face": "worry"
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "cheer"
                 }
               ],
               "props": [
                 {
-                  "what": "sign",
-                  "x": 0.72,
-                  "y": 0.62,
-                  "state": {
-                    "text": "海拔 3650"
-                  }
+                  "what": "bag",
+                  "x": 0.78,
+                  "y": 0.78,
+                  "k": 0.95
                 }
               ],
-              "caption": "拉萨站",
-              "cap": "拉萨站，海拔大约 3650"
-            },
-            {
-              "bg": "trainCar",
-              "tint": "#EEF3F4",
-              "props": [
+              "bubbles": [
                 {
-                  "what": "windows",
-                  "x": 0.5,
-                  "y": 0.55,
-                  "k": 1.15
+                  "who": "xiaoman",
+                  "text": "海拔 3650"
                 }
               ],
-              "caption": "车窗外",
-              "cap": "窗外从雪山变成平原"
+              "cap": "拉萨站"
             },
             {
-              "bg": "plain",
-              "tint": "#F4F7F2",
+              "bg": "mountain",
               "cast": [
                 {
                   "who": "xiaoman",
-                  "x": 0.36,
-                  "y": 0.82,
-                  "pose": "stand",
-                  "face": "happy"
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
                 }
               ],
-              "props": [
-                {
-                  "what": "sign",
-                  "x": 0.72,
-                  "y": 0.62,
-                  "state": {
-                    "text": "海拔 4"
-                  }
-                }
-              ],
-              "caption": "上海站",
-              "cap": "到了上海，海拔只剩几米"
+              "props": [],
+              "bubbles": [],
+              "cap": "车窗外：雪山 → 黄土坡 →"
             },
             {
-              "bg": "plain",
-              "tint": "#F4F7F2",
+              "bg": "mountain",
+              "cast": [
+                {
+                  "who": "xiaoman",
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
+                }
+              ],
+              "props": [],
+              "bubbles": [
+                {
+                  "who": "xiaoman",
+                  "text": "海拔 4"
+                }
+              ],
+              "cap": "上海站牌"
+            },
+            {
+              "bg": "street",
               "cast": [
                 {
                   "who": "xiaoyin",
-                  "x": 0.26,
-                  "y": 0.84,
-                  "k": 1.05
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
                 }
               ],
-              "props": [
-                {
-                  "what": "steps",
-                  "x": 0.66,
-                  "y": 0.58,
-                  "k": 1.3
-                }
-              ],
+              "props": [],
               "bubbles": [
                 {
                   "who": "xiaoyin",
                   "text": "一路在下楼梯"
                 }
               ],
-              "cap": "一路是在下楼梯"
+              "cap": "小音画了三级台阶"
             }
           ]
         },
@@ -7052,48 +7612,90 @@ window.DAYS = [
               "cast": [
                 {
                   "who": "xiaoman",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "talk"
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
                 }
               ],
-              "cap": "\"月底剩多少就存多少\"——为"
+              "props": [],
+              "bubbles": [
+                {
+                  "who": "xiaoman",
+                  "text": "剩多少存多少"
+                }
+              ],
+              "cap": "月初小满说"
             },
             {
               "bg": "street",
               "cast": [
                 {
-                  "who": "xiaoyin",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "talk"
+                  "who": "xiaoman",
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
                 }
               ],
-              "cap": "\"月底剩多少就存多少\"——为"
+              "props": [
+                {
+                  "what": "cup",
+                  "x": 0.78,
+                  "y": 0.78,
+                  "k": 0.95
+                }
+              ],
+              "bubbles": [],
+              "cap": "一路奶茶"
             },
             {
-              "bg": "shop",
+              "bg": "room",
               "cast": [
                 {
                   "who": "xiaoman",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "talk"
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "worry",
+                  "pose": "stand"
                 }
               ],
-              "cap": "\"月底剩多少就存多少\"——为"
+              "props": [
+                {
+                  "what": "bag",
+                  "x": 0.78,
+                  "y": 0.78,
+                  "k": 0.95
+                },
+                {
+                  "what": "purse",
+                  "x": 0.62,
+                  "y": 0.78,
+                  "k": 0.95
+                }
+              ],
+              "bubbles": [],
+              "cap": "月底钱包空了"
             },
             {
-              "bg": "plain",
+              "bg": "room",
               "cast": [
                 {
                   "who": "xiaoyin",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "wow"
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
                 }
               ],
-              "cap": "\"月底剩多少就存多少\"——为"
+              "props": [],
+              "bubbles": [
+                {
+                  "who": "xiaoyin",
+                  "text": "顺序反了"
+                }
+              ],
+              "cap": "顺序反了"
             }
           ]
         },
@@ -7105,27 +7707,58 @@ window.DAYS = [
               "type": "comic",
               "panels": [
                 {
-                  "bg": "bank",
+                  "bg": "room",
                   "cast": [
                     {
                       "who": "xiaoman",
-                      "x": 0.5,
-                      "y": 0.72,
-                      "face": "talk"
+                      "x": 0.46,
+                      "y": 0.74,
+                      "face": "calm",
+                      "pose": "stand"
+                    }
+                  ],
+                  "props": [
+                    {
+                      "what": "phone",
+                      "x": 0.78,
+                      "y": 0.78,
+                      "k": 0.95
+                    }
+                  ],
+                  "bubbles": [
+                    {
+                      "who": "xiaoman",
+                      "text": "工资到账 8000"
                     }
                   ],
                   "cap": "发工资了"
                 },
                 {
-                  "bg": "kitchen",
+                  "bg": "room",
                   "cast": [
                     {
                       "who": "xiaoman",
-                      "x": 0.5,
-                      "y": 0.72,
-                      "face": "talk"
+                      "x": 0.46,
+                      "y": 0.74,
+                      "face": "calm",
+                      "pose": "stand"
                     }
                   ],
+                  "props": [
+                    {
+                      "what": "bag",
+                      "x": 0.78,
+                      "y": 0.78,
+                      "k": 0.95
+                    },
+                    {
+                      "what": "purse",
+                      "x": 0.62,
+                      "y": 0.78,
+                      "k": 0.95
+                    }
+                  ],
+                  "bubbles": [],
                   "cap": "一笔一笔飞走"
                 },
                 {
@@ -7133,12 +7766,22 @@ window.DAYS = [
                   "cast": [
                     {
                       "who": "xiaoman",
-                      "x": 0.5,
-                      "y": 0.72,
-                      "face": "talk"
+                      "x": 0.46,
+                      "y": 0.74,
+                      "face": "worry",
+                      "pose": "stand"
                     }
                   ],
-                  "cap": "月底一看，0"
+                  "props": [
+                    {
+                      "what": "jar",
+                      "x": 0.78,
+                      "y": 0.78,
+                      "k": 0.95
+                    }
+                  ],
+                  "bubbles": [],
+                  "cap": "月底一看"
                 }
               ]
             },
@@ -7185,28 +7828,34 @@ window.DAYS = [
               "type": "comic",
               "panels": [
                 {
-                  "bg": "bank",
+                  "bg": "room",
                   "cast": [
                     {
                       "who": "xiaoman",
-                      "x": 0.5,
-                      "y": 0.72,
-                      "face": "talk"
+                      "x": 0.46,
+                      "y": 0.74,
+                      "face": "calm",
+                      "pose": "think"
                     }
                   ],
-                  "cap": "存钱排最后，被挤掉"
+                  "props": [],
+                  "bubbles": [],
+                  "cap": "存钱排最后"
                 },
                 {
-                  "bg": "kitchen",
+                  "bg": "room",
                   "cast": [
                     {
                       "who": "xiaoman",
-                      "x": 0.5,
-                      "y": 0.72,
-                      "face": "talk"
+                      "x": 0.46,
+                      "y": 0.74,
+                      "face": "calm",
+                      "pose": "cheer"
                     }
                   ],
-                  "cap": "存钱排第一，先拿走"
+                  "props": [],
+                  "bubbles": [],
+                  "cap": "存钱排第一"
                 }
               ]
             },
@@ -7583,24 +8232,65 @@ window.DAYS = [
                   "cast": [
                     {
                       "who": "xiaoman",
-                      "x": 0.48,
-                      "y": 0.72,
-                      "face": "talk"
+                      "x": 0.46,
+                      "y": 0.74,
+                      "face": "calm",
+                      "pose": "stand"
                     }
                   ],
-                  "cap": "切断内脏信号，动物照样有情绪"
+                  "props": [],
+                  "bubbles": [],
+                  "cap": "切断神经的猫"
                 },
                 {
-                  "bg": "street",
+                  "bg": "room",
                   "cast": [
                     {
-                      "who": "xiaoyin",
-                      "x": 0.48,
-                      "y": 0.72,
-                      "face": "talk"
+                      "who": "xiaoman",
+                      "x": 0.46,
+                      "y": 0.74,
+                      "face": "calm",
+                      "pose": "stand"
                     }
                   ],
-                  "cap": "动物实验：切断神经，情绪还在"
+                  "props": [],
+                  "bubbles": [],
+                  "cap": "看到狗"
+                },
+                {
+                  "bg": "room",
+                  "cast": [
+                    {
+                      "who": "xiaoman",
+                      "x": 0.46,
+                      "y": 0.74,
+                      "face": "calm",
+                      "pose": "cheer"
+                    }
+                  ],
+                  "props": [],
+                  "bubbles": [],
+                  "cap": "仍然弓背炸毛"
+                },
+                {
+                  "bg": "room",
+                  "cast": [
+                    {
+                      "who": "cannon",
+                      "x": 0.46,
+                      "y": 0.74,
+                      "face": "calm",
+                      "pose": "stand"
+                    }
+                  ],
+                  "props": [],
+                  "bubbles": [
+                    {
+                      "who": "cannon",
+                      "text": "情绪还在"
+                    }
+                  ],
+                  "cap": "坎农： → 卡 4 `wir"
                 }
               ]
             }
@@ -7791,48 +8481,65 @@ window.DAYS = [
               "cast": [
                 {
                   "who": "xiaoman",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "talk"
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
                 }
               ],
-              "cap": "上一关说“先发抖再害怕”"
+              "props": [],
+              "bubbles": [],
+              "cap": "突然一声巨响"
             },
             {
-              "bg": "street",
-              "cast": [
-                {
-                  "who": "xiaoyin",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "talk"
-                }
-              ],
-              "cap": "如果真是这样，被吓一跳的那一"
-            },
-            {
-              "bg": "shop",
+              "bg": "room",
               "cast": [
                 {
                   "who": "xiaoman",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "talk"
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "worry",
+                  "pose": "stand"
                 }
               ],
-              "cap": "如果真是这样，被吓一跳的那一"
+              "props": [],
+              "bubbles": [],
+              "cap": "小满瞬间就怕了"
             },
             {
-              "bg": "plain",
+              "bg": "room",
+              "cast": [
+                {
+                  "who": "xiaoman",
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
+                }
+              ],
+              "props": [],
+              "bubbles": [],
+              "cap": "心跳还没来得及加快"
+            },
+            {
+              "bg": "room",
               "cast": [
                 {
                   "who": "xiaoyin",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "wow"
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "worry",
+                  "pose": "stand"
                 }
               ],
-              "cap": "如果真是这样，被吓一跳的那一"
+              "props": [],
+              "bubbles": [
+                {
+                  "who": "xiaoyin",
+                  "text": "身体还没动"
+                }
+              ],
+              "cap": "身体还没动"
             }
           ]
         }
@@ -7850,71 +8557,78 @@ window.DAYS = [
                 {
                   "who": "mia",
                   "x": 0.32,
-                  "y": 0.72,
-                  "face": "happy"
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
                 },
                 {
                   "who": "leo",
-                  "x": 0.62,
+                  "x": 0.64,
                   "y": 0.74,
-                  "face": "talk"
-                },
-                {
-                  "who": "mochi",
-                  "x": 0.8,
-                  "y": 0.82,
-                  "face": "happy",
-                  "k": 0.7
+                  "face": "calm",
+                  "pose": "stand"
                 }
-              ]
+              ],
+              "props": [
+                {
+                  "what": "pan",
+                  "x": 0.78,
+                  "y": 0.78,
+                  "k": 0.95
+                }
+              ],
+              "bubbles": [],
+              "cap": ""
             },
             {
-              "bg": "room",
+              "bg": "kitchen",
               "cast": [
                 {
                   "who": "mia",
-                  "x": 0.32,
-                  "y": 0.72,
-                  "face": "happy"
-                },
-                {
-                  "who": "leo",
-                  "x": 0.62,
+                  "x": 0.46,
                   "y": 0.74,
-                  "face": "talk"
+                  "face": "worry",
+                  "pose": "think"
+                }
+              ],
+              "props": [
+                {
+                  "what": "pan",
+                  "x": 0.78,
+                  "y": 0.78,
+                  "k": 0.95
                 },
                 {
-                  "who": "mochi",
-                  "x": 0.8,
-                  "y": 0.82,
-                  "face": "happy",
-                  "k": 0.7
+                  "what": "cup",
+                  "x": 0.62,
+                  "y": 0.78,
+                  "k": 0.95
                 }
-              ]
+              ],
+              "bubbles": [],
+              "cap": ""
             },
             {
-              "bg": "street",
+              "bg": "kitchen",
               "cast": [
                 {
                   "who": "mia",
-                  "x": 0.32,
-                  "y": 0.72,
-                  "face": "happy"
-                },
-                {
-                  "who": "leo",
-                  "x": 0.62,
+                  "x": 0.46,
                   "y": 0.74,
-                  "face": "talk"
-                },
-                {
-                  "who": "mochi",
-                  "x": 0.8,
-                  "y": 0.82,
-                  "face": "happy",
-                  "k": 0.7
+                  "face": "calm",
+                  "pose": "stand"
                 }
-              ]
+              ],
+              "props": [
+                {
+                  "what": "pan",
+                  "x": 0.78,
+                  "y": 0.78,
+                  "k": 0.95
+                }
+              ],
+              "bubbles": [],
+              "cap": ""
             }
           ]
         },
@@ -7927,95 +8641,100 @@ window.DAYS = [
                 {
                   "who": "mia",
                   "x": 0.32,
-                  "y": 0.72,
-                  "face": "happy"
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
                 },
                 {
                   "who": "leo",
-                  "x": 0.62,
+                  "x": 0.64,
                   "y": 0.74,
-                  "face": "talk"
+                  "face": "calm",
+                  "pose": "stand"
+                }
+              ],
+              "props": [
+                {
+                  "what": "pan",
+                  "x": 0.78,
+                  "y": 0.78,
+                  "k": 0.95
+                }
+              ],
+              "bubbles": [],
+              "cap": ""
+            },
+            {
+              "bg": "kitchen",
+              "cast": [
+                {
+                  "who": "mia",
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "worry",
+                  "pose": "think"
+                }
+              ],
+              "props": [
+                {
+                  "what": "pan",
+                  "x": 0.78,
+                  "y": 0.78,
+                  "k": 0.95
                 },
                 {
-                  "who": "mochi",
-                  "x": 0.8,
-                  "y": 0.82,
-                  "face": "happy",
-                  "k": 0.7
+                  "what": "cup",
+                  "x": 0.62,
+                  "y": 0.78,
+                  "k": 0.95
                 }
-              ]
+              ],
+              "bubbles": [],
+              "cap": ""
+            },
+            {
+              "bg": "kitchen",
+              "cast": [
+                {
+                  "who": "mia",
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
+                }
+              ],
+              "props": [
+                {
+                  "what": "pan",
+                  "x": 0.78,
+                  "y": 0.78,
+                  "k": 0.95
+                }
+              ],
+              "bubbles": [],
+              "cap": ""
             },
             {
               "bg": "room",
               "cast": [
                 {
-                  "who": "mia",
-                  "x": 0.32,
-                  "y": 0.72,
-                  "face": "happy"
-                },
-                {
-                  "who": "leo",
-                  "x": 0.62,
-                  "y": 0.74,
-                  "face": "talk"
-                },
-                {
                   "who": "mochi",
-                  "x": 0.8,
-                  "y": 0.82,
-                  "face": "happy",
-                  "k": 0.7
-                }
-              ]
-            },
-            {
-              "bg": "street",
-              "cast": [
-                {
-                  "who": "mia",
-                  "x": 0.32,
-                  "y": 0.72,
-                  "face": "happy"
-                },
-                {
-                  "who": "leo",
-                  "x": 0.62,
+                  "x": 0.46,
                   "y": 0.74,
-                  "face": "talk"
-                },
-                {
-                  "who": "mochi",
-                  "x": 0.8,
-                  "y": 0.82,
-                  "face": "happy",
-                  "k": 0.7
+                  "face": "calm",
+                  "pose": "stand"
                 }
-              ]
-            },
-            {
-              "bg": "shop",
-              "cast": [
+              ],
+              "props": [
                 {
-                  "who": "mia",
-                  "x": 0.32,
-                  "y": 0.72,
-                  "face": "happy"
-                },
-                {
-                  "who": "leo",
-                  "x": 0.62,
-                  "y": 0.74,
-                  "face": "talk"
-                },
-                {
-                  "who": "mochi",
-                  "x": 0.8,
-                  "y": 0.82,
-                  "face": "happy",
-                  "k": 0.7
+                  "what": "fish",
+                  "x": 0.78,
+                  "y": 0.78,
+                  "k": 0.95
                 }
-              ]
+              ],
+              "bubbles": [],
+              "cap": ""
             }
           ],
           "lines": [
@@ -8670,48 +9389,65 @@ window.DAYS = [
               "cast": [
                 {
                   "who": "xiaoman",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "talk"
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
                 }
               ],
-              "cap": "色轮上的颜色不是随便排的"
+              "props": [],
+              "bubbles": [],
+              "cap": "小满在调色盘里混颜料"
             },
             {
-              "bg": "street",
-              "cast": [
-                {
-                  "who": "xiaoyin",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "talk"
-                }
-              ],
-              "cap": "每个位置背后都有一道混色算术"
-            },
-            {
-              "bg": "shop",
+              "bg": "room",
               "cast": [
                 {
                   "who": "xiaoman",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "talk"
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
                 }
               ],
-              "cap": "每个位置背后都有一道混色算术"
+              "props": [],
+              "bubbles": [],
+              "cap": "黄 + 蓝 = 绿"
             },
             {
-              "bg": "plain",
+              "bg": "room",
+              "cast": [
+                {
+                  "who": "xiaoman",
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
+                }
+              ],
+              "props": [],
+              "bubbles": [],
+              "cap": "她把色块排成一圈"
+            },
+            {
+              "bg": "room",
               "cast": [
                 {
                   "who": "xiaoyin",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "wow"
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
                 }
               ],
-              "cap": "每个位置背后都有一道混色算术"
+              "props": [],
+              "bubbles": [
+                {
+                  "who": "xiaoyin",
+                  "text": "位置就是配方"
+                }
+              ],
+              "cap": "位置就是配方"
             }
           ]
         }
@@ -8758,28 +9494,79 @@ window.DAYS = [
               "type": "comic",
               "panels": [
                 {
-                  "bg": "room",
+                  "bg": "palace",
                   "cast": [
                     {
-                      "who": "xiaoman",
-                      "x": 0.48,
-                      "y": 0.72,
-                      "face": "talk"
+                      "who": "official",
+                      "x": 0.46,
+                      "y": 0.74,
+                      "face": "calm",
+                      "pose": "give"
                     }
                   ],
-                  "cap": "秦面对和周一样的难题，却选了"
+                  "props": [],
+                  "bubbles": [
+                    {
+                      "who": "official",
+                      "text": "封给皇子们吧"
+                    }
+                  ],
+                  "cap": "大臣甲"
                 },
                 {
-                  "bg": "street",
+                  "bg": "palace",
                   "cast": [
                     {
-                      "who": "xiaoyin",
-                      "x": 0.48,
-                      "y": 0.72,
-                      "face": "talk"
+                      "who": "official",
+                      "x": 0.46,
+                      "y": 0.74,
+                      "face": "calm",
+                      "pose": "stand"
                     }
                   ],
-                  "cap": "如果你是秦始皇：分封还是不分"
+                  "props": [],
+                  "bubbles": [
+                    {
+                      "who": "official",
+                      "text": "周就是这么乱的"
+                    }
+                  ],
+                  "cap": "大臣乙（李斯）"
+                },
+                {
+                  "bg": "palace",
+                  "cast": [
+                    {
+                      "who": "qinShi",
+                      "x": 0.46,
+                      "y": 0.74,
+                      "face": "calm",
+                      "pose": "stand"
+                    }
+                  ],
+                  "props": [],
+                  "bubbles": [],
+                  "cap": "秦始皇看着周的结局"
+                },
+                {
+                  "bg": "palace",
+                  "cast": [
+                    {
+                      "who": "kingWu",
+                      "x": 0.46,
+                      "y": 0.74,
+                      "face": "calm",
+                      "pose": "stand"
+                    }
+                  ],
+                  "props": [],
+                  "bubbles": [
+                    {
+                      "who": "kingWu",
+                      "text": "不封了"
+                    }
+                  ],
+                  "cap": "拍板"
                 }
               ]
             }
@@ -9012,28 +9799,69 @@ window.DAYS = [
               "type": "comic",
               "panels": [
                 {
-                  "bg": "room",
+                  "bg": "palace",
                   "cast": [
                     {
-                      "who": "xiaoman",
-                      "x": 0.48,
-                      "y": 0.72,
-                      "face": "talk"
+                      "who": "kingWu",
+                      "x": 0.46,
+                      "y": 0.74,
+                      "face": "calm",
+                      "pose": "stand"
                     }
                   ],
-                  "cap": "秦亡于赋役太重、刑法太严：民"
+                  "props": [],
+                  "bubbles": [],
+                  "cap": "雨下大了"
                 },
                 {
-                  "bg": "street",
+                  "bg": "palace",
                   "cast": [
                     {
-                      "who": "xiaoyin",
-                      "x": 0.48,
-                      "y": 0.72,
-                      "face": "talk"
+                      "who": "kingWu",
+                      "x": 0.46,
+                      "y": 0.74,
+                      "face": "calm",
+                      "pose": "stand"
                     }
                   ],
-                  "cap": "如果你是陈胜：为什么只存在了"
+                  "props": [],
+                  "bubbles": [],
+                  "cap": "迟到按秦法要杀头"
+                },
+                {
+                  "bg": "palace",
+                  "cast": [
+                    {
+                      "who": "kingWu",
+                      "x": 0.46,
+                      "y": 0.74,
+                      "face": "calm",
+                      "pose": "stand"
+                    }
+                  ],
+                  "props": [],
+                  "bubbles": [
+                    {
+                      "who": "kingWu",
+                      "text": "反正都是死"
+                    }
+                  ],
+                  "cap": "反正都是死"
+                },
+                {
+                  "bg": "palace",
+                  "cast": [
+                    {
+                      "who": "kingWu",
+                      "x": 0.46,
+                      "y": 0.74,
+                      "face": "calm",
+                      "pose": "stand"
+                    }
+                  ],
+                  "props": [],
+                  "bubbles": [],
+                  "cap": "振臂一呼"
                 }
               ]
             }
@@ -9174,52 +10002,83 @@ window.DAYS = [
         "hookComic": {
           "panels": [
             {
-              "bg": "room",
+              "bg": "palace",
               "cast": [
                 {
-                  "who": "xiaoman",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "talk"
+                  "who": "qinShi",
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
                 }
               ],
-              "cap": "秦只存在了 15 年，它定下"
+              "props": [
+                {
+                  "what": "mapScroll",
+                  "x": 0.78,
+                  "y": 0.78,
+                  "k": 0.95
+                }
+              ],
+              "bubbles": [],
+              "cap": "秦始皇站在刚统一的大地图前"
             },
             {
-              "bg": "street",
+              "bg": "palace",
+              "cast": [
+                {
+                  "who": "kingWu",
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "worry",
+                  "pose": "stand"
+                }
+              ],
+              "props": [
+                {
+                  "what": "mapScroll",
+                  "x": 0.78,
+                  "y": 0.78,
+                  "k": 0.95
+                }
+              ],
+              "bubbles": [],
+              "cap": "地图上空出 15 年的一小段"
+            },
+            {
+              "bg": "palace",
+              "cast": [
+                {
+                  "who": "kingWu",
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
+                }
+              ],
+              "props": [],
+              "bubbles": [],
+              "cap": "却有一条线一直延伸了两千年"
+            },
+            {
+              "bg": "palace",
               "cast": [
                 {
                   "who": "xiaoyin",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "talk"
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
                 }
               ],
-              "cap": "是什么"
-            },
-            {
-              "bg": "shop",
-              "cast": [
-                {
-                  "who": "xiaoman",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "talk"
-                }
-              ],
-              "cap": "是什么"
-            },
-            {
-              "bg": "plain",
-              "cast": [
+              "props": [],
+              "bubbles": [
                 {
                   "who": "xiaoyin",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "wow"
+                  "text": "是什么？"
                 }
               ],
-              "cap": "是什么"
+              "cap": "是什么？"
             }
           ]
         }
@@ -9521,28 +10380,69 @@ window.DAYS = [
               "type": "comic",
               "panels": [
                 {
-                  "bg": "room",
+                  "bg": "mountain",
                   "cast": [
                     {
                       "who": "xiaoman",
-                      "x": 0.48,
-                      "y": 0.72,
-                      "face": "talk"
+                      "x": 0.46,
+                      "y": 0.74,
+                      "face": "calm",
+                      "pose": "stand"
                     }
                   ],
-                  "cap": "西高东低 + 水往低处流 →"
+                  "props": [],
+                  "bubbles": [],
+                  "cap": "源头雪山融水"
                 },
                 {
-                  "bg": "street",
+                  "bg": "mountain",
+                  "cast": [
+                    {
+                      "who": "xiaoman",
+                      "x": 0.46,
+                      "y": 0.74,
+                      "face": "calm",
+                      "pose": "stand"
+                    }
+                  ],
+                  "props": [],
+                  "bubbles": [],
+                  "cap": "冲下峡谷"
+                },
+                {
+                  "bg": "mountain",
+                  "cast": [
+                    {
+                      "who": "xiaoman",
+                      "x": 0.46,
+                      "y": 0.74,
+                      "face": "calm",
+                      "pose": "stand"
+                    }
+                  ],
+                  "props": [],
+                  "bubbles": [],
+                  "cap": "流过平原"
+                },
+                {
+                  "bg": "mountain",
                   "cast": [
                     {
                       "who": "xiaoyin",
-                      "x": 0.48,
-                      "y": 0.72,
-                      "face": "talk"
+                      "x": 0.46,
+                      "y": 0.74,
+                      "face": "calm",
+                      "pose": "stand"
                     }
                   ],
-                  "cap": "串起来：一江春水为什么向东"
+                  "props": [],
+                  "bubbles": [
+                    {
+                      "who": "xiaoyin",
+                      "text": "一江春水向东流"
+                    }
+                  ],
+                  "cap": "入海"
                 }
               ]
             }
@@ -9611,52 +10511,74 @@ window.DAYS = [
         "hookComic": {
           "panels": [
             {
-              "bg": "room",
+              "bg": "mountain",
               "cast": [
                 {
                   "who": "xiaoman",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "talk"
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
                 }
               ],
-              "cap": "“一江春水向东流”——中国的"
+              "props": [],
+              "bubbles": [
+                {
+                  "who": "xiaoman",
+                  "text": "一江春水向东流"
+                }
+              ],
+              "cap": "小满在江上划船"
             },
             {
-              "bg": "street",
+              "bg": "mountain",
               "cast": [
                 {
                   "who": "xiaoyin",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "talk"
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
                 }
               ],
-              "cap": "“一江春水向东流”——中国的"
+              "props": [],
+              "bubbles": [
+                {
+                  "who": "xiaoyin",
+                  "text": "为什么不向西？"
+                }
+              ],
+              "cap": "为什么不向西？"
             },
             {
-              "bg": "shop",
+              "bg": "mountain",
               "cast": [
                 {
                   "who": "xiaoman",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "talk"
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
                 }
               ],
-              "cap": "“一江春水向东流”——中国的"
+              "props": [],
+              "bubbles": [],
+              "cap": "小满把一张桌子一头垫高"
             },
             {
-              "bg": "plain",
+              "bg": "mountain",
               "cast": [
                 {
-                  "who": "xiaoyin",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "wow"
+                  "who": "xiaoman",
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
                 }
               ],
-              "cap": "“一江春水向东流”——中国的"
+              "props": [],
+              "bubbles": [],
+              "cap": "水全流到低的那头"
             }
           ]
         }
@@ -9673,48 +10595,92 @@ window.DAYS = [
               "cast": [
                 {
                   "who": "xiaoman",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "talk"
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "worry",
+                  "pose": "stand"
                 }
               ],
-              "cap": "手机突然坏了要 3000 块"
-            },
-            {
-              "bg": "street",
-              "cast": [
+              "props": [
                 {
-                  "who": "xiaoyin",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "talk"
+                  "what": "phone",
+                  "x": 0.78,
+                  "y": 0.78,
+                  "k": 0.95
                 }
               ],
-              "cap": "手机突然坏了要 3000 块"
+              "bubbles": [],
+              "cap": "手机摔碎"
             },
             {
-              "bg": "shop",
+              "bg": "room",
               "cast": [
                 {
                   "who": "xiaoman",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "talk"
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
                 }
               ],
-              "cap": "手机突然坏了要 3000 块"
+              "props": [],
+              "bubbles": [],
+              "cap": "修要 3000"
             },
             {
-              "bg": "plain",
+              "bg": "room",
+              "cast": [
+                {
+                  "who": "xiaoman",
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
+                }
+              ],
+              "props": [
+                {
+                  "what": "bag",
+                  "x": 0.78,
+                  "y": 0.78,
+                  "k": 0.95
+                },
+                {
+                  "what": "purse",
+                  "x": 0.62,
+                  "y": 0.78,
+                  "k": 0.95
+                }
+              ],
+              "bubbles": [],
+              "cap": "小满翻钱包"
+            },
+            {
+              "bg": "room",
               "cast": [
                 {
                   "who": "xiaoyin",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "wow"
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "give"
                 }
               ],
-              "cap": "手机突然坏了要 3000 块"
+              "props": [
+                {
+                  "what": "jar",
+                  "x": 0.78,
+                  "y": 0.78,
+                  "k": 0.95
+                }
+              ],
+              "bubbles": [
+                {
+                  "who": "xiaoyin",
+                  "text": "应急"
+                }
+              ],
+              "cap": "小音递上一个写着的罐子"
             }
           ]
         },
@@ -9726,27 +10692,53 @@ window.DAYS = [
               "type": "comic",
               "panels": [
                 {
-                  "bg": "bank",
+                  "bg": "room",
                   "cast": [
                     {
                       "who": "xiaoman",
-                      "x": 0.5,
-                      "y": 0.72,
-                      "face": "talk"
+                      "x": 0.46,
+                      "y": 0.74,
+                      "face": "worry",
+                      "pose": "stand"
                     }
                   ],
+                  "props": [
+                    {
+                      "what": "phone",
+                      "x": 0.78,
+                      "y": 0.78,
+                      "k": 0.95
+                    }
+                  ],
+                  "bubbles": [],
                   "cap": "手机摔碎了"
                 },
                 {
-                  "bg": "kitchen",
+                  "bg": "room",
                   "cast": [
                     {
                       "who": "xiaoman",
-                      "x": 0.5,
-                      "y": 0.72,
-                      "face": "talk"
+                      "x": 0.46,
+                      "y": 0.74,
+                      "face": "worry",
+                      "pose": "stand"
                     }
                   ],
+                  "props": [
+                    {
+                      "what": "bag",
+                      "x": 0.78,
+                      "y": 0.78,
+                      "k": 0.95
+                    },
+                    {
+                      "what": "purse",
+                      "x": 0.62,
+                      "y": 0.78,
+                      "k": 0.95
+                    }
+                  ],
+                  "bubbles": [],
                   "cap": "修要 3000"
                 },
                 {
@@ -9754,9 +10746,24 @@ window.DAYS = [
                   "cast": [
                     {
                       "who": "xiaoman",
-                      "x": 0.5,
-                      "y": 0.72,
-                      "face": "talk"
+                      "x": 0.46,
+                      "y": 0.74,
+                      "face": "calm",
+                      "pose": "stand"
+                    }
+                  ],
+                  "props": [
+                    {
+                      "what": "paper",
+                      "x": 0.78,
+                      "y": 0.78,
+                      "k": 0.95
+                    }
+                  ],
+                  "bubbles": [
+                    {
+                      "who": "xiaoman",
+                      "text": "利息"
                     }
                   ],
                   "cap": "只能刷卡……"
@@ -9816,27 +10823,47 @@ window.DAYS = [
               "type": "comic",
               "panels": [
                 {
-                  "bg": "bank",
+                  "bg": "room",
                   "cast": [
                     {
                       "who": "xiaoman",
-                      "x": 0.5,
-                      "y": 0.72,
-                      "face": "talk"
+                      "x": 0.46,
+                      "y": 0.74,
+                      "face": "calm",
+                      "pose": "stand"
                     }
                   ],
+                  "props": [
+                    {
+                      "what": "payslip",
+                      "x": 0.78,
+                      "y": 0.78,
+                      "k": 0.95
+                    }
+                  ],
+                  "bubbles": [],
                   "cap": "收入突然没了"
                 },
                 {
-                  "bg": "kitchen",
+                  "bg": "room",
                   "cast": [
                     {
                       "who": "xiaoman",
-                      "x": 0.5,
-                      "y": 0.72,
-                      "face": "talk"
+                      "x": 0.46,
+                      "y": 0.74,
+                      "face": "calm",
+                      "pose": "stand"
                     }
                   ],
+                  "props": [
+                    {
+                      "what": "paper",
+                      "x": 0.78,
+                      "y": 0.78,
+                      "k": 0.95
+                    }
+                  ],
+                  "bubbles": [],
                   "cap": "账单还在照常来"
                 }
               ]
@@ -9974,27 +11001,58 @@ window.DAYS = [
               "type": "comic",
               "panels": [
                 {
-                  "bg": "bank",
+                  "bg": "room",
                   "cast": [
                     {
                       "who": "xiaoman",
-                      "x": 0.5,
-                      "y": 0.72,
-                      "face": "talk"
+                      "x": 0.46,
+                      "y": 0.74,
+                      "face": "calm",
+                      "pose": "stand"
+                    }
+                  ],
+                  "props": [
+                    {
+                      "what": "envelope",
+                      "x": 0.78,
+                      "y": 0.78,
+                      "k": 0.95
+                    },
+                    {
+                      "what": "phone",
+                      "x": 0.62,
+                      "y": 0.78,
+                      "k": 0.95
+                    }
+                  ],
+                  "bubbles": [
+                    {
+                      "who": "xiaoman",
+                      "text": "应急金"
                     }
                   ],
                   "cap": "从应急金里拿"
                 },
                 {
-                  "bg": "kitchen",
+                  "bg": "room",
                   "cast": [
                     {
                       "who": "xiaoman",
-                      "x": 0.5,
-                      "y": 0.72,
-                      "face": "talk"
+                      "x": 0.46,
+                      "y": 0.74,
+                      "face": "calm",
+                      "pose": "stand"
                     }
                   ],
+                  "props": [
+                    {
+                      "what": "envelope",
+                      "x": 0.78,
+                      "y": 0.78,
+                      "k": 0.95
+                    }
+                  ],
+                  "bubbles": [],
                   "cap": "之后再慢慢补回去"
                 }
               ]
@@ -10192,24 +11250,60 @@ window.DAYS = [
                   "cast": [
                     {
                       "who": "xiaoman",
-                      "x": 0.48,
-                      "y": 0.72,
-                      "face": "talk"
+                      "x": 0.46,
+                      "y": 0.74,
+                      "face": "calm",
+                      "pose": "stand"
                     }
                   ],
-                  "cap": "找不到心跳的原因时，人会从环"
+                  "props": [],
+                  "bubbles": [],
+                  "cap": "打针"
                 },
                 {
-                  "bg": "street",
+                  "bg": "room",
                   "cast": [
                     {
-                      "who": "xiaoyin",
-                      "x": 0.48,
-                      "y": 0.72,
-                      "face": "talk"
+                      "who": "xiaoman",
+                      "x": 0.46,
+                      "y": 0.74,
+                      "face": "happy",
+                      "pose": "stand"
                     }
                   ],
-                  "cap": "肾上腺素实验：从环境里\"借\""
+                  "props": [],
+                  "bubbles": [],
+                  "cap": "屋里有个开心的人 / 生气的"
+                },
+                {
+                  "bg": "room",
+                  "cast": [
+                    {
+                      "who": "xiaoman",
+                      "x": 0.46,
+                      "y": 0.74,
+                      "face": "happy",
+                      "pose": "stand"
+                    }
+                  ],
+                  "props": [],
+                  "bubbles": [],
+                  "cap": "被试跟着开心 / 生气"
+                },
+                {
+                  "bg": "room",
+                  "cast": [
+                    {
+                      "who": "xiaoman",
+                      "x": 0.46,
+                      "y": 0.74,
+                      "face": "calm",
+                      "pose": "stand"
+                    }
+                  ],
+                  "props": [],
+                  "bubbles": [],
+                  "cap": "标签是借来的 →"
                 }
               ]
             }
@@ -10229,28 +11323,64 @@ window.DAYS = [
               "type": "comic",
               "panels": [
                 {
+                  "bg": "street",
+                  "cast": [
+                    {
+                      "who": "xiaoman",
+                      "x": 0.46,
+                      "y": 0.74,
+                      "face": "calm",
+                      "pose": "shrug"
+                    }
+                  ],
+                  "props": [],
+                  "bubbles": [],
+                  "cap": "摇晃的吊桥"
+                },
+                {
                   "bg": "room",
                   "cast": [
                     {
                       "who": "xiaoman",
-                      "x": 0.48,
-                      "y": 0.72,
-                      "face": "talk"
+                      "x": 0.46,
+                      "y": 0.74,
+                      "face": "calm",
+                      "pose": "stand"
                     }
                   ],
-                  "cap": "错误归因：把吊桥带来的心跳，"
+                  "props": [],
+                  "bubbles": [],
+                  "cap": "桥上遇到问卷女士"
                 },
                 {
-                  "bg": "street",
+                  "bg": "room",
                   "cast": [
                     {
-                      "who": "xiaoyin",
-                      "x": 0.48,
-                      "y": 0.72,
-                      "face": "talk"
+                      "who": "xiaoman",
+                      "x": 0.46,
+                      "y": 0.74,
+                      "face": "calm",
+                      "pose": "stand"
                     }
                   ],
-                  "cap": "吊桥实验：心跳被认成心动"
+                  "props": [],
+                  "bubbles": [],
+                  "cap": "留了电话"
+                },
+                {
+                  "bg": "room",
+                  "cast": [
+                    {
+                      "who": "xiaoman",
+                      "x": 0.46,
+                      "y": 0.74,
+                      "face": "calm",
+                      "pose": "stand"
+                    }
+                  ],
+                  "props": [],
+                  "bubbles": [],
+                  "cap": "晚上打来的人更多 → 卡 5"
                 }
               ]
             }
@@ -10315,9 +11445,10 @@ window.DAYS = [
                   "cast": [
                     {
                       "who": "xiaoman",
-                      "x": 0.48,
-                      "y": 0.72,
-                      "face": "talk"
+                      "x": 0.46,
+                      "y": 0.74,
+                      "face": "calm",
+                      "pose": "stand"
                     }
                   ],
                   "cap": "同样的心跳，解释不同，情绪就"
@@ -10326,10 +11457,11 @@ window.DAYS = [
                   "bg": "street",
                   "cast": [
                     {
-                      "who": "xiaoyin",
-                      "x": 0.48,
-                      "y": 0.72,
-                      "face": "talk"
+                      "who": "xiaoman",
+                      "x": 0.46,
+                      "y": 0.74,
+                      "face": "calm",
+                      "pose": "stand"
                     }
                   ],
                   "cap": "串起来：恐怖片约会"
@@ -10380,52 +11512,69 @@ window.DAYS = [
         "hookComic": {
           "panels": [
             {
+              "bg": "street",
+              "cast": [
+                {
+                  "who": "xiaoman",
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "shrug"
+                }
+              ],
+              "props": [],
+              "bubbles": [],
+              "cap": "小满走过摇晃的吊桥"
+            },
+            {
+              "bg": "room",
+              "cast": [
+                {
+                  "who": "ale",
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
+                }
+              ],
+              "props": [],
+              "bubbles": [],
+              "cap": "桥那头遇见阿乐"
+            },
+            {
               "bg": "room",
               "cast": [
                 {
                   "who": "xiaoman",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "talk"
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
                 }
               ],
-              "cap": "走过一座摇晃的吊桥，再遇见一"
+              "props": [],
+              "bubbles": [],
+              "cap": "心形泡泡冒出来"
             },
             {
-              "bg": "street",
+              "bg": "room",
               "cast": [
                 {
                   "who": "xiaoyin",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "talk"
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
                 }
               ],
-              "cap": "走过一座摇晃的吊桥，再遇见一"
-            },
-            {
-              "bg": "shop",
-              "cast": [
-                {
-                  "who": "xiaoman",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "talk"
-                }
-              ],
-              "cap": "走过一座摇晃的吊桥，再遇见一"
-            },
-            {
-              "bg": "plain",
-              "cast": [
+              "props": [],
+              "bubbles": [
                 {
                   "who": "xiaoyin",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "wow"
+                  "text": "是心动"
                 }
               ],
-              "cap": "走过一座摇晃的吊桥，再遇见一"
+              "cap": "是心动"
             }
           ]
         }
@@ -10438,76 +11587,68 @@ window.DAYS = [
         "hookComic": {
           "panels": [
             {
-              "bg": "kitchen",
+              "bg": "room",
               "cast": [
                 {
-                  "who": "mia",
-                  "x": 0.32,
-                  "y": 0.72,
-                  "face": "happy"
-                },
-                {
-                  "who": "leo",
-                  "x": 0.62,
-                  "y": 0.74,
-                  "face": "talk"
-                },
-                {
                   "who": "mochi",
-                  "x": 0.8,
-                  "y": 0.82,
-                  "face": "happy",
-                  "k": 0.7
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
                 }
-              ]
+              ],
+              "props": [
+                {
+                  "what": "bowl",
+                  "x": 0.78,
+                  "y": 0.78,
+                  "k": 0.95
+                }
+              ],
+              "bubbles": [],
+              "cap": ""
             },
             {
               "bg": "room",
               "cast": [
                 {
-                  "who": "mia",
-                  "x": 0.32,
-                  "y": 0.72,
-                  "face": "happy"
-                },
-                {
-                  "who": "leo",
-                  "x": 0.62,
-                  "y": 0.74,
-                  "face": "talk"
-                },
-                {
                   "who": "mochi",
-                  "x": 0.8,
-                  "y": 0.82,
-                  "face": "happy",
-                  "k": 0.7
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
                 }
-              ]
+              ],
+              "props": [],
+              "bubbles": [],
+              "cap": ""
             },
             {
-              "bg": "street",
+              "bg": "room",
               "cast": [
                 {
-                  "who": "mia",
-                  "x": 0.32,
-                  "y": 0.72,
-                  "face": "happy"
-                },
-                {
-                  "who": "leo",
-                  "x": 0.62,
+                  "who": "mochi",
+                  "x": 0.46,
                   "y": 0.74,
-                  "face": "talk"
-                },
+                  "face": "calm",
+                  "pose": "stand"
+                }
+              ],
+              "props": [
+                {
+                  "what": "mic",
+                  "x": 0.78,
+                  "y": 0.78,
+                  "k": 0.95
+                }
+              ],
+              "bubbles": [
                 {
                   "who": "mochi",
-                  "x": 0.8,
-                  "y": 0.82,
-                  "face": "happy",
-                  "k": 0.7
+                  "text": "唱歌"
                 }
-              ]
+              ],
+              "cap": ""
             }
           ]
         },
@@ -10515,28 +11656,68 @@ window.DAYS = [
           "title": "Mochi's Day",
           "panels": [
             {
-              "bg": "kitchen",
+              "bg": "room",
               "cast": [
                 {
-                  "who": "mia",
-                  "x": 0.32,
-                  "y": 0.72,
-                  "face": "happy"
-                },
-                {
-                  "who": "leo",
-                  "x": 0.62,
+                  "who": "mochi",
+                  "x": 0.46,
                   "y": 0.74,
-                  "face": "talk"
-                },
+                  "face": "calm",
+                  "pose": "stand"
+                }
+              ],
+              "props": [
+                {
+                  "what": "bowl",
+                  "x": 0.78,
+                  "y": 0.78,
+                  "k": 0.95
+                }
+              ],
+              "bubbles": [],
+              "cap": ""
+            },
+            {
+              "bg": "room",
+              "cast": [
                 {
                   "who": "mochi",
-                  "x": 0.8,
-                  "y": 0.82,
-                  "face": "happy",
-                  "k": 0.7
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
                 }
-              ]
+              ],
+              "props": [],
+              "bubbles": [],
+              "cap": ""
+            },
+            {
+              "bg": "room",
+              "cast": [
+                {
+                  "who": "mochi",
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
+                }
+              ],
+              "props": [
+                {
+                  "what": "mic",
+                  "x": 0.78,
+                  "y": 0.78,
+                  "k": 0.95
+                }
+              ],
+              "bubbles": [
+                {
+                  "who": "mochi",
+                  "text": "唱歌"
+                }
+              ],
+              "cap": ""
             },
             {
               "bg": "room",
@@ -10544,71 +11725,21 @@ window.DAYS = [
                 {
                   "who": "mia",
                   "x": 0.32,
-                  "y": 0.72,
-                  "face": "happy"
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
                 },
                 {
                   "who": "leo",
-                  "x": 0.62,
+                  "x": 0.64,
                   "y": 0.74,
-                  "face": "talk"
-                },
-                {
-                  "who": "mochi",
-                  "x": 0.8,
-                  "y": 0.82,
-                  "face": "happy",
-                  "k": 0.7
+                  "face": "calm",
+                  "pose": "stand"
                 }
-              ]
-            },
-            {
-              "bg": "street",
-              "cast": [
-                {
-                  "who": "mia",
-                  "x": 0.32,
-                  "y": 0.72,
-                  "face": "happy"
-                },
-                {
-                  "who": "leo",
-                  "x": 0.62,
-                  "y": 0.74,
-                  "face": "talk"
-                },
-                {
-                  "who": "mochi",
-                  "x": 0.8,
-                  "y": 0.82,
-                  "face": "happy",
-                  "k": 0.7
-                }
-              ]
-            },
-            {
-              "bg": "shop",
-              "cast": [
-                {
-                  "who": "mia",
-                  "x": 0.32,
-                  "y": 0.72,
-                  "face": "happy"
-                },
-                {
-                  "who": "leo",
-                  "x": 0.62,
-                  "y": 0.74,
-                  "face": "talk"
-                },
-                {
-                  "who": "mochi",
-                  "x": 0.8,
-                  "y": 0.82,
-                  "face": "happy",
-                  "k": 0.7
-                }
-              ]
+              ],
+              "props": [],
+              "bubbles": [],
+              "cap": ""
             }
           ],
           "lines": [
@@ -11298,48 +12429,72 @@ window.DAYS = [
               "cast": [
                 {
                   "who": "xiaoman",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "talk"
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
                 }
               ],
-              "cap": "同样是红色，番茄红显得热情，"
-            },
-            {
-              "bg": "street",
-              "cast": [
+              "props": [
                 {
-                  "who": "xiaoyin",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "talk"
+                  "what": "skirt",
+                  "x": 0.78,
+                  "y": 0.78,
+                  "k": 0.95
                 }
               ],
-              "cap": "红色不都是暖色吗"
+              "bubbles": [],
+              "cap": "小满试番茄红的裙子：热情"
             },
             {
-              "bg": "shop",
+              "bg": "room",
               "cast": [
                 {
                   "who": "xiaoman",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "talk"
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
                 }
               ],
-              "cap": "红色不都是暖色吗"
+              "props": [],
+              "bubbles": [],
+              "cap": "换酒红：冷静"
             },
             {
-              "bg": "plain",
+              "bg": "room",
+              "cast": [
+                {
+                  "who": "xiaoman",
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
+                }
+              ],
+              "props": [],
+              "bubbles": [
+                {
+                  "who": "xiaoman",
+                  "text": "红色不都是暖色吗？"
+                }
+              ],
+              "cap": "红色不都是暖色吗？"
+            },
+            {
+              "bg": "room",
               "cast": [
                 {
                   "who": "xiaoyin",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "wow"
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
                 }
               ],
-              "cap": "红色不都是暖色吗"
+              "props": [],
+              "bubbles": [],
+              "cap": "小音把两个红放到色轮上"
             }
           ]
         }
@@ -11420,28 +12575,64 @@ window.DAYS = [
               "type": "comic",
               "panels": [
                 {
-                  "bg": "room",
+                  "bg": "palace",
                   "cast": [
                     {
-                      "who": "xiaoman",
-                      "x": 0.48,
-                      "y": 0.72,
-                      "face": "talk"
+                      "who": "kingWu",
+                      "x": 0.46,
+                      "y": 0.74,
+                      "face": "calm",
+                      "pose": "stand"
                     }
                   ],
-                  "cap": "休养生息 = 先少收少用，让"
+                  "props": [],
+                  "bubbles": [],
+                  "cap": "打了多年仗"
                 },
                 {
-                  "bg": "street",
+                  "bg": "palace",
                   "cast": [
                     {
-                      "who": "xiaoyin",
-                      "x": 0.48,
-                      "y": 0.72,
-                      "face": "talk"
+                      "who": "kingWu",
+                      "x": 0.46,
+                      "y": 0.74,
+                      "face": "calm",
+                      "pose": "stand"
                     }
                   ],
-                  "cap": "如果你是刘邦：先让天下喘口气"
+                  "props": [],
+                  "bubbles": [],
+                  "cap": "农民累坏了"
+                },
+                {
+                  "bg": "palace",
+                  "cast": [
+                    {
+                      "who": "kingWu",
+                      "x": 0.46,
+                      "y": 0.74,
+                      "face": "calm",
+                      "pose": "stand"
+                    }
+                  ],
+                  "props": [],
+                  "bubbles": [],
+                  "cap": "少收税"
+                },
+                {
+                  "bg": "palace",
+                  "cast": [
+                    {
+                      "who": "kingWu",
+                      "x": 0.46,
+                      "y": 0.74,
+                      "face": "calm",
+                      "pose": "stand"
+                    }
+                  ],
+                  "props": [],
+                  "bubbles": [],
+                  "cap": "田里重新长满庄稼"
                 }
               ]
             }
@@ -11789,52 +12980,74 @@ window.DAYS = [
         "hookComic": {
           "panels": [
             {
-              "bg": "room",
+              "bg": "palace",
+              "cast": [
+                {
+                  "who": "kingWu",
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
+                }
+              ],
+              "props": [],
+              "bubbles": [],
+              "cap": "汉人"
+            },
+            {
+              "bg": "palace",
               "cast": [
                 {
                   "who": "xiaoman",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "talk"
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
                 }
               ],
-              "cap": "“汉人”“汉字”“汉服”——"
-            },
-            {
-              "bg": "street",
-              "cast": [
-                {
-                  "who": "xiaoyin",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "talk"
-                }
-              ],
-              "cap": "“汉人”“汉字”“汉服”——"
-            },
-            {
-              "bg": "shop",
-              "cast": [
+              "props": [],
+              "bubbles": [
                 {
                   "who": "xiaoman",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "talk"
+                  "text": "为什么都叫汉？"
                 }
               ],
-              "cap": "“汉人”“汉字”“汉服”——"
+              "cap": "为什么都叫汉？"
             },
             {
-              "bg": "plain",
+              "bg": "palace",
               "cast": [
                 {
                   "who": "xiaoyin",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "wow"
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
                 }
               ],
-              "cap": "“汉人”“汉字”“汉服”——"
+              "props": [],
+              "bubbles": [],
+              "cap": "小音翻开 `tl` 上很长的"
+            },
+            {
+              "bg": "palace",
+              "cast": [
+                {
+                  "who": "kingWu",
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
+                }
+              ],
+              "props": [],
+              "bubbles": [
+                {
+                  "who": "kingWu",
+                  "text": "因为这个朝代够长"
+                }
+              ],
+              "cap": "因为这个朝代够长"
             }
           ]
         }
@@ -12230,52 +13443,74 @@ window.DAYS = [
         "hookComic": {
           "panels": [
             {
-              "bg": "room",
+              "bg": "mountain",
               "cast": [
                 {
                   "who": "xiaoman",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "talk"
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
                 }
               ],
-              "cap": "河南开封有一段黄河，河床比城"
+              "props": [],
+              "bubbles": [],
+              "cap": "开封"
             },
             {
-              "bg": "street",
-              "cast": [
-                {
-                  "who": "xiaoyin",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "talk"
-                }
-              ],
-              "cap": "河怎么会跑到人头顶上"
-            },
-            {
-              "bg": "shop",
+              "bg": "mountain",
               "cast": [
                 {
                   "who": "xiaoman",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "talk"
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
                 }
               ],
-              "cap": "河怎么会跑到人头顶上"
+              "props": [],
+              "bubbles": [],
+              "cap": "抬头：一条船在比屋顶还高的河"
             },
             {
-              "bg": "plain",
+              "bg": "mountain",
+              "cast": [
+                {
+                  "who": "xiaoman",
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "wow",
+                  "pose": "stand"
+                }
+              ],
+              "props": [],
+              "bubbles": [
+                {
+                  "who": "xiaoman",
+                  "text": "河在我头上？！"
+                }
+              ],
+              "cap": "（惊讶表情）"
+            },
+            {
+              "bg": "mountain",
               "cast": [
                 {
                   "who": "xiaoyin",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "wow"
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "cheer"
                 }
               ],
-              "cap": "河怎么会跑到人头顶上"
+              "props": [],
+              "bubbles": [
+                {
+                  "who": "xiaoyin",
+                  "text": "秘密在泥里"
+                }
+              ],
+              "cap": "小音举起一杯黄泥水"
             }
           ]
         }
@@ -12288,52 +13523,74 @@ window.DAYS = [
         "hookComic": {
           "panels": [
             {
+              "bg": "bank",
+              "cast": [
+                {
+                  "who": "xiaoman",
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
+                }
+              ],
+              "props": [],
+              "bubbles": [],
+              "cap": "小满把 1000 元存进银行"
+            },
+            {
               "bg": "room",
               "cast": [
                 {
                   "who": "xiaoman",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "talk"
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
                 }
               ],
-              "cap": "你把钱存进银行，银行为什么要"
+              "props": [],
+              "bubbles": [],
+              "cap": "一年后多了 30 元"
             },
             {
-              "bg": "street",
-              "cast": [
-                {
-                  "who": "xiaoyin",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "talk"
-                }
-              ],
-              "cap": "你把钱存进银行，银行为什么要"
-            },
-            {
-              "bg": "shop",
+              "bg": "bank",
               "cast": [
                 {
                   "who": "xiaoman",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "talk"
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "give"
                 }
               ],
-              "cap": "你把钱存进银行，银行为什么要"
+              "props": [],
+              "bubbles": [
+                {
+                  "who": "xiaoman",
+                  "text": "银行为什么给我钱？"
+                }
+              ],
+              "cap": "银行为什么给我钱？"
             },
             {
-              "bg": "plain",
+              "bg": "room",
               "cast": [
                 {
                   "who": "xiaoyin",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "wow"
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
                 }
               ],
-              "cap": "你把钱存进银行，银行为什么要"
+              "props": [],
+              "bubbles": [
+                {
+                  "who": "xiaoyin",
+                  "text": "你把钱租出去了"
+                }
+              ],
+              "cap": "你把钱租出去了"
             }
           ]
         },
@@ -12349,36 +13606,52 @@ window.DAYS = [
                   "cast": [
                     {
                       "who": "xiaoman",
-                      "x": 0.5,
-                      "y": 0.72,
-                      "face": "talk"
+                      "x": 0.46,
+                      "y": 0.74,
+                      "face": "calm",
+                      "pose": "give"
                     }
                   ],
+                  "props": [],
+                  "bubbles": [],
                   "cap": "我存 1000"
                 },
                 {
-                  "bg": "kitchen",
+                  "bg": "bank",
                   "cast": [
                     {
                       "who": "xiaoman",
-                      "x": 0.5,
-                      "y": 0.72,
-                      "face": "talk"
+                      "x": 0.46,
+                      "y": 0.74,
+                      "face": "calm",
+                      "pose": "give"
                     }
                   ],
+                  "props": [
+                    {
+                      "what": "cup",
+                      "x": 0.78,
+                      "y": 0.78,
+                      "k": 0.95
+                    }
+                  ],
+                  "bubbles": [],
                   "cap": "银行借给老板开店"
                 },
                 {
-                  "bg": "room",
+                  "bg": "bank",
                   "cast": [
                     {
                       "who": "xiaoman",
-                      "x": 0.5,
-                      "y": 0.72,
-                      "face": "talk"
+                      "x": 0.46,
+                      "y": 0.74,
+                      "face": "calm",
+                      "pose": "stand"
                     }
                   ],
-                  "cap": "老板付租金，你也分到"
+                  "props": [],
+                  "bubbles": [],
+                  "cap": "老板付租金"
                 }
               ]
             },
@@ -12425,27 +13698,46 @@ window.DAYS = [
               "type": "comic",
               "panels": [
                 {
-                  "bg": "bank",
+                  "bg": "shop",
                   "cast": [
                     {
                       "who": "xiaoman",
-                      "x": 0.5,
-                      "y": 0.72,
-                      "face": "talk"
+                      "x": 0.46,
+                      "y": 0.74,
+                      "face": "calm",
+                      "pose": "stand"
                     }
                   ],
-                  "cap": "借出去，自己暂时用不了"
+                  "props": [
+                    {
+                      "what": "bag",
+                      "x": 0.78,
+                      "y": 0.78,
+                      "k": 0.95
+                    },
+                    {
+                      "what": "purse",
+                      "x": 0.62,
+                      "y": 0.78,
+                      "k": 0.95
+                    }
+                  ],
+                  "bubbles": [],
+                  "cap": "借出去"
                 },
                 {
-                  "bg": "kitchen",
+                  "bg": "room",
                   "cast": [
                     {
                       "who": "xiaoman",
-                      "x": 0.5,
-                      "y": 0.72,
-                      "face": "talk"
+                      "x": 0.46,
+                      "y": 0.74,
+                      "face": "worry",
+                      "pose": "run"
                     }
                   ],
+                  "props": [],
+                  "bubbles": [],
                   "cap": "万一不还呢？"
                 }
               ]
@@ -12567,24 +13859,30 @@ window.DAYS = [
                   "cast": [
                     {
                       "who": "xiaoman",
-                      "x": 0.5,
-                      "y": 0.72,
-                      "face": "talk"
+                      "x": 0.46,
+                      "y": 0.74,
+                      "face": "calm",
+                      "pose": "give"
                     }
                   ],
-                  "cap": "你是房东，收租金"
+                  "props": [],
+                  "bubbles": [],
+                  "cap": "你是房东"
                 },
                 {
-                  "bg": "kitchen",
+                  "bg": "bank",
                   "cast": [
                     {
                       "who": "xiaoman",
-                      "x": 0.5,
-                      "y": 0.72,
-                      "face": "talk"
+                      "x": 0.46,
+                      "y": 0.74,
+                      "face": "calm",
+                      "pose": "give"
                     }
                   ],
-                  "cap": "你是租客，付租金"
+                  "props": [],
+                  "bubbles": [],
+                  "cap": "你是租客"
                 }
               ]
             },
@@ -12689,7 +13987,7 @@ window.DAYS = [
                     "value": 50
                   }
                 ],
-                "unit": "元。这张图里每年的柱子一样高"
+                "unit": "元"
               },
               "frames": [
                 {
@@ -12775,25 +14073,61 @@ window.DAYS = [
                   "bg": "room",
                   "cast": [
                     {
-                      "who": "xiaoman",
-                      "x": 0.48,
-                      "y": 0.72,
-                      "face": "talk"
+                      "who": "ekman",
+                      "x": 0.46,
+                      "y": 0.74,
+                      "face": "calm",
+                      "pose": "stand"
                     }
                   ],
-                  "cap": "没接触过媒体的人也认得出表情"
+                  "props": [],
+                  "bubbles": [],
+                  "cap": "埃克曼带着照片"
                 },
                 {
-                  "bg": "street",
+                  "bg": "room",
                   "cast": [
                     {
-                      "who": "xiaoyin",
-                      "x": 0.48,
-                      "y": 0.72,
-                      "face": "talk"
+                      "who": "xiaoman",
+                      "x": 0.46,
+                      "y": 0.74,
+                      "face": "calm",
+                      "pose": "stand"
                     }
                   ],
-                  "cap": "埃克曼的部落研究"
+                  "props": [],
+                  "bubbles": [],
+                  "cap": "部落里没看过电视的人"
+                },
+                {
+                  "bg": "room",
+                  "cast": [
+                    {
+                      "who": "xiaoman",
+                      "x": 0.46,
+                      "y": 0.74,
+                      "face": "calm",
+                      "pose": "stand"
+                    }
+                  ],
+                  "props": [],
+                  "bubbles": [],
+                  "cap": "讲一个故事"
+                },
+                {
+                  "bg": "room",
+                  "cast": [
+                    {
+                      "who": "xiaoman",
+                      "x": 0.46,
+                      "y": 0.74,
+                      "face": "calm",
+                      "pose": "point"
+                    }
+                  ],
+                  "props": [],
+                  "bubbles": [],
+                  "cap": "他指出对应的表情 → 卡 3"
                 }
               ]
             }
@@ -12915,21 +14249,29 @@ window.DAYS = [
                   "cast": [
                     {
                       "who": "xiaoman",
-                      "x": 0.48,
-                      "y": 0.72,
-                      "face": "talk"
+                      "x": 0.46,
+                      "y": 0.74,
+                      "face": "calm",
+                      "pose": "stand"
                     }
                   ],
-                  "cap": "表情这门\"语言\"多半天生，什"
+                  "cap": "表情这门\"语言\"多半天生，什",
+                  "bubbles": [
+                    {
+                      "who": "xiaoman",
+                      "text": "语言"
+                    }
+                  ]
                 },
                 {
                   "bg": "street",
                   "cast": [
                     {
-                      "who": "xiaoyin",
-                      "x": 0.48,
-                      "y": 0.72,
-                      "face": "talk"
+                      "who": "xiaoman",
+                      "x": 0.46,
+                      "y": 0.74,
+                      "face": "calm",
+                      "pose": "stand"
                     }
                   ],
                   "cap": "表达规则：天生的语言，学来的"
@@ -13042,48 +14384,70 @@ window.DAYS = [
               "cast": [
                 {
                   "who": "xiaoman",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "talk"
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
                 }
               ],
-              "cap": "一个从没看过电视的人，能认出"
+              "props": [],
+              "bubbles": [],
+              "cap": "一位从没看过电视的老人"
             },
             {
-              "bg": "street",
-              "cast": [
-                {
-                  "who": "xiaoyin",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "talk"
-                }
-              ],
-              "cap": "一个从没看过电视的人，能认出"
-            },
-            {
-              "bg": "shop",
+              "bg": "room",
               "cast": [
                 {
                   "who": "xiaoman",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "talk"
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "worry",
+                  "pose": "give"
                 }
               ],
-              "cap": "一个从没看过电视的人，能认出"
+              "props": [],
+              "bubbles": [
+                {
+                  "who": "xiaoman",
+                  "text": "害怕"
+                }
+              ],
+              "cap": "小满递上一张的照片"
             },
             {
-              "bg": "plain",
+              "bg": "room",
+              "cast": [
+                {
+                  "who": "xiaoman",
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "point"
+                }
+              ],
+              "props": [],
+              "bubbles": [],
+              "cap": "他点头"
+            },
+            {
+              "bg": "room",
               "cast": [
                 {
                   "who": "xiaoyin",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "wow"
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
                 }
               ],
-              "cap": "一个从没看过电视的人，能认出"
+              "props": [],
+              "bubbles": [
+                {
+                  "who": "xiaoyin",
+                  "text": "表情是天生的吗？"
+                }
+              ],
+              "cap": "表情是天生的吗？"
             }
           ]
         }
@@ -13096,76 +14460,63 @@ window.DAYS = [
         "hookComic": {
           "panels": [
             {
-              "bg": "kitchen",
+              "bg": "room",
               "cast": [
                 {
                   "who": "mia",
                   "x": 0.32,
-                  "y": 0.72,
-                  "face": "happy"
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "cheer"
                 },
                 {
                   "who": "leo",
-                  "x": 0.62,
+                  "x": 0.64,
                   "y": 0.74,
-                  "face": "talk"
-                },
-                {
-                  "who": "mochi",
-                  "x": 0.8,
-                  "y": 0.82,
-                  "face": "happy",
-                  "k": 0.7
+                  "face": "calm",
+                  "pose": "stand"
                 }
-              ]
+              ],
+              "props": [],
+              "bubbles": [],
+              "cap": ""
             },
             {
               "bg": "room",
               "cast": [
                 {
                   "who": "mia",
-                  "x": 0.32,
-                  "y": 0.72,
-                  "face": "happy"
-                },
-                {
-                  "who": "leo",
-                  "x": 0.62,
+                  "x": 0.46,
                   "y": 0.74,
-                  "face": "talk"
-                },
-                {
-                  "who": "mochi",
-                  "x": 0.8,
-                  "y": 0.82,
-                  "face": "happy",
-                  "k": 0.7
+                  "face": "calm",
+                  "pose": "shrug"
                 }
-              ]
+              ],
+              "props": [],
+              "bubbles": [],
+              "cap": ""
             },
             {
-              "bg": "street",
+              "bg": "room",
               "cast": [
                 {
                   "who": "mia",
-                  "x": 0.32,
-                  "y": 0.72,
-                  "face": "happy"
-                },
-                {
-                  "who": "leo",
-                  "x": 0.62,
+                  "x": 0.46,
                   "y": 0.74,
-                  "face": "talk"
-                },
-                {
-                  "who": "mochi",
-                  "x": 0.8,
-                  "y": 0.82,
-                  "face": "happy",
-                  "k": 0.7
+                  "face": "calm",
+                  "pose": "cheer"
                 }
-              ]
+              ],
+              "props": [
+                {
+                  "what": "fish",
+                  "x": 0.78,
+                  "y": 0.78,
+                  "k": 0.95
+                }
+              ],
+              "bubbles": [],
+              "cap": ""
             }
           ]
         },
@@ -13173,28 +14524,63 @@ window.DAYS = [
           "title": "Bath Time",
           "panels": [
             {
-              "bg": "kitchen",
+              "bg": "room",
               "cast": [
                 {
                   "who": "mia",
                   "x": 0.32,
-                  "y": 0.72,
-                  "face": "happy"
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "cheer"
                 },
                 {
                   "who": "leo",
-                  "x": 0.62,
+                  "x": 0.64,
                   "y": 0.74,
-                  "face": "talk"
-                },
-                {
-                  "who": "mochi",
-                  "x": 0.8,
-                  "y": 0.82,
-                  "face": "happy",
-                  "k": 0.7
+                  "face": "calm",
+                  "pose": "stand"
                 }
-              ]
+              ],
+              "props": [],
+              "bubbles": [],
+              "cap": ""
+            },
+            {
+              "bg": "room",
+              "cast": [
+                {
+                  "who": "mia",
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "shrug"
+                }
+              ],
+              "props": [],
+              "bubbles": [],
+              "cap": ""
+            },
+            {
+              "bg": "room",
+              "cast": [
+                {
+                  "who": "mia",
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "cheer"
+                }
+              ],
+              "props": [
+                {
+                  "what": "fish",
+                  "x": 0.78,
+                  "y": 0.78,
+                  "k": 0.95
+                }
+              ],
+              "bubbles": [],
+              "cap": ""
             },
             {
               "bg": "room",
@@ -13202,71 +14588,28 @@ window.DAYS = [
                 {
                   "who": "mia",
                   "x": 0.32,
-                  "y": 0.72,
-                  "face": "happy"
-                },
-                {
-                  "who": "leo",
-                  "x": 0.62,
                   "y": 0.74,
-                  "face": "talk"
+                  "face": "calm",
+                  "pose": "stand"
                 },
                 {
                   "who": "mochi",
-                  "x": 0.8,
-                  "y": 0.82,
-                  "face": "happy",
-                  "k": 0.7
-                }
-              ]
-            },
-            {
-              "bg": "street",
-              "cast": [
-                {
-                  "who": "mia",
-                  "x": 0.32,
-                  "y": 0.72,
-                  "face": "happy"
-                },
-                {
-                  "who": "leo",
-                  "x": 0.62,
+                  "x": 0.64,
                   "y": 0.74,
-                  "face": "talk"
-                },
-                {
-                  "who": "mochi",
-                  "x": 0.8,
-                  "y": 0.82,
-                  "face": "happy",
-                  "k": 0.7
+                  "face": "calm",
+                  "pose": "stand"
                 }
-              ]
-            },
-            {
-              "bg": "shop",
-              "cast": [
+              ],
+              "props": [
                 {
-                  "who": "mia",
-                  "x": 0.32,
-                  "y": 0.72,
-                  "face": "happy"
-                },
-                {
-                  "who": "leo",
-                  "x": 0.62,
-                  "y": 0.74,
-                  "face": "talk"
-                },
-                {
-                  "who": "mochi",
-                  "x": 0.8,
-                  "y": 0.82,
-                  "face": "happy",
-                  "k": 0.7
+                  "what": "fish",
+                  "x": 0.78,
+                  "y": 0.78,
+                  "k": 0.95
                 }
-              ]
+              ],
+              "bubbles": [],
+              "cap": ""
             }
           ],
           "lines": [
@@ -13878,48 +15221,74 @@ window.DAYS = [
               "cast": [
                 {
                   "who": "xiaoman",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "talk"
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
                 }
               ],
-              "cap": "一身全是驼色，为什么有人穿得"
+              "props": [],
+              "bubbles": [],
+              "cap": "两个人都穿一身驼色"
             },
             {
-              "bg": "street",
-              "cast": [
-                {
-                  "who": "xiaoyin",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "talk"
-                }
-              ],
-              "cap": "一身全是驼色，为什么有人穿得"
-            },
-            {
-              "bg": "shop",
+              "bg": "room",
               "cast": [
                 {
                   "who": "xiaoman",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "talk"
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
                 }
               ],
-              "cap": "一身全是驼色，为什么有人穿得"
+              "props": [
+                {
+                  "what": "bag",
+                  "x": 0.78,
+                  "y": 0.78,
+                  "k": 0.95
+                }
+              ],
+              "bubbles": [],
+              "cap": "一个高级"
             },
             {
-              "bg": "plain",
+              "bg": "room",
               "cast": [
                 {
                   "who": "xiaoyin",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "wow"
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
                 }
               ],
-              "cap": "一身全是驼色，为什么有人穿得"
+              "props": [],
+              "bubbles": [],
+              "cap": "小音按下黑白滤镜"
+            },
+            {
+              "bg": "room",
+              "cast": [
+                {
+                  "who": "xiaoman",
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
+                }
+              ],
+              "props": [
+                {
+                  "what": "bag",
+                  "x": 0.78,
+                  "y": 0.78,
+                  "k": 0.95
+                }
+              ],
+              "bubbles": [],
+              "cap": "面包那套糊成一块"
             }
           ]
         }
@@ -14010,28 +15379,69 @@ window.DAYS = [
               "type": "comic",
               "panels": [
                 {
-                  "bg": "room",
+                  "bg": "palace",
                   "cast": [
                     {
-                      "who": "xiaoman",
-                      "x": 0.48,
-                      "y": 0.72,
-                      "face": "talk"
+                      "who": "kingWu",
+                      "x": 0.46,
+                      "y": 0.74,
+                      "face": "calm",
+                      "pose": "stand"
                     }
                   ],
-                  "cap": "让地方自己招兵救了急，也造出"
+                  "props": [],
+                  "bubbles": [],
+                  "cap": "起义四起"
                 },
                 {
-                  "bg": "street",
+                  "bg": "palace",
                   "cast": [
                     {
-                      "who": "xiaoyin",
-                      "x": 0.48,
-                      "y": 0.72,
-                      "face": "talk"
+                      "who": "kingWu",
+                      "x": 0.46,
+                      "y": 0.74,
+                      "face": "calm",
+                      "pose": "stand"
                     }
                   ],
-                  "cap": "如果你是东汉皇帝：让地方自己"
+                  "props": [],
+                  "bubbles": [
+                    {
+                      "who": "kingWu",
+                      "text": "让各地自己招兵吧"
+                    }
+                  ],
+                  "cap": "让各地自己招兵吧"
+                },
+                {
+                  "bg": "palace",
+                  "cast": [
+                    {
+                      "who": "kingWu",
+                      "x": 0.46,
+                      "y": 0.74,
+                      "face": "calm",
+                      "pose": "stand"
+                    }
+                  ],
+                  "props": [],
+                  "bubbles": [],
+                  "cap": "地方长官手里有了兵"
+                },
+                {
+                  "bg": "palace",
+                  "cast": [
+                    {
+                      "who": "kingWu",
+                      "x": 0.46,
+                      "y": 0.74,
+                      "face": "calm",
+                      "pose": "stand"
+                    }
+                  ],
+                  "props": [],
+                  "bubbles": [],
+                  "cap": "起义平了"
                 }
               ]
             }
@@ -14105,28 +15515,64 @@ window.DAYS = [
               "type": "comic",
               "panels": [
                 {
-                  "bg": "room",
+                  "bg": "palace",
                   "cast": [
                     {
-                      "who": "xiaoman",
-                      "x": 0.48,
-                      "y": 0.72,
-                      "face": "talk"
+                      "who": "kingWu",
+                      "x": 0.46,
+                      "y": 0.74,
+                      "face": "calm",
+                      "pose": "stand"
                     }
                   ],
-                  "cap": "西晋矫枉过正，大封宗室，八王"
+                  "props": [],
+                  "bubbles": [],
+                  "cap": "统一了"
                 },
                 {
-                  "bg": "street",
+                  "bg": "palace",
                   "cast": [
                     {
-                      "who": "xiaoyin",
-                      "x": 0.48,
-                      "y": 0.72,
-                      "face": "talk"
+                      "who": "kingWu",
+                      "x": 0.46,
+                      "y": 0.74,
+                      "face": "calm",
+                      "pose": "stand"
                     }
                   ],
-                  "cap": "如果你是司马炎：西晋又被自家"
+                  "props": [],
+                  "bubbles": [],
+                  "cap": "兄弟们手里有兵"
+                },
+                {
+                  "bg": "palace",
+                  "cast": [
+                    {
+                      "who": "kingWu",
+                      "x": 0.46,
+                      "y": 0.74,
+                      "face": "calm",
+                      "pose": "stand"
+                    }
+                  ],
+                  "props": [],
+                  "bubbles": [],
+                  "cap": "互相打起来（八王之乱）"
+                },
+                {
+                  "bg": "palace",
+                  "cast": [
+                    {
+                      "who": "kingWu",
+                      "x": 0.46,
+                      "y": 0.74,
+                      "face": "calm",
+                      "pose": "stand"
+                    }
+                  ],
+                  "props": [],
+                  "bubbles": [],
+                  "cap": "西晋散了"
                 }
               ]
             }
@@ -14405,52 +15851,74 @@ window.DAYS = [
         "hookComic": {
           "panels": [
             {
-              "bg": "room",
+              "bg": "palace",
+              "cast": [
+                {
+                  "who": "kingWu",
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
+                }
+              ],
+              "props": [],
+              "bubbles": [],
+              "cap": "一串朝代名排成长队：三国"
+            },
+            {
+              "bg": "palace",
               "cast": [
                 {
                   "who": "xiaoman",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "talk"
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
                 }
               ],
-              "cap": "三国、西晋、东晋、十六国、南"
+              "props": [],
+              "bubbles": [],
+              "cap": "小满晕了"
             },
             {
-              "bg": "street",
+              "bg": "palace",
               "cast": [
                 {
                   "who": "xiaoyin",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "talk"
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
                 }
               ],
-              "cap": "因为它本身就是一段很乱的历史"
-            },
-            {
-              "bg": "shop",
-              "cast": [
-                {
-                  "who": "xiaoman",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "talk"
-                }
-              ],
-              "cap": "因为它本身就是一段很乱的历史"
-            },
-            {
-              "bg": "plain",
-              "cast": [
+              "props": [],
+              "bubbles": [
                 {
                   "who": "xiaoyin",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "wow"
+                  "text": "它本身就乱"
                 }
               ],
-              "cap": "因为它本身就是一段很乱的历史"
+              "cap": "它本身就乱"
+            },
+            {
+              "bg": "palace",
+              "cast": [
+                {
+                  "who": "kingWu",
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
+                }
+              ],
+              "props": [],
+              "bubbles": [
+                {
+                  "who": "kingWu",
+                  "text": "分合发动机"
+                }
+              ],
+              "cap": "把它们放进"
             }
           ]
         }
@@ -14727,28 +16195,69 @@ window.DAYS = [
               "type": "comic",
               "panels": [
                 {
-                  "bg": "room",
+                  "bg": "mountain",
                   "cast": [
                     {
                       "who": "xiaoman",
-                      "x": 0.48,
-                      "y": 0.72,
-                      "face": "talk"
+                      "x": 0.46,
+                      "y": 0.74,
+                      "face": "calm",
+                      "pose": "stand"
                     }
                   ],
-                  "cap": "地势定性格：上游急、能发电；"
+                  "props": [],
+                  "bubbles": [],
+                  "cap": "上海港装货"
                 },
                 {
-                  "bg": "street",
+                  "bg": "mountain",
+                  "cast": [
+                    {
+                      "who": "xiaoman",
+                      "x": 0.46,
+                      "y": 0.74,
+                      "face": "calm",
+                      "pose": "stand"
+                    }
+                  ],
+                  "props": [],
+                  "bubbles": [],
+                  "cap": "船沿江而上"
+                },
+                {
+                  "bg": "mountain",
+                  "cast": [
+                    {
+                      "who": "xiaoman",
+                      "x": 0.46,
+                      "y": 0.74,
+                      "face": "calm",
+                      "pose": "stand"
+                    }
+                  ],
+                  "props": [],
+                  "bubbles": [],
+                  "cap": "经过武汉"
+                },
+                {
+                  "bg": "mountain",
                   "cast": [
                     {
                       "who": "xiaoyin",
-                      "x": 0.48,
-                      "y": 0.72,
-                      "face": "talk"
+                      "x": 0.46,
+                      "y": 0.74,
+                      "face": "calm",
+                      "pose": "stand"
                     }
                   ],
-                  "cap": "串起来：一条河，两种性格，一"
+                  "props": [],
+                  "bubbles": [
+                    {
+                      "who": "xiaoyin",
+                      "text": "黄金水道"
+                    }
+                  ],
+                  "cap": "到重庆卸货"
                 }
               ]
             }
@@ -14818,52 +16327,76 @@ window.DAYS = [
         "hookComic": {
           "panels": [
             {
-              "bg": "room",
+              "bg": "mountain",
               "cast": [
                 {
                   "who": "xiaoman",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "talk"
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "sit"
                 }
               ],
-              "cap": "长江上游在峡谷里奔腾，下游却"
+              "props": [],
+              "bubbles": [],
+              "cap": "上游峡谷"
             },
             {
-              "bg": "street",
-              "cast": [
-                {
-                  "who": "xiaoyin",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "talk"
-                }
-              ],
-              "cap": "同一条河，为什么性格差这么多"
-            },
-            {
-              "bg": "shop",
+              "bg": "mountain",
               "cast": [
                 {
                   "who": "xiaoman",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "talk"
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
                 }
               ],
-              "cap": "同一条河，为什么性格差这么多"
+              "props": [],
+              "bubbles": [],
+              "cap": "下游宽阔的江面"
             },
             {
-              "bg": "plain",
+              "bg": "mountain",
+              "cast": [
+                {
+                  "who": "xiaoman",
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
+                }
+              ],
+              "props": [],
+              "bubbles": [
+                {
+                  "who": "xiaoman",
+                  "text": "这是同一条河？"
+                }
+              ],
+              "cap": "这是同一条河？"
+            },
+            {
+              "bg": "mountain",
               "cast": [
                 {
                   "who": "xiaoyin",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "wow"
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
                 }
               ],
-              "cap": "同一条河，为什么性格差这么多"
+              "props": [
+                {
+                  "what": "mapScroll",
+                  "x": 0.78,
+                  "y": 0.78,
+                  "k": 0.95
+                }
+              ],
+              "bubbles": [],
+              "cap": "小音在地图上把长江切成三段"
             }
           ]
         }
@@ -14880,48 +16413,72 @@ window.DAYS = [
               "cast": [
                 {
                   "who": "xiaoman",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "talk"
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
                 }
               ],
-              "cap": "同样存 1000 元，同样 "
-            },
-            {
-              "bg": "street",
-              "cast": [
+              "props": [
                 {
-                  "who": "xiaoyin",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "talk"
+                  "what": "jar",
+                  "x": 0.78,
+                  "y": 0.78,
+                  "k": 0.95
                 }
               ],
-              "cap": "差在哪"
+              "bubbles": [],
+              "cap": "两个一样的存钱罐"
             },
             {
-              "bg": "shop",
+              "bg": "room",
               "cast": [
                 {
                   "who": "xiaoman",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "talk"
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
                 }
               ],
-              "cap": "差在哪"
+              "props": [],
+              "bubbles": [],
+              "cap": "一个把利息拿走"
             },
             {
-              "bg": "plain",
+              "bg": "room",
+              "cast": [
+                {
+                  "who": "xiaoman",
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
+                }
+              ],
+              "props": [],
+              "bubbles": [],
+              "cap": "20 年后一个 3000"
+            },
+            {
+              "bg": "room",
               "cast": [
                 {
                   "who": "xiaoyin",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "wow"
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
                 }
               ],
-              "cap": "差在哪"
+              "props": [],
+              "bubbles": [
+                {
+                  "who": "xiaoyin",
+                  "text": "差在利息有没有生利息"
+                }
+              ],
+              "cap": "差在利息有没有生利息"
             }
           ]
         },
@@ -14976,27 +16533,47 @@ window.DAYS = [
               "type": "comic",
               "panels": [
                 {
-                  "bg": "bank",
+                  "bg": "room",
                   "cast": [
                     {
                       "who": "xiaoman",
-                      "x": 0.5,
-                      "y": 0.72,
-                      "face": "talk"
+                      "x": 0.46,
+                      "y": 0.74,
+                      "face": "calm",
+                      "pose": "stand"
                     }
                   ],
+                  "props": [
+                    {
+                      "what": "snowball",
+                      "x": 0.78,
+                      "y": 0.78,
+                      "k": 0.95
+                    }
+                  ],
+                  "bubbles": [],
                   "cap": "1000 元"
                 },
                 {
-                  "bg": "kitchen",
+                  "bg": "room",
                   "cast": [
                     {
                       "who": "xiaoman",
-                      "x": 0.5,
-                      "y": 0.72,
-                      "face": "talk"
+                      "x": 0.46,
+                      "y": 0.74,
+                      "face": "calm",
+                      "pose": "stand"
                     }
                   ],
+                  "props": [
+                    {
+                      "what": "snowball",
+                      "x": 0.78,
+                      "y": 0.78,
+                      "k": 0.95
+                    }
+                  ],
+                  "bubbles": [],
                   "cap": "利息粘上去"
                 },
                 {
@@ -15004,11 +16581,21 @@ window.DAYS = [
                   "cast": [
                     {
                       "who": "xiaoman",
-                      "x": 0.5,
-                      "y": 0.72,
-                      "face": "talk"
+                      "x": 0.46,
+                      "y": 0.74,
+                      "face": "calm",
+                      "pose": "stand"
                     }
                   ],
+                  "props": [
+                    {
+                      "what": "snowball",
+                      "x": 0.78,
+                      "y": 0.78,
+                      "k": 0.95
+                    }
+                  ],
+                  "bubbles": [],
                   "cap": "下一年按更大的球算"
                 }
               ]
@@ -15472,21 +17059,23 @@ window.DAYS = [
                   "cast": [
                     {
                       "who": "xiaoman",
-                      "x": 0.48,
-                      "y": 0.72,
-                      "face": "talk"
+                      "x": 0.46,
+                      "y": 0.74,
+                      "face": "calm",
+                      "pose": "stand"
                     }
                   ],
-                  "cap": "表情和恐惧本身都有实际作用，"
+                  "cap": "表情和恐惧本身都有实际作用"
                 },
                 {
                   "bg": "street",
                   "cast": [
                     {
-                      "who": "xiaoyin",
-                      "x": 0.48,
-                      "y": 0.72,
-                      "face": "talk"
+                      "who": "xiaoman",
+                      "x": 0.46,
+                      "y": 0.74,
+                      "face": "calm",
+                      "pose": "stand"
                     }
                   ],
                   "cap": "证据：情绪本身就有用"
@@ -15554,9 +17143,10 @@ window.DAYS = [
                   "cast": [
                     {
                       "who": "xiaoman",
-                      "x": 0.48,
-                      "y": 0.72,
-                      "face": "talk"
+                      "x": 0.46,
+                      "y": 0.74,
+                      "face": "calm",
+                      "pose": "stand"
                     }
                   ],
                   "cap": "信号功能：情绪把你的状态告诉"
@@ -15565,10 +17155,11 @@ window.DAYS = [
                   "bg": "street",
                   "cast": [
                     {
-                      "who": "xiaoyin",
-                      "x": 0.48,
-                      "y": 0.72,
-                      "face": "talk"
+                      "who": "xiaoman",
+                      "x": 0.46,
+                      "y": 0.74,
+                      "face": "calm",
+                      "pose": "give"
                     }
                   ],
                   "cap": "信号功能：情绪是发给别人的"
@@ -15676,48 +17267,65 @@ window.DAYS = [
               "cast": [
                 {
                   "who": "xiaoman",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "talk"
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "sit"
                 }
               ],
-              "cap": "恐惧、厌恶、悲伤都那么难受，"
+              "props": [],
+              "bubbles": [],
+              "cap": "小满难过地抱膝"
             },
             {
-              "bg": "street",
-              "cast": [
-                {
-                  "who": "xiaoyin",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "talk"
-                }
-              ],
-              "cap": "恐惧、厌恶、悲伤都那么难受，"
-            },
-            {
-              "bg": "shop",
+              "bg": "room",
               "cast": [
                 {
                   "who": "xiaoman",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "talk"
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
                 }
               ],
-              "cap": "恐惧、厌恶、悲伤都那么难受，"
+              "props": [],
+              "bubbles": [
+                {
+                  "who": "xiaoman",
+                  "text": "要是没有这些情绪多好"
+                }
+              ],
+              "cap": "要是没有这些情绪多好"
             },
             {
-              "bg": "plain",
+              "bg": "room",
               "cast": [
                 {
                   "who": "xiaoyin",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "wow"
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
                 }
               ],
-              "cap": "恐惧、厌恶、悲伤都那么难受，"
+              "props": [],
+              "bubbles": [],
+              "cap": "小音翻开一本远古相册"
+            },
+            {
+              "bg": "room",
+              "cast": [
+                {
+                  "who": "xiaoman",
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "run"
+                }
+              ],
+              "props": [],
+              "bubbles": [],
+              "cap": "祖先们正被一条蛇吓跑"
             }
           ]
         }
@@ -15730,28 +17338,41 @@ window.DAYS = [
         "hookComic": {
           "panels": [
             {
-              "bg": "kitchen",
+              "bg": "room",
               "cast": [
                 {
                   "who": "mia",
-                  "x": 0.32,
-                  "y": 0.72,
-                  "face": "happy"
-                },
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
+                }
+              ],
+              "props": [
+                {
+                  "what": "phone",
+                  "x": 0.78,
+                  "y": 0.78,
+                  "k": 0.95
+                }
+              ],
+              "bubbles": [],
+              "cap": ""
+            },
+            {
+              "bg": "kitchen",
+              "cast": [
                 {
                   "who": "leo",
-                  "x": 0.62,
+                  "x": 0.46,
                   "y": 0.74,
-                  "face": "talk"
-                },
-                {
-                  "who": "mochi",
-                  "x": 0.8,
-                  "y": 0.82,
-                  "face": "happy",
-                  "k": 0.7
+                  "face": "calm",
+                  "pose": "cheer"
                 }
-              ]
+              ],
+              "props": [],
+              "bubbles": [],
+              "cap": ""
             },
             {
               "bg": "room",
@@ -15759,47 +17380,21 @@ window.DAYS = [
                 {
                   "who": "mia",
                   "x": 0.32,
-                  "y": 0.72,
-                  "face": "happy"
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "cheer"
                 },
                 {
                   "who": "leo",
-                  "x": 0.62,
+                  "x": 0.64,
                   "y": 0.74,
-                  "face": "talk"
-                },
-                {
-                  "who": "mochi",
-                  "x": 0.8,
-                  "y": 0.82,
-                  "face": "happy",
-                  "k": 0.7
+                  "face": "calm",
+                  "pose": "cheer"
                 }
-              ]
-            },
-            {
-              "bg": "street",
-              "cast": [
-                {
-                  "who": "mia",
-                  "x": 0.32,
-                  "y": 0.72,
-                  "face": "happy"
-                },
-                {
-                  "who": "leo",
-                  "x": 0.62,
-                  "y": 0.74,
-                  "face": "talk"
-                },
-                {
-                  "who": "mochi",
-                  "x": 0.8,
-                  "y": 0.82,
-                  "face": "happy",
-                  "k": 0.7
-                }
-              ]
+              ],
+              "props": [],
+              "bubbles": [],
+              "cap": ""
             }
           ]
         },
@@ -15807,28 +17402,41 @@ window.DAYS = [
           "title": "My New Band",
           "panels": [
             {
-              "bg": "kitchen",
+              "bg": "room",
               "cast": [
                 {
                   "who": "mia",
-                  "x": 0.32,
-                  "y": 0.72,
-                  "face": "happy"
-                },
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
+                }
+              ],
+              "props": [
+                {
+                  "what": "phone",
+                  "x": 0.78,
+                  "y": 0.78,
+                  "k": 0.95
+                }
+              ],
+              "bubbles": [],
+              "cap": ""
+            },
+            {
+              "bg": "kitchen",
+              "cast": [
                 {
                   "who": "leo",
-                  "x": 0.62,
+                  "x": 0.46,
                   "y": 0.74,
-                  "face": "talk"
-                },
-                {
-                  "who": "mochi",
-                  "x": 0.8,
-                  "y": 0.82,
-                  "face": "happy",
-                  "k": 0.7
+                  "face": "calm",
+                  "pose": "cheer"
                 }
-              ]
+              ],
+              "props": [],
+              "bubbles": [],
+              "cap": ""
             },
             {
               "bg": "room",
@@ -15836,71 +17444,61 @@ window.DAYS = [
                 {
                   "who": "mia",
                   "x": 0.32,
-                  "y": 0.72,
-                  "face": "happy"
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "cheer"
                 },
                 {
                   "who": "leo",
-                  "x": 0.62,
+                  "x": 0.64,
                   "y": 0.74,
-                  "face": "talk"
-                },
-                {
-                  "who": "mochi",
-                  "x": 0.8,
-                  "y": 0.82,
-                  "face": "happy",
-                  "k": 0.7
+                  "face": "calm",
+                  "pose": "cheer"
                 }
-              ]
+              ],
+              "props": [],
+              "bubbles": [],
+              "cap": ""
             },
             {
-              "bg": "street",
+              "bg": "room",
               "cast": [
                 {
                   "who": "mia",
                   "x": 0.32,
-                  "y": 0.72,
-                  "face": "happy"
-                },
-                {
-                  "who": "leo",
-                  "x": 0.62,
                   "y": 0.74,
-                  "face": "talk"
+                  "face": "happy",
+                  "pose": "stand"
                 },
                 {
                   "who": "mochi",
-                  "x": 0.8,
-                  "y": 0.82,
-                  "face": "happy",
-                  "k": 0.7
+                  "x": 0.64,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
                 }
-              ]
-            },
-            {
-              "bg": "shop",
-              "cast": [
+              ],
+              "props": [
+                {
+                  "what": "phone",
+                  "x": 0.78,
+                  "y": 0.78,
+                  "k": 0.95
+                },
+                {
+                  "what": "mic",
+                  "x": 0.62,
+                  "y": 0.78,
+                  "k": 0.95
+                }
+              ],
+              "bubbles": [
                 {
                   "who": "mia",
-                  "x": 0.32,
-                  "y": 0.72,
-                  "face": "happy"
-                },
-                {
-                  "who": "leo",
-                  "x": 0.62,
-                  "y": 0.74,
-                  "face": "talk"
-                },
-                {
-                  "who": "mochi",
-                  "x": 0.8,
-                  "y": 0.82,
-                  "face": "happy",
-                  "k": 0.7
+                  "text": "喵"
                 }
-              ]
+              ],
+              "cap": ""
             }
           ],
           "lines": [
@@ -16305,47 +17903,73 @@ window.DAYS = [
             "bg": "palace",
             "cast": [
               {
-                "who": "qinShi",
-                "x": 0.5,
-                "y": 0.72
+                "who": "kingWu",
+                "x": 0.46,
+                "y": 0.74,
+                "face": "calm",
+                "pose": "stand"
               }
             ],
-            "cap": "秦把字和路并到一起"
+            "props": [],
+            "bubbles": [],
+            "cap": "秦统一"
           },
           {
-            "bg": "bank",
+            "bg": "palace",
             "cast": [
               {
                 "who": "xiaoman",
-                "x": 0.5,
-                "y": 0.72
+                "x": 0.46,
+                "y": 0.74,
+                "face": "calm",
+                "pose": "stand"
               }
             ],
-            "cap": "钱包也要并到一笔账"
+            "props": [
+              {
+                "what": "jar",
+                "x": 0.78,
+                "y": 0.78,
+                "k": 0.95
+              }
+            ],
+            "bubbles": [],
+            "cap": "小满的存钱罐复利"
           },
           {
-            "bg": "room",
+            "bg": "street",
             "cast": [
               {
-                "who": "xiaoman",
-                "x": 0.4,
-                "y": 0.72,
-                "face": "worry"
+                "who": "kingWu",
+                "x": 0.46,
+                "y": 0.74,
+                "face": "calm",
+                "pose": "stand"
               }
             ],
-            "cap": "心跳会骗人"
+            "props": [],
+            "bubbles": [],
+            "cap": "吊桥心动"
           },
           {
-            "bg": "plain",
+            "bg": "palace",
             "cast": [
               {
                 "who": "xiaoyin",
-                "x": 0.5,
-                "y": 0.72,
-                "face": "happy"
+                "x": 0.46,
+                "y": 0.74,
+                "face": "calm",
+                "pose": "stand"
               }
             ],
-            "cap": "三件事，一个问题"
+            "props": [],
+            "bubbles": [
+              {
+                "who": "xiaoyin",
+                "text": "一周学的"
+              }
+            ],
+            "cap": "一周学的"
           }
         ]
       }
@@ -16595,52 +18219,69 @@ window.DAYS = [
         "hookComic": {
           "panels": [
             {
+              "bg": "street",
+              "cast": [
+                {
+                  "who": "xiaoman",
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
+                }
+              ],
+              "props": [],
+              "bubbles": [],
+              "cap": "秋天的银杏街道"
+            },
+            {
               "bg": "room",
               "cast": [
                 {
                   "who": "xiaoman",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "talk"
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
                 }
               ],
-              "cap": "黄、黄橙、橙放在一起像一片秋"
+              "props": [],
+              "bubbles": [],
+              "cap": "小满穿黄"
             },
             {
               "bg": "street",
               "cast": [
                 {
-                  "who": "xiaoyin",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "talk"
-                }
-              ],
-              "cap": "为什么色相不同，却这么和谐"
-            },
-            {
-              "bg": "shop",
-              "cast": [
-                {
                   "who": "xiaoman",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "talk"
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
                 }
               ],
-              "cap": "为什么色相不同，却这么和谐"
+              "props": [],
+              "bubbles": [],
+              "cap": "和街景融在一起"
             },
             {
-              "bg": "plain",
+              "bg": "room",
               "cast": [
                 {
                   "who": "xiaoyin",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "wow"
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
                 }
               ],
-              "cap": "为什么色相不同，却这么和谐"
+              "props": [],
+              "bubbles": [
+                {
+                  "who": "xiaoyin",
+                  "text": "一家人"
+                }
+              ],
+              "cap": "一家人"
             }
           ]
         }
@@ -16812,28 +18453,69 @@ window.DAYS = [
               "type": "comic",
               "panels": [
                 {
-                  "bg": "room",
+                  "bg": "palace",
                   "cast": [
                     {
-                      "who": "xiaoman",
-                      "x": 0.48,
-                      "y": 0.72,
-                      "face": "talk"
+                      "who": "kingWu",
+                      "x": 0.46,
+                      "y": 0.74,
+                      "face": "calm",
+                      "pose": "sit"
                     }
                   ],
-                  "cap": "世家大族垄断官位，皇帝用人受"
+                  "props": [],
+                  "bubbles": [],
+                  "cap": "贵族子弟坐着轿子进官府"
                 },
                 {
-                  "bg": "street",
+                  "bg": "palace",
                   "cast": [
                     {
-                      "who": "xiaoyin",
-                      "x": 0.48,
-                      "y": 0.72,
-                      "face": "talk"
+                      "who": "kingWu",
+                      "x": 0.46,
+                      "y": 0.74,
+                      "face": "calm",
+                      "pose": "stand"
                     }
                   ],
-                  "cap": "另一个老问题：做官看出身"
+                  "props": [],
+                  "bubbles": [],
+                  "cap": "寒门书生在门外读书"
+                },
+                {
+                  "bg": "palace",
+                  "cast": [
+                    {
+                      "who": "kingWu",
+                      "x": 0.46,
+                      "y": 0.74,
+                      "face": "calm",
+                      "pose": "stand"
+                    }
+                  ],
+                  "props": [],
+                  "bubbles": [
+                    {
+                      "who": "kingWu",
+                      "text": "只看家世"
+                    }
+                  ],
+                  "cap": "门口牌子"
+                },
+                {
+                  "bg": "palace",
+                  "cast": [
+                    {
+                      "who": "kingWu",
+                      "x": 0.46,
+                      "y": 0.74,
+                      "face": "calm",
+                      "pose": "stand"
+                    }
+                  ],
+                  "props": [],
+                  "bubbles": [],
+                  "cap": "书生叹气"
                 }
               ]
             }
@@ -16863,28 +18545,69 @@ window.DAYS = [
               "type": "comic",
               "panels": [
                 {
-                  "bg": "room",
+                  "bg": "palace",
                   "cast": [
                     {
-                      "who": "xiaoman",
-                      "x": 0.48,
-                      "y": 0.72,
-                      "face": "talk"
+                      "who": "kingWu",
+                      "x": 0.46,
+                      "y": 0.74,
+                      "face": "calm",
+                      "pose": "stand"
                     }
                   ],
-                  "cap": "科举让出身不再决定一切，官员"
+                  "props": [],
+                  "bubbles": [],
+                  "cap": "考场里一排排考生"
                 },
                 {
-                  "bg": "street",
+                  "bg": "palace",
+                  "cast": [
+                    {
+                      "who": "kingWu",
+                      "x": 0.46,
+                      "y": 0.74,
+                      "face": "calm",
+                      "pose": "give"
+                    }
+                  ],
+                  "props": [],
+                  "bubbles": [],
+                  "cap": "寒门书生交卷"
+                },
+                {
+                  "bg": "palace",
+                  "cast": [
+                    {
+                      "who": "kingWu",
+                      "x": 0.46,
+                      "y": 0.74,
+                      "face": "calm",
+                      "pose": "stand"
+                    }
+                  ],
+                  "props": [],
+                  "bubbles": [],
+                  "cap": "放榜他考中了"
+                },
+                {
+                  "bg": "palace",
                   "cast": [
                     {
                       "who": "xiaoyin",
-                      "x": 0.48,
-                      "y": 0.72,
-                      "face": "talk"
+                      "x": 0.46,
+                      "y": 0.74,
+                      "face": "calm",
+                      "pose": "stand"
                     }
                   ],
-                  "cap": "科举：用考试选官"
+                  "props": [],
+                  "bubbles": [
+                    {
+                      "who": "xiaoyin",
+                      "text": "凭考试做官"
+                    }
+                  ],
+                  "cap": "进官府"
                 }
               ]
             }
@@ -17121,52 +18844,69 @@ window.DAYS = [
         "hookComic": {
           "panels": [
             {
-              "bg": "room",
+              "bg": "palace",
+              "cast": [
+                {
+                  "who": "kingWu",
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
+                }
+              ],
+              "props": [],
+              "bubbles": [],
+              "cap": "两组卡片：秦 15 年 +"
+            },
+            {
+              "bg": "palace",
+              "cast": [
+                {
+                  "who": "kingWu",
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
+                }
+              ],
+              "props": [],
+              "bubbles": [],
+              "cap": "两组并排"
+            },
+            {
+              "bg": "palace",
               "cast": [
                 {
                   "who": "xiaoman",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "talk"
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
                 }
               ],
-              "cap": "隋朝只有 37 年，唐朝却有"
-            },
-            {
-              "bg": "street",
-              "cast": [
-                {
-                  "who": "xiaoyin",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "talk"
-                }
-              ],
-              "cap": "这个组合是不是有点眼熟"
-            },
-            {
-              "bg": "shop",
-              "cast": [
+              "props": [],
+              "bubbles": [
                 {
                   "who": "xiaoman",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "talk"
+                  "text": "好眼熟"
                 }
               ],
-              "cap": "这个组合是不是有点眼熟"
+              "cap": "好眼熟"
             },
             {
-              "bg": "plain",
+              "bg": "palace",
               "cast": [
                 {
                   "who": "xiaoyin",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "wow"
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
                 }
               ],
-              "cap": "这个组合是不是有点眼熟"
+              "props": [],
+              "bubbles": [],
+              "cap": "小音把两组叠在一起"
             }
           ]
         }
@@ -17572,52 +19312,69 @@ window.DAYS = [
         "hookComic": {
           "panels": [
             {
-              "bg": "room",
+              "bg": "mountain",
               "cast": [
                 {
                   "who": "xiaoman",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "talk"
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
                 }
               ],
-              "cap": "中国东部夏天又热又多雨，冬天"
+              "props": [],
+              "bubbles": [],
+              "cap": "七月"
             },
             {
-              "bg": "street",
+              "bg": "mountain",
               "cast": [
                 {
-                  "who": "xiaoyin",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "talk"
+                  "who": "ale",
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
                 }
               ],
-              "cap": "为什么雨偏偏和热一起来"
+              "props": [],
+              "bubbles": [],
+              "cap": "一月"
             },
             {
-              "bg": "shop",
+              "bg": "mountain",
               "cast": [
                 {
                   "who": "xiaoman",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "talk"
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
                 }
               ],
-              "cap": "为什么雨偏偏和热一起来"
+              "props": [],
+              "bubbles": [
+                {
+                  "who": "xiaoman",
+                  "text": "风怎么换方向了？"
+                }
+              ],
+              "cap": "两人视频"
             },
             {
-              "bg": "plain",
+              "bg": "mountain",
               "cast": [
                 {
                   "who": "xiaoyin",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "wow"
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "cheer"
                 }
               ],
-              "cap": "为什么雨偏偏和热一起来"
+              "props": [],
+              "bubbles": [],
+              "cap": "小音拿着一把沙和一杯海水"
             }
           ]
         }
@@ -17634,48 +19391,72 @@ window.DAYS = [
               "cast": [
                 {
                   "who": "xiaoman",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "talk"
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
                 }
               ],
-              "cap": "你存着的 1 万块，数字一分"
-            },
-            {
-              "bg": "street",
-              "cast": [
+              "props": [
                 {
-                  "who": "xiaoyin",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "talk"
+                  "what": "payslip",
+                  "x": 0.78,
+                  "y": 0.78,
+                  "k": 0.95
                 }
               ],
-              "cap": "你存着的 1 万块，数字一分"
+              "bubbles": [],
+              "cap": "存折上 10000 一分没少"
             },
             {
-              "bg": "shop",
+              "bg": "room",
               "cast": [
                 {
                   "who": "xiaoman",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "talk"
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
                 }
               ],
-              "cap": "你存着的 1 万块，数字一分"
+              "props": [],
+              "bubbles": [],
+              "cap": "一年前能买 500 碗面"
             },
             {
-              "bg": "plain",
+              "bg": "room",
+              "cast": [
+                {
+                  "who": "xiaoman",
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
+                }
+              ],
+              "props": [],
+              "bubbles": [],
+              "cap": "今年只能买 485 碗"
+            },
+            {
+              "bg": "room",
               "cast": [
                 {
                   "who": "xiaoyin",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "wow"
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
                 }
               ],
-              "cap": "你存着的 1 万块，数字一分"
+              "props": [],
+              "bubbles": [
+                {
+                  "who": "xiaoyin",
+                  "text": "钱在悄悄缩水"
+                }
+              ],
+              "cap": "钱在悄悄缩水"
             }
           ]
         },
@@ -17687,27 +19468,47 @@ window.DAYS = [
               "type": "comic",
               "panels": [
                 {
-                  "bg": "bank",
+                  "bg": "room",
                   "cast": [
                     {
                       "who": "xiaoman",
-                      "x": 0.5,
-                      "y": 0.72,
-                      "face": "talk"
+                      "x": 0.46,
+                      "y": 0.74,
+                      "face": "calm",
+                      "pose": "stand"
                     }
                   ],
+                  "props": [
+                    {
+                      "what": "payslip",
+                      "x": 0.78,
+                      "y": 0.78,
+                      "k": 0.95
+                    }
+                  ],
+                  "bubbles": [],
                   "cap": "存款一分没少"
                 },
                 {
-                  "bg": "kitchen",
+                  "bg": "room",
                   "cast": [
                     {
                       "who": "xiaoman",
-                      "x": 0.5,
-                      "y": 0.72,
-                      "face": "talk"
+                      "x": 0.46,
+                      "y": 0.74,
+                      "face": "calm",
+                      "pose": "stand"
                     }
                   ],
+                  "props": [
+                    {
+                      "what": "bowl",
+                      "x": 0.78,
+                      "y": 0.78,
+                      "k": 0.95
+                    }
+                  ],
+                  "bubbles": [],
                   "cap": "面贵了 1 块"
                 },
                 {
@@ -17715,11 +19516,21 @@ window.DAYS = [
                   "cast": [
                     {
                       "who": "xiaoman",
-                      "x": 0.5,
-                      "y": 0.72,
-                      "face": "talk"
+                      "x": 0.46,
+                      "y": 0.74,
+                      "face": "calm",
+                      "pose": "stand"
                     }
                   ],
+                  "props": [
+                    {
+                      "what": "bowl",
+                      "x": 0.78,
+                      "y": 0.78,
+                      "k": 0.95
+                    }
+                  ],
+                  "bubbles": [],
                   "cap": "能买的面变少了"
                 }
               ]
@@ -17831,39 +19642,62 @@ window.DAYS = [
               "type": "comic",
               "panels": [
                 {
-                  "bg": "bank",
+                  "bg": "room",
                   "cast": [
                     {
                       "who": "xiaoman",
-                      "x": 0.5,
-                      "y": 0.72,
-                      "face": "talk"
+                      "x": 0.46,
+                      "y": 0.74,
+                      "face": "calm",
+                      "pose": "stand"
                     }
                   ],
-                  "cap": "10 个苹果，10 元钱"
-                },
-                {
-                  "bg": "kitchen",
-                  "cast": [
+                  "props": [
                     {
-                      "who": "xiaoman",
-                      "x": 0.5,
-                      "y": 0.72,
-                      "face": "talk"
+                      "what": "apple",
+                      "x": 0.78,
+                      "y": 0.78,
+                      "k": 0.95
                     }
                   ],
-                  "cap": "钱多了，苹果没多"
+                  "bubbles": [],
+                  "cap": "10 个苹果"
                 },
                 {
                   "bg": "room",
                   "cast": [
                     {
                       "who": "xiaoman",
-                      "x": 0.5,
-                      "y": 0.72,
-                      "face": "talk"
+                      "x": 0.46,
+                      "y": 0.74,
+                      "face": "calm",
+                      "pose": "stand"
                     }
                   ],
+                  "props": [
+                    {
+                      "what": "apple",
+                      "x": 0.78,
+                      "y": 0.78,
+                      "k": 0.95
+                    }
+                  ],
+                  "bubbles": [],
+                  "cap": "钱多了"
+                },
+                {
+                  "bg": "room",
+                  "cast": [
+                    {
+                      "who": "xiaoman",
+                      "x": 0.46,
+                      "y": 0.74,
+                      "face": "calm",
+                      "pose": "stand"
+                    }
+                  ],
+                  "props": [],
+                  "bubbles": [],
                   "cap": "每个苹果变 2 元"
                 }
               ]
@@ -17975,27 +19809,52 @@ window.DAYS = [
               "type": "comic",
               "panels": [
                 {
-                  "bg": "bank",
+                  "bg": "room",
                   "cast": [
                     {
                       "who": "xiaoman",
-                      "x": 0.5,
-                      "y": 0.72,
-                      "face": "talk"
+                      "x": 0.46,
+                      "y": 0.74,
+                      "face": "calm",
+                      "pose": "stand"
                     }
                   ],
-                  "cap": "数字不变，物价在涨"
+                  "props": [
+                    {
+                      "what": "payslip",
+                      "x": 0.78,
+                      "y": 0.78,
+                      "k": 0.95
+                    }
+                  ],
+                  "bubbles": [
+                    {
+                      "who": "xiaoman",
+                      "text": "物价 +3%"
+                    }
+                  ],
+                  "cap": "数字不变"
                 },
                 {
-                  "bg": "kitchen",
+                  "bg": "room",
                   "cast": [
                     {
                       "who": "xiaoman",
-                      "x": 0.5,
-                      "y": 0.72,
-                      "face": "talk"
+                      "x": 0.46,
+                      "y": 0.74,
+                      "face": "calm",
+                      "pose": "cheer"
                     }
                   ],
+                  "props": [
+                    {
+                      "what": "payslip",
+                      "x": 0.78,
+                      "y": 0.78,
+                      "k": 0.95
+                    }
+                  ],
+                  "bubbles": [],
                   "cap": "能买的一年比一年少"
                 }
               ]
@@ -18229,9 +20088,10 @@ window.DAYS = [
                   "cast": [
                     {
                       "who": "xiaoman",
-                      "x": 0.48,
-                      "y": 0.72,
-                      "face": "talk"
+                      "x": 0.46,
+                      "y": 0.74,
+                      "face": "calm",
+                      "pose": "stand"
                     }
                   ],
                   "cap": "任务越难，最佳唤醒越低；任务"
@@ -18240,10 +20100,11 @@ window.DAYS = [
                   "bg": "street",
                   "cast": [
                     {
-                      "who": "xiaoyin",
-                      "x": 0.48,
-                      "y": 0.72,
-                      "face": "talk"
+                      "who": "xiaoman",
+                      "x": 0.46,
+                      "y": 0.74,
+                      "face": "calm",
+                      "pose": "stand"
                     }
                   ],
                   "cap": "1908 年的小鼠实验"
@@ -18440,48 +20301,60 @@ window.DAYS = [
               "cast": [
                 {
                   "who": "xiaoman",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "talk"
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "worry",
+                  "pose": "stand"
                 }
               ],
-              "cap": "上台前一点都不紧张，是好事吗"
+              "props": [],
+              "bubbles": [],
+              "cap": "演出前小满一点都不紧张"
             },
             {
-              "bg": "street",
-              "cast": [
-                {
-                  "who": "xiaoyin",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "talk"
-                }
-              ],
-              "cap": "上台前一点都不紧张，是好事吗"
-            },
-            {
-              "bg": "shop",
+              "bg": "room",
               "cast": [
                 {
                   "who": "xiaoman",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "talk"
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
                 }
               ],
-              "cap": "上台前一点都不紧张，是好事吗"
+              "props": [],
+              "bubbles": [],
+              "cap": "上台弹错了好几处"
             },
             {
-              "bg": "plain",
+              "bg": "room",
+              "cast": [
+                {
+                  "who": "xiaoman",
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "worry",
+                  "pose": "stand"
+                }
+              ],
+              "props": [],
+              "bubbles": [],
+              "cap": "下一次有点紧张"
+            },
+            {
+              "bg": "room",
               "cast": [
                 {
                   "who": "xiaoyin",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "wow"
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
                 }
               ],
-              "cap": "上台前一点都不紧张，是好事吗"
+              "props": [],
+              "bubbles": [],
+              "cap": "小音画出一条倒 U"
             }
           ]
         }
@@ -18494,76 +20367,63 @@ window.DAYS = [
         "hookComic": {
           "panels": [
             {
-              "bg": "kitchen",
+              "bg": "shop",
               "cast": [
                 {
                   "who": "mia",
                   "x": 0.32,
-                  "y": 0.72,
-                  "face": "happy"
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "cheer"
                 },
                 {
                   "who": "leo",
-                  "x": 0.62,
+                  "x": 0.64,
                   "y": 0.74,
-                  "face": "talk"
-                },
-                {
-                  "who": "mochi",
-                  "x": 0.8,
-                  "y": 0.82,
-                  "face": "happy",
-                  "k": 0.7
+                  "face": "calm",
+                  "pose": "cheer"
                 }
-              ]
-            },
-            {
-              "bg": "room",
-              "cast": [
+              ],
+              "props": [
                 {
-                  "who": "mia",
-                  "x": 0.32,
-                  "y": 0.72,
-                  "face": "happy"
-                },
-                {
-                  "who": "leo",
-                  "x": 0.62,
-                  "y": 0.74,
-                  "face": "talk"
-                },
-                {
-                  "who": "mochi",
-                  "x": 0.8,
-                  "y": 0.82,
-                  "face": "happy",
-                  "k": 0.7
+                  "what": "bag",
+                  "x": 0.78,
+                  "y": 0.78,
+                  "k": 0.95
                 }
-              ]
+              ],
+              "bubbles": [],
+              "cap": ""
             },
             {
               "bg": "street",
               "cast": [
                 {
-                  "who": "mia",
-                  "x": 0.32,
-                  "y": 0.72,
-                  "face": "happy"
-                },
-                {
                   "who": "leo",
-                  "x": 0.62,
+                  "x": 0.46,
                   "y": 0.74,
-                  "face": "talk"
-                },
+                  "face": "calm",
+                  "pose": "stand"
+                }
+              ],
+              "props": [],
+              "bubbles": [],
+              "cap": ""
+            },
+            {
+              "bg": "room",
+              "cast": [
                 {
                   "who": "mochi",
-                  "x": 0.8,
-                  "y": 0.82,
-                  "face": "happy",
-                  "k": 0.7
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
                 }
-              ]
+              ],
+              "props": [],
+              "bubbles": [],
+              "cap": ""
             }
           ]
         },
@@ -18571,100 +20431,98 @@ window.DAYS = [
           "title": "Last Night",
           "panels": [
             {
-              "bg": "kitchen",
-              "cast": [
-                {
-                  "who": "mia",
-                  "x": 0.32,
-                  "y": 0.72,
-                  "face": "happy"
-                },
-                {
-                  "who": "leo",
-                  "x": 0.62,
-                  "y": 0.74,
-                  "face": "talk"
-                },
-                {
-                  "who": "mochi",
-                  "x": 0.8,
-                  "y": 0.82,
-                  "face": "happy",
-                  "k": 0.7
-                }
-              ]
-            },
-            {
-              "bg": "room",
-              "cast": [
-                {
-                  "who": "mia",
-                  "x": 0.32,
-                  "y": 0.72,
-                  "face": "happy"
-                },
-                {
-                  "who": "leo",
-                  "x": 0.62,
-                  "y": 0.74,
-                  "face": "talk"
-                },
-                {
-                  "who": "mochi",
-                  "x": 0.8,
-                  "y": 0.82,
-                  "face": "happy",
-                  "k": 0.7
-                }
-              ]
-            },
-            {
-              "bg": "street",
-              "cast": [
-                {
-                  "who": "mia",
-                  "x": 0.32,
-                  "y": 0.72,
-                  "face": "happy"
-                },
-                {
-                  "who": "leo",
-                  "x": 0.62,
-                  "y": 0.74,
-                  "face": "talk"
-                },
-                {
-                  "who": "mochi",
-                  "x": 0.8,
-                  "y": 0.82,
-                  "face": "happy",
-                  "k": 0.7
-                }
-              ]
-            },
-            {
               "bg": "shop",
               "cast": [
                 {
                   "who": "mia",
                   "x": 0.32,
-                  "y": 0.72,
-                  "face": "happy"
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "cheer"
                 },
                 {
                   "who": "leo",
-                  "x": 0.62,
+                  "x": 0.64,
                   "y": 0.74,
-                  "face": "talk"
+                  "face": "calm",
+                  "pose": "cheer"
+                }
+              ],
+              "props": [
+                {
+                  "what": "bag",
+                  "x": 0.78,
+                  "y": 0.78,
+                  "k": 0.95
+                }
+              ],
+              "bubbles": [],
+              "cap": ""
+            },
+            {
+              "bg": "street",
+              "cast": [
+                {
+                  "who": "leo",
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
+                }
+              ],
+              "props": [],
+              "bubbles": [],
+              "cap": ""
+            },
+            {
+              "bg": "room",
+              "cast": [
+                {
+                  "who": "mochi",
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
+                }
+              ],
+              "props": [],
+              "bubbles": [],
+              "cap": ""
+            },
+            {
+              "bg": "room",
+              "cast": [
+                {
+                  "who": "leo",
+                  "x": 0.32,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
                 },
                 {
                   "who": "mochi",
-                  "x": 0.8,
-                  "y": 0.82,
-                  "face": "happy",
-                  "k": 0.7
+                  "x": 0.64,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
                 }
-              ]
+              ],
+              "props": [
+                {
+                  "what": "fish",
+                  "x": 0.78,
+                  "y": 0.78,
+                  "k": 0.95
+                },
+                {
+                  "what": "bag",
+                  "x": 0.62,
+                  "y": 0.78,
+                  "k": 0.95
+                }
+              ],
+              "bubbles": [],
+              "cap": ""
             }
           ],
           "lines": [
@@ -19207,9 +21065,10 @@ window.DAYS = [
                   "cast": [
                     {
                       "who": "xiaoman",
-                      "x": 0.48,
-                      "y": 0.72,
-                      "face": "talk"
+                      "x": 0.46,
+                      "y": 0.74,
+                      "face": "calm",
+                      "pose": "stand"
                     }
                   ],
                   "cap": "互补色是眼睛里的天生对立，对"
@@ -19218,10 +21077,11 @@ window.DAYS = [
                   "bg": "street",
                   "cast": [
                     {
-                      "who": "xiaoyin",
-                      "x": 0.48,
-                      "y": 0.72,
-                      "face": "talk"
+                      "who": "xiaoman",
+                      "x": 0.46,
+                      "y": 0.74,
+                      "face": "calm",
+                      "pose": "stand"
                     }
                   ],
                   "cap": "串起来：从残像到穿搭"
@@ -19292,48 +21152,65 @@ window.DAYS = [
               "cast": [
                 {
                   "who": "xiaoman",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "talk"
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
                 }
               ],
-              "cap": "盯着一块红色看 30 秒，再"
+              "props": [],
+              "bubbles": [],
+              "cap": "小满盯着一块红布"
             },
             {
-              "bg": "street",
-              "cast": [
-                {
-                  "who": "xiaoyin",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "talk"
-                }
-              ],
-              "cap": "盯着一块红色看 30 秒，再"
-            },
-            {
-              "bg": "shop",
+              "bg": "room",
               "cast": [
                 {
                   "who": "xiaoman",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "talk"
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
                 }
               ],
-              "cap": "盯着一块红色看 30 秒，再"
+              "props": [],
+              "bubbles": [],
+              "cap": "30 秒后看白墙"
             },
             {
-              "bg": "plain",
+              "bg": "room",
+              "cast": [
+                {
+                  "who": "xiaoman",
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
+                }
+              ],
+              "props": [],
+              "bubbles": [],
+              "cap": "墙上出现淡绿色"
+            },
+            {
+              "bg": "room",
               "cast": [
                 {
                   "who": "xiaoyin",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "wow"
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
                 }
               ],
-              "cap": "盯着一块红色看 30 秒，再"
+              "props": [],
+              "bubbles": [
+                {
+                  "who": "xiaoyin",
+                  "text": "眼睛在补颜色"
+                }
+              ],
+              "cap": "眼睛在补颜色"
             }
           ]
         }
@@ -19505,28 +21382,69 @@ window.DAYS = [
               "type": "comic",
               "panels": [
                 {
-                  "bg": "room",
+                  "bg": "mountain",
                   "cast": [
                     {
-                      "who": "xiaoman",
-                      "x": 0.48,
-                      "y": 0.72,
-                      "face": "talk"
+                      "who": "kingWu",
+                      "x": 0.46,
+                      "y": 0.74,
+                      "face": "calm",
+                      "pose": "stand"
                     }
                   ],
-                  "cap": "安史之乱，是节度使权力过大的"
+                  "props": [],
+                  "bubbles": [],
+                  "cap": "安禄山（`anLushan`"
                 },
                 {
-                  "bg": "street",
+                  "bg": "palace",
                   "cast": [
                     {
-                      "who": "xiaoyin",
-                      "x": 0.48,
-                      "y": 0.72,
-                      "face": "talk"
+                      "who": "kingWu",
+                      "x": 0.46,
+                      "y": 0.74,
+                      "face": "calm",
+                      "pose": "stand"
                     }
                   ],
-                  "cap": "755 年：安史之乱"
+                  "props": [],
+                  "bubbles": [
+                    {
+                      "who": "kingWu",
+                      "text": "清君侧！"
+                    }
+                  ],
+                  "cap": "清君侧！"
+                },
+                {
+                  "bg": "palace",
+                  "cast": [
+                    {
+                      "who": "kingWu",
+                      "x": 0.46,
+                      "y": 0.74,
+                      "face": "calm",
+                      "pose": "stand"
+                    }
+                  ],
+                  "props": [],
+                  "bubbles": [],
+                  "cap": "大军南下"
+                },
+                {
+                  "bg": "palace",
+                  "cast": [
+                    {
+                      "who": "kingWu",
+                      "x": 0.46,
+                      "y": 0.74,
+                      "face": "calm",
+                      "pose": "stand"
+                    }
+                  ],
+                  "props": [],
+                  "bubbles": [],
+                  "cap": "唐玄宗逃往四川"
                 }
               ]
             }
@@ -19785,52 +21703,83 @@ window.DAYS = [
         "hookComic": {
           "panels": [
             {
-              "bg": "room",
+              "bg": "palace",
+              "cast": [
+                {
+                  "who": "kingWu",
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
+                }
+              ],
+              "props": [
+                {
+                  "what": "castle",
+                  "x": 0.78,
+                  "y": 0.78,
+                  "k": 0.95
+                }
+              ],
+              "bubbles": [],
+              "cap": "开元盛世"
+            },
+            {
+              "bg": "palace",
+              "cast": [
+                {
+                  "who": "kingWu",
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
+                }
+              ],
+              "props": [
+                {
+                  "what": "castle",
+                  "x": 0.78,
+                  "y": 0.78,
+                  "k": 0.95
+                }
+              ],
+              "bubbles": [],
+              "cap": "不到 20 年后"
+            },
+            {
+              "bg": "palace",
               "cast": [
                 {
                   "who": "xiaoman",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "talk"
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
                 }
               ],
-              "cap": "开元盛世之后，只用了不到 2"
-            },
-            {
-              "bg": "street",
-              "cast": [
-                {
-                  "who": "xiaoyin",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "talk"
-                }
-              ],
-              "cap": "是谁推了第一把"
-            },
-            {
-              "bg": "shop",
-              "cast": [
+              "props": [],
+              "bubbles": [
                 {
                   "who": "xiaoman",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "talk"
+                  "text": "谁推了第一把？"
                 }
               ],
-              "cap": "是谁推了第一把"
+              "cap": "谁推了第一把？"
             },
             {
-              "bg": "plain",
+              "bg": "palace",
               "cast": [
                 {
                   "who": "xiaoyin",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "wow"
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "point"
                 }
               ],
-              "cap": "是谁推了第一把"
+              "props": [],
+              "bubbles": [],
+              "cap": "小音指向边疆"
             }
           ]
         }
@@ -20282,52 +22231,69 @@ window.DAYS = [
         "hookComic": {
           "panels": [
             {
-              "bg": "room",
+              "bg": "mountain",
               "cast": [
                 {
                   "who": "xiaoman",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "talk"
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
                 }
               ],
-              "cap": "为什么北方人爱吃面、南方人爱"
+              "props": [],
+              "bubbles": [],
+              "cap": "北方：小满在暖气房里吃面"
             },
             {
-              "bg": "street",
+              "bg": "mountain",
               "cast": [
                 {
-                  "who": "xiaoyin",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "talk"
+                  "who": "ale",
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
                 }
               ],
-              "cap": "答案藏在一条山脉和一条河里"
+              "props": [],
+              "bubbles": [],
+              "cap": "南方：阿乐裹着毯子吃米饭"
             },
             {
-              "bg": "shop",
+              "bg": "mountain",
               "cast": [
                 {
                   "who": "xiaoman",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "talk"
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
                 }
               ],
-              "cap": "答案藏在一条山脉和一条河里"
+              "props": [],
+              "bubbles": [],
+              "cap": "两碗饭中间一条线"
             },
             {
-              "bg": "plain",
+              "bg": "mountain",
               "cast": [
                 {
                   "who": "xiaoyin",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "wow"
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
                 }
               ],
-              "cap": "答案藏在一条山脉和一条河里"
+              "props": [],
+              "bubbles": [
+                {
+                  "who": "xiaoyin",
+                  "text": "答案在一座山和一条河里"
+                }
+              ],
+              "cap": "答案在一座山和一条河里"
             }
           ]
         }
@@ -20344,48 +22310,60 @@ window.DAYS = [
               "cast": [
                 {
                   "who": "xiaoman",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "talk"
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
                 }
               ],
-              "cap": "理财收益 2%，看起来在赚钱"
+              "props": [],
+              "bubbles": [],
+              "cap": "理财 App 显示 +2%"
             },
             {
-              "bg": "street",
-              "cast": [
-                {
-                  "who": "xiaoyin",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "talk"
-                }
-              ],
-              "cap": "如果物价涨了 3% 呢"
-            },
-            {
-              "bg": "shop",
+              "bg": "room",
               "cast": [
                 {
                   "who": "xiaoman",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "talk"
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "happy",
+                  "pose": "stand"
                 }
               ],
-              "cap": "另一个产品\"3 个月赚 1%"
+              "props": [],
+              "bubbles": [],
+              "cap": "小满开心"
             },
             {
-              "bg": "plain",
+              "bg": "room",
+              "cast": [
+                {
+                  "who": "xiaoman",
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
+                }
+              ],
+              "props": [],
+              "bubbles": [],
+              "cap": "超市价签涨了 3%"
+            },
+            {
+              "bg": "room",
               "cast": [
                 {
                   "who": "xiaoyin",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "wow"
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
                 }
               ],
-              "cap": "另一个产品\"3 个月赚 1%"
+              "props": [],
+              "bubbles": [],
+              "cap": "小音把两个数放上天平"
             }
           ]
         },
@@ -20397,27 +22375,33 @@ window.DAYS = [
               "type": "comic",
               "panels": [
                 {
-                  "bg": "bank",
+                  "bg": "room",
                   "cast": [
                     {
                       "who": "xiaoman",
-                      "x": 0.5,
-                      "y": 0.72,
-                      "face": "talk"
+                      "x": 0.46,
+                      "y": 0.74,
+                      "face": "happy",
+                      "pose": "stand"
                     }
                   ],
+                  "props": [],
+                  "bubbles": [],
                   "cap": "钱多了 2 元"
                 },
                 {
-                  "bg": "kitchen",
+                  "bg": "room",
                   "cast": [
                     {
                       "who": "xiaoman",
-                      "x": 0.5,
-                      "y": 0.72,
-                      "face": "talk"
+                      "x": 0.46,
+                      "y": 0.74,
+                      "face": "calm",
+                      "pose": "stand"
                     }
                   ],
+                  "props": [],
+                  "bubbles": [],
                   "cap": "面也贵了"
                 },
                 {
@@ -20425,11 +22409,21 @@ window.DAYS = [
                   "cast": [
                     {
                       "who": "xiaoman",
-                      "x": 0.5,
-                      "y": 0.72,
-                      "face": "talk"
+                      "x": 0.46,
+                      "y": 0.74,
+                      "face": "worry",
+                      "pose": "think"
                     }
                   ],
+                  "props": [
+                    {
+                      "what": "bowl",
+                      "x": 0.78,
+                      "y": 0.78,
+                      "k": 0.95
+                    }
+                  ],
+                  "bubbles": [],
                   "cap": "能买的反而少了"
                 }
               ]
@@ -20832,9 +22826,10 @@ window.DAYS = [
                   "cast": [
                     {
                       "who": "xiaoman",
-                      "x": 0.48,
-                      "y": 0.72,
-                      "face": "talk"
+                      "x": 0.46,
+                      "y": 0.74,
+                      "face": "calm",
+                      "pose": "stand"
                     }
                   ],
                   "cap": "压力源各不相同，身体的压力反"
@@ -20843,10 +22838,11 @@ window.DAYS = [
                   "bg": "street",
                   "cast": [
                     {
-                      "who": "xiaoyin",
-                      "x": 0.48,
-                      "y": 0.72,
-                      "face": "talk"
+                      "who": "selye",
+                      "x": 0.46,
+                      "y": 0.74,
+                      "face": "calm",
+                      "pose": "stand"
                     }
                   ],
                   "cap": "塞利的发现：不同的苦，同一种"
@@ -21058,52 +23054,74 @@ window.DAYS = [
         "hookComic": {
           "panels": [
             {
+              "bg": "palace",
+              "cast": [
+                {
+                  "who": "xiaoman",
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
+                }
+              ],
+              "props": [],
+              "bubbles": [],
+              "cap": "连续加班第 1 周：累"
+            },
+            {
+              "bg": "palace",
+              "cast": [
+                {
+                  "who": "xiaoman",
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
+                }
+              ],
+              "props": [],
+              "bubbles": [
+                {
+                  "who": "xiaoman",
+                  "text": "习惯了"
+                }
+              ],
+              "cap": "第 3 周"
+            },
+            {
+              "bg": "palace",
+              "cast": [
+                {
+                  "who": "xiaoman",
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "worry",
+                  "pose": "stand"
+                }
+              ],
+              "props": [],
+              "bubbles": [],
+              "cap": "第 5 周：病倒"
+            },
+            {
               "bg": "room",
               "cast": [
                 {
-                  "who": "xiaoman",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "talk"
+                  "who": "xiaoyin",
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
                 }
               ],
-              "cap": "连续加班一个月，好像“已经习"
-            },
-            {
-              "bg": "street",
-              "cast": [
+              "props": [],
+              "bubbles": [
                 {
                   "who": "xiaoyin",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "talk"
+                  "text": "身体真的适应了吗？"
                 }
               ],
-              "cap": "身体真的适应了吗"
-            },
-            {
-              "bg": "shop",
-              "cast": [
-                {
-                  "who": "xiaoman",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "talk"
-                }
-              ],
-              "cap": "身体真的适应了吗"
-            },
-            {
-              "bg": "plain",
-              "cast": [
-                {
-                  "who": "xiaoyin",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "wow"
-                }
-              ],
-              "cap": "身体真的适应了吗"
+              "cap": "身体真的适应了吗？"
             }
           ]
         }
@@ -21121,71 +23139,58 @@ window.DAYS = [
                 {
                   "who": "mia",
                   "x": 0.32,
-                  "y": 0.72,
-                  "face": "happy"
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
                 },
                 {
                   "who": "leo",
-                  "x": 0.62,
+                  "x": 0.64,
                   "y": 0.74,
-                  "face": "talk"
-                },
-                {
-                  "who": "mochi",
-                  "x": 0.8,
-                  "y": 0.82,
-                  "face": "happy",
-                  "k": 0.7
+                  "face": "calm",
+                  "pose": "stand"
                 }
-              ]
+              ],
+              "props": [],
+              "bubbles": [],
+              "cap": ""
             },
             {
               "bg": "room",
               "cast": [
                 {
                   "who": "mia",
-                  "x": 0.32,
-                  "y": 0.72,
-                  "face": "happy"
-                },
-                {
-                  "who": "leo",
-                  "x": 0.62,
+                  "x": 0.46,
                   "y": 0.74,
-                  "face": "talk"
-                },
-                {
-                  "who": "mochi",
-                  "x": 0.8,
-                  "y": 0.82,
-                  "face": "happy",
-                  "k": 0.7
+                  "face": "calm",
+                  "pose": "stand"
                 }
-              ]
+              ],
+              "props": [],
+              "bubbles": [],
+              "cap": ""
             },
             {
-              "bg": "street",
+              "bg": "room",
               "cast": [
                 {
                   "who": "mia",
-                  "x": 0.32,
-                  "y": 0.72,
-                  "face": "happy"
-                },
-                {
-                  "who": "leo",
-                  "x": 0.62,
+                  "x": 0.46,
                   "y": 0.74,
-                  "face": "talk"
-                },
-                {
-                  "who": "mochi",
-                  "x": 0.8,
-                  "y": 0.82,
-                  "face": "happy",
-                  "k": 0.7
+                  "face": "calm",
+                  "pose": "cheer"
                 }
-              ]
+              ],
+              "props": [
+                {
+                  "what": "mic",
+                  "x": 0.78,
+                  "y": 0.78,
+                  "k": 0.95
+                }
+              ],
+              "bubbles": [],
+              "cap": ""
             }
           ]
         },
@@ -21198,23 +23203,58 @@ window.DAYS = [
                 {
                   "who": "mia",
                   "x": 0.32,
-                  "y": 0.72,
-                  "face": "happy"
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
                 },
                 {
                   "who": "leo",
-                  "x": 0.62,
+                  "x": 0.64,
                   "y": 0.74,
-                  "face": "talk"
-                },
-                {
-                  "who": "mochi",
-                  "x": 0.8,
-                  "y": 0.82,
-                  "face": "happy",
-                  "k": 0.7
+                  "face": "calm",
+                  "pose": "stand"
                 }
-              ]
+              ],
+              "props": [],
+              "bubbles": [],
+              "cap": ""
+            },
+            {
+              "bg": "room",
+              "cast": [
+                {
+                  "who": "mia",
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
+                }
+              ],
+              "props": [],
+              "bubbles": [],
+              "cap": ""
+            },
+            {
+              "bg": "room",
+              "cast": [
+                {
+                  "who": "mia",
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "cheer"
+                }
+              ],
+              "props": [
+                {
+                  "what": "mic",
+                  "x": 0.78,
+                  "y": 0.78,
+                  "k": 0.95
+                }
+              ],
+              "bubbles": [],
+              "cap": ""
             },
             {
               "bg": "room",
@@ -21222,71 +23262,28 @@ window.DAYS = [
                 {
                   "who": "mia",
                   "x": 0.32,
-                  "y": 0.72,
-                  "face": "happy"
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
                 },
                 {
                   "who": "leo",
-                  "x": 0.62,
+                  "x": 0.64,
                   "y": 0.74,
-                  "face": "talk"
-                },
-                {
-                  "who": "mochi",
-                  "x": 0.8,
-                  "y": 0.82,
-                  "face": "happy",
-                  "k": 0.7
+                  "face": "calm",
+                  "pose": "stand"
                 }
-              ]
-            },
-            {
-              "bg": "street",
-              "cast": [
+              ],
+              "props": [
                 {
-                  "who": "mia",
-                  "x": 0.32,
-                  "y": 0.72,
-                  "face": "happy"
-                },
-                {
-                  "who": "leo",
-                  "x": 0.62,
-                  "y": 0.74,
-                  "face": "talk"
-                },
-                {
-                  "who": "mochi",
-                  "x": 0.8,
-                  "y": 0.82,
-                  "face": "happy",
-                  "k": 0.7
+                  "what": "chair",
+                  "x": 0.78,
+                  "y": 0.78,
+                  "k": 0.95
                 }
-              ]
-            },
-            {
-              "bg": "shop",
-              "cast": [
-                {
-                  "who": "mia",
-                  "x": 0.32,
-                  "y": 0.72,
-                  "face": "happy"
-                },
-                {
-                  "who": "leo",
-                  "x": 0.62,
-                  "y": 0.74,
-                  "face": "talk"
-                },
-                {
-                  "who": "mochi",
-                  "x": 0.8,
-                  "y": 0.82,
-                  "face": "happy",
-                  "k": 0.7
-                }
-              ]
+              ],
+              "bubbles": [],
+              "cap": ""
             }
           ],
           "lines": [
@@ -21903,48 +23900,65 @@ window.DAYS = [
               "cast": [
                 {
                   "who": "xiaoman",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "talk"
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
                 }
               ],
-              "cap": "红、黄、蓝放在一起像儿童玩具"
+              "props": [],
+              "bubbles": [],
+              "cap": "儿童玩具：红黄蓝"
             },
             {
-              "bg": "street",
-              "cast": [
-                {
-                  "who": "xiaoyin",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "talk"
-                }
-              ],
-              "cap": "它们是同一种配色"
-            },
-            {
-              "bg": "shop",
+              "bg": "room",
               "cast": [
                 {
                   "who": "xiaoman",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "talk"
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
                 }
               ],
-              "cap": "它们是同一种配色"
+              "props": [],
+              "bubbles": [],
+              "cap": "舞台剧海报：橙绿紫"
             },
             {
-              "bg": "plain",
+              "bg": "room",
+              "cast": [
+                {
+                  "who": "xiaoman",
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
+                }
+              ],
+              "props": [],
+              "bubbles": [
+                {
+                  "who": "xiaoman",
+                  "text": "这是同一种配色？"
+                }
+              ],
+              "cap": "这是同一种配色？"
+            },
+            {
+              "bg": "room",
               "cast": [
                 {
                   "who": "xiaoyin",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "wow"
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
                 }
               ],
-              "cap": "它们是同一种配色"
+              "props": [],
+              "bubbles": [],
+              "cap": "小音在色轮上转三角形"
             }
           ]
         }
@@ -22431,52 +24445,69 @@ window.DAYS = [
         "hookComic": {
           "panels": [
             {
-              "bg": "room",
+              "bg": "palace",
               "cast": [
                 {
                   "who": "xiaoman",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "talk"
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
                 }
               ],
-              "cap": "五代十国最让人头疼"
+              "props": [],
+              "bubbles": [],
+              "cap": "小满面前一团乱麻（五代十国）"
             },
             {
-              "bg": "street",
+              "bg": "palace",
               "cast": [
                 {
                   "who": "xiaoyin",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "talk"
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
                 }
               ],
-              "cap": "其实只要分清“接力”和“并排"
+              "props": [],
+              "bubbles": [],
+              "cap": "小音抽出两根线"
             },
             {
-              "bg": "shop",
+              "bg": "palace",
               "cast": [
                 {
-                  "who": "xiaoman",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "talk"
+                  "who": "kingWu",
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
                 }
               ],
-              "cap": "其实只要分清“接力”和“并排"
+              "props": [],
+              "bubbles": [
+                {
+                  "who": "kingWu",
+                  "text": "接力"
+                }
+              ],
+              "cap": "一根"
             },
             {
-              "bg": "plain",
+              "bg": "palace",
               "cast": [
                 {
-                  "who": "xiaoyin",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "wow"
+                  "who": "kingWu",
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
                 }
               ],
-              "cap": "其实只要分清“接力”和“并排"
+              "props": [],
+              "bubbles": [],
+              "cap": "乱麻变成两条整齐的线"
             }
           ]
         }
@@ -22837,52 +24868,74 @@ window.DAYS = [
         "hookComic": {
           "panels": [
             {
-              "bg": "room",
+              "bg": "mountain",
               "cast": [
                 {
                   "who": "xiaoman",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "talk"
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
                 }
               ],
-              "cap": "“鲁”“晋”“豫”——这些简"
-            },
-            {
-              "bg": "street",
-              "cast": [
+              "props": [],
+              "bubbles": [
                 {
-                  "who": "xiaoyin",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "talk"
+                  "who": "xiaoman",
+                  "text": "川 A"
                 }
               ],
-              "cap": "答案在历史课里"
+              "cap": "停车场"
             },
             {
-              "bg": "shop",
+              "bg": "mountain",
               "cast": [
                 {
                   "who": "xiaoman",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "talk"
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
                 }
               ],
-              "cap": "答案在历史课里"
+              "props": [],
+              "bubbles": [
+                {
+                  "who": "xiaoman",
+                  "text": "川是哪？粤是哪？"
+                }
+              ],
+              "cap": "川是哪？粤是哪？"
             },
             {
-              "bg": "plain",
+              "bg": "mountain",
               "cast": [
                 {
                   "who": "xiaoyin",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "wow"
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
                 }
               ],
-              "cap": "答案在历史课里"
+              "props": [],
+              "bubbles": [],
+              "cap": "小音倒出一盒拼图"
+            },
+            {
+              "bg": "mountain",
+              "cast": [
+                {
+                  "who": "xiaoman",
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
+                }
+              ],
+              "props": [],
+              "bubbles": [],
+              "cap": "34 块拼成一张中国"
             }
           ]
         }
@@ -22899,48 +24952,93 @@ window.DAYS = [
               "cast": [
                 {
                   "who": "xiaoman",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "talk"
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
                 }
               ],
-              "cap": "复利能帮你存钱滚雪球，也能让"
-            },
-            {
-              "bg": "street",
-              "cast": [
+              "props": [
                 {
-                  "who": "xiaoyin",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "talk"
+                  "what": "phone",
+                  "x": 0.78,
+                  "y": 0.78,
+                  "k": 0.95
                 }
               ],
-              "cap": "分期广告上写着\"每期手续费只"
+              "bubbles": [],
+              "cap": "刷卡买了一部新手机"
             },
             {
-              "bg": "shop",
+              "bg": "room",
               "cast": [
                 {
                   "who": "xiaoman",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "talk"
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
                 }
               ],
-              "cap": "分期广告上写着\"每期手续费只"
+              "props": [
+                {
+                  "what": "paper",
+                  "x": 0.78,
+                  "y": 0.78,
+                  "k": 0.95
+                }
+              ],
+              "bubbles": [
+                {
+                  "who": "xiaoman",
+                  "text": "最低还款"
+                }
+              ],
+              "cap": "账单只还了"
             },
             {
-              "bg": "plain",
+              "bg": "room",
+              "cast": [
+                {
+                  "who": "xiaoman",
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
+                }
+              ],
+              "props": [
+                {
+                  "what": "paper",
+                  "x": 0.78,
+                  "y": 0.78,
+                  "k": 0.95
+                }
+              ],
+              "bubbles": [],
+              "cap": "几个月后账单越来越长"
+            },
+            {
+              "bg": "room",
               "cast": [
                 {
                   "who": "xiaoyin",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "wow"
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
                 }
               ],
-              "cap": "分期广告上写着\"每期手续费只"
+              "props": [
+                {
+                  "what": "snowball",
+                  "x": 0.78,
+                  "y": 0.78,
+                  "k": 0.95
+                }
+              ],
+              "bubbles": [],
+              "cap": "小音推来一个大雪球"
             }
           ]
         },
@@ -22952,27 +25050,47 @@ window.DAYS = [
               "type": "comic",
               "panels": [
                 {
-                  "bg": "bank",
+                  "bg": "room",
                   "cast": [
                     {
                       "who": "xiaoman",
-                      "x": 0.5,
-                      "y": 0.72,
-                      "face": "talk"
+                      "x": 0.46,
+                      "y": 0.74,
+                      "face": "calm",
+                      "pose": "stand"
                     }
                   ],
+                  "props": [
+                    {
+                      "what": "snowball",
+                      "x": 0.78,
+                      "y": 0.78,
+                      "k": 0.95
+                    }
+                  ],
+                  "bubbles": [],
                   "cap": "复利也能反过来"
                 },
                 {
-                  "bg": "kitchen",
+                  "bg": "room",
                   "cast": [
                     {
                       "who": "xiaoman",
-                      "x": 0.5,
-                      "y": 0.72,
-                      "face": "talk"
+                      "x": 0.46,
+                      "y": 0.74,
+                      "face": "calm",
+                      "pose": "stand"
                     }
                   ],
+                  "props": [
+                    {
+                      "what": "paper",
+                      "x": 0.78,
+                      "y": 0.78,
+                      "k": 0.95
+                    }
+                  ],
+                  "bubbles": [],
                   "cap": "欠了一万没还"
                 },
                 {
@@ -22980,11 +25098,21 @@ window.DAYS = [
                   "cast": [
                     {
                       "who": "xiaoman",
-                      "x": 0.5,
-                      "y": 0.72,
-                      "face": "talk"
+                      "x": 0.46,
+                      "y": 0.74,
+                      "face": "calm",
+                      "pose": "stand"
                     }
                   ],
+                  "props": [
+                    {
+                      "what": "paper",
+                      "x": 0.78,
+                      "y": 0.78,
+                      "k": 0.95
+                    }
+                  ],
+                  "bubbles": [],
                   "cap": "一年后变成快一万二"
                 }
               ]
@@ -23007,7 +25135,7 @@ window.DAYS = [
                     "value": 18
                   }
                 ],
-                "unit": "%（每年）"
+                "unit": "%"
               },
               "frames": [
                 {
@@ -23529,9 +25657,10 @@ window.DAYS = [
                   "cast": [
                     {
                       "who": "xiaoman",
-                      "x": 0.48,
-                      "y": 0.72,
-                      "face": "talk"
+                      "x": 0.46,
+                      "y": 0.74,
+                      "face": "calm",
+                      "pose": "stand"
                     }
                   ],
                   "cap": "问题聚焦应对：改变情境，从源"
@@ -23540,10 +25669,11 @@ window.DAYS = [
                   "bg": "street",
                   "cast": [
                     {
-                      "who": "xiaoyin",
-                      "x": 0.48,
-                      "y": 0.72,
-                      "face": "talk"
+                      "who": "xiaoman",
+                      "x": 0.46,
+                      "y": 0.74,
+                      "face": "calm",
+                      "pose": "stand"
                     }
                   ],
                   "cap": "问题聚焦应对：去改变情境"
@@ -23575,9 +25705,10 @@ window.DAYS = [
                   "cast": [
                     {
                       "who": "xiaoman",
-                      "x": 0.48,
-                      "y": 0.72,
-                      "face": "talk"
+                      "x": 0.46,
+                      "y": 0.74,
+                      "face": "calm",
+                      "pose": "stand"
                     }
                   ],
                   "cap": "能改变的解决问题，改变不了的"
@@ -23586,10 +25717,11 @@ window.DAYS = [
                   "bg": "street",
                   "cast": [
                     {
-                      "who": "xiaoyin",
-                      "x": 0.48,
-                      "y": 0.72,
-                      "face": "talk"
+                      "who": "xiaoman",
+                      "x": 0.46,
+                      "y": 0.74,
+                      "face": "calm",
+                      "pose": "stand"
                     }
                   ],
                   "cap": "情绪聚焦应对：去照顾感受"
@@ -23693,52 +25825,74 @@ window.DAYS = [
         "hookComic": {
           "panels": [
             {
+              "bg": "office",
+              "cast": [
+                {
+                  "who": "xiaoman",
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
+                }
+              ],
+              "props": [],
+              "bubbles": [
+                {
+                  "who": "xiaoman",
+                  "text": "来我办公室一下"
+                }
+              ],
+              "cap": "领导"
+            },
+            {
               "bg": "room",
               "cast": [
                 {
                   "who": "xiaoman",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "talk"
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
                 }
               ],
-              "cap": "同样被领导叫去谈话，有人觉得"
+              "props": [],
+              "bubbles": [],
+              "cap": "机会来了！"
             },
             {
-              "bg": "street",
+              "bg": "room",
+              "cast": [
+                {
+                  "who": "ale",
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
+                }
+              ],
+              "props": [],
+              "bubbles": [],
+              "cap": "完了……"
+            },
+            {
+              "bg": "room",
               "cast": [
                 {
                   "who": "xiaoyin",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "talk"
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
                 }
               ],
-              "cap": "差别在哪"
-            },
-            {
-              "bg": "shop",
-              "cast": [
-                {
-                  "who": "xiaoman",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "talk"
-                }
-              ],
-              "cap": "差别在哪"
-            },
-            {
-              "bg": "plain",
-              "cast": [
+              "props": [],
+              "bubbles": [
                 {
                   "who": "xiaoyin",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "wow"
+                  "text": "同一句话"
                 }
               ],
-              "cap": "差别在哪"
+              "cap": "同一句话"
             }
           ]
         }
@@ -23751,28 +25905,48 @@ window.DAYS = [
         "hookComic": {
           "panels": [
             {
-              "bg": "kitchen",
+              "bg": "room",
               "cast": [
                 {
                   "who": "mia",
-                  "x": 0.32,
-                  "y": 0.72,
-                  "face": "happy"
-                },
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "cheer"
+                }
+              ],
+              "props": [
+                {
+                  "what": "skirt",
+                  "x": 0.78,
+                  "y": 0.78,
+                  "k": 0.95
+                }
+              ],
+              "bubbles": [],
+              "cap": ""
+            },
+            {
+              "bg": "room",
+              "cast": [
                 {
                   "who": "leo",
-                  "x": 0.62,
+                  "x": 0.46,
                   "y": 0.74,
-                  "face": "talk"
-                },
-                {
-                  "who": "mochi",
-                  "x": 0.8,
-                  "y": 0.82,
-                  "face": "happy",
-                  "k": 0.7
+                  "face": "calm",
+                  "pose": "stand"
                 }
-              ]
+              ],
+              "props": [
+                {
+                  "what": "skirt",
+                  "x": 0.78,
+                  "y": 0.78,
+                  "k": 0.95
+                }
+              ],
+              "bubbles": [],
+              "cap": ""
             },
             {
               "bg": "room",
@@ -23780,47 +25954,28 @@ window.DAYS = [
                 {
                   "who": "mia",
                   "x": 0.32,
-                  "y": 0.72,
-                  "face": "happy"
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
                 },
                 {
                   "who": "leo",
-                  "x": 0.62,
+                  "x": 0.64,
                   "y": 0.74,
-                  "face": "talk"
-                },
-                {
-                  "who": "mochi",
-                  "x": 0.8,
-                  "y": 0.82,
-                  "face": "happy",
-                  "k": 0.7
+                  "face": "calm",
+                  "pose": "point"
                 }
-              ]
-            },
-            {
-              "bg": "street",
-              "cast": [
+              ],
+              "props": [
                 {
-                  "who": "mia",
-                  "x": 0.32,
-                  "y": 0.72,
-                  "face": "happy"
-                },
-                {
-                  "who": "leo",
-                  "x": 0.62,
-                  "y": 0.74,
-                  "face": "talk"
-                },
-                {
-                  "who": "mochi",
-                  "x": 0.8,
-                  "y": 0.82,
-                  "face": "happy",
-                  "k": 0.7
+                  "what": "skirt",
+                  "x": 0.78,
+                  "y": 0.78,
+                  "k": 0.95
                 }
-              ]
+              ],
+              "bubbles": [],
+              "cap": ""
             }
           ]
         },
@@ -23828,28 +25983,48 @@ window.DAYS = [
           "title": "Which Dress?",
           "panels": [
             {
-              "bg": "kitchen",
+              "bg": "room",
               "cast": [
                 {
                   "who": "mia",
-                  "x": 0.32,
-                  "y": 0.72,
-                  "face": "happy"
-                },
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "cheer"
+                }
+              ],
+              "props": [
+                {
+                  "what": "skirt",
+                  "x": 0.78,
+                  "y": 0.78,
+                  "k": 0.95
+                }
+              ],
+              "bubbles": [],
+              "cap": ""
+            },
+            {
+              "bg": "room",
+              "cast": [
                 {
                   "who": "leo",
-                  "x": 0.62,
+                  "x": 0.46,
                   "y": 0.74,
-                  "face": "talk"
-                },
-                {
-                  "who": "mochi",
-                  "x": 0.8,
-                  "y": 0.82,
-                  "face": "happy",
-                  "k": 0.7
+                  "face": "calm",
+                  "pose": "stand"
                 }
-              ]
+              ],
+              "props": [
+                {
+                  "what": "skirt",
+                  "x": 0.78,
+                  "y": 0.78,
+                  "k": 0.95
+                }
+              ],
+              "bubbles": [],
+              "cap": ""
             },
             {
               "bg": "room",
@@ -23857,71 +26032,50 @@ window.DAYS = [
                 {
                   "who": "mia",
                   "x": 0.32,
-                  "y": 0.72,
-                  "face": "happy"
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
                 },
                 {
                   "who": "leo",
-                  "x": 0.62,
+                  "x": 0.64,
                   "y": 0.74,
-                  "face": "talk"
-                },
-                {
-                  "who": "mochi",
-                  "x": 0.8,
-                  "y": 0.82,
-                  "face": "happy",
-                  "k": 0.7
+                  "face": "calm",
+                  "pose": "point"
                 }
-              ]
+              ],
+              "props": [
+                {
+                  "what": "skirt",
+                  "x": 0.78,
+                  "y": 0.78,
+                  "k": 0.95
+                }
+              ],
+              "bubbles": [],
+              "cap": ""
             },
             {
-              "bg": "street",
+              "bg": "room",
               "cast": [
                 {
-                  "who": "mia",
-                  "x": 0.32,
-                  "y": 0.72,
-                  "face": "happy"
-                },
-                {
-                  "who": "leo",
-                  "x": 0.62,
-                  "y": 0.74,
-                  "face": "talk"
-                },
-                {
                   "who": "mochi",
-                  "x": 0.8,
-                  "y": 0.82,
-                  "face": "happy",
-                  "k": 0.7
-                }
-              ]
-            },
-            {
-              "bg": "shop",
-              "cast": [
-                {
-                  "who": "mia",
-                  "x": 0.32,
-                  "y": 0.72,
-                  "face": "happy"
-                },
-                {
-                  "who": "leo",
-                  "x": 0.62,
+                  "x": 0.46,
                   "y": 0.74,
-                  "face": "talk"
-                },
-                {
-                  "who": "mochi",
-                  "x": 0.8,
-                  "y": 0.82,
-                  "face": "happy",
-                  "k": 0.7
+                  "face": "calm",
+                  "pose": "stand"
                 }
-              ]
+              ],
+              "props": [
+                {
+                  "what": "skirt",
+                  "x": 0.78,
+                  "y": 0.78,
+                  "k": 0.95
+                }
+              ],
+              "bubbles": [],
+              "cap": ""
             }
           ],
           "lines": [
@@ -24539,48 +26693,60 @@ window.DAYS = [
               "cast": [
                 {
                   "who": "xiaoman",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "talk"
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
                 }
               ],
-              "cap": "同样三个颜色，一种穿法好看，"
+              "props": [],
+              "bubbles": [],
+              "cap": "同样三种颜色的两套衣服"
             },
             {
-              "bg": "street",
-              "cast": [
-                {
-                  "who": "xiaoyin",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "talk"
-                }
-              ],
-              "cap": "可能只是面积分错了"
-            },
-            {
-              "bg": "shop",
+              "bg": "room",
               "cast": [
                 {
                   "who": "xiaoman",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "talk"
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
                 }
               ],
-              "cap": "可能只是面积分错了"
+              "props": [],
+              "bubbles": [],
+              "cap": "一套好看"
             },
             {
-              "bg": "plain",
+              "bg": "room",
               "cast": [
                 {
                   "who": "xiaoyin",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "wow"
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
                 }
               ],
-              "cap": "可能只是面积分错了"
+              "props": [],
+              "bubbles": [],
+              "cap": "小音量了面积"
+            },
+            {
+              "bg": "room",
+              "cast": [
+                {
+                  "who": "xiaoman",
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
+                }
+              ],
+              "props": [],
+              "bubbles": [],
+              "cap": "乱的那套三色各占三分之一"
             }
           ]
         }
@@ -24617,28 +26783,69 @@ window.DAYS = [
               "type": "comic",
               "panels": [
                 {
-                  "bg": "room",
+                  "bg": "palace",
                   "cast": [
                     {
-                      "who": "xiaoman",
-                      "x": 0.48,
-                      "y": 0.72,
-                      "face": "talk"
+                      "who": "kingWu",
+                      "x": 0.46,
+                      "y": 0.74,
+                      "face": "calm",
+                      "pose": "stand"
                     }
                   ],
-                  "cap": "赵匡胤的难题：不流血，又要让"
+                  "props": [],
+                  "bubbles": [],
+                  "cap": "你知道自己是怎么上来的"
                 },
                 {
-                  "bg": "street",
+                  "bg": "palace",
                   "cast": [
                     {
-                      "who": "xiaoyin",
-                      "x": 0.48,
-                      "y": 0.72,
-                      "face": "talk"
+                      "who": "general",
+                      "x": 0.46,
+                      "y": 0.74,
+                      "face": "calm",
+                      "pose": "stand"
                     }
                   ],
-                  "cap": "如果你是赵匡胤"
+                  "props": [],
+                  "bubbles": [],
+                  "cap": "看着手下的将军们"
+                },
+                {
+                  "bg": "palace",
+                  "cast": [
+                    {
+                      "who": "kingWu",
+                      "x": 0.46,
+                      "y": 0.74,
+                      "face": "calm",
+                      "pose": "stand"
+                    }
+                  ],
+                  "props": [],
+                  "bubbles": [
+                    {
+                      "who": "kingWu",
+                      "text": "他们会不会也来一次？"
+                    }
+                  ],
+                  "cap": "他们会不会也来一次？"
+                },
+                {
+                  "bg": "palace",
+                  "cast": [
+                    {
+                      "who": "kingWu",
+                      "x": 0.46,
+                      "y": 0.74,
+                      "face": "calm",
+                      "pose": "think"
+                    }
+                  ],
+                  "props": [],
+                  "bubbles": [],
+                  "cap": "你想到一个办法"
                 }
               ]
             }
@@ -24654,28 +26861,69 @@ window.DAYS = [
               "type": "comic",
               "panels": [
                 {
-                  "bg": "room",
+                  "bg": "palace",
                   "cast": [
                     {
-                      "who": "xiaoman",
-                      "x": 0.48,
-                      "y": 0.72,
-                      "face": "talk"
+                      "who": "kingWu",
+                      "x": 0.46,
+                      "y": 0.74,
+                      "face": "calm",
+                      "pose": "cheer"
                     }
                   ],
-                  "cap": "杯酒释兵权：用富贵换兵权，不"
+                  "props": [],
+                  "bubbles": [],
+                  "cap": "宴席上举杯"
                 },
                 {
-                  "bg": "street",
+                  "bg": "palace",
                   "cast": [
                     {
-                      "who": "xiaoyin",
-                      "x": 0.48,
-                      "y": 0.72,
-                      "face": "talk"
+                      "who": "kingWu",
+                      "x": 0.46,
+                      "y": 0.74,
+                      "face": "calm",
+                      "pose": "give"
                     }
                   ],
-                  "cap": "杯酒释兵权：一笔交易"
+                  "props": [],
+                  "bubbles": [
+                    {
+                      "who": "kingWu",
+                      "text": "不如交出兵权"
+                    }
+                  ],
+                  "cap": "不如交出兵权"
+                },
+                {
+                  "bg": "palace",
+                  "cast": [
+                    {
+                      "who": "general",
+                      "x": 0.46,
+                      "y": 0.74,
+                      "face": "calm",
+                      "pose": "give"
+                    }
+                  ],
+                  "props": [],
+                  "bubbles": [],
+                  "cap": "将军们交出兵符"
+                },
+                {
+                  "bg": "palace",
+                  "cast": [
+                    {
+                      "who": "kingWu",
+                      "x": 0.46,
+                      "y": 0.74,
+                      "face": "calm",
+                      "pose": "stand"
+                    }
+                  ],
+                  "props": [],
+                  "bubbles": [],
+                  "cap": "换来金银田宅"
                 }
               ]
             }
@@ -25054,52 +27302,69 @@ window.DAYS = [
         "hookComic": {
           "panels": [
             {
-              "bg": "room",
+              "bg": "palace",
               "cast": [
                 {
-                  "who": "xiaoman",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "talk"
+                  "who": "kingWu",
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
                 }
               ],
-              "cap": "赵匡胤靠兵变当上皇帝"
+              "props": [],
+              "bubbles": [],
+              "cap": "陈桥驿"
             },
             {
-              "bg": "street",
+              "bg": "palace",
+              "cast": [
+                {
+                  "who": "kingWu",
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
+                }
+              ],
+              "props": [],
+              "bubbles": [],
+              "cap": "他当上皇帝"
+            },
+            {
+              "bg": "palace",
+              "cast": [
+                {
+                  "who": "kingWu",
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
+                }
+              ],
+              "props": [],
+              "bubbles": [],
+              "cap": "晚上睡不着"
+            },
+            {
+              "bg": "palace",
               "cast": [
                 {
                   "who": "xiaoyin",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "talk"
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "worry",
+                  "pose": "stand"
                 }
               ],
-              "cap": "坐上皇位后，他最怕的是什么"
-            },
-            {
-              "bg": "shop",
-              "cast": [
-                {
-                  "who": "xiaoman",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "talk"
-                }
-              ],
-              "cap": "坐上皇位后，他最怕的是什么"
-            },
-            {
-              "bg": "plain",
-              "cast": [
+              "props": [],
+              "bubbles": [
                 {
                   "who": "xiaoyin",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "wow"
+                  "text": "他最怕什么？"
                 }
               ],
-              "cap": "坐上皇位后，他最怕的是什么"
+              "cap": "他最怕什么？"
             }
           ]
         }
@@ -25540,52 +27805,76 @@ window.DAYS = [
         "hookComic": {
           "panels": [
             {
-              "bg": "room",
+              "bg": "mountain",
               "cast": [
                 {
                   "who": "xiaoman",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "talk"
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
                 }
               ],
-              "cap": "南宋的都城、六朝的古都、改革"
+              "props": [],
+              "bubbles": [],
+              "cap": "夜里的卫星图：东边一片亮"
             },
             {
-              "bg": "street",
-              "cast": [
-                {
-                  "who": "xiaoyin",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "talk"
-                }
-              ],
-              "cap": "南宋的都城、六朝的古都、改革"
-            },
-            {
-              "bg": "shop",
+              "bg": "mountain",
               "cast": [
                 {
                   "who": "xiaoman",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "talk"
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
                 }
               ],
-              "cap": "南宋的都城、六朝的古都、改革"
+              "props": [],
+              "bubbles": [],
+              "cap": "西边大多是暗的"
             },
             {
-              "bg": "plain",
+              "bg": "mountain",
+              "cast": [
+                {
+                  "who": "xiaoman",
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
+                }
+              ],
+              "props": [
+                {
+                  "what": "castle",
+                  "x": 0.78,
+                  "y": 0.78,
+                  "k": 0.95
+                }
+              ],
+              "bubbles": [
+                {
+                  "who": "xiaoman",
+                  "text": "大城市为什么挤在东边？"
+                }
+              ],
+              "cap": "大城市为什么挤在东边？"
+            },
+            {
+              "bg": "mountain",
               "cast": [
                 {
                   "who": "xiaoyin",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "wow"
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "point"
                 }
               ],
-              "cap": "南宋的都城、六朝的古都、改革"
+              "props": [],
+              "bubbles": [],
+              "cap": "小音指着一条船和一条河"
             }
           ]
         }
@@ -25601,49 +27890,89 @@ window.DAYS = [
               "bg": "room",
               "cast": [
                 {
-                  "who": "xiaoman",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "talk"
+                  "who": "xiaoE",
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
                 }
               ],
-              "cap": "开着十几万的车，不一定比只有"
+              "props": [
+                {
+                  "what": "car",
+                  "x": 0.78,
+                  "y": 0.78,
+                  "k": 0.95
+                }
+              ],
+              "bubbles": [],
+              "cap": "小 E 开着新车"
             },
             {
-              "bg": "street",
+              "bg": "room",
               "cast": [
+                {
+                  "who": "xiaoF",
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
+                }
+              ],
+              "props": [
+                {
+                  "what": "payslip",
+                  "x": 0.78,
+                  "y": 0.78,
+                  "k": 0.95
+                }
+              ],
+              "bubbles": [],
+              "cap": "小 F 只有一张存折"
+            },
+            {
+              "bg": "room",
+              "cast": [
+                {
+                  "who": "xiaoman",
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
+                }
+              ],
+              "props": [],
+              "bubbles": [],
+              "cap": "两人比谁有钱"
+            },
+            {
+              "bg": "room",
+              "cast": [
+                {
+                  "who": "xiaoE",
+                  "x": 0.32,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
+                },
                 {
                   "who": "xiaoyin",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "talk"
+                  "x": 0.64,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
                 }
               ],
-              "cap": "开着十几万的车，不一定比只有"
-            },
-            {
-              "bg": "shop",
-              "cast": [
+              "props": [
                 {
-                  "who": "xiaoman",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "talk"
+                  "what": "car",
+                  "x": 0.78,
+                  "y": 0.78,
+                  "k": 0.95
                 }
               ],
-              "cap": "开着十几万的车，不一定比只有"
-            },
-            {
-              "bg": "plain",
-              "cast": [
-                {
-                  "who": "xiaoyin",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "wow"
-                }
-              ],
-              "cap": "开着十几万的车，不一定比只有"
+              "bubbles": [],
+              "cap": "小音把小 E 的车贷单翻出来"
             }
           ]
         },
@@ -25655,39 +27984,62 @@ window.DAYS = [
               "type": "comic",
               "panels": [
                 {
-                  "bg": "bank",
+                  "bg": "room",
                   "cast": [
                     {
-                      "who": "xiaoman",
-                      "x": 0.5,
-                      "y": 0.72,
-                      "face": "talk"
+                      "who": "xiaoE",
+                      "x": 0.46,
+                      "y": 0.74,
+                      "face": "calm",
+                      "pose": "stand"
                     }
                   ],
+                  "props": [
+                    {
+                      "what": "car",
+                      "x": 0.78,
+                      "y": 0.78,
+                      "k": 0.95
+                    }
+                  ],
+                  "bubbles": [],
                   "cap": "小 E 开着新车"
-                },
-                {
-                  "bg": "kitchen",
-                  "cast": [
-                    {
-                      "who": "xiaoman",
-                      "x": 0.5,
-                      "y": 0.72,
-                      "face": "talk"
-                    }
-                  ],
-                  "cap": "车钥匙后面挂着贷款"
                 },
                 {
                   "bg": "room",
                   "cast": [
                     {
                       "who": "xiaoman",
-                      "x": 0.5,
-                      "y": 0.72,
-                      "face": "talk"
+                      "x": 0.46,
+                      "y": 0.74,
+                      "face": "calm",
+                      "pose": "cheer"
                     }
                   ],
+                  "props": [],
+                  "bubbles": [],
+                  "cap": "车钥匙后面挂着贷款"
+                },
+                {
+                  "bg": "room",
+                  "cast": [
+                    {
+                      "who": "xiaoF",
+                      "x": 0.46,
+                      "y": 0.74,
+                      "face": "happy",
+                      "pose": "cheer"
+                    }
+                  ],
+                  "props": [
+                    {
+                      "what": "payslip",
+                      "x": 0.78,
+                      "y": 0.78,
+                      "k": 0.95
+                    }
+                  ],
+                  "bubbles": [],
                   "cap": "小 F 只有存款"
                 }
               ]
@@ -26221,9 +28573,10 @@ window.DAYS = [
                   "cast": [
                     {
                       "who": "xiaoman",
-                      "x": 0.48,
-                      "y": 0.72,
-                      "face": "talk"
+                      "x": 0.46,
+                      "y": 0.74,
+                      "face": "calm",
+                      "pose": "stand"
                     }
                   ],
                   "cap": "重评降低了感受；抑制只压住表"
@@ -26232,10 +28585,11 @@ window.DAYS = [
                   "bg": "street",
                   "cast": [
                     {
-                      "who": "xiaoyin",
-                      "x": 0.48,
-                      "y": 0.72,
-                      "face": "talk"
+                      "who": "gross",
+                      "x": 0.46,
+                      "y": 0.74,
+                      "face": "calm",
+                      "pose": "stand"
                     }
                   ],
                   "cap": "格罗斯的实验：同一段影片"
@@ -26345,49 +28699,66 @@ window.DAYS = [
               "bg": "room",
               "cast": [
                 {
-                  "who": "xiaoman",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "talk"
+                  "who": "ale",
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
                 }
               ],
-              "cap": "生气的时候“忍住不说”，和“"
+              "props": [],
+              "bubbles": [],
+              "cap": "阿乐说了一句难听的话"
             },
             {
-              "bg": "street",
-              "cast": [
-                {
-                  "who": "xiaoyin",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "talk"
-                }
-              ],
-              "cap": "生气的时候“忍住不说”，和“"
-            },
-            {
-              "bg": "shop",
+              "bg": "room",
               "cast": [
                 {
                   "who": "xiaoman",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "talk"
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
                 }
               ],
-              "cap": "生气的时候“忍住不说”，和“"
+              "props": [],
+              "bubbles": [],
+              "cap": "小满咬牙忍住"
             },
             {
-              "bg": "plain",
+              "bg": "room",
               "cast": [
                 {
-                  "who": "xiaoyin",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "wow"
+                  "who": "xiaoman",
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "think"
                 }
               ],
-              "cap": "生气的时候“忍住不说”，和“"
+              "props": [],
+              "bubbles": [
+                {
+                  "who": "xiaoman",
+                  "text": "他今天压力大"
+                }
+              ],
+              "cap": "另一个平行世界的小满想"
+            },
+            {
+              "bg": "room",
+              "cast": [
+                {
+                  "who": "xiaoman",
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
+                }
+              ],
+              "props": [],
+              "bubbles": [],
+              "cap": "两个小满的心跳计对比"
             }
           ]
         }
@@ -26400,28 +28771,54 @@ window.DAYS = [
         "hookComic": {
           "panels": [
             {
-              "bg": "kitchen",
+              "bg": "room",
+              "cast": [
+                {
+                  "who": "leo",
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
+                }
+              ],
+              "props": [
+                {
+                  "what": "mapScroll",
+                  "x": 0.78,
+                  "y": 0.78,
+                  "k": 0.95
+                }
+              ],
+              "bubbles": [],
+              "cap": ""
+            },
+            {
+              "bg": "mountain",
               "cast": [
                 {
                   "who": "mia",
-                  "x": 0.32,
-                  "y": 0.72,
-                  "face": "happy"
-                },
-                {
-                  "who": "leo",
-                  "x": 0.62,
+                  "x": 0.46,
                   "y": 0.74,
-                  "face": "talk"
+                  "face": "calm",
+                  "pose": "stand"
+                }
+              ],
+              "props": [
+                {
+                  "what": "mapScroll",
+                  "x": 0.78,
+                  "y": 0.78,
+                  "k": 0.95
                 },
                 {
-                  "who": "mochi",
-                  "x": 0.8,
-                  "y": 0.82,
-                  "face": "happy",
-                  "k": 0.7
+                  "what": "castle",
+                  "x": 0.62,
+                  "y": 0.78,
+                  "k": 0.95
                 }
-              ]
+              ],
+              "bubbles": [],
+              "cap": ""
             },
             {
               "bg": "room",
@@ -26429,47 +28826,28 @@ window.DAYS = [
                 {
                   "who": "mia",
                   "x": 0.32,
-                  "y": 0.72,
-                  "face": "happy"
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
                 },
                 {
                   "who": "leo",
-                  "x": 0.62,
+                  "x": 0.64,
                   "y": 0.74,
-                  "face": "talk"
-                },
-                {
-                  "who": "mochi",
-                  "x": 0.8,
-                  "y": 0.82,
-                  "face": "happy",
-                  "k": 0.7
+                  "face": "calm",
+                  "pose": "point"
                 }
-              ]
-            },
-            {
-              "bg": "street",
-              "cast": [
+              ],
+              "props": [
                 {
-                  "who": "mia",
-                  "x": 0.32,
-                  "y": 0.72,
-                  "face": "happy"
-                },
-                {
-                  "who": "leo",
-                  "x": 0.62,
-                  "y": 0.74,
-                  "face": "talk"
-                },
-                {
-                  "who": "mochi",
-                  "x": 0.8,
-                  "y": 0.82,
-                  "face": "happy",
-                  "k": 0.7
+                  "what": "mapScroll",
+                  "x": 0.78,
+                  "y": 0.78,
+                  "k": 0.95
                 }
-              ]
+              ],
+              "bubbles": [],
+              "cap": ""
             }
           ]
         },
@@ -26477,28 +28855,54 @@ window.DAYS = [
           "title": "A Map on the Fridge",
           "panels": [
             {
-              "bg": "kitchen",
+              "bg": "room",
+              "cast": [
+                {
+                  "who": "leo",
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
+                }
+              ],
+              "props": [
+                {
+                  "what": "mapScroll",
+                  "x": 0.78,
+                  "y": 0.78,
+                  "k": 0.95
+                }
+              ],
+              "bubbles": [],
+              "cap": ""
+            },
+            {
+              "bg": "mountain",
               "cast": [
                 {
                   "who": "mia",
-                  "x": 0.32,
-                  "y": 0.72,
-                  "face": "happy"
-                },
-                {
-                  "who": "leo",
-                  "x": 0.62,
+                  "x": 0.46,
                   "y": 0.74,
-                  "face": "talk"
+                  "face": "calm",
+                  "pose": "stand"
+                }
+              ],
+              "props": [
+                {
+                  "what": "mapScroll",
+                  "x": 0.78,
+                  "y": 0.78,
+                  "k": 0.95
                 },
                 {
-                  "who": "mochi",
-                  "x": 0.8,
-                  "y": 0.82,
-                  "face": "happy",
-                  "k": 0.7
+                  "what": "castle",
+                  "x": 0.62,
+                  "y": 0.78,
+                  "k": 0.95
                 }
-              ]
+              ],
+              "bubbles": [],
+              "cap": ""
             },
             {
               "bg": "room",
@@ -26506,71 +28910,50 @@ window.DAYS = [
                 {
                   "who": "mia",
                   "x": 0.32,
-                  "y": 0.72,
-                  "face": "happy"
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
                 },
                 {
                   "who": "leo",
-                  "x": 0.62,
+                  "x": 0.64,
                   "y": 0.74,
-                  "face": "talk"
-                },
-                {
-                  "who": "mochi",
-                  "x": 0.8,
-                  "y": 0.82,
-                  "face": "happy",
-                  "k": 0.7
+                  "face": "calm",
+                  "pose": "point"
                 }
-              ]
+              ],
+              "props": [
+                {
+                  "what": "mapScroll",
+                  "x": 0.78,
+                  "y": 0.78,
+                  "k": 0.95
+                }
+              ],
+              "bubbles": [],
+              "cap": ""
             },
             {
-              "bg": "street",
+              "bg": "room",
               "cast": [
                 {
-                  "who": "mia",
-                  "x": 0.32,
-                  "y": 0.72,
-                  "face": "happy"
-                },
-                {
-                  "who": "leo",
-                  "x": 0.62,
-                  "y": 0.74,
-                  "face": "talk"
-                },
-                {
                   "who": "mochi",
-                  "x": 0.8,
-                  "y": 0.82,
-                  "face": "happy",
-                  "k": 0.7
-                }
-              ]
-            },
-            {
-              "bg": "shop",
-              "cast": [
-                {
-                  "who": "mia",
-                  "x": 0.32,
-                  "y": 0.72,
-                  "face": "happy"
-                },
-                {
-                  "who": "leo",
-                  "x": 0.62,
+                  "x": 0.46,
                   "y": 0.74,
-                  "face": "talk"
-                },
-                {
-                  "who": "mochi",
-                  "x": 0.8,
-                  "y": 0.82,
-                  "face": "happy",
-                  "k": 0.7
+                  "face": "calm",
+                  "pose": "sit"
                 }
-              ]
+              ],
+              "props": [
+                {
+                  "what": "mapScroll",
+                  "x": 0.78,
+                  "y": 0.78,
+                  "k": 0.95
+                }
+              ],
+              "bubbles": [],
+              "cap": ""
             }
           ],
           "lines": [
@@ -27246,48 +29629,67 @@ window.DAYS = [
               "cast": [
                 {
                   "who": "xiaoman",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "talk"
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
                 }
               ],
-              "cap": "红和绿撞在一起太冲"
-            },
-            {
-              "bg": "street",
-              "cast": [
+              "props": [
                 {
-                  "who": "xiaoyin",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "talk"
+                  "what": "skirt",
+                  "x": 0.78,
+                  "y": 0.78,
+                  "k": 0.95
                 }
               ],
-              "cap": "不换颜色，只加一样东西就能救"
+              "bubbles": [],
+              "cap": "红上衣配绿裙子"
             },
             {
-              "bg": "shop",
+              "bg": "room",
               "cast": [
                 {
                   "who": "xiaoman",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "talk"
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "think"
                 }
               ],
-              "cap": "不换颜色，只加一样东西就能救"
+              "props": [],
+              "bubbles": [],
+              "cap": "小满想换掉一件"
             },
             {
-              "bg": "plain",
+              "bg": "room",
               "cast": [
                 {
                   "who": "xiaoyin",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "wow"
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "give"
                 }
               ],
-              "cap": "不换颜色，只加一样东西就能救"
+              "props": [],
+              "bubbles": [],
+              "cap": "小音递上一条米白腰带"
+            },
+            {
+              "bg": "room",
+              "cast": [
+                {
+                  "who": "xiaoman",
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
+                }
+              ],
+              "props": [],
+              "bubbles": [],
+              "cap": "系上后立刻和谐"
             }
           ]
         }
@@ -27388,28 +29790,74 @@ window.DAYS = [
               "type": "comic",
               "panels": [
                 {
-                  "bg": "room",
+                  "bg": "palace",
                   "cast": [
                     {
-                      "who": "xiaoman",
-                      "x": 0.48,
-                      "y": 0.72,
-                      "face": "talk"
+                      "who": "kingWu",
+                      "x": 0.46,
+                      "y": 0.74,
+                      "face": "calm",
+                      "pose": "stand"
                     }
                   ],
-                  "cap": "太大的国家需要一个中间层，而"
+                  "props": [],
+                  "bubbles": [],
+                  "cap": "地太大"
                 },
                 {
-                  "bg": "street",
+                  "bg": "palace",
                   "cast": [
                     {
-                      "who": "xiaoyin",
-                      "x": 0.48,
-                      "y": 0.72,
-                      "face": "talk"
+                      "who": "kingWu",
+                      "x": 0.46,
+                      "y": 0.74,
+                      "face": "calm",
+                      "pose": "stand"
                     }
                   ],
-                  "cap": "如果你是忽必烈：怎么管"
+                  "props": [],
+                  "bubbles": [],
+                  "cap": "从首都管不过来"
+                },
+                {
+                  "bg": "palace",
+                  "cast": [
+                    {
+                      "who": "kingWu",
+                      "x": 0.46,
+                      "y": 0.74,
+                      "face": "calm",
+                      "pose": "stand"
+                    }
+                  ],
+                  "props": [],
+                  "bubbles": [
+                    {
+                      "who": "kingWu",
+                      "text": "分部"
+                    }
+                  ],
+                  "cap": "派中书省的到各地"
+                },
+                {
+                  "bg": "palace",
+                  "cast": [
+                    {
+                      "who": "kingWu",
+                      "x": 0.46,
+                      "y": 0.74,
+                      "face": "calm",
+                      "pose": "stand"
+                    }
+                  ],
+                  "props": [],
+                  "bubbles": [
+                    {
+                      "who": "kingWu",
+                      "text": "行省"
+                    }
+                  ],
+                  "cap": "——行走的中书省"
                 }
               ]
             }
@@ -27779,52 +30227,95 @@ window.DAYS = [
         "hookComic": {
           "panels": [
             {
-              "bg": "room",
+              "bg": "palace",
+              "cast": [
+                {
+                  "who": "kingWu",
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
+                }
+              ],
+              "props": [
+                {
+                  "what": "mapScroll",
+                  "x": 0.78,
+                  "y": 0.78,
+                  "k": 0.95
+                }
+              ],
+              "bubbles": [
+                {
+                  "who": "kingWu",
+                  "text": "某某省"
+                }
+              ],
+              "cap": "今天地图上的四个字"
+            },
+            {
+              "bg": "palace",
               "cast": [
                 {
                   "who": "xiaoman",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "talk"
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
                 }
               ],
-              "cap": "今天我们说“某某省”——这个"
-            },
-            {
-              "bg": "street",
-              "cast": [
-                {
-                  "who": "xiaoyin",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "talk"
-                }
-              ],
-              "cap": "今天我们说“某某省”——这个"
-            },
-            {
-              "bg": "shop",
-              "cast": [
+              "props": [],
+              "bubbles": [
                 {
                   "who": "xiaoman",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "talk"
+                  "text": "这个省字哪来的？"
                 }
               ],
-              "cap": "今天我们说“某某省”——这个"
+              "cap": "这个省字哪来的？"
             },
             {
-              "bg": "plain",
+              "bg": "palace",
               "cast": [
                 {
                   "who": "xiaoyin",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "wow"
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
                 }
               ],
-              "cap": "今天我们说“某某省”——这个"
+              "props": [
+                {
+                  "what": "mapScroll",
+                  "x": 0.78,
+                  "y": 0.78,
+                  "k": 0.95
+                }
+              ],
+              "bubbles": [],
+              "cap": "小音把地图往回翻了七百年"
+            },
+            {
+              "bg": "palace",
+              "cast": [
+                {
+                  "who": "kingWu",
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
+                }
+              ],
+              "props": [
+                {
+                  "what": "mapScroll",
+                  "x": 0.78,
+                  "y": 0.78,
+                  "k": 0.95
+                }
+              ],
+              "bubbles": [],
+              "cap": "元朝的大地图"
             }
           ]
         }
@@ -28334,52 +30825,69 @@ window.DAYS = [
         "hookComic": {
           "panels": [
             {
-              "bg": "room",
+              "bg": "mountain",
               "cast": [
                 {
                   "who": "xiaoman",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "talk"
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
                 }
               ],
-              "cap": "为什么离海越远，越容易干旱"
+              "props": [],
+              "bubbles": [],
+              "cap": "西双版纳雨林"
             },
             {
-              "bg": "street",
+              "bg": "mountain",
               "cast": [
                 {
-                  "who": "xiaoyin",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "talk"
+                  "who": "ale",
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
                 }
               ],
-              "cap": "第 8 天的季风已经给了答案"
+              "props": [],
+              "bubbles": [],
+              "cap": "同一天塔克拉玛干沙漠"
             },
             {
-              "bg": "shop",
+              "bg": "mountain",
               "cast": [
                 {
                   "who": "xiaoman",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "talk"
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
                 }
               ],
-              "cap": "第 8 天的季风已经给了答案"
+              "props": [],
+              "bubbles": [],
+              "cap": "两张明信片放在一起"
             },
             {
-              "bg": "plain",
+              "bg": "mountain",
               "cast": [
                 {
                   "who": "xiaoyin",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "wow"
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
                 }
               ],
-              "cap": "第 8 天的季风已经给了答案"
+              "props": [],
+              "bubbles": [
+                {
+                  "who": "xiaoyin",
+                  "text": "一个国家"
+                }
+              ],
+              "cap": "一个国家"
             }
           ]
         }
@@ -28396,48 +30904,85 @@ window.DAYS = [
               "cast": [
                 {
                   "who": "xiaoman",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "talk"
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
                 }
               ],
-              "cap": "借钱买了一个包，你是变富了，"
-            },
-            {
-              "bg": "street",
-              "cast": [
+              "props": [
                 {
-                  "who": "xiaoyin",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "talk"
+                  "what": "bag",
+                  "x": 0.78,
+                  "y": 0.78,
+                  "k": 0.95
                 }
               ],
-              "cap": "借钱买了一个包，你是变富了，"
+              "bubbles": [],
+              "cap": "小满借钱买了一个包"
             },
             {
-              "bg": "shop",
+              "bg": "room",
               "cast": [
                 {
                   "who": "xiaoman",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "talk"
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "happy",
+                  "pose": "stand"
                 }
               ],
-              "cap": "借钱买了一个包，你是变富了，"
+              "props": [],
+              "bubbles": [],
+              "cap": "镜子前很开心"
             },
             {
-              "bg": "plain",
+              "bg": "room",
               "cast": [
                 {
                   "who": "xiaoyin",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "wow"
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
                 }
               ],
-              "cap": "借钱买了一个包，你是变富了，"
+              "props": [
+                {
+                  "what": "paper",
+                  "x": 0.78,
+                  "y": 0.78,
+                  "k": 0.95
+                },
+                {
+                  "what": "bag",
+                  "x": 0.62,
+                  "y": 0.78,
+                  "k": 0.95
+                }
+              ],
+              "bubbles": [],
+              "cap": "小音拿出天平"
+            },
+            {
+              "bg": "room",
+              "cast": [
+                {
+                  "who": "xiaoman",
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
+                }
+              ],
+              "props": [],
+              "bubbles": [
+                {
+                  "who": "xiaoman",
+                  "text": "变富了吗？"
+                }
+              ],
+              "cap": "变富了吗？"
             }
           ]
         },
@@ -28476,25 +31021,43 @@ window.DAYS = [
               "type": "comic",
               "panels": [
                 {
+                  "bg": "room",
+                  "cast": [
+                    {
+                      "who": "xiaoman",
+                      "x": 0.46,
+                      "y": 0.74,
+                      "face": "calm",
+                      "pose": "stand"
+                    }
+                  ],
+                  "props": [
+                    {
+                      "what": "bag",
+                      "x": 0.78,
+                      "y": 0.78,
+                      "k": 0.95
+                    }
+                  ],
+                  "bubbles": [],
+                  "cap": "一个 1 万的包"
+                },
+                {
                   "bg": "bank",
                   "cast": [
                     {
                       "who": "xiaoman",
-                      "x": 0.5,
-                      "y": 0.72,
-                      "face": "talk"
+                      "x": 0.46,
+                      "y": 0.74,
+                      "face": "calm",
+                      "pose": "stand"
                     }
                   ],
-                  "cap": "一个 1 万的包"
-                },
-                {
-                  "bg": "kitchen",
-                  "cast": [
+                  "props": [],
+                  "bubbles": [
                     {
                       "who": "xiaoman",
-                      "x": 0.5,
-                      "y": 0.72,
-                      "face": "talk"
+                      "text": "借"
                     }
                   ],
                   "cap": "要么是借来的"
@@ -28504,9 +31067,24 @@ window.DAYS = [
                   "cast": [
                     {
                       "who": "xiaoman",
-                      "x": 0.5,
-                      "y": 0.72,
-                      "face": "talk"
+                      "x": 0.46,
+                      "y": 0.74,
+                      "face": "calm",
+                      "pose": "stand"
+                    }
+                  ],
+                  "props": [
+                    {
+                      "what": "jar",
+                      "x": 0.78,
+                      "y": 0.78,
+                      "k": 0.95
+                    }
+                  ],
+                  "bubbles": [
+                    {
+                      "who": "xiaoman",
+                      "text": "自己的"
                     }
                   ],
                   "cap": "要么是自己的"
@@ -28932,9 +31510,10 @@ window.DAYS = [
                   "cast": [
                     {
                       "who": "xiaoman",
-                      "x": 0.48,
-                      "y": 0.72,
-                      "face": "talk"
+                      "x": 0.46,
+                      "y": 0.74,
+                      "face": "calm",
+                      "pose": "stand"
                     }
                   ],
                   "cap": "辩论三问：证据在哪"
@@ -28943,10 +31522,11 @@ window.DAYS = [
                   "bg": "street",
                   "cast": [
                     {
-                      "who": "xiaoyin",
-                      "x": 0.48,
-                      "y": 0.72,
-                      "face": "talk"
+                      "who": "xiaoman",
+                      "x": 0.46,
+                      "y": 0.74,
+                      "face": "calm",
+                      "pose": "stand"
                     }
                   ],
                   "cap": "别的解释"
@@ -28956,9 +31536,10 @@ window.DAYS = [
                   "cast": [
                     {
                       "who": "xiaoman",
-                      "x": 0.48,
-                      "y": 0.72,
-                      "face": "talk"
+                      "x": 0.46,
+                      "y": 0.74,
+                      "face": "calm",
+                      "pose": "stand"
                     }
                   ],
                   "cap": "真有那么糟"
@@ -29063,48 +31644,70 @@ window.DAYS = [
               "cast": [
                 {
                   "who": "xiaoman",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "talk"
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
                 }
               ],
-              "cap": "同样被拒绝，有人难过一天就好"
-            },
-            {
-              "bg": "street",
-              "cast": [
+              "props": [],
+              "bubbles": [
                 {
-                  "who": "xiaoyin",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "talk"
+                  "who": "xiaoman",
+                  "text": "已读"
                 }
               ],
-              "cap": "如果事情一样，差别从哪来"
+              "cap": "消息显示"
             },
             {
-              "bg": "shop",
+              "bg": "room",
               "cast": [
                 {
                   "who": "xiaoman",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "talk"
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
                 }
               ],
-              "cap": "如果事情一样，差别从哪来"
+              "props": [],
+              "bubbles": [],
+              "cap": "迟迟没有回复"
             },
             {
-              "bg": "plain",
+              "bg": "room",
+              "cast": [
+                {
+                  "who": "xiaoman",
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
+                }
+              ],
+              "props": [],
+              "bubbles": [],
+              "cap": "他讨厌我了"
+            },
+            {
+              "bg": "room",
               "cast": [
                 {
                   "who": "xiaoyin",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "wow"
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
                 }
               ],
-              "cap": "如果事情一样，差别从哪来"
+              "props": [],
+              "bubbles": [
+                {
+                  "who": "xiaoyin",
+                  "text": "让你难过的是哪一环？"
+                }
+              ],
+              "cap": "让你难过的是哪一环？"
             }
           ]
         }
@@ -29117,28 +31720,19 @@ window.DAYS = [
         "hookComic": {
           "panels": [
             {
-              "bg": "kitchen",
+              "bg": "shop",
               "cast": [
                 {
                   "who": "mia",
-                  "x": 0.32,
-                  "y": 0.72,
-                  "face": "happy"
-                },
-                {
-                  "who": "leo",
-                  "x": 0.62,
+                  "x": 0.46,
                   "y": 0.74,
-                  "face": "talk"
-                },
-                {
-                  "who": "mochi",
-                  "x": 0.8,
-                  "y": 0.82,
-                  "face": "happy",
-                  "k": 0.7
+                  "face": "calm",
+                  "pose": "cheer"
                 }
-              ]
+              ],
+              "props": [],
+              "bubbles": [],
+              "cap": ""
             },
             {
               "bg": "room",
@@ -29146,47 +31740,43 @@ window.DAYS = [
                 {
                   "who": "mia",
                   "x": 0.32,
-                  "y": 0.72,
-                  "face": "happy"
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "sit"
                 },
                 {
                   "who": "leo",
-                  "x": 0.62,
+                  "x": 0.64,
                   "y": 0.74,
-                  "face": "talk"
-                },
-                {
-                  "who": "mochi",
-                  "x": 0.8,
-                  "y": 0.82,
-                  "face": "happy",
-                  "k": 0.7
+                  "face": "calm",
+                  "pose": "point"
                 }
-              ]
+              ],
+              "props": [],
+              "bubbles": [],
+              "cap": ""
             },
             {
-              "bg": "street",
+              "bg": "kitchen",
               "cast": [
                 {
-                  "who": "mia",
-                  "x": 0.32,
-                  "y": 0.72,
-                  "face": "happy"
-                },
-                {
                   "who": "leo",
-                  "x": 0.62,
+                  "x": 0.46,
                   "y": 0.74,
-                  "face": "talk"
-                },
-                {
-                  "who": "mochi",
-                  "x": 0.8,
-                  "y": 0.82,
-                  "face": "happy",
-                  "k": 0.7
+                  "face": "calm",
+                  "pose": "cheer"
                 }
-              ]
+              ],
+              "props": [
+                {
+                  "what": "cake",
+                  "x": 0.78,
+                  "y": 0.78,
+                  "k": 0.95
+                }
+              ],
+              "bubbles": [],
+              "cap": ""
             }
           ]
         },
@@ -29194,28 +31784,19 @@ window.DAYS = [
           "title": "The Cake",
           "panels": [
             {
-              "bg": "kitchen",
+              "bg": "shop",
               "cast": [
                 {
                   "who": "mia",
-                  "x": 0.32,
-                  "y": 0.72,
-                  "face": "happy"
-                },
-                {
-                  "who": "leo",
-                  "x": 0.62,
+                  "x": 0.46,
                   "y": 0.74,
-                  "face": "talk"
-                },
-                {
-                  "who": "mochi",
-                  "x": 0.8,
-                  "y": 0.82,
-                  "face": "happy",
-                  "k": 0.7
+                  "face": "calm",
+                  "pose": "cheer"
                 }
-              ]
+              ],
+              "props": [],
+              "bubbles": [],
+              "cap": ""
             },
             {
               "bg": "room",
@@ -29223,71 +31804,65 @@ window.DAYS = [
                 {
                   "who": "mia",
                   "x": 0.32,
-                  "y": 0.72,
-                  "face": "happy"
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "sit"
                 },
                 {
                   "who": "leo",
-                  "x": 0.62,
+                  "x": 0.64,
                   "y": 0.74,
-                  "face": "talk"
-                },
-                {
-                  "who": "mochi",
-                  "x": 0.8,
-                  "y": 0.82,
-                  "face": "happy",
-                  "k": 0.7
+                  "face": "calm",
+                  "pose": "point"
                 }
-              ]
+              ],
+              "props": [],
+              "bubbles": [],
+              "cap": ""
             },
             {
-              "bg": "street",
+              "bg": "kitchen",
               "cast": [
                 {
-                  "who": "mia",
-                  "x": 0.32,
-                  "y": 0.72,
-                  "face": "happy"
-                },
-                {
                   "who": "leo",
-                  "x": 0.62,
+                  "x": 0.46,
                   "y": 0.74,
-                  "face": "talk"
-                },
-                {
-                  "who": "mochi",
-                  "x": 0.8,
-                  "y": 0.82,
-                  "face": "happy",
-                  "k": 0.7
+                  "face": "calm",
+                  "pose": "cheer"
                 }
-              ]
+              ],
+              "props": [
+                {
+                  "what": "cake",
+                  "x": 0.78,
+                  "y": 0.78,
+                  "k": 0.95
+                }
+              ],
+              "bubbles": [],
+              "cap": ""
             },
             {
-              "bg": "shop",
+              "bg": "room",
               "cast": [
                 {
-                  "who": "mia",
-                  "x": 0.32,
-                  "y": 0.72,
-                  "face": "happy"
-                },
-                {
-                  "who": "leo",
-                  "x": 0.62,
-                  "y": 0.74,
-                  "face": "talk"
-                },
-                {
                   "who": "mochi",
-                  "x": 0.8,
-                  "y": 0.82,
-                  "face": "happy",
-                  "k": 0.7
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
                 }
-              ]
+              ],
+              "props": [
+                {
+                  "what": "cake",
+                  "x": 0.78,
+                  "y": 0.78,
+                  "k": 0.95
+                }
+              ],
+              "bubbles": [],
+              "cap": ""
             }
           ],
           "lines": [
@@ -29936,48 +32511,70 @@ window.DAYS = [
               "cast": [
                 {
                   "who": "xiaoman",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "talk"
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
                 }
               ],
-              "cap": "两周学了 12 个知识点"
-            },
-            {
-              "bg": "street",
-              "cast": [
+              "props": [],
+              "bubbles": [
                 {
-                  "who": "xiaoyin",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "talk"
+                  "who": "xiaoman",
+                  "text": "我这身好看吗？"
                 }
               ],
-              "cap": "现在用它们，把“好看”讲成别"
+              "cap": "闺蜜问"
             },
             {
-              "bg": "shop",
+              "bg": "room",
               "cast": [
                 {
                   "who": "xiaoman",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "talk"
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
                 }
               ],
-              "cap": "现在用它们，把“好看”讲成别"
+              "props": [],
+              "bubbles": [
+                {
+                  "who": "xiaoman",
+                  "text": "好看！"
+                }
+              ],
+              "cap": "——为什么？说不出"
             },
             {
-              "bg": "plain",
+              "bg": "room",
               "cast": [
                 {
                   "who": "xiaoyin",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "wow"
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "give"
                 }
               ],
-              "cap": "现在用它们，把“好看”讲成别"
+              "props": [],
+              "bubbles": [],
+              "cap": "小音递上四张卡"
+            },
+            {
+              "bg": "room",
+              "cast": [
+                {
+                  "who": "xiaoman",
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
+                }
+              ],
+              "props": [],
+              "bubbles": [],
+              "cap": "小满一条条讲出理由"
             }
           ]
         }
@@ -30051,28 +32648,64 @@ window.DAYS = [
               "type": "comic",
               "panels": [
                 {
-                  "bg": "room",
+                  "bg": "mountain",
                   "cast": [
                     {
-                      "who": "xiaoman",
-                      "x": 0.48,
-                      "y": 0.72,
-                      "face": "talk"
+                      "who": "kingWu",
+                      "x": 0.46,
+                      "y": 0.74,
+                      "face": "calm",
+                      "pose": "stand"
                     }
                   ],
-                  "cap": "清入关后沿用明制、继续科举，"
+                  "props": [],
+                  "bubbles": [],
+                  "cap": "山海关大门打开"
                 },
                 {
-                  "bg": "street",
+                  "bg": "palace",
                   "cast": [
                     {
-                      "who": "xiaoyin",
-                      "x": 0.48,
-                      "y": 0.72,
-                      "face": "talk"
+                      "who": "kingWu",
+                      "x": 0.46,
+                      "y": 0.74,
+                      "face": "calm",
+                      "pose": "stand"
                     }
                   ],
-                  "cap": "入关：少数人怎么管大国"
+                  "props": [],
+                  "bubbles": [],
+                  "cap": "八旗进京"
+                },
+                {
+                  "bg": "palace",
+                  "cast": [
+                    {
+                      "who": "kingWu",
+                      "x": 0.46,
+                      "y": 0.74,
+                      "face": "calm",
+                      "pose": "stand"
+                    }
+                  ],
+                  "props": [],
+                  "bubbles": [],
+                  "cap": "少数人看着一大片疆域"
+                },
+                {
+                  "bg": "palace",
+                  "cast": [
+                    {
+                      "who": "kingWu",
+                      "x": 0.46,
+                      "y": 0.74,
+                      "face": "calm",
+                      "pose": "stand"
+                    }
+                  ],
+                  "props": [],
+                  "bubbles": [],
+                  "cap": "沿用明的制度和官员"
                 }
               ]
             }
@@ -30421,52 +33054,64 @@ window.DAYS = [
         "hookComic": {
           "panels": [
             {
-              "bg": "room",
+              "bg": "palace",
               "cast": [
                 {
                   "who": "xiaoman",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "talk"
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
                 }
               ],
-              "cap": "两周前你还分不清五代十国"
+              "props": [],
+              "bubbles": [],
+              "cap": "两周前小满面对一团乱麻"
             },
             {
-              "bg": "street",
+              "bg": "palace",
               "cast": [
                 {
-                  "who": "xiaoyin",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "talk"
+                  "who": "kingWu",
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
                 }
               ],
-              "cap": "今天，把从夏到清的整副骨架一"
+              "props": [],
+              "bubbles": [],
+              "cap": "今天手里是一根挂满朝代的竹竿"
             },
             {
-              "bg": "shop",
+              "bg": "palace",
               "cast": [
                 {
                   "who": "xiaoman",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "talk"
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
                 }
               ],
-              "cap": "今天，把从夏到清的整副骨架一"
+              "props": [],
+              "bubbles": [],
+              "cap": "她从夏数到清"
             },
             {
-              "bg": "plain",
+              "bg": "palace",
               "cast": [
                 {
                   "who": "xiaoyin",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "wow"
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
                 }
               ],
-              "cap": "今天，把从夏到清的整副骨架一"
+              "props": [],
+              "bubbles": [],
+              "cap": "小音鼓掌"
             }
           ]
         }
@@ -30898,52 +33543,76 @@ window.DAYS = [
         "hookComic": {
           "panels": [
             {
-              "bg": "room",
+              "bg": "mountain",
               "cast": [
                 {
                   "who": "xiaoman",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "talk"
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "sit"
                 }
               ],
-              "cap": "五代十国的地图，和今天的省份"
+              "props": [
+                {
+                  "what": "castle",
+                  "x": 0.78,
+                  "y": 0.78,
+                  "k": 0.95
+                }
+              ],
+              "bubbles": [],
+              "cap": "开封城里"
             },
             {
               "bg": "street",
               "cast": [
                 {
-                  "who": "xiaoyin",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "talk"
+                  "who": "xiaoman",
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "run"
                 }
               ],
-              "cap": "为什么"
+              "props": [],
+              "bubbles": [],
+              "cap": "北边草原上"
             },
             {
-              "bg": "shop",
+              "bg": "mountain",
               "cast": [
                 {
                   "who": "xiaoman",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "talk"
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "sit"
                 }
               ],
-              "cap": "为什么"
+              "props": [],
+              "bubbles": [],
+              "cap": "江南"
             },
             {
-              "bg": "plain",
+              "bg": "mountain",
               "cast": [
                 {
                   "who": "xiaoyin",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "wow"
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
                 }
               ],
-              "cap": "为什么"
+              "props": [],
+              "bubbles": [
+                {
+                  "who": "xiaoyin",
+                  "text": "谁难打"
+                }
+              ],
+              "cap": "谁难打"
             }
           ]
         }
@@ -30959,49 +33628,87 @@ window.DAYS = [
               "bg": "room",
               "cast": [
                 {
-                  "who": "xiaoman",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "talk"
+                  "who": "xiaoG",
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
                 }
               ],
-              "cap": "有一套 200 万的房子，却"
-            },
-            {
-              "bg": "street",
-              "cast": [
+              "props": [
                 {
-                  "who": "xiaoyin",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "talk"
+                  "what": "house",
+                  "x": 0.78,
+                  "y": 0.78,
+                  "k": 0.95
                 }
               ],
-              "cap": "怎么会"
+              "bubbles": [],
+              "cap": "小 G 站在大房子前"
             },
             {
-              "bg": "shop",
+              "bg": "room",
               "cast": [
                 {
                   "who": "xiaoman",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "talk"
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
                 }
               ],
-              "cap": "怎么会"
+              "props": [
+                {
+                  "what": "phone",
+                  "x": 0.78,
+                  "y": 0.78,
+                  "k": 0.95
+                }
+              ],
+              "bubbles": [],
+              "cap": "手机提示房贷扣款"
             },
             {
-              "bg": "plain",
+              "bg": "room",
+              "cast": [
+                {
+                  "who": "xiaoman",
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
+                }
+              ],
+              "props": [],
+              "bubbles": [],
+              "cap": "工资还没到"
+            },
+            {
+              "bg": "room",
               "cast": [
                 {
                   "who": "xiaoyin",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "wow"
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
                 }
               ],
-              "cap": "怎么会"
+              "props": [
+                {
+                  "what": "house",
+                  "x": 0.78,
+                  "y": 0.78,
+                  "k": 0.95
+                }
+              ],
+              "bubbles": [
+                {
+                  "who": "xiaoyin",
+                  "text": "有房子"
+                }
+              ],
+              "cap": "有房子"
             }
           ]
         },
@@ -31013,39 +33720,62 @@ window.DAYS = [
               "type": "comic",
               "panels": [
                 {
-                  "bg": "bank",
+                  "bg": "room",
                   "cast": [
                     {
-                      "who": "xiaoman",
-                      "x": 0.5,
-                      "y": 0.72,
-                      "face": "talk"
+                      "who": "xiaoG",
+                      "x": 0.46,
+                      "y": 0.74,
+                      "face": "calm",
+                      "pose": "stand"
                     }
                   ],
+                  "props": [
+                    {
+                      "what": "house",
+                      "x": 0.78,
+                      "y": 0.78,
+                      "k": 0.95
+                    }
+                  ],
+                  "bubbles": [],
                   "cap": "小 G 有套 200 万的房"
-                },
-                {
-                  "bg": "kitchen",
-                  "cast": [
-                    {
-                      "who": "xiaoman",
-                      "x": 0.5,
-                      "y": 0.72,
-                      "face": "talk"
-                    }
-                  ],
-                  "cap": "工资 7000，房贷 800"
                 },
                 {
                   "bg": "room",
                   "cast": [
                     {
                       "who": "xiaoman",
-                      "x": 0.5,
-                      "y": 0.72,
-                      "face": "talk"
+                      "x": 0.46,
+                      "y": 0.74,
+                      "face": "calm",
+                      "pose": "stand"
                     }
                   ],
+                  "props": [],
+                  "bubbles": [],
+                  "cap": "工资 7000"
+                },
+                {
+                  "bg": "room",
+                  "cast": [
+                    {
+                      "who": "xiaoman",
+                      "x": 0.46,
+                      "y": 0.74,
+                      "face": "worry",
+                      "pose": "stand"
+                    }
+                  ],
+                  "props": [
+                    {
+                      "what": "jar",
+                      "x": 0.78,
+                      "y": 0.78,
+                      "k": 0.95
+                    }
+                  ],
+                  "bubbles": [],
                   "cap": "每月都在漏钱"
                 }
               ]
@@ -31106,27 +33836,46 @@ window.DAYS = [
               "type": "comic",
               "panels": [
                 {
-                  "bg": "bank",
+                  "bg": "room",
                   "cast": [
                     {
                       "who": "xiaoman",
-                      "x": 0.5,
-                      "y": 0.72,
-                      "face": "talk"
+                      "x": 0.46,
+                      "y": 0.74,
+                      "face": "calm",
+                      "pose": "stand"
                     }
                   ],
-                  "cap": "照片：这一刻有什么、欠什么"
+                  "props": [
+                    {
+                      "what": "payslip",
+                      "x": 0.78,
+                      "y": 0.78,
+                      "k": 0.95
+                    },
+                    {
+                      "what": "house",
+                      "x": 0.62,
+                      "y": 0.78,
+                      "k": 0.95
+                    }
+                  ],
+                  "bubbles": [],
+                  "cap": "照片：这一刻有什么"
                 },
                 {
-                  "bg": "kitchen",
+                  "bg": "room",
                   "cast": [
                     {
                       "who": "xiaoman",
-                      "x": 0.5,
-                      "y": 0.72,
-                      "face": "talk"
+                      "x": 0.46,
+                      "y": 0.74,
+                      "face": "calm",
+                      "pose": "stand"
                     }
                   ],
+                  "props": [],
+                  "bubbles": [],
                   "cap": "录像：这段时间钱怎么进出"
                 }
               ]
@@ -31219,25 +33968,43 @@ window.DAYS = [
               "type": "comic",
               "panels": [
                 {
-                  "bg": "bank",
+                  "bg": "shop",
                   "cast": [
                     {
                       "who": "xiaoman",
-                      "x": 0.5,
-                      "y": 0.72,
-                      "face": "talk"
+                      "x": 0.46,
+                      "y": 0.74,
+                      "face": "calm",
+                      "pose": "give"
                     }
                   ],
-                  "cap": "卖出 300 杯，6000 "
+                  "props": [
+                    {
+                      "what": "cup",
+                      "x": 0.78,
+                      "y": 0.78,
+                      "k": 0.95
+                    }
+                  ],
+                  "bubbles": [],
+                  "cap": "卖出 300 杯"
                 },
                 {
-                  "bg": "kitchen",
+                  "bg": "room",
                   "cast": [
                     {
                       "who": "xiaoman",
-                      "x": 0.5,
-                      "y": 0.72,
-                      "face": "talk"
+                      "x": 0.46,
+                      "y": 0.74,
+                      "face": "calm",
+                      "pose": "stand"
+                    }
+                  ],
+                  "props": [],
+                  "bubbles": [
+                    {
+                      "who": "xiaoman",
+                      "text": "月底再付"
                     }
                   ],
                   "cap": "钱要月底才给"
@@ -31247,11 +34014,14 @@ window.DAYS = [
                   "cast": [
                     {
                       "who": "xiaoman",
-                      "x": 0.5,
-                      "y": 0.72,
-                      "face": "talk"
+                      "x": 0.46,
+                      "y": 0.74,
+                      "face": "worry",
+                      "pose": "stand"
                     }
                   ],
+                  "props": [],
+                  "bubbles": [],
                   "cap": "可房租今天就要交"
                 }
               ]
@@ -31266,27 +34036,33 @@ window.DAYS = [
               "type": "comic",
               "panels": [
                 {
-                  "bg": "bank",
+                  "bg": "room",
                   "cast": [
                     {
                       "who": "xiaoman",
-                      "x": 0.5,
-                      "y": 0.72,
-                      "face": "talk"
+                      "x": 0.46,
+                      "y": 0.74,
+                      "face": "calm",
+                      "pose": "cheer"
                     }
                   ],
+                  "props": [],
+                  "bubbles": [],
                   "cap": "我的照片：净资产多少？"
                 },
                 {
-                  "bg": "kitchen",
+                  "bg": "room",
                   "cast": [
                     {
                       "who": "xiaoman",
-                      "x": 0.5,
-                      "y": 0.72,
-                      "face": "talk"
+                      "x": 0.46,
+                      "y": 0.74,
+                      "face": "calm",
+                      "pose": "stand"
                     }
                   ],
+                  "props": [],
+                  "bubbles": [],
                   "cap": "我的录像：每月是正是负？"
                 }
               ]
@@ -31665,48 +34441,60 @@ window.DAYS = [
               "cast": [
                 {
                   "who": "xiaoman",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "talk"
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
                 }
               ],
-              "cap": "12 个理论听起来很多，其实"
+              "props": [],
+              "bubbles": [],
+              "cap": "12 张理论卡散在桌上"
             },
             {
-              "bg": "street",
-              "cast": [
-                {
-                  "who": "xiaoyin",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "talk"
-                }
-              ],
-              "cap": "12 个理论听起来很多，其实"
-            },
-            {
-              "bg": "shop",
+              "bg": "room",
               "cast": [
                 {
                   "who": "xiaoman",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "talk"
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "worry",
+                  "pose": "stand"
                 }
               ],
-              "cap": "12 个理论听起来很多，其实"
+              "props": [],
+              "bubbles": [],
+              "cap": "小满头大"
             },
             {
-              "bg": "plain",
+              "bg": "room",
               "cast": [
                 {
                   "who": "xiaoyin",
-                  "x": 0.5,
-                  "y": 0.72,
-                  "face": "wow"
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
                 }
               ],
-              "cap": "12 个理论听起来很多，其实"
+              "props": [],
+              "bubbles": [],
+              "cap": "小音用一根线把它们串起来"
+            },
+            {
+              "bg": "room",
+              "cast": [
+                {
+                  "who": "xiaoman",
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "run"
+                }
+              ],
+              "props": [],
+              "bubbles": [],
+              "cap": "变成一条接力跑道"
             }
           ]
         }
@@ -31719,76 +34507,70 @@ window.DAYS = [
         "hookComic": {
           "panels": [
             {
-              "bg": "kitchen",
+              "bg": "shop",
               "cast": [
                 {
                   "who": "mia",
-                  "x": 0.32,
-                  "y": 0.72,
-                  "face": "happy"
-                },
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
+                }
+              ],
+              "props": [
+                {
+                  "what": "mic",
+                  "x": 0.78,
+                  "y": 0.78,
+                  "k": 0.95
+                }
+              ],
+              "bubbles": [],
+              "cap": ""
+            },
+            {
+              "bg": "room",
+              "cast": [
                 {
                   "who": "leo",
-                  "x": 0.62,
+                  "x": 0.46,
                   "y": 0.74,
-                  "face": "talk"
-                },
-                {
-                  "who": "mochi",
-                  "x": 0.8,
-                  "y": 0.82,
-                  "face": "happy",
-                  "k": 0.7
+                  "face": "calm",
+                  "pose": "stand"
                 }
-              ]
+              ],
+              "props": [
+                {
+                  "what": "cake",
+                  "x": 0.78,
+                  "y": 0.78,
+                  "k": 0.95
+                }
+              ],
+              "bubbles": [],
+              "cap": ""
             },
             {
               "bg": "room",
               "cast": [
                 {
                   "who": "mia",
-                  "x": 0.32,
-                  "y": 0.72,
-                  "face": "happy"
-                },
-                {
-                  "who": "leo",
-                  "x": 0.62,
+                  "x": 0.46,
                   "y": 0.74,
-                  "face": "talk"
-                },
-                {
-                  "who": "mochi",
-                  "x": 0.8,
-                  "y": 0.82,
-                  "face": "happy",
-                  "k": 0.7
+                  "face": "calm",
+                  "pose": "cheer"
                 }
-              ]
-            },
-            {
-              "bg": "street",
-              "cast": [
+              ],
+              "props": [
                 {
-                  "who": "mia",
-                  "x": 0.32,
-                  "y": 0.72,
-                  "face": "happy"
-                },
-                {
-                  "who": "leo",
-                  "x": 0.62,
-                  "y": 0.74,
-                  "face": "talk"
-                },
-                {
-                  "who": "mochi",
-                  "x": 0.8,
-                  "y": 0.82,
-                  "face": "happy",
-                  "k": 0.7
+                  "what": "mic",
+                  "x": 0.78,
+                  "y": 0.78,
+                  "k": 0.95
                 }
-              ]
+              ],
+              "bubbles": [],
+              "cap": ""
             }
           ]
         },
@@ -31796,148 +34578,136 @@ window.DAYS = [
           "title": "The Big Night",
           "panels": [
             {
-              "bg": "kitchen",
-              "cast": [
-                {
-                  "who": "mia",
-                  "x": 0.32,
-                  "y": 0.72,
-                  "face": "happy"
-                },
-                {
-                  "who": "leo",
-                  "x": 0.62,
-                  "y": 0.74,
-                  "face": "talk"
-                },
-                {
-                  "who": "mochi",
-                  "x": 0.8,
-                  "y": 0.82,
-                  "face": "happy",
-                  "k": 0.7
-                }
-              ]
-            },
-            {
-              "bg": "room",
-              "cast": [
-                {
-                  "who": "mia",
-                  "x": 0.32,
-                  "y": 0.72,
-                  "face": "happy"
-                },
-                {
-                  "who": "leo",
-                  "x": 0.62,
-                  "y": 0.74,
-                  "face": "talk"
-                },
-                {
-                  "who": "mochi",
-                  "x": 0.8,
-                  "y": 0.82,
-                  "face": "happy",
-                  "k": 0.7
-                }
-              ]
-            },
-            {
-              "bg": "street",
-              "cast": [
-                {
-                  "who": "mia",
-                  "x": 0.32,
-                  "y": 0.72,
-                  "face": "happy"
-                },
-                {
-                  "who": "leo",
-                  "x": 0.62,
-                  "y": 0.74,
-                  "face": "talk"
-                },
-                {
-                  "who": "mochi",
-                  "x": 0.8,
-                  "y": 0.82,
-                  "face": "happy",
-                  "k": 0.7
-                }
-              ]
-            },
-            {
               "bg": "shop",
               "cast": [
                 {
                   "who": "mia",
-                  "x": 0.32,
-                  "y": 0.72,
-                  "face": "happy"
-                },
-                {
-                  "who": "leo",
-                  "x": 0.62,
+                  "x": 0.46,
                   "y": 0.74,
-                  "face": "talk"
-                },
-                {
-                  "who": "mochi",
-                  "x": 0.8,
-                  "y": 0.82,
-                  "face": "happy",
-                  "k": 0.7
+                  "face": "calm",
+                  "pose": "stand"
                 }
-              ]
+              ],
+              "props": [
+                {
+                  "what": "mic",
+                  "x": 0.78,
+                  "y": 0.78,
+                  "k": 0.95
+                }
+              ],
+              "bubbles": [],
+              "cap": ""
             },
             {
-              "bg": "kitchen",
+              "bg": "room",
               "cast": [
                 {
-                  "who": "mia",
-                  "x": 0.32,
-                  "y": 0.72,
-                  "face": "happy"
-                },
-                {
                   "who": "leo",
-                  "x": 0.62,
+                  "x": 0.46,
                   "y": 0.74,
-                  "face": "talk"
-                },
-                {
-                  "who": "mochi",
-                  "x": 0.8,
-                  "y": 0.82,
-                  "face": "happy",
-                  "k": 0.7
+                  "face": "calm",
+                  "pose": "stand"
                 }
-              ]
+              ],
+              "props": [
+                {
+                  "what": "cake",
+                  "x": 0.78,
+                  "y": 0.78,
+                  "k": 0.95
+                }
+              ],
+              "bubbles": [],
+              "cap": ""
             },
             {
               "bg": "room",
               "cast": [
                 {
                   "who": "mia",
-                  "x": 0.32,
-                  "y": 0.72,
-                  "face": "happy"
-                },
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "cheer"
+                }
+              ],
+              "props": [
+                {
+                  "what": "mic",
+                  "x": 0.78,
+                  "y": 0.78,
+                  "k": 0.95
+                }
+              ],
+              "bubbles": [],
+              "cap": ""
+            },
+            {
+              "bg": "room",
+              "cast": [
                 {
                   "who": "leo",
-                  "x": 0.62,
+                  "x": 0.46,
                   "y": 0.74,
-                  "face": "talk"
+                  "face": "worry",
+                  "pose": "stand"
+                }
+              ],
+              "props": [
+                {
+                  "what": "cake",
+                  "x": 0.78,
+                  "y": 0.78,
+                  "k": 0.95
+                }
+              ],
+              "bubbles": [],
+              "cap": ""
+            },
+            {
+              "bg": "room",
+              "cast": [
+                {
+                  "who": "mochi",
+                  "x": 0.46,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
+                }
+              ],
+              "props": [],
+              "bubbles": [],
+              "cap": ""
+            },
+            {
+              "bg": "palace",
+              "cast": [
+                {
+                  "who": "mia",
+                  "x": 0.32,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
                 },
                 {
                   "who": "mochi",
-                  "x": 0.8,
-                  "y": 0.82,
-                  "face": "happy",
-                  "k": 0.7
+                  "x": 0.64,
+                  "y": 0.74,
+                  "face": "calm",
+                  "pose": "stand"
                 }
-              ]
+              ],
+              "props": [
+                {
+                  "what": "chair",
+                  "x": 0.78,
+                  "y": 0.78,
+                  "k": 0.95
+                }
+              ],
+              "bubbles": [],
+              "cap": ""
             }
           ],
           "lines": [
@@ -32389,50 +35159,68 @@ window.DAYS = [
             "bg": "palace",
             "cast": [
               {
-                "who": "scholar",
-                "x": 0.5,
-                "y": 0.72
+                "who": "kingWu",
+                "x": 0.46,
+                "y": 0.74,
+                "face": "calm",
+                "pose": "stand"
               }
             ],
-            "cap": "五代换得很勤"
+            "props": [
+              {
+                "what": "castle",
+                "x": 0.78,
+                "y": 0.78,
+                "k": 0.95
+              }
+            ],
+            "bubbles": [],
+            "cap": "开封城里的粮船"
           },
           {
-            "bg": "street",
+            "bg": "palace",
             "cast": [
               {
-                "who": "xiaoman",
-                "x": 0.45,
-                "y": 0.72
+                "who": "kingWu",
+                "x": 0.46,
+                "y": 0.74,
+                "face": "calm",
+                "pose": "stand"
               }
             ],
-            "cap": "一天里六件事"
+            "props": [],
+            "bubbles": [],
+            "cap": "商人算账"
           },
           {
-            "bg": "shop",
+            "bg": "palace",
             "cast": [
               {
-                "who": "xiaoman",
-                "x": 0.5,
-                "y": 0.72
+                "who": "kingWu",
+                "x": 0.46,
+                "y": 0.74,
+                "face": "calm",
+                "pose": "stand"
               }
             ],
-            "cap": "钱、颜色、心跳"
+            "props": [],
+            "bubbles": [],
+            "cap": "已读不回的书信"
           },
           {
-            "bg": "kitchen",
+            "bg": "palace",
             "cast": [
               {
-                "who": "mia",
-                "x": 0.4,
-                "y": 0.72
-              },
-              {
-                "who": "mochi",
-                "x": 0.7,
-                "y": 0.8
+                "who": "kingWu",
+                "x": 0.46,
+                "y": 0.74,
+                "face": "calm",
+                "pose": "stand"
               }
             ],
-            "cap": "英语也要接上"
+            "props": [],
+            "bubbles": [],
+            "cap": "红配绿的宫装）"
           }
         ]
       }

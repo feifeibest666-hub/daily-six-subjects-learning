@@ -482,7 +482,10 @@
         built = true;
         seenEnd = false;
         sheet = false;
-        show(0, reduced ? 'jump' : 'tween');
+        const startAt = live.opts && live.opts.start != null
+          ? live.opts.start
+          : (live.opts && live.opts.poster ? Math.max(0, frameList().length - 1) : 0);
+        show(startAt, reduced || (live.opts && live.opts.poster) ? 'jump' : 'tween');
       },
       destroy: function () {
         destroyed = true;

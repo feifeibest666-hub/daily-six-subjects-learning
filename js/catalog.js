@@ -71,7 +71,9 @@
       options: q.options.slice(),
       answer: q.answer,
       why: q.why,
-      ref: q.ref == null ? null : q.ref
+      ref: q.ref == null ? null : q.ref,
+      visual: q.visual || null,
+      audio: q.audio || null
     };
   }
 
@@ -98,7 +100,9 @@
       ref: q.ref == null ? null : q.ref,
       options: map.map(function (i) { return q.options[i]; }),
       answer: map.indexOf(q.answer),
-      indexMap: map
+      indexMap: map,
+      visual: q.visual || null,
+      audio: q.audio || null
     };
   }
 
@@ -115,7 +119,9 @@
           answer: q.answer,
           why: q.why,
           ref: q.ref == null ? null : q.ref,
-          review: true
+          review: true,
+          visual: q.visual || null,
+          audio: q.audio || null
         });
       });
     });
@@ -174,7 +180,9 @@
           answer: q.answer,
           why: q.why,
           ref: q.ref == null ? null : q.ref,
-          review: true
+          review: true,
+          visual: q.visual || null,
+          audio: q.audio || null
         });
       });
     }
@@ -193,7 +201,9 @@
           options: q.options,
           answer: q.answer,
           why: q.why,
-          ref: q.ref == null ? null : q.ref
+          ref: q.ref == null ? null : q.ref,
+          visual: q.visual || null,
+          audio: q.audio || null
         }, salt);
       });
     }
@@ -209,7 +219,9 @@
         options: q.options.slice(),
         answer: q.answer,
         why: q.why,
-        ref: q.ref == null ? null : q.ref
+        ref: q.ref == null ? null : q.ref,
+        visual: q.visual || null,
+        audio: q.audio || null
       };
     });
     let list = mini ? base.slice(0, 1) : base.slice();
@@ -262,7 +274,11 @@
     if (n === 0) {
       if (d && d.type === 'review') return '今天是周复盘。先从时尚回炉热个身？';
       if (state.miniOn) return '迷你模式 6 关，约 8 分钟。先从时尚热个身？';
-      return '今天 6 关，约 46 分钟。先从时尚热个身？';
+      const mins = SUBJECT_ORDER.reduce(function (n, s) {
+        const les = d && d.lessons && d.lessons[s];
+        return n + (les && les.minutes ? les.minutes : 0);
+      }, 0);
+      return '今天 6 关，约 ' + (mins || 46) + ' 分钟。先从时尚热个身？';
     }
     if (n <= 2) {
       const next = SUBJECT_ORDER.find(function (s) { return !state.lessons[LK.lessonId(day, s)]; });

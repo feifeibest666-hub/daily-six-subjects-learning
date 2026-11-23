@@ -76,15 +76,44 @@
       done = true;
       ctx.onReady();
     }
+    function storyStage(target) {
+      const panels = les.story && les.story.panels;
+      if (!panels || !panels.length || !global.LKStage) return null;
+      const host = LK.h('div', { class: 'stage-host' });
+      target.appendChild(host);
+      return LKStage.mount(host, { type: 'comic', panels: panels }, { subject: { name: '英语', color: '#3D86D9' } });
+    }
+    function showLines(target, lines) {
+      (lines || []).forEach(function (ln) {
+        const p = LK.h('p', { class: 'say-line' });
+        if (ln.who) p.appendChild(LK.h('span', { class: 'say-who', text: ln.who }));
+        p.appendChild(LK.h('span', { class: 'en', text: ln.en || '' }));
+        if (ln.zh) p.appendChild(LK.h('span', { class: 'say-zh', text: ln.zh }));
+        target.appendChild(p);
+      });
+    }
+    function follow(api, lines) {
+      return function (i) {
+        if (!api) return;
+        const ln = lines[i] || {};
+        api.go(ln.panel != null ? ln.panel : i);
+      };
+    }
     if (kind === 'story-listen') {
       box.appendChild(LK.h('p', { class: 'k-p', text: step.idea || '先别看字，看着图听。' }));
-      const play = LK.h('button', { class: 'btn btn-primary', type: 'button', text: '听故事' });
-      box.appendChild(play);
-      play.addEventListener('click', function () {
-        const lines = (les.story && les.story.lines) || [];
-        if (LKSpeech.status() === 'none') { finish(); return; }
-        LKSpeech.sayLines(lines, { speed: 'slow', onEnd: finish });
-      });
+      const api = storyStage(box);
+      const lines = (les.story && les.story.lines) || [];
+      const silent = !global.LKSpeech || LKSpeech.status() === 'none';
+      if (silent) {
+        showLines(box, lines);
+        finish();
+      } else {
+        const play = LK.h('button', { class: 'btn btn-primary', type: 'button', text: '听故事' });
+        box.appendChild(play);
+        play.addEventListener('click', function () {
+          LKSpeech.sayLines(lines, { speed: 'slow', onLine: follow(api, lines), onEnd: finish });
+        });
+      }
       if (step.check) box.appendChild(LK.h('p', { class: 'sheet-copy', text: '听完后做上面的小检查。' }));
     } else if (kind === 'words') {
       const heard = {};
@@ -199,6 +228,17 @@
       show();
     } else if (kind === 'retell') {
       box.appendChild(LK.h('p', { class: 'k-p', text: step.idea || '看着图，用这些词讲一遍。' }));
+      const api = storyStage(box);
+      const lines = (les.story && les.story.lines) || [];
+      const silent = !global.LKSpeech || LKSpeech.status() === 'none';
+      if (silent) showLines(box, lines);
+      else {
+        const hear = LK.h('button', { class: 'btn btn-secondary', type: 'button', text: '听原文' });
+        hear.addEventListener('click', function () {
+          LKSpeech.sayLines(lines, { speed: 'normal', onLine: follow(api, lines) });
+        });
+        box.appendChild(hear);
+      }
       (step.keys || []).forEach(function (group, i) {
         const row = LK.h('p', { class: 'en' });
         row.appendChild(document.createTextNode((i + 1) + '. '));

@@ -968,10 +968,15 @@
         card.appendChild(host);
         LKStage.poster(host, q.visual, { subject: sub });
       }
-      if (q.audio && global.LKSpeech && LKSpeech.status() !== 'none') {
-        const play = LK.h('button', { class: 'say-btn', type: 'button', text: '听题' });
-        play.addEventListener('click', function () { LKSpeech.say(q.audio, { speed: 'normal' }); });
-        row.appendChild(play);
+      if (q.audio) {
+        const silent = !global.LKSpeech || LKSpeech.status() === 'none';
+        if (silent) {
+          card.appendChild(LK.h('p', { class: 'q-audio-text', text: '读一读：' + q.audio }));
+        } else {
+          const play = LK.h('button', { class: 'say-btn', type: 'button', text: '听题' });
+          play.addEventListener('click', function () { LKSpeech.say(q.audio, { speed: 'normal' }); });
+          row.appendChild(play);
+        }
       }
       row.appendChild(peekButton(function () { return sourceOf(q); }, qi === 0));
       card.appendChild(row);

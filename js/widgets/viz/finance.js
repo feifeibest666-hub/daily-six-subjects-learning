@@ -42,7 +42,8 @@
     const span = (max - min) || 1;
     const top = 18, bot = 142;
     const zero = bot - ((0 - min) / span) * (bot - top);
-    g.appendChild(el('line', { x1: 36, y1: zero, x2: 286, y2: zero, stroke: INK, 'stroke-width': 1.5 }));
+    const flash = state.flash || '';
+    g.appendChild(el('line', { x1: 36, y1: zero, x2: 286, y2: zero, stroke: flash === 'zero' ? GOLD : INK, 'stroke-width': flash === 'zero' ? 4 : 1.5 }));
     if (min < 0) T(g, 28, zero + 4, '0', 11, MUTED, 'end');
     const slot = items.length ? 250 / items.length : 80;
     items.forEach(function (it, i) {
@@ -51,8 +52,16 @@
       const x = 42 + i * slot + slot * 0.2;
       const w = slot * 0.6;
       const y = v >= 0 ? zero - h : zero;
-      g.appendChild(el('rect', { x: x, y: y, width: w, height: Math.max(1, h), rx: 4, fill: v < 0 ? BAD : (it.color || GOLD) }));
-      T(g, x + w / 2, v >= 0 ? y - 4 : y + h + 12, String(it.value), 12, INK);
+      const hot = flash && String(it.label || '').indexOf(flash) >= 0;
+      g.appendChild(el('rect', {
+        x: x, y: y, width: w, height: Math.max(1, h), rx: 4,
+        fill: v < 0 ? BAD : (it.color || GOLD),
+        stroke: hot ? '#3A302A' : 'none', 'stroke-width': hot ? 3 : 0,
+        opacity: flash && flash !== 'zero' && !hot ? 0.35 : 1
+      }));
+      let vy = v >= 0 ? y - 4 : y + h + 12;
+      if (v < 0 && vy > 148) vy = y - 16;
+      T(g, x + w / 2, vy, String(it.value), 12, INK);
       const label = String(it.label || '');
       T(g, x + w / 2, 162, label.slice(0, 6), 11, INK);
       if (label.length > 6) T(g, x + w / 2, 176, label.slice(6, 12), 11, INK);
@@ -62,7 +71,10 @@
       g.appendChild(el('line', { x1: 36, y1: ay, x2: 270, y2: ay, stroke: MUTED, 'stroke-width': 1.5, 'stroke-dasharray': '4 3' }));
       T(g, 286, ay, state.avgLine.label || '', 11, MUTED, 'end');
     }
-    if (state.unit) T(g, 286, 14, state.unit, 11, MUTED, 'end');
+    if (state.unit) {
+      const unit = String(state.unit).replace(/[（(。.].*$/, '').slice(0, 3);
+      if (unit) T(g, 286, 14, unit, 11, MUTED, 'end');
+    }
   });
 
   reg('line', '0 0 300 190', function (g, state) {

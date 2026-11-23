@@ -41,9 +41,11 @@
     else status = 'ready';
   }
   function loadVoices() {
+    const settings = global.LKStore ? LKStore.get().settings : {};
     if (typeof speechSynthesis === 'undefined') { status = 'none'; return; }
     voices = speechSynthesis.getVoices() || [];
     if (voices.length) pick();
+    else status = settings.ttsProbe === 'none' ? 'none' : 'try';
   }
   function init() {
     loadVoices();
@@ -212,6 +214,7 @@
     stop: function () { stop(false); },
     englishVoices: englishVoices,
     tokens: tokens,
-    primaryName: function () { return primary ? primary.name : ''; }
+    primaryName: function () { return primary ? primary.name : ''; },
+    rescan: function () { loadVoices(); }
   };
 })(window);

@@ -36,7 +36,10 @@
     voiceBlock.appendChild(LK.h('p', { class: 'set-label', text: '英语声音' }));
     const voiceList = LK.h('div', { class: 'rate-row' });
     const voices = global.LKSpeech ? LKSpeech.englishVoices() : [];
-    if (!voices.length) voiceBlock.appendChild(LK.h('p', { class: 'sheet-copy', text: '这台设备还没有英语声音。课程可以照常学，只是听不到朗读。' }));
+    if (!voices.length) {
+      voiceBlock.appendChild(LK.h('p', { class: 'sheet-copy', text: '这台设备还没有英语声音。课程可以照常学，只是听不到朗读。' }));
+      voiceBlock.appendChild(LK.h('p', { class: 'sheet-copy', text: 'iPhone：设置 → 辅助功能 → 朗读内容 → 声音 → English。安卓：设置 → 文字转语音。' }));
+    }
     voices.forEach(function (v) {
       const on = state.settings.ttsVoice === v.voiceURI || (!state.settings.ttsVoice && v.recommended);
       const b = LK.h('button', { class: 'zoom-btn' + (state.settings.ttsVoice === v.voiceURI ? ' is-on' : ''), text: v.name });
@@ -93,6 +96,14 @@
     });
     debug.appendChild(input);
     debug.appendChild(jump);
+    const probe = LK.h('button', { class: 'btn btn-secondary', text: state.settings.ttsProbe === 'none' ? '恢复英语声音' : '假装没有语音' });
+    probe.addEventListener('click', function () {
+      const next = state.settings.ttsProbe === 'none' ? null : 'none';
+      LKStore.setSetting('ttsProbe', next);
+      if (global.LKSpeech && LKSpeech.rescan) LKSpeech.rescan();
+      probe.textContent = next === 'none' ? '恢复英语声音' : '假装没有语音';
+    });
+    debug.appendChild(probe);
     screen.appendChild(debug);
     return screen;
   }
