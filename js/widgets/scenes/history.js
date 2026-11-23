@@ -207,9 +207,9 @@
     });
     const last = gens[4];
     s += glow(newRing(last.lx, last.y - 16, 13) + newRing(last.rx, last.y - 16, 13));
-    s += `<text x="${gens[0].lx}" y="${gens[0].y + 12}" font-size="11" font-weight="800" fill="${K.ink}" text-anchor="middle">天子</text>`;
-    s += `<text x="${gens[0].rx}" y="${gens[0].y + 12}" font-size="11" font-weight="800" fill="${K.ink}" text-anchor="middle">诸侯</text>`;
-    s += callout(gens[0].lx, gens[0].y - 22, 78, 86, '亲兄弟', { anchor: 'start', fs: 12 });
+    s += `<text x="96" y="98" font-size="11" font-weight="800" fill="${K.ink}" text-anchor="end">天子</text>`;
+    s += `<text x="312" y="98" font-size="11" font-weight="800" fill="${K.ink}" text-anchor="start">诸侯</text>`;
+    s += callout(150, 90, 92, 66, '亲兄弟', { anchor: 'end', fs: 12 });
     s += callout(200, gens[2].y - 16, 200, gens[2].y - 34, '堂兄弟', { anchor: 'middle', fs: 12 });
     s += callout(200, last.y - 8, 200, 228, '远亲', { anchor: 'middle', fs: 12 });
     return s;
@@ -314,7 +314,7 @@
   }
 
   function fourWorks() {
-    const P = proj({ s: 6, lon0: 98, lat0: 46, dx: 60, dy: 10 });
+    const P = proj({ s: 5.3, lon0: 74, lat0: 54, dx: 28, dy: 12 });
     const pt = function (lon, lat) { return P([lon, lat]).map(Number); };
     let s = `<rect width="344" height="236" fill="#EAF3F5"/>`;
     s += `<clipPath id="qinN"><path d="${pathOf(CN.outline, P, true)}"/></clipPath>`;
@@ -323,25 +323,29 @@
     s += `<path d="${pathOf(CN.line2.concat([[100, 20], [60, 20], [60, 56], [122.4, 56]]), P, true)}" fill="#E3C9A0"/>`;
     s += `<path d="${pathOf(CN.line1.concat([[98, 20], [60, 20], [60, 36.6]]), P, true)}" fill="#C9A27E"/>`;
     s += `</g>`;
-    s += `<path d="${pathOf(CN.outline, P, true)}" fill="none" stroke="#8C7B6B" stroke-width="1.2" stroke-linejoin="round"/>`;
-    s += `<path d="${riverThrough(CN.yangtze, P)}" fill="none" stroke="${K.waterD}" stroke-width="2.4" stroke-linecap="round"/>`;
-    s += `<path d="${riverThrough(CN.yellow, P)}" fill="none" stroke="#C9A64A" stroke-width="2.6" stroke-linecap="round"/>`;
-    const northEdge = [[106, 41.4], [110, 41.2], [114, 40.8], [118, 40.5], [121.5, 40.2]].map(function (p) { return pt(p[0], p[1]); });
+    s += `<path d="${pathOf(CN.outline, P, true)}" fill="none" stroke="#8C7B6B" stroke-width="1.15" stroke-linejoin="round"/>`;
+    const ty = P([121, 23.7]).map(Number), hn = P([109.6, 19.2]).map(Number);
+    s += `<ellipse cx="${ty[0]}" cy="${ty[1]}" rx="2.2" ry="5.4" fill="#EEE3C8" stroke="#8C7B6B" stroke-width=".7"/>`;
+    s += `<ellipse cx="${hn[0]}" cy="${hn[1]}" rx="4.4" ry="2.6" fill="#EEE3C8" stroke="#8C7B6B" stroke-width=".7"/>`;
+    s += `<path d="${riverThrough(CN.yangtze, P)}" fill="none" stroke="${K.waterD}" stroke-width="2.2" stroke-linecap="round"/>`;
+    s += `<path d="${riverThrough(CN.yellow, P)}" fill="none" stroke="#C9A64A" stroke-width="2.3" stroke-linecap="round"/>`;
+    const northEdge = [[104.2, 40.8], [107, 42], [109.2, 42.6], [112, 43.6], [115, 42.4], [118, 40.8], [121.2, 40.2]].map(function (p) { return pt(p[0], p[1]); });
     s += wall(northEdge);
-    const xy = pt(108.7, 34.4);
-    s += `<g transform="translate(${f(xy[0])} ${f(xy[1])}) scale(.42)">${palace(0, 0, { name: '' })}</g>`;
-    s += mountain(xy[0] + 28, xy[1] + 18, 36, 22, { c: '#C4A574', cd: '#A8845A' });
-    const hun = pt(111, 42.5);
-    const yue = pt(110, 23.5);
-    s += `<path d="M${f(xy[0])} ${f(xy[1] - 10)} L${f(hun[0])} ${f(hun[1] + 16)}" stroke="${RED}" stroke-width="2.2"/>`;
-    s += `<path d="M${f(xy[0])} ${f(xy[1] + 8)} L${f(yue[0])} ${f(yue[1] - 8)}" stroke="${RED}" stroke-width="2.2"/>`;
-    [[xy[0] - 16, xy[1] + 20], [xy[0] + 8, xy[1] + 26], [hun[0] + 12, hun[1] + 28], [yue[0] - 10, yue[1] + 8], [yue[0] + 12, yue[1] + 14]].forEach(function (p) {
-      s += figure(p[0], p[1], { k: 0.3, hat: 'bun', robe: '#9A8B76' });
+    const xy = pt(108.9, 34.3);
+    s += `<g transform="translate(${f(xy[0])} ${f(xy[1])}) scale(.34)">${palace(0, 0, { name: '' })}</g>`;
+    const tomb = pt(109.6, 34.2);
+    s += mountain(tomb[0], tomb[1] + 10, 28, 16, { c: '#C4A574', cd: '#A8845A' });
+    const hun = pt(112.4, 46.2);
+    const yue = pt(112.2, 22.6);
+    s += `<path d="M${f(xy[0])} ${f(xy[1] - 12)} L${f(hun[0])} ${f(hun[1] + 4)}" stroke="${RED}" stroke-width="2"/>`;
+    s += `<path d="M${f(xy[0] + 2)} ${f(xy[1] + 8)} L${f(yue[0])} ${f(yue[1] - 4)}" stroke="${RED}" stroke-width="2"/>`;
+    [[xy[0] - 14, xy[1] + 16], [xy[0] + 12, xy[1] + 18], [hun[0] - 14, hun[1] + 8], [hun[0] + 4, hun[1] + 12], [yue[0] - 12, yue[1] + 8], [yue[0] + 8, yue[1] + 12]].forEach(function (p) {
+      s += figure(p[0], p[1], { k: 0.26, hat: 'bun', robe: '#9A8B76' });
     });
-    s += callout(northEdge[2][0], northEdge[2][1], 250, 36, '长城', { anchor: 'end', fs: 12 });
-    s += callout(xy[0] + 10, xy[1], 300, 96, '宫殿和陵墓：刑徒 70 多万', { anchor: 'end', fs: 11, isNew: true });
-    s += callout(hun[0], hun[1] + 10, 86, 28, '击匈奴', { anchor: 'start', fs: 12, c: RED });
-    s += callout(yue[0], yue[1], 70, 200, '征百越', { anchor: 'start', fs: 12, c: RED });
+    s += callout(northEdge[3][0], northEdge[3][1], 248, 58, '长城', { anchor: 'end', fs: 12 });
+    s += callout(xy[0] + 8, xy[1], 328, 118, '宫殿和陵墓：刑徒 70 多万', { anchor: 'end', fs: 11, isNew: true });
+    s += callout(hun[0], hun[1], 86, 52, '击匈奴', { anchor: 'start', fs: 12, c: RED });
+    s += callout(yue[0], yue[1], 78, 214, '征百越', { anchor: 'start', fs: 12, c: RED });
     return s;
   }
 
