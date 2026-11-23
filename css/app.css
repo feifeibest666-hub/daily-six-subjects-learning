@@ -562,6 +562,58 @@ body.is-dragging { overflow: hidden; }
   background: transparent; color: var(--ink-2); height: 44px; font-size: var(--fs-small); font-weight: 500;
 }
 .viz-geo { width: min(100%, 320px); height: auto; display: block; margin: 8px auto 0; overflow: visible; }
+.stage-host { margin: 0 0 8px; }
+.stage-box { margin: 0 0 8px; }
+.viz-stage {
+  position: sticky; top: 52px; z-index: 3;
+  border-radius: 16px; overflow: hidden;
+}
+.viz-stage svg { width: 100%; height: auto; max-height: 300px; display: block; }
+.viz-stage.is-mini svg { transform: scale(.6); transform-origin: top center; transition: transform 200ms var(--ease-out); }
+.stage-ctrl { height: 56px; display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+.stage-btn {
+  width: 40px; height: 40px; border-radius: 20px; border: 1px solid var(--line);
+  background: #fff; color: var(--ink); font-size: 22px; line-height: 1;
+}
+.stage-next { background: var(--accent); color: #fff; border: 0; }
+.stage-dots { display: flex; gap: 6px; align-items: center; justify-content: center; flex: 1; }
+.stage-dot { width: 8px; height: 8px; border-radius: 8px; border: 0; background: var(--line); padding: 0; }
+.stage-dot.is-seen { opacity: .45; background: var(--accent); }
+.stage-dot.is-now { width: 22px; background: var(--accent); opacity: 1; }
+.stage-cap {
+  margin: 0 0 8px; padding: 8px 10px; border-radius: 12px;
+  background: var(--soft); font-size: 15px; font-weight: 600; line-height: 1.45;
+}
+.cap-key { color: var(--accent); }
+.stage-scrub { height: 28px; display: flex; flex-wrap: wrap; align-items: center; gap: 6px; margin: 4px 0; }
+.stage-scrub input[type="range"] { flex: 1; min-width: 120px; accent-color: var(--accent); }
+.scrub-val, .scrub-ticks { font-size: 11px; color: var(--ink-2); }
+.scrub-ticks { display: flex; justify-content: space-between; width: 100%; }
+.read-fold {
+  display: block; width: 100%; min-height: 44px; text-align: left; border: 0; background: transparent;
+  color: var(--ink-3); font-size: 13px; padding: 4px 0;
+}
+.read-clip { display: grid; }
+.read-inner { overflow: hidden; min-width: 0; }
+.frame-paras .k-p { font-size: 15.5px; line-height: 1.65; }
+.comic-toggle { display: flex; gap: 6px; margin: 0 0 6px; }
+.comic-mode {
+  height: 28px; padding: 0 12px; border-radius: 14px; border: 1px solid var(--line);
+  background: #fff; font-size: 12px; font-weight: 650;
+}
+.comic-mode.is-on { background: var(--ink); color: #fff; border-color: var(--ink); }
+.peek-poster .stage-ctrl, .peek-poster .stage-scrub, .peek-poster .stage-cap, .is-poster .stage-ctrl, .is-poster .stage-scrub { display: none; }
+.peek-poster .viz-stage { position: relative; top: auto; }
+.art-grid { display: flex; flex-wrap: wrap; gap: 8px; margin: 6px 0 16px; }
+.art-cell { margin: 0; width: 76px; }
+.art-cell figcaption { font-size: 10px; color: var(--ink-3); text-align: center; }
+.art-screen { padding-bottom: 32px; }
+@keyframes art-breathe { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-1.5px); } }
+.art-bob { animation: art-breathe 2.4s ease-in-out infinite; }
+html.reduce .art-bob, html.reduce .viz-stage.is-mini svg { animation: none; transition: none; }
+@media (max-width: 370px) {
+  .viz-stage svg { max-height: 272px; }
+}
 html.reduce .flame, html.reduce .mascot-bob { animation: none !important; }
 @media (prefers-reduced-motion: reduce) {
   .flame, .mascot-bob { animation: none !important; }

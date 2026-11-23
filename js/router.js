@@ -15,6 +15,7 @@
     }
     const parts = path.split('/').filter(Boolean);
     const name = parts[0] || 'today';
+    if (name === 'dev') return { name: 'dev', page: parts[1] || '', day: null, subject: null, query: query };
     return { name: name, day: parts[1] ? +parts[1] : null, subject: parts[2] || null, query: query };
   }
 
@@ -29,6 +30,7 @@
     if (route.name === 'mistakes') return LKMistakes.mount(route.query || {});
     if (route.name === 'settings') return LKSettings.mount();
     if (route.name === 'review') return LKReview.mount(route.day, route.subject);
+    if (route.name === 'dev' && route.page === 'art' && global.LKArtDev) return LKArtDev.mount();
     return LKToday.mount();
   }
 

@@ -52,6 +52,8 @@
     let paused = 0;
     let pauseAt = 0;
     const checks = draft && draft.checks ? draft.checks : {};
+    let frameCtl = null;
+    let liveStage = null;
     if (qi >= quiz.length && phase === 'quiz') phase = les.boss ? 'intro' : 'take';
 
     const screen = LK.h('div', { class: 'screen lesson-screen' });
@@ -334,20 +336,48 @@
     function showHook() {
       phase = 'hook';
       phaseBody.innerHTML = '';
+      releaseStage();
       const card = LK.h('div', { class: 'stage-card hook-card' });
       card.appendChild(LK.h('span', { class: 'tag', text: sub.name }));
-      card.appendChild(LK.h('p', { class: 'hook-text', text: les.hook }));
-      phaseBody.appendChild(card);
-      setAction({
-        label: '开始',
-        onClick: function () {
-          LKMotion.flip(card, function () {
-            phase = 'steps';
-            step = 0;
-            showSteps(0, false);
-          });
-        }
-      });
+      if (les.hookComic && global.LKStage && LKStage.has('comic')) {
+        const host = LK.h('div', { class: 'stage-host' });
+        const text = LK.h('p', { class: 'hook-text', hidden: true, text: les.hook });
+        card.appendChild(host);
+        card.appendChild(text);
+        phaseBody.appendChild(card);
+        const comic = Object.assign({ type: 'comic' }, les.hookComic);
+        const api = LKStage.mount(host, comic, {
+          subject: sub,
+          onFrame: function (i, meta) {
+            const last = meta.last;
+            text.hidden = !last;
+            setAction({
+              label: last ? '开始' : '下一格',
+              onClick: function () {
+                if (!last) api.next();
+                else LKMotion.flip(card, function () {
+                  phase = 'steps';
+                  step = 0;
+                  showSteps(0, false);
+                });
+              }
+            });
+          }
+        });
+      } else {
+        card.appendChild(LK.h('p', { class: 'hook-text', text: les.hook }));
+        phaseBody.appendChild(card);
+        setAction({
+          label: '开始',
+          onClick: function () {
+            LKMotion.flip(card, function () {
+              phase = 'steps';
+              step = 0;
+              showSteps(0, false);
+            });
+          }
+        });
+      }
       paintChrome();
       saveDraft();
     }
@@ -368,6 +398,127 @@
       else fillLegacy(card, animate);
     }
 
+    function isFramed(v) {
+      if (!v || !global.LKStage) return false;
+      if (v.recall) return true;
+      const frames = v.frames || v.panels;
+      return !!(frames && frames.length >= 2 && LKStage.has(v.type || 'comic'));
+    }
+
+    function releaseStage() {
+      if (liveStage && liveStage.api) liveStage.api.destroy();
+      liveStage = null;
+      frameCtl = null;
+    }
+
+    function paraBlock(slot) {
+      if (slot.key === 'formula') return LK.h('div', { class: 'k-part formula num', text: slot.text });
+      const part = LK.h('div', { class: 'k-part' + (slot.extra || '') });
+      if (slot.label) part.appendChild(LK.h('span', { class: 'k-k', text: slot.label }));
+      const p = LK.h('p', { class: slot.key === 'derive' ? 'derive-line' : 'k-p' });
+      if (slot.key === 'derive') p.appendChild(document.createTextNode((slot.index + 1) + '. '));
+      p.appendChild(LK.rich(slot.text));
+      part.appendChild(p);
+      return part;
+    }
+
+    function mountFramed(s, index, current) {
+      const visual = s.visual;
+      const frames = visual.frames || visual.panels || [];
+      const plan = LKStage.paras(s, frames);
+      const stageHost = LK.h('div', { class: 'stage-host' });
+      const fold = LK.h('button', { class: 'read-fold', type: 'button', hidden: true });
+      const foldClip = LK.h('div', { class: 'read-clip' });
+      const foldInner = LK.h('div', { class: 'read-inner' });
+      foldClip.appendChild(foldInner);
+      foldClip.style.gridTemplateRows = '0fr';
+      const paraHost = LK.h('div', { class: 'frame-paras' });
+      const checkHost = LK.h('div', { class: 'frame-check', hidden: true });
+      current.appendChild(stageHost);
+      current.appendChild(fold);
+      current.appendChild(foldClip);
+      current.appendChild(paraHost);
+      current.appendChild(checkHost);
+      mountCheck(s, index, checkHost, function () {
+        wireFoot(index);
+        LKMotion.rebound(footBtn);
+      });
+      let openRead = false;
+      let showAll = false;
+      let api = null;
+
+      function paintParas(i) {
+        paraHost.innerHTML = '';
+        foldInner.innerHTML = '';
+        if (showAll) {
+          fold.hidden = true;
+          foldClip.hidden = true;
+          plan.forEach(function (group) {
+            group.forEach(function (slot) { paraHost.appendChild(paraBlock(slot)); });
+          });
+          checkHost.hidden = !s.check;
+          return;
+        }
+        const seen = [];
+        for (let k = 0; k < i; k++) (plan[k] || []).forEach(function (slot) { seen.push(slot); });
+        const labels = [];
+        seen.forEach(function (slot) {
+          if (slot.label && labels.indexOf(slot.label) < 0) labels.push(slot.label);
+        });
+        fold.hidden = labels.length === 0;
+        fold.textContent = labels.join(' · ') + '（已读，点开回看）';
+        seen.forEach(function (slot) { foldInner.appendChild(paraBlock(slot)); });
+        (plan[i] || []).forEach(function (slot) { paraHost.appendChild(paraBlock(slot)); });
+        checkHost.hidden = !(i >= frames.length - 1 && s.check);
+      }
+
+      fold.addEventListener('click', function () {
+        openRead = !openRead;
+        if (LKMotion.reduce()) {
+          foldClip.style.gridTemplateRows = openRead ? '1fr' : '0fr';
+          return;
+        }
+        foldClip.animate(
+          [{ gridTemplateRows: openRead ? '0fr' : '1fr' }, { gridTemplateRows: openRead ? '1fr' : '0fr' }],
+          { duration: 280, easing: 'cubic-bezier(.22,1,.36,1)', fill: 'forwards' }
+        );
+      });
+
+      function onFrame(i) {
+        paintParas(showAll ? frames.length - 1 : i);
+        frameCtl = {
+          next: function () { if (api) api.next(); },
+          done: function () { return showAll || i >= frames.length - 1; }
+        };
+        wireFoot(index);
+      }
+
+      const opts = {
+        subject: sub,
+        onFrame: onFrame,
+        onExpandAll: function () {
+          showAll = true;
+          paintParas(frames.length - 1);
+          frameCtl = { next: function () {}, done: function () { return true; } };
+          wireFoot(index);
+        }
+      };
+      const same = liveStage && visual.stage && liveStage.id === visual.stage && liveStage.type === visual.type && liveStage.api && liveStage.api.root;
+      if (same) {
+        stageHost.appendChild(liveStage.api.root);
+        api = liveStage.api;
+        api.load(visual, opts);
+      } else {
+        if (liveStage && liveStage.api) liveStage.api.destroy();
+        api = LKStage.mount(stageHost, visual, opts);
+        liveStage = { id: visual.stage || '', type: visual.type, api: api };
+      }
+      frameCtl = {
+        next: function () { if (api) api.next(); },
+        done: function () { return false; }
+      };
+    }
+
     function makeCurrent(index) {
       const s = les.steps[index];
       const current = LK.h('article', { class: 'kcard is-current' });
@@ -376,16 +527,25 @@
       titleRow.appendChild(LK.h('h3', { text: s.title || '' }));
       if (s.review) titleRow.appendChild(LK.h('span', { class: 'tag', text: '回顾' }));
       current.appendChild(titleRow);
-      renderBody(s, current);
-      mountCheck(s, index, current, function () {
-        wireFoot(index);
-        LKMotion.rebound(footBtn);
-      });
+      if (isFramed(s.visual)) mountFramed(s, index, current);
+      else {
+        frameCtl = null;
+        if (liveStage && liveStage.api) { liveStage.api.destroy(); liveStage = null; }
+        renderBody(s, current);
+        mountCheck(s, index, current, function () {
+          wireFoot(index);
+          LKMotion.rebound(footBtn);
+        });
+      }
       return current;
     }
 
     function wireFoot(index) {
       const s = les.steps[index];
+      if (frameCtl && !frameCtl.done()) {
+        setAction({ label: '下一帧', disabled: false, onClick: function () { frameCtl.next(); } });
+        return;
+      }
       const n = visibleCount();
       const need = s.check && checks[index] == null;
       const last = index >= n - 1;
@@ -657,6 +817,11 @@
       const clip = LK.h('div', { class: 'peek-clip' });
       const inner = LK.h('div', { class: 'peek-inner' });
       if (skipped) inner.appendChild(LK.h('span', { class: 'tag', text: '迷你模式时跳过了' }));
+      if (isFramed(s.visual) && global.LKStage) {
+        const holder = LK.h('div', { class: 'peek-poster' });
+        inner.appendChild(holder);
+        LKStage.poster(holder, s.visual, { subject: srcSub, reduced: true });
+      }
       renderBody(s, inner);
       if (s.check) {
         inner.appendChild(LK.h('p', {

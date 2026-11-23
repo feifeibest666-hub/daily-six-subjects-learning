@@ -338,6 +338,147 @@ window.DAYS = [
         "title": "用两个数找到任何地方",
         "minutes": 9,
         "hook": "在一张白纸上点一个点，要让朋友在她那张纸上点到同一个位置，你得告诉她几个数？换成一颗球呢？",
+        "hookComic": {
+          "panels": [
+            {
+              "bg": "room",
+              "tint": "#F7F1E8",
+              "cast": [
+                {
+                  "who": "xiaoman",
+                  "x": 0.32,
+                  "y": 0.78,
+                  "pose": "point",
+                  "face": "happy"
+                },
+                {
+                  "who": "ale",
+                  "x": 0.72,
+                  "y": 0.78,
+                  "pose": "stand",
+                  "face": "calm"
+                }
+              ],
+              "props": [
+                {
+                  "what": "paper",
+                  "x": 0.34,
+                  "y": 0.55,
+                  "k": 0.8
+                }
+              ],
+              "caption": "一张白纸",
+              "cap": "先在纸上点一个点"
+            },
+            {
+              "bg": "room",
+              "tint": "#F7F1E8",
+              "cast": [
+                {
+                  "who": "ale",
+                  "x": 0.28,
+                  "y": 0.78,
+                  "pose": "shrug",
+                  "face": "worry"
+                },
+                {
+                  "who": "xiaoman",
+                  "x": 0.7,
+                  "y": 0.78,
+                  "pose": "point",
+                  "face": "happy"
+                }
+              ],
+              "props": [
+                {
+                  "what": "paper",
+                  "x": 0.68,
+                  "y": 0.52,
+                  "k": 0.7
+                }
+              ],
+              "bubbles": [
+                {
+                  "who": "ale",
+                  "text": "点在哪？"
+                },
+                {
+                  "who": "xiaoman",
+                  "text": "左数3格|下数2格"
+                }
+              ],
+              "cap": "报两个数，才能找到"
+            },
+            {
+              "bg": "room",
+              "tint": "#F7F1E8",
+              "cast": [
+                {
+                  "who": "xiaoyin",
+                  "x": 0.28,
+                  "y": 0.82,
+                  "k": 1.1
+                }
+              ],
+              "props": [
+                {
+                  "what": "ball",
+                  "x": 0.62,
+                  "y": 0.55,
+                  "k": 1.1
+                }
+              ],
+              "caption": "纸卷成球",
+              "cap": "纸可以卷成一颗球"
+            },
+            {
+              "bg": "room",
+              "tint": "#F7F1E8",
+              "cast": [
+                {
+                  "who": "ale",
+                  "x": 0.66,
+                  "y": 0.78,
+                  "pose": "head",
+                  "face": "worry"
+                },
+                {
+                  "who": "xiaoyin",
+                  "x": 0.28,
+                  "y": 0.84,
+                  "k": 1
+                }
+              ],
+              "props": [
+                {
+                  "what": "ball",
+                  "x": 0.42,
+                  "y": 0.48,
+                  "k": 0.9
+                }
+              ],
+              "bubbles": [
+                {
+                  "who": "ale",
+                  "text": "球上怎么数？"
+                },
+                {
+                  "who": "xiaoyin",
+                  "text": "球没有边"
+                }
+              ],
+              "cap": "球上没有边，怎么数？"
+            }
+          ]
+        },
+        "stages": {
+          "d01globe": {
+            "type": "globe3d",
+            "base": {
+              "V": 12
+            }
+          }
+        },
         "steps": [
           {
             "title": "为什么需要一张\"网\"",
@@ -347,17 +488,51 @@ window.DAYS = [
             "example": "乐谱就是一张网。横着数是第几小节，竖着看是在哪条线上（什么音高）。\"第 3 小节、第二线\"两个信息合起来，才定下一个音。电影票上的\"7 排 12 号\"也是同一回事。",
             "exLabel": "打个比方",
             "visual": {
-              "type": "grid",
-              "cols": 6,
-              "rows": 4,
-              "dot": [
-                4,
-                2
-              ],
-              "xLabel": "第几列",
-              "yLabel": "第几行",
-              "dotLabel": "(4, 2)"
-            },
+                "type": "grid",
+                "base": {
+                  "cols": 6,
+                  "rows": 4
+                },
+                "frames": [
+                  {
+                    "cap": "先约好格子，再报两个数",
+                    "para": "idea",
+                    "set": {
+                      "paper": 1
+                    }
+                  },
+                  {
+                    "cap": "横竖两条线，才定得住一个点",
+                    "para": "why",
+                    "set": {
+                      "grid": 1,
+                      "labels": 1,
+                      "xLabel": "第几列",
+                      "yLabel": "第几行",
+                      "cols": 6,
+                      "rows": 4
+                    }
+                  },
+                  {
+                    "cap": "两条虚线交在一点，读出两个数",
+                    "para": "example",
+                    "set": {
+                      "dot": [
+                        4,
+                        2
+                      ],
+                      "dotLabel": "(4, 2)"
+                    }
+                  },
+                  {
+                    "cap": "纸上的格子，包到球上就是经纬网",
+                    "para": "takeaway",
+                    "set": {
+                      "globe": 1
+                    }
+                  }
+                ]
+              },
             "check": {
               "q": "电影票上只写了\"7 排\"，没写几号。能直接找到你的座位吗？",
               "options": [
@@ -376,12 +551,49 @@ window.DAYS = [
             "example": "拿一个橙子转一转。橙子顶上的蒂和底部是两个\"极\"，正中间最鼓的那一圈就是赤道。",
             "exLabel": "打个比方",
             "visual": {
-              "type": "globe",
-              "mode": "lat",
-              "lines": [
-                0
-              ]
-            },
+                "type": "globe3d",
+                "stage": "d01globe",
+                "base": {
+                  "centerLon": 105,
+                  "V": 12
+                },
+                "frames": [
+                  {
+                    "cap": "地球没有边，但有一条赤道",
+                    "para": "idea",
+                    "set": {
+                      "equator": 0,
+                      "centerLon": 105
+                    },
+                    "play": "spin",
+                    "dur": 1800
+                  },
+                  {
+                    "cap": "赤道在两极正中间，像一条腰带",
+                    "para": "why",
+                    "set": {
+                      "equator": 1,
+                      "centerLon": 105
+                    }
+                  },
+                  {
+                    "cap": "赤道把地球分成南北两半球",
+                    "para": "example",
+                    "set": {
+                      "hemis": 1,
+                      "equator": 1
+                    }
+                  },
+                  {
+                    "cap": "赤道离两极一样远，是天然起点",
+                    "para": "takeaway",
+                    "set": {
+                      "hemis": 1,
+                      "equator": 1
+                    }
+                  }
+                ]
+              },
             "check": {
               "q": "赤道把地球分成哪两半？",
               "options": [
@@ -407,14 +619,73 @@ window.DAYS = [
             ],
             "formula": "360° ÷ 4 = 90°",
             "visual": {
-              "type": "globe",
-              "mode": "lat",
-              "lines": [
-                0,
-                40
-              ],
-              "angle": 40
-            },
+                "type": "globe3d",
+                "stage": "d01globe",
+                "base": {
+                  "V": 12,
+                  "city": 1,
+                  "cityLon": 116.4,
+                  "cityLat": 40,
+                  "cityName": "北京"
+                },
+                "frames": [
+                  {
+                    "cap": "纬度是离赤道转过的角度",
+                    "para": "idea",
+                    "set": {
+                      "equator": 1,
+                      "centerLon": 105
+                    }
+                  },
+                  {
+                    "cap": "把要量的地方转到侧面，角度才看得清",
+                    "para": "why",
+                    "set": {
+                      "turn": 1,
+                      "equator": 1
+                    }
+                  },
+                  {
+                    "cap": "从赤道往北转过的角，就是北纬",
+                    "para": "example",
+                    "set": {
+                      "turn": 1,
+                      "angle": 40,
+                      "equator": 1
+                    },
+                    "scrub": {
+                      "key": "angle",
+                      "from": 0,
+                      "to": 90,
+                      "unit": "°",
+                      "ticks": [
+                        0,
+                        20,
+                        40,
+                        60,
+                        90
+                      ],
+                      "tickLabels": [
+                        "0°",
+                        "20°",
+                        "40°",
+                        "60°",
+                        "90°"
+                      ]
+                    }
+                  },
+                  {
+                    "cap": "同一个角度连成一圈，就是这条纬线",
+                    "para": "takeaway",
+                    "set": {
+                      "turn": 1,
+                      "angle": 40,
+                      "parallel": 40,
+                      "equator": 1
+                    }
+                  }
+                ]
+              },
             "check": {
               "q": "北极点的纬度是多少？",
               "options": [
@@ -439,7 +710,85 @@ window.DAYS = [
               ],
               "answer": 0,
               "why": "在赤道以南就写南纬。「北纬 34°」是赤道北边的一圈，比如中国的西安附近。"
-            }
+            },
+            "visual": {
+                "type": "globe3d",
+                "stage": "d01globe",
+                "base": {
+                  "V": 12,
+                  "turn": 1,
+                  "cityLon": 116.4
+                },
+                "frames": [
+                  {
+                    "cap": "赤道以北写北纬，以南写南纬",
+                    "para": "idea",
+                    "set": {
+                      "parallel": 30,
+                      "angle": 30,
+                      "latTag": "北纬 30°",
+                      "equator": 1
+                    }
+                  },
+                  {
+                    "cap": "数字越大，离赤道越远",
+                    "para": "why",
+                    "set": {
+                      "parallel": 60,
+                      "angle": 60,
+                      "latTag": "北纬 60°"
+                    }
+                  },
+                  {
+                    "cap": "转到 90°，纬线收到极点",
+                    "para": "example",
+                    "set": {
+                      "parallel": 90,
+                      "angle": 90,
+                      "latTag": "北纬 90°"
+                    }
+                  },
+                  {
+                    "cap": "南边的角度，写成南纬",
+                    "para": null,
+                    "set": {
+                      "parallel": -30,
+                      "angle": -30,
+                      "latTag": "南纬 30°"
+                    },
+                    "scrub": {
+                      "key": "angle",
+                      "from": -90,
+                      "to": 90,
+                      "unit": "°",
+                      "ticks": [
+                        -30,
+                        0,
+                        30,
+                        60,
+                        90
+                      ],
+                      "tickLabels": [
+                        "南30",
+                        "0",
+                        "北30",
+                        "北60",
+                        "北90"
+                      ]
+                    }
+                  },
+                  {
+                    "cap": "数字越小，越靠近赤道",
+                    "para": "takeaway",
+                    "set": {
+                      "parallel": 40,
+                      "angle": 40,
+                      "latTag": "北纬 40°",
+                      "equator": 1
+                    }
+                  }
+                ]
+              }
           },
           {
             "title": "经线：东西方向为什么要\"约定\"起点",
@@ -453,13 +802,45 @@ window.DAYS = [
               "所以\"为什么是格林尼治\"的答案是历史和习惯，不是地理规律。"
             ],
             "visual": {
-              "type": "globe",
-              "mode": "lon",
-              "step": 30,
-              "highlight": [
-                0
-              ]
-            },
+                "type": "globe3d",
+                "stage": "d01globe",
+                "base": {
+                  "V": 12,
+                  "centerLon": 20
+                },
+                "frames": [
+                  {
+                    "cap": "东西方向没有天然的第一条线",
+                    "para": "idea",
+                    "set": {
+                      "centerLon": 20
+                    }
+                  },
+                  {
+                    "cap": "0° 经线是约定在格林尼治的",
+                    "para": "why",
+                    "set": {
+                      "greenwich": 1,
+                      "centerLon": 15
+                    }
+                  },
+                  {
+                    "cap": "当时多数航海图从它算起",
+                    "para": "example",
+                    "set": {
+                      "greenwich": 1
+                    }
+                  },
+                  {
+                    "cap": "这条金线从北极连到南极",
+                    "para": "takeaway",
+                    "set": {
+                      "greenwich": 1,
+                      "centerLon": 15
+                    }
+                  }
+                ]
+              },
             "check": {
               "q": "0° 经线为什么定在格林尼治？",
               "options": [
@@ -484,15 +865,52 @@ window.DAYS = [
             ],
             "formula": "360° ÷ 2 = 180°",
             "visual": {
-              "type": "globe",
-              "mode": "lon",
-              "step": 30,
-              "highlight": [
-                0,
-                180
-              ],
-              "arrows": true
-            },
+                "type": "globe3d",
+                "stage": "d01globe",
+                "base": {
+                  "V": 90
+                },
+                "frames": [
+                  {
+                    "cap": "从 0° 经线往东或往西转",
+                    "para": "idea",
+                    "set": {
+                      "polar": 1,
+                      "east": 0,
+                      "west": 0
+                    }
+                  },
+                  {
+                    "cap": "往东转半圈，到 180°",
+                    "para": "why",
+                    "set": {
+                      "polar": 1,
+                      "east": 180
+                    },
+                    "play": "eastSweep",
+                    "dur": 900
+                  },
+                  {
+                    "cap": "往西也转半圈，在背面碰头",
+                    "para": "example",
+                    "set": {
+                      "polar": 1,
+                      "west": 180
+                    },
+                    "play": "westSweep",
+                    "dur": 900
+                  },
+                  {
+                    "cap": "东经、西经各半圈，在 180° 相遇",
+                    "para": "takeaway",
+                    "set": {
+                      "polar": 1,
+                      "east": 180,
+                      "west": 180
+                    }
+                  }
+                ]
+              },
             "check": {
               "q": "东经最大是多少度？",
               "options": [
@@ -510,22 +928,45 @@ window.DAYS = [
             "takeaway": "读位置：先纬度（南北），再经度（东西）；中国全在北纬、东经。",
             "example": "把\"北纬 40°，东经 116°\"分三步读。\"北\"：在赤道以北。\"40°\"：从赤道往北转了 40°，是海口（20°）的两倍远。\"东经 116°\"：从格林尼治往东转了 116°，大约三分之一圈，所以在亚洲。中国大致在北纬 4°～53°、东经 73°～135° 之间。",
             "visual": {
-              "type": "coord",
-              "latRange": [
-                0,
-                60
-              ],
-              "lonRange": [
-                70,
-                140
-              ],
-              "step": 10,
-              "point": {
-                "lat": 40,
-                "lon": 116,
-                "label": "北京"
-              }
-            },
+                "type": "globe3d",
+                "stage": "d01globe",
+                "base": {
+                  "V": 12,
+                  "centerLon": 105
+                },
+                "frames": [
+                  {
+                    "cap": "先纬度，再经度，两个数定一个点",
+                    "para": "idea",
+                    "set": {
+                      "city": 1,
+                      "cityLon": 116.4,
+                      "cityLat": 40,
+                      "cityName": "北京",
+                      "equator": 1,
+                      "parallel": 40,
+                      "centerLon": 105
+                    }
+                  },
+                  {
+                    "cap": "放大看中国这一块",
+                    "para": "why",
+                    "set": {
+                      "gridFade": 0.45,
+                      "centerLon": 105
+                    }
+                  },
+                  {
+                    "cap": "纬线和经线只交在一个点上",
+                    "para": "takeaway",
+                    "set": {
+                      "gridFade": 0.75,
+                      "city": 1,
+                      "parallel": 40
+                    }
+                  }
+                ]
+              },
             "check": {
               "q": "中国的城市，位置一般写成？",
               "options": [
@@ -2221,6 +2662,113 @@ window.DAYS = [
         "title": "三级阶梯：中国地形的骨架",
         "minutes": 9,
         "hook": "从拉萨坐火车到上海，一路是在“下楼梯”。一共下了几级？",
+        "hookComic": {
+          "panels": [
+            {
+              "bg": "mountain",
+              "tint": "#F7F1E8",
+              "cast": [
+                {
+                  "who": "xiaoman",
+                  "x": 0.38,
+                  "y": 0.82,
+                  "pose": "stand",
+                  "face": "worry"
+                }
+              ],
+              "props": [
+                {
+                  "what": "sign",
+                  "x": 0.72,
+                  "y": 0.62,
+                  "state": {
+                    "text": "海拔 3650"
+                  }
+                }
+              ],
+              "caption": "拉萨站",
+              "cap": "拉萨站，海拔大约 3650"
+            },
+            {
+              "bg": "trainCar",
+              "tint": "#EEF3F4",
+              "props": [
+                {
+                  "what": "windows",
+                  "x": 0.5,
+                  "y": 0.55,
+                  "k": 1.15
+                }
+              ],
+              "caption": "车窗外",
+              "cap": "窗外从雪山变成平原"
+            },
+            {
+              "bg": "plain",
+              "tint": "#F4F7F2",
+              "cast": [
+                {
+                  "who": "xiaoman",
+                  "x": 0.36,
+                  "y": 0.82,
+                  "pose": "stand",
+                  "face": "happy"
+                }
+              ],
+              "props": [
+                {
+                  "what": "sign",
+                  "x": 0.72,
+                  "y": 0.62,
+                  "state": {
+                    "text": "海拔 4"
+                  }
+                }
+              ],
+              "caption": "上海站",
+              "cap": "到了上海，海拔只剩几米"
+            },
+            {
+              "bg": "plain",
+              "tint": "#F4F7F2",
+              "cast": [
+                {
+                  "who": "xiaoyin",
+                  "x": 0.26,
+                  "y": 0.84,
+                  "k": 1.05
+                }
+              ],
+              "props": [
+                {
+                  "what": "steps",
+                  "x": 0.66,
+                  "y": 0.58,
+                  "k": 1.3
+                }
+              ],
+              "bubbles": [
+                {
+                  "who": "xiaoyin",
+                  "text": "一路在下楼梯"
+                }
+              ],
+              "cap": "一路是在下楼梯"
+            }
+          ]
+        },
+        "stages": {
+          "d03geo": {
+            "type": "cnmap",
+            "base": {
+              "steps": [
+                1,
+                2,
+                3
+              ]
+            }
+          }
+        },
         "steps": [
           {
             "title": "从拉萨到上海，一路往下走",
@@ -2233,7 +2781,93 @@ window.DAYS = [
               "兰州到郑州：又少了 1000 多米。",
               "郑州到上海：几乎平着走，只再低了约 100 米。",
               "高度是\"大落差、平一段、再大落差、再平一段\"地变，更像楼梯。"
-            ]
+            ],
+            "visual": {
+                "type": "profileTrip",
+                "base": {},
+                "frames": [
+                  {
+                    "cap": "从西往东，脚下的地面在变低",
+                    "para": "idea",
+                    "set": {
+                      "progress": 0.03,
+                      "plates": 0
+                    },
+                    "scrub": {
+                      "key": "progress",
+                      "from": 0,
+                      "to": 1,
+                      "ticks": [
+                        0.03,
+                        0.38,
+                        0.76,
+                        0.99
+                      ],
+                      "tickLabels": [
+                        "拉萨",
+                        "兰州",
+                        "郑州",
+                        "上海"
+                      ]
+                    }
+                  },
+                  {
+                    "cap": "不是滑梯，是一级一级的台阶",
+                    "para": "why",
+                    "set": {
+                      "from": 0.03,
+                      "to": 1,
+                      "progress": 1,
+                      "showKans": 1
+                    },
+                    "play": "ride",
+                    "dur": 1600,
+                    "scrub": {
+                      "key": "progress",
+                      "from": 0,
+                      "to": 1,
+                      "ticks": [
+                        0.03,
+                        0.38,
+                        0.76,
+                        0.99
+                      ],
+                      "tickLabels": [
+                        "拉萨",
+                        "兰州",
+                        "郑州",
+                        "上海"
+                      ]
+                    }
+                  },
+                  {
+                    "cap": "西边高、东边低，像下楼梯",
+                    "para": "takeaway",
+                    "set": {
+                      "progress": 1,
+                      "showKans": 1,
+                      "plates": 0.2
+                    },
+                    "scrub": {
+                      "key": "progress",
+                      "from": 0,
+                      "to": 1,
+                      "ticks": [
+                        0.03,
+                        0.38,
+                        0.76,
+                        0.99
+                      ],
+                      "tickLabels": [
+                        "拉萨",
+                        "兰州",
+                        "郑州",
+                        "上海"
+                      ]
+                    }
+                  }
+                ]
+              }
           },
           {
             "title": "三级阶梯：最高一级是\"世界屋脊\"",
@@ -2242,22 +2876,61 @@ window.DAYS = [
             "takeaway": "中国地势西高东低，分三级阶梯；第一级是青藏高原，4000 米以上。",
             "example": "第一级的青藏高原被叫作\"世界屋脊\"，它的主体在西藏和青海两个省级区。拉萨坐落在高原上的河谷里，比周围的高原面低一些，但也有约 3650 米。",
             "visual": {
-              "type": "ladder",
-              "steps": [
-                {
-                  "label": "第一级",
-                  "sub": "青藏高原 4000 米以上"
+                "type": "cnmap",
+                "stage": "d03geo",
+                "base": {
+                  "steps": []
                 },
-                {
-                  "label": "第二级",
-                  "sub": "高原和盆地 1000～2000 米"
-                },
-                {
-                  "label": "第三级",
-                  "sub": "平原和丘陵 多在 500 米以下"
-                }
-              ]
-            },
+                "frames": [
+                  {
+                    "cap": "先看中国的轮廓",
+                    "para": "idea",
+                    "set": {
+                      "steps": []
+                    }
+                  },
+                  {
+                    "cap": "第一级是青藏高原，最高的一级",
+                    "para": "why",
+                    "set": {
+                      "steps": [
+                        1
+                      ]
+                    }
+                  },
+                  {
+                    "cap": "柴达木在高原上，仍算第一级",
+                    "para": "example",
+                    "set": {
+                      "steps": [
+                        1
+                      ],
+                      "focus": [
+                        "basin:qaidam"
+                      ],
+                      "hotspot": "qaidam",
+                      "hotspots": [
+                        "qaidam"
+                      ]
+                    }
+                  },
+                  {
+                    "cap": "第一级平均在 4000 米以上",
+                    "para": "takeaway",
+                    "set": {
+                      "steps": [
+                        1
+                      ],
+                      "labels": [
+                        "qingzang",
+                        "qaidam"
+                      ],
+                      "focus": [],
+                      "hotspot": null
+                    }
+                  }
+                ]
+              },
             "check": {
               "q": "三级阶梯里，最高的第一级是哪里？",
               "options": [
@@ -2273,7 +2946,185 @@ window.DAYS = [
             "idea": "第二级海拔约 1000～2000 米，大高原、大盆地多；第三级多在 500 米以下，主要是平原和丘陵。",
             "why": "一级台阶的台面并不是一马平川，上面也有高有低。**盆地**是\"四周高、中间低\"的地形，像一只脸盆。判断一块地形属于哪一级，要看它整个坐在哪一级台阶上，而不是看它中间低不低。",
             "takeaway": "第二级多高原和盆地，第三级多平原和丘陵；盆地看它坐在哪一级。",
-            "example": "第二级有内蒙古高原、黄土高原、云贵高原，还有四川盆地、塔里木盆地、准噶尔盆地。第三级有东北平原、华北平原、长江中下游平原和东南丘陵。就像把脸盆放在二楼：盆底再低，它也还在二楼。"
+            "example": "第二级有内蒙古高原、黄土高原、云贵高原，还有四川盆地、塔里木盆地、准噶尔盆地。第三级有东北平原、华北平原、长江中下游平原和东南丘陵。就像把脸盆放在二楼：盆底再低，它也还在二楼。",
+            "visual": {
+                "type": "cnmap",
+                "stage": "d03geo",
+                "base": {
+                  "steps": [
+                    2,
+                    3
+                  ]
+                },
+                "frames": [
+                  {
+                    "cap": "第二级多高原和盆地",
+                    "para": "idea",
+                    "set": {
+                      "steps": [
+                        2,
+                        3
+                      ]
+                    }
+                  },
+                  {
+                    "cap": "高原：内蒙古、黄土、云贵",
+                    "para": "why",
+                    "set": {
+                      "focus": [
+                        "plateau:neimenggu",
+                        "plateau:huangtu",
+                        "plateau:yungui"
+                      ],
+                      "labels": [
+                        "neimenggu",
+                        "huangtu",
+                        "yungui"
+                      ]
+                    }
+                  },
+                  {
+                    "cap": "塔里木盆地，四周高、中间低",
+                    "para": null,
+                    "set": {
+                      "focus": [
+                        "basin:tarim"
+                      ],
+                      "hotspot": "tarim",
+                      "labels": [
+                        "tarim"
+                      ]
+                    }
+                  },
+                  {
+                    "cap": "准噶尔盆地，也是一只脸盆",
+                    "para": null,
+                    "set": {
+                      "focus": [
+                        "basin:junggar"
+                      ],
+                      "hotspot": "junggar",
+                      "labels": [
+                        "junggar"
+                      ]
+                    }
+                  },
+                  {
+                    "cap": "四川盆地坐在第二级台阶上",
+                    "para": "example",
+                    "set": {
+                      "focus": [
+                        "basin:sichuan"
+                      ],
+                      "hotspot": "sichuan",
+                      "labels": [
+                        "sichuan"
+                      ]
+                    }
+                  },
+                  {
+                    "cap": "柴达木盆地也是一个碗",
+                    "para": null,
+                    "set": {
+                      "focus": [
+                        "basin:qaidam"
+                      ],
+                      "hotspot": "qaidam",
+                      "labels": [
+                        "qaidam"
+                      ]
+                    }
+                  },
+                  {
+                    "cap": "第三级多在 500 米以下",
+                    "para": null,
+                    "set": {
+                      "steps": [
+                        1,
+                        2,
+                        3
+                      ],
+                      "focus": [],
+                      "hotspot": null
+                    }
+                  },
+                  {
+                    "cap": "东北平原又低又平",
+                    "para": null,
+                    "set": {
+                      "focus": [
+                        "plain:dongbei"
+                      ],
+                      "hotspot": "dongbei",
+                      "labels": [
+                        "dongbei"
+                      ]
+                    }
+                  },
+                  {
+                    "cap": "华北平原铺到海边",
+                    "para": null,
+                    "set": {
+                      "focus": [
+                        "plain:huabei"
+                      ],
+                      "hotspot": "huabei",
+                      "labels": [
+                        "huabei"
+                      ]
+                    }
+                  },
+                  {
+                    "cap": "长江中下游平原，又低又平",
+                    "para": null,
+                    "set": {
+                      "focus": [
+                        "plain:changjiang"
+                      ],
+                      "hotspot": "changjiang",
+                      "labels": [
+                        "changjiang"
+                      ]
+                    }
+                  },
+                  {
+                    "cap": "三级、盆地和平原，都标在这张图上",
+                    "para": "takeaway",
+                    "set": {
+                      "steps": [
+                        1,
+                        2,
+                        3
+                      ],
+                      "focus": [],
+                      "hotspot": null,
+                      "units": "all",
+                      "labels": [
+                        "qingzang",
+                        "tarim",
+                        "junggar",
+                        "qaidam",
+                        "sichuan",
+                        "dongbei",
+                        "huabei",
+                        "changjiang",
+                        "neimenggu",
+                        "huangtu",
+                        "yungui"
+                      ],
+                      "hotspots": [
+                        "tarim",
+                        "junggar",
+                        "qaidam",
+                        "sichuan",
+                        "dongbei",
+                        "huabei",
+                        "changjiang"
+                      ]
+                    }
+                  }
+                ]
+              }
           },
           {
             "title": "台阶之间的\"坎\"：两条分界线",
@@ -2289,7 +3140,113 @@ window.DAYS = [
               ],
               "answer": 0,
               "why": "台阶之间的落差集中在陡坎上，这些陡坎就是「一列列大山」。「一条条大河」会穿过分界线往下流，但它不是坎本身。"
-            }
+            },
+            "visual": {
+                "type": "cnmap",
+                "stage": "d03geo",
+                "base": {
+                  "steps": [
+                    1,
+                    2,
+                    3
+                  ],
+                  "rivers": {
+                    "yangtze": "on",
+                    "yellow": "on"
+                  }
+                },
+                "hotspots": [
+                  {
+                    "id": "taihang",
+                    "label": "太行山",
+                    "tip": "西：黄土高原｜东：华北平原"
+                  }
+                ],
+                "frames": [
+                  {
+                    "cap": "一、二级之间是昆仑、祁连、横断",
+                    "para": "idea",
+                    "set": {
+                      "lines": {
+                        "line1": "drawn"
+                      },
+                      "labels": [
+                        "kunlun",
+                        "qilian",
+                        "hengduan"
+                      ]
+                    }
+                  },
+                  {
+                    "cap": "第二条线从大兴安岭画起",
+                    "para": "why",
+                    "set": {
+                      "lines": {
+                        "line2": 0.18
+                      },
+                      "labels": [
+                        "kunlun",
+                        "qilian",
+                        "hengduan",
+                        "daxinganling"
+                      ],
+                      "pending": [
+                        "taihang",
+                        "wushan",
+                        "xuefeng"
+                      ]
+                    }
+                  },
+                  {
+                    "cap": "太行山：西边高原，东边平原",
+                    "para": "example",
+                    "set": {
+                      "lines": {
+                        "line2": "partial"
+                      },
+                      "hotspot": "taihang",
+                      "hotspots": [
+                        "taihang"
+                      ],
+                      "inset": "profile",
+                      "insetMark": 2,
+                      "labels": [
+                        "kunlun",
+                        "qilian",
+                        "hengduan",
+                        "daxinganling",
+                        "taihang"
+                      ],
+                      "pending": [
+                        "wushan",
+                        "xuefeng"
+                      ]
+                    }
+                  },
+                  {
+                    "cap": "两条线、七座山，把三级分开",
+                    "para": "takeaway",
+                    "set": {
+                      "lines": {
+                        "line1": "drawn",
+                        "line2": "drawn"
+                      },
+                      "hotspot": null,
+                      "labels": [
+                        "kunlun",
+                        "qilian",
+                        "hengduan",
+                        "daxinganling",
+                        "taihang",
+                        "wushan",
+                        "xuefeng"
+                      ],
+                      "pending": [],
+                      "inset": "profile"
+                    }
+                  }
+                ]
+              }
           },
           {
             "title": "西边为什么这么高：板块相撞",
@@ -2302,7 +3259,62 @@ window.DAYS = [
               "亚欧板块挡在前面，推不动。",
               "交界处的岩层只能往上挤。",
               "几千万年挤下来，成了世界上最高的高原。"
-            ]
+            ],
+            "visual": {
+                "type": "plates",
+                "base": {
+                  "mode": "collide",
+                  "push": 0
+                },
+                "frames": [
+                  {
+                    "cap": "地面不是一整块，分成几大板块",
+                    "para": "idea",
+                    "set": {
+                      "push": 0.08,
+                      "mode": "collide"
+                    }
+                  },
+                  {
+                    "cap": "两块迎面相撞，交界处被挤高",
+                    "para": "why",
+                    "set": {
+                      "push": 0.55
+                    },
+                    "play": "push",
+                    "dur": 1100
+                  },
+                  {
+                    "cap": "印度板块向北推，青藏被挤起来",
+                    "para": "example",
+                    "set": {
+                      "push": 0.8
+                    },
+                    "scrub": {
+                      "key": "push",
+                      "from": 0,
+                      "to": 1,
+                      "ticks": [
+                        0,
+                        0.5,
+                        1
+                      ],
+                      "tickLabels": [
+                        "很早以前",
+                        "",
+                        "今天"
+                      ]
+                    }
+                  },
+                  {
+                    "cap": "青藏高原就是这样被挤出来的",
+                    "para": "takeaway",
+                    "set": {
+                      "push": 1
+                    }
+                  }
+                ]
+              }
           },
           {
             "title": "推桌布：为什么越往东越低",
@@ -2312,14 +3324,45 @@ window.DAYS = [
             "example": "在家就能做：把桌布铺平，双手按住一边往前推。褶皱在手前面堆得最高，越往前褶皱越小，最远那头几乎还是平的。手就是印度板块，最高的那堆褶皱就是青藏高原。",
             "exLabel": "打个比方",
             "visual": {
-              "type": "flow",
-              "nodes": [
-                "印度板块向北推",
-                "青藏挤得最高",
-                "往东挤压变弱",
-                "地势逐级降低"
-              ]
-            },
+                "type": "plates",
+                "base": {
+                  "mode": "tablecloth",
+                  "push": 0
+                },
+                "frames": [
+                  {
+                    "cap": "离相撞的地方越近，挤得越高",
+                    "para": "idea",
+                    "set": {
+                      "push": 0.2,
+                      "mode": "tablecloth"
+                    }
+                  },
+                  {
+                    "cap": "推桌布：手边的褶皱最高",
+                    "para": "why",
+                    "set": {
+                      "push": 0.6
+                    },
+                    "play": "push",
+                    "dur": 1100
+                  },
+                  {
+                    "cap": "褶皱由高到低，淡成西高东低",
+                    "para": "example",
+                    "set": {
+                      "push": 0.9
+                    }
+                  },
+                  {
+                    "cap": "越往东推力越弱，台阶越低",
+                    "para": "takeaway",
+                    "set": {
+                      "push": 1
+                    }
+                  }
+                ]
+              },
             "check": {
               "q": "推桌布时，褶皱最高的地方在哪？",
               "options": [
@@ -2335,7 +3378,153 @@ window.DAYS = [
             "idea": "回到开头：从拉萨坐火车到上海，一共下了三级台阶，跨过了两道\"坎\"。",
             "why": "这三级台阶不是碰巧排成这样的：西南边的印度板块撞上来，把青藏挤成了第一级；往东挤压变弱，抬起的第二级矮了一截；最东边几乎没被抬高，成了第三级的平原。下一关就用这个\"西高东低\"，推出大河为什么向东流。",
             "takeaway": "板块挤压造出三级阶梯；拉萨到上海，正好下了三级。",
-            "example": "拉萨约 3650 米，在第一级。火车下到兰州约 1500 米，进了第二级的黄土高原一带。再往东越过二、三级之间的坎，到郑州只剩约 100 米，已经是第三级的华北平原，然后一路平平地开到上海。"
+            "example": "拉萨约 3650 米，在第一级。火车下到兰州约 1500 米，进了第二级的黄土高原一带。再往东越过二、三级之间的坎，到郑州只剩约 100 米，已经是第三级的华北平原，然后一路平平地开到上海。",
+            "visual": {
+                "type": "profileTrip",
+                "base": {},
+                "frames": [
+                  {
+                    "cap": "拉萨在第一级，海拔约 3650 米",
+                    "para": "idea",
+                    "set": {
+                      "progress": 0.03,
+                      "plates": 0
+                    },
+                    "scrub": {
+                      "key": "progress",
+                      "from": 0,
+                      "to": 1,
+                      "ticks": [
+                        0.03,
+                        0.38,
+                        0.76,
+                        0.99
+                      ],
+                      "tickLabels": [
+                        "拉萨",
+                        "兰州",
+                        "郑州",
+                        "上海"
+                      ]
+                    }
+                  },
+                  {
+                    "cap": "下第一道坎，到兰州约 1500 米",
+                    "para": "example",
+                    "set": {
+                      "from": 0.03,
+                      "to": 0.38,
+                      "progress": 0.38
+                    },
+                    "play": "ride",
+                    "dur": 1400,
+                    "scrub": {
+                      "key": "progress",
+                      "from": 0,
+                      "to": 1,
+                      "ticks": [
+                        0.03,
+                        0.38,
+                        0.76,
+                        0.99
+                      ],
+                      "tickLabels": [
+                        "拉萨",
+                        "兰州",
+                        "郑州",
+                        "上海"
+                      ]
+                    }
+                  },
+                  {
+                    "cap": "越过第二道坎，郑州只剩约 100 米",
+                    "para": "derive",
+                    "set": {
+                      "from": 0.38,
+                      "to": 0.76,
+                      "progress": 0.76
+                    },
+                    "play": "ride",
+                    "dur": 1400,
+                    "scrub": {
+                      "key": "progress",
+                      "from": 0,
+                      "to": 1,
+                      "ticks": [
+                        0.03,
+                        0.38,
+                        0.76,
+                        0.99
+                      ],
+                      "tickLabels": [
+                        "拉萨",
+                        "兰州",
+                        "郑州",
+                        "上海"
+                      ]
+                    }
+                  },
+                  {
+                    "cap": "然后一路平平地开到海边",
+                    "para": "derive",
+                    "set": {
+                      "from": 0.76,
+                      "to": 0.99,
+                      "progress": 0.99,
+                      "brackets": 1
+                    },
+                    "play": "ride",
+                    "dur": 1000,
+                    "scrub": {
+                      "key": "progress",
+                      "from": 0,
+                      "to": 1,
+                      "ticks": [
+                        0.03,
+                        0.38,
+                        0.76,
+                        0.99
+                      ],
+                      "tickLabels": [
+                        "拉萨",
+                        "兰州",
+                        "郑州",
+                        "上海"
+                      ]
+                    }
+                  },
+                  {
+                    "cap": "越往东推力越弱，台阶越低",
+                    "para": [
+                      "why",
+                      "takeaway"
+                    ],
+                    "set": {
+                      "progress": 0.99,
+                      "plates": 1,
+                      "brackets": 1,
+                      "showKans": 1
+                    },
+                    "scrub": {
+                      "key": "progress",
+                      "from": 0,
+                      "to": 1,
+                      "ticks": [
+                        0.03,
+                        0.38,
+                        0.76,
+                        0.99
+                      ],
+                      "tickLabels": [
+                        "拉萨",
+                        "兰州",
+                        "郑州",
+                        "上海"
+                      ]
+                    }
+                  }
+                ]
+              }
           }
         ],
         "interaction": {
