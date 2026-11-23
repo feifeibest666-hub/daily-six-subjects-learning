@@ -1,10 +1,5 @@
 (function (global) {
   const INK = '#4A3B30';
-  const RETIRED = {
-    beam2: 1, ridge2: 1, seaLand: 1, sediment: 1, delta: 1, soil: 1, clocks: 1, sundial: 1,
-    gauge: 1, cloudTrip: 1, tilt: 1, drop: 1, cycle: 1, histmap: 1, tree: 1, tug: 1, chain: 1,
-    yearline: 1, body3: 1, wires: 1, curve2: 1, gas: 1, process: 1, abc: 1, appraise: 1
-  };
   const FONT = '-apple-system, "PingFang SC", "HarmonyOS Sans SC", "Noto Sans SC", "Microsoft YaHei", sans-serif';
   const GEO = '#2F9E8F';
   const HIST = '#C8664A';
@@ -25,7 +20,6 @@
   function clear(svgEl) { while (svgEl.firstChild) svgEl.removeChild(svgEl.firstChild); }
   function stepOf(state) { return state.step == null ? 1 : state.step; }
   function reg(type, box, draw) {
-    if (RETIRED[type]) return;
     LKStage.register(type, {
       viewBox: box,
       build: function (el) { el._ready = true; },

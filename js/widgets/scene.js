@@ -301,34 +301,6 @@ function drawItem(it) {
   return '';
 }
 
-function frame(spec) {
-  spec = spec || {};
-  const step = spec.step == null ? 0 : spec.step;
-  let s = '';
-  if (spec.sky) {
-    s += `<rect width="344" height="236" fill="url(#sky)"/>`;
-    const gy = spec.groundY == null ? 156 : spec.groundY;
-    s += `<rect y="${gy}" width="344" height="${236 - gy}" fill="${spec.ground || '#E4EFD4'}"/>`;
-  } else {
-    s += `<rect width="344" height="236" fill="${spec.paper || K.paper}"/>`;
-    if (spec.floor) s += `<rect y="${spec.floorY || 168}" width="344" height="${236 - (spec.floorY || 168)}" fill="${spec.floor}"/>`;
-  }
-  (spec.base || []).forEach(function (it) { s += drawItem(it); });
-  (spec.marks || []).forEach(function (it, i) {
-    if (i > step) return;
-    s += drawItem(it);
-    if (spec.gold !== false && i === step && it.t) {
-      const lx = it.lx != null ? it.lx : it.x;
-      const ly = it.ly != null ? it.ly : Math.max(44, it.y - 36);
-      s += callout(it.x, Math.max(36, it.y - 8), lx, ly, it.t, { isNew: true, anchor: it.anchor || 'middle', fs: it.fs || 11 });
-    }
-  });
-  if (spec.label) {
-    s += callout(spec.lx || 180, spec.lyp || 120, spec.llx || 180, spec.lly || 48, spec.label, { anchor: 'middle', fs: 11 });
-  }
-  return s;
-}
-
 const scenes = {};
 const mem = {};
 const parts = [];
@@ -371,7 +343,7 @@ global.LKScene = {
   flag: flag, fort: fort, palace: palace, seal: seal, tally: tally, bag: bag, floor: floor, tag: tag,
   brain: brain, heart: heart, thermo: thermo, hanger: hanger, swatch: swatch, sun: sun, clockFace: clockFace, boat: boat,
   CN: CN, proj: proj, pathOf: pathOf, smooth: smooth,
-  drawItem: drawItem, frame: frame, register: register, part: part, draw: draw, scenes: scenes, parts: parts,
+  drawItem: drawItem, register: register, part: part, draw: draw, scenes: scenes, parts: parts,
   remember: remember, recall: recall
 };
 })(window);
