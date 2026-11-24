@@ -10,11 +10,18 @@
     const h = lines.length * 22 + 14;
     const bx = x - w / 2;
     const by = y - h;
-    const tail = tx == null ? x : tx;
-    const tip = ty == null ? by + h + 14 : ty;
+    const baseX = tx == null ? x : Math.max(bx + 14, Math.min(bx + w - 14, tx));
+    const aimX = tx == null ? baseX : tx;
+    const aimY = ty == null ? by + h + 16 : ty;
+    const dx = aimX - baseX;
+    const dy = aimY - (by + h);
+    const len = Math.sqrt(dx * dx + dy * dy) || 1;
+    const reach = Math.min(16, len);
+    const tipX = baseX + dx / len * reach;
+    const tipY = by + h - 0.5 + dy / len * reach;
     return `<g><rect x="${f(bx)}" y="${f(by)}" width="${f(w)}" height="${f(h)}" rx="11" fill="#fff" stroke="${K.ink}" stroke-width="1.6"/>
-      <path d="M${f(tail - 8)} ${f(by + h - .5)} L${f(tail)} ${f(tip)} L${f(tail + 8)} ${f(by + h - .5)} Z" fill="#fff" stroke="${K.ink}" stroke-width="1.6"/>
-      <rect x="${f(tail - 7)}" y="${f(by + h - 3)}" width="14" height="4" fill="#fff"/>
+      <path d="M${f(baseX - 7)} ${f(by + h - .5)} L${f(tipX)} ${f(tipY)} L${f(baseX + 7)} ${f(by + h - .5)} Z" fill="#fff" stroke="${K.ink}" stroke-width="1.6"/>
+      <rect x="${f(baseX - 6)}" y="${f(by + h - 3)}" width="12" height="4" fill="#fff"/>
       ${lines.map(function (l, i) { return `<text x="${f(x)}" y="${f(by + 22 + i * 22)}" font-size="16" font-weight="750" fill="${K.ink}" text-anchor="middle">${l}</text>`; }).join('')}</g>`;
   }
 
@@ -448,9 +455,12 @@
   function camel(x, y, k) {
     k = k || 1;
     return `<g transform="translate(${f(x)} ${f(y)}) scale(${k})">
-      <path d="M-20 4 Q-16 -10 -6 -6 Q0 -20 10 -8 Q20 -4 22 6 Q8 2 -8 6 Q-16 8 -20 4 Z" fill="#C4A574" stroke="${K.ink}"/>
-      <path d="M-22 -2 Q-30 -8 -24 2" fill="#E2CF7E" stroke="${K.ink}" stroke-width=".7"/>
-      <path d="M-16 6 L-18 16 M-4 8 L-2 16 M10 6 L12 16 M20 6 L24 16" stroke="#A8845A" stroke-width="2" stroke-linecap="round"/>
+      <path d="M-26 2 Q-18 -8 -6 -4 Q0 -18 14 -6 Q24 -2 26 4 Q12 0 -8 4 Q-18 8 -26 2 Z" fill="#C4A574" stroke="${K.ink}"/>
+      <path d="M-26 0 Q-38 -4 -44 -16" fill="none" stroke="#C4A574" stroke-width="5" stroke-linecap="round"/>
+      <circle cx="-46" cy="-18" r="5.5" fill="#E2CF7E" stroke="${K.ink}" stroke-width=".8"/>
+      <circle cx="-48" cy="-19" r=".9" fill="${K.ink}"/>
+      <path d="M-50 -23 L-48 -27 M-44 -23 L-42 -27" stroke="${K.ink}" stroke-width=".9"/>
+      <path d="M-22 4 L-24 16 M-8 6 L-6 16 M12 4 L14 16 M22 4 L26 16" stroke="#A8845A" stroke-width="2.2" stroke-linecap="round"/>
     </g>`;
   }
 

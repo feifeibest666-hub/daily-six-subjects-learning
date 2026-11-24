@@ -139,7 +139,7 @@ if (storage['liuke.v2'] == null) {
   process.exit(1);
 }
 
-const oldSrc = fs.readFileSync('/tmp/old-liuke/js/store.js', 'utf8');
+const oldSrc = fs.readFileSync(path.join(__dirname, 'fixtures/store-7024e4f.js'), 'utf8');
 const oldStorage = { 'liuke.v2': storage['liuke.v2'] };
 const oldSb = boot(['data/subjects.js', 'data/days.js', 'js/util.js'], oldStorage);
 vm.runInNewContext(oldSrc, oldSb, { filename: 'store-7024e4f.js' });

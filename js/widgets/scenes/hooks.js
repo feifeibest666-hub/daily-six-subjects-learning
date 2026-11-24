@@ -51,17 +51,16 @@
         + talk(250, 150, '才 4 米？', 220, 168);
     }
     return sky('#FBF6EE')
-      + `<rect x="36" y="24" width="250" height="156" rx="6" fill="#fff" stroke="${K.ink}" stroke-width="1.4"/>`
-      + `<path d="M58 150 L118 108 L178 132 L236 86" fill="none" stroke="#C4A574" stroke-width="10" stroke-linejoin="round"/>`
-      + `<path d="M58 150 L118 108" stroke="#C9A27E" stroke-width="8"/>`
-      + `<path d="M118 108 L178 132" stroke="#E2CF7E" stroke-width="8"/>`
-      + `<path d="M178 132 L236 86" stroke="#9FBF74" stroke-width="8"/>`
-      + `<g transform="translate(40 78) scale(.4)">${S.trainCar(0, 0, 1)}</g>`
-      + `<path d="M96 96 L150 124 L210 96" fill="none" stroke="${K.ink}" stroke-width="1.4" stroke-dasharray="4 3"/>`
-      + lab(70, 78, '拉萨', { fs: 13 }) + lab(230, 74, '上海', { fs: 13 })
-      + glow(`<text x="250" y="150" font-size="42" font-weight="800" fill="${K.ink}">?</text>`)
-      + yin(300, 210, { face: 'think', arm: 'point', k: 0.72 })
-      + talk(230, 200, '一共下了几级？', 286, 188);
+      + `<rect x="28" y="16" width="230" height="176" rx="6" fill="#fff" stroke="${K.ink}" stroke-width="1.4"/>`
+      + `<rect x="48" y="40" width="62" height="16" fill="#C9A27E" stroke="${K.ink}"/>`
+      + `<rect x="110" y="78" width="62" height="16" fill="#E2CF7E" stroke="${K.ink}"/>`
+      + `<rect x="172" y="116" width="62" height="16" fill="#9FBF74" stroke="${K.ink}"/>`
+      + `<g transform="translate(46 18) scale(.32)">${S.trainCar(0, 0, 1)}</g>`
+      + `<path d="M80 56 L110 78 L142 94 L172 116 L204 148" fill="none" stroke="${K.ink}" stroke-width="1.5" stroke-dasharray="4 3"/>`
+      + lab(78, 34, '拉萨', { fs: 13 }) + lab(214, 156, '上海', { fs: 13 })
+      + glow(`<text x="214" y="78" font-size="36" font-weight="800" fill="${K.ink}">?</text>`)
+      + yin(300, 220, { face: 'think', arm: 'point', k: 0.7 })
+      + talk(250, 188, '一共下了几级？', 286, 196);
   }
 
   function h2(step) {
@@ -277,6 +276,7 @@
         + `<path d="${pathOf(CN.yangtze.slice(5, 11), P)}" stroke="#E2B43A" stroke-width="4" fill="none"/>`
         + `<path d="${pathOf(CN.yangtze.slice(10), P)}" stroke="#3FA772" stroke-width="4" fill="none"/>`)
       + lab(80, 40, '上游', { fs: 13 }) + lab(160, 40, '中游', { fs: 13 }) + lab(250, 40, '下游', { fs: 13 })
+      + `<g transform="translate(236 70)"><circle cx="0" cy="0" r="7" fill="none" stroke="${K.ink}" stroke-width="2"/><circle cx="16" cy="0" r="7" fill="none" stroke="${K.ink}" stroke-width="2"/><path d="M6 0 L10 0 M-8 6 L-16 16 M24 6 L32 16" stroke="${K.ink}" stroke-width="2"/></g>`
       + yin(300, 210, { face: 'happy', arm: 'hold', k: 0.6 })
       + talk(230, 200, '切成三段看', 280, 190);
   }
@@ -376,9 +376,11 @@
       return sky('#FBF6EE')
         + `<ellipse cx="170" cy="70" rx="90" ry="40" fill="#fff" stroke="${K.ink}"/>`
         + ['恐惧', '厌恶', '悲伤'].map(function (t, i) {
-          return S.jar(70 + i * 70, 40, 2, t);
+          const x = 100 + i * 48, y = 52;
+          return `<path d="M${x - 16} ${y} L${x - 18} ${y + 24} Q${x} ${y + 30} ${x + 18} ${y + 24} L${x + 16} ${y} Z" fill="rgba(214,232,240,.85)" stroke="${K.ink}"/><rect x="${x - 14}" y="${y - 6}" width="28" height="8" rx="2" fill="#D5E8F0" stroke="${K.ink}"/><text x="${x}" y="${y + 16}" font-size="11" font-weight="800" text-anchor="middle">${t}</text>`;
         }).join('')
-        + S.trashCan(250, 150)
+        + `<path d="M200 100 Q230 120 246 140" fill="none" stroke="${K.ink}" stroke-width="1.6" stroke-dasharray="4 3"/>`
+        + S.trashCan(250, 168)
         + kid(80, 240, { face: 'think', pose: 'hold', k: 0.65 })
         + glow(S.trashCan(250, 150))
         + talk(120, 180, '全扔掉多好', 100, 190);
@@ -493,18 +495,34 @@
     }
     if (step === 2) {
       let pages = '';
-      for (let i = 0; i < 12; i++) pages += `<rect x="${20 + (i % 6) * 50}" y="${40 + Math.floor(i / 6) * 70}" width="40" height="52" fill="#fff" stroke="${K.ink}" stroke-width=".7"/>`;
+      for (let i = 0; i < 12; i++) {
+        const x = 14 + i * 26;
+        const summer = i >= 5 && i <= 7;
+        pages += `<rect x="${x}" y="70" width="24" height="70" fill="#fff" stroke="${K.ink}" stroke-width=".6"/>`
+          + `<text x="${x + 12}" y="84" font-size="10" font-weight="800" text-anchor="middle" fill="${K.ink}">${i + 1}</text>`
+          + (summer
+            ? `<circle cx="${x + 8}" cy="100" r="6" fill="#F2B640" stroke="${K.ink}" stroke-width=".5"/><path d="M${x + 16} 108 q4 6 0 10 q-4 -2 0 -10" fill="#3D86D9"/>`
+            : `<circle cx="${x + 12}" cy="108" r="3" fill="#E7D3B0"/>`);
+      }
       return sky('#FBF6EE') + pages
-        + glow(`<rect x="170" y="110" width="140" height="52" fill="none" stroke="#F2B640" stroke-width="3"/>`)
-        + kid(300, 240, { pose: 'point', face: 'think', k: 0.5 })
-        + talk(160, 30, '雨跟着热来？', 200, 50);
+        + glow(`<rect x="142" y="64" width="82" height="82" fill="none" stroke="#F2B640" stroke-width="3"/>`)
+        + kid(250, 240, { pose: 'point', face: 'think', k: 0.55 })
+        + talk(200, 30, '雨跟着热来？', 230, 90);
     }
-    return sky('#EAF3F5') + ground(190, '#E2CF7E') + `<rect y="150" width="340" height="50" fill="#7FB6CF"/>`
-      + yin(160, 170, { face: 'happy', arm: 'hold', k: 0.7 })
-      + `<ellipse cx="90" cy="150" rx="20" ry="10" fill="#E2CF7E" stroke="${K.ink}"/>`
-      + `<path d="M230 120 L230 160" stroke="#7FB6CF" stroke-width="8"/>`
-      + glow(`<ellipse cx="90" cy="150" rx="20" ry="10" fill="#E2CF7E"/>`)
-      + talk(200, 60, '秘密在这儿', 160, 120);
+    return sky('#EAF3F5')
+      + `<rect y="176" width="200" height="84" fill="#E2CF7E"/>`
+      + `<rect x="190" y="150" width="150" height="110" fill="#7FB6CF"/>`
+      + yin(118, 148, { face: 'happy', k: 1.05 })
+      + `<path d="M88 158 Q68 176 52 194" fill="none" stroke="#5E4EAE" stroke-width="7" stroke-linecap="round"/>`
+      + `<circle cx="48" cy="198" r="5" fill="#F4D3B5" stroke="${K.ink}"/>`
+      + `<path d="M24 210 Q40 186 58 210 Z" fill="#C4A574" stroke="${K.ink}"/><circle cx="36" cy="202" r="1.4" fill="#8A6F57"/><circle cx="46" cy="198" r="1.4" fill="#8A6F57"/>`
+      + `<path d="M148 158 Q172 150 196 138" fill="none" stroke="#5E4EAE" stroke-width="7" stroke-linecap="round"/>`
+      + `<circle cx="200" cy="134" r="5" fill="#F4D3B5" stroke="${K.ink}"/>`
+      + `<path d="M186 128 L214 128 L208 108 L192 108 Z" fill="#C5D8E4" stroke="${K.ink}"/>`
+      + `<ellipse cx="200" cy="118" rx="9" ry="3.5" fill="#7FB6CF"/>`
+      + glow(`<path d="M24 210 Q40 186 58 210 Z" fill="#C4A574" stroke="${K.ink}"/>`
+        + `<path d="M186 128 L214 128 L208 108 L192 108 Z" fill="#C5D8E4" stroke="${K.ink}"/>`)
+      + talk(250, 46, '秘密在这儿', 200, 100);
   }
 
   function hook8h(step) {
@@ -574,8 +592,10 @@
         + `<rect x="180" y="40" width="140" height="160" fill="#1E3344"/>`
         + S.piano(230, 140, 0.8)
         + kid(80, 210, { pose: 'stand', face: 'calm', k: 0.7 })
+        + `<ellipse cx="84" cy="128" rx="5" ry="4" fill="#E07A7A" stroke="${K.ink}" stroke-width=".6"/>`
+        + `<path d="M70 118 Q84 108 96 120" fill="none" stroke="${K.ink}" stroke-width="1.2"/>`
         + glow(kid(80, 210, { pose: 'stand', face: 'calm', k: 0.7 }))
-        + talk(120, 80, '一点不紧张', 90, 140);
+        + talk(140, 70, '一点不紧张', 90, 140);
     }
     if (step === 1) {
       return sky('#F6EFE4') + S.piano(120, 150, 1.2)
@@ -612,9 +632,12 @@
     }
     if (step === 1) {
       return sky('#FBF6EE')
-        + kid(160, 230, { top: '#E2B43A', bottom: '#E07A3D', face: 'happy', k: 1, prop: 'basket' })
-        + glow(kid(160, 230, { top: '#E2B43A', bottom: '#E07A3D', k: 1 }))
-        + talk(240, 60, '我也来一套', 180, 120);
+        + kid(150, 230, { top: '#E2B43A', bottom: '#E07A3D', face: 'happy', k: 0.9 })
+        + `<path d="M128 150 Q150 138 172 152" stroke="#E7A04A" stroke-width="8" stroke-linecap="round"/>`
+        + `<path d="M210 150 L228 150 L234 190 L204 190 Z" fill="#E07A3D" stroke="${K.ink}"/>`
+        + `<path d="M210 150 Q222 138 234 150" fill="none" stroke="${K.ink}" stroke-width="1.4"/>`
+        + glow(`<path d="M128 150 Q150 138 172 152" stroke="#E7A04A" stroke-width="8"/>`)
+        + talk(250, 70, '我也来一套', 180, 130);
     }
     if (step === 2) {
       return sky('#F7E7C8') + tree(120, 200, 2.6)
@@ -643,9 +666,10 @@
     if (step === 1) {
       return sky('#F6EFE4')
         + `<rect x="200" y="30" width="90" height="70" fill="#C5D8E4" opacity=".6" stroke="${K.ink}"/>`
-        + S.bowl(80, 150, 'rice')
-        + kid(140, 220, { hair: 'short', top: '#8FA7C9', glasses: true, face: 'worry', k: 0.65 })
-        + glow(S.bowl(80, 150, 'rice'))
+        + S.bowl(70, 168, 'rice')
+        + kid(150, 220, { hair: 'short', top: '#8FA7C9', glasses: true, face: 'worry', k: 0.65 })
+        + `<path d="M118 168 Q150 140 186 176 L176 200 L112 196 Z" fill="#C5D8E4" stroke="${K.ink}" opacity=".9"/>`
+        + glow(S.bowl(70, 168, 'rice'))
         + talk(220, 140, '冷得发抖', 160, 160);
     }
     if (step === 2) {
@@ -667,32 +691,38 @@
 
   function hook9h(step) {
     if (step === 0) {
-      return sky('#F7E7C8') + ground(190, '#C9B59A')
-        + S.camel(80, 170, 1.2) + S.lantern(150, 80) + S.lantern(200, 90)
-        + S.shop(220, 190, 70, '铺')
-        + lab(250, 36, '开元 · 约 740 年', { fs: 14 })
-        + kid(40, 230, { face: 'wow', k: 0.6 })
-        + glow(S.camel(80, 170, 1.2))
-        + talk(80, 70, '好热闹！', 60, 150);
+      return sky('#F7E7C8') + ground(196, '#C9B59A')
+        + `<rect y="188" width="340" height="14" fill="#A89880"/>`
+        + S.shop(40, 188, 64, '铺') + S.shop(250, 188, 70, '铺')
+        + S.lantern(120, 70) + S.lantern(168, 58) + S.lantern(210, 74)
+        + S.camel(150, 176, 1.05) + S.camel(210, 182, 0.85)
+        + figure(70, 214, { k: 0.32, robe: '#8E3F33' }) + figure(100, 218, { k: 0.28 }) + figure(250, 216, { k: 0.3, robe: '#3D86D9' })
+        + lab(250, 32, '开元 · 约 740 年', { fs: 14 })
+        + kid(36, 236, { face: 'wow', k: 0.55 })
+        + glow(S.camel(150, 176, 1.05))
+        + talk(70, 80, '好热闹！', 50, 150);
     }
     if (step === 1) {
-      return sky('#6E655C') + ground(190, '#4A3B30')
-        + `<path d="M40 190 L70 140 L110 190 Z" fill="#5C4636"/><path d="M160 190 L200 120 L250 190 Z" fill="#3A302A"/>`
-        + S.fire(120, 150, 1.2)
-        + lab(250, 40, '755 年后', { fs: 14, c: '#fff', stroke: '#4A3B30' })
-        + kid(280, 230, { face: 'worry', k: 0.55 })
+      return sky('#6E655C') + ground(196, '#4A3B30')
+        + `<rect y="188" width="340" height="14" fill="#3A302A"/>`
+        + `<path d="M30 188 L48 130 L90 188 Z" fill="#5C4636" stroke="${K.ink}"/><path d="M200 188 L230 110 L280 188 Z" fill="#2B2622" stroke="${K.ink}"/>`
+        + `<path d="M48 130 L70 188 M230 110 L250 188" stroke="#2B2622" stroke-width="2"/>`
+        + S.fire(120, 150, 1.2) + S.fire(240, 160, 0.8)
+        + `<path d="M100 120 q8 -16 4 -28 M180 100 q6 -14 2 -24" fill="none" stroke="#6E655C" stroke-width="3"/>`
+        + lab(250, 36, '755 年后', { fs: 14, c: '#fff', stroke: '#4A3B30' })
+        + kid(40, 236, { face: 'worry', k: 0.5 })
         + glow(S.fire(120, 150, 1.2))
-        + talk(200, 70, '怎么会这样？', 250, 140);
+        + talk(160, 50, '怎么会这样？', 80, 140);
     }
     if (step === 2) {
       let steps = '';
-      for (let i = 0; i < 5; i++) steps += `<rect x="${40 + i * 28}" y="${160 - i * 22}" width="36" height="${22 + i * 22}" fill="#C9B59A" stroke="${K.ink}" stroke-width=".6"/>`;
+      for (let i = 0; i < 5; i++) steps += `<rect x="${36 + i * 36}" y="${150 - i * 22}" width="40" height="${28 + i * 22}" fill="#C9B59A" stroke="${K.ink}" stroke-width=".6"/>`;
       return sky('#FBF6EE') + steps
-        + `<path d="M200 40 Q160 80 80 150" fill="none" stroke="#F2B640" stroke-width="3"/>`
-        + `<circle cx="200" cy="36" r="10" fill="#F2B640" stroke="${K.ink}"/>`
-        + `<path d="M250 80 L280 140 L240 140 Z" fill="rgba(74,59,48,.25)"/>`
-        + glow(`<circle cx="200" cy="36" r="10" fill="#F2B640"/>`)
-        + talk(250, 40, '谁推的？', 220, 50);
+        + `<g transform="translate(100 100) rotate(62) scale(1.35)"><path d="M-22 10 L-18 -16 L-8 0 L0 -26 L8 0 L18 -16 L22 10 Z" fill="#F2B640" stroke="${K.ink}"/><rect x="-22" y="10" width="44" height="8" fill="#E2B43A" stroke="${K.ink}"/><circle cx="-8" cy="-8" r="2.2" fill="#C8463A"/><circle cx="0" cy="-18" r="2.4" fill="#C8463A"/><circle cx="8" cy="-8" r="2.2" fill="#C8463A"/></g>`
+        + `<path d="M196 36 Q160 70 124 110" fill="none" stroke="#C9B59A" stroke-width="2" stroke-dasharray="4 3"/>`
+        + `<path d="M230 24 L270 8 L278 64 L232 78 Z" fill="rgba(74,59,48,.3)"/>`
+        + glow(`<g transform="translate(100 100) rotate(62) scale(1.35)"><path d="M-22 10 L-18 -16 L0 -26 L18 -16 L22 10 Z" fill="#F2B640" stroke="${K.ink}"/></g>`)
+        + talk(250, 160, '谁推的？', 250, 70);
     }
     const P = proj({ s: 3.3, dx: 40, dy: 36 });
     return sky('#EAF3F5')
@@ -709,6 +739,7 @@
       return sky('#1E3344')
         + `<rect x="40" y="80" width="160" height="20" fill="#C4A574"/>`
         + kid(120, 200, { face: 'worry', pose: 'sit', k: 0.65 })
+        + `<ellipse cx="124" cy="128" rx="5" ry="4" fill="#E07A7A"/>`
         + lab(250, 40, '22:00', { fs: 16, c: '#fff', stroke: '#1E3344' })
         + lab(250, 70, '第 1 周', { fs: 14, c: '#fff', stroke: '#1E3344' })
         + glow(lab(250, 70, '第 1 周', { fs: 14, c: '#fff', stroke: '#1E3344' }))

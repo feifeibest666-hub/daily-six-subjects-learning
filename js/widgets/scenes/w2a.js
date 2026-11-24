@@ -39,11 +39,12 @@
         + lab(180, 40, '武汉 · 1 月 · +4°C', { fs: 15 });
     }
     if (step === 3) {
-      return bg('#E7F2F6') + `<rect y="140" width="344" height="96" fill="#E7F2F6" stroke="#7FB6CF"/>`
-        + `<path d="M20 160 Q80 150 140 166 T260 158 T340 170" fill="none" stroke="#9BB6C8" stroke-width="2"/>`
-        + kid(80, 200, { k: 0.4 }) + kid(120, 206, { k: 0.38 }) + kid(160, 198, { k: 0.4, top: '#C8463A' })
-        + `<path d="M220 190 L280 175 L300 198 Z" fill="#8A6F57" stroke="${K.ink}"/>`
-        + glow(`<rect y="148" width="344" height="40" fill="#F7F4EF" opacity=".72"/>`)
+      return bg('#E7F2F6')
+        + `<rect y="168" width="344" height="68" fill="#C9B59A"/>`
+        + glow(`<rect y="156" width="344" height="22" fill="#F7F4EF" stroke="#9BB6C8"/>`)
+        + `<path d="M20 164 Q80 156 140 166 T260 158 T340 168" fill="none" stroke="#9BB6C8" stroke-width="1.4"/>`
+        + kid(80, 214, { k: 0.4 }) + kid(124, 218, { k: 0.38 }) + kid(168, 210, { k: 0.4, top: '#C8463A' })
+        + `<path d="M240 196 L286 178 L308 204 Z" fill="#8A6F57" stroke="${K.ink}"/>`
         + lab(180, 40, '哈尔滨 · 1 月 · −18°C', { fs: 15 });
     }
     return bg('#EAF3F5') + land(P)
@@ -171,7 +172,7 @@
   }
 
   function d6f1(step) {
-    if (step === 0) return bg() + S.jar(140, 70, 10, '1000') + glow(S.coin(200, 50, 10)) + lab(200, 36, '+100', { fs: 16 }) + lab(140, 210, '第 1 年', { fs: 14 });
+    if (step === 0) return bg() + S.jar(140, 70, 10, '1000') + glow(S.coin(200, 50, 10)) + lab(200, 36, '+100', { fs: 16 }) + lab(250, 90, '1100', { fs: 16 }) + lab(140, 210, '第 1 年', { fs: 14 });
     if (step === 1) return bg() + S.jar(70, 80, 8, '1000') + glow(S.jar(210, 60, 11, '1100')) + lab(250, 36, '+110', { fs: 16 }) + lab(210, 210, '第 2 年', { fs: 14 });
     return bg() + S.jar(40, 90, 6, '') + S.jar(130, 80, 8, '') + glow(S.jar(230, 50, 12, '1210'))
       + lab(250, 36, '+121', { fs: 16 }) + lab(230, 200, '1210 → 1331', { fs: 14 });
@@ -193,22 +194,59 @@
         + lab(80, 40, '怕蛇的', { fs: 14 }) + lab(260, 40, '不怕蛇的', { fs: 14 });
     }
     if (step === 2) {
-      return bg('#F6EFE4') + kid(120, 200, { face: 'yuck', pose: 'point', k: 0.85 })
-        + S.bowl(220, 140, 'rice')
-        + `<path d="M210 110 q6 -10 0 -16 M230 108 q8 -12 2 -18" stroke="#3FA772" stroke-width="1.5" fill="none"/>`
-        + glow(S.bowl(220, 140, 'rice'));
+      return bg('#F6EFE4')
+        + `<rect y="168" width="344" height="68" fill="#E7D3B0"/>`
+        + `<rect x="168" y="156" width="140" height="10" fill="#C4A574" stroke="${K.ink}"/>`
+        + `<g transform="rotate(-32 118 214)">${kid(118, 214, { face: 'yuck', k: 0.92 })}</g>`
+        + `<path d="M210 168 Q248 198 286 168" fill="#F4E7D4" stroke="${K.ink}" stroke-width="1.3"/>`
+        + `<ellipse cx="248" cy="160" rx="22" ry="8" fill="#C9D6A4" stroke="${K.ink}"/>`
+        + `<ellipse cx="238" cy="156" rx="6" ry="4" fill="#5E8A45"/><ellipse cx="256" cy="158" rx="5" ry="3" fill="#3FA772"/>`
+        + `<path d="M230 140 q8 -16 0 -24 M252 136 q10 -18 2 -26" stroke="#3FA772" stroke-width="1.8" fill="none"/>`
+        + `<ellipse cx="286" cy="148" rx="6" ry="3.5" fill="#2B2622"/><path d="M281 146 l-8 -4 M291 146 l8 -4" stroke="#2B2622" stroke-width="1.2"/>`
+        + `<ellipse cx="300" cy="132" rx="5" ry="3" fill="#2B2622"/><path d="M296 130 l-7 -4 M304 130 l7 -4" stroke="#2B2622"/>`
+        + glow(`<g transform="rotate(-32 118 214)">${kid(118, 214, { face: 'yuck', k: 0.92 })}</g>`);
     }
-    const cells = [[40, 40], [180, 40], [40, 130], [180, 130]];
+    const cells = [[8, 8], [176, 8], [8, 122], [176, 122]];
+    const tags = ['恐惧 → 逃开', '厌恶 → 远离', '愤怒 → 护住', '悲伤 → 停下'];
+    function fear(dim) {
+      return `<g transform="translate(8 8) scale(1.35)">`
+        + figure(40, 62, { k: 0.42, face: 'worry', robe: dim ? '#C9B59A' : '#8E3F33', right: 'point' })
+        + (dim
+          ? `<path d="M78 36 Q100 22 112 40" fill="none" stroke="#A89880" stroke-width="5" stroke-linecap="round"/>`
+          : S.snake(96, 36, 0.9))
+        + `</g>`;
+    }
+    function disgust(dim) {
+      return `<path d="M16 58 L78 44" stroke="${dim ? '#A89880' : '#E7C3A8'}" stroke-width="10" stroke-linecap="round"/>`
+        + `<circle cx="84" cy="42" r="8" fill="${dim ? '#C9B59A' : '#E7C3A8'}" stroke="${K.ink}"/>`
+        + `<ellipse cx="118" cy="64" rx="28" ry="11" fill="${dim ? '#D9D3CB' : '#E7E0D6'}" stroke="${K.ink}"/>`
+        + (dim ? '' : `<ellipse cx="108" cy="56" rx="6" ry="4" fill="#7FA65A"/><ellipse cx="124" cy="58" rx="5" ry="3" fill="#5E8A45"/>`);
+    }
+    function anger(dim) {
+      return figure(48, 92, { k: 0.55, robe: dim ? '#C9B59A' : '#C8463A', left: 'up', right: 'up' })
+        + `<path d="M86 70 L132 52 L140 78 L90 84 Z" fill="${dim ? '#D9D3CB' : '#E2CF7E'}" stroke="${K.ink}"/>`
+        + (dim ? '' : `<circle cx="104" cy="64" r="6" fill="#C8463A"/><circle cx="118" cy="70" r="5" fill="#E07A3D"/><circle cx="108" cy="74" r="4" fill="#3FA772"/>`);
+    }
+    function sad(dim) {
+      return kid(48, 96, { pose: 'sit', face: dim ? 'calm' : 'sad', k: 0.42, top: dim ? '#C9B59A' : '#8FA7C9' })
+        + `<path d="M78 62 Q100 46 122 68" fill="none" stroke="${dim ? '#A89880' : '#E7C3A8'}" stroke-width="7" stroke-linecap="round"/>`
+        + `<circle cx="124" cy="70" r="6" fill="${dim ? '#C9B59A' : '#E7C3A8'}" stroke="${K.ink}"/>`
+        + (dim ? '' : figure(136, 96, { k: 0.36, robe: '#3D86D9' }));
+    }
+    const panes = [fear, disgust, anger, sad];
     function grid(on) {
       return cells.map(function (c, i) {
         const dim = i !== on;
-        return `<rect x="${c[0]}" y="${c[1]}" width="120" height="80" rx="6" fill="${dim ? '#E7E0D6' : '#fff'}" stroke="${K.ink}"/>`;
-      }).join('');
+        return `<rect x="${c[0]}" y="${c[1]}" width="160" height="106" rx="8" fill="${dim ? '#E7E0D6' : '#fff'}" stroke="${K.ink}"/>`
+          + `<g transform="translate(${c[0]} ${c[1]})" opacity="${dim ? 0.55 : 1}">${panes[i](dim)}</g>`;
+      }).join('')
+        + glow(`<rect x="${cells[on][0]}" y="${cells[on][1]}" width="160" height="106" fill="none" stroke="#F2B640" stroke-width="3"/>`)
+        + lab(cells[on][0] + 80, cells[on][1] + 16, tags[on], { fs: 13 });
     }
-    if (step === 3) return bg() + grid(0) + glow(`<rect x="40" y="40" width="120" height="80" fill="none" stroke="#F2B640" stroke-width="3"/>`) + figure(90, 100, { k: 0.4, face: 'worry' }) + lab(100, 36, '恐惧 → 逃开', { fs: 14 });
-    if (step === 4) return bg() + grid(1) + glow(`<rect x="180" y="40" width="120" height="80" fill="none" stroke="#F2B640" stroke-width="3"/>`) + lab(240, 36, '厌恶 → 远离', { fs: 14 });
-    if (step === 5) return bg() + grid(2) + glow(`<rect x="40" y="130" width="120" height="80" fill="none" stroke="#F2B640" stroke-width="3"/>`) + S.bowl(90, 180, 'rice') + lab(100, 120, '愤怒 → 护住', { fs: 14 });
-    return bg() + grid(3) + glow(`<rect x="180" y="130" width="120" height="80" fill="none" stroke="#F2B640" stroke-width="3"/>`) + kid(230, 200, { pose: 'sit', face: 'sad', k: 0.4 }) + lab(240, 120, '悲伤 → 停下', { fs: 14 });
+    if (step === 3) return bg() + grid(0);
+    if (step === 4) return bg() + grid(1);
+    if (step === 5) return bg() + grid(2);
+    return bg() + grid(3);
   }
 
   function d8g1(step) {
@@ -238,16 +276,25 @@
         + lab(90, 40, '约 2 厘米', { fs: 14 }) + lab(250, 30, '热摊进很厚一层', { fs: 13 });
     }
     if (step === 3) {
-      return bg('#F6EFE4') + S.stove(80, 150)
-        + `<path d="M100 140 Q116 100 110 80" fill="none" stroke="#8A8178" stroke-width="2"/>`
-        + `<path d="M160 120 Q160 90 160 70" fill="#7FB6CF" stroke="${K.ink}"/>`
-        + glow(lab(110, 50, '1 分钟就烫', { fs: 14 }))
-        + lab(230, 50, '几分钟才冒气', { fs: 14 });
+      return bg('#F6EFE4') + S.stove(70, 176)
+        + `<ellipse cx="106" cy="168" rx="16" ry="6" fill="#C5D0D6" stroke="${K.ink}"/>`
+        + `<path d="M96 160 q6 -8 4 -14 M106 158 q4 -10 0 -16 M116 160 q-2 -8 4 -14" fill="none" stroke="#E07A3D" stroke-width="1.4"/>`
+        + `<path d="M158 170 L164 142 L192 142 L198 170 Z" fill="#C5D0D6" stroke="${K.ink}"/>`
+        + `<ellipse cx="178" cy="142" rx="16" ry="6" fill="#7FB6CF" stroke="${K.ink}"/>`
+        + `<path d="M172 126 q4 -10 0 -16 M184 124 q5 -10 1 -16" fill="none" stroke="#9BB6C8" stroke-width="1.6"/>`
+        + glow(`<ellipse cx="106" cy="168" rx="16" ry="6" fill="#C5D0D6" stroke="${K.ink}"/>`)
+        + lab(100, 48, '1 分钟就烫', { fs: 14 })
+        + lab(250, 48, '几分钟才冒气', { fs: 14 });
     }
     return bg()
-      + `<rect x="20" y="80" width="130" height="70" fill="#C9A27E" stroke="${K.ink}"/>`
-      + `<rect x="190" y="80" width="130" height="70" fill="#7FB6CF" stroke="${K.ink}"/>`
-      + glow(lab(80, 180, '升温快、降温快', { fs: 14 }) + lab(250, 180, '升温慢、降温慢', { fs: 14 }));
+      + `<rect x="20" y="70" width="140" height="80" fill="#C9A27E" stroke="${K.ink}"/>`
+      + `<ellipse cx="90" cy="78" rx="22" ry="8" fill="#C5D0D6" stroke="${K.ink}"/>`
+      + `<rect x="190" y="70" width="140" height="80" fill="#7FB6CF" stroke="${K.ink}"/>`
+      + `<path d="M236 86 L276 86 L270 52 L242 52 Z" fill="#8A8178" stroke="${K.ink}"/>`
+      + `<path d="M248 68 L264 68" stroke="#7FB6CF" stroke-width="5"/>`
+      + glow(`<ellipse cx="90" cy="78" rx="22" ry="8" fill="none" stroke="#F2B640" stroke-width="3"/>`
+        + `<path d="M236 86 L276 86 L270 52 L242 52 Z" fill="none" stroke="#F2B640" stroke-width="3"/>`)
+      + lab(90, 180, '升温快、降温快', { fs: 14 }) + lab(260, 180, '升温慢、降温慢', { fs: 14 });
   }
 
   function d8g2(step) {
@@ -264,19 +311,29 @@
     }
     if (step === 2) {
       let pages = '';
-      for (let m = 0; m < 12; m++) pages += `<rect x="${24 + m * 26}" y="80" width="22" height="70" fill="#fff" stroke="${K.ink}" stroke-width=".6"/>`;
-      return bg() + pages + glow(`<rect x="154" y="74" width="80" height="82" fill="none" stroke="#F2B640" stroke-width="3"/>`);
+      for (let m = 0; m < 12; m++) {
+        const hot = m >= 5 && m <= 7 ? 14 : (m >= 3 && m <= 8 ? 8 : 4);
+        const wet = m >= 5 && m <= 7 ? 12 : (m >= 4 && m <= 8 ? 6 : 3);
+        const x = 20 + m * 26;
+        pages += `<rect x="${x}" y="78" width="22" height="78" fill="#fff" stroke="${K.ink}" stroke-width=".6"/>`
+          + `<circle cx="${x + 11}" cy="${148 - hot}" r="${hot / 2}" fill="#F2B640" stroke="${K.ink}" stroke-width=".5"/>`
+          + `<path d="M${x + 11} ${156} q${wet / 2} ${wet} 0 ${wet + 4} q-${wet / 2} -2 0 -${wet + 4}" fill="#3D86D9"/>`;
+      }
+      return bg() + pages + glow(`<rect x="148" y="72" width="82" height="90" fill="none" stroke="#F2B640" stroke-width="3"/>`);
     }
     if (step === 3) {
-      return bg('#C9D6A4') + `<path d="M20 40 L40 120 M80 30 L90 130" stroke="#7FB6CF" stroke-width="2"/>`
-        + figure(180, 200, { hat: 'kasa' in S ? 'guan' : 'guan', robe: '#5C4636', face: 'happy', k: 0.8 })
-        + glow(figure(180, 200, { k: 0.8, face: 'happy', robe: '#3FA772' }))
-        + lab(180, 40, '水稻 · 7 月', { fs: 16 });
+      let rain = '';
+      for (let i = 0; i < 8; i++) rain += `<path d="M${24 + i * 40} 24 l-8 22" stroke="#7FB6CF" stroke-width="2" stroke-linecap="round"/>`;
+      return bg('#C9D6A4') + rain
+        + S.fields('rice8', 120, 170, 80, 28, ['#7FB6CF', '#9FBF74', '#5E9DBB'], 3)
+        + figure(240, 200, { hat: 'guan', robe: '#5C4636', face: 'happy', k: 0.7 })
+        + glow(S.fields('rice8b', 120, 170, 80, 28, ['#7FB6CF', '#9FBF74'], 3))
+        + lab(180, 36, '水稻 · 7 月', { fs: 16 });
     }
-    return bg('#F7E7C8') + tree(80, 180, 2) + `<path d="M40 200 Q80 190 140 200" stroke="#C4A574" stroke-width="4" fill="none"/>`
-      + `<circle cx="60" cy="50" r="16" fill="#F2B640"/>`
-      + lab(200, 40, '地中海', { fs: 16 }) + lab(260, 80, '7 月', { fs: 14 })
-      + glow(`<g transform="translate(250 120)"><ellipse cx="0" cy="0" rx="24" ry="14" fill="#9BB6C8"/><text y="36" font-size="13" font-weight="800" text-anchor="middle">1 月</text></g>`);
+    return bg('#F7E7C8') + tree(70, 190, 2) + `<path d="M30 200 Q80 188 140 204" stroke="#C4A574" stroke-width="4" fill="none"/>`
+      + `<circle cx="56" cy="46" r="16" fill="#F2B640" stroke="${K.ink}"/>`
+      + lab(160, 40, '地中海', { fs: 16 }) + lab(250, 46, '7 月', { fs: 14 })
+      + glow(`<g transform="translate(270 110)"><ellipse cx="0" cy="0" rx="28" ry="16" fill="#9BB6C8" stroke="${K.ink}"/><path d="M-8 8 l-4 14 M0 10 l0 16 M8 8 l4 14" stroke="#3D86D9" stroke-width="2"/><text y="40" font-size="13" font-weight="800" text-anchor="middle">1 月</text></g>`);
   }
 
   function d8h1(step) {
@@ -284,9 +341,13 @@
     if (step === 0) {
       return bg('#EAF3F5') + land(P)
         + glow(`<path d="M120 150 C160 120 200 140 230 100" stroke="#3D86D9" stroke-width="4" fill="none"/>`)
-        + `<path d="M200 60 L240 40 L250 50" stroke="#C8463A" stroke-width="2" fill="none"/>`
+        + `<path d="M200 60 L240 40 L250 50 M210 70 L248 48 M218 80 L256 56" stroke="#C8463A" stroke-width="2" fill="none"/>`
+        + `<rect x="150" y="78" width="34" height="26" fill="#E7D3B0" stroke="${K.ink}"/>`
+        + `<path d="M146 78 L167 58 L188 78" fill="#C8463A" stroke="${K.ink}"/>`
+        + `<path d="M146 70 L188 86 M188 70 L146 86" stroke="#8A8178" stroke-width="1.2"/>`
+        + lab(167, 54, '东都', { fs: 12 })
         + figure(60, 200, { k: 0.45, hat: 'mian', robe: '#8E3F33' })
-        + lab(180, 36, '修运河、建东都、三征高句丽', { fs: 13 });
+        + lab(250, 150, '高句丽', { fs: 13 });
     }
     if (step === 1) {
       return bg('#C9D6A4') + `<rect x="40" y="80" width="180" height="80" fill="#7FA65A" opacity=".5" stroke="#5E8A45"/>`
@@ -351,10 +412,14 @@
     }
     if (step === 1) return bg('#F6EFE4') + kid(100, 180, { pose: 'hold', face: 'calm', k: 0.7 }) + glow(S.bill(180, 90)) + lab(210, 70, '100', { fs: 16 });
     if (step === 2) {
-      return bg() + S.riceBag(140, 180)
-        + `<rect x="120" y="70" width="50" height="90" fill="#E2CF7E" stroke="${K.ink}"/>`
-        + glow(`<rect x="120" y="60" width="50" height="12" fill="none" stroke="${K.ink}" stroke-dasharray="3 2"/>`)
-        + lab(220, 100, '100 ÷ 103 ≈ 0.97', { fs: 14 });
+      return bg()
+        + `<path d="M124 186 L138 78 L196 78 L210 186 Z" fill="#F7F4EF" stroke="${K.ink}" stroke-width="1.2"/>`
+        + `<path d="M128 186 L146 108 L188 108 L206 186 Z" fill="#E2CF7E"/>`
+        + `<path d="M140 78 L194 78 L188 108 L146 108 Z" fill="none" stroke="${K.ink}" stroke-dasharray="3 2"/>`
+        + `<rect x="152" y="128" width="22" height="14" fill="#F2B640" stroke="${K.ink}" stroke-width=".6"/>`
+        + lab(163, 138, '米', { fs: 11 })
+        + glow(`<path d="M140 78 L194 78 L188 108 L146 108 Z" fill="none" stroke="#F2B640" stroke-width="2" stroke-dasharray="3 2"/>`)
+        + lab(270, 120, '100 ÷ 103 ≈ 0.97', { fs: 14 });
     }
     return bg() + S.bill(80, 90) + glow(`<path d="M130 90 L146 122" stroke="#C9B59A" stroke-dasharray="3 2"/>`) + lab(220, 120, '≈ 去年 97 元', { fs: 16 });
   }
@@ -417,8 +482,11 @@
         + lab(250, 50, '＜800', { fs: 16 });
     }
     return bg('#EAF3F5') + land(P)
+      + S.fields('dryN', 110, 78, 40, 16, ['#E2CF7E', '#D9B98A', '#C4A574'], 5)
+      + S.fields('wetS', 210, 176, 46, 18, ['#7FB6CF', '#9FBF74', '#5E9DBB'], 3)
       + `<path d="${pathOf(CN.qinling, P)}" stroke="#8A6F57" stroke-width="4" fill="none"/>`
-      + glow(`<path d="M40 140 L300 160 L300 220 L40 210 Z" fill="#7FB6CF" opacity=".35"/>`);
+      + glow(`<path d="${pathOf(CN.qinling, P)}" stroke="#F2B640" stroke-width="3" fill="none"/>`)
+      + lab(110, 48, '旱地', { fs: 14 }) + lab(210, 150, '水田', { fs: 14 });
   }
 
   function d9g2(step) {
@@ -430,34 +498,47 @@
         + lab(80, 40, '挡冷', { fs: 16 }) + lab(260, 40, '挡湿', { fs: 16 });
     }
     if (step === 1) {
-      return bg('#E7F2F6') + `<rect y="140" width="344" height="30" fill="#F7F4EF"/>`
-        + S.fields('wf', 80, 160, 60, 24, ['#E2CF7E', '#D9B98A'], 4)
-        + S.bowl(200, 120, 'noodle') + S.bowl(250, 120, 'rice')
-        + glow(S.bowl(200, 120, 'noodle'))
-        + lab(160, 40, '1 月 0°C 以下', { fs: 14 }) + lab(160, 64, '＜800 毫米', { fs: 14 });
+      return bg('#E7F2F6')
+        + `<rect y="156" width="344" height="80" fill="#E4D2A8"/>`
+        + `<rect x="16" y="128" width="120" height="18" rx="3" fill="#F7F4EF" stroke="#9BB6C8"/>`
+        + S.fields('wf', 78, 198, 62, 26, ['#E2CF7E', '#D9B98A'], 4)
+        + S.bowl(210, 186, 'noodle')
+        + `<circle cx="262" cy="172" r="10" fill="#F7F4EF" stroke="${K.ink}"/><circle cx="276" cy="180" r="9" fill="#F4EFE6" stroke="${K.ink}"/><circle cx="250" cy="182" r="8" fill="#fff" stroke="${K.ink}"/>`
+        + glow(S.fields('wfg', 78, 198, 62, 26, ['#E2CF7E', '#D9B98A'], 4))
+        + lab(160, 36, '1 月 0°C 以下', { fs: 14 }) + lab(160, 60, '＜800 毫米', { fs: 14 });
     }
     if (step === 2) {
-      return bg('#C9D6A4') + `<rect y="150" width="344" height="30" fill="#7FB6CF"/>`
-        + S.fields('pf', 80, 160, 70, 26, ['#5E9DBB', '#9FBF74'], 2)
-        + S.bowl(210, 110, 'rice') + S.bowl(260, 110, 'fen')
-        + glow(S.bowl(210, 110, 'rice'))
-        + lab(160, 40, '不结冰', { fs: 16 }) + lab(250, 40, '＞800 毫米', { fs: 14 });
+      return bg('#EAF3F5')
+        + `<rect y="156" width="344" height="80" fill="#C9D6A4"/>`
+        + `<path d="M16 140 Q70 128 130 142" fill="none" stroke="#3D86D9" stroke-width="6"/>`
+        + S.fields('pf', 78, 198, 64, 26, ['#5E9DBB', '#9FBF74'], 2)
+        + S.bowl(214, 186, 'rice') + S.bowl(268, 186, 'fen')
+        + glow(S.bowl(214, 186, 'rice'))
+        + lab(150, 36, '不结冰', { fs: 16 }) + lab(250, 36, '＞800 毫米', { fs: 14 });
     }
     if (step === 3) {
-      const P = proj({ s: 10, lon0: 114, lat0: 35, dx: 30, dy: 20 });
+      const P = proj({ s: 36, lon0: 114.2, lat0: 35.3, dx: 16, dy: 12 });
+      const wheat = `<g><path d="M0 16 Q-6 4 0 -8 Q6 4 0 16" fill="#E2CF7E" stroke="${K.ink}" stroke-width=".6"/><path d="M0 16 L0 -2" stroke="#C4A574" stroke-width="1.2"/></g>`;
+      const rice = `<g><path d="M0 14 Q8 4 2 -8" fill="none" stroke="#3FA772" stroke-width="1.4"/><ellipse cx="4" cy="-8" rx="3" ry="5" fill="#9FBF74" stroke="${K.ink}" stroke-width=".5"/></g>`;
       return bg('#EAF3F5')
         + `<path d="${pathOf(CN.anhui, P, true)}" fill="#F3E7D3" stroke="${K.ink}"/>`
         + `<path d="${pathOf(CN.jiangsu, P, true)}" fill="#E7D3B0" stroke="${K.ink}"/>`
-        + glow(`<path d="M40 120 L300 130" stroke="#3D86D9" stroke-width="3"/>`)
-        + S.bowl(80, 80, 'noodle') + S.bowl(220, 170, 'rice')
-        + lab(80, 36, '安徽', { fs: 14 }) + lab(240, 36, '江苏', { fs: 14 }) + lab(160, 110, '淮河', { fs: 14 });
+        + glow(`<path d="${pathOf(CN.huai, P)}" fill="none" stroke="#3D86D9" stroke-width="4" stroke-linecap="round"/>`)
+        + `<g transform="translate(70 48)">${wheat}</g><g transform="translate(150 42)">${wheat}</g>`
+        + `<g transform="translate(90 168)">${rice}</g><g transform="translate(180 176)">${rice}</g>`
+        + S.bowl(48, 70, 'noodle') + S.bowl(250, 190, 'rice')
+        + lab(92, 150, '安徽', { fs: 14 }) + lab(210, 108, '江苏', { fs: 14 }) + lab(150, 78, '淮河', { fs: 14, c: '#1E4E8C' });
     }
     const P = proj({ s: 4.4, dx: 30, dy: 24 });
+    const ear = `<g><path d="M0 18 Q-7 6 0 -10 Q7 6 0 18" fill="#E2CF7E" stroke="${K.ink}" stroke-width=".7"/><path d="M0 18 L0 0" stroke="#C4A574"/></g>`;
+    const stalk = `<g><path d="M0 16 Q8 4 2 -10" fill="none" stroke="#3FA772" stroke-width="1.5"/><ellipse cx="4" cy="-10" rx="3.2" ry="5" fill="#9FBF74" stroke="${K.ink}" stroke-width=".5"/></g>`;
     return bg('#EAF3F5') + land(P)
+      + `<g transform="translate(70 70)">${ear}</g><g transform="translate(110 86)">${ear}</g>`
+      + `<g transform="translate(200 168)">${stalk}</g><g transform="translate(250 180)">${stalk}</g>`
       + `<path d="${pathOf(CN.qinling, P)}" stroke="#8A6F57" stroke-width="3" fill="none"/>`
       + `<path d="${pathOf(CN.lat35, P)}" stroke="#7C6BD6" stroke-width="2" fill="none"/>`
       + glow(`<path d="${pathOf(CN.rain800, P)}" stroke="#3D86D9" stroke-width="2.5" fill="none" stroke-dasharray="4 3"/>`)
-      + lab(80, 200, '麦', { fs: 16 }) + lab(240, 200, '稻', { fs: 16 });
+      + lab(90, 56, '麦', { fs: 16 }) + lab(230, 150, '稻', { fs: 16 });
   }
 
   function d9h1(step) {
@@ -499,9 +580,15 @@
       return bg() + row + glow(S.domino(30, 80, 46, 90));
     }
     if (step === 1) {
-      return bg() + `<g transform="rotate(70 60 140)">${S.domino(40, 100, 40, 80)}</g>`
-        + `<g transform="rotate(64 120 150)">${S.domino(100, 110, 40, 80)}</g>`
-        + glow(S.domino(170, 80, 46, 90));
+      const token = function (x, y, t) {
+        return `<rect x="${x}" y="${y}" width="34" height="22" rx="3" fill="#F3E7D3" stroke="${K.ink}"/><text x="${x + 17}" y="${y + 16}" font-size="13" font-weight="800" text-anchor="middle">${t}</text>`;
+      };
+      return bg() + `<g transform="rotate(70 70 150)">${S.domino(40, 110, 36, 72)}</g>`
+        + `<g transform="rotate(62 128 158)">${S.domino(98, 118, 36, 72)}</g>`
+        + S.domino(168, 78, 40, 84)
+        + figure(286, 200, { k: 0.78, hat: 'helmet', robe: '#5C4636', right: 'hold', left: 'hold' })
+        + token(214, 46, '兵') + token(252, 46, '财') + token(233, 72, '地')
+        + glow(figure(286, 200, { k: 0.78, hat: 'helmet', robe: '#5C4636', right: 'hold', left: 'hold' }));
     }
     if (step === 2) {
       let fallen = '';
@@ -515,14 +602,26 @@
       }).join('') + glow(`<rect x="250" y="40" width="96" height="150" fill="none" stroke="#F2B640" stroke-width="3"/>`);
     }
     if (step === 4) {
-      return bg('#2A2438') + figure(172, 80, { k: 0.45, hat: 'mian', robe: '#2B2622' })
-        + figure(60, 180, { k: 0.4 }) + figure(130, 190, { k: 0.4 }) + figure(210, 180, { k: 0.4 }) + figure(280, 190, { k: 0.4 })
-        + glow(figure(172, 80, { k: 0.45, hat: 'mian' }));
+      return bg('#2A2438') + figure(172, 90, { k: 0.45, hat: 'mian', robe: '#2B2622', right: 'point' })
+        + `<path d="M188 70 L230 40" stroke="#F2B640" stroke-width="3" stroke-linecap="round"/>`
+        + figure(60, 190, { k: 0.4, right: 'hold' }) + figure(130, 196, { k: 0.4 }) + figure(230, 190, { k: 0.4, right: 'hold' }) + figure(290, 198, { k: 0.4 })
+        + `<rect x="40" y="150" width="22" height="14" fill="#E2CF7E" stroke="${K.ink}" stroke-width=".6"/>`
+        + glow(`<path d="M188 70 L230 40" stroke="#F2B640" stroke-width="3"/>`);
     }
-    return bg() + `<rect y="120" width="344" height="16" fill="#C9B59A"/>`
-      + [40, 100, 160, 220, 280].map(function (x) { return `<path d="M${x} 90 L${x + 18} 70 L${x + 28} 96 Z" fill="#F2B640" stroke="${K.ink}"/>`; }).join('')
-      + glow(lab(172, 50, '53 年 5 个朝代', { fs: 16 }))
-      + lab(172, 170, '907 → 960', { fs: 14 });
+    const names = ['梁', '唐', '晋', '汉', '周'];
+    return bg() + `<rect x="28" y="168" width="288" height="16" rx="4" fill="#C9B59A" stroke="${K.ink}"/>`
+      + names.map(function (t, i) {
+        const x = 36 + i * 58;
+        return `<path d="M${x + 16} 64 L${x + 16} 150" stroke="#5C4636" stroke-width="2"/>`
+          + `<rect x="${x}" y="72" width="36" height="64" rx="2" fill="#8E3F33" stroke="${K.ink}"/>`
+          + `<text x="${x + 18}" y="110" font-size="16" font-weight="800" fill="#F7F4EF" text-anchor="middle">${t}</text>`;
+      }).join('')
+      + glow(names.map(function (t, i) {
+        const x = 36 + i * 58;
+        return `<rect x="${x}" y="72" width="36" height="64" fill="none" stroke="#F2B640" stroke-width="2"/>`;
+      }).join(''))
+      + lab(48, 206, '907', { fs: 14 }) + lab(300, 206, '960', { fs: 14 })
+      + lab(172, 40, '53 年 5 个朝代', { fs: 16 });
   }
 
   function d9p1(step) {
@@ -550,7 +649,7 @@
     }
     let week = '';
     for (let i = 0; i < 7; i++) week += `<rect x="${20 + i * 46}" y="70" width="40" height="60" fill="${i === 6 ? '#FFF6D8' : '#fff'}" stroke="${K.ink}"/>`;
-    return bg() + week + glow(`<rect x="296" y="70" width="40" height="60" fill="#F2B640" opacity=".45"/>`) + S.battery(300, 160, 0.75);
+    return bg() + week + glow(`<rect x="296" y="70" width="40" height="60" fill="#F2B640" opacity=".45"/>`) + S.battery(236, 156, 0.75);
   }
 
   function d9s1(step) {
