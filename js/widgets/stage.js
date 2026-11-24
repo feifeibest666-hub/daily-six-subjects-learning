@@ -385,6 +385,14 @@
       });
     }
 
+    function paintKept(frame) {
+      const kept = live.visual.keep || {};
+      const kdef = types[kept.type];
+      svg.setAttribute('viewBox', (kdef && kdef.viewBox) || '0 0 300 190');
+      const st = merge(kept.base || {}, frame.set || {});
+      if (kdef && kdef.apply) kdef.apply(svg, st, frame.play == null ? 1 : frame.play, frame);
+    }
+
     function paintDeck(frame) {
       const html = global.LKScene ? LKScene.draw(frame.scene, { step: frame.step, add: frame.add, hl: frame.hl }) : '';
       svg.setAttribute('viewBox', '0 0 344 236');
@@ -418,7 +426,8 @@
       svg.setAttribute('aria-label', frame.cap || live.visual.type || '');
       paintDots();
       const isDeck = live.visual.type === 'deck';
-      if (isDeck && global.LKScene && live.visual.id) LKScene.remember(live.visual.id, index);
+      const deckKey = live.visual.card || live.visual.id;
+      if (isDeck && global.LKScene && deckKey) LKScene.remember(deckKey, index);
       const playable = !isDeck && frame.play && !reduced && !opts.poster;
       const lastDeck = isDeck && index === frameList().length - 1;
       next.setAttribute('aria-label', isDeck ? (lastDeck ? '我懂了' : '下一张') : (playable ? '播放' : '下一帧'));
@@ -431,7 +440,8 @@
         next.innerHTML = playable ? '<span aria-hidden="true">▶</span>' : '<span aria-hidden="true">›</span>';
       }
       prev.disabled = index === 0;
-      if (isDeck) paintDeck(frame);
+      if (isDeck && frame.keep) paintKept(frame);
+      else if (isDeck) paintDeck(frame);
       else if (frame.play) runPlay(frame);
       else if (mode === 'jump' || reduced || opts.poster) {
         applyAt(current, 1, frame);
@@ -548,7 +558,11 @@
     };
     box._api = api;
 
-    const start = opts.start != null ? opts.start : 0;
+    let start = opts.start != null ? opts.start : 0;
+    if (opts.start == null && visual.type === 'deck' && global.LKScene) {
+      const saved = LKScene.recall(visual.card || visual.id);
+      if (saved != null) start = saved;
+    }
     queueMicrotask(function () {
       if (destroyed) return;
       show(start, (reduced || opts.poster) ? 'jump' : 'tween');
@@ -560,8 +574,9 @@
     const vis = materialize(visual) || visual;
     const frames = framesOf(vis);
     let start = Math.max(0, frames.length - 1);
-    if (vis && vis.type === 'deck' && vis.id && global.LKScene && LKScene.recall(vis.id) != null) {
-      start = LKScene.recall(vis.id);
+    const deckKey = vis && (vis.card || vis.id);
+    if (vis && vis.type === 'deck' && deckKey && global.LKScene && LKScene.recall(deckKey) != null) {
+      start = LKScene.recall(deckKey);
     }
     return mount(el, vis, Object.assign({}, opts || {}, {
       poster: true,

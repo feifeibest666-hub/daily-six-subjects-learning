@@ -54,13 +54,14 @@
     });
     if (global.LKScene && LKScene.parts && LKScene.parts.length) {
       const groups = [
-        { title: '场景零件', items: LKScene.parts.filter(function (p) { return p.group !== 'w1'; }) },
-        { title: '第一波新零件', items: LKScene.parts.filter(function (p) { return p.group === 'w1'; }) }
+        { title: '场景零件', id: 'kit-parts', items: LKScene.parts.filter(function (p) { return p.group !== 'w1' && p.group !== 'w2'; }) },
+        { title: '第一波新零件', id: 'w1-parts', items: LKScene.parts.filter(function (p) { return p.group === 'w1'; }) },
+        { title: '第二波新零件', id: 'w2-parts', items: LKScene.parts.filter(function (p) { return p.group === 'w2'; }) }
       ];
       groups.forEach(function (g) {
         if (!g.items.length) return;
         screen.appendChild(LK.h('h2', { class: 'set-label', text: g.title }));
-        const row = LK.h('div', { class: 'art-grid', id: g.title === '第一波新零件' ? 'w1-parts' : 'kit-parts' });
+        const row = LK.h('div', { class: 'art-grid', id: g.id });
         g.items.forEach(function (p) {
           const fig = LK.h('figure', { class: 'art-cell scene-cell' });
           const svg = LK.svg('svg', { viewBox: '0 0 160 120' });

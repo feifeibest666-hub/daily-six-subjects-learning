@@ -3518,7 +3518,8 @@ window.DAYS = [
                     "takeaway"
                   ]
                 }
-              ]
+              ],
+              "card": "d02-history#2"
             }
           },
           {
@@ -3746,7 +3747,8 @@ window.DAYS = [
                   "cap": "血缘变淡、诸侯变强，分封就松了。",
                   "sec": "takeaway"
                 }
-              ]
+              ],
+              "card": "d02-history#7"
             }
           },
           {
@@ -3863,85 +3865,23 @@ window.DAYS = [
           }
         ],
         "hookComic": {
+          "scene": "hook.d02history",
           "panels": [
             {
-              "bg": "street",
-              "cast": [
-                {
-                  "who": "kingWu",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [
-                {
-                  "what": "mapScroll",
-                  "x": 0.78,
-                  "y": 0.78,
-                  "k": 0.95
-                }
-              ],
-              "bubbles": [],
-              "cap": "三千年前"
+              "step": 0,
+              "cap": "周武王灭了商，摊开新地图：地一直到海边。"
             },
             {
-              "bg": "palace",
-              "cast": [
-                {
-                  "who": "kingWu",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [],
-              "cap": "国王站在中间"
+              "step": 1,
+              "cap": "三千年前，没有电话，只有土路和牛车。"
             },
             {
-              "bg": "street",
-              "cast": [
-                {
-                  "who": "rider",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "run"
-                }
-              ],
-              "props": [
-                {
-                  "what": "horse",
-                  "x": 0.78,
-                  "y": 0.78,
-                  "k": 0.95
-                }
-              ],
-              "bubbles": [],
-              "cap": "一个信使骑马跑了一个月"
+              "step": 2,
+              "cap": "信使骑马送信，一走就是一个月。"
             },
             {
-              "bg": "palace",
-              "cast": [
-                {
-                  "who": "xiaoyin",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [
-                {
-                  "who": "xiaoyin",
-                  "text": "怎么管住几千里？"
-                }
-              ],
-              "cap": "怎么管住几千里？"
+              "step": 3,
+              "cap": "信来得太晚，地图东边已经插满反旗。"
             }
           ]
         }
@@ -6872,7 +6812,8 @@ window.DAYS = [
                     "takeaway"
                   ]
                 }
-              ]
+              ],
+              "card": "d03-geo#2"
             }
           },
           {
@@ -7324,88 +7265,23 @@ window.DAYS = [
           }
         ],
         "hookComic": {
+          "scene": "hook.d03geo",
           "panels": [
             {
-              "bg": "mountain",
-              "cast": [
-                {
-                  "who": "xiaoman",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "cheer"
-                }
-              ],
-              "props": [
-                {
-                  "what": "bag",
-                  "x": 0.78,
-                  "y": 0.78,
-                  "k": 0.95
-                }
-              ],
-              "bubbles": [
-                {
-                  "who": "xiaoman",
-                  "text": "海拔 3650"
-                }
-              ],
-              "cap": "拉萨站"
+              "step": 0,
+              "cap": "小满在拉萨站上车，这里海拔 3650 米。"
             },
             {
-              "bg": "mountain",
-              "cast": [
-                {
-                  "who": "xiaoman",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [],
-              "cap": "车窗外：雪山 → 黄土坡 →"
+              "step": 1,
+              "cap": "车窗外，雪山换成了黄土坡。"
             },
             {
-              "bg": "mountain",
-              "cast": [
-                {
-                  "who": "xiaoman",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [
-                {
-                  "who": "xiaoman",
-                  "text": "海拔 4"
-                }
-              ],
-              "cap": "上海站牌"
+              "step": 2,
+              "cap": "到了上海站，站牌写着海拔 4 米。"
             },
             {
-              "bg": "street",
-              "cast": [
-                {
-                  "who": "xiaoyin",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [
-                {
-                  "who": "xiaoyin",
-                  "text": "一路在下楼梯"
-                }
-              ],
-              "cap": "小音画了三级台阶"
+              "step": 3,
+              "cap": "小音在白板上画台阶：火车一路往下走。"
             }
           ]
         }
@@ -9371,7 +9247,8 @@ window.DAYS = [
               "span": [
                 2,
                 5
-              ]
+              ],
+              "card": "d04-history#2"
             }
           },
           {
@@ -9553,7 +9430,8 @@ window.DAYS = [
                     "takeaway"
                   ]
                 }
-              ]
+              ],
+              "card": "d04-history#7"
             }
           },
           {
@@ -9690,85 +9568,23 @@ window.DAYS = [
           }
         ],
         "hookComic": {
+          "scene": "hook.d04history",
           "panels": [
             {
-              "bg": "palace",
-              "cast": [
-                {
-                  "who": "qinShi",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [
-                {
-                  "what": "mapScroll",
-                  "x": 0.78,
-                  "y": 0.78,
-                  "k": 0.95
-                }
-              ],
-              "bubbles": [],
-              "cap": "秦始皇站在刚统一的大地图前"
+              "step": 0,
+              "cap": "前 221 年，秦始皇统一六国，地图刷成一个颜色。"
             },
             {
-              "bg": "palace",
-              "cast": [
-                {
-                  "who": "kingWu",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "worry",
-                  "pose": "stand"
-                }
-              ],
-              "props": [
-                {
-                  "what": "mapScroll",
-                  "x": 0.78,
-                  "y": 0.78,
-                  "k": 0.95
-                }
-              ],
-              "bubbles": [],
-              "cap": "地图上空出 15 年的一小段"
+              "step": 1,
+              "cap": "时间尺上，秦只占最左端短短一小段。"
             },
             {
-              "bg": "palace",
-              "cast": [
-                {
-                  "who": "kingWu",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [],
-              "cap": "却有一条线一直延伸了两千年"
+              "step": 2,
+              "cap": "一根红线从秦连到清，每朝的官都捧着同样的印。"
             },
             {
-              "bg": "palace",
-              "cast": [
-                {
-                  "who": "xiaoyin",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [
-                {
-                  "who": "xiaoyin",
-                  "text": "是什么？"
-                }
-              ],
-              "cap": "是什么？"
+              "step": 3,
+              "cap": "小音用放大镜看线头：竹简上写着\"？？制\"。"
             }
           ]
         }
@@ -9888,7 +9704,8 @@ window.DAYS = [
                     "takeaway"
                   ]
                 }
-              ]
+              ],
+              "card": "d04-geo#2"
             }
           },
           {
@@ -10044,7 +9861,8 @@ window.DAYS = [
                     "takeaway"
                   ]
                 }
-              ]
+              ],
+              "card": "d04-geo#5"
             }
           },
           {
@@ -10242,76 +10060,23 @@ window.DAYS = [
           }
         ],
         "hookComic": {
+          "scene": "hook.d04geo",
           "panels": [
             {
-              "bg": "mountain",
-              "cast": [
-                {
-                  "who": "xiaoman",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [
-                {
-                  "who": "xiaoman",
-                  "text": "一江春水向东流"
-                }
-              ],
-              "cap": "小满在江上划船"
+              "step": 0,
+              "cap": "小满在江上划船，江水一直往东流。"
             },
             {
-              "bg": "mountain",
-              "cast": [
-                {
-                  "who": "xiaoyin",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [
-                {
-                  "who": "xiaoyin",
-                  "text": "为什么不向西？"
-                }
-              ],
-              "cap": "为什么不向西？"
+              "step": 1,
+              "cap": "地图上，长江、黄河都流向东边的海。"
             },
             {
-              "bg": "mountain",
-              "cast": [
-                {
-                  "who": "xiaoman",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [],
-              "cap": "小满把一张桌子一头垫高"
+              "step": 2,
+              "cap": "小满把桌子左头垫高，桌上放一杯水。"
             },
             {
-              "bg": "mountain",
-              "cast": [
-                {
-                  "who": "xiaoman",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [],
-              "cap": "水全流到低的那头"
+              "step": 3,
+              "cap": "杯子倒了，水全跑到右边低的那头，滴进碗里。"
             }
           ]
         }
@@ -14948,80 +14713,23 @@ window.DAYS = [
           }
         ],
         "hookComic": {
+          "scene": "hook.d06fashion",
           "panels": [
             {
-              "bg": "room",
-              "cast": [
-                {
-                  "who": "xiaoman",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [],
-              "cap": "两个人都穿一身驼色"
+              "step": 0,
+              "cap": "两个人都穿一身驼色。"
             },
             {
-              "bg": "room",
-              "cast": [
-                {
-                  "who": "xiaoman",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [
-                {
-                  "what": "bag",
-                  "x": 0.78,
-                  "y": 0.78,
-                  "k": 0.95
-                }
-              ],
-              "bubbles": [],
-              "cap": "一个高级"
+              "step": 1,
+              "cap": "小满照镜子，觉得自己像一块面包。"
             },
             {
-              "bg": "room",
-              "cast": [
-                {
-                  "who": "xiaoyin",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [],
-              "cap": "小音按下黑白滤镜"
+              "step": 2,
+              "cap": "小音用黑白滤镜给两人拍照。"
             },
             {
-              "bg": "room",
-              "cast": [
-                {
-                  "who": "xiaoman",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [
-                {
-                  "what": "bag",
-                  "x": 0.78,
-                  "y": 0.78,
-                  "k": 0.95
-                }
-              ],
-              "bubbles": [],
-              "cap": "面包那套糊成一块"
+              "step": 3,
+              "cap": "黑白照里，一套有深有浅，一套糊成一块。"
             }
           ]
         }
@@ -15192,34 +14900,55 @@ window.DAYS = [
               "群山围着四川 → 蜀守得住。"
             ],
             "visual": {
-              "type": "histmap",
-              "base": {},
-              "frames": [
+              "type": "deck",
+              "id": "deck.w2.d6h1",
+              "slides": [
                 {
-                  "set": {
-                    "step": 0,
-                    "play": 0
-                  },
-                  "cap": "赤壁之后三国鼎立；长江和群山，把天下分成了三块",
-                  "para": "idea"
+                  "scene": "w2.d6h1",
+                  "step": 0,
+                  "cap": "208 年赤壁之战，曹操被孙刘联军打败。",
+                  "sec": "idea"
                 },
                 {
-                  "set": {
-                    "step": 1,
-                    "play": 0.5
-                  },
-                  "cap": "赤壁之后三国鼎立；长江和群山，把天下分成了三块",
-                  "para": "why"
+                  "scene": "w2.d6h1",
+                  "step": 1,
+                  "cap": "北方平原最大、人最多，归了魏。",
+                  "sec": "why"
                 },
                 {
-                  "set": {
-                    "step": 2,
-                    "play": 1
-                  },
-                  "cap": "赤壁之后三国鼎立；长江和群山，把天下分成了三块。",
-                  "para": "takeaway"
+                  "scene": "w2.d6h1",
+                  "step": 2,
+                  "cap": "长江挡在南边，北方兵不习惯水战。",
+                  "sec": "example"
+                },
+                {
+                  "scene": "w2.d6h1",
+                  "step": 3,
+                  "cap": "四川被群山围着，易守难攻。",
+                  "sec": [
+                    "derive",
+                    0,
+                    1
+                  ]
+                },
+                {
+                  "scene": "w2.d6h1",
+                  "step": 4,
+                  "cap": "李白说蜀道难，外面的军队进不去。",
+                  "sec": [
+                    "derive",
+                    2,
+                    3
+                  ]
+                },
+                {
+                  "scene": "w2.d6h1",
+                  "step": 5,
+                  "cap": "赤壁之后三国鼎立，长江和群山把天下分成三块。",
+                  "sec": "takeaway"
                 }
-              ]
+              ],
+              "card": "d06-history#3"
             }
           },
           {
@@ -15245,69 +14974,52 @@ window.DAYS = [
               "why": "曹魏把宗室管得太严，司马家夺权时没人来救，司马炎想避开这一点。「宗法制规定必须这样做」不对，宗法制只管谁来继承，分不分权是皇帝自己的选择。"
             },
             "visual": {
-              "type": "comic",
-              "panels": [
+              "type": "deck",
+              "id": "deck.w2.d6h2",
+              "slides": [
                 {
-                  "bg": "palace",
-                  "cast": [
-                    {
-                      "who": "kingWu",
-                      "x": 0.46,
-                      "y": 0.74,
-                      "face": "calm",
-                      "pose": "stand"
-                    }
-                  ],
-                  "props": [],
-                  "bubbles": [],
-                  "cap": "统一了"
+                  "scene": "w2.d6h2",
+                  "step": 0,
+                  "cap": "司马炎建立西晋，后来灭吴统一。",
+                  "sec": "idea"
                 },
                 {
-                  "bg": "palace",
-                  "cast": [
-                    {
-                      "who": "kingWu",
-                      "x": 0.46,
-                      "y": 0.74,
-                      "face": "calm",
-                      "pose": "stand"
-                    }
-                  ],
-                  "props": [],
-                  "bubbles": [],
-                  "cap": "兄弟们手里有兵"
+                  "scene": "w2.d6h2",
+                  "step": 1,
+                  "cap": "曹魏把宗室管死了，司马家夺权时没人救。",
+                  "sec": "why"
                 },
                 {
-                  "bg": "palace",
-                  "cast": [
-                    {
-                      "who": "kingWu",
-                      "x": 0.46,
-                      "y": 0.74,
-                      "face": "calm",
-                      "pose": "stand"
-                    }
-                  ],
-                  "props": [],
-                  "bubbles": [],
-                  "cap": "互相打起来（八王之乱）"
+                  "scene": "w2.d6h2",
+                  "step": 2,
+                  "cap": "司马炎反过来大封宗室，还给他们兵。",
+                  "sec": [
+                    "derive",
+                    0,
+                    1
+                  ]
                 },
                 {
-                  "bg": "palace",
-                  "cast": [
-                    {
-                      "who": "kingWu",
-                      "x": 0.46,
-                      "y": 0.74,
-                      "face": "calm",
-                      "pose": "stand"
-                    }
-                  ],
-                  "props": [],
-                  "bubbles": [],
-                  "cap": "西晋散了"
+                  "scene": "w2.d6h2",
+                  "step": 3,
+                  "cap": "宗室有了兵就自己打起来，西晋灭亡。",
+                  "sec": [
+                    "derive",
+                    2,
+                    4
+                  ]
+                },
+                {
+                  "scene": "w2.d6h2",
+                  "step": 4,
+                  "cap": "管太死、放太松都不行，西晋走到了另一头。",
+                  "secs": [
+                    "example",
+                    "takeaway"
+                  ]
                 }
-              ]
+              ],
+              "card": "d06-history#4"
             }
           },
           {
@@ -15582,76 +15294,23 @@ window.DAYS = [
           }
         ],
         "hookComic": {
+          "scene": "hook.d06history",
           "panels": [
             {
-              "bg": "palace",
-              "cast": [
-                {
-                  "who": "kingWu",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [],
-              "cap": "一串朝代名排成长队：三国"
+              "step": 0,
+              "cap": "一长队朝代名：三国、西晋、东晋……"
             },
             {
-              "bg": "palace",
-              "cast": [
-                {
-                  "who": "xiaoman",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [],
-              "cap": "小满晕了"
+              "step": 1,
+              "cap": "队伍乱成一团，小满看晕了。"
             },
             {
-              "bg": "palace",
-              "cast": [
-                {
-                  "who": "xiaoyin",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [
-                {
-                  "who": "xiaoyin",
-                  "text": "它本身就乱"
-                }
-              ],
-              "cap": "它本身就乱"
+              "step": 2,
+              "cap": "小音翻开地图，那时的中国碎成好多块。"
             },
             {
-              "bg": "palace",
-              "cast": [
-                {
-                  "who": "kingWu",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [
-                {
-                  "who": "kingWu",
-                  "text": "分合发动机"
-                }
-              ],
-              "cap": "把它们放进"
+              "step": 3,
+              "cap": "小音拉出时间尺：从 220 年到 589 年。"
             }
           ]
         }
@@ -15883,34 +15542,45 @@ window.DAYS = [
               "why": "纬度越高，冬天阳光越斜、越冷。「哈尔滨（约北纬 46°）」冬天长期在 0°C 以下，河会封冻；「武汉（约北纬 30°）」冬季多在 0°C 以上。"
             },
             "visual": {
-              "type": "gauge",
-              "base": {},
-              "frames": [
+              "type": "deck",
+              "id": "deck.w2.d6g1",
+              "slides": [
                 {
-                  "set": {
-                    "step": 0,
-                    "play": 0
-                  },
-                  "cap": "长江纬度低，冬季多在 0°C 以上，大部分河段不结冰",
-                  "para": "idea"
+                  "scene": "w2.d6g1",
+                  "step": 0,
+                  "cap": "长江大部分河段在北纬 25°～35° 之间。",
+                  "sec": "idea"
                 },
                 {
-                  "set": {
-                    "step": 1,
-                    "play": 0.5
-                  },
-                  "cap": "长江纬度低，冬季多在 0°C 以上，大部分河段不结冰",
-                  "para": "why"
+                  "scene": "w2.d6g1",
+                  "step": 1,
+                  "cap": "纬度低，阳光直一点，冬天多在 0°C 以上。",
+                  "sec": "why"
                 },
                 {
-                  "set": {
-                    "step": 2,
-                    "play": 1
-                  },
-                  "cap": "长江纬度低，冬季多在 0°C 以上，大部分河段不结冰。",
-                  "para": "takeaway"
+                  "scene": "w2.d6g1",
+                  "step": 2,
+                  "cap": "1 月的武汉，长江上照样行船。",
+                  "sec": "example"
+                },
+                {
+                  "scene": "w2.d6g1",
+                  "step": 3,
+                  "cap": "1 月的哈尔滨，松花江冻实了，人能走上去。",
+                  "sec": [
+                    "derive",
+                    0,
+                    3
+                  ]
+                },
+                {
+                  "scene": "w2.d6g1",
+                  "step": 4,
+                  "cap": "只有高原上的源头结冰，大部分河段常年行船。",
+                  "sec": "takeaway"
                 }
-              ]
+              ],
+              "card": "d06-geo#5"
             }
           },
           {
@@ -15925,74 +15595,45 @@ window.DAYS = [
               "水量大 + 不结冰 + 含沙少：常年通航，成了黄金水道。"
             ],
             "visual": {
-              "type": "comic",
-              "panels": [
+              "type": "deck",
+              "id": "deck.w2.d6g2",
+              "slides": [
                 {
-                  "bg": "mountain",
-                  "cast": [
-                    {
-                      "who": "xiaoman",
-                      "x": 0.46,
-                      "y": 0.74,
-                      "face": "calm",
-                      "pose": "stand"
-                    }
-                  ],
-                  "props": [],
-                  "bubbles": [],
-                  "cap": "上海港装货"
+                  "scene": "w2.d6g2",
+                  "step": 0,
+                  "cap": "同一条长江，上游跌下两级台阶，中下游很平。",
+                  "sec": "idea"
                 },
                 {
-                  "bg": "mountain",
-                  "cast": [
-                    {
-                      "who": "xiaoman",
-                      "x": 0.46,
-                      "y": 0.74,
-                      "face": "calm",
-                      "pose": "stand"
-                    }
-                  ],
-                  "props": [],
-                  "bubbles": [],
-                  "cap": "船沿江而上"
+                  "scene": "w2.d6g2",
+                  "step": 1,
+                  "cap": "上游坡陡水急，适合修电站。",
+                  "sec": "why"
                 },
                 {
-                  "bg": "mountain",
-                  "cast": [
-                    {
-                      "who": "xiaoman",
-                      "x": 0.46,
-                      "y": 0.74,
-                      "face": "calm",
-                      "pose": "stand"
-                    }
-                  ],
-                  "props": [],
-                  "bubbles": [],
-                  "cap": "经过武汉"
+                  "scene": "w2.d6g2",
+                  "step": 2,
+                  "cap": "中下游坡缓水稳，还有大湖调节水量。",
+                  "sec": "example"
                 },
                 {
-                  "bg": "mountain",
-                  "cast": [
-                    {
-                      "who": "xiaoyin",
-                      "x": 0.46,
-                      "y": 0.74,
-                      "face": "calm",
-                      "pose": "stand"
-                    }
-                  ],
-                  "props": [],
-                  "bubbles": [
-                    {
-                      "who": "xiaoyin",
-                      "text": "黄金水道"
-                    }
-                  ],
-                  "cap": "到重庆卸货"
+                  "scene": "w2.d6g2",
+                  "step": 3,
+                  "cap": "水多、不结冰、含沙少，船能从上海开到重庆。",
+                  "sec": [
+                    "derive",
+                    0,
+                    2
+                  ]
+                },
+                {
+                  "scene": "w2.d6g2",
+                  "step": 4,
+                  "cap": "三峡船闸里，灌水放水，船像坐电梯过坝。",
+                  "sec": "takeaway"
                 }
-              ]
+              ],
+              "card": "d06-geo#6"
             }
           }
         ],
@@ -16058,78 +15699,23 @@ window.DAYS = [
           }
         ],
         "hookComic": {
+          "scene": "hook.d06geo",
           "panels": [
             {
-              "bg": "mountain",
-              "cast": [
-                {
-                  "who": "xiaoman",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "sit"
-                }
-              ],
-              "props": [],
-              "bubbles": [],
-              "cap": "上游峡谷"
+              "step": 0,
+              "cap": "长江上游，小满在峡谷里漂流。"
             },
             {
-              "bg": "mountain",
-              "cast": [
-                {
-                  "who": "xiaoman",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [],
-              "cap": "下游宽阔的江面"
+              "step": 1,
+              "cap": "长江下游，江面宽得像一面镜子。"
             },
             {
-              "bg": "mountain",
-              "cast": [
-                {
-                  "who": "xiaoman",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [
-                {
-                  "who": "xiaoman",
-                  "text": "这是同一条河？"
-                }
-              ],
-              "cap": "这是同一条河？"
+              "step": 2,
+              "cap": "小满把两张照片钉在一起比。"
             },
             {
-              "bg": "mountain",
-              "cast": [
-                {
-                  "who": "xiaoyin",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [
-                {
-                  "what": "mapScroll",
-                  "x": 0.78,
-                  "y": 0.78,
-                  "k": 0.95
-                }
-              ],
-              "bubbles": [],
-              "cap": "小音在地图上把长江切成三段"
+              "step": 3,
+              "cap": "小音在地图上把长江剪成三段。"
             }
           ]
         }
@@ -16264,36 +15850,72 @@ window.DAYS = [
             "title": "一步步算 3 年",
             "idea": "",
             "visual": {
-              "type": "columns",
-              "base": {
-                "items": [
-                  {
-                    "label": "开始",
-                    "value": 1000
-                  },
-                  {
-                    "label": "第 1 年",
-                    "value": 1100
-                  },
-                  {
-                    "label": "第 2 年",
-                    "value": 1210
-                  },
-                  {
-                    "label": "第 3 年",
-                    "value": 1331
-                  }
-                ],
-                "unit": "元"
+              "type": "deck",
+              "id": "deck.w2.d6f1",
+              "keep": {
+                "type": "columns",
+                "base": {
+                  "items": [
+                    {
+                      "label": "开始",
+                      "value": 1000
+                    },
+                    {
+                      "label": "第 1 年",
+                      "value": 1100
+                    },
+                    {
+                      "label": "第 2 年",
+                      "value": 1210
+                    },
+                    {
+                      "label": "第 3 年",
+                      "value": 1331
+                    }
+                  ],
+                  "unit": "元"
+                }
               },
-              "frames": [
+              "slides": [
+                {
+                  "scene": "w2.d6f1",
+                  "step": 0,
+                  "cap": "第1年，1000的10%是100，变成1100。",
+                  "sec": [
+                    "derive",
+                    0,
+                    0
+                  ]
+                },
+                {
+                  "scene": "w2.d6f1",
+                  "step": 1,
+                  "cap": "第 2 年按 1100 算，利息变成 110。",
+                  "sec": [
+                    "derive",
+                    1,
+                    1
+                  ]
+                },
+                {
+                  "scene": "w2.d6f1",
+                  "step": 2,
+                  "cap": "第 3 年利息 121，每年都比上一年多。",
+                  "sec": [
+                    "derive",
+                    2,
+                    2
+                  ]
+                },
                 {
                   "set": {
                     "play": 0,
                     "step": 0
                   },
                   "cap": "先看骨架",
-                  "para": "idea"
+                  "para": "idea",
+                  "keep": true,
+                  "sec": "why"
                 },
                 {
                   "set": {
@@ -16301,9 +15923,12 @@ window.DAYS = [
                     "step": 2
                   },
                   "cap": "看完整的图",
-                  "para": "takeaway"
+                  "para": "takeaway",
+                  "keep": true,
+                  "sec": "takeaway"
                 }
-              ]
+              ],
+              "card": "d06-finance#2"
             },
             "why": "每一年都按\"上一年年底的钱\"算。钱变多了，利息也就比上一年多一点。",
             "takeaway": "复利每年的利息都比上一年多。",
@@ -16606,78 +16231,23 @@ window.DAYS = [
           }
         ],
         "hookComic": {
+          "scene": "hook.d06finance",
           "panels": [
             {
-              "bg": "room",
-              "cast": [
-                {
-                  "who": "xiaoman",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [
-                {
-                  "what": "jar",
-                  "x": 0.78,
-                  "y": 0.78,
-                  "k": 0.95
-                }
-              ],
-              "bubbles": [],
-              "cap": "两个一样的存钱罐"
+              "step": 0,
+              "cap": "小满和阿乐各存 1000 元，利率都是 10%。"
             },
             {
-              "bg": "room",
-              "cast": [
-                {
-                  "who": "xiaoman",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [],
-              "cap": "一个把利息拿走"
+              "step": 1,
+              "cap": "阿乐每年拿走利息，小满把利息放回罐里。"
             },
             {
-              "bg": "room",
-              "cast": [
-                {
-                  "who": "xiaoman",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [],
-              "cap": "20 年后一个 3000"
+              "step": 2,
+              "cap": "20 年后，阿乐 3000，小满 6700 多。"
             },
             {
-              "bg": "room",
-              "cast": [
-                {
-                  "who": "xiaoyin",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [
-                {
-                  "who": "xiaoyin",
-                  "text": "差在利息有没有生利息"
-                }
-              ],
-              "cap": "差在利息有没有生利息"
+              "step": 3,
+              "cap": "小音放大一看，利息又生出了小利息。"
             }
           ]
         }
@@ -16739,34 +16309,72 @@ window.DAYS = [
               "悲伤：让人停下来，并引来他人的支持。"
             ],
             "visual": {
-              "type": "chain",
-              "base": {},
-              "frames": [
+              "type": "deck",
+              "id": "deck.w2.d6p1",
+              "slides": [
                 {
-                  "set": {
-                    "step": 0,
-                    "play": 0
-                  },
-                  "cap": "难受的情绪能留下来，是因为它们曾帮祖先活下来",
-                  "para": "idea"
+                  "scene": "w2.d6p1",
+                  "step": 0,
+                  "cap": "祖先在草里看见蛇，吓得跳开了。",
+                  "sec": "idea"
                 },
                 {
-                  "set": {
-                    "step": 1,
-                    "play": 0.5
-                  },
-                  "cap": "难受的情绪能留下来，是因为它们曾帮祖先活下来",
-                  "para": "why"
+                  "scene": "w2.d6p1",
+                  "step": 1,
+                  "cap": "不怕蛇的那一支，很难一代代传下来。",
+                  "sec": "why"
                 },
                 {
-                  "set": {
-                    "step": 2,
-                    "play": 1
-                  },
-                  "cap": "难受的情绪能留下来，是因为它们曾帮祖先活下来。",
-                  "para": "takeaway"
+                  "scene": "w2.d6p1",
+                  "step": 2,
+                  "cap": "闻到馊饭，脸先皱起来，人往后躲。",
+                  "sec": "example"
+                },
+                {
+                  "scene": "w2.d6p1",
+                  "step": 3,
+                  "cap": "恐惧让人逃离危险。",
+                  "sec": [
+                    "derive",
+                    0,
+                    0
+                  ]
+                },
+                {
+                  "scene": "w2.d6p1",
+                  "step": 4,
+                  "cap": "厌恶让人远离腐烂、有毒的东西。",
+                  "sec": [
+                    "derive",
+                    1,
+                    1
+                  ]
+                },
+                {
+                  "scene": "w2.d6p1",
+                  "step": 5,
+                  "cap": "愤怒让人保护自己的东西和边界。",
+                  "sec": [
+                    "derive",
+                    2,
+                    2
+                  ]
+                },
+                {
+                  "scene": "w2.d6p1",
+                  "step": 6,
+                  "cap": "悲伤让人停下来，也让别人来帮忙。",
+                  "secs": [
+                    [
+                      "derive",
+                      3,
+                      3
+                    ],
+                    "takeaway"
+                  ]
                 }
-              ]
+              ],
+              "card": "d06-psych#1"
             }
           },
           {
@@ -16994,71 +16602,23 @@ window.DAYS = [
           }
         ],
         "hookComic": {
+          "scene": "hook.d06psych",
           "panels": [
             {
-              "bg": "room",
-              "cast": [
-                {
-                  "who": "xiaoman",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "sit"
-                }
-              ],
-              "props": [],
-              "bubbles": [],
-              "cap": "小满难过地抱膝"
+              "step": 0,
+              "cap": "下雨的夜里，小满抱着膝盖坐在床上。"
             },
             {
-              "bg": "room",
-              "cast": [
-                {
-                  "who": "xiaoman",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [
-                {
-                  "who": "xiaoman",
-                  "text": "要是没有这些情绪多好"
-                }
-              ],
-              "cap": "要是没有这些情绪多好"
+              "step": 1,
+              "cap": "她想：把这些情绪都扔掉多好。"
             },
             {
-              "bg": "room",
-              "cast": [
-                {
-                  "who": "xiaoyin",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [],
-              "cap": "小音翻开一本远古相册"
+              "step": 2,
+              "cap": "小音翻开一本远古相册。"
             },
             {
-              "bg": "room",
-              "cast": [
-                {
-                  "who": "xiaoman",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "run"
-                }
-              ],
-              "props": [],
-              "bubbles": [],
-              "cap": "祖先们正被一条蛇吓跑"
+              "step": 3,
+              "cap": "相册里，祖先被蛇吓得跳开，逃过一劫。"
             }
           ]
         }
@@ -17631,78 +17191,23 @@ window.DAYS = [
         }
       ],
       "hookComic": {
+        "scene": "hook.d07boss",
         "panels": [
           {
-            "bg": "palace",
-            "cast": [
-              {
-                "who": "kingWu",
-                "x": 0.46,
-                "y": 0.74,
-                "face": "calm",
-                "pose": "stand"
-              }
-            ],
-            "props": [],
-            "bubbles": [],
-            "cap": "秦统一"
+            "step": 0,
+            "cap": "第一关，从秦统一到东汉灭亡，跨过公元元年。"
           },
           {
-            "bg": "palace",
-            "cast": [
-              {
-                "who": "xiaoman",
-                "x": 0.46,
-                "y": 0.74,
-                "face": "calm",
-                "pose": "stand"
-              }
-            ],
-            "props": [
-              {
-                "what": "jar",
-                "x": 0.78,
-                "y": 0.78,
-                "k": 0.95
-              }
-            ],
-            "bubbles": [],
-            "cap": "小满的存钱罐复利"
+            "step": 1,
+            "cap": "第二关，1000 元按 10% 复利存两年。"
           },
           {
-            "bg": "street",
-            "cast": [
-              {
-                "who": "kingWu",
-                "x": 0.46,
-                "y": 0.74,
-                "face": "calm",
-                "pose": "stand"
-              }
-            ],
-            "props": [],
-            "bubbles": [],
-            "cap": "吊桥心动"
+            "step": 2,
+            "cap": "第三关，走过摇晃的吊桥，心跳加速。"
           },
           {
-            "bg": "palace",
-            "cast": [
-              {
-                "who": "xiaoyin",
-                "x": 0.46,
-                "y": 0.74,
-                "face": "calm",
-                "pose": "stand"
-              }
-            ],
-            "props": [],
-            "bubbles": [
-              {
-                "who": "xiaoyin",
-                "text": "一周学的"
-              }
-            ],
-            "cap": "一周学的"
+            "step": 3,
+            "cap": "三题全对，就能拿到第 1 周徽章。"
           }
         ]
       }
@@ -17950,71 +17455,23 @@ window.DAYS = [
           }
         ],
         "hookComic": {
+          "scene": "hook.d08fashion",
           "panels": [
             {
-              "bg": "street",
-              "cast": [
-                {
-                  "who": "xiaoman",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [],
-              "cap": "秋天的银杏街道"
+              "step": 0,
+              "cap": "秋天的街道，银杏黄、枫叶橙。"
             },
             {
-              "bg": "room",
-              "cast": [
-                {
-                  "who": "xiaoman",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [],
-              "cap": "小满穿黄"
+              "step": 1,
+              "cap": "小满穿上黄毛衣、黄橙围巾和橙色包。"
             },
             {
-              "bg": "street",
-              "cast": [
-                {
-                  "who": "xiaoman",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [],
-              "cap": "和街景融在一起"
+              "step": 2,
+              "cap": "站到树下，她和街景融成一片。"
             },
             {
-              "bg": "room",
-              "cast": [
-                {
-                  "who": "xiaoyin",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [
-                {
-                  "who": "xiaoyin",
-                  "text": "一家人"
-                }
-              ],
-              "cap": "一家人"
+              "step": 3,
+              "cap": "小音指着色轮：这三色在轮上挨在一起。"
             }
           ]
         }
@@ -18140,34 +17597,45 @@ window.DAYS = [
               "活不下去的人越来越多，起义遍地。"
             ],
             "visual": {
-              "type": "chain",
-              "base": {},
-              "frames": [
+              "type": "deck",
+              "id": "deck.w2.d8h1",
+              "slides": [
                 {
-                  "set": {
-                    "step": 0,
-                    "play": 0
-                  },
-                  "cap": "隋不是亡于运河本身，而是亡于用力过猛、耗尽民力",
-                  "para": "idea"
+                  "scene": "w2.d8h1",
+                  "step": 0,
+                  "cap": "隋炀帝同时修运河、建东都、打高句丽。",
+                  "sec": "idea"
                 },
                 {
-                  "set": {
-                    "step": 1,
-                    "play": 0.5
-                  },
-                  "cap": "隋不是亡于运河本身，而是亡于用力过猛、耗尽民力",
-                  "para": "why"
+                  "scene": "w2.d8h1",
+                  "step": 1,
+                  "cap": "种地的农民被拉走，田里长满了草。",
+                  "sec": "why"
                 },
                 {
-                  "set": {
-                    "step": 2,
-                    "play": 1
-                  },
-                  "cap": "隋不是亡于运河本身，而是亡于用力过猛、耗尽民力。",
-                  "para": "takeaway"
+                  "scene": "w2.d8h1",
+                  "step": 2,
+                  "cap": "隋末的河北农民：留下饿死，还是投义军？",
+                  "sec": "example"
+                },
+                {
+                  "scene": "w2.d8h1",
+                  "step": 3,
+                  "cap": "活不下去的人越来越多，起义遍地。",
+                  "sec": [
+                    "derive",
+                    0,
+                    3
+                  ]
+                },
+                {
+                  "scene": "w2.d8h1",
+                  "step": 4,
+                  "cap": "运河本身没错，错在用力过猛、耗尽民力。",
+                  "sec": "takeaway"
                 }
-              ]
+              ],
+              "card": "d08-history#3"
             }
           },
           {
@@ -18357,34 +17825,45 @@ window.DAYS = [
               "好制度加上松一点的手，才稳得住。"
             ],
             "visual": {
-              "type": "tug",
-              "base": {},
-              "frames": [
+              "type": "deck",
+              "id": "deck.w2.d8h2",
+              "slides": [
                 {
-                  "set": {
-                    "step": 0,
-                    "play": 0
-                  },
-                  "cap": "唐继承隋的制度，减轻百姓负担，迎来贞观之治",
-                  "para": "idea"
+                  "scene": "w2.d8h2",
+                  "step": 0,
+                  "cap": "唐接过了隋的运河和科举。",
+                  "sec": "idea"
                 },
                 {
-                  "set": {
-                    "step": 1,
-                    "play": 0.5
-                  },
-                  "cap": "唐继承隋的制度，减轻百姓负担，迎来贞观之治",
-                  "para": "why"
+                  "scene": "w2.d8h2",
+                  "step": 1,
+                  "cap": "唐太宗常拿隋朝当镜子。",
+                  "sec": "why"
                 },
                 {
-                  "set": {
-                    "step": 2,
-                    "play": 1
-                  },
-                  "cap": "唐继承隋的制度，减轻百姓负担，迎来贞观之治。",
-                  "para": "takeaway"
+                  "scene": "w2.d8h2",
+                  "step": 2,
+                  "cap": "百姓是水，朝廷是船，水能载舟。",
+                  "sec": "example"
+                },
+                {
+                  "scene": "w2.d8h2",
+                  "step": 3,
+                  "cap": "水也能覆舟：把百姓逼急了，船就翻。",
+                  "sec": [
+                    "derive",
+                    0,
+                    2
+                  ]
+                },
+                {
+                  "scene": "w2.d8h2",
+                  "step": 4,
+                  "cap": "减轻赋税和徭役，贞观年间很快恢复。",
+                  "sec": "takeaway"
                 }
-              ]
+              ],
+              "card": "d08-history#6"
             }
           },
           {
@@ -18575,71 +18054,23 @@ window.DAYS = [
           }
         ],
         "hookComic": {
+          "scene": "hook.d08history",
           "panels": [
             {
-              "bg": "palace",
-              "cast": [
-                {
-                  "who": "kingWu",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [],
-              "cap": "两组卡片：秦 15 年 +"
+              "step": 0,
+              "cap": "第一组卡片：秦 15 年，汉约 400 年。"
             },
             {
-              "bg": "palace",
-              "cast": [
-                {
-                  "who": "kingWu",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [],
-              "cap": "两组并排"
+              "step": 1,
+              "cap": "第二组卡片：隋 37 年，唐近 300 年。"
             },
             {
-              "bg": "palace",
-              "cast": [
-                {
-                  "who": "xiaoman",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [
-                {
-                  "who": "xiaoman",
-                  "text": "好眼熟"
-                }
-              ],
-              "cap": "好眼熟"
+              "step": 2,
+              "cap": "小满盯着两组卡片：好眼熟。"
             },
             {
-              "bg": "palace",
-              "cast": [
-                {
-                  "who": "xiaoyin",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [],
-              "cap": "小音把两组叠在一起"
+              "step": 3,
+              "cap": "小音把两组叠起来，都是短朝代接长朝代。"
             }
           ]
         }
@@ -18700,34 +18131,52 @@ window.DAYS = [
               "散热也一样：沙子凉得快，海水凉得慢。"
             ],
             "visual": {
-              "type": "seaLand",
-              "base": {},
-              "frames": [
+              "type": "deck",
+              "id": "deck.w2.d8g1",
+              "slides": [
                 {
-                  "set": {
-                    "step": 0,
-                    "play": 0
-                  },
-                  "cap": "陆地升温快、降温也快；海水比热大，升温慢、降温也慢",
-                  "para": "idea"
+                  "scene": "w2.d8g1",
+                  "step": 0,
+                  "cap": "中午，沙子烫脚，海水还凉。",
+                  "sec": "idea"
                 },
                 {
-                  "set": {
-                    "step": 1,
-                    "play": 0.5
-                  },
-                  "cap": "陆地升温快、降温也快；海水比热大，升温慢、降温也慢",
-                  "para": "why"
+                  "scene": "w2.d8g1",
+                  "step": 1,
+                  "cap": "太阳下山，沙子凉了，海水还温温的。",
+                  "sec": "why"
                 },
                 {
-                  "set": {
-                    "step": 2,
-                    "play": 1
-                  },
-                  "cap": "陆地升温快、降温也快；海水比热大，升温慢、降温也慢。",
-                  "para": "takeaway"
+                  "scene": "w2.d8g1",
+                  "step": 2,
+                  "cap": "沙子只晒热表面，海水把热摊进很厚一层。",
+                  "sec": "example"
+                },
+                {
+                  "scene": "w2.d8g1",
+                  "step": 3,
+                  "cap": "同样的火，空锅一下就烫，一锅水要好几分钟。",
+                  "sec": [
+                    "derive",
+                    0,
+                    1
+                  ]
+                },
+                {
+                  "scene": "w2.d8g1",
+                  "step": 4,
+                  "cap": "陆地像空锅，热得快凉得快；海像一锅水。",
+                  "secs": [
+                    [
+                      "derive",
+                      2,
+                      3
+                    ],
+                    "takeaway"
+                  ]
                 }
-              ]
+              ],
+              "card": "d08-geo#1"
             }
           },
           {
@@ -18975,34 +18424,45 @@ window.DAYS = [
               "热和雨同进同出，就是雨热同期。"
             ],
             "visual": {
-              "type": "cnmap",
-              "base": {},
-              "frames": [
+              "type": "deck",
+              "id": "deck.w2.d8g2",
+              "slides": [
                 {
-                  "set": {
-                    "step": 0,
-                    "play": 0
-                  },
-                  "cap": "季风让热和雨在夏天一起到来，叫雨热同期，对农业很有利",
-                  "para": "idea"
+                  "scene": "w2.d8g2",
+                  "step": 0,
+                  "cap": "夏天陆地晒热，海上的湿风被吸进来。",
+                  "sec": "idea"
                 },
                 {
-                  "set": {
-                    "step": 1,
-                    "play": 0.5
-                  },
-                  "cap": "季风让热和雨在夏天一起到来，叫雨热同期，对农业很有利",
-                  "para": "why"
+                  "scene": "w2.d8g2",
+                  "step": 1,
+                  "cap": "冬天陆地变冷，风掉头往海里吹，又冷又干。",
+                  "sec": "why"
                 },
                 {
-                  "set": {
-                    "step": 2,
-                    "play": 1
-                  },
-                  "cap": "季风让热和雨在夏天一起到来，叫雨热同期，对农业很有利。",
-                  "para": "takeaway"
+                  "scene": "w2.d8g2",
+                  "step": 2,
+                  "cap": "一年里，热和雨在夏天一起到来。",
+                  "sec": "example"
+                },
+                {
+                  "scene": "w2.d8g2",
+                  "step": 3,
+                  "cap": "夏天水稻猛长，最缺水的时候雨正好最多。",
+                  "sec": [
+                    "derive",
+                    0,
+                    2
+                  ]
+                },
+                {
+                  "scene": "w2.d8g2",
+                  "step": 4,
+                  "cap": "地中海沿岸，夏天干热，雨多下在冬天。",
+                  "sec": "takeaway"
                 }
-              ]
+              ],
+              "card": "d08-geo#7"
             }
           }
         ],
@@ -19043,71 +18503,23 @@ window.DAYS = [
           }
         ],
         "hookComic": {
+          "scene": "hook.d08geo",
           "panels": [
             {
-              "bg": "mountain",
-              "cast": [
-                {
-                  "who": "xiaoman",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [],
-              "cap": "七月"
+              "step": 0,
+              "cap": "7 月，又热又下雨，小满撑伞还冒汗。"
             },
             {
-              "bg": "mountain",
-              "cast": [
-                {
-                  "who": "ale",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [],
-              "cap": "一月"
+              "step": 1,
+              "cap": "1 月，同一条街又冷又干。"
             },
             {
-              "bg": "mountain",
-              "cast": [
-                {
-                  "who": "xiaoman",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [
-                {
-                  "who": "xiaoman",
-                  "text": "风怎么换方向了？"
-                }
-              ],
-              "cap": "两人视频"
+              "step": 2,
+              "cap": "小满在挂历上贴贴纸，太阳和雨都挤在夏天。"
             },
             {
-              "bg": "mountain",
-              "cast": [
-                {
-                  "who": "xiaoyin",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "cheer"
-                }
-              ],
-              "props": [],
-              "bubbles": [],
-              "cap": "小音拿着一把沙和一杯海水"
+              "step": 3,
+              "cap": "小音一手捧沙，一手拿着一杯海水。"
             }
           ]
         }
@@ -19366,32 +18778,50 @@ window.DAYS = [
             "title": "100 元，一年后只剩 97 元的本事",
             "idea": "通胀 3%，就是去年 100 元的东西，今年卖 103 元。",
             "visual": {
-              "type": "chain",
-              "base": {
-                "nodes": [
-                  "去年 100 元的东西",
-                  "今年卖 103 元",
-                  "你的 100 元 ≈ 去年的 97 元"
-                ]
-              },
-              "frames": [
+              "type": "deck",
+              "id": "deck.w2.d8f1",
+              "slides": [
                 {
-                  "set": {
-                    "play": 0,
-                    "step": 0
-                  },
-                  "cap": "先看骨架",
-                  "para": "idea"
+                  "scene": "w2.d8f1",
+                  "step": 0,
+                  "cap": "去年 100 元的米，今年卖 103 元。",
+                  "sec": "idea"
                 },
                 {
-                  "set": {
-                    "play": 1,
-                    "step": 2
-                  },
-                  "cap": "看完整的图",
-                  "para": "takeaway"
+                  "scene": "w2.d8f1",
+                  "step": 1,
+                  "cap": "你手里还是这张 100 元。",
+                  "sec": [
+                    "derive",
+                    0,
+                    0
+                  ]
+                },
+                {
+                  "scene": "w2.d8f1",
+                  "step": 2,
+                  "cap": "100 元只够买这袋米的约 0.97。",
+                  "sec": [
+                    "derive",
+                    1,
+                    1
+                  ]
+                },
+                {
+                  "scene": "w2.d8f1",
+                  "step": 3,
+                  "cap": "这张 100 元，只顶去年的 97 元。",
+                  "secs": [
+                    [
+                      "derive",
+                      2,
+                      2
+                    ],
+                    "takeaway"
+                  ]
                 }
-              ]
+              ],
+              "card": "d08-finance#4"
             },
             "formula": "100 ÷ 1.03 ≈ 97",
             "takeaway": "通胀 3%，现金一年后只剩约 97% 的本事。",
@@ -19641,78 +19071,23 @@ window.DAYS = [
           }
         ],
         "hookComic": {
+          "scene": "hook.d08finance",
           "panels": [
             {
-              "bg": "room",
-              "cast": [
-                {
-                  "who": "xiaoman",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [
-                {
-                  "what": "payslip",
-                  "x": 0.78,
-                  "y": 0.78,
-                  "k": 0.95
-                }
-              ],
-              "bubbles": [],
-              "cap": "存折上 10000 一分没少"
+              "step": 0,
+              "cap": "存折上，10000 元一分没少。"
             },
             {
-              "bg": "room",
-              "cast": [
-                {
-                  "who": "xiaoman",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [],
-              "cap": "一年前能买 500 碗面"
+              "step": 1,
+              "cap": "去年，1 万元能买 500 碗 20 元的面。"
             },
             {
-              "bg": "room",
-              "cast": [
-                {
-                  "who": "xiaoman",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [],
-              "cap": "今年只能买 485 碗"
+              "step": 2,
+              "cap": "今年面涨到 20.6 元，只能买 485 碗。"
             },
             {
-              "bg": "room",
-              "cast": [
-                {
-                  "who": "xiaoyin",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [
-                {
-                  "who": "xiaoyin",
-                  "text": "钱在悄悄缩水"
-                }
-              ],
-              "cap": "钱在悄悄缩水"
+              "step": 3,
+              "cap": "数字没变，能买的东西变少了。"
             }
           ]
         }
@@ -19867,34 +19242,45 @@ window.DAYS = [
               "why": "简单任务只需要盯住一件事，注意力窄一点反而更集中。「一定会出错」说的是复杂任务里唤醒过高的情况。"
             },
             "visual": {
-              "type": "curve2",
-              "base": {},
-              "frames": [
+              "type": "deck",
+              "id": "deck.w2.d8p1",
+              "slides": [
                 {
-                  "set": {
-                    "step": 0,
-                    "play": 0
-                  },
-                  "cap": "唤醒让注意力变窄：简单任务受益，复杂任务受损",
-                  "para": "idea"
+                  "scene": "w2.d8p1",
+                  "step": 0,
+                  "cap": "平静时，眼睛能顾到桌上好多东西。",
+                  "sec": "idea"
                 },
                 {
-                  "set": {
-                    "step": 1,
-                    "play": 0.5
-                  },
-                  "cap": "唤醒让注意力变窄：简单任务受益，复杂任务受损",
-                  "para": "why"
+                  "scene": "w2.d8p1",
+                  "step": 1,
+                  "cap": "一紧张，注意力就缩成窄窄一束。",
+                  "sec": "why"
                 },
                 {
-                  "set": {
-                    "step": 2,
-                    "play": 1
-                  },
-                  "cap": "唤醒让注意力变窄：简单任务受益，复杂任务受损。",
-                  "para": "takeaway"
+                  "scene": "w2.d8p1",
+                  "step": 2,
+                  "cap": "拧瓶盖只要盯一件事，紧张一点没关系。",
+                  "sec": "example"
+                },
+                {
+                  "scene": "w2.d8p1",
+                  "step": 3,
+                  "cap": "写长回复要顾很多事，一紧张就漏掉了。",
+                  "sec": [
+                    "derive",
+                    0,
+                    3
+                  ]
+                },
+                {
+                  "scene": "w2.d8p1",
+                  "step": 4,
+                  "cap": "所以复杂任务，最好的紧张程度更低。",
+                  "sec": "takeaway"
                 }
-              ]
+              ],
+              "card": "d08-psych#3"
             }
           },
           {
@@ -20028,66 +19414,23 @@ window.DAYS = [
           }
         ],
         "hookComic": {
+          "scene": "hook.d08psych",
           "panels": [
             {
-              "bg": "room",
-              "cast": [
-                {
-                  "who": "xiaoman",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "worry",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [],
-              "cap": "演出前小满一点都不紧张"
+              "step": 0,
+              "cap": "演出前，小满一点都不紧张，还打哈欠。"
             },
             {
-              "bg": "room",
-              "cast": [
-                {
-                  "who": "xiaoman",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [],
-              "cap": "上台弹错了好几处"
+              "step": 1,
+              "cap": "上台后，她弹错了好几处。"
             },
             {
-              "bg": "room",
-              "cast": [
-                {
-                  "who": "xiaoman",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "worry",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [],
-              "cap": "下一次有点紧张"
+              "step": 2,
+              "cap": "下一次有点紧张，反而弹得很顺。"
             },
             {
-              "bg": "room",
-              "cast": [
-                {
-                  "who": "xiaoyin",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [],
-              "cap": "小音画出一条倒 U"
+              "step": 3,
+              "cap": "小音画了一座小山，标出两次演出的位置。"
             }
           ]
         }
@@ -20791,35 +20134,42 @@ window.DAYS = [
               "让一方让步，张力就有了解决（卡 4）。"
             ],
             "visual": {
-              "type": "comic",
-              "panels": [
+              "type": "deck",
+              "id": "deck.w2.d9s1",
+              "slides": [
                 {
-                  "bg": "room",
-                  "cast": [
-                    {
-                      "who": "xiaoman",
-                      "x": 0.46,
-                      "y": 0.74,
-                      "face": "calm",
-                      "pose": "stand"
-                    }
-                  ],
-                  "cap": "互补色是眼睛里的天生对立，对"
+                  "scene": "w2.d9s1",
+                  "step": 0,
+                  "cap": "盯完红布再看白墙，墙上浮出淡绿色。",
+                  "sec": "idea"
                 },
                 {
-                  "bg": "street",
-                  "cast": [
-                    {
-                      "who": "xiaoman",
-                      "x": 0.46,
-                      "y": 0.74,
-                      "face": "calm",
-                      "pose": "stand"
-                    }
-                  ],
-                  "cap": "串起来：从残像到穿搭"
+                  "scene": "w2.d9s1",
+                  "step": 1,
+                  "cap": "在色轮上，红和绿正好在对面。",
+                  "sec": "why"
+                },
+                {
+                  "scene": "w2.d9s1",
+                  "step": 2,
+                  "cap": "白衬衫配墨绿半裙，红只留在耳环上。",
+                  "sec": "example"
+                },
+                {
+                  "scene": "w2.d9s1",
+                  "step": 3,
+                  "cap": "红绿一样大很吵，让一方变小变暗就好看。",
+                  "secs": [
+                    [
+                      "derive",
+                      0,
+                      2
+                    ],
+                    "takeaway"
+                  ]
                 }
-              ]
+              ],
+              "card": "d09-fashion#4"
             }
           }
         ],
@@ -20879,71 +20229,23 @@ window.DAYS = [
           }
         ],
         "hookComic": {
+          "scene": "hook.d09fashion",
           "panels": [
             {
-              "bg": "room",
-              "cast": [
-                {
-                  "who": "xiaoman",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [],
-              "cap": "小满盯着一块红布"
+              "step": 0,
+              "cap": "小满盯着一块红布，计时 30 秒。"
             },
             {
-              "bg": "room",
-              "cast": [
-                {
-                  "who": "xiaoman",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [],
-              "cap": "30 秒后看白墙"
+              "step": 1,
+              "cap": "时间到，她转头看白墙。"
             },
             {
-              "bg": "room",
-              "cast": [
-                {
-                  "who": "xiaoman",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [],
-              "cap": "墙上出现淡绿色"
+              "step": 2,
+              "cap": "白墙上浮出一块淡淡的绿色。"
             },
             {
-              "bg": "room",
-              "cast": [
-                {
-                  "who": "xiaoyin",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [
-                {
-                  "who": "xiaoyin",
-                  "text": "眼睛在补颜色"
-                }
-              ],
-              "cap": "眼睛在补颜色"
+              "step": 3,
+              "cap": "小音翻出色轮：红的对面正是绿。"
             }
           ]
         }
@@ -21204,34 +20506,45 @@ window.DAYS = [
               "why": "朝廷靠封节度使换将领出力、换叛将投降，所以「变多了，内地也设」。「变少了，朝廷都收回了」正好相反，朝廷那时没有收回的力量。"
             },
             "visual": {
-              "type": "chain",
-              "base": {},
-              "frames": [
+              "type": "deck",
+              "id": "deck.w2.d9h1",
+              "slides": [
                 {
-                  "set": {
-                    "step": 0,
-                    "play": 0
-                  },
-                  "cap": "为了尽快平乱，唐朝拿\"加封节度使\"换和平，反而养出更多小朝廷",
-                  "para": "idea"
+                  "scene": "w2.d9h1",
+                  "step": 0,
+                  "cap": "乱平了，节度使却更多了，内地也到处设。",
+                  "sec": "idea"
                 },
                 {
-                  "set": {
-                    "step": 1,
-                    "play": 0.5
-                  },
-                  "cap": "为了尽快平乱，唐朝拿\"加封节度使\"换和平，反而养出更多小朝廷",
-                  "para": "why"
+                  "scene": "w2.d9h1",
+                  "step": 1,
+                  "cap": "朝廷没兵，只能给将军封官，请他们平乱。",
+                  "sec": "why"
                 },
                 {
-                  "set": {
-                    "step": 2,
-                    "play": 1
-                  },
-                  "cap": "为了尽快平乱，唐朝拿\"加封节度使\"换和平，反而养出更多小朝廷。",
-                  "para": "takeaway"
+                  "scene": "w2.d9h1",
+                  "step": 2,
+                  "cap": "投降的叛将，留在原地继续当节度使。",
+                  "sec": "example"
+                },
+                {
+                  "scene": "w2.d9h1",
+                  "step": 3,
+                  "cap": "乱中继位的皇帝：长安丢了，手里没兵。",
+                  "sec": [
+                    "derive",
+                    0,
+                    3
+                  ]
+                },
+                {
+                  "scene": "w2.d9h1",
+                  "step": 4,
+                  "cap": "节度使越设越多，小朝廷从几个变成几十个。",
+                  "sec": "takeaway"
                 }
-              ]
+              ],
+              "card": "d09-history#5"
             }
           },
           {
@@ -21336,34 +20649,55 @@ window.DAYS = [
               "下一关：53 年换 5 个朝代，公式的\"满级版\"。"
             ],
             "visual": {
-              "type": "chain",
-              "base": {},
-              "frames": [
+              "type": "deck",
+              "id": "deck.w2.d9h2",
+              "slides": [
                 {
-                  "set": {
-                    "step": 0,
-                    "play": 0
-                  },
-                  "cap": "地方兵、财、地一手抓 → 中央失控 → 分裂；五代是它的满级版",
-                  "para": "idea"
+                  "scene": "w2.d9h2",
+                  "step": 0,
+                  "cap": "五块骨牌：从守边设节度使到唐亡。",
+                  "sec": "idea"
                 },
                 {
-                  "set": {
-                    "step": 1,
-                    "play": 0.5
-                  },
-                  "cap": "地方兵、财、地一手抓 → 中央失控 → 分裂；五代是它的满级版",
-                  "para": "why"
+                  "scene": "w2.d9h2",
+                  "step": 1,
+                  "cap": "将军同时抓兵、财、地，就推倒了下一块。",
+                  "sec": "why"
                 },
                 {
-                  "set": {
-                    "step": 2,
-                    "play": 1
-                  },
-                  "cap": "地方兵、财、地一手抓 → 中央失控 → 分裂；五代是它的满级版。",
-                  "para": "takeaway"
+                  "scene": "w2.d9h2",
+                  "step": 2,
+                  "cap": "一块推一块，最后唐亡于节度使。",
+                  "sec": "example"
+                },
+                {
+                  "scene": "w2.d9h2",
+                  "step": 3,
+                  "cap": "周、东汉、唐都栽在同一个公式上。",
+                  "sec": [
+                    "derive",
+                    0,
+                    1
+                  ]
+                },
+                {
+                  "scene": "w2.d9h2",
+                  "step": 4,
+                  "cap": "像乐团各声部各管各的，没人看指挥棒。",
+                  "sec": [
+                    "derive",
+                    2,
+                    2
+                  ]
+                },
+                {
+                  "scene": "w2.d9h2",
+                  "step": 5,
+                  "cap": "唐亡后谁兵强谁称帝，53 年换 5 个朝代。",
+                  "sec": "takeaway"
                 }
-              ]
+              ],
+              "card": "d09-history#8"
             }
           }
         ],
@@ -21434,85 +20768,23 @@ window.DAYS = [
           }
         ],
         "hookComic": {
+          "scene": "hook.d09history",
           "panels": [
             {
-              "bg": "palace",
-              "cast": [
-                {
-                  "who": "kingWu",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [
-                {
-                  "what": "castle",
-                  "x": 0.78,
-                  "y": 0.78,
-                  "k": 0.95
-                }
-              ],
-              "bubbles": [],
-              "cap": "开元盛世"
+              "step": 0,
+              "cap": "开元盛世，长安街上驼队、灯笼、人山人海。"
             },
             {
-              "bg": "palace",
-              "cast": [
-                {
-                  "who": "kingWu",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [
-                {
-                  "what": "castle",
-                  "x": 0.78,
-                  "y": 0.78,
-                  "k": 0.95
-                }
-              ],
-              "bubbles": [],
-              "cap": "不到 20 年后"
+              "step": 1,
+              "cap": "不到 20 年，同一条街成了焦土。"
             },
             {
-              "bg": "palace",
-              "cast": [
-                {
-                  "who": "xiaoman",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [
-                {
-                  "who": "xiaoman",
-                  "text": "谁推了第一把？"
-                }
-              ],
-              "cap": "谁推了第一把？"
+              "step": 2,
+              "cap": "唐朝的皇冠从最高的台阶上滚了下来。"
             },
             {
-              "bg": "palace",
-              "cast": [
-                {
-                  "who": "xiaoyin",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "point"
-                }
-              ],
-              "props": [],
-              "bubbles": [],
-              "cap": "小音指向边疆"
+              "step": 3,
+              "cap": "小音指向边疆：那里站着一个手握重兵的大将。"
             }
           ]
         }
@@ -21808,34 +21080,45 @@ window.DAYS = [
               "why": "10 毫米是 1 厘米，800 毫米就是 80 厘米。「8 米」是把毫米当成了厘米。"
             },
             "visual": {
-              "type": "gauge",
-              "base": {},
-              "frames": [
+              "type": "deck",
+              "id": "deck.w2.d9g1",
+              "slides": [
                 {
-                  "set": {
-                    "step": 0,
-                    "play": 0
-                  },
-                  "cap": "秦岭—淮河 ≈ 800 毫米年降水量线 ≈ 水田和旱地的分界",
-                  "para": "idea"
+                  "scene": "w2.d9g1",
+                  "step": 0,
+                  "cap": "秦岭—淮河，和 800 毫米雨量线大致重合。",
+                  "sec": "idea"
                 },
                 {
-                  "set": {
-                    "step": 1,
-                    "play": 0.5
-                  },
-                  "cap": "秦岭—淮河 ≈ 800 毫米年降水量线 ≈ 水田和旱地的分界",
-                  "para": "why"
+                  "scene": "w2.d9g1",
+                  "step": 1,
+                  "cap": "湿气在秦岭南坡落掉一大截，北边雨少了。",
+                  "sec": "why"
                 },
                 {
-                  "set": {
-                    "step": 2,
-                    "play": 1
-                  },
-                  "cap": "秦岭—淮河 ≈ 800 毫米年降水量线 ≈ 水田和旱地的分界。",
-                  "para": "takeaway"
+                  "scene": "w2.d9g1",
+                  "step": 2,
+                  "cap": "800 毫米：一年的雨积起来，到大腿那么深。",
+                  "sec": "example"
+                },
+                {
+                  "scene": "w2.d9g1",
+                  "step": 3,
+                  "cap": "雨多灌得满水田，雨少只能种旱地。",
+                  "sec": [
+                    "derive",
+                    0,
+                    2
+                  ]
+                },
+                {
+                  "scene": "w2.d9g1",
+                  "step": 4,
+                  "cap": "这条线南边多水田，北边多旱地。",
+                  "sec": "takeaway"
                 }
-              ]
+              ],
+              "card": "d09-geo#6"
             }
           },
           {
@@ -21850,34 +21133,45 @@ window.DAYS = [
               "北边旱地种小麦吃面，南边水田种水稻吃米。"
             ],
             "visual": {
-              "type": "cnmap",
-              "base": {},
-              "frames": [
+              "type": "deck",
+              "id": "deck.w2.d9g2",
+              "slides": [
                 {
-                  "set": {
-                    "step": 0,
-                    "play": 0
-                  },
-                  "cap": "秦岭—淮河 ≈ 1 月 0°C 等温线 ≈ 800 毫米线；北麦南稻，北面南米",
-                  "para": "idea"
+                  "scene": "w2.d9g2",
+                  "step": 0,
+                  "cap": "秦岭像一堵墙，冬天挡冷，夏天挡湿。",
+                  "sec": "idea"
                 },
                 {
-                  "set": {
-                    "step": 1,
-                    "play": 0.5
-                  },
-                  "cap": "秦岭—淮河 ≈ 1 月 0°C 等温线 ≈ 800 毫米线；北麦南稻，北面南米",
-                  "para": "why"
+                  "scene": "w2.d9g2",
+                  "step": 1,
+                  "cap": "墙北边冷、干：种小麦，吃面条和馒头。",
+                  "sec": "why"
                 },
                 {
-                  "set": {
-                    "step": 2,
-                    "play": 1
-                  },
-                  "cap": "秦岭—淮河 ≈ 1 月 0°C 等温线 ≈ 800 毫米线；北麦南稻，北面南米。",
-                  "para": "takeaway"
+                  "scene": "w2.d9g2",
+                  "step": 2,
+                  "cap": "墙南边暖、湿：种水稻，吃米饭和米粉。",
+                  "sec": "example"
+                },
+                {
+                  "scene": "w2.d9g2",
+                  "step": 3,
+                  "cap": "安徽、江苏被淮河切开，淮北吃面，淮南吃米。",
+                  "sec": [
+                    "derive",
+                    0,
+                    2
+                  ]
+                },
+                {
+                  "scene": "w2.d9g2",
+                  "step": 4,
+                  "cap": "三条线几乎重合：北麦南稻，北面南米。",
+                  "sec": "takeaway"
                 }
-              ]
+              ],
+              "card": "d09-geo#7"
             }
           }
         ],
@@ -21962,71 +21256,23 @@ window.DAYS = [
           }
         ],
         "hookComic": {
+          "scene": "hook.d09geo",
           "panels": [
             {
-              "bg": "mountain",
-              "cast": [
-                {
-                  "who": "xiaoman",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [],
-              "cap": "北方：小满在暖气房里吃面"
+              "step": 0,
+              "cap": "北方，小满在暖气房里吃面，窗外下雪。"
             },
             {
-              "bg": "mountain",
-              "cast": [
-                {
-                  "who": "ale",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [],
-              "cap": "南方：阿乐裹着毯子吃米饭"
+              "step": 1,
+              "cap": "南方，阿乐裹着毯子吃米饭，屋里没暖气。"
             },
             {
-              "bg": "mountain",
-              "cast": [
-                {
-                  "who": "xiaoman",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [],
-              "cap": "两碗饭中间一条线"
+              "step": 2,
+              "cap": "一碗面、一碗饭，中间画着一条线。"
             },
             {
-              "bg": "mountain",
-              "cast": [
-                {
-                  "who": "xiaoyin",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [
-                {
-                  "who": "xiaoyin",
-                  "text": "答案在一座山和一条河里"
-                }
-              ],
-              "cap": "答案在一座山和一条河里"
+              "step": 3,
+              "cap": "小音在地图上指出秦岭和淮河。"
             }
           ]
         }
@@ -22258,7 +21504,8 @@ window.DAYS = [
               "span": [
                 4,
                 6
-              ]
+              ],
+              "card": "d09-finance#4"
             },
             "takeaway": "年化 = 换成\"一年赚多少\"，时长不同也能比。",
             "derive": [
@@ -22408,66 +21655,23 @@ window.DAYS = [
           }
         ],
         "hookComic": {
+          "scene": "hook.d09finance",
           "panels": [
             {
-              "bg": "room",
-              "cast": [
-                {
-                  "who": "xiaoman",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [],
-              "cap": "理财 App 显示 +2%"
+              "step": 0,
+              "cap": "理财 App 上显示：一年收益 +2%。"
             },
             {
-              "bg": "room",
-              "cast": [
-                {
-                  "who": "xiaoman",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "happy",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [],
-              "cap": "小满开心"
+              "step": 1,
+              "cap": "超市里，牛奶从 10 元涨到 10.3 元。"
             },
             {
-              "bg": "room",
-              "cast": [
-                {
-                  "who": "xiaoman",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [],
-              "cap": "超市价签涨了 3%"
+              "step": 2,
+              "cap": "天平上，2% 的收益压不过 3% 的涨价。"
             },
             {
-              "bg": "room",
-              "cast": [
-                {
-                  "who": "xiaoyin",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [],
-              "cap": "小音把两个数放上天平"
+              "step": 3,
+              "cap": "又来两个产品：3 个月赚 1%，1 年赚 3%。"
             }
           ]
         }
@@ -22633,34 +21837,59 @@ window.DAYS = [
               "why": "衰竭期储备已经耗尽，抵抗力下降，所以更容易生病、倦怠。「精力比警觉期更旺」正好相反。"
             },
             "visual": {
-              "type": "gas",
-              "base": {},
-              "frames": [
+              "type": "deck",
+              "id": "deck.w2.d9p1",
+              "slides": [
                 {
-                  "set": {
-                    "step": 0,
-                    "play": 0
-                  },
-                  "cap": "危险的不是压力本身，而是长期没有恢复期",
-                  "para": "idea"
+                  "scene": "w2.d9p1",
+                  "step": 0,
+                  "cap": "压力一直不停，储备耗尽，人就容易病倒。",
+                  "secs": [
+                    "idea",
+                    "why"
+                  ]
                 },
                 {
-                  "set": {
-                    "step": 1,
-                    "play": 0.5
-                  },
-                  "cap": "危险的不是压力本身，而是长期没有恢复期",
-                  "para": "why"
+                  "scene": "w2.d9p1",
+                  "step": 1,
+                  "cap": "压力很快过去，歇一歇，电又充回来。",
+                  "sec": [
+                    "derive",
+                    0,
+                    0
+                  ]
                 },
                 {
-                  "set": {
-                    "step": 2,
-                    "play": 1
-                  },
-                  "cap": "危险的不是压力本身，而是长期没有恢复期。",
-                  "para": "takeaway"
+                  "scene": "w2.d9p1",
+                  "step": 2,
+                  "cap": "压力一直在，每天都在耗电。",
+                  "sec": [
+                    "derive",
+                    1,
+                    1
+                  ]
+                },
+                {
+                  "scene": "w2.d9p1",
+                  "step": 3,
+                  "cap": "一直不休息，电量见底，进入衰竭。",
+                  "sec": [
+                    "derive",
+                    2,
+                    3
+                  ]
+                },
+                {
+                  "scene": "w2.d9p1",
+                  "step": 4,
+                  "cap": "所以本计划每周留一天休息，用来充电。",
+                  "secs": [
+                    "example",
+                    "takeaway"
+                  ]
                 }
-              ]
+              ],
+              "card": "d09-psych#4"
             }
           },
           {
@@ -22738,76 +21967,23 @@ window.DAYS = [
           }
         ],
         "hookComic": {
+          "scene": "hook.d09psych",
           "panels": [
             {
-              "bg": "palace",
-              "cast": [
-                {
-                  "who": "xiaoman",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [],
-              "cap": "连续加班第 1 周：累"
+              "step": 0,
+              "cap": "连续加班第 1 周，小满累得打哈欠。"
             },
             {
-              "bg": "palace",
-              "cast": [
-                {
-                  "who": "xiaoman",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [
-                {
-                  "who": "xiaoman",
-                  "text": "习惯了"
-                }
-              ],
-              "cap": "第 3 周"
+              "step": 1,
+              "cap": "第 3 周，桌上堆满咖啡杯，她说习惯了。"
             },
             {
-              "bg": "palace",
-              "cast": [
-                {
-                  "who": "xiaoman",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "worry",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [],
-              "cap": "第 5 周：病倒"
+              "step": 2,
+              "cap": "第 5 周，她发烧病倒在床上。"
             },
             {
-              "bg": "room",
-              "cast": [
-                {
-                  "who": "xiaoyin",
-                  "x": 0.46,
-                  "y": 0.74,
-                  "face": "calm",
-                  "pose": "stand"
-                }
-              ],
-              "props": [],
-              "bubbles": [
-                {
-                  "who": "xiaoyin",
-                  "text": "身体真的适应了吗？"
-                }
-              ],
-              "cap": "身体真的适应了吗？"
+              "step": 3,
+              "cap": "小音举着一块快没电的电池。"
             }
           ]
         }

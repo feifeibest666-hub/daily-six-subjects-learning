@@ -26,6 +26,7 @@
       words: {},
       english: { retell: {} },
       contentVer: { english: 2, deck: 1 },
+      deckAt: {},
       miniOn: false,
       welcomeBack: false,
       notice: null,
@@ -53,6 +54,7 @@
       state.dayCompletedDate = parsed.dayCompletedDate || {};
       state.clearedOn = parsed.clearedOn || {};
       if (!state.seed) state.seed = Math.floor(Math.random() * 1e9);
+      state.deckAt = parsed.deckAt || {};
       migrateEnglish();
     } catch (e) {
       state = blank();
@@ -74,15 +76,75 @@
     if (!state.english) state.english = { retell: {} };
     if (!state.english.retell) state.english.retell = {};
     if (!state.contentVer) state.contentVer = {};
-    if ((state.contentVer.english || 0) < 2) {
-      Object.keys(state.mistakes || {}).forEach(function (k) {
-        if (/^d\d+-english#/.test(k)) delete state.mistakes[k];
-      });
-      state.mastered = (state.mastered || []).filter(function (k) { return !/^d\d+-english#/.test(k); });
-      if (state.draft && /-english$/.test(state.draft.id || '')) state.draft = null;
-      state.contentVer.english = 2;
+    if (!state.deckAt) state.deckAt = {};
+    // A content bump may drop a quiz key that no longer points at a real
+    // question, or rewind one replaced picture to its first slide.
+    // It must not delete days, stars, mistakes, the draft, or settings.
+    dropStaleQuizRefs();
+    if ((state.contentVer.english || 0) < 2) state.contentVer.english = 2;
+    if ((state.contentVer.deck || 0) < 1) {
+      rewindReplacedPictures();
+      state.contentVer.deck = 1;
     }
-    if ((state.contentVer.deck || 0) < 1) state.contentVer.deck = 1;
+  }
+
+  // Cards whose picture was replaced. A saved slide index on one of these
+  // starts again at the first slide. Every other saved position stays.
+  const REPLACED_PICTURES = {
+    'd02-history#2': 1, 'd02-history#7': 1,
+    'd03-geo#2': 1, 'd04-geo#2': 1, 'd04-geo#5': 1,
+    'd04-history#1': 1, 'd04-history#2': 1, 'd04-history#3': 1, 'd04-history#4': 1, 'd04-history#7': 1,
+    'd06-geo#5': 1, 'd06-geo#6': 1, 'd06-history#3': 1, 'd06-history#4': 1, 'd06-finance#2': 1, 'd06-psych#1': 1,
+    'd08-geo#1': 1, 'd08-geo#7': 1, 'd08-history#3': 1, 'd08-history#6': 1, 'd08-finance#4': 1, 'd08-psych#3': 1,
+    'd09-geo#6': 1, 'd09-geo#7': 1, 'd09-history#5': 1, 'd09-history#8': 1, 'd09-finance#3': 1, 'd09-finance#4': 1, 'd09-finance#5': 1,
+    'd09-psych#4': 1, 'd09-fashion#4': 1
+  };
+
+  function rewindReplacedPictures() {
+    Object.keys(state.deckAt || {}).forEach(function (id) {
+      if (REPLACED_PICTURES[id]) state.deckAt[id] = 0;
+    });
+  }
+
+  function lessonSteps(day, subject) {
+    const d = (global.DAYS || []).find(function (x) { return x.day === day; });
+    if (!d) return null;
+    if (subject === 'boss') return d.boss ? (d.boss.parts || []) : null;
+    if (d.type === 'new' && d.lessons && d.lessons[subject]) return d.lessons[subject].steps || [];
+    return null;
+  }
+
+  function refStillFits(key, ref) {
+    if (ref == null) return true;
+    const m = /^d(\d+)-([a-z]+)#/.exec(key || '');
+    if (!m) return true;
+    const steps = lessonSteps(+m[1], m[2]);
+    if (!steps) return true;
+    const list = Array.isArray(ref) ? ref : [ref];
+    for (let i = 0; i < list.length; i++) {
+      const r = list[i];
+      if (typeof r === 'number') {
+        if (r < 0 || r >= steps.length) return false;
+      } else if (r && typeof r === 'object' && r.lesson) {
+        const bits = /^d(\d+)-([a-z]+)$/.exec(r.lesson);
+        const host = bits ? lessonSteps(+bits[1], bits[2]) : null;
+        if (!host) return false;
+        const inner = Array.isArray(r.step) ? r.step : [r.step];
+        for (let j = 0; j < inner.length; j++) {
+          if (typeof inner[j] === 'number' && (inner[j] < 0 || inner[j] >= host.length)) return false;
+        }
+      }
+    }
+    return true;
+  }
+
+  function dropStaleQuizRefs() {
+    const draft = state.draft;
+    if (!draft || !draft.quizKeys || !global.LKCatalog || !LKCatalog.findQuestion) return;
+    draft.quizKeys = draft.quizKeys.filter(function (key) {
+      const q = LKCatalog.findQuestion(key);
+      return !!(q && refStillFits(key, q.ref));
+    });
   }
 
   function save() {
@@ -322,6 +384,15 @@
     setRetell: function (id, n) {
       state.english.retell[id] = n;
       save();
+    },
+    noteDeck: function (id, i) {
+      if (!state.deckAt) state.deckAt = {};
+      state.deckAt[id] = i;
+      save();
+    },
+    deckPos: function (id) {
+      if (!state.deckAt || !Object.prototype.hasOwnProperty.call(state.deckAt, id)) return null;
+      return state.deckAt[id];
     }
   };
 })(window);

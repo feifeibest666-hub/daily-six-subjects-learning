@@ -117,7 +117,13 @@ const CN = {
   line1: [[75.5,36.6],[80,36.2],[86,36.4],[90,36.9],[94,38.6],[98,39.4],[101,38],[103,36],[102.6,33],[102.2,30],[101.2,27.6],[99.4,25.2],[98.4,24]],
   line2: [[122.4,53],[121.4,51],[120,48],[119,45],[117.2,42.5],[115.6,40.5],[114,37.5],[113,35.3],[111.4,32.6],[110.5,31.2],[110.6,28.2],[110,26],[108.4,24.2],[106.6,22.6]],
   yangtze: [[91,33.5],[95,33],[97.5,31.5],[99.5,28],[100.3,26.5],[102.5,26.2],[104.6,28.8],[106.5,29.6],[108.5,30.6],[111.3,30.7],[112.5,30],[114.3,30.6],[116.2,29.7],[118.5,31.3],[119.5,32.2],[121.5,31.6]],
-  yellow: [[96,35],[98.5,34.8],[101.5,33.8],[102.5,35.5],[103.8,36.1],[106,37.5],[106.8,39.5],[109,40.6],[111.2,40.3],[110.6,38.3],[110.4,35],[111.5,34.7],[113.6,34.8],[114.4,34.8],[116.9,36.6],[118.9,37.6]]
+  yellow: [[96,35],[98.5,34.8],[101.5,33.8],[102.5,35.5],[103.8,36.1],[106,37.5],[106.8,39.5],[109,40.6],[111.2,40.3],[110.6,38.3],[110.4,35],[111.5,34.7],[113.6,34.8],[114.4,34.8],[116.9,36.6],[118.9,37.6]],
+  qinling: [[104,33.5],[107,33.8],[110,33.7],[113,32.6],[116,32.7],[119,33.2],[120.5,33.5]],
+  rain800: [[104,33],[107,33.3],[110,33.2],[113,32.6],[116,32.7],[119,33.2],[120.5,33.5]],
+  lat25: [[97,25],[124,25]],
+  lat35: [[90,35],[126,35]],
+  anhui: [[115.4,34.2],[116.2,34.6],[117.4,34.4],[118.2,33.6],[118.8,32.6],[118.6,31.2],[118.2,30.2],[117.2,29.8],[116.4,30],[115.8,30.6],[115.2,31.6],[115.2,33],[115.4,34.2]],
+  jiangsu: [[116.6,34.6],[118.2,34.8],[119.4,34.6],[120.6,34],[121.4,32.6],[121.8,32],[120.8,31.6],[119.6,31.4],[118.8,31.8],[118.2,32.4],[117.2,33],[116.4,33.8],[116.6,34.6]]
 };
 function proj(o) {
   const s = o.s, x0 = o.lon0 || 72.5, y0 = o.lat0 || 54.5;
@@ -231,13 +237,14 @@ function heart(x, y, k, c) {
   k = k || 1;
   return `<g transform="translate(${f(x)} ${f(y)}) scale(${k})"><path d="M0 8 C-14 0 -16 -12 -8 -16 C-2 -18 0 -12 0 -12 C0 -12 2 -18 8 -16 C16 -12 14 0 0 8Z" fill="${c || K.red}" stroke="${K.ink}" stroke-width="1.2"/></g>`;
 }
-function thermo(x, y, level) {
+function thermo(x, y, level, label) {
   const h = 18 + (level || 0.5) * 36;
+  const word = label === undefined ? '体温' : label;
   return `<g>
     <rect x="${f(x - 5)}" y="${f(y - 70)}" width="10" height="62" rx="5" fill="#fff" stroke="${K.ink}" stroke-width="1.3"/>
     <rect x="${f(x - 3)}" y="${f(y - 8 - h + 18)}" width="6" height="${f(h)}" rx="3" fill="${K.red}"/>
     <circle cx="${f(x)}" cy="${f(y)}" r="9" fill="${K.red}" stroke="${K.ink}" stroke-width="1.2"/>
-    <text x="${f(x + 16)}" y="${f(y - 40)}" font-size="11" font-weight="700" fill="${K.ink}">体温</text>
+    ${word ? `<text x="${f(x + 16)}" y="${f(y - 40)}" font-size="11" font-weight="700" fill="${K.ink}">${word}</text>` : ''}
   </g>`;
 }
 function hanger(x, y, c) {
@@ -614,8 +621,17 @@ function draw(name, state) {
   if (body.indexOf('id="sky"') >= 0) return body;
   return defs() + body;
 }
-function remember(id, i) { if (id != null) mem[id] = i; }
-function recall(id) { return Object.prototype.hasOwnProperty.call(mem, id) ? mem[id] : null; }
+function remember(id, i) {
+  if (id == null) return;
+  mem[id] = i;
+  if (global.LKStore && LKStore.noteDeck) LKStore.noteDeck(id, i);
+}
+function recall(id) {
+  if (Object.prototype.hasOwnProperty.call(mem, id)) return mem[id];
+  const saved = global.LKStore && LKStore.deckPos && LKStore.deckPos(id);
+  if (saved != null) { mem[id] = saved; return saved; }
+  return null;
+}
 
 part('山', mountain(80, 100, 78, 58, { snow: true }));
 part('树', tree(78, 96, 2.2));
