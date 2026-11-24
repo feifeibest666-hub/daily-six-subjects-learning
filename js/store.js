@@ -336,6 +336,8 @@
       save();
       if (global.LKMotion) LKMotion.syncRoot();
     },
+    // Moves the day pointer only. Stars, mistakes, mastered, the draft,
+    // settings, and the streak stay exactly as they are.
     jumpDay: function (n) {
       n = Math.max(1, Math.min(14, n | 0));
       state.currentDay = n;

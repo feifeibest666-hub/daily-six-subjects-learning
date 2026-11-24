@@ -23,7 +23,18 @@
     gear.addEventListener('click', function () { location.hash = '#/settings'; });
 
     const kicker = LK.h('div', { class: 'top-kicker' });
-    kicker.appendChild(LK.h('span', { class: 'kicker-day', text: title }));
+    const pick = LK.h('button', {
+      class: 'kicker-pick',
+      type: 'button',
+      'aria-haspopup': 'dialog',
+      'aria-expanded': 'false',
+      'aria-label': title + '，选择一天'
+    }, [
+      LK.h('span', { class: 'kicker-day', text: title }),
+      LK.h('span', { class: 'kicker-caret', 'aria-hidden': 'true', text: '▾' })
+    ]);
+    pick.addEventListener('click', function () { openDayPicker(pick); });
+    kicker.appendChild(pick);
     if (LKCatalog.learningAhead(state)) kicker.appendChild(LK.h('span', { class: 'ahead-tag', text: '提前学' }));
     screen.appendChild(LK.h('header', { class: 'topbar' }, [
       kicker,
@@ -111,6 +122,70 @@
       sw
     ]));
     return screen;
+  }
+
+  function lessonBlurb(day) {
+    return SUBJECT_ORDER.map(function (key) {
+      const les = LKCatalog.lesson(day, key);
+      return les && les.title ? les.title : SUBJECTS[key].name;
+    }).join(' · ');
+  }
+
+  function dayScore(state, day) {
+    let stars = 0;
+    let done = 0;
+    SUBJECT_ORDER.forEach(function (key) {
+      const rec = state.lessons[LK.lessonId(day, key)];
+      if (!rec) return;
+      done += 1;
+      stars += rec.best || rec.stars || 0;
+    });
+    return { stars: stars, done: done === SUBJECT_ORDER.length };
+  }
+
+  function openDayPicker(pick) {
+    const state = LKStore.get();
+    pick.setAttribute('aria-expanded', 'true');
+    LKSheet.open(function (body, close) {
+      body.appendChild(LK.h('h2', { class: 'sheet-title', id: 'day-pick-title', text: '选一天' }));
+      const list = LK.h('div', { class: 'day-pick-list' });
+      let current = null;
+      for (let n = 1; n <= 14; n++) {
+        const score = dayScore(state, n);
+        const on = n === state.currentDay;
+        const row = LK.h('button', {
+          class: 'day-pick-row' + (on ? ' is-on' : ''),
+          type: 'button'
+        });
+        if (on) row.setAttribute('aria-current', 'true');
+        const main = LK.h('span', { class: 'day-pick-main' }, [
+          LK.h('b', { class: 'num', text: '第 ' + n + ' 天' })
+        ]);
+        const mark = LK.h('span', { class: 'day-pick-mark' });
+        if (score.done) mark.appendChild(LK.h('span', { class: 'day-pick-check', text: '✓' }));
+        if (score.stars) {
+          mark.appendChild(LK.h('span', { class: 'num', text: String(score.stars) }));
+          mark.appendChild(LKIcons.star(true));
+        }
+        if (mark.childNodes.length) main.appendChild(mark);
+        row.appendChild(main);
+        row.appendChild(LK.h('span', { class: 'day-pick-titles', text: lessonBlurb(n) }));
+        row.addEventListener('click', function () {
+          if (n !== LKStore.get().currentDay) LKStore.jumpDay(n);
+          close();
+          LKRouter.go();
+        });
+        list.appendChild(row);
+        if (on) current = row;
+      }
+      body.appendChild(list);
+      if (current) requestAnimationFrame(function () { current.scrollIntoView({ block: 'nearest' }); });
+    }, {
+      tall: true,
+      labelledBy: 'day-pick-title',
+      returnFocus: pick,
+      onClose: function () { pick.setAttribute('aria-expanded', 'false'); }
+    });
   }
 
   function aheadPanel(state) {

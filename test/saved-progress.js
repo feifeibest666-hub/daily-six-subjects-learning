@@ -178,4 +178,31 @@ if (bareAfter.draft == null || bareAfter.draft.id !== 'd06-geo') {
   process.exit(1);
 }
 
+const beforeJump = JSON.parse(JSON.stringify(back.LKStore.get()));
+[4, 6, 2].forEach(function (n) { back.LKStore.jumpDay(n); });
+const afterJump = back.LKStore.get();
+function same(a, b) { return JSON.stringify(a) === JSON.stringify(b); }
+const jumpProblems = [];
+if (afterJump.currentDay !== 2) jumpProblems.push('landed on day ' + afterJump.currentDay);
+['lessons', 'mistakes', 'mastered', 'draft', 'settings', 'streak'].forEach(function (key) {
+  if (!same(beforeJump[key], afterJump[key])) jumpProblems.push(key + ' changed while switching days');
+});
+function starLine(st, day) {
+  return ['fashion', 'history', 'geo', 'finance', 'psych', 'english'].map(function (sub) {
+    const id = 'd' + (day < 10 ? '0' : '') + day + '-' + sub;
+    const rec = st.lessons[id];
+    return rec ? (rec.best || rec.stars || 0) : 0;
+  }).join(',');
+}
+[4, 6, 2].forEach(function (day) {
+  if (starLine(beforeJump, day) !== starLine(afterJump, day)) jumpProblems.push('day ' + day + ' stars changed');
+});
+if (jumpProblems.length) {
+  console.error(jumpProblems.join('\n'));
+  process.exit(1);
+}
+
 console.log('saved-progress ok', today);
+console.log('jump 4 → 6 → 2 kept stars', [4, 6, 2].map(function (day) {
+  return day + ':' + starLine(afterJump, day);
+}).join(' '));

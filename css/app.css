@@ -38,7 +38,13 @@ h1, h2, p { margin: 0; }
   gap: var(--s3);
 }
 .lesson-top { height: 52px; position: sticky; top: 0; background: var(--bg); z-index: 5; margin: 0 calc(var(--pad) * -1); padding: 0 var(--pad); }
-.top-kicker { font-size: var(--fs-small); line-height: 1.5; color: var(--ink-2); font-weight: 500; }
+.top-kicker { display: flex; align-items: center; min-width: 0; flex: 1; font-size: var(--fs-small); line-height: 1.5; color: var(--ink-2); font-weight: 500; }
+.kicker-pick {
+  display: inline-flex; align-items: center; gap: 2px; max-width: 100%; min-height: 48px;
+  margin: 0; padding: 0 4px 0 0; border: 0; background: transparent; color: inherit;
+  font: inherit; font-weight: 500; text-align: left;
+}
+.kicker-caret { color: var(--ink-3); font-size: 11px; line-height: 1; }
 .top-actions { display: flex; align-items: center; gap: var(--s1); }
 .icon-btn, .flame-btn, .tab, .zoom-btn, .pill, .layer-tab {
   min-height: 48px;
@@ -554,6 +560,21 @@ body.is-dragging { overflow: hidden; }
 }
 .ahead-panel h2 { font-size: var(--fs-h2); font-weight: 650; }
 .ahead-sub { color: var(--ink-2); font-size: var(--fs-small); margin-top: 6px; }
+.day-pick-list { flex: 1; min-height: 0; overflow-x: hidden; overflow-y: auto; margin: 10px 0 12px; }
+.day-pick-row {
+  display: block; width: 100%; min-height: 64px; margin: 0 0 4px; padding: 10px 8px;
+  border: 0; background: transparent; text-align: left; border-radius: 12px;
+}
+.day-pick-row.is-on { background: #fff; box-shadow: var(--sh-1); }
+.day-pick-main { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+.day-pick-main b { font-size: 16px; font-weight: 700; }
+.day-pick-mark { display: inline-flex; align-items: center; gap: 4px; color: var(--ink-2); font-weight: 650; }
+.day-pick-check { color: var(--ok); }
+.day-pick-mark .star-ico { width: 14px; height: 14px; }
+.day-pick-titles {
+  display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
+  margin-top: 2px; color: var(--ink-2); font-size: var(--fs-tiny); line-height: 1.45;
+}
 .ahead-tag {
   display: inline-flex; margin-left: 6px; padding: 1px 8px; border-radius: var(--r-pill);
   background: var(--surface-2); font-size: var(--fs-tiny); color: var(--ink-2); vertical-align: 1px;
