@@ -717,12 +717,22 @@
     if (step === 2) {
       let steps = '';
       for (let i = 0; i < 5; i++) steps += `<rect x="${36 + i * 36}" y="${150 - i * 22}" width="40" height="${28 + i * 22}" fill="#C9B59A" stroke="${K.ink}" stroke-width=".6"/>`;
+      const crown = `<g transform="translate(118 112) rotate(48)">
+          <path d="M-30 16 L-26 -2 L-16 8 L-8 -4 L0 -20 L8 -4 L16 8 L26 -2 L30 16 Z" fill="#F2B640" stroke="${K.ink}" stroke-width="1.5" stroke-linejoin="round"/>
+          <rect x="-30" y="14" width="60" height="10" fill="#E2B43A" stroke="${K.ink}"/>
+          <circle cx="-26" cy="-2" r="2.4" fill="#C8463A" stroke="${K.ink}" stroke-width=".4"/>
+          <circle cx="0" cy="-20" r="2.6" fill="#C8463A" stroke="${K.ink}" stroke-width=".4"/>
+          <circle cx="26" cy="-2" r="2.4" fill="#C8463A" stroke="${K.ink}" stroke-width=".4"/>
+          <circle cx="-14" cy="6" r="3.2" fill="#3D86D9" stroke="${K.ink}" stroke-width=".5"/>
+          <circle cx="0" cy="4" r="3.4" fill="#C8463A" stroke="${K.ink}" stroke-width=".5"/>
+          <circle cx="14" cy="6" r="3.2" fill="#3FA772" stroke="${K.ink}" stroke-width=".5"/>
+        </g>`;
       return sky('#FBF6EE') + steps
-        + `<g transform="translate(100 100) rotate(62) scale(1.35)"><path d="M-22 10 L-18 -16 L-8 0 L0 -26 L8 0 L18 -16 L22 10 Z" fill="#F2B640" stroke="${K.ink}"/><rect x="-22" y="10" width="44" height="8" fill="#E2B43A" stroke="${K.ink}"/><circle cx="-8" cy="-8" r="2.2" fill="#C8463A"/><circle cx="0" cy="-18" r="2.4" fill="#C8463A"/><circle cx="8" cy="-8" r="2.2" fill="#C8463A"/></g>`
-        + `<path d="M196 36 Q160 70 124 110" fill="none" stroke="#C9B59A" stroke-width="2" stroke-dasharray="4 3"/>`
-        + `<path d="M230 24 L270 8 L278 64 L232 78 Z" fill="rgba(74,59,48,.3)"/>`
-        + glow(`<g transform="translate(100 100) rotate(62) scale(1.35)"><path d="M-22 10 L-18 -16 L0 -26 L18 -16 L22 10 Z" fill="#F2B640" stroke="${K.ink}"/></g>`)
-        + talk(250, 160, '谁推的？', 250, 70);
+        + `<path d="M200 28 Q168 60 130 96" fill="none" stroke="#C9B59A" stroke-width="2" stroke-dasharray="4 3"/>`
+        + crown
+        + `<path d="M236 18 L278 4 L286 62 L238 74 Z" fill="rgba(74,59,48,.3)"/>`
+        + glow(crown)
+        + talk(250, 168, '谁推的？', 250, 80);
     }
     const P = proj({ s: 3.3, dx: 40, dy: 36 });
     return sky('#EAF3F5')

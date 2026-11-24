@@ -580,15 +580,38 @@
       return bg() + row + glow(S.domino(30, 80, 46, 90));
     }
     if (step === 1) {
-      const token = function (x, y, t) {
-        return `<rect x="${x}" y="${y}" width="34" height="22" rx="3" fill="#F3E7D3" stroke="${K.ink}"/><text x="${x + 17}" y="${y + 16}" font-size="13" font-weight="800" text-anchor="middle">${t}</text>`;
+      const card = function (x, y, pic, t) {
+        return `<rect x="${x}" y="${y}" width="86" height="40" rx="4" fill="#fff" stroke="${K.ink}"/>${pic}<text x="${x + 68}" y="${y + 25}" font-size="15" font-weight="800" text-anchor="middle">${t}</text>`;
+      };
+      const soldiers = function (x, y) {
+        let s = '';
+        for (let i = 0; i < 3; i++) {
+          const cx = x + 4 + i * 11;
+          s += `<path d="M${cx - 4} ${y + 1} h8" stroke="#8A8178" stroke-width="2" stroke-linecap="round"/>`;
+          s += `<circle cx="${cx}" cy="${y + 5}" r="3.2" fill="#F4D3B5" stroke="${K.ink}" stroke-width=".6"/>`;
+          s += `<rect x="${cx - 3.2}" y="${y + 8}" width="6.4" height="8" rx="1" fill="#8E3F33" stroke="${K.ink}" stroke-width=".5"/>`;
+          s += `<path d="M${cx - 2} ${y + 16} l-1.5 5 M${cx + 2} ${y + 16} l1.5 5" stroke="#4A3B30" stroke-width="1.1" stroke-linecap="round"/>`;
+        }
+        return s;
+      };
+      const coins = function (x, y) {
+        return `<circle cx="${x + 8}" cy="${y + 16}" r="6" fill="#E2B43A" stroke="${K.ink}" stroke-width=".6"/>`
+          + `<circle cx="${x + 16}" cy="${y + 12}" r="6" fill="#F2B640" stroke="${K.ink}" stroke-width=".6"/>`
+          + `<circle cx="${x + 12}" cy="${y + 6}" r="6" fill="#F6D56A" stroke="${K.ink}" stroke-width=".6"/>`;
+      };
+      const field = function (x, y) {
+        let s = `<rect x="${x}" y="${y + 2}" width="34" height="20" rx="2" fill="#E2CF7E" stroke="${K.ink}" stroke-width=".6"/>`;
+        for (let i = 0; i < 3; i++) s += `<path d="M${x + 2} ${y + 7 + i * 5} h30" stroke="#7FA65A" stroke-width="2"/>`;
+        return s;
       };
       return bg() + `<g transform="rotate(70 70 150)">${S.domino(40, 110, 36, 72)}</g>`
         + `<g transform="rotate(62 128 158)">${S.domino(98, 118, 36, 72)}</g>`
         + S.domino(168, 78, 40, 84)
-        + figure(286, 200, { k: 0.78, hat: 'helmet', robe: '#5C4636', right: 'hold', left: 'hold' })
-        + token(214, 46, '兵') + token(252, 46, '财') + token(233, 72, '地')
-        + glow(figure(286, 200, { k: 0.78, hat: 'helmet', robe: '#5C4636', right: 'hold', left: 'hold' }));
+        + figure(300, 214, { k: 0.72, hat: 'helmet', robe: '#5C4636', right: 'hold', left: 'hold' })
+        + card(210, 16, soldiers(222, 24), '兵')
+        + card(210, 62, coins(222, 70), '财')
+        + card(210, 108, field(222, 114), '地')
+        + glow(card(210, 16, soldiers(222, 24), '兵') + card(210, 62, coins(222, 70), '财') + card(210, 108, field(222, 114), '地'));
     }
     if (step === 2) {
       let fallen = '';
