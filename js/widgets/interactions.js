@@ -78,6 +78,7 @@
     let items = idx.map(function (i) { return { key: String(i), text: correct[i] }; });
     const root = LK.h('div', { class: 'inter' });
     root.appendChild(LK.h('p', { class: 'inter-prompt', text: inter.prompt }));
+    if (inter.hint) root.appendChild(LK.h('p', { class: 'inter-note', text: inter.hint }));
     const list = LK.h('div', { class: 'order-list' });
     let tries = 0;
     let solved = false;

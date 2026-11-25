@@ -142,7 +142,7 @@
     }
 
     function openDynasty(d, learned) {
-      const dayNum = learned ? +learned.id.slice(1, 3) : +d.lesson.slice(1, 3);
+      const dayNum = learned ? +learned.id.slice(1, 3) : (d.lesson ? +d.lesson.slice(1, 3) : 0);
       LKSheet.open(function (body) {
         body.appendChild(LK.h('h2', { class: 'sheet-title', text: (d.approx ? '约 ' : '') + d.name }));
         body.appendChild(LK.h('p', { class: 'sheet-copy num', text: LK.yearText(d.start) + ' — ' + LK.yearText(d.end) }));
@@ -152,7 +152,7 @@
           btn.addEventListener('click', function () { location.hash = '#/review/' + dayNum + '/history'; });
           body.appendChild(btn);
         } else {
-          body.appendChild(LK.h('p', { class: 'sheet-copy', text: '还没学到。第 ' + dayNum + ' 天见。' }));
+          body.appendChild(LK.h('p', { class: 'sheet-copy', text: dayNum ? '还没学到。第 ' + dayNum + ' 天见。' : '还没学到。第 15 天以后接着讲。' }));
         }
       });
     }

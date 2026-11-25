@@ -66,7 +66,7 @@ function seed(today, contentVer) {
     words: { river: { stage: 2, due: 9, lastSeen: today } },
     english: { retell: { 'd02-english': 1 } },
     contentVer: contentVer,
-    deckAt: { 'd04-geo#5': 3, 'd01-fashion#0': 1 },
+    deckAt: { 'd04-geo#5': 3, 'd01-fashion#0': 1, 'd06-history#3': 4 },
     miniOn: false,
     welcomeBack: false,
     notice: null,
@@ -117,7 +117,8 @@ function assertSameProgress(before, after, label) {
   if (after.draft.quizKeys.indexOf('d06-geo#0') < 0) problems.push(label + ' live quiz key dropped');
   if (after.deckAt['d04-geo#5'] !== 0) problems.push(label + ' replaced picture was not rewound');
   if (after.deckAt['d01-fashion#0'] !== 1) problems.push(label + ' untouched deck position changed');
-  if (after.contentVer.english !== 2 || after.contentVer.deck !== 1) problems.push(label + ' contentVer ' + JSON.stringify(after.contentVer));
+  if (after.deckAt['d06-history#3'] !== 0) problems.push(label + ' rewritten history slide was not rewound');
+  if (after.contentVer.english !== 2 || after.contentVer.deck !== 1 || after.contentVer.history !== 1) problems.push(label + ' contentVer ' + JSON.stringify(after.contentVer));
   if (!after.mistakes['d01-english#0']) problems.push(label + ' english mistake wiped');
   if (problems.length) {
     console.error(problems.join('\n'));
@@ -175,6 +176,29 @@ if (!bareAfter.mistakes['d01-english#0'] || bareAfter.mastered.indexOf('d03-engl
 }
 if (bareAfter.draft == null || bareAfter.draft.id !== 'd06-geo') {
   console.error('a missing english version cleared the geo draft');
+  process.exit(1);
+}
+
+// The live shape before the history rewrite: deck already bumped, a day-6
+// history lesson half done with one quiz key that no longer exists.
+const liveStorage = {};
+const liveBoot = boot(files, liveStorage);
+const liveSave = seed(todayOf(liveBoot), { english: 2, deck: 1 });
+liveSave.deckAt['d04-geo#5'] = 3;
+liveSave.draft = { id: 'd06-history', phase: 'quiz', step: 8, qi: 1, quizKeys: ['d06-history#0', 'd06-history#7'], wrongs: 0, correct: 1, checks: { 2: true }, spanRead: true };
+liveStorage['liuke.v2'] = JSON.stringify(liveSave);
+const liveAfter = boot(files, liveStorage).LKStore.init();
+const histProblems = [];
+['currentDay', 'xp', 'streak', 'lessons', 'clearedOn', 'dayCompletedDate', 'badges', 'cards', 'pins', 'places', 'words', 'english', 'mistakes', 'mastered', 'settings'].forEach(function (key) {
+  if (JSON.stringify(liveSave[key]) !== JSON.stringify(liveAfter[key])) histProblems.push('history bump changed ' + key);
+});
+if (!liveAfter.draft || liveAfter.draft.id !== 'd06-history' || liveAfter.draft.step !== 8 || liveAfter.draft.correct !== 1) histProblems.push('history bump lost the day-6 draft');
+if (JSON.stringify(liveAfter.draft && liveAfter.draft.quizKeys) !== JSON.stringify(['d06-history#0'])) histProblems.push('history quiz keys ' + JSON.stringify(liveAfter.draft && liveAfter.draft.quizKeys));
+if (liveAfter.deckAt['d04-geo#5'] !== 3) histProblems.push('history bump rewound a geo picture');
+if (liveAfter.deckAt['d06-history#3'] !== 0) histProblems.push('history bump kept an old history slide');
+if (liveAfter.contentVer.history !== 1 || liveAfter.contentVer.deck !== 1) histProblems.push('contentVer ' + JSON.stringify(liveAfter.contentVer));
+if (histProblems.length) {
+  console.error(histProblems.join('\n'));
   process.exit(1);
 }
 

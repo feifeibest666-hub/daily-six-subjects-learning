@@ -25,7 +25,7 @@
       settings: { reduceMotion: false, ttsSlow: 0.7, ttsNormal: 0.95, ttsVoice: null, ttsProbe: null, muteHintShown: false, miniDefault: false, debug: false, aheadNoteDate: null, peekHintShown: false },
       words: {},
       english: { retell: {} },
-      contentVer: { english: 2, deck: 1 },
+      contentVer: { english: 2, deck: 1, history: 1 },
       deckAt: {},
       miniOn: false,
       welcomeBack: false,
@@ -86,6 +86,18 @@
       rewindReplacedPictures();
       state.contentVer.deck = 1;
     }
+    if ((state.contentVer.history || 0) < 1) {
+      rewindRewrittenHistory();
+      state.contentVer.history = 1;
+    }
+  }
+
+  // History days 6 to 13 were rewritten as one storyline per lesson, so a
+  // saved slide index on those cards may point at a different picture.
+  function rewindRewrittenHistory() {
+    Object.keys(state.deckAt || {}).forEach(function (id) {
+      if (/^d(0[6-9]|1[0-3])-history#/.test(id)) state.deckAt[id] = 0;
+    });
   }
 
   // Cards whose picture was replaced. A saved slide index on one of these

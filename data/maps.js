@@ -8,18 +8,18 @@ window.DYNASTIES = [
   { name: '西汉', start: -202, end: 8, approx: false, lesson: 'd05-history' },
   { name: '新', start: 9, end: 23, approx: false, lesson: 'd05-history' },
   { name: '东汉', start: 25, end: 220, approx: false, lesson: 'd05-history' },
-  { name: '三国', start: 220, end: 280, approx: false, lesson: 'd06-history' },
-  { name: '西晋', start: 266, end: 316, approx: false, lesson: 'd06-history' },
-  { name: '东晋/十六国', start: 317, end: 420, approx: false, lesson: 'd06-history' },
-  { name: '南北朝', start: 420, end: 589, approx: false, lesson: 'd06-history' },
-  { name: '隋', start: 581, end: 618, approx: false, lesson: 'd08-history' },
-  { name: '唐', start: 618, end: 907, approx: false, lesson: 'd08-history' },
-  { name: '五代十国', start: 907, end: 979, approx: false, lesson: 'd10-history' },
-  { name: '北宋', start: 960, end: 1127, approx: false, lesson: 'd11-history' },
-  { name: '南宋', start: 1127, end: 1279, approx: false, lesson: 'd11-history' },
-  { name: '元', start: 1271, end: 1368, approx: false, lesson: 'd12-history' },
-  { name: '明', start: 1368, end: 1644, approx: false, lesson: 'd12-history' },
-  { name: '清', start: 1644, end: 1912, approx: false, lesson: 'd13-history' }
+  { name: '三国', start: 220, end: 280, approx: false, lesson: 'd08-history' },
+  { name: '西晋', start: 266, end: 316, approx: false, lesson: 'd09-history' },
+  { name: '东晋/十六国', start: 317, end: 420, approx: false, lesson: 'd10-history' },
+  { name: '南北朝', start: 420, end: 589, approx: false, lesson: 'd12-history' },
+  { name: '隋', start: 581, end: 618, approx: false, lesson: 'd13-history' },
+  { name: '唐', start: 618, end: 907, approx: false, lesson: null },
+  { name: '五代十国', start: 907, end: 979, approx: false, lesson: null },
+  { name: '北宋', start: 960, end: 1127, approx: false, lesson: null },
+  { name: '南宋', start: 1127, end: 1279, approx: false, lesson: null },
+  { name: '元', start: 1271, end: 1368, approx: false, lesson: null },
+  { name: '明', start: 1368, end: 1644, approx: false, lesson: null },
+  { name: '清', start: 1644, end: 1912, approx: false, lesson: null }
 ];
 
 window.PROVINCES = [
