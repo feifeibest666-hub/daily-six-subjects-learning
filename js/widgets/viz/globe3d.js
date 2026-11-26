@@ -176,6 +176,12 @@
         chip(marks, q.x - 18, q.y - 22, state.cityName || '北京', '#fff', '#2B2622');
       }
     }
+    (state.pins || []).forEach(function (pin) {
+      const q = proj(pin.lon, pin.lat, L0, V, R);
+      if (q.z <= -0.05) return;
+      marks.appendChild(LK.svg('circle', { cx: q.x, cy: q.y, r: 4, fill: '#FFD66B', stroke: '#fff', 'stroke-width': 1.4 }));
+      chip(marks, q.x - 18, q.y - 22, pin.name, '#fff', '#2B2622');
+    });
     const np = proj(L0, 78, L0, V, R);
     if (np.z > 0) textAt(marks, np.x, np.y - 8, '北极', '#E8F2F6');
     if (state.gridFade) {

@@ -26,7 +26,7 @@
       settings: { reduceMotion: false, ttsSlow: 0.7, ttsNormal: 0.95, ttsVoice: null, ttsProbe: null, muteHintShown: false, miniDefault: false, debug: false, aheadNoteDate: null, peekHintShown: false },
       words: {},
       english: { retell: {} },
-      contentVer: { english: 2, deck: 1, history: 1 },
+      contentVer: { english: 3, deck: 1, history: 1, finance: 1, psych: 1, geo: 1, fashion: 1 },
       deckAt: {},
       miniOn: false,
       welcomeBack: false,
@@ -91,6 +91,21 @@
       rewindRewrittenHistory();
       state.contentVer.history = 1;
     }
+    // Days 8–13 were rewritten. Day 6 is left exactly as she is reading it,
+    // so a saved slide on day 6 is not rewound.
+    bumpLater('english', 3);
+    bumpLater('finance', 1);
+    bumpLater('psych', 1);
+    bumpLater('geo', 1);
+    bumpLater('fashion', 1);
+  }
+
+  function bumpLater(subject, ver) {
+    if ((state.contentVer[subject] || 0) >= ver) return;
+    Object.keys(state.deckAt || {}).forEach(function (id) {
+      if (new RegExp('^d(0[89]|1[0-3])-' + subject + '#').test(id)) state.deckAt[id] = 0;
+    });
+    state.contentVer[subject] = ver;
   }
 
   // History days 6 to 13 were rewritten as one storyline per lesson, so a

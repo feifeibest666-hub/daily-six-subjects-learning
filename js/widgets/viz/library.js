@@ -39,16 +39,22 @@
     bg(g, '#FBF6EE');
     const list = global.PROVINCES || [];
     const on = state.on || [];
+    const named = !!state.names;
     const all = state.step == null || state.step >= 1;
     list.forEach(function (p) {
       const x = 16 + p.c * 30;
       const y = 18 + p.r * 26;
-      const hit = !on.length || on.indexOf(p.id) >= 0;
+      const listed = on.indexOf(p.id) >= 0;
+      const hot = on.length ? (listed && (named || all)) : all;
       g.appendChild(svg('rect', {
         x: x, y: y, width: 26, height: 22, rx: 4,
-        fill: hit && all ? GEO : '#E7E0D6', stroke: '#fff', 'stroke-width': 1
+        fill: hot ? GEO : '#E7E0D6', stroke: '#fff', 'stroke-width': 1
       }));
-      if (state.names || state.step >= 2) T(g, x + 13, y + 15, (p.short || '').slice(0, 1), 10, hit && all ? '#fff' : '#8A8178');
+      const show = named ? (on.length ? listed : true) : state.step >= 2;
+      if (show) {
+        const word = named ? (p.short || '').split('/')[0].slice(0, 3) : (p.short || '').slice(0, 1);
+        T(g, x + 13, y + 15, word, word.length > 1 ? 8 : 10, hot ? '#fff' : '#8A8178');
+      }
     });
     T(g, 170, 208, state.caption || '34 个省级区', 12, '#6E655C');
   });
@@ -69,14 +75,17 @@
     bg(g, '#F4F7F2');
     g.appendChild(svg('path', { d: 'M20 150 L120 70 L220 150 L320 110', fill: '#E7D3B4', stroke: INK, 'stroke-width': 1.4 }));
     const winter = state.season !== 'summer';
+    if (state.peak) T(g, 120, 46, state.peak, 13, INK);
     if (winter) {
       g.appendChild(svg('path', { d: 'M30 90 H110', stroke: '#8FA7C9', 'stroke-width': 3, 'marker-end': 'none' }));
       T(g, 70, 80, '冷空气', 11, '#3D86D9');
-      T(g, 90, 130, '北 <0℃', 11, '#3D86D9');
-      T(g, 180, 120, '南 >0℃', 11, '#C8664A');
+      T(g, 90, 130, state.north || '北 <0℃', 11, '#3D86D9');
+      T(g, 180, 120, state.south || '南 >0℃', 11, '#C8664A');
     } else {
       g.appendChild(svg('ellipse', { cx: 150, cy: 58, rx: 22, ry: 12, fill: '#fff', stroke: '#8AA8B0', 'stroke-width': 1 }));
       T(g, 200, 90, '翻山后变干', 12, GEO);
+      T(g, 90, 130, state.north || '山北', 11, '#3D86D9');
+      T(g, 250, 120, state.south || '山南 · 先下雨', 11, '#C8664A');
     }
     T(g, 170, 186, winter ? '冬天：冷空气被山挡住' : '夏天：湿气爬坡下雨', 12, '#6E655C');
   });
@@ -115,6 +124,8 @@
     T(g, 65, 48, '泥水', 11, INK);
     g.appendChild(svg('path', { d: 'M160 40 C200 80 180 120 240 150 C200 130 190 90 160 40', fill: '#E3C9A0', stroke: GEO, 'stroke-width': 1.4 }));
     T(g, 230, 80, state.caption || '河口越长越大', 12, INK);
+    T(g, 70, 130, '河', 11, '#1D4E89');
+    T(g, 200, 150, '三角洲', 12, INK);
   });
 
   reg('soil', '0 0 340 200', function (g, state) {
@@ -122,7 +133,7 @@
     g.appendChild(svg('path', { d: 'M20 150 L90 80 L160 150 Z', fill: '#E6D2A2', stroke: INK, 'stroke-width': 1.2 }));
     g.appendChild(svg('path', { d: 'M180 150 L250 80 L320 150 Z', fill: '#C9D7A8', stroke: INK, 'stroke-width': 1.2 }));
     T(g, 90, 170, '没草：土被冲走', 12, '#7A4E2D');
-    T(g, 250, 170, state.kind === 'black' ? '黑土：落叶慢慢积' : '有草：土留得住', 12, '#3F6B4A');
+    T(g, 250, 170, state.kind === 'black' ? '黑土：腐殖质' : '有草：土留得住', 12, '#3F6B4A');
   });
 
   reg('clocks', '0 0 340 200', function (g, state) {

@@ -73,7 +73,7 @@
     g.lastChild.setAttribute('opacity', String(0.45 + 0.4 * (1 - push)));
   }
 
-  function tablecloth(g, t, w, h) {
+  function tablecloth(g, t, w, h, extra) {
     const push = Math.max(0, Math.min(1, t));
     g.appendChild(LK.svg('rect', { x: 10, y: h * 0.72, width: w - 20, height: 8, fill: '#E7D7C0' }));
     const folds = 5;
@@ -92,13 +92,14 @@
         fill: 'none', stroke: '#2F9E8F', 'stroke-width': 2, opacity: (push - 0.72) / 0.28
       }));
     }
-    label(g, { x: w / 2, y: 16, 'text-anchor': 'middle', 'font-size': 11, fill: '#6E655C', 'font-family': FONT }, '手边高，远处低');
+    label(g, { x: w / 2, y: 16, 'text-anchor': 'middle', 'font-size': 11, fill: '#6E655C', 'font-family': FONT }, (extra && extra.caption) || '手边高，远处低');
+    if (extra && extra.places) label(g, { x: w / 2, y: h - 4, 'text-anchor': 'middle', 'font-size': 11, 'font-weight': 700, fill: '#5B4330', 'font-family': FONT }, extra.places);
   }
 
-  function draw(g, mode, t, w, h) {
+  function draw(g, mode, t, w, h, extra) {
     while (g.firstChild) g.removeChild(g.firstChild);
     g.appendChild(LK.svg('rect', { width: w, height: h, rx: 10, fill: '#fff' }));
-    if (mode === 'tablecloth') tablecloth(g, t, w, h);
+    if (mode === 'tablecloth') tablecloth(g, t, w, h, extra);
     else if (mode === 'steps') steps(g, t, w, h);
     else collide(g, t, w, h);
   }
@@ -110,7 +111,7 @@
     const g = LK.svg('g', { transform: 'translate(16 16)' });
     svg.appendChild(g);
     const t = state.push == null ? 1 : state.push;
-    draw(g, state.mode || 'collide', t, 310, 168);
+    draw(g, state.mode || 'collide', t, 310, 168, state);
   }
 
   LKStage.register('plates', {

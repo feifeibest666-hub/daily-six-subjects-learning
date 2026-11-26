@@ -192,6 +192,59 @@
     return 0;
   }
 
+  function paintExtras(svg, state) {
+    const G = geo();
+    const P = svg._P;
+    const labels = svg.querySelector('.labels');
+    const cities = svg.querySelector('.cities');
+    const lines = svg.querySelector('.lines');
+    if (!P || !labels) return;
+    (state.cityMarks || []).forEach(function (m) {
+      const c = G.cities[m.id];
+      if (!c) return;
+      const q = P(c[0], c[1]);
+      cities.appendChild(LK.svg('circle', {
+        cx: q[0], cy: q[1], r: 4.2, fill: m.color || '#C45C26', stroke: '#fff', 'stroke-width': 1.6
+      }));
+      chip(labels, q[0] + (m.dx || 0), q[1] + (m.dy == null ? -14 : m.dy), m.label || m.id, m.color || '#C45C26');
+    });
+    if (state.riverNames) {
+      const names = state.riverNames;
+      Object.keys(names).forEach(function (id) {
+        const pts = G.rivers[id];
+        if (!pts || !pts.length) return;
+        const mid = pts[Math.floor(pts.length / 2)];
+        const q = P(mid[0], mid[1]);
+        chip(labels, q[0], q[1] - 16, names[id], '#1D4E89');
+      });
+    }
+    (state.notes || []).forEach(function (n) {
+      const q = P(n.lon, n.lat);
+      chip(labels, q[0] + (n.dx || 0), q[1] + (n.dy || 0), n.text, n.color || '#3A302A');
+    });
+    (state.arrows || []).forEach(function (a) {
+      const p1 = P(a.from[0], a.from[1]);
+      const p2 = P(a.to[0], a.to[1]);
+      const color = a.color || '#C45C26';
+      lines.appendChild(LK.svg('line', {
+        x1: p1[0], y1: p1[1], x2: p2[0], y2: p2[1], stroke: color, 'stroke-width': 2.6, 'stroke-linecap': 'round'
+      }));
+      const ang = Math.atan2(p2[1] - p1[1], p2[0] - p1[0]);
+      const hx = p2[0];
+      const hy = p2[1];
+      lines.appendChild(LK.svg('path', {
+        d: 'M' + hx.toFixed(1) + ' ' + hy.toFixed(1)
+          + ' L' + (hx - Math.cos(ang) * 9 + Math.cos(ang + 1.2) * 7).toFixed(1) + ' ' + (hy - Math.sin(ang) * 9 + Math.sin(ang + 1.2) * 7).toFixed(1)
+          + ' L' + (hx - Math.cos(ang) * 9 + Math.cos(ang - 1.2) * 7).toFixed(1) + ' ' + (hy - Math.sin(ang) * 9 + Math.sin(ang - 1.2) * 7).toFixed(1) + ' Z',
+        fill: color
+      }));
+      if (a.label) chip(labels, (p1[0] + p2[0]) / 2, (p1[1] + p2[1]) / 2 - 14, a.label, color);
+    });
+    (state.legend || []).forEach(function (item, i) {
+      chip(labels, 12 + i * 118, 256, item.text, item.color || '#3A302A');
+    });
+  }
+
   function apply(svg, state, tween) {
     if (!svg._P) build(svg);
     const G = geo();
@@ -231,6 +284,12 @@
     }
     Object.keys(G.basins).forEach(function (id) { drawUnit('basin', id, G.basins[id], '#F1D9A8'); });
     Object.keys(G.plains).forEach(function (id) { drawUnit('plain', id, G.plains[id], '#DCEBC8'); });
+    Object.keys(G.plateaus).forEach(function (id) {
+      if (!unitOn('plateau', id)) return;
+      const u = G.plateaus[id];
+      if (!u.c && !u.pts) return;
+      drawUnit('plateau', id, u, '#E7D3B4');
+    });
     if (focused) {
       Object.keys(G.plateaus).forEach(function (id) {
         if (focus.indexOf('plateau:' + id) < 0 && focus.indexOf(id) < 0) return;
@@ -247,7 +306,9 @@
     svg.querySelectorAll('.rivers path').forEach(function (p) {
       const name = (p.getAttribute('class') || '').replace('river-', '');
       const mode = rivers[name];
-      p.style.opacity = mode && mode !== 'off' ? (mode === 'flow' ? '0.9' : '0.55') : '0';
+      const named = state.riverNames && mode && mode !== 'off';
+      p.style.opacity = named ? '1' : (mode && mode !== 'off' ? (mode === 'flow' ? '0.9' : '0.55') : '0');
+      if (named) p.setAttribute('stroke-width', '3.2');
     });
     const lineState = state.lines || {};
     ['line1', 'line2', 'qinhuai'].forEach(function (name) {
@@ -301,6 +362,7 @@
     const spots = (state.hotspots || []).concat(state.hotspot ? [state.hotspot] : []);
     spots.forEach(function (id) { addHot(svg, id); });
     if (state.hotspot && (tween == null || tween >= 0.98)) openHot(svg, state.hotspot, true);
+    paintExtras(svg, state);
     const inset = svg.querySelector('.inset');
     inset.innerHTML = '';
     if (state.inset === 'profile') drawInset(inset, state.insetMark || 2);

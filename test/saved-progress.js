@@ -66,7 +66,7 @@ function seed(today, contentVer) {
     words: { river: { stage: 2, due: 9, lastSeen: today } },
     english: { retell: { 'd02-english': 1 } },
     contentVer: contentVer,
-    deckAt: { 'd04-geo#5': 3, 'd01-fashion#0': 1, 'd06-history#3': 4 },
+    deckAt: { 'd04-geo#5': 3, 'd01-fashion#0': 1, 'd06-history#3': 4, 'd06-finance#0': 2 },
     miniOn: false,
     welcomeBack: false,
     notice: null,
@@ -118,7 +118,11 @@ function assertSameProgress(before, after, label) {
   if (after.deckAt['d04-geo#5'] !== 0) problems.push(label + ' replaced picture was not rewound');
   if (after.deckAt['d01-fashion#0'] !== 1) problems.push(label + ' untouched deck position changed');
   if (after.deckAt['d06-history#3'] !== 0) problems.push(label + ' rewritten history slide was not rewound');
-  if (after.contentVer.english !== 2 || after.contentVer.deck !== 1 || after.contentVer.history !== 1) problems.push(label + ' contentVer ' + JSON.stringify(after.contentVer));
+  if (after.contentVer.english !== 3 || after.contentVer.deck !== 1 || after.contentVer.history !== 1) problems.push(label + ' contentVer ' + JSON.stringify(after.contentVer));
+  ['finance', 'psych', 'geo', 'fashion'].forEach(function (sub) {
+    if (after.contentVer[sub] !== 1) problems.push(label + ' contentVer.' + sub);
+  });
+  if (after.deckAt['d06-finance#0'] !== 2) problems.push(label + ' day 6 finance slide was rewound');
   if (!after.mistakes['d01-english#0']) problems.push(label + ' english mistake wiped');
   if (problems.length) {
     console.error(problems.join('\n'));
