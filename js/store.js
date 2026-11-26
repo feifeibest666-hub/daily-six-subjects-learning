@@ -4,6 +4,7 @@
   let state = null;
   let streakBumped = false;
   let aheadAnim = false;
+  let restartId = null;
 
   function blank() {
     const today = LK.todayStr();
@@ -297,7 +298,11 @@
       total: p.total
     };
     if (!p.isBoss) maybeClear(p.day);
-    state.draft = null;
+    if (!state.draft || state.draft.id === p.id) state.draft = null;
+    if (prev) {
+      state.lessons[p.id].stars = Math.max(prev.stars || 0, p.stars);
+      state.lessons[p.id].best = Math.max(prev.best || prev.stars || 0, p.stars);
+    }
     state.welcomeBack = false;
     save();
     return { first: first };
@@ -338,6 +343,14 @@
       const b = streakBumped;
       streakBumped = false;
       return b;
+    },
+    // Asks the next mount of this lesson to start again from card 1. Nothing
+    // saved changes here; the lesson writes its own fresh draft once it opens.
+    requestRestart: function (id) { restartId = id; },
+    takeRestart: function (id) {
+      if (restartId !== id) return false;
+      restartId = null;
+      return true;
     },
     setDraft: function (draft) { state.draft = draft; save(); },
     clearDraft: function () { state.draft = null; save(); },

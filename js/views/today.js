@@ -83,7 +83,7 @@
       const sub = SUBJECTS[key];
       const les = LKCatalog.lesson(day, key);
       const rec = state.lessons[LK.lessonId(day, key)];
-      const card = LK.h('button', { class: 'subj-card will-stagger' });
+      const card = LK.h('button', { class: 'subj-card' });
       card.style.background = sub.soft;
       card.appendChild(LK.h('span', { class: 'ord', text: String(sub.order) }));
       card.appendChild(LK.h('span', { class: 'emo', text: sub.icon }));
@@ -97,7 +97,24 @@
         LKStore.clearWelcome();
         location.hash = '#/lesson/' + day + '/' + key;
       });
-      grid.appendChild(card);
+      const wrap = LK.h('div', { class: 'subj-wrap will-stagger' });
+      wrap.appendChild(card);
+      const lid = LK.lessonId(day, key);
+      if (rec || (state.draft && state.draft.id === lid)) {
+        wrap.appendChild(LK.h('button', {
+          class: 'restart-chip',
+          type: 'button',
+          text: '↺ 从头再看这一课',
+          onClick: function () {
+            LKStore.clearWelcome();
+            LKStore.requestRestart(lid);
+            const target = '#/lesson/' + day + '/' + key;
+            if (location.hash === target) LKRouter.go();
+            else location.hash = target;
+          }
+        }));
+      }
+      grid.appendChild(wrap);
     });
     if (bossCard) screen.appendChild(bossCard);
     screen.appendChild(grid);

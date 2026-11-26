@@ -226,6 +226,55 @@ if (jumpProblems.length) {
   process.exit(1);
 }
 
+const replayStore = {};
+const replayBoot = boot(files, replayStore);
+const replayToday = todayOf(replayBoot);
+const replaySeed = seed(replayToday, { english: 2, deck: 1, history: 1 });
+replaySeed.draft = { id: 'd06-geo', phase: 'steps', step: 4, qi: 0, quizKeys: ['d06-geo#0'], wrongs: 0, correct: 1, checks: { 1: true }, spanRead: true };
+replayStore['liuke.v2'] = JSON.stringify(replaySeed);
+const replay = boot(files, replayStore);
+const replayBefore = JSON.parse(JSON.stringify(replay.LKStore.init()));
+replay.LKStore.requestRestart('d06-history');
+if (replay.LKStore.takeRestart('d06-fashion')) {
+  console.error('restart flag answered for the wrong lesson');
+  process.exit(1);
+}
+if (!replay.LKStore.takeRestart('d06-history')) {
+  console.error('restart flag was not taken');
+  process.exit(1);
+}
+if (replay.LKStore.takeRestart('d06-history')) {
+  console.error('restart flag was taken twice');
+  process.exit(1);
+}
+const replayMid = replay.LKStore.get();
+['lessons', 'mistakes', 'mastered', 'draft', 'xp', 'streak', 'cards', 'badges'].forEach(function (key) {
+  if (JSON.stringify(replayBefore[key]) !== JSON.stringify(replayMid[key])) {
+    console.error('requesting a restart changed ' + key);
+    process.exit(1);
+  }
+});
+replay.LKStore.completeLesson({ id: 'd06-history', stars: 1, day: 6, ms: 10, correct: 1, total: 2, pinIds: [], placeIds: [], badges: [] });
+const replayAfter = replay.LKStore.get();
+if (!replayAfter.draft || replayAfter.draft.id !== 'd06-geo' || replayAfter.draft.step !== 4) {
+  console.error('replaying history wiped the geo draft');
+  process.exit(1);
+}
+if (replayAfter.lessons['d06-history'].stars !== 3 || replayAfter.lessons['d06-history'].best !== 3) {
+  console.error('replaying lowered history stars', replayAfter.lessons['d06-history']);
+  process.exit(1);
+}
+if (JSON.stringify(replayAfter.mistakes) !== JSON.stringify(replayBefore.mistakes) || JSON.stringify(replayAfter.mastered) !== JSON.stringify(replayBefore.mastered)) {
+  console.error('replaying changed mistakes or mastered');
+  process.exit(1);
+}
+replay.LKStore.setDraft({ id: 'd06-history', phase: 'quiz', step: 7, qi: 1 });
+replay.LKStore.completeLesson({ id: 'd06-history', stars: 3, day: 6, ms: 10, correct: 2, total: 2, pinIds: [], placeIds: [], badges: [] });
+if (replay.LKStore.get().draft) {
+  console.error('finishing a lesson kept its own draft');
+  process.exit(1);
+}
+
 console.log('saved-progress ok', today);
 console.log('jump 4 → 6 → 2 kept stars', [4, 6, 2].map(function (day) {
   return day + ':' + starLine(afterJump, day);

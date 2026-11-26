@@ -32,7 +32,9 @@
       ? { name: '跨科 Boss', color: '#C4842A', soft: '#FCF1DC' }
       : SUBJECTS[subject];
 
-    const draft = state.draft && state.draft.id === les.id ? state.draft : null;
+    const restarting = LKStore.takeRestart(les.id);
+    const otherDraft = restarting && state.draft && state.draft.id !== les.id;
+    const draft = !restarting && state.draft && state.draft.id === les.id ? state.draft : null;
     const useMini = draft ? !!draft.mini : (!!state.miniOn && !les.boss);
 
     let quiz;
@@ -46,7 +48,7 @@
     }
     if (!quiz.length) quiz = [{ key: les.id + '#x', q: '今天先回忆一句带走的话。', options: ['先记住带走的那一句', '跳过不看', '以后再说'], answer: 0, why: '回炉是为了把本周的话再站稳一次。', indexMap: [0, 1, 2], ref: null }];
 
-    let phase = draft ? draft.phase : (les.boss ? 'intro' : (les.review ? 'recall' : 'hook'));
+    let phase = draft ? draft.phase : (les.boss ? 'intro' : (les.review ? 'recall' : (restarting ? 'steps' : 'hook')));
     let step = draft ? draft.step || 0 : 0;
     let stepGen = 0;
     let qi = draft ? draft.qi || 0 : 0;
@@ -159,6 +161,7 @@
     }
 
     function saveDraft() {
+      if (otherDraft) return;
       LKStore.setDraft({
         id: les.id,
         phase: phase,
@@ -840,6 +843,17 @@
       return node;
     }
 
+    function restartLesson() {
+      LKStore.requestRestart(les.id);
+      LKRouter.go();
+    }
+
+    function restartButton() {
+      const btn = LK.h('button', { class: 'restart-btn', type: 'button', text: '↺ 从头再看这一课' });
+      btn.addEventListener('click', restartLesson);
+      return btn;
+    }
+
     function peekButton(getTarget, hint) {
       const btn = LK.h('button', { class: 'peek-btn', type: 'button' });
       btn.appendChild(LKIcons.book());
@@ -925,6 +939,19 @@
         const back = LK.h('button', { class: 'btn btn-primary', text: '回到题目' });
         back.addEventListener('click', close);
         footBar.appendChild(back);
+        const again = LK.h('button', { class: 'btn btn-secondary', type: 'button', text: '↺ 从头再看这一课' });
+        again.addEventListener('click', function () {
+          close();
+          if (src.id === les.id) {
+            restartLesson();
+            return;
+          }
+          LKStore.requestRestart(src.id);
+          const target = '#/lesson/' + src.day + '/' + src.subject;
+          if (location.hash === target) LKRouter.go();
+          else location.hash = target;
+        });
+        footBar.appendChild(again);
         body.appendChild(footBar);
         const first = scroll.querySelector('.peek-card.is-ref') || scroll.querySelector('.peek-card');
         const reduce = LKMotion.reduce();
@@ -1005,6 +1032,7 @@
       phase = 'interact';
       phaseBody.innerHTML = '';
       setAction({ hidden: true });
+      phaseBody.appendChild(restartButton());
       const holder = LK.h('div', { class: 'stage-card inter-card' });
       phaseBody.appendChild(holder);
       const node = LKInteract.mount(les.interaction, {
@@ -1170,6 +1198,7 @@
       });
       card.appendChild(list);
       card.appendChild(explain);
+      if (!les.boss) phaseBody.appendChild(restartButton());
       phaseBody.appendChild(card);
       setAction({ hidden: true });
       paintChrome();
@@ -1284,6 +1313,7 @@
     else if (phase === 'intro') showIntro();
     else if (phase === 'quiz') showQuiz();
     else showTake();
+    if (restarting) saveDraft();
 
     return screen;
   }
