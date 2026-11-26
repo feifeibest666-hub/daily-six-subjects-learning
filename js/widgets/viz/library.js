@@ -56,7 +56,7 @@
         T(g, x + 13, y + 15, word, word.length > 1 ? 8 : 10, hot ? '#fff' : '#8A8178');
       }
     });
-    T(g, 170, 208, state.caption || '34 个省级区', 12, '#6E655C');
+    T(g, 170, state.captionY == null ? 208 : state.captionY, state.caption || '34 个省级区', 12, '#6E655C');
   });
 
   reg('beam2', '0 0 340 200', function (g, state) {

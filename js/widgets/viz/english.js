@@ -34,20 +34,23 @@
     g.appendChild(el('rect', { width: 340, height: 200, fill: '#E3EFFC' }));
     const rows = state.rows || [];
     const play = state.play == null ? 1 : state.play;
+    let y = 28;
     rows.forEach(function (row, r) {
       if (play < 0.4 && r > 0) return;
       const bricks = row.bricks || row;
       let x = 16;
-      const y = 28 + r * 52;
+      const rowTop = y;
       bricks.forEach(function (b) {
         const text = b.text || b.t || '';
         const w = Math.max(36, Array.from(text).length * 9 + 16);
+        if (x > 16 && x + w > 324) { y += 40; x = 16; }
         g.appendChild(el('rect', { x: x, y: y, width: w, height: 28, rx: 8, fill: roleColor(b.role) }));
         T(g, x + w / 2, y + 18, text, 12, '#fff');
         x += w + 6;
       });
-      if (row.mark === 'missing') T(g, 310, y + 18, '✗', 16, '#C04A3A');
+      if (row.mark === 'missing') T(g, 310, rowTop + 18, '✗', 16, '#C04A3A');
       if (row.note) T(g, 170, y + 44, row.note, 11, '#6E655C');
+      y += 52;
     });
   });
 

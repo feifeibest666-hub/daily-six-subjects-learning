@@ -18106,12 +18106,12 @@ window.DAYS = [
               "base": {
                 "items": [
                   {
-                    "label": "去年 5 碗",
-                    "value": 1
+                    "label": "去年",
+                    "value": 5
                   },
                   {
-                    "label": "今年 4.76 碗",
-                    "value": 1
+                    "label": "今年",
+                    "value": 4.76
                   }
                 ],
                 "unit": "碗"
@@ -18291,22 +18291,20 @@ window.DAYS = [
               "base": {
                 "series": [
                   {
-                    "label": "线",
+                    "label": "能买到",
                     "points": [
-                      1,
-                      1,
-                      1,
-                      1,
-                      1
+                      10000,
+                      8626,
+                      7441,
+                      5537
                     ]
                   }
                 ],
                 "xTicks": [
-                  "1 万元能买到的",
                   "今天",
-                  "5 年",
-                  "10 年",
-                  "20 年"
+                  "5年",
+                  "10年",
+                  "20年"
                 ]
               },
               "frames": [
@@ -18488,20 +18486,20 @@ window.DAYS = [
               "base": {
                 "series": [
                   {
-                    "label": "线",
+                    "label": "能买到",
                     "points": [
-                      1,
-                      1,
-                      1,
-                      1
+                      10000,
+                      8626,
+                      7441,
+                      5537
                     ]
                   }
                 ],
                 "xTicks": [
-                  "1 万元能买到的",
                   "今天",
-                  "5 年",
-                  "10 年"
+                  "5年",
+                  "10年",
+                  "20年"
                 ]
               },
               "frames": [
@@ -19949,13 +19947,14 @@ window.DAYS = [
                 ],
                 "notes": [
                   {
-                    "lon": 119.2,
-                    "lat": 33.8,
-                    "text": "淮河"
+                    "lon": 121.4,
+                    "lat": 32.4,
+                    "text": "淮河",
+                    "dy": 12
                   },
                   {
-                    "lon": 113,
-                    "lat": 36.8,
+                    "lon": 109.5,
+                    "lat": 38.6,
                     "text": "线北 · 小麦"
                   },
                   {
@@ -20262,13 +20261,13 @@ window.DAYS = [
                 ],
                 "notes": [
                   {
-                    "lon": 112,
-                    "lat": 34.6,
+                    "lon": 118.2,
+                    "lat": 33,
                     "text": "1月 0°C 等温线"
                   },
                   {
-                    "lon": 112,
-                    "lat": 37,
+                    "lon": 107.5,
+                    "lat": 39.2,
                     "text": "以北更冷"
                   },
                   {
@@ -23001,32 +23000,20 @@ window.DAYS = [
               "base": {
                 "items": [
                   {
-                    "label": "第 1 月",
+                    "label": "1月",
                     "value": 12000
                   },
                   {
-                    "label": "第 2 月",
-                    "value": 11000
+                    "label": "4月",
+                    "value": 9000
                   },
                   {
-                    "label": "第 3 月",
-                    "value": 10000
+                    "label": "8月",
+                    "value": 5000
                   },
                   {
-                    "label": "…",
-                    "value": 1
-                  },
-                  {
-                    "label": "第 11 月",
-                    "value": 2000
-                  },
-                  {
-                    "label": "第 12 月",
+                    "label": "12月",
                     "value": 1000
-                  },
-                  {
-                    "label": "平均只欠约",
-                    "value": 6500
                   }
                 ],
                 "unit": "元"
@@ -24955,7 +24942,8 @@ window.DAYS = [
                   {
                     "id": "chongqing",
                     "label": "重庆",
-                    "dy": -18
+                    "dx": -24,
+                    "dy": -36
                   },
                   {
                     "id": "wuhan",
@@ -25030,33 +25018,36 @@ window.DAYS = [
                   {
                     "id": "shenzhen",
                     "label": "深圳",
-                    "dy": 16
+                    "dy": -22
                   },
                   {
                     "id": "zhuhai",
                     "label": "珠海",
-                    "dy": 16
+                    "dx": -14,
+                    "dy": 32
                   },
                   {
                     "id": "shantou",
                     "label": "汕头",
-                    "dy": -18
+                    "dx": -20,
+                    "dy": -32
                   },
                   {
                     "id": "xiamen",
                     "label": "厦门",
-                    "dy": -18
+                    "dx": 20,
+                    "dy": 24
                   }
                 ],
                 "notes": [
                   {
-                    "lon": 113,
-                    "lat": 23.8,
+                    "lon": 111.2,
+                    "lat": 23.2,
                     "text": "广东"
                   },
                   {
-                    "lon": 118,
-                    "lat": 26.2,
+                    "lon": 119.8,
+                    "lat": 27.8,
                     "text": "福建"
                   }
                 ]
@@ -25113,7 +25104,8 @@ window.DAYS = [
                   "GX",
                   "HI"
                 ],
-                "caption": "沿海 11 块，从辽宁到海南"
+                "caption": "沿海 11 块",
+                "captionY": 14
               },
               "frames": [
                 {
@@ -25164,87 +25156,91 @@ window.DAYS = [
                 "cityMarks": [
                   {
                     "id": "shenyang",
-                    "label": "沈阳 · 省会",
+                    "label": "沈阳",
                     "color": "#C45C26",
                     "dy": -18
                   },
                   {
                     "id": "shijiazhuang",
-                    "label": "石家庄 · 省会",
+                    "label": "石家庄",
                     "color": "#C45C26",
                     "dy": -18
                   },
                   {
                     "id": "jinan",
-                    "label": "济南 · 省会",
+                    "label": "济南",
                     "color": "#C45C26",
-                    "dy": 16
+                    "dy": 24
                   },
                   {
                     "id": "nanjing",
-                    "label": "南京 · 省会",
+                    "label": "南京",
                     "color": "#C45C26",
-                    "dy": -18
+                    "dy": -30
                   },
                   {
                     "id": "hangzhou",
-                    "label": "杭州 · 省会",
+                    "label": "杭州",
                     "color": "#C45C26",
-                    "dy": 16
+                    "dx": 10,
+                    "dy": 30
                   },
                   {
                     "id": "fuzhou",
-                    "label": "福州 · 省会",
+                    "label": "福州",
                     "color": "#C45C26",
-                    "dy": -18
+                    "dx": -14,
+                    "dy": -30
                   },
                   {
                     "id": "guangzhou",
-                    "label": "广州 · 省会",
+                    "label": "广州",
                     "color": "#C45C26",
-                    "dy": 16
+                    "dy": 22
                   },
                   {
                     "id": "nanning",
-                    "label": "南宁 · 省会",
+                    "label": "南宁",
                     "color": "#C45C26",
+                    "dx": -22,
                     "dy": 16
                   },
                   {
                     "id": "haikou",
-                    "label": "海口 · 省会",
+                    "label": "海口",
                     "color": "#C45C26",
-                    "dy": 16
+                    "dy": 22
                   },
                   {
                     "id": "dalian",
-                    "label": "大连 · 港口",
+                    "label": "大连",
                     "color": "#1D6A8A",
                     "dy": 16
                   },
                   {
                     "id": "qingdao",
-                    "label": "青岛 · 港口",
+                    "label": "青岛",
                     "color": "#1D6A8A",
                     "dy": -18
                   },
                   {
                     "id": "ningbo",
-                    "label": "宁波 · 港口",
+                    "label": "宁波",
                     "color": "#1D6A8A",
-                    "dy": 16
+                    "dx": 22,
+                    "dy": 20
                   },
                   {
                     "id": "xiamen",
-                    "label": "厦门 · 港口",
+                    "label": "厦门",
                     "color": "#1D6A8A",
-                    "dy": 16
+                    "dy": 24
                   },
                   {
                     "id": "shenzhen",
-                    "label": "深圳 · 港口",
+                    "label": "深圳",
                     "color": "#1D6A8A",
-                    "dy": -18
+                    "dy": -24
                   }
                 ],
                 "legend": [
@@ -25626,7 +25622,7 @@ window.DAYS = [
                     "value": 50000
                   },
                   {
-                    "label": "车（现在能卖）",
+                    "label": "现在的车",
                     "value": 100000
                   }
                 ],
@@ -25754,20 +25750,20 @@ window.DAYS = [
               "base": {
                 "items": [
                   {
-                    "label": "小 E 资产 15 万",
-                    "value": 1
+                    "label": "E资产",
+                    "value": 15
                   },
                   {
-                    "label": "小 E 净资产 6 万",
-                    "value": 1
+                    "label": "E净资产",
+                    "value": 6
                   },
                   {
-                    "label": "小 F 资产 7 万",
-                    "value": 1
+                    "label": "F资产",
+                    "value": 7
                   },
                   {
-                    "label": "小 F 净资产 7 万",
-                    "value": 1
+                    "label": "F净资产",
+                    "value": 7
                   }
                 ],
                 "unit": "万"
@@ -25859,7 +25855,23 @@ window.DAYS = [
             "idea": "回到钩子。开车的人看起来有钱，但车背后可能挂着贷款。要看清一个人，就算三样：有什么、欠什么、剩多少。",
             "visual": {
               "type": "balance",
-              "base": {},
+              "base": {
+                "caption": "单位：万　15 = 9 + 6",
+                "left": {
+                  "title": "资产",
+                  "items": [
+                    { "label": "存款", "value": 5 },
+                    { "label": "车", "value": 10 }
+                  ]
+                },
+                "right": {
+                  "title": "负债+净资产",
+                  "items": [
+                    { "label": "负债", "value": 9 },
+                    { "label": "净资产", "value": 6 }
+                  ]
+                }
+              },
               "frames": [
                 {
                   "set": {
@@ -27747,7 +27759,11 @@ window.DAYS = [
                   "tarim": "on"
                 },
                 "riverNames": {
-                  "tarim": "塔里木河"
+                  "tarim": {
+                    "text": "塔里木河",
+                    "dx": -8,
+                    "dy": 72
+                  }
                 },
                 "cityMarks": [
                   {
@@ -27758,7 +27774,8 @@ window.DAYS = [
                   {
                     "id": "lanzhou",
                     "label": "甘肃",
-                    "dy": 16
+                    "dx": -18,
+                    "dy": 8
                   },
                   {
                     "id": "yinchuan",
@@ -27768,7 +27785,8 @@ window.DAYS = [
                   {
                     "id": "xining",
                     "label": "青海",
-                    "dy": 16
+                    "dx": 24,
+                    "dy": 30
                   },
                   {
                     "id": "urumqi",
@@ -27778,7 +27796,8 @@ window.DAYS = [
                   {
                     "id": "turpan",
                     "label": "吐鲁番",
-                    "dy": 16
+                    "dx": 20,
+                    "dy": 30
                   }
                 ]
               },
@@ -28276,7 +28295,22 @@ window.DAYS = [
             "idea": "昨天小 E：**资产** 15 万，负债 9 万，净资产 6 万。15 − 9 = 6，反过来 9 + 6 = 15。",
             "visual": {
               "type": "balance",
-              "base": {},
+              "base": {
+                "caption": "15 = 9 + 6（万）",
+                "left": {
+                  "title": "资产",
+                  "items": [
+                    { "label": "资产", "value": 15 }
+                  ]
+                },
+                "right": {
+                  "title": "负债+净资产",
+                  "items": [
+                    { "label": "负债", "value": 9 },
+                    { "label": "净资产", "value": 6 }
+                  ]
+                }
+              },
               "frames": [
                 {
                   "set": {
@@ -28387,7 +28421,22 @@ window.DAYS = [
             "idea": "上一张说到，每样东西的钱，不是借的，就是自己的。买一辆 15 万的车：首付 5 万是自己的，贷款 10 万是借的。",
             "visual": {
               "type": "balance",
-              "base": {},
+              "base": {
+                "caption": "15 = 10 + 5（万）",
+                "left": {
+                  "title": "车",
+                  "items": [
+                    { "label": "车", "value": 15 }
+                  ]
+                },
+                "right": {
+                  "title": "钱从哪来",
+                  "items": [
+                    { "label": "贷款", "value": 10 },
+                    { "label": "首付", "value": 5 }
+                  ]
+                }
+              },
               "frames": [
                 {
                   "set": {
@@ -28431,7 +28480,21 @@ window.DAYS = [
             "idea": "上一张说到，首付是自己的钱，贷款是借来的钱。借 1 万买一个 1 万的包。左边多了 1 万的包，右边多了 1 万的欠款。两边一起变高，自己的钱没变。",
             "visual": {
               "type": "balance",
-              "base": {},
+              "base": {
+                "caption": "两边一起加 1 万",
+                "left": {
+                  "title": "新买的",
+                  "items": [
+                    { "label": "包", "value": 1 }
+                  ]
+                },
+                "right": {
+                  "title": "新欠的",
+                  "items": [
+                    { "label": "欠款", "value": 1 }
+                  ]
+                }
+              },
               "frames": [
                 {
                   "set": {
@@ -28466,7 +28529,23 @@ window.DAYS = [
             "idea": "上一张说到，借钱买东西，表变大了，你没有变富。公司也只有两种钱：借来的，和老板们自己投进来的。老板们自己的那份，叫**所有者权益**，就是公司的净资产。",
             "visual": {
               "type": "balance",
-              "base": {},
+              "base": {
+                "caption": "15 = 6 + 9（万）",
+                "left": {
+                  "title": "资产",
+                  "items": [
+                    { "label": "现金", "value": 5 },
+                    { "label": "设备", "value": 10 }
+                  ]
+                },
+                "right": {
+                  "title": "负债+权益",
+                  "items": [
+                    { "label": "贷款", "value": 6 },
+                    { "label": "权益", "value": 9 }
+                  ]
+                }
+              },
               "frames": [
                 {
                   "set": {
@@ -30308,9 +30387,11 @@ window.DAYS = [
                 ],
                 "notes": [
                   {
-                    "lon": 116.5,
-                    "lat": 41.2,
-                    "text": "燕云十六州"
+                    "lon": 119.2,
+                    "lat": 42.4,
+                    "text": "燕云十六州",
+                    "dx": 8,
+                    "dy": -34
                   }
                 ]
               },
@@ -30370,16 +30451,22 @@ window.DAYS = [
                   "yangtze": "on"
                 },
                 "riverNames": {
-                  "yangtze": "长江"
+                  "yangtze": {
+                    "text": "长江",
+                    "dx": 36,
+                    "dy": 12
+                  }
                 },
                 "labels": [
                   "wushan"
                 ],
                 "notes": [
                   {
-                    "lon": 114,
-                    "lat": 32.5,
-                    "text": "北方骑兵到这里冲不动"
+                    "lon": 118.4,
+                    "lat": 29.2,
+                    "text": "骑兵到这儿冲不动",
+                    "dx": -8,
+                    "dy": 44
                   }
                 ]
               },
@@ -30580,7 +30667,8 @@ window.DAYS = [
                   {
                     "id": "kaifeng",
                     "label": "开封",
-                    "dy": -18
+                    "dx": 36,
+                    "dy": 8
                   },
                   {
                     "id": "hangzhou",
@@ -30984,34 +31072,41 @@ window.DAYS = [
               "base": {
                 "items": [
                   {
-                    "label": "1 月",
+                    "label": "1月",
                     "value": -1000
                   },
                   {
-                    "label": "2 月",
+                    "label": "2月",
                     "value": -1000
                   },
                   {
-                    "label": "3 月",
+                    "label": "3月",
                     "value": -1000
                   },
                   {
-                    "label": "4 月",
+                    "label": "4月",
                     "value": -1000
                   },
                   {
-                    "label": "5 月",
+                    "label": "5月",
                     "value": -1000
                   },
                   {
-                    "label": "6 月",
+                    "label": "6月",
                     "value": -1000
-                  },
-                  {
-                    "label": "存款还剩",
-                    "value": 1
                   }
                 ],
+                "trend": {
+                  "label": "还剩",
+                  "points": [
+                    5000,
+                    4000,
+                    3000,
+                    2000,
+                    1000,
+                    0
+                  ]
+                },
                 "unit": "元"
               },
               "frames": [

@@ -18,6 +18,24 @@
     }, value));
   }
   function clear(svg) { while (svg.firstChild) svg.removeChild(svg.firstChild); }
+  function textWidth(text, size) {
+    let w = 0;
+    const s = String(text || '');
+    for (let i = 0; i < s.length; i++) w += s.charCodeAt(i) > 255 ? size : size * 0.58;
+    return w;
+  }
+  function labelLines(label) {
+    if (label.length <= 6) return [label];
+    let cut = label.lastIndexOf(' ', 6);
+    if (cut < 1) {
+      cut = 6;
+      while (cut > 1 && /\d/.test(label.charAt(cut - 1)) && /\d/.test(label.charAt(cut))) cut--;
+      while (cut > 1 && /[\d.]/.test(label.charAt(cut))) cut--;
+    }
+    const a = label.slice(0, cut).trim();
+    const b = label.slice(cut).trim().slice(0, 8);
+    return b ? [a, b] : [a];
+  }
   function reg(type, box, draw) {
     LKStage.register(type, {
       viewBox: box,
@@ -46,12 +64,14 @@
     g.appendChild(el('line', { x1: 36, y1: zero, x2: 286, y2: zero, stroke: flash === 'zero' ? GOLD : INK, 'stroke-width': flash === 'zero' ? 4 : 1.5 }));
     if (min < 0) T(g, 28, zero + 4, '0', 11, MUTED, 'end');
     const slot = items.length ? 250 / items.length : 80;
+    const hideEach = !!(state.trend && items.length > 3);
     items.forEach(function (it, i) {
-      const v = (+it.value || 0) * play;
+      const raw = +it.value || 0;
+      const v = raw * play;
       const h = Math.abs(v) / span * (bot - top);
       const x = 42 + i * slot + slot * 0.2;
       const w = slot * 0.6;
-      const y = v >= 0 ? zero - h : zero;
+      const y = raw >= 0 ? zero - h : zero;
       const hot = flash && String(it.label || '').indexOf(flash) >= 0;
       g.appendChild(el('rect', {
         x: x, y: y, width: w, height: Math.max(1, h), rx: 4,
@@ -59,13 +79,33 @@
         stroke: hot ? '#3A302A' : 'none', 'stroke-width': hot ? 3 : 0,
         opacity: flash && flash !== 'zero' && !hot ? 0.35 : 1
       }));
-      let vy = v >= 0 ? y - 4 : y + h + 12;
-      if (v < 0 && vy > 148) vy = y - 16;
-      T(g, x + w / 2, vy, String(it.value), 12, INK);
-      const label = String(it.label || '');
-      T(g, x + w / 2, 162, label.slice(0, 6), 11, INK);
-      if (label.length > 6) T(g, x + w / 2, 176, label.slice(6, 12), 11, INK);
+      let vy = raw >= 0 ? y - 4 : y + h + 14;
+      if (raw < 0 && vy > 148) vy = Math.min(zero + 22, bot - 8);
+      if (!hideEach) T(g, x + w / 2, vy, String(it.value), slot < 48 ? 10 : 12, INK);
+      else if (i === 0 && !(state.trend && play > 0.5)) T(g, 44, 16, '每月 ' + it.value, 11, BAD, 'start');
+      const lines = labelLines(String(it.label || ''));
+      const labelSize = slot < 48 ? 10 : 11;
+      T(g, x + w / 2, 162, lines[0], labelSize, INK);
+      if (lines[1]) T(g, x + w / 2, 176, lines[1], labelSize, INK);
     });
+    if (state.trend && play > 0.5) {
+      const tp = state.trend.points || [];
+      if (tp.length > 1) {
+        let tMax = tp[0], tMin = tp[0];
+        tp.forEach(function (p) { if (p > tMax) tMax = p; if (p < tMin) tMin = p; });
+        if (tMax === tMin) tMax = tMin + 1;
+        const y0 = 30, y1 = 126;
+        let d = '';
+        tp.forEach(function (p, i) {
+          const x = 42 + (items.length ? i * (250 / items.length) : 0) + (items.length ? (250 / items.length) * 0.5 : 40);
+          const y = y0 + (tMax - p) / (tMax - tMin) * (y1 - y0);
+          d += (i ? 'L' : 'M') + x.toFixed(1) + ' ' + y.toFixed(1) + ' ';
+          g.appendChild(el('circle', { cx: x, cy: y, r: 3.2, fill: INK }));
+        });
+        g.appendChild(el('path', { d: d, fill: 'none', stroke: INK, 'stroke-width': 2.2 }));
+        T(g, 44, 16, (state.trend.label || '还剩') + ' ' + tp[0] + '→' + tp[tp.length - 1], 11, INK, 'start');
+      }
+    }
     if (state.avgLine) {
       const ay = bot - ((state.avgLine.value - min) / span) * (bot - top);
       g.appendChild(el('line', { x1: 36, y1: ay, x2: 270, y2: ay, stroke: MUTED, 'stroke-width': 1.5, 'stroke-dasharray': '4 3' }));
@@ -172,7 +212,9 @@
         const h = Math.max(12, (+it.value || 0) / sum * 110);
         y -= h;
         g.appendChild(el('rect', { x: x, y: y, width: 70, height: h, fill: i % 2 ? '#F0C36B' : GOLD }));
-        T(g, x + 35, y + Math.min(h - 2, 16), (it.label || '') + ' ' + it.value, 10, '#fff');
+        const bit = (it.label || '') + ' ' + it.value;
+        const bitSize = textWidth(bit, 10) > 64 ? 8 : 10;
+        T(g, x + 35, y + Math.min(h - 2, 16), bit, bitSize, '#fff');
       });
       T(g, x + 35, 172, (side && side.title) || '', 12, INK);
       T(g, x + 35, 188, String(sum), 11, MUTED);
@@ -206,8 +248,12 @@
   reg('tag', '0 0 280 160', function (g, state) {
     g.appendChild(el('rect', { x: 20, y: 16, width: 240, height: 120, rx: 12, fill: '#FCF1DC', stroke: GOLD, 'stroke-width': 1.5 }));
     T(g, 140, 46, state.title || '', 13, INK);
-    T(g, 140, 86, state.big || '', 28, GOLD);
-    T(g, 140, 112, state.small || '', 11, MUTED);
+    const big = String(state.big || '');
+    const bigSize = textWidth(big, 28) > 210 ? Math.max(13, Math.floor(28 * 210 / textWidth(big, 28))) : 28;
+    T(g, 140, 86, big, bigSize, GOLD);
+    const small = String(state.small || '');
+    const smallSize = textWidth(small, 11) > 210 ? Math.max(9, Math.floor(11 * 210 / textWidth(small, 11))) : 11;
+    T(g, 140, 112, small, smallSize, MUTED);
     if (state.stamp && (state.play == null || state.play > 0.6)) {
       g.appendChild(el('circle', { cx: 220, cy: 42, r: 22, fill: 'none', stroke: BAD, 'stroke-width': 2 }));
       T(g, 220, 46, state.stamp, 10, BAD);

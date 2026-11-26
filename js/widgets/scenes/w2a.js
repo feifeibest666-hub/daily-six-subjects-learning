@@ -428,7 +428,7 @@
     if (step === 0) {
       return bg('#F6EFE4') + kid(80, 180, { face: 'calm', k: 0.7 })
         + glow(S.lightCone(100, 90, 240, 160, 70))
-        + S.phone(200, 120) + S.books(250, 160, 2)
+        + S.phone(236, 40) + S.books(150, 168, 2)
         + lab(80, 40, '平静', { fs: 16 });
     }
     if (step === 1) {
@@ -680,6 +680,9 @@
       return bg() + `<rect x="40" y="80" width="80" height="60" fill="#C8463A" stroke="${K.ink}"/>`
         + `<rect x="180" y="40" width="120" height="140" fill="#F7F4EF" stroke="${K.ink}"/>`
         + glow(`<rect x="200" y="70" width="80" height="60" fill="#B7D7C8" opacity=".8"/>`)
+        + lab(80, 68, '红布', { fs: 14 })
+        + lab(240, 28, '白墙', { fs: 14 })
+        + lab(240, 150, '淡绿', { fs: 14 })
         + kid(80, 210, { face: 'wow', k: 0.55 });
     }
     if (step === 1) {

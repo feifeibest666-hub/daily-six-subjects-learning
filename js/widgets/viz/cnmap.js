@@ -215,7 +215,11 @@
         if (!pts || !pts.length) return;
         const mid = pts[Math.floor(pts.length / 2)];
         const q = P(mid[0], mid[1]);
-        chip(labels, q[0], q[1] - 16, names[id], '#1D4E89');
+        const spec = names[id];
+        const text = spec && typeof spec === 'object' ? spec.text : spec;
+        const dx = spec && spec.dx || 0;
+        const dy = spec && spec.dy != null ? spec.dy : -16;
+        chip(labels, q[0] + dx, q[1] + dy, text, '#1D4E89');
       });
     }
     (state.notes || []).forEach(function (n) {
